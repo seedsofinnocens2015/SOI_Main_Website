@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import IVFSuccessBanner from '../IVFSuccessBanner';
 import {
   FaEnvelope,
   FaFacebookF,
@@ -101,11 +102,13 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Delhi', href: '/ivf-centers/delhi' },
               { label: 'Uttar Pradesh', href: '/ivf-centers/uttarpradesh' },
               { label: 'Bihar', href: '/ivf-centers/bihar' },
-              { label: 'Uttarakhand', href: '/ivf-centers/uttarakhand' },
+              { label: 'Haryana', href: '/ivf-centers/haryana' },
               { label: 'Jharkhand', href: '/ivf-centers/jharkhand' },
-              { label: 'Jammu & Kashmir', href: '/ivf-centers/jammu-kashmir' },
+              { label: 'Uttarakhand', href: '/ivf-centers/uttarakhand' },
               { label: 'Assam', href: '/ivf-centers/assam' },
               { label: 'Kerala', href: '/ivf-centers/kerala' },
+              { label: 'Jammu & Kashmir', href: '/ivf-centers/jammu-kashmir' },
+              { label: 'Kolkata', href: '/ivf-centers/kolkata' },
             ],
           },
           {
@@ -657,6 +660,7 @@ const Header = ({ isTopBar, variant }) => {
             </div>
           </div>
         </div>
+        <IVFSuccessBanner />
         {variant == 'cs_type_1' && (
           <div className="cs_main_header_shape">
             <svg

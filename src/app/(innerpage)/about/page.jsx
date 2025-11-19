@@ -17,7 +17,7 @@ const headingData = {
       "Seeds of Innocens IVF Centre is India's best fertility clinic, providing comprehensive fertility solutions across multiple locations. We offer advanced treatments including IVF-ICSI, IUI, Surrogacy, Genetic Testing, and more, helping thousands of couples achieve their dream of parenthood.",
     service:
       "We provide world-class fertility treatments with high success rates and personalized care <a href='/service'>READ MORE +</a>",
-    experienceYears: '15+',
+    experienceYears: '10+',
     experienceTitle: 'Years Experience',
     videoUrl: 'https://www.youtube.com/embed/rRid6GCJtgc',
     videoText: 'How We Work',
@@ -43,25 +43,25 @@ const headingData = {
   const counterData = [
     {
       iconSrc: '/assets/img/icons/counter_icon_1.png',
-      countTo: 5000,
+      countTo: 20000,
       suffix: '+',
       title: 'Successful Pregnancies',
     },
     {
       iconSrc: '/assets/img/icons/counter_icon_2.png',
-      countTo: 25,
+      countTo: 35,
       suffix: '+',
       title: 'Centres Across India',
     },
     {
       iconSrc: '/assets/img/icons/counter_icon_3.png',
-      countTo: 50,
+      countTo: 30,
       suffix: '+',
       title: 'Expert Doctors',
     },
     {
       iconSrc: '/assets/img/icons/counter_icon_4.png',
-      countTo: 15,
+      countTo: 10,
       suffix: '+',
       title: 'Years Experience',
     },
@@ -74,7 +74,7 @@ const headingData = {
       {
         name: 'Dr. Gauri Agarwal',
         profession: 'IVF Specialist',
-        imageUrl: '/assets/img/team_1.jpg',
+        imageUrl: '/assets/img/gauri.jpg',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',

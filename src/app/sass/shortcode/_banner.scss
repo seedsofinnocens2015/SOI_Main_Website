@@ -1,3 +1,101 @@
 /*--------------------------------------------------------------
   11. Banner
 ----------------------------------------------------------------*/
+.cs_ivf_success_banner {
+  background: linear-gradient(135deg, #f72e2e 0%, #1E8FD6 100%);
+  padding: 6px 0;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  
+  @media (max-width: 767px) {
+    padding: 5px 0;
+  }
+  
+  .container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    @media (max-width: 1400px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @media (max-width: 1199px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media (max-width: 767px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  
+  .cs_ivf_success_banner_in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+  
+  .cs_ivf_success_banner_left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+    .cs_new_badge {
+      background-color: #fff;
+      color: #2EA6F7;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-family: var(--heading-font);
+      line-height: 1.2;
+    }
+    
+    .cs_ivf_success_title {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      font-family: var(--heading-font);
+      line-height: 1.3;
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+  }
+  
+  .cs_ivf_success_banner_right {
+    flex-shrink: 0;
+    
+    .cs_btn {
+      padding: 5px 16px;
+      font-size: 12px;
+      white-space: nowrap;
+      line-height: 1.4;
+      i {
+        font-size: 11px;
+      }
+      @media (max-width: 767px) {
+        padding: 4px 12px;
+        font-size: 11px;
+        i {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
