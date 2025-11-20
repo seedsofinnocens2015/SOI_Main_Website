@@ -44,7 +44,7 @@ const ContactSection2 = () => {
             </form>
             </div>
             <div className="col-lg-6">
-              <div className="cs_solution_thumbnail cs_bg_filed" data-background="/assets/img/medical_solution_1.jpg" >
+              <div className="cs_solution_thumbnail cs_bg_filed" data-background="/assets/img/medical_solution_1.png" >
               </div>
             </div>
           </div>

@@ -123,10 +123,10 @@ const Footer = () => {
         href: '/blog/blog-details',
         image: '/assets/img/recent_post_2.png',
         date: '08 Apr 2024',
-        title: 'What is PRP Treatment in IVF?',
+        title: 'Genetic Conditions: Understanding Their Role in Fertility and Parenthood',
       },
     ],
-    copyrightText: 'Copyright © 2024 Seeds of Innocens, All Rights Reserved.',
+    copyrightText: 'Copyright © 2025 Seeds of Innocens, All Rights Reserved.',
     footerMenu: [
       { href: '/about', text: 'About Us' },
       { href: '/appointments', text: 'Book Appointment' },
@@ -145,7 +145,7 @@ const Footer = () => {
           <div className="cs_footer_col">
             <div className="cs_footer_highlight_col cs_accent_bg">
               <div className="cs_footer_logo">
-              <Image src={data.logo} alt="img" width={205} height={53}   />
+              <Image src={data.logo} alt="img" width={305} height={63}   />
               </div>
               <ul className="cs_footer_contact cs_mp_0">
                 <li>

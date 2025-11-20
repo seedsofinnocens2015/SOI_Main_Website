@@ -134,8 +134,8 @@ const heroData = {
     },
     {
       iconUrl: '/assets/img/icons/counter_icon_4.png',
-      number: '10+',
-      title: 'Years Experience',
+      number: '78%',
+      title: 'Success Rate',
     },
   ];
   
@@ -146,7 +146,7 @@ const heroData = {
       'We offer a complete range of fertility treatments and services<br> to help you achieve your dream of parenthood with<br> advanced technology and expert care.',
     services: [
       {
-        backgroundImage: '/assets/img/service_bg.jpg',
+        backgroundImage: '/assets/img/IVF-ICSI.jpg',
         iconUrl: '/assets/img/icons/service_icon_1.png',
         index: '01',
         title: 'IVF-ICSI',
@@ -154,7 +154,7 @@ const heroData = {
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/service_bg.jpg',
+        backgroundImage: '/assets/img/IUI.jpg',
         iconUrl: '/assets/img/icons/service_icon_2.png',
         index: '02',
         title: 'IUI Treatment',
@@ -162,7 +162,7 @@ const heroData = {
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/service_bg.jpg',
+        backgroundImage: '/assets/img/surrogacy.jpg',
         iconUrl: '/assets/img/icons/service_icon_3.png',
         index: '03',
         title: 'Surrogacy',
@@ -170,7 +170,7 @@ const heroData = {
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/service_bg.jpg',
+        backgroundImage: '/assets/img/egg.jpg',
         iconUrl: '/assets/img/icons/service_icon_4.png',
         index: '04',
         title: 'Egg Freezing',
@@ -517,120 +517,175 @@ const heroData = {
       'Seeds of Innocens has multiple centres across India and internationally, providing world-class fertility treatments with the same quality and care everywhere.',
     tabs: [
       { id: 'dental', label: 'Delhi NCR' },
-      { id: 'cardiology', label: 'Uttar Pradesh' },
-      { id: 'neurology', label: 'Bihar' },
-      { id: 'medical', label: 'Other States' },
+      { id: 'up', label: 'Uttar Pradesh' },
+      { id: 'bihar', label: 'Bihar' },
+      { id: 'kerala', label: 'Kerala' },
+      { id: 'other', label: 'Other States' },
     ],
     tabData: [
       {
         id: 'dental',
         items: [
           {
-            imgUrl: '/assets/img/project_1.jpg',
-            title: 'Medical Of Working',
+            imgUrl: '/assets/img/Centers/malviyanagar.jpg',
+            title: 'Malviya Nagar, Delhi',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
+              'Seeds of Innocens IVF, 3, opposite Aurbindo College, MMTC Road, Malviya Nagar, New Delhi-110017',
             index: 1,
           },
           {
-            imgUrl: '/assets/img/project_2.jpg',
-            title: 'Medical Of Dental',
+            imgUrl: '/assets/img/Centers/ghaziabad.jpg',
+            title: 'Ghaziabad, Uttar Pradesh',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
+              'Seeds of Innocens IVF, Yashoda Hospital Opp. Nehru Stadium, Nehru Nagar, Ghaziabad, U.P.-201001',
             index: 2,
           },
           {
-            imgUrl: '/assets/img/project_3.jpg',
-            title: 'Laboratory Technologist',
+            imgUrl: '/assets/img/Centers/gurgaon.jpg',
+            title: 'Gurgaon, Haryana',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
+              'Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar, Nigam Office Gurugram, Haryana-122001',
             index: 3,
+          },
+          {
+            imgUrl: '/assets/img/Centers/faridabad.jpg',
+            title: 'Faridabad, Haryana',
+            subtitle:
+              'Seeds of Innocens IVF, A-6/A Neelam Bata Road, Above ICICI Bank, NIT Faridabad, Haryana-121001',
+            index: 4,
+          },
+          {
+            imgUrl: '/assets/img/Centers/jankpuri.jpg',
+            title: 'Jankpuri, Delhi',
+            subtitle:
+              'Seeds of Innocens IVF, C1A/50A, Pankha Road, Janakpuri, New Delhi-110058',
+            index: 5,
+          },
+          {
+            imgUrl: '/assets/img/Centers/pitampura.jpg',
+            title: 'Pitampura, Delhi',
+            subtitle:
+              'Seeds of Innocens IVF, Plot no 1, First floor, Shiva Enclave, Near Harsh Vihar Chowk, Pitampura, Delhi-110034',
+            index: 6,
           },
         ],
       },
       {
-        id: 'cardiology',
+        id: 'up',
         items: [
           {
-            imgUrl: '/assets/img/project_1.jpg',
-            title: 'Medical Of Working',
+            imgUrl: '/assets/img/Centers/gorakhpur.jpg',
+            title: 'Gorakhpur, Uttar Pradesh',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
+              '2nd Floor, 1076, Kamlesh Shopping Arcade, near Kalimandir, Golghar, Gorakhpur, U.P.-273001',
             index: 1,
           },
           {
-            imgUrl: '/assets/img/project_3.jpg',
-            title: 'Laboratory Technologist',
+            imgUrl: '/assets/img/Centers/lucknow.jpg',
+            title: 'Lucknow, Uttar Pradesh',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
+              'Drosia Tower, 5/5, Park Rd, Raj Bhavan Colony, Hazratganj, Lucknow, Uttar Pradesh 226001',
+            index: 2,
+          },
+          {
+            imgUrl: '/assets/img/Centers/kanpur.jpg',
+            title: 'Kanpur, Uttar Pradesh',
+            subtitle:
+              '7/153, Kumhar Wali gali, Kanpur Vidya Mandir, Khalasi Line, Swaroop Nagar, Kanpur, Uttar Pradesh 208002',
             index: 3,
           },
           {
-            imgUrl: '/assets/img/project_2.jpg',
-            title: 'Medical Of Dental',
+            imgUrl: '/assets/img/Centers/meerut.jpg',
+            title: 'Meerut, Uttar Pradesh',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
+              'building 303/305, 2nd floor, Mangal Pandey Nagar, Ramgarhi, Meerut, Uttar Pradesh 250004',
+            index: 4,
+          },
+          {
+            imgUrl: '/assets/img/Centers/agra.jpg',
+            title: 'Agra, Uttar Pradesh',
+            subtitle:
+              '1st Floor, Shankar Point, Block No.9/4, Sanjay Palace, Sanjay Place, Civil Lines, Agra, Uttar Pradesh 282002',
+            index: 5,
+          },
+        ],
+      },
+      {
+        id: 'bihar',
+        items: [
+          {
+            imgUrl: '/assets/img/Centers/patna.jpg',
+            title: 'Patna, Bihar',
+            subtitle:
+              'Pillar no: 38, Jagmano Shree Complex, Bailey Rd, Samanpura, Khajpura, Patna, Bihar 800014',
+            index: 1,
+          },
+          {
+            imgUrl: '/assets/img/Centers/muzaffarpur.jpg',
+            title: 'Muzaffarpur, Bihar',
+            subtitle:
+              '2nd Floor, Hansa Complex, Maripur Main Rd, Musahri, Muzaffarpur, Bihar 842001',
             index: 2,
           },
         ],
       },
       {
-        id: 'neurology',
+        id: 'kerala',
         items: [
           {
-            imgUrl: '/assets/img/project_1.jpg',
-            title: 'Medical Of Working',
+            imgUrl: '/assets/img/Centers/kochi.jpg',
+            title: 'Kochi, Kerala',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
+              'Opp Royal drive showroom, Kannadikadu, Upasana Rd, Kundannoor, Maradu, Kochi, Kerala 682304',
             index: 1,
-          },
+          },                           
           {
-            imgUrl: '/assets/img/project_3.jpg',
-            title: 'Medical Of Working',
+            imgUrl: '/assets/img/Centers/kasaragod.jpg',
+            title: 'Kasaragod, Kerala',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
-          },
-          {
-            imgUrl: '/assets/img/project_2.jpg',
-            title: 'Medical Of Working',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
+              'Seeds of Innocens IVF, Wintouch Multi Speciality Hospital, Bank Road, Kasaragod, Kerala, 671121',
+            index: 2,
           },
         ],
       },
       {
-        id: 'medical',
+        id: 'other',
         items: [
           {
-            imgUrl: '/assets/img/project_3.jpg',
-            title: 'Medical Of Working',
+          imgUrl: '/assets/img/Centers/guwahati.jpg',
+            title: 'Guwahati, Assam',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
+              'GS Rd, SATSANG VIHAR, Bhangagarh, Guwahati, Assam 781005',
             index: 1,
           },
           {
-            imgUrl: '/assets/img/project_2.jpg',
-            title: 'Medical Of Working',
+            imgUrl: '/assets/img/Centers/haldwani.jpg',
+            title: 'Haldwani, Uttarakhand',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
+              '2nd Floor, Laxmi Mohan Towers, Chauraha, Bamori Talli, Ganesh Vihar, Heera Nagar, Mukhani, Haldwani, Uttarakhand 263139',
+            index: 2,
           },
           {
-            imgUrl: '/assets/img/project_1.jpg',
-            title: 'Medical Of Working',
+            imgUrl: '/assets/img/Centers/ranchi.jpg',
+            title: 'Ranchi, Jharkhand',
             subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
+              '4th Floor, Maru Tower, Kanke Rd, Ranchi, Jharkhand 834008',
+            index: 3,
           },
+          // {
+          //   imgUrl: '/assets/img/Centers/srinagar.jpg',
+          //   title: 'Srinagar, Jammu and Kashmir',
+          //   subtitle:
+          //     'Karan Nagar Gole Market Rd, opposite Masjid, Karan Nagar, Srinagar, Jammu and Kashmir 190010',
+          //   index: 4,
+          // },
         ],
       },
     ],
   };
   
   const ctaData1 = {
-    videoLink: 'https://www.youtube.com/embed/rRid6GCJtgc',
+    videoLink: 'https://www.youtube.com/embed/n7OFN8asiWQ',
     videoButtonText: 'WATCH VIDEO',
     subtitle: 'WATCH VIDEO',
     title: 'Professional Fertility Care & Treatment.',
@@ -669,7 +724,7 @@ const heroData = {
     tabsData: [
       {
         id: 'brain_althim',
-        imageSrc: '/assets/img/offerings03.jpg',
+        imageSrc: '/assets/img/IVF-ICSI.jpg',
         title: 'Advanced IVF-ICSI Treatment',
         subtitle:
           'Our IVF-ICSI program uses the latest technology and techniques to maximize your chances of success. We provide personalized treatment plans tailored to your specific needs.',
@@ -758,20 +813,20 @@ const heroData = {
         date: 'April 08',
         category: 'Male Fertility',
         author: 'Admin',
-        thumbnail: '/assets/img/post_1.jpeg',
+        thumbnail: '/assets/img/post_1.jpg',
         btnText: 'Read More',
         postLink: '/blog/blog-details',
         authorIcon: '/assets/img/icons/post_user_icon.png',
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       },
       {
-        title: 'What is PRP Treatment in IVF?',
+        title: 'Genetic Conditions: Understanding Their Role in Fertility and Parenthood',
         subtitle:
-          'PRP is Platelet-Rich Plasma therapy that is mainly known for its regenerative properties...',
+          'When couples begin their journey toward parenthood, questions about health and heredity often arise...',
         date: 'April 08',
-        category: 'IVF Treatment',
+        category: 'Genetic Conditions',
         author: 'Admin',
-        thumbnail: '/assets/img/post_2.jpeg',
+        thumbnail: '/assets/img/post_2.jpg',
         btnText: 'Read More',
         postLink: '/blog/blog-details',
         authorIcon: '/assets/img/icons/post_user_icon.png',
@@ -784,20 +839,20 @@ const heroData = {
         date: 'April 08',
         category: 'Male Fertility',
         author: 'Admin',
-        thumbnail: '/assets/img/post_3.jpeg',
+        thumbnail: '/assets/img/post_3.jpg',
         btnText: 'Read More',
         postLink: '/blog/blog-details',
         authorIcon: '/assets/img/icons/post_user_icon.png',
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       },
       {
-        title: 'Can I-Pill Cause Infertility in Women?',
+        title: 'Hormonal Imbalances: Understanding and Managing Their Impact on Fertility',
         subtitle:
-          'Nowadays, there are a lot of questions about the impact of i-pills on female fertility...',
+          'Hormonal health plays a key role in overall well-being and reproductive health...',
         date: 'April 08',
         category: 'Female Infertility',
         author: 'Admin',
-        thumbnail: '/assets/img/post_1.jpeg',
+        thumbnail: '/assets/img/post_4.jpg',
         btnText: 'Read More',
         postLink: '/blog/blog-details',
         authorIcon: '/assets/img/icons/post_user_icon.png',
@@ -869,9 +924,9 @@ const page = () => {
       {/* End Team Section */}
 
       {/* Start Brand Section */}
-      <Section topSpaceLg="70" topSpaceMd="90" className="cs_brands_section">
+      {/* <Section topSpaceLg="70" topSpaceMd="90" className="cs_brands_section">
         <BrandsSlider data={brandData} />
-      </Section>
+      </Section> */}
 
       {/* End Brand Section */}
 
@@ -901,7 +956,7 @@ const page = () => {
         bottomSpaceLg="80"
         bottomSpaceMd="120"
         className="cs_cta cs_style_2 cs_blue_bg cs_bg_filed cs_center"
-        backgroundImage="/assets/img/cta_bg_1.jpeg"
+        backgroundImage="/assets/img/cta_bg_1.jpg"
       >
         <CtaSection1 data={ctaData1} />
       </Section>
