@@ -22,6 +22,10 @@ const HeroSection = ({ data }) => {
     slidesToShow: 1,
     fade: false,
     swipeToSlide: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: false,
+    pauseOnFocus: false,
   };
 
   const settings2 = {
@@ -33,6 +37,10 @@ const HeroSection = ({ data }) => {
     swipeToSlide: true,
     vertical: true,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: false,
+    pauseOnFocus: false,
   };
 
   return (

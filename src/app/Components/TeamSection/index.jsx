@@ -1,4 +1,5 @@
 'use client';
+import { useRef } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,12 +13,19 @@ import Link from "next/link";
 import Image from "next/image";
 
 const TeamSection = ({ data, bgColor, variant, hr }) => {
+  const sliderRef = useRef(null);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 4,
     swipeToSlide: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    pauseOnDotsHover: true,
     appendDots: (dots) => (
       <div>
         <ul>{dots}</ul>
@@ -53,9 +61,14 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
         <div className="cs_slider cs_style_1 cs_slider_gap_24">
           <div className="cs_slider_container">
             <div className="cs_slider_wrapper">
-              <Slider {...settings}>
+              <Slider ref={sliderRef} {...settings}>
                 {data?.sliderData.map((item, index) => (
-                  <div className="cs_slide" key={index}>
+                  <div
+                    className="cs_slide"
+                    key={index}
+                    onMouseEnter={() => sliderRef.current?.slickPause()}
+                    onMouseLeave={() => sliderRef.current?.slickPlay()}
+                  >
                     <div
                       className={`cs_team cs_style_1 ${
                         bgColor ? "cs_accent_bg" : "cs_blue_bg"

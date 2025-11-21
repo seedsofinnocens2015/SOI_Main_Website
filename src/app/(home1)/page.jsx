@@ -178,7 +178,7 @@ const heroData = {
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/service_bg.jpg',
+        backgroundImage: '/assets/img/ovarian.jpg',
         iconUrl: '/assets/img/icons/service_icon_5.png',
         index: '05',
         title: 'PRP & Ovarian Rejuvenation',
@@ -186,7 +186,7 @@ const heroData = {
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/service_bg.jpg',
+        backgroundImage: '/assets/img/genetic.jpg',
         iconUrl: '/assets/img/icons/service_icon_6.png',
         index: '06',
         title: 'Genetic Testing',
@@ -194,7 +194,7 @@ const heroData = {
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/service_bg.jpg',
+        backgroundImage: '/assets/img/male.jpg',
         iconUrl: '/assets/img/icons/service_icon_7.png',
         index: '07',
         title: 'Male Fertility',
@@ -202,7 +202,7 @@ const heroData = {
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/service_bg.jpg',
+        backgroundImage: '/assets/img/blastocyst.jpg',
         iconUrl: '/assets/img/icons/service_icon_8.png',
         index: '08',
         title: 'Blastocyst Transfer',

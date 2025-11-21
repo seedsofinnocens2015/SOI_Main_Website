@@ -1,4 +1,5 @@
 "use client"
+import { useRef } from "react";
 import Slider from "react-slick";
 import Button from "../Buttons";
 import { FaAngleRight } from "react-icons/fa6";
@@ -7,6 +8,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const BlogSection = ({ data }) => {
+  const sliderRef = useRef(null);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -14,6 +17,11 @@ const BlogSection = ({ data }) => {
     slidesToShow: 3,
     fade: false,
     swipeToSlide: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    pauseOnDotsHover: true,
     appendDots: (dots) => (
       <div>
         <ul>{dots}</ul>
@@ -48,9 +56,14 @@ const BlogSection = ({ data }) => {
         <div className="cs_slider cs_style_1 cs_slider_gap_24">
           <div className="cs_slider_container">
             <div className="cs_slider_wrapper">
-              <Slider {...settings}>
+              <Slider ref={sliderRef} {...settings}>
                 {data.postsData.map((post, index) => (
-                  <div key={index} className="cs_slide">
+                  <div
+                    key={index}
+                    className="cs_slide"
+                    onMouseEnter={() => sliderRef.current?.slickPause()}
+                    onMouseLeave={() => sliderRef.current?.slickPlay()}
+                  >
                     <article className="cs_post cs_style_1">
                       <Link
                         href={post.postLink}

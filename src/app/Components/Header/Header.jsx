@@ -386,6 +386,13 @@ const Header = ({ isTopBar, variant }) => {
                 <Link className="cs_site_branding" href={menu.logoLink}>
                 <Image src={menu.logoUrl} alt="img" width={350} height={110}   />
                 </Link>
+                {/* Mobile View: IVF Calculator Button */}
+                <Link href="/ivf-success-calculator" className="cs_ivf_calc_btn_mobile cs_btn cs_style_1 cs_color_1">
+                  <span>Calculate Now</span>
+                  <i>
+                    <FaAnglesRight />
+                  </i>
+                </Link>
               <div className="cs_main_header_right ">
                 <div className="cs_nav cs_primary_color ">
                   <ul
