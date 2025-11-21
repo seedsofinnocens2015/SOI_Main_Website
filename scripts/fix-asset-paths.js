@@ -51,25 +51,55 @@ function fixAssetPaths() {
       // Fix img src="/assets/..."
       const imgSrcPattern = /(<img[^>]*src=["'])\/assets\//g;
       if (imgSrcPattern.test(content)) {
-        content = content.replace(/(<img[^>]*src=["'])\/assets\//g, `$1${basePath}/assets/`);
+        content = content.replace(imgSrcPattern, `$1${basePath}/assets/`);
+        modified = true;
+      }
+
+      // Fix video/audio source tags
+      const mediaSourcePattern = /(<(?:source|track)[^>]*src=["'])\/assets\//g;
+      if (mediaSourcePattern.test(content)) {
+        content = content.replace(mediaSourcePattern, `$1${basePath}/assets/`);
+        modified = true;
+      }
+
+      // Fix video poster attributes
+      const videoPosterPattern = /(<video[^>]*poster=["'])\/assets\//g;
+      if (videoPosterPattern.test(content)) {
+        content = content.replace(videoPosterPattern, `$1${basePath}/assets/`);
+        modified = true;
+      }
+
+      // Fix generic data-src/data-bg attributes
+      const dataSrcPattern = /(<[^>]*data-(?:src|bg|background)=["'])\/assets\//g;
+      if (dataSrcPattern.test(content)) {
+        content = content.replace(dataSrcPattern, `$1${basePath}/assets/`);
         modified = true;
       }
       
       // Fix link href="/assets/..." for stylesheets, etc.
       const linkHrefPattern = /(<link[^>]*href=["'])\/assets\//g;
       if (linkHrefPattern.test(content)) {
-        content = content.replace(/(<link[^>]*href=["'])\/assets\//g, `$1${basePath}/assets/`);
+        content = content.replace(linkHrefPattern, `$1${basePath}/assets/`);
         modified = true;
       }
     }
 
     // Fix JS asset references (if any)
-    // Match: "/assets/..." or '/assets/...' but skip if already has basePath
+    // Match: "/assets/..." or '/assets/...'
     if (filePath.endsWith('.js')) {
-      // Simple approach: replace all "/assets/" with "/new/assets/" but avoid double replacement
       const jsAssetPattern = /(['"])\/assets\//g;
-      if (jsAssetPattern.test(content) && !content.includes(`${basePath}/assets/`)) {
-        content = content.replace(/(['"])\/assets\//g, `$1${basePath}/assets/`);
+      let jsMatched = false;
+
+      content = content.replace(jsAssetPattern, (match, quote, offset, string) => {
+        jsMatched = true;
+        const before = string.slice(Math.max(0, offset - basePath.length), offset);
+        if (before === basePath) {
+          return match;
+        }
+        return `${quote}${basePath}/assets/`;
+      });
+
+      if (jsMatched) {
         modified = true;
       }
     }

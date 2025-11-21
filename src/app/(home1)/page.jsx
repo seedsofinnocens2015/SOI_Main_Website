@@ -95,7 +95,7 @@ const heroData = {
       "We provide world-class fertility treatments with high success rates and personalized care <a href='/about'>READ MORE +</a>",
     experienceYears: '10+',
     experienceTitle: 'Years Experience',
-    videoUrl: 'https://www.youtube.com/embed/rRid6GCJtgc',
+    videoUrl: 'https://www.youtube.com/embed/Xqe5ipD1Bwk?si=GvaPx5MngqYkWGqU',
     videoText: 'How We Work',
     iconboxes: [
       {
@@ -149,22 +149,46 @@ const heroData = {
         backgroundImage: '/assets/img/IVF-ICSI.jpg',
         iconUrl: '/assets/img/icons/service_icon_1.png',
         index: '01',
-        title: 'IVF-ICSI',
+        title: 'IUI, IVF & ICSI',
         subtitle: 'In-vitro fertilization with Intracytoplasmic sperm injection for better success',
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/IUI.jpg',
-        iconUrl: '/assets/img/icons/service_icon_2.png',
+        backgroundImage: '/assets/img/male.jpg',
+        iconUrl: '/assets/img/icons/service_icon_7.png',
         index: '02',
-        title: 'IUI Treatment',
-        subtitle: 'Intrauterine insemination procedure for couples with fertility issues',
+        title: 'TESA/PESA',
+        subtitle: 'TESA, MicroTESE, Semen Analysis and varicocele treatment',
+        link: '/service/service-details',
+      },
+      {
+        backgroundImage: '/assets/img/genetic.jpg',
+        iconUrl: '/assets/img/icons/service_icon_6.png',
+        index: '03',
+        title: 'Genetic Testing',
+        subtitle: 'PGT-A, PGT-M, PGT-SR and comprehensive genetic screening',
+        link: '/service/service-details',
+      },
+      {
+        backgroundImage: '/assets/img/blastocyst.jpg',
+        iconUrl: '/assets/img/icons/service_icon_8.png',
+        index: '04',
+        title: 'Blastocyst Transfer',
+        subtitle: 'Advanced embryo transfer technique for higher pregnancy rates',
+        link: '/service/service-details',
+      },
+      {
+        backgroundImage: '/assets/img/recent_post_1.png',
+        iconUrl: '/assets/img/icons/service_icon_2.png',
+        index: '05',
+        title: 'Donor Program',
+        subtitle: 'Donor program for couples with fertility issues like low sperm count, low motility, etc.',
         link: '/service/service-details',
       },
       {
         backgroundImage: '/assets/img/surrogacy.jpg',
         iconUrl: '/assets/img/icons/service_icon_3.png',
-        index: '03',
+        index: '06',
         title: 'Surrogacy',
         subtitle: 'Complete surrogacy services with legal support and medical care',
         link: '/service/service-details',
@@ -172,43 +196,38 @@ const heroData = {
       {
         backgroundImage: '/assets/img/egg.jpg',
         iconUrl: '/assets/img/icons/service_icon_4.png',
-        index: '04',
-        title: 'Egg Freezing',
-        subtitle: 'Preserve your fertility with advanced egg freezing technology',
+        index: '07',
+        title: 'Cryopreservation',
+        subtitle: 'Cryopreservation of sperm, eggs, embryos, and ovarian tissue for future use',
+        link: '/service/service-details',
+      },
+      {
+        backgroundImage: '/assets/img/genetic.jpg',
+        iconUrl: '/assets/img/icons/service_icon_5.png',
+        index: '08',
+        title: 'Genetic Counselling',
+        subtitle: 'Genetic counselling for couples with fertility issues like low sperm count, low motility, etc.',
+        link: '/service/service-details',
+      },
+      {
+        backgroundImage: '/assets/img/laparoscopy.jpg',
+        iconUrl: '/assets/img/icons/service_icon_5.png',
+        index: '09',
+        title: 'Laparoscopy & Hysteroscopy',
+        subtitle: 'Laparoscopy & Hysteroscopy for treatment of fertility issues',
         link: '/service/service-details',
       },
       {
         backgroundImage: '/assets/img/ovarian.jpg',
         iconUrl: '/assets/img/icons/service_icon_5.png',
-        index: '05',
+        index: '10',
         title: 'PRP & Ovarian Rejuvenation',
         subtitle: 'Platelet-rich plasma therapy for improved ovarian function',
         link: '/service/service-details',
       },
-      {
-        backgroundImage: '/assets/img/genetic.jpg',
-        iconUrl: '/assets/img/icons/service_icon_6.png',
-        index: '06',
-        title: 'Genetic Testing',
-        subtitle: 'PGT-A, PGT-M, PGT-SR and comprehensive genetic screening',
-        link: '/service/service-details',
-      },
-      {
-        backgroundImage: '/assets/img/male.jpg',
-        iconUrl: '/assets/img/icons/service_icon_7.png',
-        index: '07',
-        title: 'Male Fertility',
-        subtitle: 'TESA, MicroTESE, Semen Analysis and varicocele treatment',
-        link: '/service/service-details',
-      },
-      {
-        backgroundImage: '/assets/img/blastocyst.jpg',
-        iconUrl: '/assets/img/icons/service_icon_8.png',
-        index: '08',
-        title: 'Blastocyst Transfer',
-        subtitle: 'Advanced embryo transfer technique for higher pregnancy rates',
-        link: '/service/service-details',
-      },
+      
+      
+     
     ],
     footerIcon: '/assets/img/icons/service_footer_icon_1.png',
     footerText:
@@ -685,7 +704,7 @@ const heroData = {
   };
   
   const ctaData1 = {
-    videoLink: 'https://www.youtube.com/embed/n7OFN8asiWQ',
+    videoLink: 'https://www.youtube.com/embed/n7OFN8asiWQ?si=G0ufkIozssMtTeGP',
     videoButtonText: 'WATCH VIDEO',
     subtitle: 'WATCH VIDEO',
     title: 'Professional Fertility Care & Treatment.',
@@ -937,7 +956,7 @@ const page = () => {
         bottomSpaceLg="80"
         bottomSpaceMd="120"
         className="cs_gray_bg cs_bg_filed"
-        backgroundImage="/assets/img/service_bg_2.jpg"
+        backgroundImage="/assets/img/service_bg_2.png"
       >
         <ChooseUs data={sectionData} />
       </Section>

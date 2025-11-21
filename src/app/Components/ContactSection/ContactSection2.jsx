@@ -39,7 +39,7 @@ const ContactSection2 = () => {
                 <textarea rows="5" name="message" className="cs_form_field" placeholder="Your comments"></textarea>
               </div>
               <div className="col-lg-12">
-                <button type="submit" className="cs_btn cs_style_1 cs_color_1">Book Appointment</button>
+                <button type="submit" className="cs_btn cs_style_1 cs_color_1 cs_solution_content">Book Appointment</button>
               </div>
             </form>
             </div>

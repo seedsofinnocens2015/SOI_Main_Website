@@ -629,14 +629,14 @@ const Header = ({ isTopBar, variant }) => {
                   </span>
                 </div>
                 <div className="cs_search_wrap">
-                  <div
+                  {/* <div
                     className="cs_search_toggle cs_center"
                     onClick={() => setIsSearchActive(!isSearchActive)}
                   >
                     <i>
                       <HiMiniMagnifyingGlass />
                     </i>
-                  </div>
+                  </div> */}
                   <form
                     action="#"
                     className={`cs_header_search_form ${
