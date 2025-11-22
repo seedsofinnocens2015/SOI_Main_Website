@@ -17,7 +17,7 @@ import BlogSection from '../Components/BlogsSection';
 const heroData = {
     primarySlider: [
       {
-        bgImageUrl: '/assets/img/hero_slider_3.mp4',
+        bgImageUrl: '/assets/img/hero_slider_30.mp4',
         title: 'Seeds of Innocens IVF Centre - <span>India\'s Best Fertility Clinic</span>',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -112,7 +112,7 @@ const heroData = {
 
     btnUrl: '/about',
     btnText: 'About More',
-    sectionImgUrl: '/assets/img/about_section_img_1.png',
+    sectionImgUrl: '/assets/img/about_section_img_12.png',
     headImgUrl: '/assets/img/about_img_1.jpg',
   };
   

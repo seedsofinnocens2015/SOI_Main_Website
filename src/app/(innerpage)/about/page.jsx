@@ -36,7 +36,7 @@ const headingData = {
   
     btnUrl: '/service',
     btnText: 'Our Services',
-    sectionImgUrl: '/assets/img/about_section_img_1.png',
+    sectionImgUrl: '/assets/img/about_section_img_12.png',
     headImgUrl: '/assets/img/about_img_7.jpeg',
   };
   

@@ -44,13 +44,13 @@ const ContactSection2 = () => {
             </form>
             </div>
             <div className="col-lg-6">
-              <div className="cs_solution_thumbnail cs_bg_filed" data-background="/assets/img/medical_solution_1.png" >
+              <div className="cs_solution_thumbnail cs_bg_filed" data-background="/assets/img/medical_solution.png" >
               </div>
             </div>
           </div>
         </div>
         <div className="cs_solution_shape position-absolute">
-        <Image src="/assets/img/stethoscope.png" alt="img" width={304} height={399}   />
+        <Image src="/assets/img/stethoscope2.png" alt="img" width={304} height={399}   />
         </div>
         <div className="cs_height_120 cs_height_lg_80"></div>
       </section>
