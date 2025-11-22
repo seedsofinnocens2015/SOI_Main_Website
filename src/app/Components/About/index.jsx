@@ -98,7 +98,7 @@ const About = ({ data }) => {
         </div>
       </div>
       <div className="cs_section_img">
-      <Image src={data.sectionImgUrl} alt="img" width={228} height={494}   />
+      <Image src={data.sectionImgUrl} alt="img" width={328} height={394}   />
       </div>
       {/* Video Modal  */}
       <VideoModal

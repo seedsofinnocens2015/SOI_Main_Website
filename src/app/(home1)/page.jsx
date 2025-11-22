@@ -498,13 +498,13 @@ const heroData = {
     services: [
       {
         iconUrl: '/assets/img/icons/service_icon_9.png',
-        title: 'Expert Care',
-        subtitle: 'Trained and certified doctors with years of experience in fertility treatments',
+        title: 'Affordable IVF Care',
+        subtitle: 'Affordable IVF Care with transparent pricing and flexible payment options',
       },
       {
         iconUrl: '/assets/img/icons/service_icon_10.png',
-        title: '24/7 Support',
-        subtitle: 'Round-the-clock support and guidance throughout your fertility journey',
+        title: 'Expert Counsellors & Clinical Geneticists',
+        subtitle: 'Expert counsellors and clinical geneticists for comprehensive genetic testing and analysis',
       },
       {
         iconUrl: '/assets/img/icons/service_icon_11.png',
@@ -518,13 +518,13 @@ const heroData = {
       },
       {
         iconUrl: '/assets/img/icons/service_icon_13.png',
-        title: 'Multiple Locations',
-        subtitle: '25+ centres across India for convenient access to quality fertility care',
+        title: 'In-House Genetic Lab',
+        subtitle: 'In-house genetic lab for comprehensive genetic testing and analysis',
       },
       {
         iconUrl: '/assets/img/icons/service_icon_14.png',
-        title: 'Affordable Prices',
-        subtitle: 'Transparent pricing with flexible payment options and insurance support',
+        title: 'Fetal Medicine',
+        subtitle: 'Fetal medicine for comprehensive fetal monitoring and care',
       },
     ],
   };
@@ -982,9 +982,9 @@ const page = () => {
       {/* End CTA Section */}
 
       {/* Start Medical Tab Section */}
-      <Section topSpaceLg="70" topSpaceMd="110">
+      {/* <Section topSpaceLg="70" topSpaceMd="110">
         <MedicalTabSection data={medicalTabsData} />
-      </Section>
+      </Section> */}
       {/* End Medical Tab Section */}
 
       {/* Start Contact Solution */}

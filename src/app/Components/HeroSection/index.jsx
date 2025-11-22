@@ -9,10 +9,82 @@ const HeroSection = ({ data }) => {
   const [nav2, setNav2] = useState(null);
   let sliderRef1 = useRef(null);
   let sliderRef2 = useRef(null);
+  const videoRefs = useRef([]);
 
   useEffect(() => {
     setNav1(sliderRef1);
     setNav2(sliderRef2);
+  }, []);
+
+  // Handle page visibility changes to resume slider and video when page becomes active
+  useEffect(() => {
+    const resumeSliderAndVideos = () => {
+      // Resume slider autoplay
+      if (sliderRef1 && typeof sliderRef1.slickPlay === 'function') {
+        try {
+          sliderRef1.slickPlay();
+        } catch (e) {
+          console.log("Slider play error:", e);
+        }
+      }
+      if (sliderRef2 && typeof sliderRef2.slickPlay === 'function') {
+        try {
+          sliderRef2.slickPlay();
+        } catch (e) {
+          console.log("Slider play error:", e);
+        }
+      }
+
+      // Resume video playback
+      videoRefs.current.forEach((videoEl) => {
+        if (videoEl && videoEl.play) {
+          videoEl.play().catch((error) => {
+            // Ignore autoplay errors silently
+          });
+        }
+      });
+    };
+
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        // Page became visible - resume everything
+        resumeSliderAndVideos();
+      }
+    };
+
+    // Add visibility change listener
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    // Also check when window gains focus
+    const handleFocus = () => {
+      resumeSliderAndVideos();
+    };
+
+    window.addEventListener("focus", handleFocus);
+
+    // Periodic check to ensure slider and videos keep running even when idle
+    // This helps when page becomes idle but visibility API might not trigger properly
+    const checkInterval = setInterval(() => {
+      if (!document.hidden) {
+        // Check if slider is still playing (slick doesn't have a direct "isPlaying" method,
+        // so we'll just try to resume it periodically)
+        resumeSliderAndVideos();
+
+        // Ensure all videos are playing
+        videoRefs.current.forEach((videoEl) => {
+          if (videoEl && videoEl.paused && !document.hidden) {
+            videoEl.play().catch(() => {});
+          }
+        });
+      }
+    }, 3000); // Check every 3 seconds
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("focus", handleFocus);
+      clearInterval(checkInterval);
+    };
   }, []);
 
   const settings = {
@@ -26,6 +98,13 @@ const HeroSection = ({ data }) => {
     autoplaySpeed: 5000,
     pauseOnHover: false,
     pauseOnFocus: false,
+    afterChange: (currentSlide) => {
+      // When slide changes, ensure video on current slide plays
+      const videoEl = videoRefs.current[currentSlide];
+      if (videoEl && videoEl.paused && !document.hidden) {
+        videoEl.play().catch(() => {});
+      }
+    },
   };
 
   const settings2 = {
@@ -54,6 +133,7 @@ const HeroSection = ({ data }) => {
           >
             {data?.primarySlider.map((items, index) => {
               const isVideo = items.bgImageUrl?.toLowerCase().endsWith(".mp4");
+              
               return (
                 <div className="cs_hero_slider_thumb_item" key={index}>
                   <div
@@ -70,6 +150,11 @@ const HeroSection = ({ data }) => {
                   >
                     {isVideo && (
                       <video
+                        ref={(el) => {
+                          if (el) {
+                            videoRefs.current[index] = el;
+                          }
+                        }}
                         className="cs_hero_video_bg"
                         autoPlay
                         muted
@@ -77,6 +162,38 @@ const HeroSection = ({ data }) => {
                         playsInline
                         preload="auto"
                         poster={items.posterUrl ?? ""}
+                        onLoadedData={(e) => {
+                          // Ensure video plays after loading
+                          if (e.target) {
+                            e.target.play().catch((error) => {
+                              console.log("Video autoplay prevented:", error);
+                            });
+                          }
+                        }}
+                        onPlay={() => {
+                          // Ensure video stays playing
+                          const video = videoRefs.current[index];
+                          if (video && video.paused) {
+                            video.play().catch(() => {});
+                          }
+                        }}
+                        onPause={(e) => {
+                          // If video pauses unintentionally (not user-initiated), try to resume it
+                          // Only resume if page is visible and it's not a user interaction
+                          if (!document.hidden && e.target) {
+                            // Check if it's paused
+                            if (e.target.paused) {
+                              // Use requestAnimationFrame for better performance
+                              requestAnimationFrame(() => {
+                                if (!document.hidden && e.target && e.target.paused) {
+                                  e.target.play().catch(() => {
+                                    // Ignore play errors
+                                  });
+                                }
+                              });
+                            }
+                          }
+                        }}
                       >
                         <source src={items.bgImageUrl} type="video/mp4" />
                       </video>
