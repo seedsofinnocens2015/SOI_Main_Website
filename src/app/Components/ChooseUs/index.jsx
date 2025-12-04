@@ -8,24 +8,22 @@ const ChooseUs = ({ data }) => {
     <>
       <div className="container">
         <div className="row">
-          <div className="col-lg-8">
+          <div className="col-lg-10">
             <SectionHeading SectionSubtitle={subtitle} SectionTitle={title} />
-            <div className="cs_height_50 cs_height_lg_50" />
+            <div className="cs_height_30 cs_height_lg_30" />
           </div>
         </div>
         <div className="row">
-          <div className="col-xxl-7 col-xl-8 col-lg-9">
-            <div className="cs_service_wrapper">
-              <div className="cs_service_list">
+          <div className="col-lg-12">
+            <div className="cs_chooseus_minimalistic">
+              <div className="cs_chooseus_grid">
                 {services.map((service, index) => (
-                  <div key={index} className="cs_iconbox cs_style_3">
-                    <div className="cs_iconbox_icon cs_center cs_radius_5">
-                    <Image src={service.iconUrl} alt="img" width={25} height={25}   />
+                  <div key={index} className="cs_chooseus_card">
+                    <div className="cs_chooseus_icon">
+                      <Image src={service.iconUrl} alt={service.title} width={20} height={20} />
                     </div>
-                    <div className="cs_iconbox_text">
-                      <h3 className="cs_iconbox_title">{service.title}</h3>
-                      <p className="cs_iconbox_subtitle">{service.subtitle}</p>
-                    </div>
+                    <h3 className="cs_chooseus_title">{service.title}</h3>
+                    <p className="cs_chooseus_subtitle">{service.subtitle}</p>
                   </div>
                 ))}
               </div>

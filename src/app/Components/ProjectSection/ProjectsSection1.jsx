@@ -9,7 +9,7 @@ const ProjectsSection1 = ({ data }) => {
         <div className="cs_section_heading cs_style_1 cs_type_1">
           <div className="cs_section_heading_left">
             <p
-              className="cs_section_subtitle cs_accent_color"
+              className="cs_section_subtitle cs_section_subtitle_black"
               data-aos="fade-left"
             >
               <span className="cs_shape_left" />

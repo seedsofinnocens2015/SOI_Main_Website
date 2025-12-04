@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import Image from "next/image";
+import SectionHeading from "../SectionHeading";
+
 const TestimonialSection = ({ data }) => {
   const [rating, setRating] = useState();
   const settings = {
@@ -22,6 +24,15 @@ const TestimonialSection = ({ data }) => {
   return (
     <>
       <div className="container">
+        {data.subtitle && (
+          <SectionHeading
+            variant={'text-center'}
+            SectionTitle={data.title || ''}
+            SectionSubtitle={data.subtitle}
+            SectionDescription={data.description || ''}
+          />
+        )}
+        <div className="cs_height_30 cs_height_lg_30" />
         <div className="row cs_gap_y_50 align-items-center">
           <div className="col-lg-5" data-aos="fade-left">
             <div className="cs_testimonial_thumbnail">

@@ -8,17 +8,19 @@ const SectionHeading = ({
   return (
     <div className={`cs_section_heading cs_style_1  ${variant ? variant : ''}`}>
       <div className="cs_section_heading_left">
-        <p className="cs_section_subtitle cs_accent_color" data-aos="fade-up">
+        <p className="cs_section_subtitle cs_section_subtitle_black" data-aos="fade-up">
           <span className="cs_shape_left" />
           {SectionSubtitle}
           {variant === 'text-center' && (
             <span className="cs_shape_right"></span>
           )}
         </p>
-        <h2
-          className={`cs_section_title ${textColor ? textColor : ''}`}
-          dangerouslySetInnerHTML={{ __html: SectionTitle }}
-        />
+        {SectionTitle && (
+          <h2
+            className={`cs_section_title ${textColor ? textColor : ''}`}
+            dangerouslySetInnerHTML={{ __html: SectionTitle }}
+          />
+        )}
       </div>
       {SectionDescription && (
         <div

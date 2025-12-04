@@ -1,10 +1,10 @@
 import Spacing from "../Spacing";
 
 export default function Section({
-  topSpaceLg = "",
-  topSpaceMd = "_",
-  bottomSpaceLg = "_",
-  bottomSpaceMd = "_",
+  topSpaceLg = "80",
+  topSpaceMd = "70",
+  bottomSpaceLg = "80",
+  bottomSpaceMd = "70",
   backgroundImage = "",
   className,
   id = "",

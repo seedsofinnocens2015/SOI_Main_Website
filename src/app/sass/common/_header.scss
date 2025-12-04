@@ -78,7 +78,7 @@
 
 .cs_site_header.cs_style_1 {
   .cs_top_header.cs_blue_bg {
-    background-color: #f2464641;
+    background-color: #fafafa;
     .container {
       padding-left: 60px;
       padding-right: 60px;
@@ -170,7 +170,7 @@
   }
   .cs_top_header_in {
     height: 30px;
-    color: #7a0303;
+    color: #636363;
     .cs_header_contact_list {
       font-size: 12px;
       gap: 0 15px;
@@ -659,6 +659,18 @@
       &.cs_has_right_column {
         width: 600px !important;
       }
+      &.cs_has_three_columns {
+        width: 900px !important;
+        
+        > li {
+          flex: 1;
+          border-right: 1px solid var(--border-color);
+          
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
       &.cs_with_thumb {
         display: grid !important;
         grid-gap: 10px;
@@ -749,6 +761,12 @@
           box-shadow: none;
           background-color: transparent;
           li {
+            &.cs_active_subcategory {
+              a {
+                color: var(--accent-color);
+                font-weight: 600;
+              }
+            }
             a {
               transition: all 0.4s ease;
               display: flex;

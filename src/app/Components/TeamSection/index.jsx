@@ -1,11 +1,5 @@
 'use client';
 import { useRef } from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaPinterestP,
-  FaTwitter,
-} from "react-icons/fa";
 import Slider from "react-slick";
 import SectionHeading from "../SectionHeading";
 import Spacing from "../Spacing";
@@ -69,46 +63,19 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
                     onMouseEnter={() => sliderRef.current?.slickPause()}
                     onMouseLeave={() => sliderRef.current?.slickPlay()}
                   >
-                    <div
-                      className={`cs_team cs_style_1 ${
-                        bgColor ? "cs_accent_bg" : "cs_blue_bg"
-                      } `}
-                    >
-                      <div
-                        className={`cs_team_shape ${
-                          bgColor ? "cs_blue_bg" : "cs_accent_bg "
-                        }`}
-                      />
+                    <div className="cs_team cs_style_1 cs_team_minimalistic">
                       <Link href={item.link} className="cs_team_thumbnail">
-                      <Image src={item.imageUrl} alt="img" width={306} height={429}   />
+                        <Image src={item.imageUrl} alt={item.name} width={280} height={300} />
                       </Link>
                       <div className="cs_team_bio">
                         <h3 className="cs_team_title cs_extra_bold mb-0">
                           <Link href={item.link}>{item.name}</Link>
                         </h3>
                         <p className="cs_team_subtitle">{item.profession}</p>
-                        <div className="cs_social_btns cs_style_1">
-                          <Link href={item.facebook} className="cs_center">
-                            <i>
-                              <FaFacebookF />
-                            </i>
-                          </Link>
-                          <Link href={item.pinterest} className="cs_center">
-                            <i>
-                              <FaPinterestP />
-                            </i>
-                          </Link>
-                          <Link href={item.twitter} className="cs_center">
-                            <i>
-                              <FaTwitter />
-                            </i>
-                          </Link>
-                          <Link href={item.instagram} className="cs_center">
-                            <i>
-                              <FaInstagram />
-                            </i>
-                          </Link>
-                        </div>
+                        <p className="cs_team_experience">Experience: 12+ Years</p>
+                        <Link href={item.link} className="cs_team_view_profile">
+                          View Profile
+                        </Link>
                       </div>
                     </div>
                   </div>

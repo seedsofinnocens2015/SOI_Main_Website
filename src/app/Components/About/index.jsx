@@ -40,17 +40,17 @@ const About = ({ data }) => {
                 </a>
               </div>
               <div className="cs_about_thumb_2">
-              <Image src="/assets/img/about_img_2.jpg" alt="img" width={372} height={289}   />
-              <Image src="/assets/img/icons/about_shape_1.png" className="cs_about_thumb_shape_2" alt="img" width={129} height={128}   />
+              {/* <Image src="/assets/img/about_img_2.jpg" alt="img" width={372} height={289}   /> */}
+              {/* <Image src="/assets/img/icons/about_shape_1.png" className="cs_about_thumb_shape_2" alt="img" width={129} height={128}   /> */}
               </div>
-              <div className="cs_experience_box cs_center" data-aos="zoom-in">
+              {/* <div className="cs_experience_box cs_center" data-aos="zoom-in">
                 <p className="cs_experience_box_number">
                   {data.experienceYears}
                 </p>
                 <p className="cs_experience_box_title">
                   {data.experienceTitle}
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-lg-6" data-aos="fade-left">
@@ -61,7 +61,7 @@ const About = ({ data }) => {
               />
 
               <p className="cs_about_text">{data.aboutText}</p>
-              <div className="row cs_gap_y_30">
+              {/* <div className="row cs_gap_y_30">
                 {data.iconboxes.map((box, index) => (
                   <div className="col-sm-6" key={index}>
                     <div className="cs_iconbox cs_style_1">
@@ -75,9 +75,9 @@ const About = ({ data }) => {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
               <div className="cs_about_iconbox">
-                <div className="cs_about_iconbox_icon cs_center">
+                {/* <div className="cs_about_iconbox_icon cs_center">
                   <i>
                     <FaRegCircleCheck />
                   </i>
@@ -85,7 +85,7 @@ const About = ({ data }) => {
                 <p
                   className="cs_about_iconbox_subtitle"
                   dangerouslySetInnerHTML={{ __html: data.service }}
-                />
+                /> */}
               </div>
               <Button
                 btnText={data.btnText}

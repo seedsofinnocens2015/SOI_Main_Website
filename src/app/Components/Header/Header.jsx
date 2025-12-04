@@ -20,6 +20,7 @@ const Header = ({ isTopBar, variant }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isSticky, setIsSticky] = useState();
   const [hoveredCategoryIndex, setHoveredCategoryIndex] = useState(null);
+  const [hoveredStateIndex, setHoveredStateIndex] = useState(null);
   const [openMegaCategories, setOpenMegaCategories] = useState({});
   const [isMobileView, setIsMobileView] = useState(false);
   const menu = {
@@ -34,59 +35,53 @@ const Header = ({ isTopBar, variant }) => {
         isMegaMenu: true,
         megaMenuCategories: [
           {
-            label: 'Infertility Testing',
-            href: '/infertility-testing',
+            label: 'Fertility Treatments',
+            href: '/fertility-treatments',
             subItems: [
-              { label: 'Semen Analysis', href: '/semen-analysis' },
-              { label: 'Hormone Testing', href: '/hormone-testing' },
-              { label: 'Ovulation Testing', href: '/ovulation-testing' },
-              { label: 'HSG Test', href: '/hsg-test' },
-              { label: 'Genetic Testing', href: '/genetic-testing' },
+              { label: 'IVF / ICSI', href: '/fertility-treatments/ivf-icsi' },
+              { label: 'IUI', href: '/fertility-treatments/iui' },
+              { label: 'Ovulation Induction', href: '/fertility-treatments/ovulation-induction' },
+              { label: 'Follicular Monitoring', href: '/fertility-treatments/follicular-monitoring' },
+              { label: 'Blastocyst Transfer', href: '/fertility-treatments/blastocyst-transfer' },
             ],
           },
           {
-            label: 'Infertility Treatments',
-            href: '/infertility-treatments',
+            label: 'Advanced Fertility Care',
+            href: '/advanced-fertility-care',
             subItems: [
-              { label: 'IVF', href: '/ivf' },
-              { label: 'IUI', href: '/iui' },
-              { label: 'ICSI', href: '/icsi' },
-              { label: 'Hysteroscopy', href: '/hysteroscopy' },
+              { label: 'Egg Freezing', href: '/advanced-fertility-care/egg-freezing' },
+              { label: 'PRP & Ovarian Rejuvenation', href: '/advanced-fertility-care/prp-ovarian-rejuvenation' },
+              { label: 'Male Infertility', href: '/advanced-fertility-care/male-infertility' },
+              { label: 'TESA / PESA', href: '/advanced-fertility-care/tesa-pesa' },
+              { label: 'Semen Analysis', href: '/advanced-fertility-care/semen-analysis' },
             ],
           },
           {
-            label: 'Advanced Treatments',
-            href: '/advanced-treatments',
+            label: 'Genetic Testing (PGT)',
+            href: '/genetic-testing-pgt',
             subItems: [
-              { label: 'Blastocyst Culture And Transfer', href: '/blastocyst-culture' },
-              { label: 'Laser Assisted Hatching (LAH)', href: '/laser-assisted-hatching' },
-              { label: 'Preimplantation Genetic Testing', href: '/pgt' },
-              { label: 'Embryo Cryopreservation', href: '/embryo-cryopreservation' },
+              { label: 'PGT-A', href: '/genetic-testing-pgt/pgt-a' },
+              { label: 'PGT-M', href: '/genetic-testing-pgt/pgt-m' },
+              { label: 'PGT-SR', href: '/genetic-testing-pgt/pgt-sr' },
             ],
           },
           {
-            label: 'Fertility Preservation',
-            href: '/fertility-preservation',
+            label: 'Maternal–Fetal Medicine (MFM)',
+            href: '/maternal-fetal-medicine',
             subItems: [
-              { label: 'Egg Freezing', href: '/egg-freezing' },
-              { label: 'Sperm Freezing', href: '/sperm-freezing' },
-              { label: 'Embryo Freezing', href: '/embryo-freezing' },
-              { label: 'Ovarian Tissue Freezing', href: '/ovarian-tissue-freezing' },
+              { label: 'High-Risk Pregnancy', href: '/maternal-fetal-medicine/high-risk-pregnancy' },
+              { label: 'Fetal Reduction', href: '/maternal-fetal-medicine/fetal-reduction' },
+              { label: 'MFM Scans & Diagnostics', href: '/maternal-fetal-medicine/mfm-scans-diagnostics' },
             ],
           },
           {
-            label: 'Donor Programme',
-            href: '/donor-programme',
+            label: 'Surgeries',
+            href: '/surgeries',
             subItems: [
-              { label: 'Egg Donation', href: '/egg-donation' },
-              { label: 'Sperm Donation', href: '/sperm-donation' },
-              { label: 'Embryo Donation', href: '/embryo-donation' },
-              { label: 'Donor Matching', href: '/donor-matching' },
+              { label: 'Hysteroscopy', href: '/surgeries/hysteroscopy' },
+              { label: 'Laparoscopy', href: '/surgeries/laparoscopy' },
+              { label: 'Open Surgery', href: '/surgeries/open-surgery' },
             ],
-          },
-          {
-            label: 'Patient Information',
-            href: '/patient-information',
           },
         ],
       },
@@ -99,16 +94,86 @@ const Header = ({ isTopBar, variant }) => {
             label: 'India',
             href: '/ivf-centers/india',
             subItems: [
-              { label: 'Delhi', href: '/ivf-centers/delhi' },
-              { label: 'Uttar Pradesh', href: '/ivf-centers/uttarpradesh' },
-              { label: 'Bihar', href: '/ivf-centers/bihar' },
-              { label: 'Haryana', href: '/ivf-centers/haryana' },
-              { label: 'Jharkhand', href: '/ivf-centers/jharkhand' },
-              { label: 'Uttarakhand', href: '/ivf-centers/uttarakhand' },
-              { label: 'Assam', href: '/ivf-centers/assam' },
-              { label: 'Kerala', href: '/ivf-centers/kerala' },
-              { label: 'Jammu & Kashmir', href: '/ivf-centers/jammu-kashmir' },
-              { label: 'Kolkata', href: '/ivf-centers/kolkata' },
+              {
+                label: 'Delhi',
+                href: '/ivf-centers/india/delhi',
+                subItems: [
+                  { label: 'Malviya Nagar, New Delhi', href: '/ivf-centers/india/delhi/malviya-nagar-delhi' },
+                  { label: 'Pitampura, New Delhi', href: '/ivf-centers/india/delhi/pitampura-new-delhi' },
+                  { label: 'Janakpuri, New Delhi', href: '/ivf-centers/india/delhi/janakpuri-new-delhi' },
+                ],
+              },
+              {
+                label: 'Uttar Pradesh',
+                href: '/ivf-centers/india/uttar-pradesh',
+                subItems: [
+                  { label: 'Ghaziabad, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/ghaziabad-uttar-pradesh' },
+                  { label: 'Lucknow, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/lucknow-uttar-pradesh' },
+                  { label: 'Agra, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/agra-uttar-pradesh' },
+                  { label: 'Gorakhpur, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/gorakhpur-uttar-pradesh' },
+                  { label: 'Kanpur, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/kanpur-uttar-pradesh' },
+                  { label: 'Meerut, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/meerut-uttar-pradesh' },
+                ],
+              },
+              {
+                label: 'Bihar',
+                href: '/ivf-centers/india/bihar',
+                subItems: [
+                  { label: 'Patna, Bihar', href: '/ivf-centers/india/bihar/patna-bihar' },
+                  { label: 'Muzaffarpur, Bihar', href: '/ivf-centers/india/bihar/muzaffarpur-bihar' },
+                ],
+              },
+              {
+                label: 'Haryana',
+                href: '/ivf-centers/india/haryana',
+                subItems: [
+                  { label: 'Faridabad, Haryana', href: '/ivf-centers/india/haryana/faridabad-haryana' },
+                  { label: 'Gurugram, Haryana', href: '/ivf-centers/india/haryana/gurugram-haryana' },
+                ],
+              },
+              {
+                label: 'Jharkhand',
+                href: '/ivf-centers/india/jharkhand',
+                subItems: [
+                  { label: 'Ranchi, Jharkhand', href: '/ivf-centers/india/jharkhand/ranchi-jharkhand' },
+                ],
+              },
+              {
+                label: 'Uttarakhand',
+                href: '/ivf-centers/india/uttarakhand',
+                subItems: [
+                  { label: 'Haldwani, Uttarakhand', href: '/ivf-centers/india/uttarakhand/haldwani-uttarakhand' },
+                ],
+              },
+              {
+                label: 'Assam',
+                href: '/ivf-centers/india/assam',
+                subItems: [
+                  { label: 'Guwahati, Assam', href: '/ivf-centers/india/assam/guwahati-assam' },
+                ],
+              },
+              {
+                label: 'Kerala',
+                href: '/ivf-centers/india/kerala',
+                subItems: [
+                  { label: 'Kasaragod, Kerala', href: '/ivf-centers/india/kerala/kasaragod-kerala' },
+                  { label: 'Kochi, Kerala', href: '/ivf-centers/india/kerala/kochi-kerala' },
+                ],
+              },
+              {
+                label: 'Jammu & Kashmir',
+                href: '/ivf-centers/india/jammu-kashmir',
+                subItems: [
+                  { label: 'Srinagar, J&K', href: '/ivf-centers/india/jammu-kashmir/srinagar-jk' },
+                ],
+              },
+              {
+                label: 'West Bengal',
+                href: '/ivf-centers/india/west-bengal',
+                subItems: [
+                  { label: 'Kolkata', href: '/ivf-centers/india/west-bengal/kolkata' },
+                ],
+              },
             ],
           },
           {
@@ -123,33 +188,29 @@ const Header = ({ isTopBar, variant }) => {
         ],
       },
       {
-        label: 'About Infertility',
-        href: '/about-infertility',
+        label: 'International Patients',
+        href: '/international-patients',
         isMegaMenu: true,
         megaMenuCategories: [
           {
-            label: 'Male Infertility',
-            href: '/about-infertility/male-infertility',
+            label: 'Patient Concierge',
+            href: '/international-patients/patient-concierge',
           },
           {
-            label: 'Female Infertility',
-            href: '/about-infertility/female-infertility',
+            label: 'Travel Support',
+            href: '/international-patients/travel-support',
           },
           {
-            label: 'Infertility Problems',
-            href: '/about-infertility/diagnosis',
-            subItems: [
-              { label: 'Infertility Overview', href: '/infertility-overview' },
-              { label: 'Endometriosis', href: '/endometriosis' },
-              { label: 'Premature Ovarian failure', href: '/premature-ovarian-failure' },
-              { label: 'Ovarian Cyst', href: '/ovarian-cyst' },
-              { label: 'PCOS', href: '/pcos' },
-              { label: 'PCOD', href: '/pcod' },
-              { label: 'Irregular Periods', href: '/irregular-periods' },
-              { label: 'Blocked Fallopian Tube', href: '/blocked-fallopian-tube' },
-              { label: 'Uterine Fibroids', href: '/uterine-fibroids' },
-              { label: 'Adenomyosis', href: '/adenomyosis' },
-            ],
+            label: 'International Pricing',
+            href: '/international-patients/international-pricing',
+          },
+          {
+            label: 'Patient Stories',
+            href: '/international-patients/patient-stories',
+          },
+          {
+            label: 'Contact Team',
+            href: '/international-patients/contact-team',
           },
         ],
       },
@@ -159,23 +220,56 @@ const Header = ({ isTopBar, variant }) => {
         isMegaMenu: true,
         megaMenuCategories: [
           {
-            label: 'Tools & Calculator',
-            href: '/resources/tools-calculator',
-            subItems: [
-              { label: 'Pregnancy Calculator', href: '/pregnancy-calculator' },
-              { label: 'Due Date Calculator', href: '/due-date-calculator' },
-              { label: 'Ovulation Calculator', href: '/ovulation-calculator' },
-              { label: 'Pregnancy Conception Calculator', href: '/pregnancy-conception-calculator' },
-              { label: 'Period Calculator', href: '/period-calculator' },
-            ],
+            label: 'IVF Process / Patient Journey',
+            href: '/resources/ivf-process-patient-journey',
           },
           {
-            label: 'Infertility Blogs',
-            href: '/resources/infertility-blogs',
+            label: 'IVF Cost & Package Details',
+            href: '/resources/ivf-cost-package-details',
           },
           {
             label: 'FAQs',
             href: '/resources/faqs',
+          },
+          {
+            label: 'Success Stories',
+            href: '/resources/success-stories',
+          },
+          {
+            label: 'Patient Testimonial Videos',
+            href: '/resources/patient-testimonial-videos',
+          },
+          {
+            label: 'Downloads',
+            href: '/resources/downloads',
+            subItems: [
+              { label: 'Forms', href: '/resources/downloads/forms' },
+              { label: 'Consents', href: '/resources/downloads/consents' },
+              { label: 'Checklists', href: '/resources/downloads/checklists' },
+            ],
+          },
+          {
+            label: 'Fertility Calculator',
+            href: '/resources/fertility-calculator',
+          },
+          {
+            label: 'Blogs',
+            href: '/resources/blogs',
+            subItems: [
+              { label: 'Fertility', href: '/resources/blogs/fertility' },
+              { label: 'IVF Process', href: '/resources/blogs/ivf-process' },
+              { label: 'Pregnancy', href: '/resources/blogs/pregnancy' },
+              { label: 'Men\'s Health', href: '/resources/blogs/mens-health' },
+              { label: 'Women\'s Health', href: '/resources/blogs/womens-health' },
+              { label: 'Treatment Guides', href: '/resources/blogs/treatment-guides' },
+              { label: 'Success Stories', href: '/resources/blogs/success-stories' },
+              { label: 'Doctor Insights', href: '/resources/blogs/doctor-insights' },
+              { label: 'News & Press', href: '/resources/blogs/news-press' },
+            ],
+          },
+          {
+            label: 'Insurance / Financing Options',
+            href: '/resources/insurance-financing-options',
           },
         ],
       },
@@ -185,69 +279,73 @@ const Header = ({ isTopBar, variant }) => {
         isMegaMenu: true,
         megaMenuCategories: [
           {
-            label: 'Overview',
-            href: '/about/overview',
+            label: 'Our Story',
+            href: '/about/our-story',
+          },
+          {
+            label: 'Dr. Gauri Agrawal – Founder',
+            href: '/about/dr-gauri-agrawal',
           },
           {
             label: 'Leadership Team',
             href: '/about/leadership-team',
           },
           {
-            label: 'Facilities',
-            href: '/about/facilities',
-            subItems: [
-              { label: 'Our Centers', href: '/our-centers' },
-              { label: 'Advanced Labs', href: '/advanced-labs' },
-              { label: 'Operation Theatres', href: '/operation-theatres' },
-              { label: 'Patient Care', href: '/patient-care' },
-              { label: 'Technology & Equipment', href: '/technology-equipment' },
+            label: 'Vision, Mission & Values',
+            href: '/about/vision-mission-values',
+          },
+          {
+            label: 'Success Rates',
+            href: '/about/success-rates',
+          },
+          {
+            label: 'Our Embryology Lab & Technology',
+            href: '/about/embryology-lab-technology',
+          },
+          {
+            label: 'Media & Press',
+            href: '/about/media-press',
+          },
+          {
+            label: 'Awards & Accreditations',
+            href: '/about/awards-accreditations',
+          },
             ],
           },
           {
-            label: 'Awards and Accreditations',
-            href: '/about/awards',
+        label: 'Doctors',
+        href: '/doctors',
+        isMegaMenu: true,
+        megaMenuCategories: [
+          {
+            label: 'All IVF Specialists',
+            href: '/doctors',
           },
           {
-            label: 'Investor Relations',
-            href: '/about/partners',
-            subItems: [
-              { label: 'Policies', href: '/policies' },
-              { label: 'Annual Returns', href: '/technology-partners' },
-            ],
+            label: 'Maternal–Fetal Medicine Specialists',
+            href: '/doctors/maternal-fetal-medicine',
           },
           {
-            label: 'Technology',
-            href: '/about/technology',
-            subItems: [
-              { label: 'Technology Overview', href: '/technology-overview' },
-              { label: 'Closed Working Chamber', href: '/closed-working-chamber' },
-              { label: 'Electronic Witness Technology', href: '/electronic-witness-technology' },
-              { label: '24X7 Monitoring System', href: '/24x7-monitoring-system' },
-              { label: 'Microfluidic Sperm Sorter', href: '/microfluidic-sperm-sorter' },
-              { label: 'Labcare Monitoring and Alarming System', href: '/labcare-monitoring-and-alarming-system' },
-              { label: 'Air Monitoring System', href: '/air-monitoring-system' },
-            ],
-          },
-          {
-            label: 'SOI Fertility Academy',
-            href: '/about/soi-fertility-academy',
-          },
-          {
-            label: 'Partner with us',
-            href: '/about/partner-with-us',
+            label: 'Surgeon Panel',
+            href: '/doctors/surgeon-panel',
           },
         ],
       },
       {
-        label: 'CSR',
-        href: '/csr',
-      },
-      {
         label: 'Contact us',
         href: '/contact',
+        isMegaMenu: false,
+        subItems: [
+          { label: 'Book Appointment', href: '/contact/book-appointment' },
+          { label: 'WhatsApp', href: '/contact/whatsapp' },
+          { label: 'Call Back Form', href: '/contact/call-back-form' },
+          { label: 'Center Locator', href: '/contact/center-locator' },
+          { label: 'Careers', href: '/contact/careers' },
+          { label: 'Feedback', href: '/contact/feedback' },
+        ],
       },
     ],
-    btnUrl: '/appointments',
+    btnUrl: '/contact/book-appointment',
     btnText: 'Book Appointment',
   };
 
@@ -337,7 +435,7 @@ const Header = ({ isTopBar, variant }) => {
             <div className="container">
               <div className="cs_top_header_in">
                 <div className="cs_top_header_left">
-                  <ul className="cs_header_contact_list cs_mp_0">
+                  {/* <ul className="cs_header_contact_list cs_mp_0">
                     <li>
                       <i>
                         <FaEnvelope />
@@ -350,7 +448,7 @@ const Header = ({ isTopBar, variant }) => {
                       </i>
                       {menu.location}
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
                 <div className="cs_top_header_right">
                   <div className="cs_social_btns cs_style_1">
@@ -477,20 +575,81 @@ const Header = ({ isTopBar, variant }) => {
                                           }}
                                         >
                                           {category.subItems.map(
-                                            (subItem, subIndex) => (
-                                              <li key={subIndex}>
-                                                <Link
-                                                  href={subItem.href}
-                                                  onClick={() =>
-                                                    setIsShowMobileMenu(
-                                                      !isShowMobileMenu
-                                                    )
-                                                  }
-                                                >
-                                                  {subItem.label}
-                                                </Link>
-                                              </li>
-                                            )
+                                            (subItem, subIndex) => {
+                                              const hasNestedSubItems = subItem.subItems && subItem.subItems.length > 0;
+                                              const nestedKey = `${index}-${catIndex}-${subIndex}`;
+                                              const isNestedOpen = openMegaCategories[nestedKey]?.includes(0);
+                                              return (
+                                                <li key={subIndex} className={hasNestedSubItems ? 'cs_mobile_mega_category' : ''}>
+                                                  {hasNestedSubItems ? (
+                                                    <>
+                                                      <div className="cs_mobile_category_header">
+                                                        <Link
+                                                          href={subItem.href}
+                                                          onClick={() =>
+                                                            setIsShowMobileMenu(
+                                                              !isShowMobileMenu
+                                                            )
+                                                          }
+                                                        >
+                                                          {subItem.label}
+                                                        </Link>
+                                                        <span
+                                                          className={`cs_mobile_sub_toggle ${
+                                                            isNestedOpen ? 'active' : ''
+                                                          }`}
+                                                          onClick={e => {
+                                                            e.preventDefault();
+                                                            e.stopPropagation();
+                                                            handleToggleMegaCategory(
+                                                              nestedKey,
+                                                              0
+                                                            );
+                                                          }}
+                                                        >
+                                                          <span></span>
+                                                        </span>
+                                                      </div>
+                                                      <ul
+                                                        style={{
+                                                          display: isNestedOpen
+                                                            ? 'block'
+                                                            : 'none',
+                                                        }}
+                                                      >
+                                                        {subItem.subItems.map(
+                                                          (nestedItem, nestedIndex) => (
+                                                            <li key={nestedIndex}>
+                                                              <Link
+                                                                href={nestedItem.href}
+                                                                onClick={() =>
+                                                                  setIsShowMobileMenu(
+                                                                    !isShowMobileMenu
+                                                                  )
+                                                                }
+                                                              >
+                                                                {nestedItem.label}
+                                                              </Link>
+                                                            </li>
+                                                          )
+                                                        )}
+                                                      </ul>
+                                                    </>
+                                                  ) : (
+                                                    <Link
+                                                      href={subItem.href}
+                                                      onClick={() =>
+                                                        setIsShowMobileMenu(
+                                                          !isShowMobileMenu
+                                                        )
+                                                      }
+                                                    >
+                                                      {subItem.label}
+                                                    </Link>
+                                                  )}
+                                                </li>
+                                              );
+                                            }
                                           )}
                                         </ul>
                                       )}
@@ -508,12 +667,17 @@ const Header = ({ isTopBar, variant }) => {
                                 ]?.subItems &&
                                 item.megaMenuCategories[hoveredCategoryIndex]
                                   .subItems.length > 0
-                                  ? 'cs_has_right_column'
+                                  ? hoveredStateIndex !== null
+                                    ? 'cs_has_three_columns'
+                                    : 'cs_has_right_column'
                                   : ''
                               }`}
-                              onMouseLeave={() => setHoveredCategoryIndex(null)}
+                              onMouseLeave={() => {
+                                setHoveredCategoryIndex(null);
+                                setHoveredStateIndex(null);
+                              }}
                             >
-                              {/* Left Column - Categories */}
+                              {/* Left Column - States (Categories) */}
                               <li>
                                 <ul>
                                   {item.megaMenuCategories.map(
@@ -526,8 +690,10 @@ const Header = ({ isTopBar, variant }) => {
                                             category.subItems.length > 0
                                           ) {
                                             setHoveredCategoryIndex(catIndex);
+                                            setHoveredStateIndex(null);
                                           } else {
                                             setHoveredCategoryIndex(null);
+                                            setHoveredStateIndex(null);
                                           }
                                         }}
                                         className={
@@ -551,7 +717,7 @@ const Header = ({ isTopBar, variant }) => {
                                   )}
                                 </ul>
                               </li>
-                              {/* Right Column - Sub-items of hovered category */}
+                              {/* Middle Column - Centers of hovered state */}
                               {hoveredCategoryIndex !== null &&
                                 item.megaMenuCategories[
                                   hoveredCategoryIndex
@@ -562,20 +728,68 @@ const Header = ({ isTopBar, variant }) => {
                                     <ul>
                                       {item.megaMenuCategories[
                                         hoveredCategoryIndex
-                                      ].subItems.map((subItem, subIndex) => (
-                                        <li key={subIndex}>
-                                          <Link
-                                            href={subItem.href}
-                                            onClick={() =>
-                                              setIsShowMobileMenu(
-                                                !isShowMobileMenu
-                                              )
+                                      ].subItems.map((subItem, subIndex) => {
+                                        const hasNestedSubItems = subItem.subItems && subItem.subItems.length > 0;
+                                        return (
+                                          <li 
+                                            key={subIndex}
+                                            onMouseEnter={() => {
+                                              if (hasNestedSubItems) {
+                                                setHoveredStateIndex(subIndex);
+                                              } else {
+                                                setHoveredStateIndex(null);
+                                              }
+                                            }}
+                                            className={
+                                              hoveredStateIndex === subIndex
+                                                ? 'cs_active_subcategory'
+                                                : ''
                                             }
                                           >
-                                            {subItem.label}
-                                          </Link>
-                                        </li>
-                                      ))}
+                                            <Link
+                                              href={subItem.href}
+                                              onClick={() =>
+                                                setIsShowMobileMenu(
+                                                  !isShowMobileMenu
+                                                )
+                                              }
+                                            >
+                                              {subItem.label}
+                                            </Link>
+                                          </li>
+                                        );
+                                      })}
+                                    </ul>
+                                  </li>
+                                )}
+                              {/* Right Column - Nested centers of hovered state */}
+                              {hoveredCategoryIndex !== null &&
+                                hoveredStateIndex !== null &&
+                                item.megaMenuCategories[
+                                  hoveredCategoryIndex
+                                ]?.subItems?.[hoveredStateIndex]?.subItems &&
+                                item.megaMenuCategories[hoveredCategoryIndex]
+                                  .subItems[hoveredStateIndex].subItems.length > 0 && (
+                                  <li>
+                                    <ul>
+                                      {item.megaMenuCategories[
+                                        hoveredCategoryIndex
+                                      ].subItems[hoveredStateIndex].subItems.map(
+                                        (nestedItem, nestedIndex) => (
+                                          <li key={nestedIndex}>
+                                            <Link
+                                              href={nestedItem.href}
+                                              onClick={() =>
+                                                setIsShowMobileMenu(
+                                                  !isShowMobileMenu
+                                                )
+                                              }
+                                            >
+                                              {nestedItem.label}
+                                            </Link>
+                                          </li>
+                                        )
+                                      )}
                                     </ul>
                                   </li>
                                 )}

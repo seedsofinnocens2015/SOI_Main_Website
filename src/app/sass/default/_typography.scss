@@ -25,6 +25,9 @@
 22. Card
 --------------------------------------------------------------*/
 
+/* Google Fonts (fallback for environments without Next.js font pipeline) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
 /*--------------------------------------------------------------
 1. Typography
 ----------------------------------------------------------------*/
@@ -32,10 +35,12 @@ body,
 html {
   color: var(--body-color);
   font-family: var(--body-font);
-  font-size: 16px;
-  line-height: 1.6em;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
   font-weight: 400;
   overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -48,8 +53,8 @@ h6 {
   color: var(--heading-color);
   padding: 0;
   margin: 0 0 20px 0;
-  font-weight: 700;
-  line-height: 1.2em;
+  font-weight: 600;
+  line-height: var(--line-height-heading);
   font-family: var(--heading-font);
 }
 
@@ -61,33 +66,67 @@ h6 {
   font-family: var(--body-font);
 }
 
+/* Responsive type scale using clamp() for headings */
 h1 {
-  font-size: 56px;
+  font-size: clamp(32px, 4vw, var(--font-size-h1));
 }
 
 h2 {
-  font-size: 42px;
+  font-size: clamp(28px, 3.2vw, var(--font-size-h2));
 }
 
 h3 {
-  font-size: 30px;
+  font-size: clamp(22px, 2.6vw, var(--font-size-h3));
 }
 
 h4 {
-  font-size: 24px;
+  font-size: clamp(18px, 2.1vw, var(--font-size-h4));
 }
 
 h5 {
-  font-size: 18px;
+  font-size: clamp(16px, 1.9vw, 18px);
 }
 
 h6 {
-  font-size: 16px;
+  font-size: clamp(14px, 1.7vw, 16px);
 }
 
+/* Paragraphs & general copy */
 p {
-  margin-bottom: 15px;
-  line-height: 1.6em;
+  margin-bottom: 24px;
+  font-size: clamp(15px, 1.05vw, var(--font-size-body));
+  line-height: var(--line-height-body);
+  font-weight: 400;
+  color: var(--body-color);
+  max-width: var(--max-text-width);
+}
+
+/* Constrain long-form text blocks for better readability */
+.cs_text_style_1,
+.cs_service_subtitle,
+.cs_blog_subtitle,
+.cs_faq_answer,
+.cs_page_heading_text,
+.cs_section_intro {
+  max-width: var(--max-text-width);
+  line-height: var(--line-height-body);
+}
+
+/* Utility for muted / secondary text */
+.cs_text_muted {
+  color: var(--text-secondary);
+}
+
+/* Common heading-style utility classes (many components use these on non-heading tags) */
+.cs_section_title,
+.cs_service_heading,
+.cs_blog_title,
+.cs_widget_title,
+.cs_footer_widget_title {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  line-height: var(--line-height-heading);
+  color: var(--heading-color);
 }
 
 ul {

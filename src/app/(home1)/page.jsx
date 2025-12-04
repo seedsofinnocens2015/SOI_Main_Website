@@ -2,22 +2,16 @@ import React from 'react';
 import HeroSection from '../Components/HeroSection';
 import Section from '../Components/Section';
 import CtaSection from '../Components/CtaSection';
-import About from '../Components/About';
 import CounterSection from '../Components/FunSection/CounterSection';
 import Service from '../Components/Service';
-import TeamSection from '../Components/TeamSection';
-import BrandsSlider from '../Components/BrandsSection';
-import ChooseUs from '../Components/ChooseUs';
 import ProjectSection from '../Components/ProjectSection';
-import CtaSection1 from '../Components/CtaSection/CtaSection1';
-import MedicalTabSection from '../Components/MedicalTabSection';
-import ContactSection2 from '../Components/ContactSection/ContactSection2';
+import TestimonialSection from '../Components/TestimonialSection';
 import BlogSection from '../Components/BlogsSection';
 
 const heroData = {
     primarySlider: [
       {
-        bgImageUrl: '/assets/img/hero_slider_30.mp4',
+        bgImageUrl: '/assets/img/hero_slider_300.mp4',
         title: 'Seeds of Innocens IVF Centre - <span>India\'s Best Fertility Clinic</span>',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -25,17 +19,13 @@ const heroData = {
           marginTop: 'clamp(-120px, -8vw, -40px)',
         },
         contactSubtitle:
-          'One Stop Solution For All Your Fertility Problems! We provide comprehensive fertility treatments including IVF-ICSI, IUI, Surrogacy, and advanced genetic testing to help you achieve your dream of parenthood.',
-        contactTitle: 'Begin Your IVF Journey Here!',
-        contact: 'Call Us at: +91-9810350512',
+          'One Stop Solution For All Your Fertility Problems!',
         btnText1: 'Book Appointment',
-        link: '/appointments',
-        btnText2: 'About Us',
-        link2: '/about',
+        link: '/contact/book-appointment',
         iconImgUrl: '/assets/img/icons/hero_icon.png',
       },
       {
-        bgImageUrl: '/assets/img/hero_slider_2.jpg',
+        bgImageUrl: '/assets/img/hero_slider_21.jpg',
         title: 'Expert Fertility <span>Care.</span>',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -43,17 +33,13 @@ const heroData = {
           marginTop: 'clamp(-120px, -8vw, -40px)',
         },
         contactSubtitle:
-          'Our team of trained certified doctors provides world-class fertility treatments with high success rates. From initial consultation to successful pregnancy, we are with you every step of the way.',
-        contactTitle: 'Register Online For Seamless Experience.',
-        contact: 'Call Us at: +91-9810350512',
+          'Expert Fertility Care with World-Class Treatment.',
         btnText1: 'Book Appointment',
-        link: '/appointments',
-        btnText2: 'Our Services',
-        link2: '/service',
+        link: '/contact/book-appointment',
         iconImgUrl: '/assets/img/icons/hero_icon.png',
       },
       {
-        bgImageUrl: '/assets/img/hero_slider_1.jpg',
+        bgImageUrl: '/assets/img/hero_slider_12.jpg',
         title: 'Advanced IVF <span>Treatments.</span>',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -61,13 +47,9 @@ const heroData = {
           marginTop: 'clamp(-120px, -8vw, -40px)',
         },
         contactSubtitle:
-          'Experience cutting-edge fertility solutions including IVF-ICSI, Blastocyst Transfer, PRP & Ovarian Rejuvenation, Egg Freezing, Surrogacy, and comprehensive genetic testing services.',
-        contactTitle: 'Get Free Second Opinion.',
-        contact: 'Call Us at: +91-9810350512',
-        btnText1: 'Contact Now',
-        link: '/contact',
-        btnText2: 'Discover More',
-        link2: '/about',
+          'Advanced IVF Treatments with Cutting-Edge Solutions.',
+        btnText1: 'Book Appointment',
+        link: '/contact/book-appointment',
         iconImgUrl: '/assets/img/icons/hero_icon.png',
       },
     ],
@@ -79,10 +61,10 @@ const heroData = {
   };
   
   const ctaData = {
-    imageUrl: '/assets/img/cta_img_1.png',
+    imageUrl: '/assets/img/cta_img_12.png',
     title: 'Meet Our Team of Trained Certified Doctors.',
-    subtitle: 'Our experienced fertility specialists are dedicated to providing personalized care and support throughout your journey.',
-    buttonUrl: '/appointments',
+    // subtitle: 'Our experienced fertility specialists are dedicated to providing personalized care and support throughout your journey.',
+    buttonUrl: '/contact/book-appointment',
     buttonText: 'Book Appointment',
   };
   
@@ -140,13 +122,11 @@ const heroData = {
   ];
   
   const serviceData = {
-    subtitle: 'OUR SERVICES',
-    title: 'Comprehensive Fertility Treatment Services',
-    description:
-      'We offer a complete range of fertility treatments and services<br> to help you achieve your dream of parenthood with<br> advanced technology and expert care.',
+    subtitle: 'FERTILITY TREATMENTS',
+    title: '',
+    description: '',
     services: [
       {
-        backgroundImage: '/assets/img/IVF-ICSI.jpg',
         iconUrl: '/assets/img/icons/service_icon_1.png',
         index: '01',
         title: 'IUI, IVF & ICSI',
@@ -154,72 +134,63 @@ const heroData = {
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/male.jpg',
-        iconUrl: '/assets/img/icons/service_icon_7.png',
+        iconUrl: '/assets/img/icons/service_icon_2.png',
         index: '02',
         title: 'TESA/PESA',
         subtitle: 'TESA, MicroTESE, Semen Analysis and varicocele treatment',
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/genetic.jpg',
-        iconUrl: '/assets/img/icons/service_icon_6.png',
+        iconUrl: '/assets/img/icons/service_icon_3.png',
         index: '03',
         title: 'Genetic Testing',
         subtitle: 'PGT-A, PGT-M, PGT-SR and comprehensive genetic screening',
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/blastocyst.jpg',
-        iconUrl: '/assets/img/icons/service_icon_8.png',
+        iconUrl: '/assets/img/icons/service_icon_4.png',
         index: '04',
         title: 'Blastocyst Transfer',
         subtitle: 'Advanced embryo transfer technique for higher pregnancy rates',
         link: '/service/service-details',
       },
-      // {
-      //   backgroundImage: '/assets/img/recent_post_1.png',
-      //   iconUrl: '/assets/img/icons/service_icon_2.png',
-      //   index: '05',
-      //   title: 'Donor Program',
-      //   subtitle: 'Donor program for couples with fertility issues like low sperm count, low motility, etc.',
-      //   link: '/service/service-details',
-      // },
       {
-        backgroundImage: '/assets/img/surrogacy.jpg',
-        iconUrl: '/assets/img/icons/service_icon_3.png',
+        iconUrl: '/assets/img/icons/service_icon_5.png',
+        index: '05',
+        title: 'Donor Program',
+        subtitle: 'Donor program for couples with fertility issues like low sperm count, low motility, etc.',
+        link: '/service/service-details',
+      },
+      {
+        iconUrl: '/assets/img/icons/service_icon_6.png',
         index: '05',
         title: 'Surrogacy',
         subtitle: 'Complete surrogacy services with legal support and medical care',
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/egg.jpg',
-        iconUrl: '/assets/img/icons/service_icon_4.png',
+        iconUrl: '/assets/img/icons/service_icon_7.png',
         index: '06',
         title: 'Cryopreservation',
         subtitle: 'Cryopreservation of sperm, eggs, embryos, and ovarian tissue for future use',
         link: '/service/service-details',
       },
-      // {
-      //   backgroundImage: '/assets/img/genetic.jpg',
-      //   iconUrl: '/assets/img/icons/service_icon_5.png',
-      //   index: '08',
-      //   title: 'Genetic Counselling',
-      //   subtitle: 'Genetic counselling for couples with fertility issues like low sperm count, low motility, etc.',
-      //   link: '/service/service-details',
-      // },
       {
-        backgroundImage: '/assets/img/laparoscopy.jpg',
-        iconUrl: '/assets/img/icons/service_icon_5.png',
+        iconUrl: '/assets/img/icons/service_icon_8.png',
+        index: '08',
+        title: 'Genetic Counselling',
+        subtitle: 'Genetic counselling for couples with fertility issues like low sperm count, low motility, etc.',
+        link: '/service/service-details',
+      },
+      {
+        iconUrl: '/assets/img/icons/service_icon_9.png',
         index: '07',
         title: 'Laparoscopy & Hysteroscopy',
         subtitle: 'Laparoscopy & Hysteroscopy for treatment of fertility issues',
         link: '/service/service-details',
       },
       {
-        backgroundImage: '/assets/img/ovarian.jpg',
-        iconUrl: '/assets/img/icons/service_icon_5.png',
+        iconUrl: '/assets/img/icons/service_icon_10.png',
         index: '08',
         title: 'PRP & Ovarian Rejuvenation',
         subtitle: 'Platelet-rich plasma therapy for improved ovarian function',
@@ -229,11 +200,10 @@ const heroData = {
       
      
     ],
-    footerIcon: '/assets/img/icons/service_footer_icon_1.png',
-    footerText:
-      'Delivering world-class fertility care for your family.<br>Helping you achieve your dream of parenthood.',
-    footerLink: '/service',
-    footerLinkText: 'VIEW ALL SERVICES',
+    footerIcon: '',
+    footerText: '',
+    footerLink: '',
+    footerLinkText: '',
   };
   
   const teamData = {
@@ -494,46 +464,67 @@ const heroData = {
   
   const sectionData = {
     subtitle: 'WHY CHOOSE US',
-    title: 'Why Choose Seeds of Innocens <br /> IVF Centre',
+    title: 'Why Couples Trust Seeds of Innocence',
     services: [
       {
         iconUrl: '/assets/img/icons/service_icon_9.png',
-        title: 'Affordable IVF Care',
-        subtitle: 'Affordable IVF Care with transparent pricing and flexible payment options',
+        title: 'High IVF Success Rates',
+        subtitle: 'We maintain consistently high pregnancy outcomes',
       },
       {
         iconUrl: '/assets/img/icons/service_icon_10.png',
-        title: 'Expert Counsellors & Clinical Geneticists',
-        subtitle: 'Expert counsellors and clinical geneticists for comprehensive genetic testing and analysis',
+        title: 'Experienced Fertility Specialists',
+        subtitle: 'Decades of combined clinical expertise',
       },
       {
         iconUrl: '/assets/img/icons/service_icon_11.png',
-        title: 'Qualified Doctors',
-        subtitle: 'Our team of specialists includes renowned fertility experts and embryologists',
+        title: 'Expert Doctors',
+        subtitle: 'Renowned fertility experts and embryologists',
       },
       {
         iconUrl: '/assets/img/icons/service_icon_12.png',
         title: 'Advanced Technology',
-        subtitle: 'State-of-the-art equipment and latest techniques for better success rates',
+        subtitle: 'Advanced IVF labs with modern technology',
       },
       {
         iconUrl: '/assets/img/icons/service_icon_13.png',
         title: 'In-House Genetic Lab',
-        subtitle: 'In-house genetic lab for comprehensive genetic testing and analysis',
+        subtitle: 'Comprehensive genetic testing and analysis',
       },
       {
         iconUrl: '/assets/img/icons/service_icon_14.png',
         title: 'Fetal Medicine',
-        subtitle: 'Fetal medicine for comprehensive fetal monitoring and care',
+        subtitle: 'Complete fetal monitoring and care',
       },
     ],
   };
   
   const projectData = {
-    title: 'Our Centres Across<br> India & International',
+    title: '',
     subtitle: 'OUR LOCATIONS',
-    description:
-      'Seeds of Innocens has multiple centres across India and internationally, providing world-class fertility treatments with the same quality and care everywhere.',
+    description: '',
+    mainCentres: [
+      {
+        title: 'Malviya Nagar, Delhi',
+        subtitle:
+          'Seeds of Innocens IVF, 3, opposite Aurbindo College, MMTC Road, Malviya Nagar, New Delhi-110017',
+      },
+      {
+        title: 'Ghaziabad, Uttar Pradesh',
+        subtitle:
+          'Seeds of Innocens IVF, Yashoda Hospital Opp. Nehru Stadium, Nehru Nagar, Ghaziabad, U.P.-201001',
+      },
+      {
+        title: 'Gurgaon, Haryana',
+        subtitle:
+          'Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar, Nigam Office Gurugram, Haryana-122001',
+      },
+      {
+        title: 'Faridabad, Haryana',
+        subtitle:
+          'Seeds of Innocens IVF, A-6/A Neelam Bata Road, Above ICICI Bank, NIT Faridabad, Haryana-121001',
+      },
+    ],
     tabs: [
       { id: 'dental', label: 'Delhi NCR' },
       { id: 'up', label: 'Uttar Pradesh' },
@@ -629,25 +620,7 @@ const heroData = {
           },
         ],
       },
-      {
-        id: 'bihar',
-        items: [
-          {
-            imgUrl: '/assets/img/Centers/patna.jpg',
-            title: 'Patna, Bihar',
-            subtitle:
-              'Pillar no: 38, Jagmano Shree Complex, Bailey Rd, Samanpura, Khajpura, Patna, Bihar 800014',
-            index: 1,
-          },
-          {
-            imgUrl: '/assets/img/Centers/muzaffarpur.jpg',
-            title: 'Muzaffarpur, Bihar',
-            subtitle:
-              '2nd Floor, Hansa Complex, Maripur Main Rd, Musahri, Muzaffarpur, Bihar 842001',
-            index: 2,
-          },
-        ],
-      },
+      
       {
         id: 'kerala',
         items: [
@@ -691,6 +664,7 @@ const heroData = {
               '4th Floor, Maru Tower, Kanke Rd, Ranchi, Jharkhand 834008',
             index: 3,
           },
+
           // {
           //   imgUrl: '/assets/img/Centers/srinagar.jpg',
           //   title: 'Srinagar, Jammu and Kashmir',
@@ -698,6 +672,26 @@ const heroData = {
           //     'Karan Nagar Gole Market Rd, opposite Masjid, Karan Nagar, Srinagar, Jammu and Kashmir 190010',
           //   index: 4,
           // },
+        ],
+      },
+      {
+        id: 'bihar',
+        items: [
+          
+          {
+            imgUrl: '/assets/img/Centers/muzaffarpur.jpg',
+            title: 'Muzaffarpur, Bihar',
+            subtitle:
+              '2nd Floor, Hansa Complex, Maripur Main Rd, Musahri, Muzaffarpur, Bihar 842001',
+            index: 2,
+          },
+          {
+            imgUrl: '/assets/img/Centers/patna.jpg',
+            title: 'Patna, Bihar',
+            subtitle:
+              'Pillar no: 38, Jagmano Shree Complex, Bailey Rd, Samanpura, Khajpura, Patna, Bihar 800014',
+            index: 1,
+          },
         ],
       },
     ],
@@ -712,11 +706,11 @@ const heroData = {
       'Experience world-class fertility treatments with our expert team. We provide comprehensive care from initial consultation to successful pregnancy, using advanced technology and personalized treatment plans.',
     buttonLink: '/contact',
     buttonText: 'Contact Us',
-    brandImage: '/assets/img/medical_brand.png',
+    brandImage: '/assets/img/medical_brand1.png',
   };
   
   const medicalTabsData = {
-    subtitle: 'OUR SERVICES',
+    subtitle: 'FERTILITY TREATMENTS',
     title: 'Explore Our Fertility<br> Treatment Services',
     tabsTitle: [
       {
@@ -823,7 +817,7 @@ const heroData = {
   
   const blogsData = {
     sectionTitle: 'FROM OUR BLOG',
-    sectionSubtitle: 'Medical News, Clinical Trials and Guidelines By Seeds of Innocens',
+    sectionSubtitle: '',
     postsData: [
       {
         title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
@@ -880,15 +874,51 @@ const heroData = {
     ],
   };
 
+  const testimonialData = {
+    subtitle: 'REAL STORIES OF HOPE',
+    title: '',
+    description: '',
+    thumbnail: '/assets/img/testimonial_1.png',
+    testimonials: [
+      {
+        rating: 5,
+        subtitle:
+          'Seeds of Innocens gave us the gift of parenthood. The doctors were compassionate, the staff was supportive, and the treatment was excellent. We are forever grateful for our beautiful baby.',
+        avatar: '/assets/img/avatar_1.png',
+        name: 'Priya & Rahul',
+        position: 'Successful Parents',
+      },
+      {
+        rating: 5,
+        subtitle:
+          'The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream of becoming parents. Highly recommended!',
+        avatar: '/assets/img/avatar_2.png',
+        name: 'Anjali & Mohan',
+        position: 'Happy Parents',
+      },
+      {
+        rating: 5,
+        subtitle:
+          'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
+        avatar: '/assets/img/avatar_1.png',
+        name: 'Sneha & Vikram',
+        position: 'Grateful Parents',
+      },
+    ],
+  };
+
 const page = () => {
     return (
         <div>
-        {/* Start Hero Section */}
+        {/* 1. Hero Banner */}
         <HeroSection data={heroData} />
-        {/* End Hero Section */}
 
-      {/* Start CTA Section */}
+      {/* 2. Book Appointment */}
       <Section
+        topSpaceLg="0"
+        topSpaceMd="0"
+        bottomSpaceLg="0"
+        bottomSpaceMd="0"
         className={
           'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
         }
@@ -896,111 +926,58 @@ const page = () => {
         <CtaSection data={ctaData} />
       </Section>
 
-      {/* End CTA Section */}
-
-      {/* Start About Section */}
-      <Section
-        topSpaceLg="80"
-        topSpaceMd="120"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-        className="cs_about cs_style_1 position-relative"
-      >
-        <About data={aboutData} />
-      </Section>
-      {/* End About Section */}
-
-      {/* Start Counter */}
-      <Section className="cs_counter_area cs_gray_bg">
+      {/* 3. Success Rate Snapshot */}
+      <Section 
+      topSpaceLg="60" 
+      topSpaceMd="70" 
+      bottomSpaceLg="40" 
+      bottomSpaceMd="50" 
+      className="cs_counter_area">
         <CounterSection data={countersData} />
       </Section>
-      {/* End Counter */}
 
-      {/* Start Service Section */}
+      {/* 4. Treatments Overview */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-        className={'cs_gray_bg'}
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className={'cs_light_bg_1'}
       >
         <Service cardBg={'cs_gray_bg'} data={serviceData} />
       </Section>
-      {/* End Service Section */}
 
-      {/* Start Team Section */}
-      <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        className={'cs_team_section position-relative'}
-      >
-        <TeamSection
-          hr={true}
-          variant={'cs_pagination cs_style_2'}
-          data={teamData}
-        />
-      </Section>
-      {/* End Team Section */}
-
-      {/* Start Brand Section */}
-      {/* <Section topSpaceLg="70" topSpaceMd="90" className="cs_brands_section">
-        <BrandsSlider data={brandData} />
-      </Section> */}
-
-      {/* End Brand Section */}
-
-      {/* Start Why Choose Us Section */}
-      <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-        className="cs_gray_bg cs_bg_filed"
-        backgroundImage="/assets/img/service_bg_2.png"
-      >
-        <ChooseUs data={sectionData} />
-      </Section>
-      {/* End Why Choose Us Section */}
-
-      {/* Start Projects Section */}
-      <Section topSpaceLg="70" topSpaceMd="110" className="cs_tabs">
+      {/* 5. Centers Overview */}
+      <Section 
+      topSpaceLg="60" 
+      topSpaceMd="70" 
+      bottomSpaceLg="40" 
+      bottomSpaceMd="50" 
+      className="cs_tabs">
         <ProjectSection data={projectData} />
       </Section>
-      {/* End Projects Section */}
 
-      {/* Start CTA Section */}
+      {/* 6. Testimonials Preview */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-        className="cs_cta cs_style_2 cs_blue_bg cs_bg_filed cs_center"
-        backgroundImage="/assets/img/cta_bg_1.jpg"
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className="cs_testimonial_area"
+        backgroundImage="/assets/img/testomonial_bg_1.png"
       >
-        <CtaSection1 data={ctaData1} />
+        <TestimonialSection data={testimonialData} />
       </Section>
-      {/* End CTA Section */}
 
-      {/* Start Medical Tab Section */}
-      {/* <Section topSpaceLg="70" topSpaceMd="110">
-        <MedicalTabSection data={medicalTabsData} />
-      </Section> */}
-      {/* End Medical Tab Section */}
-
-      {/* Start Contact Solution */}
-      <ContactSection2></ContactSection2>
-      {/* End Contact Solution */}
-
-      {/* Start Blog Section */}
+      {/* 7. Blogs Preview */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
       >
         <BlogSection data={blogsData} />
       </Section>
-      {/* End Blog Solution */}
 
         </div>
     );

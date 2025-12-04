@@ -26,6 +26,115 @@
     }
   }
 
+  // Clean layout - no shadows, minimal elements
+  &.cs_post_clean {
+    overflow: visible;
+    box-shadow: none !important;
+    filter: none;
+
+    .cs_post_thumbnail {
+      display: none;
+    }
+
+    .cs_post_content {
+      border: none;
+      box-shadow: none !important;
+      filter: none;
+      padding: 20px 0;
+      background-color: transparent;
+    }
+
+    .cs_post_category,
+    .cs_post_meta_wrapper,
+    .cs_posted_by,
+    .cs_post_meta_item,
+    .cs_post_subtitle,
+    .cs_post_shape {
+      display: none;
+    }
+
+    .cs_post_date {
+      font-size: 14px;
+      color: var(--body-color);
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .cs_post_title_wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 15px;
+      
+      @media (max-width: 575px) {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
+    .cs_post_title {
+      flex: 1;
+      margin-bottom: 0;
+      font-size: 20px;
+      line-height: 1.4;
+      
+      @media (max-width: 575px) {
+        margin-bottom: 0;
+      }
+      
+      a {
+        color: var(--heading-color);
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .cs_post_thumbnail_small {
+      display: inline-block;
+      width: 100px;
+      height: 80px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover {
+        transform: scale(1.05);
+        
+        img {
+          transform: scale(1.1);
+        }
+      }
+      
+      @media (max-width: 575px) {
+        width: 100%;
+        max-width: 200px;
+        height: 140px;
+        align-self: flex-start;
+      }
+    }
+
+    .cs_post_btn {
+      color: var(--accent-color);
+      font-size: 15px;
+      font-weight: 500;
+      
+      &:hover {
+        color: var(--blue-color);
+      }
+    }
+  }
+
   .cs_post_category {
     padding: 5px 20px;
     background-color: var(--white);
@@ -179,6 +288,16 @@
 
   @media (max-width: 767px) {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// Remove shadows from blog slider items
+.cs_slider {
+  .cs_slide {
+    .cs_post.cs_post_clean {
+      box-shadow: none !important;
+      filter: none;
+    }
   }
 }
 

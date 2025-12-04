@@ -28,7 +28,7 @@ const AboutSection2 = ({ data }) => {
           <div className="col-lg-6">
             <div className="cs_about_content">
               <div className="cs_section_heading cs_style_1">
-                <p className="cs_section_subtitle cs_accent_color">
+                <p className="cs_section_subtitle cs_section_subtitle_black">
                   <span className="cs_shape_left" />
                   {data.subtitle}
                 </p>

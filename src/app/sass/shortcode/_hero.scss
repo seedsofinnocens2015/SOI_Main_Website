@@ -20,6 +20,15 @@
     z-index: 0;
     pointer-events: none;
   }
+  .cs_hero_overlay {
+    position: absolute;
+    inset: 0;
+    // background: linear-gradient(135deg, rgba(172, 170, 170, 0.3) 0%, rgba(103, 102, 102, 0.1) 100%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 1;
+    pointer-events: none;
+  }
   .cs_hero_title {
     font-size: 66px;
     margin-bottom: 12px;
@@ -51,9 +60,10 @@
     }
   }
   .cs_hero_subtitle {
-    font-size: 19px;
+    font-size: 16px;
     max-width: 600px;
     margin-bottom: 25px;
+    line-height: 1.5;
   }
   .cs_hero_info {
     border-left: 5px solid var(--blue-color);

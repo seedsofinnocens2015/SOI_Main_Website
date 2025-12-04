@@ -1,81 +1,76 @@
 "use client"
 import { useState } from "react";
 import Spacing from "../Spacing";
-import Link from "next/link";
-import Image from "next/image";
+import SectionHeading from "../SectionHeading";
 
 const ProjectSection = ({ data }) => {
-  const [activeTab, setActiveTab] = useState("dental");
+  // Collect all locations from all tabs
+  const allLocations = data?.tabData?.flatMap(tab => tab.items) || [];
+  
+  // State for showing all or limited centers
+  const [showAll, setShowAll] = useState(false);
+  
+  // Show only first 8 items (2 rows) initially
+  const initialDisplayCount = 8;
+  const displayedLocations = showAll ? allLocations : allLocations.slice(0, initialDisplayCount);
+  
+  // Calculate if last row has less than 4 items (only when showing all)
+  const totalDisplayed = displayedLocations.length;
+  const itemsInLastRow = showAll ? (totalDisplayed % 4) : 0;
+  const isLastRowIncomplete = showAll && itemsInLastRow > 0 && itemsInLastRow < 4;
+
+  const toggleView = () => {
+    setShowAll(!showAll);
+  };
 
   return (
     <>
       <div className="container">
-        <div className="cs_section_heading cs_style_1 cs_type_1">
-          <div className="cs_section_heading_left">
-            <p
-              className="cs_section_subtitle cs_accent_color"
-              data-aos="fade-left"
-            >
-              <span className="cs_shape_left" />
-              {data.subtitle}
-            </p>
-            <h2
-              className="cs_section_title"
-              dangerouslySetInnerHTML={{ __html: data.title }}
-            ></h2>
-          </div>
-          <div className="cs_section_heading_right">
-            <p className="mb-0">{data.description}</p>
-            <ul className="cs_tab_links cs_style_3 cs_mp_0">
-              {data.tabs.map((tab) => (
-                <li
-                  key={tab.id}
-                  className={tab.id === activeTab ? "active" : ""}
-                  onClick={() => setActiveTab(tab.id)}
+        {data.subtitle && (
+          <SectionHeading
+            variant={'text-center'}
+            SectionTitle={data.title || ''}
+            SectionSubtitle={data.subtitle}
+            SectionDescription={data.description || ''}
+          />
+        )}
+        <div className="cs_height_30 cs_height_lg_30" />
+        
+        {/* All Locations List - Clean Grid Layout */}
+        <div className="cs_centres_grid_wrapper">
+          <div className={`cs_centres_grid ${isLastRowIncomplete ? 'cs_last_row_incomplete' : ''}`} data-last-row-count={itemsInLastRow}>
+            {displayedLocations.map((item, index) => {
+              const isLastRow = showAll && index >= totalDisplayed - itemsInLastRow;
+              const positionInLastRow = index - (totalDisplayed - itemsInLastRow);
+              
+              return (
+                <div
+                  key={index}
+                  className={`cs_centre_card ${isLastRow ? `cs_last_row_item cs_pos_${positionInLastRow}` : ''}`}
                 >
-                  <Link href={`#${tab.id}`}>{tab.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className="cs_height_50 cs_height_lg_50" />
-      </div>
-      <div className="cs_tab_body">
-        {data?.tabData.map((tab) => (
-          <div
-            key={tab.id}
-            className={`container-fluide cs_tab ${
-              tab.id === activeTab ? "active" : ""
-            }`}
-            id={tab.id}
-          >
-            <div className="row cs_gap_y_30">
-              {tab?.items.map((item, index) => (
-                <div key={index} className="col-lg-4">
-                  <div className="cs_card cs_style_1">
-                    <Link href="/" className="cs_card_thumbnail d-block">
-                    <Image src={item.imgUrl}  className="w-100" alt="img" width={598} height={479}   />
-                    </Link>
-                    <div className="cs_card_info_wrapper">
-                      <div className="cs_card_text">
-                        <h3 className="cs_card_title">
-                          <Link href="/">{item.title}</Link>
-                        </h3>
-                        <p className="cs_card_subtitle mb-0">{item.subtitle}</p>
-                      </div>
-                      <div className="cs_card_index cs_center rounded-circle">
-                        {item.index}
-                      </div>
-                    </div>
+                  <div className="cs_centre_content">
+                    <span className="cs_centre_icon">📍</span>
+                    <h3 className="cs_centre_title">{item.title}</h3>
                   </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
-        ))}
+          
+          {/* View All / View Less Button */}
+          {allLocations.length > initialDisplayCount && (
+            <div className="cs_centres_view_toggle">
+              <button 
+                onClick={toggleView}
+                className="cs_btn cs_style_1"
+              >
+                {showAll ? 'View Less' : 'View All Centers'}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-      <Spacing lg={50} md={90} />
+      <Spacing lg={40} md={70} />
       <hr />
     </>
   );
