@@ -4,6 +4,24 @@
 .cs_testimonial_area {
   background-repeat: no-repeat;
   background-position: right;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f7f9faf4;
+    opacity: 0.9;
+    z-index: 0;
+  }
+  
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .cs_testimonial_content {

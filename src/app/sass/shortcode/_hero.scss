@@ -32,11 +32,12 @@
   .cs_hero_title {
     font-size: 66px;
     margin-bottom: 12px;
+    color: #0A2A43;
     @media (max-width: 991px) {
       font-size: 48px;
     }
     span {
-      color: var(--accent-color);
+      color: #E45352;
       display: inline-block;
       position: relative;
       &::before {
@@ -53,8 +54,7 @@
     &.cs_single_line_title {
       span {
         &::before {
-          height: 3px;
-          bottom: 3px;
+          display: none;
         }
       }
     }

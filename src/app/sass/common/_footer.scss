@@ -4,6 +4,7 @@
 .cs_footer {
   padding-top: 1px;
   margin-top: 25px;
+  color: #FFFFFF;
 
   .cs_social_btns.cs_style_1 {
     margin-top: 50px;
@@ -14,10 +15,19 @@
       background-color: #54b3f4;
       box-shadow: 0px 0px 57px rgba(0, 0, 0, 0.05);
       font-size: 16px;
+      color: #FFFFFF;
 
       &:hover {
-        background-color: var(--blue-color);
+        background-color: #4DB6E8;
       }
+    }
+  }
+  
+  a {
+    color: #FFFFFF;
+    
+    &:hover {
+      color: #4DB6E8;
     }
   }
 }
@@ -26,6 +36,8 @@
   padding: 60px 35px;
   margin-top: -26px;
   border-radius: 5px 5px 0 0;
+  border: 2px solid rgb(251, 139, 157);
+  background-color: #E45352;
   @media (max-width: 1199px) {
     padding: 50px 15px;
   }
@@ -41,6 +53,7 @@
   li {
     position: relative;
     padding-left: 25px;
+    color: #FFFFFF;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -52,6 +65,11 @@
       top: 5px;
       width: 16px;
       text-align: center;
+      color: #f9f9f9;
+    }
+    
+    span {
+      color: #FFFFFF;
     }
   }
 }
@@ -60,16 +78,45 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5px 25px;
+  
+  li {
+    a {
+      color: #FFFFFF;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #4DB6E8;
+      }
+    }
+  }
+}
+
+.cs_footer_bottom {
+  background-color: #031322;
+  color: #FFFFFF;
+  
+  a {
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #4DB6E8;
+    }
+  }
 }
 
 .cs_footer_bottom_in {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
+  
+  .cs_footer_copyright {
+    color: #FFFFFF;
+  }
 }
 
 .cs_footer_widget_title {
-  color: #fff;
+  color: #FFFFFF;
   font-size: 22px;
   margin-bottom: 30px;
   @media (max-width: 767px) {
@@ -81,6 +128,15 @@
   li {
     &:not(:last-child) {
       margin-bottom: 15px;
+    }
+    
+    a {
+      color: #FFFFFF;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #4DB6E8;
+      }
     }
   }
 }
@@ -163,10 +219,19 @@
 
   .cs_recent_post_title {
     font-size: 17px;
-    color: #fff;
+    color: #FFFFFF;
     margin: 0;
     font-weight: 600;
     line-height: 1.4em;
+    
+    a {
+      color: #FFFFFF;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #4DB6E8;
+      }
+    }
   }
 
   p {

@@ -482,29 +482,6 @@
   width: 100%;
 }
 
-.cs_centres_view_toggle {
-  margin-top: 30px;
-  text-align: center;
-  
-  .cs_btn {
-    padding: 12px 32px;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(242, 101, 101, 0.2);
-    }
-    
-    @media (max-width: 575px) {
-      padding: 11px 28px;
-      font-size: 14px;
-    }
-  }
-}
-
 .cs_centres_grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -897,5 +874,110 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+}
+
+/* Locations Dropdown Accordion */
+.cs_locations_dropdown_wrapper {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cs_location_dropdown {
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &:hover {
+    border-color: #CD2527;
+    box-shadow: 0 2px 8px rgba(205, 37, 39, 0.1);
+  }
+}
+
+.cs_location_dropdown_header {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+  user-select: none;
+  
+  &:hover {
+    background-color: #f9f9f9;
+  }
+  
+  &.active {
+    background-color: #FFE8E8;
+    border-bottom: 1px solid #e0e0e0;
+    
+    .cs_location_dropdown_title {
+      color: #CD2527;
+    }
+    
+    .cs_location_dropdown_icon {
+      transform: rotate(180deg);
+      color: #CD2527;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    padding: 18px 20px;
+  }
+}
+
+.cs_location_dropdown_title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--heading-color);
+  transition: all 0.3s ease;
+  
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.cs_location_dropdown_icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--heading-color);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  &.active {
+    transform: rotate(180deg);
+  }
+}
+
+.cs_location_dropdown_content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 24px;
+  
+  &.active {
+    max-height: 5000px;
+    padding: 24px;
+    
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
   }
 }

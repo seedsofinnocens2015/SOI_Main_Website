@@ -503,6 +503,8 @@
       height: 100%;
       width: 100%;
       max-width: calc(100% - 300px);
+      overflow: visible;
+      min-width: 0;
     }
     .cs_main_header_left {
       height: 100%;
@@ -518,17 +520,25 @@
     align-items: center;
     height: 100%;
     line-height: 1.6em;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
+    overflow: visible;
+    min-width: 0;
+    margin-left: -80px;
 
     .cs_nav_list {
       display: flex !important;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       height: inherit;
+      gap: 0;
+      overflow: visible;
 
       > li {
         margin-right: 20px;
         height: inherit;
+        flex-shrink: 0;
+        white-space: nowrap;
+        min-width: fit-content;
 
         &:last-child {
           margin-right: 0;
@@ -541,6 +551,13 @@
           height: inherit;
           align-items: center;
           white-space: nowrap;
+          font-size: 14px;
+          font-weight: 550;
+          text-decoration: none;
+          word-break: keep-all;
+          overflow: visible;
+          max-width: none;
+          width: auto;
         }
 
         > ul {
@@ -644,7 +661,7 @@
       padding: 20px 25px;
       border-top: 2px solid var(--accent-color);
       border-radius: 0 0 5px 5px;
-      transition: all 0.3s ease;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
@@ -710,19 +727,27 @@
           ul {
             li {
               a {
-                display: flex;
+                display: inline-flex;
                 align-items: center;
-                justify-content: space-between;
-                &::after {
-                  content: '';
-                  display: inline-block;
-                  width: 0;
-                  height: 0;
-                  border-left: 5px solid var(--accent-color);
-                  border-top: 4px solid transparent;
-                  border-bottom: 4px solid transparent;
-                  opacity: 1;
-                  margin-left: 8px;
+                justify-content: flex-start;
+                width: auto;
+                white-space: nowrap;
+              }
+              // Only show arrow for categories with subItems
+              &.cs_has_subitems {
+                a {
+                  &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    border-left: 5px solid var(--accent-color);
+                    border-top: 4px solid transparent;
+                    border-bottom: 4px solid transparent;
+                    opacity: 1;
+                    margin-left: 8px;
+                    flex-shrink: 0;
+                  }
                 }
               }
               &.cs_active_category {
@@ -760,6 +785,7 @@
           width: 100%;
           box-shadow: none;
           background-color: transparent;
+          transition: opacity 0.15s ease, visibility 0.15s ease;
           li {
             &.cs_active_subcategory {
               a {
@@ -768,7 +794,7 @@
               }
             }
             a {
-              transition: all 0.4s ease;
+              transition: color 0.2s ease;
               display: flex;
               align-items: center;
               padding: 10px 15px;

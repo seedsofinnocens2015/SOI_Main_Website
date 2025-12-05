@@ -12,7 +12,7 @@ const heroData = {
     primarySlider: [
       {
         bgImageUrl: '/assets/img/hero_slider_300.mp4',
-        title: 'Seeds of Innocens IVF Centre - <span>India\'s Best Fertility Clinic</span>',
+        title: 'Seeds of Innocens IVF Centre <span>India\'s Best Fertility Clinic</span>',
         titleClass: 'cs_single_line_title',
         titleStyle: {
           fontSize: 'clamp(22px, 4vw, 48px)',
@@ -531,6 +531,7 @@ const heroData = {
       { id: 'bihar', label: 'Bihar' },
       { id: 'kerala', label: 'Kerala' },
       { id: 'other', label: 'Other States' },
+      { id: 'international', label: 'International' },
     ],
     tabData: [
       {
@@ -691,6 +692,32 @@ const heroData = {
             subtitle:
               'Pillar no: 38, Jagmano Shree Complex, Bailey Rd, Samanpura, Khajpura, Patna, Bihar 800014',
             index: 1,
+          },
+        ],
+      },
+      {
+        id: 'international',
+        items: [
+          {
+            imgUrl: '/assets/img/Centers/lusaka.jpg',
+            title: 'Lusaka, Zambia, Africa',
+            subtitle:
+              'Seeds of Innocens IVF, Lusaka, Zambia, Africa',
+            index: 1,
+          },
+          {
+            imgUrl: '/assets/img/Centers/kitwe.jpg',
+            title: 'Kitwe, Zambia, Africa',
+            subtitle:
+              'Seeds of Innocens IVF, Kitwe, Zambia, Africa',
+            index: 2,
+          },
+          {
+            imgUrl: '/assets/img/Centers/muscat.jpg',
+            title: 'Mabela, Muscat, Oman',
+            subtitle:
+              'Seeds of Innocens IVF, Mabela, Muscat, Oman',
+            index: 3,
           },
         ],
       },
@@ -964,7 +991,7 @@ const page = () => {
         bottomSpaceLg="40"
         bottomSpaceMd="50"
         className="cs_testimonial_area"
-        backgroundImage="/assets/img/testomonial_bg_1.png"
+        // backgroundImage="/assets/img/testomonial_bg_1.png"
       >
         <TestimonialSection data={testimonialData} />
       </Section>

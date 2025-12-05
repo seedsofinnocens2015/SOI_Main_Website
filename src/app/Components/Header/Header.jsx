@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import IVFSuccessBanner from '../IVFSuccessBanner';
 import {
   FaEnvelope,
@@ -681,118 +681,157 @@ const Header = ({ isTopBar, variant }) => {
                               <li>
                                 <ul>
                                   {item.megaMenuCategories.map(
-                                    (category, catIndex) => (
-                                      <li
-                                        key={catIndex}
-                                        onMouseEnter={() => {
-                                          if (
-                                            category.subItems &&
-                                            category.subItems.length > 0
-                                          ) {
-                                            setHoveredCategoryIndex(catIndex);
-                                            setHoveredStateIndex(null);
-                                          } else {
-                                            setHoveredCategoryIndex(null);
-                                            setHoveredStateIndex(null);
-                                          }
-                                        }}
-                                        className={
-                                          hoveredCategoryIndex === catIndex
-                                            ? 'cs_active_category'
-                                            : ''
-                                        }
-                                      >
-                                        <Link
-                                          href={category.href}
-                                          onClick={() =>
-                                            setIsShowMobileMenu(
-                                              !isShowMobileMenu
-                                            )
-                                          }
+                                    (category, catIndex) => {
+                                      const hasSubItems = category.subItems && category.subItems.length > 0;
+                                      return (
+                                        <li
+                                          key={catIndex}
+                                          onMouseEnter={() => {
+                                            if (hasSubItems) {
+                                              setHoveredCategoryIndex(catIndex);
+                                              setHoveredStateIndex(null);
+                                            } else {
+                                              // Reset state when hovering over items without subItems
+                                              // Using CSS transitions to prevent blinking
+                                              setHoveredCategoryIndex(null);
+                                              setHoveredStateIndex(null);
+                                            }
+                                          }}
+                                          className={`${hoveredCategoryIndex === catIndex ? 'cs_active_category' : ''} ${hasSubItems ? 'cs_has_subitems' : ''}`}
                                         >
-                                          {category.label}
-                                        </Link>
-                                      </li>
-                                    )
+                                          <Link
+                                            href={category.href}
+                                            onClick={() =>
+                                              setIsShowMobileMenu(
+                                                !isShowMobileMenu
+                                              )
+                                            }
+                                          >
+                                            {category.label}
+                                          </Link>
+                                        </li>
+                                      );
+                                    }
                                   )}
                                 </ul>
                               </li>
                               {/* Middle Column - Centers of hovered state */}
-                              {hoveredCategoryIndex !== null &&
-                                item.megaMenuCategories[
-                                  hoveredCategoryIndex
-                                ]?.subItems &&
-                                item.megaMenuCategories[hoveredCategoryIndex]
-                                  .subItems.length > 0 && (
-                                  <li>
-                                    <ul>
-                                      {item.megaMenuCategories[
-                                        hoveredCategoryIndex
-                                      ].subItems.map((subItem, subIndex) => {
-                                        const hasNestedSubItems = subItem.subItems && subItem.subItems.length > 0;
-                                        return (
-                                          <li 
-                                            key={subIndex}
-                                            onMouseEnter={() => {
-                                              if (hasNestedSubItems) {
-                                                setHoveredStateIndex(subIndex);
-                                              } else {
-                                                setHoveredStateIndex(null);
-                                              }
-                                            }}
-                                            className={
-                                              hoveredStateIndex === subIndex
-                                                ? 'cs_active_subcategory'
-                                                : ''
+                              <li style={{ 
+                                opacity: hoveredCategoryIndex !== null &&
+                                  item.megaMenuCategories[
+                                    hoveredCategoryIndex
+                                  ]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex]
+                                    .subItems.length > 0 ? 1 : 0,
+                                visibility: hoveredCategoryIndex !== null &&
+                                  item.megaMenuCategories[
+                                    hoveredCategoryIndex
+                                  ]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex]
+                                    .subItems.length > 0 ? 'visible' : 'hidden',
+                                pointerEvents: hoveredCategoryIndex !== null &&
+                                  item.megaMenuCategories[
+                                    hoveredCategoryIndex
+                                  ]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex]
+                                    .subItems.length > 0 ? 'auto' : 'none',
+                                transition: 'opacity 0.15s ease, visibility 0.15s ease'
+                              }}>
+                                <ul>
+                                  {hoveredCategoryIndex !== null &&
+                                    item.megaMenuCategories[
+                                      hoveredCategoryIndex
+                                    ]?.subItems &&
+                                    item.megaMenuCategories[hoveredCategoryIndex]
+                                      .subItems.length > 0 &&
+                                    item.megaMenuCategories[
+                                      hoveredCategoryIndex
+                                    ].subItems.map((subItem, subIndex) => {
+                                      const hasNestedSubItems = subItem.subItems && subItem.subItems.length > 0;
+                                      return (
+                                        <li 
+                                          key={subIndex}
+                                          onMouseEnter={() => {
+                                            if (hasNestedSubItems) {
+                                              setHoveredStateIndex(subIndex);
+                                            }
+                                            // Don't reset state when hovering over items without nested subItems
+                                            // This prevents blinking
+                                          }}
+                                          className={
+                                            hoveredStateIndex === subIndex
+                                              ? 'cs_active_subcategory'
+                                              : ''
+                                          }
+                                        >
+                                          <Link
+                                            href={subItem.href}
+                                            onClick={() =>
+                                              setIsShowMobileMenu(
+                                                !isShowMobileMenu
+                                              )
                                             }
                                           >
-                                            <Link
-                                              href={subItem.href}
-                                              onClick={() =>
-                                                setIsShowMobileMenu(
-                                                  !isShowMobileMenu
-                                                )
-                                              }
-                                            >
-                                              {subItem.label}
-                                            </Link>
-                                          </li>
-                                        );
-                                      })}
-                                    </ul>
-                                  </li>
-                                )}
+                                            {subItem.label}
+                                          </Link>
+                                        </li>
+                                      );
+                                    })}
+                                </ul>
+                              </li>
                               {/* Right Column - Nested centers of hovered state */}
-                              {hoveredCategoryIndex !== null &&
-                                hoveredStateIndex !== null &&
-                                item.megaMenuCategories[
-                                  hoveredCategoryIndex
-                                ]?.subItems?.[hoveredStateIndex]?.subItems &&
-                                item.megaMenuCategories[hoveredCategoryIndex]
-                                  .subItems[hoveredStateIndex].subItems.length > 0 && (
-                                  <li>
-                                    <ul>
-                                      {item.megaMenuCategories[
-                                        hoveredCategoryIndex
-                                      ].subItems[hoveredStateIndex].subItems.map(
-                                        (nestedItem, nestedIndex) => (
-                                          <li key={nestedIndex}>
-                                            <Link
-                                              href={nestedItem.href}
-                                              onClick={() =>
-                                                setIsShowMobileMenu(
-                                                  !isShowMobileMenu
-                                                )
-                                              }
-                                            >
-                                              {nestedItem.label}
-                                            </Link>
-                                          </li>
-                                        )
-                                      )}
-                                    </ul>
-                                  </li>
-                                )}
+                              <li style={{ 
+                                opacity: hoveredCategoryIndex !== null &&
+                                  hoveredStateIndex !== null &&
+                                  item.megaMenuCategories[
+                                    hoveredCategoryIndex
+                                  ]?.subItems?.[hoveredStateIndex]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex]
+                                    .subItems[hoveredStateIndex].subItems.length > 0 ? 1 : 0,
+                                visibility: hoveredCategoryIndex !== null &&
+                                  hoveredStateIndex !== null &&
+                                  item.megaMenuCategories[
+                                    hoveredCategoryIndex
+                                  ]?.subItems?.[hoveredStateIndex]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex]
+                                    .subItems[hoveredStateIndex].subItems.length > 0 ? 'visible' : 'hidden',
+                                pointerEvents: hoveredCategoryIndex !== null &&
+                                  hoveredStateIndex !== null &&
+                                  item.megaMenuCategories[
+                                    hoveredCategoryIndex
+                                  ]?.subItems?.[hoveredStateIndex]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex]
+                                    .subItems[hoveredStateIndex].subItems.length > 0 ? 'auto' : 'none',
+                                transition: 'opacity 0.15s ease, visibility 0.15s ease'
+                              }}>
+                                <ul>
+                                  {hoveredCategoryIndex !== null &&
+                                    hoveredStateIndex !== null &&
+                                    item.megaMenuCategories[
+                                      hoveredCategoryIndex
+                                    ]?.subItems?.[hoveredStateIndex]?.subItems &&
+                                    item.megaMenuCategories[hoveredCategoryIndex]
+                                      .subItems[hoveredStateIndex].subItems.length > 0 &&
+                                    item.megaMenuCategories[
+                                      hoveredCategoryIndex
+                                    ].subItems[hoveredStateIndex].subItems.map(
+                                      (nestedItem, nestedIndex) => (
+                                        <li key={nestedIndex}>
+                                          <Link
+                                            href={nestedItem.href}
+                                            onClick={() =>
+                                              setIsShowMobileMenu(
+                                                !isShowMobileMenu
+                                              )
+                                            }
+                                          >
+                                            {nestedItem.label}
+                                          </Link>
+                                        </li>
+                                      )
+                                    )}
+                                </ul>
+                              </li>
                             </ul>
                           )
                         )}

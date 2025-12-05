@@ -137,13 +137,14 @@ const Footer = () => {
 
   return (
     <footer
-      className="cs_footer cs_blue_bg cs_bg_filed cs_white_color"
-      style={{ backgroundImage: `url(${data.backgroundImage})` }}
+      className="cs_footer cs_white_color"
+      style={{ backgroundColor: '#071D32' }}
+      //  style={{ backgroundImage: `url(${data.backgroundImage})` }}
     >
       <div className="container">
         <div className="cs_footer_row">
           <div className="cs_footer_col">
-            <div className="cs_footer_highlight_col cs_accent_bg">
+            <div className="cs_footer_highlight_col">
               <div className="cs_footer_logo">
               <Image src={data.logo} alt="img" width={305} height={63}   />
               </div>
@@ -256,7 +257,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="cs_footer_bottom cs_primary_bg">
+      <div className="cs_footer_bottom">
         <div className="container">
           <div className="cs_footer_bottom_in">
             <p className="cs_footer_copyright mb-0">{data.copyrightText}</p>
