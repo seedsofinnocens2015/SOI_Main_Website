@@ -301,6 +301,75 @@
   }
 }
 
+/*--------------------------------------------------------------
+  News and Media Section
+----------------------------------------------------------------*/
+.cs_news_media_item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+}
+
+.cs_news_media_video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  background-color: #000;
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.cs_news_media_content {
+  padding: 20px;
+  
+  @media (max-width: 575px) {
+    padding: 15px;
+  }
+}
+
+.cs_news_media_title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+  line-height: 1.4;
+  
+  @media (max-width: 575px) {
+    font-size: 16px;
+  }
+}
+
+.cs_news_media_description {
+  font-size: 14px;
+  color: var(--body-color);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.cs_news_media_date {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
 /*-------------------------------------------
  Blog Details Page Styling
 ----------------------------------------------*/

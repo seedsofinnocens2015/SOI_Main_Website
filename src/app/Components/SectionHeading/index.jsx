@@ -8,7 +8,10 @@ const SectionHeading = ({
   return (
     <div className={`cs_section_heading cs_style_1  ${variant ? variant : ''}`}>
       <div className="cs_section_heading_left">
-        <p className="cs_section_subtitle cs_section_subtitle_black" data-aos="fade-up">
+        <p 
+          className="cs_section_subtitle cs_section_subtitle_black" 
+          data-aos="fade-up"
+        >
           <span className="cs_shape_left" />
           {SectionSubtitle}
           {variant === 'text-center' && (

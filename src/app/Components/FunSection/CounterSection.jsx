@@ -49,28 +49,22 @@ const CounterSection = ({ data }) => {
   useEffect(() => {
     if (!data || data.length === 0) return;
 
-    // If animation was already completed, set to target values immediately
-    if (animationCompletedRef.current || animationCompleted) {
-      const initialCounters = data.map(counter => ({
-        ...counter,
-        displayValue: parseNumber(counter.number),
-        targetValue: parseNumber(counter.number),
-        originalFormat: counter.number,
-      }));
-      setCounters(initialCounters);
-      setHasAnimated(true);
-      setAnimationCompleted(true);
-    } else {
-      // Initialize counters with 0
-      const initialCounters = data.map(counter => ({
+    // Always initialize with 0 for animation, never skip animation on mount
+    const initialCounters = data.map(counter => {
+      const targetValue = parseNumber(counter.number);
+      return {
         ...counter,
         displayValue: 0,
-        targetValue: parseNumber(counter.number),
+        targetValue: targetValue || 0,
         originalFormat: counter.number,
-      }));
-      setCounters(initialCounters);
-    }
-  }, [data, animationCompleted]);
+      };
+    });
+    setCounters(initialCounters);
+    // Reset animation state on new data
+    setHasAnimated(false);
+    setAnimationCompleted(false);
+    animationCompletedRef.current = false;
+  }, [data]);
 
   const animateCounters = useCallback(() => {
     if (animationCompletedRef.current || !isPageVisibleRef.current) return;
@@ -180,7 +174,31 @@ const CounterSection = ({ data }) => {
   }, [counters.length, animationCompleted]);
 
   useEffect(() => {
-    if (counters.length === 0 || hasAnimated || animationCompleted) return;
+    if (counters.length === 0) return;
+
+    // Force animation to start after component mounts (production fallback)
+    const forceStartTimer = setTimeout(() => {
+      if (!hasAnimated && !animationCompleted && counters.length > 0) {
+        setHasAnimated(true);
+        animateCounters();
+      }
+    }, 500);
+
+    // Check if IntersectionObserver is supported
+    if (typeof window === 'undefined' || !window.IntersectionObserver) {
+      // Fallback: Start animation immediately if IntersectionObserver is not available
+      setTimeout(() => {
+        if (!hasAnimated && !animationCompleted) {
+          setHasAnimated(true);
+          animateCounters();
+        }
+      }, 300);
+      return () => {
+        clearTimeout(forceStartTimer);
+        timersRef.current.forEach(timer => clearInterval(timer));
+        timersRef.current = [];
+      };
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -191,18 +209,57 @@ const CounterSection = ({ data }) => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
     const currentRef = sectionRef.current;
     if (currentRef) {
       observer.observe(currentRef);
+      
+      // Fallback: If element is already visible, start animation immediately
+      const checkVisibility = () => {
+        if (currentRef) {
+          const rect = currentRef.getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight + 100 && rect.bottom > -100;
+          
+          if (isVisible && !hasAnimated && !animationCompleted) {
+            setTimeout(() => {
+              if (!hasAnimated && !animationCompleted) {
+                setHasAnimated(true);
+                animateCounters();
+              }
+            }, 200);
+          }
+        }
+      };
+      
+      // Check immediately and multiple times
+      checkVisibility();
+      setTimeout(checkVisibility, 100);
+      setTimeout(checkVisibility, 300);
+      
+      // Aggressive fallback: Always start animation after 1.5 seconds regardless
+      const aggressiveFallback = setTimeout(() => {
+        if (!hasAnimated && !animationCompleted && currentRef) {
+          setHasAnimated(true);
+          animateCounters();
+        }
+      }, 1500);
+      
+      return () => {
+        clearTimeout(forceStartTimer);
+        clearTimeout(aggressiveFallback);
+        if (currentRef) {
+          observer.unobserve(currentRef);
+        }
+        // Cleanup timers
+        timersRef.current.forEach(timer => clearInterval(timer));
+        timersRef.current = [];
+      };
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      clearTimeout(forceStartTimer);
       // Cleanup timers
       timersRef.current.forEach(timer => clearInterval(timer));
       timersRef.current = [];
@@ -217,24 +274,43 @@ const CounterSection = ({ data }) => {
         ...counter,
         // If animation completed, ensure displayValue is targetValue
         displayValue: animationCompleted 
-          ? counter.targetValue 
-          : (counter.displayValue !== undefined ? counter.displayValue : 0)
+          ? (counter.targetValue || parseNumber(counter.number))
+          : (counter.displayValue !== undefined ? counter.displayValue : 0),
+        targetValue: counter.targetValue || parseNumber(counter.number),
+        originalFormat: counter.originalFormat || counter.number,
       }))
-    : data.map(counter => ({
-        ...counter,
-        displayValue: animationCompleted ? parseNumber(counter.number) : 0,
-        targetValue: parseNumber(counter.number),
-        originalFormat: counter.number,
-      }));
+    : (data || []).map(counter => {
+        const targetValue = parseNumber(counter.number);
+        return {
+          ...counter,
+          displayValue: animationCompleted ? targetValue : 0,
+          targetValue: targetValue || 0,
+          originalFormat: counter.number,
+        };
+      });
 
   return (
     <div className="container" ref={sectionRef}>
       <div className="cs_counter_simple_line">
         {displayCounters.map((counter, index) => {
           // Always use targetValue if animation is completed, otherwise use displayValue
-          const valueToDisplay = animationCompleted 
-            ? counter.targetValue 
+          // Fallback to targetValue if displayValue is 0 and we have a valid targetValue
+          let valueToDisplay = animationCompleted 
+            ? (counter.targetValue || parseNumber(counter.number))
             : (counter.displayValue !== undefined ? counter.displayValue : 0);
+          
+          // Safety fallback: if valueToDisplay is 0 but we have a targetValue, use targetValue
+          if (valueToDisplay === 0 && counter.targetValue && counter.targetValue > 0) {
+            valueToDisplay = counter.targetValue;
+          }
+          
+          // Final fallback: parse from original number if still 0
+          if (valueToDisplay === 0 && counter.number) {
+            const parsed = parseNumber(counter.number);
+            if (parsed > 0) {
+              valueToDisplay = parsed;
+            }
+          }
           
           return (
             <div key={index} className="cs_counter_item">

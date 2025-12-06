@@ -7,11 +7,12 @@ import Service from '../Components/Service';
 import ProjectSection from '../Components/ProjectSection';
 import TestimonialSection from '../Components/TestimonialSection';
 import BlogSection from '../Components/BlogsSection';
+import NewsMediaSection from '../Components/NewsMediaSection';
 
 const heroData = {
     primarySlider: [
       {
-        bgImageUrl: '/assets/img/hero_slider_300.mp4',
+        bgImageUrl: '/assets/img/herobanner.jpg',
         title: 'Seeds of Innocens IVF Centre <span>India\'s Best Fertility Clinic</span>',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -63,9 +64,9 @@ const heroData = {
   const ctaData = {
     imageUrl: '/assets/img/cta_img_12.png',
     title: 'Meet Our Team of Trained Certified Doctors.',
-    // subtitle: 'Our experienced fertility specialists are dedicated to providing personalized care and support throughout your journey.',
-    buttonUrl: '/contact/book-appointment',
-    buttonText: 'Book Appointment',
+    subtitle: 'Our experienced fertility specialists are dedicated to providing personalized care and support throughout your journey.',
+    buttonUrl: '/doctors',
+    buttonText: 'Our Doctors',
   };
   
   const aboutData = {
@@ -127,70 +128,70 @@ const heroData = {
     description: '',
     services: [
       {
-        iconUrl: '/assets/img/icons/service_icon_1.png',
+        iconUrl: '/assets/img/icons/IUI, IVF & ICSI.jpg',
         index: '01',
         title: 'IUI, IVF & ICSI',
         subtitle: 'In-vitro fertilization with Intracytoplasmic sperm injection for better success',
         link: '/service/service-details',
       },
       {
-        iconUrl: '/assets/img/icons/service_icon_2.png',
+        iconUrl: '/assets/img/icons/TESA PESA.jpg',
         index: '02',
         title: 'TESA/PESA',
         subtitle: 'TESA, MicroTESE, Semen Analysis and varicocele treatment',
         link: '/service/service-details',
       },
       {
-        iconUrl: '/assets/img/icons/service_icon_3.png',
+        iconUrl: '/assets/img/icons/Genetic Testing.jpg',
         index: '03',
         title: 'Genetic Testing',
         subtitle: 'PGT-A, PGT-M, PGT-SR and comprehensive genetic screening',
         link: '/service/service-details',
       },
       {
-        iconUrl: '/assets/img/icons/service_icon_4.png',
+        iconUrl: '/assets/img/icons/Blastocyst Transfer.jpg',
         index: '04',
         title: 'Blastocyst Transfer',
         subtitle: 'Advanced embryo transfer technique for higher pregnancy rates',
         link: '/service/service-details',
       },
       {
-        iconUrl: '/assets/img/icons/service_icon_5.png',
+        iconUrl: '/assets/img/icons/Donor Program.jpg',
         index: '05',
         title: 'Donor Program',
         subtitle: 'Donor program for couples with fertility issues like low sperm count, low motility, etc.',
         link: '/service/service-details',
       },
       {
-        iconUrl: '/assets/img/icons/service_icon_6.png',
+        iconUrl: '/assets/img/icons/Surrogacy.jpg',
         index: '05',
         title: 'Surrogacy',
         subtitle: 'Complete surrogacy services with legal support and medical care',
         link: '/service/service-details',
       },
       {
-        iconUrl: '/assets/img/icons/service_icon_7.png',
+        iconUrl: '/assets/img/icons/Cryopreservation.jpg',
         index: '06',
         title: 'Cryopreservation',
         subtitle: 'Cryopreservation of sperm, eggs, embryos, and ovarian tissue for future use',
         link: '/service/service-details',
       },
       {
-        iconUrl: '/assets/img/icons/service_icon_8.png',
+        iconUrl: '/assets/img/icons/Genetic Counselling.jpg',
         index: '08',
         title: 'Genetic Counselling',
         subtitle: 'Genetic counselling for couples with fertility issues like low sperm count, low motility, etc.',
         link: '/service/service-details',
       },
       {
-        iconUrl: '/assets/img/icons/service_icon_9.png',
+        iconUrl: '/assets/img/icons/Laparoscopy & Hysteroscopy.jpg',
         index: '07',
         title: 'Laparoscopy & Hysteroscopy',
         subtitle: 'Laparoscopy & Hysteroscopy for treatment of fertility issues',
         link: '/service/service-details',
       },
       {
-        iconUrl: '/assets/img/icons/service_icon_10.png',
+        iconUrl: '/assets/img/icons/PRP & Ovarian Rejuvenation.jpg',
         index: '08',
         title: 'PRP & Ovarian Rejuvenation',
         subtitle: 'Platelet-rich plasma therapy for improved ovarian function',
@@ -543,6 +544,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, 3, opposite Aurbindo College, MMTC Road, Malviya Nagar, New Delhi-110017',
             index: 1,
+            coordinates: [28.5355, 77.2167], // Delhi coordinates
           },
           {
             imgUrl: '/assets/img/Centers/ghaziabad.jpg',
@@ -550,6 +552,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, Yashoda Hospital Opp. Nehru Stadium, Nehru Nagar, Ghaziabad, U.P.-201001',
             index: 2,
+            coordinates: [28.6692, 77.4538], // Ghaziabad coordinates
           },
           {
             imgUrl: '/assets/img/Centers/gurgaon.jpg',
@@ -557,6 +560,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar, Nigam Office Gurugram, Haryana-122001',
             index: 3,
+            coordinates: [28.4089, 77.0378], // Gurgaon coordinates
           },
           {
             imgUrl: '/assets/img/Centers/faridabad.jpg',
@@ -564,6 +568,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, A-6/A Neelam Bata Road, Above ICICI Bank, NIT Faridabad, Haryana-121001',
             index: 4,
+            coordinates: [28.4089, 77.3167], // Faridabad coordinates
           },
           {
             imgUrl: '/assets/img/Centers/jankpuri.jpg',
@@ -571,6 +576,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, C1A/50A, Pankha Road, Janakpuri, New Delhi-110058',
             index: 5,
+            coordinates: [28.6219, 77.0882], // Janakpuri coordinates
           },
           {
             imgUrl: '/assets/img/Centers/pitampura.jpg',
@@ -578,6 +584,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, Plot no 1, First floor, Shiva Enclave, Near Harsh Vihar Chowk, Pitampura, Delhi-110034',
             index: 6,
+            coordinates: [28.6989, 77.1398], // Pitampura coordinates
           },
         ],
       },
@@ -590,6 +597,7 @@ const heroData = {
             subtitle:
               '2nd Floor, 1076, Kamlesh Shopping Arcade, near Kalimandir, Golghar, Gorakhpur, U.P.-273001',
             index: 1,
+            coordinates: [26.7588, 83.3697], // Gorakhpur coordinates
           },
           {
             imgUrl: '/assets/img/Centers/lucknow.jpg',
@@ -597,6 +605,7 @@ const heroData = {
             subtitle:
               'Drosia Tower, 5/5, Park Rd, Raj Bhavan Colony, Hazratganj, Lucknow, Uttar Pradesh 226001',
             index: 2,
+            coordinates: [26.8467, 80.9462], // Lucknow coordinates
           },
           {
             imgUrl: '/assets/img/Centers/kanpur.jpg',
@@ -604,6 +613,7 @@ const heroData = {
             subtitle:
               '7/153, Kumhar Wali gali, Kanpur Vidya Mandir, Khalasi Line, Swaroop Nagar, Kanpur, Uttar Pradesh 208002',
             index: 3,
+            coordinates: [26.4499, 80.3319], // Kanpur coordinates
           },
           {
             imgUrl: '/assets/img/Centers/meerut.jpg',
@@ -611,6 +621,7 @@ const heroData = {
             subtitle:
               'building 303/305, 2nd floor, Mangal Pandey Nagar, Ramgarhi, Meerut, Uttar Pradesh 250004',
             index: 4,
+            coordinates: [28.9845, 77.7064], // Meerut coordinates
           },
           {
             imgUrl: '/assets/img/Centers/agra.jpg',
@@ -618,6 +629,7 @@ const heroData = {
             subtitle:
               '1st Floor, Shankar Point, Block No.9/4, Sanjay Palace, Sanjay Place, Civil Lines, Agra, Uttar Pradesh 282002',
             index: 5,
+            coordinates: [27.1767, 78.0081], // Agra coordinates
           },
         ],
       },
@@ -631,6 +643,7 @@ const heroData = {
             subtitle:
               'Opp Royal drive showroom, Kannadikadu, Upasana Rd, Kundannoor, Maradu, Kochi, Kerala 682304',
             index: 1,
+            coordinates: [9.9312, 76.2673], // Kochi coordinates
           },                           
           {
             imgUrl: '/assets/img/Centers/kasaragod.jpg',
@@ -638,6 +651,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, Wintouch Multi Speciality Hospital, Bank Road, Kasaragod, Kerala, 671121',
             index: 2,
+            coordinates: [12.4984, 74.9894], // Kasaragod coordinates
           },
         ],
       },
@@ -650,6 +664,7 @@ const heroData = {
             subtitle:
               'GS Rd, SATSANG VIHAR, Bhangagarh, Guwahati, Assam 781005',
             index: 1,
+            coordinates: [26.1445, 91.7362], // Guwahati coordinates
           },
           {
             imgUrl: '/assets/img/Centers/haldwani.jpg',
@@ -657,6 +672,7 @@ const heroData = {
             subtitle:
               '2nd Floor, Laxmi Mohan Towers, Chauraha, Bamori Talli, Ganesh Vihar, Heera Nagar, Mukhani, Haldwani, Uttarakhand 263139',
             index: 2,
+            coordinates: [29.2227, 79.5156], // Haldwani coordinates
           },
           {
             imgUrl: '/assets/img/Centers/ranchi.jpg',
@@ -664,6 +680,7 @@ const heroData = {
             subtitle:
               '4th Floor, Maru Tower, Kanke Rd, Ranchi, Jharkhand 834008',
             index: 3,
+            coordinates: [23.3441, 85.3096], // Ranchi coordinates
           },
 
           // {
@@ -685,6 +702,7 @@ const heroData = {
             subtitle:
               '2nd Floor, Hansa Complex, Maripur Main Rd, Musahri, Muzaffarpur, Bihar 842001',
             index: 2,
+            coordinates: [26.1210, 85.3655], // Muzaffarpur coordinates
           },
           {
             imgUrl: '/assets/img/Centers/patna.jpg',
@@ -692,6 +710,7 @@ const heroData = {
             subtitle:
               'Pillar no: 38, Jagmano Shree Complex, Bailey Rd, Samanpura, Khajpura, Patna, Bihar 800014',
             index: 1,
+            coordinates: [25.5941, 85.1376], // Patna coordinates
           },
         ],
       },
@@ -704,6 +723,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, Lusaka, Zambia, Africa',
             index: 1,
+            coordinates: [-15.3875, 28.3228], // Lusaka coordinates
           },
           {
             imgUrl: '/assets/img/Centers/kitwe.jpg',
@@ -711,6 +731,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, Kitwe, Zambia, Africa',
             index: 2,
+            coordinates: [-12.8147, 28.2136], // Kitwe coordinates
           },
           {
             imgUrl: '/assets/img/Centers/muscat.jpg',
@@ -718,6 +739,7 @@ const heroData = {
             subtitle:
               'Seeds of Innocens IVF, Mabela, Muscat, Oman',
             index: 3,
+            coordinates: [23.5880, 58.3829], // Muscat coordinates
           },
         ],
       },
@@ -842,6 +864,37 @@ const heroData = {
     ],
   };
   
+  const newsMediaData = {
+    sectionTitle: 'NEWS AND MEDIA',
+    sectionSubtitle: '',
+    videos: [
+      {
+        videoUrl: 'https://www.youtube.com/watch?v=OpgqOL4fpoU&t=75s', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_1')
+        title: '', // Optional: Video title
+        description: '', // Optional: Video description
+        date: '', // Optional: Video date
+      },
+      {
+        videoUrl: 'https://www.youtube.com/watch?v=E04J-XxA1Y0', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
+        title: '', // Optional: Video title
+        description: '', // Optional: Video description
+        date: '', // Optional: Video date
+      },
+      {
+        videoUrl: 'https://www.youtube.com/watch?v=9_K6ksAefj4', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
+        title: '', // Optional: Video title
+        description: '', // Optional: Video description
+        date: '', // Optional: Video date
+      },
+      {
+        videoUrl: 'https://www.youtube.com/watch?v=PzkrtU5dchg', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_4')
+        title: '', // Optional: Video title
+        description: '', // Optional: Video description
+        date: '', // Optional: Video date
+      },
+    ],
+  };
+  
   const blogsData = {
     sectionTitle: 'FROM OUR BLOG',
     sectionSubtitle: '',
@@ -912,24 +965,27 @@ const heroData = {
         subtitle:
           'Seeds of Innocens gave us the gift of parenthood. The doctors were compassionate, the staff was supportive, and the treatment was excellent. We are forever grateful for our beautiful baby.',
         avatar: '/assets/img/avatar_1.png',
-        name: 'Priya & Rahul',
+        name: 'Couple from Sydney, Australia',
         position: 'Successful Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=0XD9OrkunWI', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_1')
       },
       {
         rating: 5,
         subtitle:
           'The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream of becoming parents. Highly recommended!',
-        avatar: '/assets/img/avatar_2.png',
-        name: 'Anjali & Mohan',
+        avatar: '/assets/img/avatar_1.png',
+        name: 'Parents from Jharkhand, India',
         position: 'Happy Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=wmZZrZFaGB8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
       },
       {
         rating: 5,
         subtitle:
           'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
         avatar: '/assets/img/avatar_1.png',
-        name: 'Sneha & Vikram',
+        name: 'Family from New Delhi, India',
         position: 'Grateful Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
       },
     ],
   };
@@ -969,7 +1025,7 @@ const page = () => {
         topSpaceMd="70"
         bottomSpaceLg="40"
         bottomSpaceMd="50"
-        className={'cs_light_bg_1'}
+        className={''}
       >
         <Service cardBg={'cs_gray_bg'} data={serviceData} />
       </Section>
@@ -1004,6 +1060,16 @@ const page = () => {
         bottomSpaceMd="50"
       >
         <BlogSection data={blogsData} />
+      </Section>
+
+      {/* 8. News and Media */}
+      <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+      >
+        <NewsMediaSection data={newsMediaData} />
       </Section>
 
         </div>

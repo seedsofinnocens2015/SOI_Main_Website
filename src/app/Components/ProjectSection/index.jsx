@@ -1,7 +1,8 @@
 "use client"
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Spacing from "../Spacing";
 import SectionHeading from "../SectionHeading";
+import LocationsMap from "../LocationsMap";
 
 const ProjectSection = ({ data }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -12,6 +13,12 @@ const ProjectSection = ({ data }) => {
   
   const indiaLocations = indiaTabs.flatMap(tab => tab.items) || [];
   const internationalLocations = internationalTab?.items || [];
+  
+  // Get all locations with coordinates for map
+  const allLocationsForMap = useMemo(() => {
+    const all = [...indiaLocations, ...internationalLocations];
+    return all.filter(loc => loc.coordinates && loc.coordinates.length === 2);
+  }, [indiaLocations, internationalLocations]);
   
   // Calculate if last row has less than 4 items for India
   const indiaTotalItems = indiaLocations.length;
@@ -40,8 +47,11 @@ const ProjectSection = ({ data }) => {
         )}
         <div className="cs_height_30 cs_height_lg_30" />
         
-        {/* Dropdown Accordion for Locations */}
-        <div className="cs_locations_dropdown_wrapper">
+        {/* Map and Locations Layout */}
+        <div className="row cs_gap_y_30 align-items-start">
+          {/* Dropdown Section - Left Side */}
+          <div className="col-lg-7 col-md-12">
+            <div className="cs_locations_dropdown_wrapper">
           {/* India Dropdown */}
           <div className="cs_location_dropdown">
             <div 
@@ -117,6 +127,15 @@ const ProjectSection = ({ data }) => {
               </div>
             </div>
           )}
+            </div>
+          </div>
+          
+          {/* Map Section - Right Side */}
+          <div className="col-lg-5 col-md-12">
+            <div className="cs_locations_map_wrapper">
+              <LocationsMap locations={allLocationsForMap} />
+            </div>
+          </div>
         </div>
       </div>
     </>

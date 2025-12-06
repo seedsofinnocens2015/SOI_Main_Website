@@ -94,11 +94,11 @@ const Footer = () => {
       {
         title: 'Fertility Treatment',
         links: [
-          { href: '/service/service-details', text: 'IVF-ICSI' },
-          { href: '/service/service-details', text: 'IUI' },
-          { href: '/service/service-details', text: 'Surrogacy' },
-          { href: '/service/service-details', text: 'Egg Freezing' },
-          { href: '/service/service-details', text: 'Blastocyst Transfer' },
+          { href: '/fertility-treatments/ivf-icsi/', text: 'IVF-ICSI' },
+          { href: '/fertility-treatments/iui/', text: 'IUI' },
+          { href: 'advanced-fertility-care/male-infertility/', text: 'Male Infertility' },
+          { href: '/advanced-fertility-care/egg-freezing/', text: 'Egg Freezing' },
+          { href: '/fertility-treatments/blastocyst-transfer/', text: 'Blastocyst Transfer' },
         ],
       },
       {
@@ -106,7 +106,7 @@ const Footer = () => {
         links: [
           { href: '/', text: 'Home' },
           { href: '/about', text: 'About Us' },
-          { href: '/service', text: 'Our Services' },
+          { href: '/infertility-treatment', text: 'Our Services' },
           { href: '/doctors', text: 'Our Doctors' },
           { href: '/contact', text: 'Contact' },
         ],

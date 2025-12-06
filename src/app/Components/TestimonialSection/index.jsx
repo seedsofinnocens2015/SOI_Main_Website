@@ -8,12 +8,17 @@ import SectionHeading from "../SectionHeading";
 
 const TestimonialSection = ({ data }) => {
   const [rating, setRating] = useState();
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
   const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
     swipeToSlide: true,
+    afterChange: (index) => {
+      setCurrentSlide(index);
+    },
     appendDots: (dots) => (
       <div>
         <ul>{dots}</ul>
@@ -21,6 +26,26 @@ const TestimonialSection = ({ data }) => {
     ),
     dotsClass: `cs_pagination cs_style_2 cs_accent_color cs_flex_left`,
   };
+
+  // Get current video URL based on slide index
+  const getCurrentVideoUrl = () => {
+    if (data.testimonials && data.testimonials[currentSlide] && data.testimonials[currentSlide].videoUrl) {
+      const videoUrl = data.testimonials[currentSlide].videoUrl;
+      // Convert YouTube URL to embed format if needed
+      if (videoUrl.includes('youtube.com/watch?v=')) {
+        const videoId = videoUrl.split('v=')[1]?.split('&')[0];
+        return `https://www.youtube.com/embed/${videoId}`;
+      } else if (videoUrl.includes('youtu.be/')) {
+        const videoId = videoUrl.split('youtu.be/')[1]?.split('?')[0];
+        return `https://www.youtube.com/embed/${videoId}`;
+      } else if (videoUrl.includes('youtube.com/embed/')) {
+        return videoUrl;
+      }
+      return videoUrl;
+    }
+    return null;
+  };
+
   return (
     <>
       <div className="container">
@@ -36,7 +61,21 @@ const TestimonialSection = ({ data }) => {
         <div className="row cs_gap_y_50 align-items-center">
           <div className="col-lg-5" data-aos="fade-left">
             <div className="cs_testimonial_thumbnail">
-            <Image src={data.thumbnail} alt="img" width={484} height={463}   />
+              {getCurrentVideoUrl() ? (
+                <iframe
+                  key={currentSlide}
+                  width="100%"
+                  height="463"
+                  src={getCurrentVideoUrl()}
+                  title="Testimonial Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ borderRadius: '10px' }}
+                />
+              ) : (
+                <Image src={data.thumbnail} alt="img" width={484} height={463} />
+              )}
             </div>
           </div>
           <div className="col-lg-7">

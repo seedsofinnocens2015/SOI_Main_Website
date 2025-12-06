@@ -76,6 +76,21 @@ const HeroSection = ({ data }) => {
           });
         }
       });
+      
+      // Ensure current slide is visible
+      if (sliderRef1.current) {
+        const sliderElement = sliderRef1.current.innerSlider;
+        if (sliderElement) {
+          const currentSlide = sliderElement.currentSlide || 0;
+          const slides = document.querySelectorAll('.cs_hero_slider_thumb_item');
+          if (slides[currentSlide]) {
+            slides[currentSlide].style.display = 'block';
+            slides[currentSlide].style.opacity = '1';
+            slides[currentSlide].style.visibility = 'visible';
+            slides[currentSlide].style.zIndex = '1';
+          }
+        }
+      }
     };
 
     const handleVisibilityChange = () => {
@@ -131,11 +146,45 @@ const HeroSection = ({ data }) => {
       }
     }, 2000); // Check every 2 seconds
 
+    // IntersectionObserver to detect when hero section comes back into view
+    let intersectionObserver = null;
+    
+    const setupIntersectionObserver = () => {
+      const heroSection = document.querySelector('.cs_hero_slider_thumb');
+      if (heroSection && typeof window !== 'undefined' && window.IntersectionObserver) {
+        intersectionObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Hero section is visible - ensure everything is playing
+                setTimeout(() => {
+                  resumeSliderAndVideos();
+                }, 300);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        
+        intersectionObserver.observe(heroSection);
+      }
+    };
+    
+    // Setup observer after a delay to ensure DOM is ready
+    const observerTimer = setTimeout(setupIntersectionObserver, 500);
+
     // Cleanup
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("focus", handleFocus);
       clearInterval(checkInterval);
+      clearTimeout(observerTimer);
+      if (intersectionObserver) {
+        const heroSection = document.querySelector('.cs_hero_slider_thumb');
+        if (heroSection) {
+          intersectionObserver.unobserve(heroSection);
+        }
+      }
     };
   }, []);
 
@@ -326,7 +375,7 @@ const HeroSection = ({ data }) => {
                         >
                           <source src={bgImagePath} type="video/mp4" />
                         </video>
-                        <div className="cs_hero_overlay"></div>
+                        {/* <div className="cs_hero_overlay"></div> */}
                       </>
                     )}
                     <div className="container">

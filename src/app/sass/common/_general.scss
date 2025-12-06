@@ -775,8 +775,8 @@ label {
   }
 
   .cs_section_subtitle {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 700;
     display: inline-flex;
     gap: 10px;
     align-items: center;
@@ -784,7 +784,9 @@ label {
   }
 
   .cs_section_subtitle_black {
-    color: var(--heading-color);
+    color: #E45352;
+    font-weight: 700;
+    font-size: 22px;
     
     &.cs_white_color {
       color: var(--white);
@@ -792,10 +794,10 @@ label {
     
     .cs_shape_left,
     .cs_shape_right {
-      background-color: #d0d0d0;
+      background-color: #E45352;
       
       &::before {
-        background-color: #d0d0d0;
+        background-color: #E45352;
       }
     }
   }
@@ -886,22 +888,22 @@ label {
 
     .cs_section_subtitle {
       justify-content: center;
-      font-size: 30px;
-      font-weight: 600;
+      font-size: 36px;
+      font-weight: 700 !important;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--accent-color);
+      color: #E45352;
       margin-bottom: -20px;
+    }
+    
+    .cs_section_subtitle .cs_shape_left,
+    .cs_section_subtitle .cs_shape_right {
+      background-color: #E45352;
+      height: 2px;
+      width: 40px;
       
-      .cs_shape_left,
-      .cs_shape_right {
-        background-color: var(--accent-color);
-        height: 2px;
-        width: 40px;
-        
-        &::before {
-          display: none;
-        }
+      &::before {
+        display: none;
       }
     }
 
@@ -1524,18 +1526,19 @@ label {
     
     .cs_service_simple_icon {
       box-shadow: 0 4px 12px rgba(205, 37, 39, 0.2);
-      border: 2px solid #CD2527;
+      border: 5px solid #CD2527;
       
       img {
         transform: scale(1.1);
+        opacity: 1;
       }
     }
   }
 }
 
 .cs_service_simple_icon {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border: none;
   border-radius: 50%;
   display: flex;
@@ -1572,6 +1575,7 @@ label {
     object-fit: contain;
     border-radius: 0;
     transition: all 0.3s ease;
+    opacity: 0.8;
   }
 }
 

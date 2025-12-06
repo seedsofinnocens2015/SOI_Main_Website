@@ -430,25 +430,11 @@ const Header = ({ isTopBar, variant }) => {
           variant ? variant : ''
         } cs_primary_color cs_sticky_header ${isSticky ? isSticky : ''}`}
       >
-        {isTopBar && (
+        {/* {isTopBar && (
           <div className="cs_top_header cs_blue_bg cs_white_color">
             <div className="container">
               <div className="cs_top_header_in">
                 <div className="cs_top_header_left">
-                  {/* <ul className="cs_header_contact_list cs_mp_0">
-                    <li>
-                      <i>
-                        <FaEnvelope />
-                      </i>
-                      <Link href={`mailto:${menu.email}`}>{menu.email}</Link>
-                    </li>
-                    <li>
-                      <i>
-                        <FaLocationDot />
-                      </i>
-                      {menu.location}
-                    </li>
-                  </ul> */}
                 </div>
                 <div className="cs_top_header_right">
                   <div className="cs_social_btns cs_style_1">
@@ -477,7 +463,7 @@ const Header = ({ isTopBar, variant }) => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
         <div className="cs_main_header">
           <div className="container">
             <div className="cs_main_header_in cs_compact_gap">
