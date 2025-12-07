@@ -365,10 +365,42 @@ label {
   width: 100%;
   height: 100%;
   max-height: 448px;
+  
+  &.cs_center_image {
+    max-height: none;
+    margin-bottom: 50px;
+    text-align: center;
+    box-shadow: none !important;
+    overflow: visible;
+    border-radius: 0;
+    transition: none;
+    
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+    
+    @media (max-width: 575px) {
+      margin-bottom: 30px;
+    }
+    
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+    
+    img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      object-fit: cover;
+      box-shadow: none !important;
+    }
+  }
 
   img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -1501,6 +1533,48 @@ label {
   }
 }
 
+/* Desktop and Mobile View Toggle for Services */
+.cs_service_desktop_view {
+  display: block;
+  
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.cs_service_mobile_view {
+  display: none;
+  
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+/* Service Slider Styles */
+.cs_service_slider_wrapper {
+  width: 100%;
+}
+
+.cs_service_slider_slide {
+  display: flex !important;
+  gap: 15px;
+  padding: 0 5px;
+  
+  @media (max-width: 480px) {
+    gap: 12px;
+    padding: 0 3px;
+  }
+}
+
+.cs_service_slider_item {
+  flex: 1;
+  min-width: 0;
+  
+  .cs_service_simple_item {
+    width: 100%;
+  }
+}
+
 .cs_service_simple_item {
   display: flex;
   flex-direction: column;
@@ -1605,6 +1679,346 @@ label {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/*--------------------------------------------------------------
+  IVF Content Section
+----------------------------------------------------------------*/
+.cs_ivf_content_wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left;
+  box-sizing: border-box;
+  display: block;
+}
+
+.cs_ivf_content_image_wrapper {
+  margin-bottom: 50px;
+  width: 100%;
+  
+  .row {
+    margin: 0 -15px;
+  }
+  
+  .col-lg-6,
+  .col-md-6 {
+    padding: 0 15px;
+  }
+  
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+    
+    .col-lg-6,
+    .col-md-6 {
+      margin-bottom: 20px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  @media (max-width: 575px) {
+    margin-bottom: 30px;
+  }
+}
+
+.cs_service_details_thumbnail.cs_side_image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: none !important;
+  
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}
+
+.cs_ivf_content_section {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 767px) {
+    margin-bottom: 35px;
+  }
+  
+  @media (max-width: 575px) {
+    margin-bottom: 30px;
+  }
+}
+
+.cs_ivf_content_heading {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0A2A43;
+  margin-bottom: 18px;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #E45352;
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 767px) {
+    font-size: 22px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  
+  @media (max-width: 575px) {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+.cs_ivf_content_paragraph {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--body-color);
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  
+  @media (max-width: 575px) {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+}
+
+.cs_ivf_content_list {
+  margin: 16px 0 24px 0;
+  padding-left: 25px;
+  list-style: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  
+  @media (max-width: 575px) {
+    margin: 14px 0 20px 0;
+    padding-left: 20px;
+  }
+}
+
+.cs_ivf_content_list_item {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--body-color);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  
+  &::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #E45352;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 575px) {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 22px;
+  }
+}
+
+.cs_ivf_content_steps {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  
+  @media (max-width: 575px) {
+    gap: 16px;
+    margin: 18px 0;
+  }
+}
+
+.cs_ivf_content_step {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+  &.cs_step_open {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    
+    .cs_ivf_step_toggle_line {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+    
+    .cs_ivf_step_toggle::before {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @media (max-width: 575px) {
+    margin-bottom: 12px;
+  }
+}
+
+.cs_ivf_step_header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  position: relative;
+  
+  &:hover {
+    background-color: #f5f5f5;
+  }
+  
+  @media (max-width: 575px) {
+    padding: 16px;
+    gap: 12px;
+  }
+}
+
+.cs_ivf_step_number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #E45352;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+  
+  @media (max-width: 575px) {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+.cs_ivf_step_title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0A2A43;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+  
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}
+
+.cs_ivf_step_toggle {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.cs_ivf_step_toggle_line {
+  width: 20px;
+  height: 2px;
+  background-color: #E45352;
+  position: relative;
+  transition: all 0.3s ease;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #E45352;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+.cs_ivf_content_step.cs_step_open {
+  .cs_ivf_step_toggle_line {
+    &::before {
+      opacity: 0;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.cs_ivf_step_content {
+  padding: 0 20px 20px 75px;
+  animation: slideDown 0.3s ease;
+  
+  @media (max-width: 575px) {
+    padding: 0 16px 16px 63px;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cs_ivf_step_description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--body-color);
+  margin: 0;
+  
+  @media (max-width: 575px) {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 .cs_list.cs_style_1 {
@@ -1877,24 +2291,50 @@ label {
 }
 
 .cs_page_heading {
-  height: 610px;
-  padding: 130px 0 50px;
+  height: 400px;
+  padding: 80px 0 30px;
   @media (max-width: 991px) {
-    height: 420px;
+    height: 320px;
+    padding: 60px 0 25px;
+  }
+  
+  @media (max-width: 575px) {
+    height: 280px;
+    padding: 50px 0 20px;
   }
 
   .breadcrumb {
     font-size: 19px;
     line-height: 1.5em;
+    color: #FFFFFF;
+
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+      
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .breadcrumb-item {
+      color: #FFFFFF;
+      
+      &::before {
+        color: #FFFFFF;
+      }
+    }
 
     .active {
-      color: var(--accent-color);
+      color: #FFFFFF;
     }
   }
 
   .cs_page_title {
     font-size: 66px;
     margin-bottom: 12px;
+    color: #ffffff;
     @media (max-width: 991px) {
       font-size: 48px;
     }

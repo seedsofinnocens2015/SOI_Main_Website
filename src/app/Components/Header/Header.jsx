@@ -31,12 +31,12 @@ const Header = ({ isTopBar, variant }) => {
     navItems: [
       {
         label: 'Infertility Treatment',
-        href: '/infertility-treatment',
+        href: '/',
         isMegaMenu: true,
         megaMenuCategories: [
           {
             label: 'Fertility Treatments',
-            href: '/fertility-treatments',
+            href: '/',
             subItems: [
               { label: 'IVF / ICSI', href: '/fertility-treatments/ivf-icsi' },
               { label: 'IUI', href: '/fertility-treatments/iui' },
@@ -469,13 +469,6 @@ const Header = ({ isTopBar, variant }) => {
             <div className="cs_main_header_in cs_compact_gap">
                 <Link className="cs_site_branding" href={menu.logoLink}>
                 <Image src={menu.logoUrl} alt="img" width={350} height={110}   />
-                </Link>
-                {/* Mobile View: IVF Calculator Button */}
-                <Link href="/ivf-success-calculator" className="cs_ivf_calc_btn_mobile cs_btn cs_style_1 cs_color_1">
-                  <span>Calculate Now</span>
-                  <i>
-                    <FaAnglesRight />
-                  </i>
                 </Link>
               <div className="cs_main_header_right ">
                 <div className="cs_nav cs_primary_color ">

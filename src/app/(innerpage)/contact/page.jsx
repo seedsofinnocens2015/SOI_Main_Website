@@ -1,5 +1,4 @@
 import ContactSection from '@/app/Components/ContactSection';
-import LocationMap from '@/app/Components/LocationMap/Index';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import React from 'react';
@@ -46,11 +45,6 @@ const page = () => {
       >
         <ContactSection reverseOrder={true} data={contactData} />
       </Section>
-
-      <Section bottomSpaceLg="0" bottomSpaceMd="0">
-        <LocationMap mapSrc={mapData.mapSrc} />
-      </Section>
-
 
         </div>
     );

@@ -8,11 +8,13 @@ import ProjectSection from '../Components/ProjectSection';
 import TestimonialSection from '../Components/TestimonialSection';
 import BlogSection from '../Components/BlogsSection';
 import NewsMediaSection from '../Components/NewsMediaSection';
+import WhyChooseUsSection from '../Components/WhyChooseUsSection';
 
 const heroData = {
     primarySlider: [
       {
         bgImageUrl: '/assets/img/herobanner.jpg',
+        mobileBgImageUrl: '/assets/img/herobanner_mobile.jpg', // Add mobile image path here
         title: 'Seeds of Innocens IVF Centre <span>India\'s Best Fertility Clinic</span>',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -27,6 +29,7 @@ const heroData = {
       },
       {
         bgImageUrl: '/assets/img/hero_slider_21.jpg',
+        mobileBgImageUrl: '/assets/img/hero_slider_21_mobile.jpg', // Add mobile image path here
         title: 'Expert Fertility <span>Care.</span>',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -41,6 +44,7 @@ const heroData = {
       },
       {
         bgImageUrl: '/assets/img/hero_slider_12.jpg',
+        mobileBgImageUrl: '/assets/img/hero_slider_12_mobile.jpg', // Add mobile image path here
         title: 'Advanced IVF <span>Treatments.</span>',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -67,36 +71,6 @@ const heroData = {
     subtitle: 'Our experienced fertility specialists are dedicated to providing personalized care and support throughout your journey.',
     buttonUrl: '/doctors',
     buttonText: 'Our Doctors',
-  };
-  
-  const aboutData = {
-    sectionSubtitle: 'ABOUT US',
-    sectionTitle: 'Seeds of Innocens - Leading IVF Centre in India.',
-    aboutText:
-      "Seeds of Innocens IVF Centre is India's best fertility clinic, providing comprehensive fertility solutions across multiple locations. We offer advanced treatments including IVF-ICSI, IUI, Surrogacy, Genetic Testing, and more, helping thousands of couples achieve their dream of parenthood.",
-    service:
-      "We provide world-class fertility treatments with high success rates and personalized care <a href='/about'>READ MORE +</a>",
-    experienceYears: '10+',
-    experienceTitle: 'Years Experience',
-    videoUrl: 'https://www.youtube.com/embed/Xqe5ipD1Bwk?si=GvaPx5MngqYkWGqU',
-    videoText: 'How We Work',
-    iconboxes: [
-      {
-        imgUrl: '/assets/img/icons/about_icon_1.png',
-        title: 'Patient Support',
-        subtitle: '24/7 support and guidance throughout your fertility journey.',
-      },
-      {
-        imgUrl: '/assets/img/icons/about_icon_2.png',
-        title: 'Expert Doctors',
-        subtitle: 'Trained and certified fertility specialists with years of experience.',
-      },
-    ],
-
-    btnUrl: '/about',
-    btnText: 'About More',
-    sectionImgUrl: '/assets/img/about_section_img_12.png',
-    headImgUrl: '/assets/img/about_img_1.jpg',
   };
   
   const countersData = [
@@ -205,299 +179,6 @@ const heroData = {
     footerText: '',
     footerLink: '',
     footerLinkText: '',
-  };
-  
-  const teamData = {
-    subtitle: 'OUR TEAM',
-    title: 'Our Team of Trained <br />Certified Doctors',
-    sliderData: [
-      {
-        name: 'Dr. Gauri Agarwal',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/Dr%20Gauri%20maam.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Ranjana Mishra',
-        profession: 'Genetic Expert',
-        imageUrl: '/assets/img/Doctors/ranjana.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Aditi Bhatnagar',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/aditi.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Nivedita Nehal',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/nivedita.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Alpana Razdan',
-        profession: 'Sr. Genetic Expert',
-        imageUrl: '/assets/img/Doctors/alpana.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Lisha Singh',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/lisha.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Beena Upadhyay',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/beena.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Debilina Roy',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/debilina.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Rashmi Singh',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/rashmi.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Kriti Prasad',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/kriti.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Pallavi Shrivastava',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/pallavi.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Divya Shivanand',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/divya.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Aiman Akram',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/aiman.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Preeti',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/preeti.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Disha Datta',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/disha.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Monika Maan',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/monika.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Vinod Kumar B',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/vinod.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Julie Chhawchharia',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/julie.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Varkha Chandra',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/varkha.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Pratik Kakani',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/pratik.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Mangla Kawade',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/mangla.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Khushboo Singh',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/khushboo.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Sonia Raju',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/sonia.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Jasna Mohammed',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/Doctors/jasna.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-    ],
-  };
-  
-  const brandData = [
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 1' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 2' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 3' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 4' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 5' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 6' },
-  ];
-  
-  const sectionData = {
-    subtitle: 'WHY CHOOSE US',
-    title: 'Why Couples Trust Seeds of Innocence',
-    services: [
-      {
-        iconUrl: '/assets/img/icons/service_icon_9.png',
-        title: 'High IVF Success Rates',
-        subtitle: 'We maintain consistently high pregnancy outcomes',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_10.png',
-        title: 'Experienced Fertility Specialists',
-        subtitle: 'Decades of combined clinical expertise',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_11.png',
-        title: 'Expert Doctors',
-        subtitle: 'Renowned fertility experts and embryologists',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_12.png',
-        title: 'Advanced Technology',
-        subtitle: 'Advanced IVF labs with modern technology',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_13.png',
-        title: 'In-House Genetic Lab',
-        subtitle: 'Comprehensive genetic testing and analysis',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_14.png',
-        title: 'Fetal Medicine',
-        subtitle: 'Complete fetal monitoring and care',
-      },
-    ],
   };
   
   const projectData = {
@@ -746,124 +427,6 @@ const heroData = {
     ],
   };
   
-  const ctaData1 = {
-    videoLink: 'https://www.youtube.com/embed/n7OFN8asiWQ?si=G0ufkIozssMtTeGP',
-    videoButtonText: 'WATCH VIDEO',
-    subtitle: 'WATCH VIDEO',
-    title: 'Professional Fertility Care & Treatment.',
-    description:
-      'Experience world-class fertility treatments with our expert team. We provide comprehensive care from initial consultation to successful pregnancy, using advanced technology and personalized treatment plans.',
-    buttonLink: '/contact',
-    buttonText: 'Contact Us',
-    brandImage: '/assets/img/medical_brand1.png',
-  };
-  
-  const medicalTabsData = {
-    subtitle: 'FERTILITY TREATMENTS',
-    title: 'Explore Our Fertility<br> Treatment Services',
-    tabsTitle: [
-      {
-        href: 'brain_althim',
-        iconUrl: '/assets/img/icons/tab_link_icon_1.png',
-        label: 'IVF Treatments',
-      },
-      {
-        href: 'emergency',
-        iconUrl: '/assets/img/icons/tab_link_icon_2.png',
-        label: 'Success Rates',
-      },
-      {
-        href: 'heart_beat',
-        iconUrl: '/assets/img/icons/tab_link_icon_3.png',
-        label: 'Expert Doctors',
-      },
-      {
-        href: 'blood_test',
-        iconUrl: '/assets/img/icons/tab_link_icon_4.png',
-        label: 'Genetic Testing',
-      },
-    ],
-    tabsData: [
-      {
-        id: 'brain_althim',
-        imageSrc: '/assets/img/IVF-ICSI.jpg',
-        title: 'Advanced IVF-ICSI Treatment',
-        subtitle:
-          'Our IVF-ICSI program uses the latest technology and techniques to maximize your chances of success. We provide personalized treatment plans tailored to your specific needs.',
-        points: [
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'State-of-the-art laboratory with advanced equipment for embryo culture and selection.',
-          },
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Experienced embryologists and fertility specialists ensuring the highest quality care.',
-          },
-        ],
-        linkHref: '/service',
-        buttonText: 'Learn More',
-      },
-      {
-        id: 'emergency',
-        imageSrc: '/assets/img/offerings02.jpg',
-        title: 'High Success Rates',
-        subtitle:
-          'We maintain excellent success rates through continuous improvement in techniques, personalized care, and advanced technology. Our team is committed to achieving the best possible outcomes.',
-        points: [
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Regular monitoring and adjustment of treatment protocols based on individual response.',
-          },
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Comprehensive pre-treatment evaluation and counseling for optimal results.',
-          },
-        ],
-        linkHref: '/service',
-        buttonText: 'Learn More',
-      },
-      {
-        id: 'heart_beat',
-        imageSrc: '/assets/img/offerings01.jpg',
-        title: 'Certified & Experienced Doctors',
-        subtitle:
-          'Our team consists of highly qualified and certified fertility specialists, embryologists, and support staff with years of experience in reproductive medicine.',
-        points: [
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Board-certified reproductive endocrinologists and infertility specialists.',
-          },
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Continuous training and education to stay updated with latest advancements.',
-          },
-        ],
-        linkHref: '/doctors',
-        buttonText: 'Meet Our Doctors',
-      },
-      {
-        id: 'blood_test',
-        imageSrc: '/assets/img/offerings04.jpg',
-        title: 'Comprehensive Genetic Testing',
-        subtitle:
-          'We offer advanced genetic testing including PGT-A, PGT-M, PGT-SR, and carrier screening to help ensure healthy pregnancies and reduce genetic risks.',
-        points: [
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Preimplantation genetic testing for aneuploidy, monogenic disorders, and structural rearrangements.',
-          },
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Couple carrier screening and genetic counseling services.',
-          },
-        ],
-        linkHref: '/service',
-        buttonText: 'Learn More',
-      },
-      // Add other tab data here
-    ],
-  };
-  
   const newsMediaData = {
     sectionTitle: 'NEWS AND MEDIA',
     sectionSubtitle: '',
@@ -990,6 +553,20 @@ const heroData = {
     ],
   };
 
+  const whyChooseUsData = {
+    familyImage: '/assets/img/happy_family.jpg', // Please replace with actual family image
+    whyChooseHeading: 'WHY CHOOSE US?',
+    whyChooseText: 'Seeds of Innocens has always been the encouraged choice. Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora, Seeds of Innocens is the leading India’s best IVF centre. Seeds of Innocens has grown to over 35 centres across 8 states and has expanded overseas to Oman, Muscat, and Zambia. It is the only lab in North India that has collaborated with the Department of Reproductive Sciences, University of Gent, Belgium, for the exchange of best practices and technology in infertility.',
+    callUsLink: '/contact',
+    callUsText: 'CALL US',
+    selfCycleHeading: 'VISION AND MISSION',
+    selfCycleText: 'At Seeds of Innocens, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
+    bookAppointmentLink: '/contact/book-appointment',
+    bookAppointmentText: 'BOOK AN APPOINTMENT',
+    selfieImage: '/assets/img/self_cycle_selfie.jpg', // Please replace with actual selfie image
+    // speechBubbleText: 'Self-cycle™ IVF means\nA baby with your genes,\ntraits and quirks.',
+  };
+
 const page = () => {
     return (
         <div>
@@ -1019,7 +596,18 @@ const page = () => {
         <CounterSection data={countersData} />
       </Section>
 
-      {/* 4. Treatments Overview */}
+      {/* 4. Why Choose Us Section */}
+      <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className={'cs_why_choose_us_section'}
+      >
+        <WhyChooseUsSection data={whyChooseUsData} />
+      </Section>
+
+      {/* 5. Treatments Overview */}
       <Section
         topSpaceLg="60"
         topSpaceMd="70"
@@ -1030,7 +618,7 @@ const page = () => {
         <Service cardBg={'cs_gray_bg'} data={serviceData} />
       </Section>
 
-      {/* 5. Centers Overview */}
+      {/* 6. Centers Overview */}
       <Section 
       topSpaceLg="60" 
       topSpaceMd="70" 
@@ -1040,7 +628,7 @@ const page = () => {
         <ProjectSection data={projectData} />
       </Section>
 
-      {/* 6. Testimonials Preview */}
+      {/* 7. Testimonials Preview */}
       <Section
         topSpaceLg="60"
         topSpaceMd="70"
@@ -1052,7 +640,7 @@ const page = () => {
         <TestimonialSection data={testimonialData} />
       </Section>
 
-      {/* 7. Blogs Preview */}
+      {/* 8. Blogs Preview */}
       <Section
         topSpaceLg="60"
         topSpaceMd="70"
@@ -1062,7 +650,7 @@ const page = () => {
         <BlogSection data={blogsData} />
       </Section>
 
-      {/* 8. News and Media */}
+      {/* 9. News and Media */}
       <Section
         topSpaceLg="60"
         topSpaceMd="70"

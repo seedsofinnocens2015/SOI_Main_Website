@@ -2,7 +2,6 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import ServiceSection4 from '@/app/Components/Service/ServiceSection4';
 import CounterSection2 from '@/app/Components/FunSection/CounterSection2';
-import LocationMap from '@/app/Components/LocationMap/Index';
 import IconBox from '@/app/Components/IconBox';
 import indiaCentersData from '../../../india-centers-data.json';
 import { notFound } from 'next/navigation';
@@ -241,11 +240,6 @@ const page = async ({ params }) => {
 
       <Section bottomSpaceLg="70" bottomSpaceMd="120">
         <CounterSection2 data={counterData} />
-      </Section>
-
-      {/* Map Section */}
-      <Section bottomSpaceLg="0" bottomSpaceMd="0">
-        <LocationMap mapSrc={mapUrl} />
       </Section>
     </div>
   );

@@ -11,10 +11,23 @@ const HeroSection = ({ data }) => {
   const sliderRef1 = useRef(null);
   const sliderRef2 = useRef(null);
   const videoRefs = useRef([]);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setNav1(sliderRef1.current);
     setNav2(sliderRef2.current);
+  }, []);
+
+  // Detect mobile view
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   // Ensure slider is visible and playing on mount
@@ -196,10 +209,11 @@ const HeroSection = ({ data }) => {
     fade: false,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    pauseOnDotsHover: false,
+    autoplaySpeed: 1000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    pauseOnDotsHover: true,
+    arrows: true,
     adaptiveHeight: false,
     lazyLoad: 'ondemand',
     beforeChange: (current, next) => {
@@ -293,7 +307,9 @@ const HeroSection = ({ data }) => {
           >
             {data?.primarySlider.map((items, index) => {
               const isVideo = items.bgImageUrl?.toLowerCase().endsWith(".mp4");
-              const bgImagePath = getAssetPathClient(items.bgImageUrl);
+              // Use mobile image if available and on mobile, otherwise use desktop image
+              const imageUrl = (isMobile && items.mobileBgImageUrl) ? items.mobileBgImageUrl : items.bgImageUrl;
+              const bgImagePath = getAssetPathClient(imageUrl);
               const iconImagePath = getAssetPathClient(items.iconImgUrl);
               
               return (
