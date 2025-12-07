@@ -47,7 +47,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Advanced Fertility Care',
-            href: '/advanced-fertility-care',
+            href: '/',
             subItems: [
               { label: 'Egg Freezing', href: '/advanced-fertility-care/egg-freezing' },
               { label: 'PRP & Ovarian Rejuvenation', href: '/advanced-fertility-care/prp-ovarian-rejuvenation' },
@@ -58,7 +58,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Genetic Testing (PGT)',
-            href: '/genetic-testing-pgt',
+            href: '/',
             subItems: [
               { label: 'PGT-A', href: '/genetic-testing-pgt/pgt-a' },
               { label: 'PGT-M', href: '/genetic-testing-pgt/pgt-m' },
@@ -67,7 +67,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Maternal–Fetal Medicine (MFM)',
-            href: '/maternal-fetal-medicine',
+            href: '/',
             subItems: [
               { label: 'High-Risk Pregnancy', href: '/maternal-fetal-medicine/high-risk-pregnancy' },
               { label: 'Fetal Reduction', href: '/maternal-fetal-medicine/fetal-reduction' },
@@ -76,7 +76,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Surgeries',
-            href: '/surgeries',
+            href: '/',
             subItems: [
               { label: 'Hysteroscopy', href: '/surgeries/hysteroscopy' },
               { label: 'Laparoscopy', href: '/surgeries/laparoscopy' },

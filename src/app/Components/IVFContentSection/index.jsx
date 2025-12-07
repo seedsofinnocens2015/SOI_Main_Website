@@ -60,52 +60,150 @@ const IVFContentSection = ({ data, benefitImages }) => {
           )}
           
           <div className="cs_ivf_content_section">
-            {/* Section Heading */}
-            <h2 className="cs_ivf_content_heading">{section.heading}</h2>
-            
-            {/* Paragraphs */}
-            {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
-              <p key={pIndex} className="cs_ivf_content_paragraph">
-                {paragraph}
-              </p>
-            ))}
-            
-            {/* List Items */}
-            {section.listItems && (
-              <ul className="cs_ivf_content_list">
-                {section.listItems.map((item, itemIndex) => (
-                  <li key={itemIndex} className="cs_ivf_content_list_item">
-                    {item}
-                  </li>
+            {/* Check if section has sideImage - if yes, use two-column layout */}
+            {section.sideImage ? (
+              <div className="row cs_gap_y_30 align-items-center">
+                <div className="col-lg-6">
+                  {/* Section Heading */}
+                  <h2 className="cs_ivf_content_heading">{section.heading}</h2>
+                  
+                  {/* Paragraphs */}
+                  {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
+                    <p key={pIndex} className="cs_ivf_content_paragraph">
+                      {paragraph}
+                    </p>
+                  ))}
+                  
+                  {/* List Items */}
+                  {section.listItems && (
+                    <ul className="cs_ivf_content_list">
+                      {section.listItems.map((item, itemIndex) => (
+                        <li key={itemIndex} className="cs_ivf_content_list_item">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  
+                  {/* Steps - Accordion Style */}
+                  {section.steps && (
+                    <div className="cs_ivf_content_steps">
+                      {section.steps.map((step, stepIndex) => (
+                        <div 
+                          key={stepIndex} 
+                          className={`cs_ivf_content_step ${openSteps[stepIndex] ? 'cs_step_open' : ''}`}
+                        >
+                          <div 
+                            className="cs_ivf_step_header" 
+                            onClick={() => toggleStep(stepIndex)}
+                          >
+                            <span className="cs_ivf_step_number">{stepIndex + 1}</span>
+                            <h3 className="cs_ivf_step_title">{step.title}</h3>
+                            <span className="cs_ivf_step_toggle">
+                              <span className="cs_ivf_step_toggle_line"></span>
+                            </span>
+                          </div>
+                          {openSteps[stepIndex] && (
+                            <div className="cs_ivf_step_content">
+                              <p className="cs_ivf_step_description">{step.description}</p>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div className="col-lg-6">
+                  <div className="cs_service_details_thumbnail cs_side_image">
+                    <Image 
+                      src={section.sideImage} 
+                      alt={section.heading || "Image"} 
+                      width={500}
+                      height={400}
+                      style={{ 
+                        width: '100%', 
+                        height: 'auto', 
+                        maxHeight: "470px",
+                        borderRadius: '15px',
+                        objectFit: 'contain',
+                        display: 'block'
+                      }} 
+                    />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <>
+                {/* Section Heading */}
+                <h2 className="cs_ivf_content_heading">{section.heading}</h2>
+                
+                {/* Paragraphs */}
+                {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
+                  <p key={pIndex} className="cs_ivf_content_paragraph">
+                    {paragraph}
+                  </p>
                 ))}
-              </ul>
+                
+                {/* List Items */}
+                {section.listItems && (
+                  <ul className="cs_ivf_content_list">
+                    {section.listItems.map((item, itemIndex) => (
+                      <li key={itemIndex} className="cs_ivf_content_list_item">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                
+                {/* Steps - Accordion Style */}
+                {section.steps && (
+                  <div className="cs_ivf_content_steps">
+                    {section.steps.map((step, stepIndex) => (
+                      <div 
+                        key={stepIndex} 
+                        className={`cs_ivf_content_step ${openSteps[stepIndex] ? 'cs_step_open' : ''}`}
+                      >
+                        <div 
+                          className="cs_ivf_step_header" 
+                          onClick={() => toggleStep(stepIndex)}
+                        >
+                          <span className="cs_ivf_step_number">{stepIndex + 1}</span>
+                          <h3 className="cs_ivf_step_title">{step.title}</h3>
+                          <span className="cs_ivf_step_toggle">
+                            <span className="cs_ivf_step_toggle_line"></span>
+                          </span>
+                        </div>
+                        {openSteps[stepIndex] && (
+                          <div className="cs_ivf_step_content">
+                            <p className="cs_ivf_step_description">{step.description}</p>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </>
             )}
             
-            {/* Steps - Accordion Style */}
-            {section.steps && (
-              <div className="cs_ivf_content_steps">
-                {section.steps.map((step, stepIndex) => (
-                  <div 
-                    key={stepIndex} 
-                    className={`cs_ivf_content_step ${openSteps[stepIndex] ? 'cs_step_open' : ''}`}
-                  >
-                    <div 
-                      className="cs_ivf_step_header" 
-                      onClick={() => toggleStep(stepIndex)}
-                    >
-                      <span className="cs_ivf_step_number">{stepIndex + 1}</span>
-                      <h3 className="cs_ivf_step_title">{step.title}</h3>
-                      <span className="cs_ivf_step_toggle">
-                        <span className="cs_ivf_step_toggle_line"></span>
-                      </span>
-                    </div>
-                    {openSteps[stepIndex] && (
-                      <div className="cs_ivf_step_content">
-                        <p className="cs_ivf_step_description">{step.description}</p>
-                      </div>
-                    )}
-                  </div>
-                ))}
+            {/* Bottom Image - Full Width Rectangle Image */}
+            {section.bottomImage && (
+              <div className="cs_ivf_content_bottom_image_wrapper" style={{ marginTop: '30px' }}>
+                <div className="cs_service_details_thumbnail">
+                  <Image 
+                    src={section.bottomImage} 
+                    alt={section.heading || "Image"} 
+                    width={1227}
+                    height={253}
+                    style={{ 
+                      width: '100%', 
+                      height: 'auto',
+                      maxHeight: '550px',
+                      borderRadius: '15px',
+                      objectFit: 'cover',
+                      display: 'block'
+                    }} 
+                  />
+                </div>
               </div>
             )}
           </div>
