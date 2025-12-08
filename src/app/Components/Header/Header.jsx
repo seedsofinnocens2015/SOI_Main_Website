@@ -31,12 +31,12 @@ const Header = ({ isTopBar, variant }) => {
     navItems: [
       {
         label: 'Infertility Treatment',
-        href: '/',
+        href: '/infertility-treatment',
         isMegaMenu: true,
         megaMenuCategories: [
           {
             label: 'Fertility Treatments',
-            href: '/',
+            href: '/infertility-treatment/fertility-treatments',
             subItems: [
               { label: 'IVF / ICSI', href: '/fertility-treatments/ivf-icsi' },
               { label: 'IUI', href: '/fertility-treatments/iui' },
@@ -47,7 +47,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Advanced Fertility Care',
-            href: '/',
+            href: '/infertility-treatment/advanced-fertility-care',
             subItems: [
               { label: 'Egg Freezing', href: '/advanced-fertility-care/egg-freezing' },
               { label: 'PRP & Ovarian Rejuvenation', href: '/advanced-fertility-care/prp-ovarian-rejuvenation' },
@@ -58,7 +58,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Genetic Testing (PGT)',
-            href: '/',
+            href: '/infertility-treatment/genetic-testing-pgt',
             subItems: [
               { label: 'PGT-A', href: '/genetic-testing-pgt/pgt-a' },
               { label: 'PGT-M', href: '/genetic-testing-pgt/pgt-m' },
@@ -67,7 +67,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Maternal–Fetal Medicine (MFM)',
-            href: '/',
+            href: '/infertility-treatment/maternal-fetal-medicine',
             subItems: [
               { label: 'High-Risk Pregnancy', href: '/maternal-fetal-medicine/high-risk-pregnancy' },
               { label: 'Fetal Reduction', href: '/maternal-fetal-medicine/fetal-reduction' },
@@ -76,7 +76,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Surgeries',
-            href: '/',
+            href: '/infertility-treatment/surgeries',
             subItems: [
               { label: 'Hysteroscopy', href: '/surgeries/hysteroscopy' },
               { label: 'Laparoscopy', href: '/surgeries/laparoscopy' },
@@ -488,7 +488,14 @@ const Header = ({ isTopBar, variant }) => {
                       >
                         <Link
                           href={item.href}
-                          onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}
+                          onClick={(e) => {
+                            if (item.isMegaMenu || item.subItems) {
+                              e.preventDefault();
+                            }
+                            if (isMobileView) {
+                              setIsShowMobileMenu(!isShowMobileMenu);
+                            }
+                          }}
                         >
                           {item.label}
                         </Link>
@@ -519,11 +526,12 @@ const Header = ({ isTopBar, variant }) => {
                                       <div className="cs_mobile_category_header">
                                         <Link
                                           href={category.href}
-                                          onClick={() =>
+                                          onClick={(e) => {
+                                            e.preventDefault();
                                             setIsShowMobileMenu(
                                               !isShowMobileMenu
-                                            )
-                                          }
+                                            );
+                                          }}
                                         >
                                           {category.label}
                                         </Link>
@@ -565,11 +573,14 @@ const Header = ({ isTopBar, variant }) => {
                                                       <div className="cs_mobile_category_header">
                                                         <Link
                                                           href={subItem.href}
-                                                          onClick={() =>
+                                                          onClick={(e) => {
+                                                            if (item.label === 'IVF Centers' && category.label === 'India') {
+                                                              e.preventDefault();
+                                                            }
                                                             setIsShowMobileMenu(
                                                               !isShowMobileMenu
-                                                            )
-                                                          }
+                                                            );
+                                                          }}
                                                         >
                                                           {subItem.label}
                                                         </Link>
@@ -617,11 +628,14 @@ const Header = ({ isTopBar, variant }) => {
                                                   ) : (
                                                     <Link
                                                       href={subItem.href}
-                                                      onClick={() =>
+                                                      onClick={(e) => {
+                                                        if (item.label === 'IVF Centers' && category.label === 'India') {
+                                                          e.preventDefault();
+                                                        }
                                                         setIsShowMobileMenu(
                                                           !isShowMobileMenu
-                                                        )
-                                                      }
+                                                        );
+                                                      }}
                                                     >
                                                       {subItem.label}
                                                     </Link>
@@ -657,7 +671,24 @@ const Header = ({ isTopBar, variant }) => {
                               }}
                             >
                               {/* Left Column - States (Categories) */}
-                              <li>
+                              <li style={{
+                                borderRight: hoveredCategoryIndex !== null && 
+                                  item.megaMenuCategories[hoveredCategoryIndex]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex].subItems.length > 0
+                                  ? '1px solid #e0e0e0'
+                                  : 'none',
+                                paddingRight: hoveredCategoryIndex !== null && 
+                                  item.megaMenuCategories[hoveredCategoryIndex]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex].subItems.length > 0
+                                  ? '20px'
+                                  : '0',
+                                marginRight: hoveredCategoryIndex !== null && 
+                                  item.megaMenuCategories[hoveredCategoryIndex]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex].subItems.length > 0
+                                  ? '20px'
+                                  : '0',
+                                transition: 'border-right 0.15s ease, padding-right 0.15s ease, margin-right 0.15s ease'
+                              }}>
                                 <ul>
                                   {item.megaMenuCategories.map(
                                     (category, catIndex) => {
@@ -680,11 +711,9 @@ const Header = ({ isTopBar, variant }) => {
                                         >
                                           <Link
                                             href={category.href}
-                                            onClick={() =>
-                                              setIsShowMobileMenu(
-                                                !isShowMobileMenu
-                                              )
-                                            }
+                                            onClick={(e) => {
+                                              e.preventDefault();
+                                            }}
                                           >
                                             {category.label}
                                           </Link>
@@ -745,11 +774,11 @@ const Header = ({ isTopBar, variant }) => {
                                         >
                                           <Link
                                             href={subItem.href}
-                                            onClick={() =>
-                                              setIsShowMobileMenu(
-                                                !isShowMobileMenu
-                                              )
-                                            }
+                                            onClick={(e) => {
+                                              if (item.label === 'IVF Centers' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India') {
+                                                e.preventDefault();
+                                              }
+                                            }}
                                           >
                                             {subItem.label}
                                           </Link>

@@ -1,6 +1,8 @@
 "use client"
 import { useState } from 'react';
 import Image from 'next/image';
+import { FaClock, FaLocationDot, FaEnvelope } from 'react-icons/fa6';
+import { FaPhoneAlt, FaCalendarAlt } from 'react-icons/fa';
 import SectionHeading from '../SectionHeading';
 
 const IVFContentSection = ({ data, benefitImages }) => {
@@ -11,6 +13,23 @@ const IVFContentSection = ({ data, benefitImages }) => {
       ...prev,
       [stepIndex]: !prev[stepIndex]
     }));
+  };
+
+  // Function to get icon based on label
+  const getLabelIcon = (label) => {
+    const labelLower = label.toLowerCase().trim();
+    if (labelLower.includes('open days') || labelLower.includes('days')) {
+      return <FaCalendarAlt style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
+    } else if (labelLower.includes('timing')) {
+      return <FaClock style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
+    } else if (labelLower.includes('address') || labelLower.includes('location')) {
+      return <FaLocationDot style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
+    } else if (labelLower.includes('email')) {
+      return <FaEnvelope style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
+    } else if (labelLower.includes('phone')) {
+      return <FaPhoneAlt style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
+    }
+    return null;
   };
 
   return (
@@ -68,11 +87,27 @@ const IVFContentSection = ({ data, benefitImages }) => {
                   <h2 className="cs_ivf_content_heading">{section.heading}</h2>
                   
                   {/* Paragraphs */}
-                  {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
-                    <p key={pIndex} className="cs_ivf_content_paragraph">
-                      {paragraph}
-                    </p>
-                  ))}
+                  {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => {
+                    // Check if paragraph has label format (e.g., "Label: Value")
+                    const labelMatch = paragraph.match(/^([^:]+):\s*(.+)$/);
+                    if (labelMatch) {
+                      const [, label, value] = labelMatch;
+                      const icon = getLabelIcon(label);
+                      return (
+                        <p key={pIndex} className="cs_ivf_content_paragraph" style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                          {icon}
+                          <span>
+                            <span style={{ fontWeight: '700', color: '#E45352' }}>{label}:</span> {value}
+                          </span>
+                        </p>
+                      );
+                    }
+                    return (
+                      <p key={pIndex} className="cs_ivf_content_paragraph">
+                        {paragraph}
+                      </p>
+                    );
+                  })}
                   
                   {/* List Items */}
                   {section.listItems && (
@@ -115,20 +150,36 @@ const IVFContentSection = ({ data, benefitImages }) => {
                 </div>
                 <div className="col-lg-6">
                   <div className="cs_service_details_thumbnail cs_side_image">
-                    <Image 
-                      src={section.sideImage} 
-                      alt={section.heading || "Image"} 
-                      width={500}
-                      height={400}
-                      style={{ 
-                        width: '100%', 
-                        height: 'auto', 
-                        maxHeight: "470px",
-                        borderRadius: '15px',
-                        objectFit: 'contain',
-                        display: 'block'
-                      }} 
-                    />
+                    {section.isMapEmbed ? (
+                      <iframe
+                        src={section.sideImage}
+                        width="100%"
+                        height="400"
+                        style={{
+                          border: '0',
+                          borderRadius: '15px',
+                          minHeight: '400px'
+                        }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
+                    ) : (
+                      <Image 
+                        src={section.sideImage} 
+                        alt={section.heading || "Image"} 
+                        width={500}
+                        height={400}
+                        style={{ 
+                          width: '100%', 
+                          height: 'auto', 
+                          maxHeight: "370px",
+                          borderRadius: '15px',
+                          objectFit: 'contain',
+                          display: 'block'
+                        }} 
+                      />
+                    )}
                   </div>
                 </div>
               </div>
@@ -138,11 +189,27 @@ const IVFContentSection = ({ data, benefitImages }) => {
                 <h2 className="cs_ivf_content_heading">{section.heading}</h2>
                 
                 {/* Paragraphs */}
-                {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
-                  <p key={pIndex} className="cs_ivf_content_paragraph">
-                    {paragraph}
-                  </p>
-                ))}
+                {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => {
+                  // Check if paragraph has label format (e.g., "Label: Value")
+                  const labelMatch = paragraph.match(/^([^:]+):\s*(.+)$/);
+                  if (labelMatch) {
+                    const [, label, value] = labelMatch;
+                    const icon = getLabelIcon(label);
+                    return (
+                      <p key={pIndex} className="cs_ivf_content_paragraph" style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                        {icon}
+                        <span>
+                          <span style={{ fontWeight: '700', color: '#E45352' }}>{label}:</span> {value}
+                        </span>
+                      </p>
+                    );
+                  }
+                  return (
+                    <p key={pIndex} className="cs_ivf_content_paragraph">
+                      {paragraph}
+                    </p>
+                  );
+                })}
                 
                 {/* List Items */}
                 {section.listItems && (
@@ -197,7 +264,7 @@ const IVFContentSection = ({ data, benefitImages }) => {
                     style={{ 
                       width: '100%', 
                       height: 'auto',
-                      maxHeight: '550px',
+                      maxHeight: '400px',
                       borderRadius: '15px',
                       objectFit: 'cover',
                       display: 'block'

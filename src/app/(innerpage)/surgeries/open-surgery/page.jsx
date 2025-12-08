@@ -1,7 +1,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
-import ServiceSection4 from '@/app/Components/Service/ServiceSection4';
-import CounterSection2 from '@/app/Components/FunSection/CounterSection2';
+import IVFContentSection from '@/app/Components/IVFContentSection';
+import Image from 'next/image';
 import React from 'react';
 
 const headingData = {
@@ -9,69 +9,143 @@ const headingData = {
 };
 
 const serviceData = {
-  serviceHeading: 'Related Services:',
-  services: [
-    { title: 'Hysteroscopy', url: '/surgeries/hysteroscopy' },
-    { title: 'Laparoscopy', url: '/surgeries/laparoscopy' },
-    { title: 'Consultation', url: '/appointments' },
-  ],
+  serviceHeading: '',
+  services: [],
   mainImage: '/assets/img/recent_post_1.png',
-  serviceDetails: [
-    'Open surgery, also known as laparotomy, involves making a larger incision in the abdomen to access and treat gynecological conditions. While minimally invasive techniques are preferred when possible, open surgery may be necessary for complex cases, large tumors, or when other approaches are not feasible.',
-    'Open surgery may be recommended for large fibroids, extensive endometriosis, complex pelvic adhesions, large ovarian masses, or certain types of gynecological cancers. Our experienced gynecological surgeons determine the best approach based on each patient\'s specific condition and needs.',
-    'We use modern surgical techniques and equipment even for open procedures, ensuring optimal outcomes. Our surgical team provides comprehensive preoperative evaluation, expert surgical care, and attentive postoperative management. We prioritize patient safety and recovery throughout the process.',
-  ],
-  footerText: 'Expert open surgical procedures when necessary for complex gynecological conditions. Comprehensive care with focus on safety and optimal outcomes.',
+  serviceDetails: [],
+  footerText: '',
   additionalImages: '/assets/img/recent_post_1.png',
-  iconBoxes: [
-    {
-      index: '01',
-      title: 'Expert Surgeons',
-      subtitle: 'Experienced gynecological surgeons',
-      icon: '/assets/img/icons/service_icon_1.png',
-      bgImage: '/assets/img/service_bg.jpg',
-      link: '/',
-    },
-    {
-      index: '02',
-      title: 'Comprehensive Care',
-      subtitle: 'Full perioperative care and management',
-      icon: '/assets/img/icons/service_icon_2.png',
-      bgImage: '/assets/img/service_bg.jpg',
-      link: '/',
-    },
-  ],
-  subtitle: 'Expert open surgical procedures for complex gynecological conditions',
+  iconBoxes: [],
+  subtitle: '',
   readMoreUrl: '/appointments',
   readMoreText: 'Book Appointment',
+  benefitImages: [
+    '/assets/img/recent_post_1.png',
+    '/assets/img/recent_post_1.png'
+  ],
 };
 
-const counterData = [
-  {
-    iconSrc: '/assets/img/icons/counter_icon_1.png',
-    countTo: 90,
-    suffix: '%',
-    title: 'Success Rate',
-  },
-  {
-    iconSrc: '/assets/img/icons/counter_icon_2.png',
-    countTo: 1500,
-    suffix: '+',
-    title: 'Procedures Performed',
-  },
-  {
-    iconSrc: '/assets/img/icons/counter_icon_3.png',
-    countTo: 93,
-    suffix: '%',
-    title: 'Patient Satisfaction',
-  },
-  {
-    iconSrc: '/assets/img/icons/counter_icon_4.png',
-    countTo: 15,
-    suffix: '+',
-    title: 'Years Experience',
-  },
-];
+const openSurgeryContentData = {
+  sections: [
+    {
+      heading: 'Open Surgery in IVF and Pregnancy',
+      paragraphs: [
+        'Developments in medical science have enabled the addressing of fertility problems and pregnancy complications using different procedures. Although minimally invasive methods are the first choice, open surgery is an important option in specific situations. Open surgery during IVF or pregnancy is done if there are complex reproductive problems and direct access to the reproductive system is needed.',
+      ],
+      sideImage: '/assets/img/Open Surgery1.jpg',
+    },
+    {
+      heading: 'When is Open Surgery Needed in IVF and Pregnancy?',
+      paragraphs: [
+        'Open surgery may be recommended in cases where other treatments, such as medications or laparoscopic procedures, are not effective. Some common reasons include:',
+      ],
+    },
+    {
+      heading: '1. Open Surgery in IVF:',
+      paragraphs: [
+        'Open surgery may be necessary for various IVF-related conditions:',
+      ],
+      listItems: [
+        'Fibroid Removal (Myomectomy): Large or multiple fibroids in the uterus can interfere with implantation and pregnancy. A myomectomy through open surgery helps in removing fibroids while preserving the uterus.',
+        'Endometriosis Treatment: Severe endometriosis can cause adhesions and blockages in the reproductive tract, requiring surgical removal for improved fertility.',
+        'Ovarian Cyst Removal: Large cysts can impact egg quality and ovulation. Open surgery may be needed if the cyst is too large for laparoscopic removal.',
+        'Uterine Abnormalities: Congenital abnormalities like a uterine septum or scar tissue may require surgical correction to improve pregnancy chances.',
+      ],
+    },
+    {
+      heading: '2. Open Surgery in Pregnancy:',
+      paragraphs: [
+        'Open surgery during pregnancy may be required for:',
+      ],
+      listItems: [
+        'C-Section (Cesarean Section): When vaginal delivery is not possible due to medical reasons like fetal distress, placenta previa, or multiple pregnancies, a C-section is performed.',
+        'Ectopic Pregnancy Removal: If a fertilized egg implants outside the uterus, usually in the fallopian tube, open surgery is required to remove the embryo and prevent complications.',
+        'Uterine Rupture Repair: A rare but serious condition where the uterus tears during pregnancy or labour, requiring immediate open surgery to save the mother and baby.',
+      ],
+    },
+    {
+      heading: 'Procedure and Recovery',
+      paragraphs: [
+        'Understanding the procedure and recovery process is important:',
+      ],
+    },
+    {
+      heading: 'Before Surgery:',
+      paragraphs: [
+        'Pre-surgery preparation includes:',
+      ],
+      listItems: [
+        'A thorough diagnosis, including ultrasound and blood tests, helps determine the need for surgery.',
+        'Patients are advised to follow specific instructions regarding food, medications, and lifestyle changes before surgery.',
+      ],
+    },
+    {
+      heading: 'During Surgery:',
+      paragraphs: [
+        'The surgical procedure involves:',
+      ],
+      listItems: [
+        'The procedure is performed under general anaesthesia.',
+        'The surgeon makes an incision in the lower abdomen to access the reproductive organs and perform the necessary corrections.',
+        'The duration varies based on the complexity of the condition.',
+      ],
+    },
+    {
+      heading: 'After Surgery:',
+      paragraphs: [
+        'Post-surgery recovery includes:',
+      ],
+      listItems: [
+        'Recovery may take a few weeks, depending on the type of surgery.',
+        'Patients are advised to take rest, follow a healthy diet, and avoid strenuous activities.',
+        'Follow-up appointments ensure proper healing and monitor reproductive health.',
+      ],
+    },
+    {
+      heading: 'Benefits and Risks of Open Surgery',
+      paragraphs: [
+        'Understanding the benefits and risks helps in making informed decisions:',
+      ],
+      sideImage: '/assets/img/Open Surgery2.jpg',
+    },
+    {
+      heading: 'Benefits:',
+      paragraphs: [
+        'Open surgery offers several benefits:',
+      ],
+      listItems: [
+        'Effective treatment for complex reproductive conditions.',
+        'Increases chances of successful pregnancy in IVF.',
+        'Can resolve long-standing fertility issues that were not treatable with other methods.',
+      ],
+    },
+    {
+      heading: 'Risks:',
+      paragraphs: [
+        'Like any surgical procedure, open surgery has some risks:',
+      ],
+      listItems: [
+        'Longer recovery time compared to minimally invasive procedures.',
+        'Risk of infection or excessive bleeding.',
+        'Possibility of scar tissue formation, which may impact future pregnancies.',
+      ],
+    },
+    {
+      heading: 'Why Choose Seeds of Innocens for Open Surgery?',
+      paragraphs: [
+        'Seeds of Innocens is a trusted name in fertility and pregnancy care, offering expert surgical interventions when needed. Our skilled team of specialists ensures:',
+      ],
+      listItems: [
+        'Advanced medical techniques for safe and effective treatment.',
+        'Personalized care to support your fertility journey.',
+        'High success rates in managing complex reproductive conditions.',
+      ],
+      paragraphs: [
+        'At Seeds of Innocens, we are committed to providing the best fertility care with advanced treatment options, including open surgery when necessary. If you are facing fertility challenges, consult our experts for the right guidance.',
+      ],
+    },
+  ],
+};
 
 const page = () => {
   return (
@@ -83,21 +157,24 @@ const page = () => {
         <PageHeading data={headingData} />
       </Section>
 
+      {/* Main Content Section */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="70"
-        bottomSpaceMd="120"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
       >
-        <ServiceSection4 data={serviceData} />
-      </Section>
-
-      <Section bottomSpaceLg="70" bottomSpaceMd="120">
-        <CounterSection2 data={counterData} />
+        <div className="container">
+          {/* Content Section - Centered and Full Width */}
+          <div className="row">
+            <div className="col-12">
+              <IVFContentSection data={openSurgeryContentData} benefitImages={serviceData.benefitImages} />
+            </div>
+          </div>
+        </div>
       </Section>
     </div>
   );
 };
 
 export default page;
-

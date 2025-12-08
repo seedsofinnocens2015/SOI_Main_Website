@@ -4,15 +4,18 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import indiaCentersData from '../../../india-centers-data.json';
+import centersData from '../india-centers-data.json';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
   try {
-    return indiaCentersData.map((center) => ({
-      state: center.stateSlug || '',
-      slug: center.slug || '',
-    })).filter((param) => param.state && param.slug);
+    // Only generate params for international centers
+    return centersData
+      .filter((center) => center.isInternational === true)
+      .map((center) => ({
+        slug: center.slug || '',
+      }))
+      .filter((param) => param.slug);
   } catch (error) {
     console.error('Error generating static params:', error);
     return [];
@@ -21,26 +24,25 @@ export async function generateStaticParams() {
 
 const page = async ({ params }) => {
   const resolvedParams = await params;
-  const { state, slug } = resolvedParams || {};
+  const { slug } = resolvedParams || {};
   
-  if (!state || !slug) {
+  if (!slug) {
     notFound();
   }
   
-  // Find center by slug and state
-  const center = indiaCentersData.find(
-    (c) => c.slug === slug && c.stateSlug === state
+  // Find center by slug - only international centers
+  const center = centersData.find(
+    (c) => c.slug === slug && c.isInternational === true
   );
 
   if (!center) {
     notFound();
   }
 
-  // Extract city name from center name (e.g., "Ghaziabad, Uttar Pradesh" -> "Ghaziabad")
+  // Extract city name from center name (e.g., "Lusaka, Zambia, Africa" -> "Lusaka")
   const cityName = center.name.split(',')[0].trim();
 
-  // Get doctors directly from india-centers-data.json (center.doctors array)
-  // Each doctor object contains: name, subtitle, image, experience, location, slug
+  // Get doctors directly from center.doctors array
   const centerDoctors = center.doctors || [];
 
   const headingData = {
@@ -83,7 +85,7 @@ const page = async ({ params }) => {
           `We understand that every couple's fertility journey is different. That is why we offer customised treatment plans at our modern and fully equipped IVF hospital in ${cityName}. Here's what makes us stand out:`,
         ],
         listItems: [
-          `Experienced IVF Specialists: Our IVF specialists in ${cityName} are some of the most experienced fertility experts in the country. With years of successful treatments and compassionate care, they help couples feel confident and supported throughout their journey.`,
+          `Experienced IVF Specialists: Our IVF specialists in ${cityName} are some of the most experienced fertility experts. With years of successful treatments and compassionate care, they help couples feel confident and supported throughout their journey.`,
           `Modern Infrastructure: Seeds of Innocens boasts a cutting-edge lab and fertility unit. From egg retrieval to embryo transfer, all processes are handled using the most advanced technology, making us a trusted IVF clinic in ${cityName}.`,
           `Full Range of Fertility Services: Our fertility centre in ${cityName} provides a wide variety of services under one roof.`,
         ],
@@ -308,3 +310,4 @@ const page = async ({ params }) => {
 };
 
 export default page;
+

@@ -554,7 +554,7 @@ const heroData = {
   };
 
   const whyChooseUsData = {
-    familyImage: '/assets/img/happy_family.jpg', // Please replace with actual family image
+    familyImage: '/assets/img/happy_family.png', // Please replace with actual family image
     whyChooseHeading: 'WHY CHOOSE US?',
     whyChooseText: 'Seeds of Innocens has always been the encouraged choice. Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora, Seeds of Innocens is the leading India’s best IVF centre. Seeds of Innocens has grown to over 35 centres across 8 states and has expanded overseas to Oman, Muscat, and Zambia. It is the only lab in North India that has collaborated with the Department of Reproductive Sciences, University of Gent, Belgium, for the exchange of best practices and technology in infertility.',
     callUsLink: '/contact',
@@ -563,7 +563,7 @@ const heroData = {
     selfCycleText: 'At Seeds of Innocens, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
     bookAppointmentLink: '/contact/book-appointment',
     bookAppointmentText: 'BOOK AN APPOINTMENT',
-    selfieImage: '/assets/img/self_cycle_selfie.jpg', // Please replace with actual selfie image
+    selfieImage: '/assets/img/self_cycle_selfie.png', // Please replace with actual selfie image
     // speechBubbleText: 'Self-cycle™ IVF means\nA baby with your genes,\ntraits and quirks.',
   };
 
