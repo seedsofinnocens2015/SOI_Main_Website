@@ -468,7 +468,7 @@ const Header = ({ isTopBar, variant }) => {
           <div className="container">
             <div className="cs_main_header_in cs_compact_gap">
                 <Link className="cs_site_branding" href={menu.logoLink}>
-                <Image src={menu.logoUrl} alt="img" width={350} height={110}   />
+                <Image src={menu.logoUrl} alt="img" width={350} height={110} loading="eager" />
                 </Link>
               <div className="cs_main_header_right ">
                 <div className="cs_nav cs_primary_color ">

@@ -115,7 +115,7 @@ const blogs = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [selectedLanguage, setSelectedLanguage] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState('womens-health');
@@ -171,7 +171,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/All_Page_Header.jpg"
+        backgroundImage="/assets/img/All_Page_Header2.jpg"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -188,10 +188,10 @@ const page = () => {
               <div className="mb-5" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '20px' }}>
                 <div style={{ flex: 1, minWidth: '300px' }}>
                   <h2 className="cs_ivf_content_heading" style={{ marginBottom: '20px' }}>
-                    Women's Health Blogs
+                    Women&apos;s Health Blogs
                   </h2>
                   <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8' }}>
-                    Comprehensive information about women's reproductive health, fertility conditions, wellness, and treatment options.
+                    Comprehensive information about women&apos;s reproductive health, fertility conditions, wellness, and treatment options.
                   </p>
                 </div>
                 <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', alignItems: 'flex-end' }}>
@@ -218,8 +218,8 @@ const page = () => {
                       <option value="fertility">Fertility</option>
                       <option value="ivf-process">IVF Process</option>
                       <option value="pregnancy">Pregnancy</option>
-                      <option value="mens-health">Men's Health</option>
-                      <option value="womens-health">Women's Health</option>
+                      <option value="mens-health">Men&apos;s Health</option>
+                      <option value="womens-health">Women&apos;s Health</option>
                       <option value="treatment-guides">Treatment Guides</option>
                       <option value="success-stories">Success Stories</option>
                       <option value="doctor-insights">Doctor Insights</option>
@@ -298,6 +298,7 @@ const page = () => {
                         width={400} 
                         height={250}
                         className="w-100"
+                        loading="eager"
                         style={{ 
                           objectFit: 'cover', 
                           transition: 'transform 0.5s ease',
@@ -517,4 +518,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

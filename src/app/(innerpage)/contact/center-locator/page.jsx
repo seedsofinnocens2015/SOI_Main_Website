@@ -72,7 +72,7 @@ const ivfContentData = {
   ],
 };
 
-const page = () => {
+const Page = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredIndiaCenters = indiaCenters.filter(center =>
@@ -91,7 +91,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/All_Page_Header.jpg"
+        backgroundImage="/assets/img/All_Page_Header2.jpg"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -427,5 +427,5 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 

@@ -15,7 +15,7 @@ const ivfContentData = {
     {
       heading: 'Request a Call Back',
       paragraphs: [
-        'Fill out the form below and our team will call you back at your preferred time. We\'ll answer all your questions and help you understand your fertility treatment options. Our expert team is dedicated to providing personalized guidance and support throughout your fertility journey.',
+        'Fill out the form below and our team will call you back at your preferred time. We&apos;ll answer all your questions and help you understand your fertility treatment options. Our expert team is dedicated to providing personalized guidance and support throughout your fertility journey.',
       ],
       // sideImage: '/assets/img/recent_post2.jpg',
     },
@@ -27,7 +27,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/All_Page_Header.jpg"
+        backgroundImage="/assets/img/All_Page_Header2.jpg"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -185,9 +185,9 @@ const page = () => {
                 </h3>
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Submit Form:</strong> Fill out the form above with your details</li>
-                  <li><strong>Confirmation:</strong> You'll receive a confirmation message within minutes</li>
+                  <li><strong>Confirmation:</strong> You&apos;ll receive a confirmation message within minutes</li>
                   <li><strong>Our Call:</strong> Our specialist will call you at your preferred time</li>
-                  <li><strong>Discussion:</strong> We'll answer all your questions and provide guidance</li>
+                  <li><strong>Discussion:</strong> We&apos;ll answer all your questions and provide guidance</li>
                 </ul>
               </div>
             </div>

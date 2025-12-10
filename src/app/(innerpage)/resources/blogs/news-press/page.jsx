@@ -115,7 +115,7 @@ const news = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [selectedLanguage, setSelectedLanguage] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState('news-press');
@@ -179,7 +179,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/All_Page_Header.jpg"
+        backgroundImage="/assets/img/All_Page_Header2.jpg"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -226,8 +226,8 @@ const page = () => {
                       <option value="fertility">Fertility</option>
                       <option value="ivf-process">IVF Process</option>
                       <option value="pregnancy">Pregnancy</option>
-                      <option value="mens-health">Men's Health</option>
-                      <option value="womens-health">Women's Health</option>
+                      <option value="mens-health">Men&apos;s Health</option>
+                      <option value="womens-health">Women&apos;s Health</option>
                       <option value="treatment-guides">Treatment Guides</option>
                       <option value="success-stories">Success Stories</option>
                       <option value="doctor-insights">Doctor Insights</option>
@@ -306,6 +306,7 @@ const page = () => {
                         width={400} 
                         height={250}
                         className="w-100"
+                        loading="eager"
                         style={{ 
                           objectFit: 'cover', 
                           transition: 'transform 0.5s ease',
@@ -552,4 +553,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

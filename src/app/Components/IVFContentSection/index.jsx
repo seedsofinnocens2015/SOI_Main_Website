@@ -47,6 +47,7 @@ const IVFContentSection = ({ data, benefitImages }) => {
                       alt="IVF ICSI" 
                       width={500}
                       height={300}
+                      loading="eager"
                       style={{ 
                         width: '100%', 
                         height: 'auto', 
@@ -63,7 +64,8 @@ const IVFContentSection = ({ data, benefitImages }) => {
                       src={benefitImages[1]} 
                       alt="IVF ICSI" 
                       width={500} 
-                      height={300} 
+                      height={300}
+                      loading="eager"
                       style={{ 
                         width: '100%', 
                         height: 'auto', 
@@ -170,6 +172,7 @@ const IVFContentSection = ({ data, benefitImages }) => {
                         alt={section.heading || "Image"} 
                         width={500}
                         height={400}
+                        loading="eager"
                         style={{ 
                           width: '100%', 
                           height: 'auto', 
@@ -261,6 +264,7 @@ const IVFContentSection = ({ data, benefitImages }) => {
                     alt={section.heading || "Image"} 
                     width={1227}
                     height={253}
+                    loading="eager"
                     style={{ 
                       width: '100%', 
                       height: 'auto',

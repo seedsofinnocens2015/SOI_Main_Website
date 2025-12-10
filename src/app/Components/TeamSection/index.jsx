@@ -47,12 +47,12 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
       <div className="container">
         {(data.subtitle || data.title) && (
           <>
-            <SectionHeading
-              SectionSubtitle={data.subtitle}
-              SectionTitle={data.title}
-              variant={"text-center"}
-            />
-            <div className="cs_height_50 cs_height_lg_50" />
+        <SectionHeading
+          SectionSubtitle={data.subtitle}
+          SectionTitle={data.title}
+          variant={"text-center"}
+        />
+        <div className="cs_height_50 cs_height_lg_50" />
           </>
         )}
 
@@ -70,7 +70,7 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
                   >
                     <div className="cs_team cs_style_1 cs_team_minimalistic">
                       <Link href={item.link} className="cs_team_thumbnail">
-                        <Image src={item.imageUrl} alt={item.name} width={280} height={300} />
+                        <Image src={item.imageUrl} alt={item.name} width={280} height={300} loading="eager" />
                       </Link>
                       <div className="cs_team_bio">
                         <h3 className="cs_team_title cs_extra_bold mb-0">

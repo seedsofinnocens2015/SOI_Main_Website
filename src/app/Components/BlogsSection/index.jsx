@@ -85,6 +85,7 @@ const BlogSection = ({ data }) => {
                                 alt={post.title} 
                                 width={100} 
                                 height={80}
+                                loading="eager"
                               />
                             </Link>
                           )}

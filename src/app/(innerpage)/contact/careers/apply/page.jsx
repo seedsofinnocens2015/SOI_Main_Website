@@ -77,7 +77,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/All_Page_Header.jpg"
+        backgroundImage="/assets/img/All_Page_Header2.jpg"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -311,7 +311,7 @@ const page = () => {
                 </h3>
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Application Review:</strong> Our HR team will review your application within 3-5 business days</li>
-                  <li><strong>Shortlisting:</strong> If shortlisted, you'll receive a call or email for the next steps</li>
+                  <li><strong>Shortlisting:</strong> If shortlisted, you&apos;ll receive a call or email for the next steps</li>
                   <li><strong>Interview:</strong> Selected candidates will be invited for an interview</li>
                   <li><strong>Decision:</strong> Final decision will be communicated within 2 weeks of interview</li>
                 </ul>

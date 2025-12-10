@@ -78,7 +78,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/All_Page_Header.jpg"
+        backgroundImage="/assets/img/All_Page_Header2.jpg"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -331,7 +331,7 @@ const page = () => {
                   General Application
                 </h3>
                 <p style={{ marginBottom: '25px', fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
-                  Don't see a position that matches your skills? Send us your resume and we'll keep you in mind for future opportunities.
+                  Don&apos;t see a position that matches your skills? Send us your resume and we&apos;ll keep you in mind for future opportunities.
                 </p>
                 <Link 
                   href="/contact/careers/general-application"

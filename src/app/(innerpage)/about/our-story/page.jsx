@@ -13,7 +13,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/All_Page_Header.jpg"
+        backgroundImage="/assets/img/All_Page_Header2.jpg"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -39,6 +39,7 @@ const page = () => {
                     alt="Our Journey" 
                     width={600} 
                     height={400}
+                    loading="eager"
                     style={{ 
                       width: '100%', 
                       height: '100%', 
@@ -75,7 +76,7 @@ const page = () => {
               </h2>
               <div className="cs_height_20" />
               <p className="cs_text_style_1" style={{ marginBottom: '5px', lineHeight: '1.8' }}>
-                In 2015, the second generation of the promoter family, Dr. Rajat Arora, and Dr. Gauri Agarwal, co-founded Seeds of Innocens, one of India's most recognised chains of IVF Clinics.
+                In 2015, the second generation of the promoter family, Dr. Rajat Arora, and Dr. Gauri Agarwal, co-founded Seeds of Innocens, one of India&apos;s most recognised chains of IVF Clinics.
               </p>
               <p className="cs_text_style_1" style={{ marginBottom: '5px', lineHeight: '1.8' }}>
                 Since then, SOI has grown to more than 35+ IVF centres across 8 states. In addition to the domestic expansion, SOI has also ventured overseas such as in Muscat, Oman, and Lusaka, Zambia.
@@ -149,6 +150,7 @@ const page = () => {
                         alt="Ghaziabad Centre Inauguration" 
                         width={400} 
                         height={250}
+                        loading="eager"
                         style={{ 
                           width: '100%', 
                           height: '100%', 
@@ -206,6 +208,7 @@ const page = () => {
                         alt="Lucknow Centre Inauguration" 
                         width={400} 
                         height={250}
+                        loading="eager"
                         style={{ 
                           width: '100%', 
                           height: '100%', 
@@ -263,6 +266,7 @@ const page = () => {
                         alt="Patna Centre Inauguration" 
                         width={400} 
                         height={250}
+                        loading="eager"
                         style={{ 
                           width: '100%', 
                           height: '100%', 
@@ -320,6 +324,7 @@ const page = () => {
                         alt="Genestrings Diagnostic Centre Inauguration" 
                         width={400} 
                         height={250}
+                        loading="eager"
                         style={{ 
                           width: '100%', 
                           height: '100%', 
@@ -377,6 +382,7 @@ const page = () => {
                         alt="Jagriti Enclave Centre Inauguration" 
                         width={400} 
                         height={250}
+                        loading="eager"
                         style={{ 
                           width: '100%', 
                           height: '100%', 
@@ -434,6 +440,7 @@ const page = () => {
                         alt="Genestrings Diagnostic Centre Inauguration" 
                         width={400} 
                         height={250}
+                        loading="eager"
                         style={{ 
                           width: '100%', 
                           height: '100%', 
@@ -493,6 +500,7 @@ const page = () => {
                         alt="Faridabad Centre Inauguration" 
                         width={400} 
                         height={250}
+                        loading="eager"
                         style={{ 
                           width: '100%', 
                           height: '100%', 
@@ -548,7 +556,8 @@ const page = () => {
                       <Image 
                         src="/assets/img/Picture8.png" 
                         alt="Faridabad Centre Inauguration" 
-                        width={400} 
+                        width={400}
+                        loading="eager" 
                         height={250}
                         style={{ 
                           width: '100%', 

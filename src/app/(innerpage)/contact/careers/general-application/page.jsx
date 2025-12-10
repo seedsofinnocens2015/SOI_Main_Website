@@ -26,7 +26,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/All_Page_Header.jpg"
+        backgroundImage="/assets/img/All_Page_Header2.jpg"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -273,7 +273,7 @@ const page = () => {
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Database Storage:</strong> Your application will be stored in our talent database</li>
                   <li><strong>Active Review:</strong> Our HR team reviews general applications regularly</li>
-                  <li><strong>Matching Opportunities:</strong> We'll contact you when a suitable position opens</li>
+                  <li><strong>Matching Opportunities:</strong> We&apos;ll contact you when a suitable position opens</li>
                   <li><strong>Future Consideration:</strong> Your profile will be considered for all relevant openings</li>
                 </ul>
               </div>

@@ -146,7 +146,7 @@ const Footer = () => {
           <div className="cs_footer_col">
             <div className="cs_footer_highlight_col">
               <div className="cs_footer_logo">
-              <Image src={data.logo} alt="img" width={305} height={63}   />
+              <Image src={data.logo} alt="img" width={305} height={63} loading="eager" />
               </div>
               <ul className="cs_footer_contact cs_mp_0">
                 <li>
@@ -240,7 +240,7 @@ const Footer = () => {
                   <li key={index}>
                     <div className="cs_recent_post">
                       <Link href={post.href} className="cs_recent_post_thumb">
-                      <Image src={post.image} alt="img" width={85} height={85}   />
+                      <Image src={post.image} alt="img" width={85} height={85} loading="eager" />
                       </Link>
                       <div className="cs_recent_post_right">
                         <p>{post.date}</p>
