@@ -1,11 +1,25 @@
-/* eslint-disable react/no-unescaped-entities */
+"use client";
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import IVFContentSection from '@/app/Components/IVFContentSection';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaPhoneAlt, FaEnvelope, FaClock, FaCheckCircle } from 'react-icons/fa';
 
 const headingData = {
   title: 'Call Back Form',
+};
+
+const ivfContentData = {
+  sections: [
+    {
+      heading: 'Request a Call Back',
+      paragraphs: [
+        'Fill out the form below and our team will call you back at your preferred time. We\'ll answer all your questions and help you understand your fertility treatment options. Our expert team is dedicated to providing personalized guidance and support throughout your fertility journey.',
+      ],
+      // sideImage: '/assets/img/recent_post2.jpg',
+    },
+  ],
 };
 
 const page = () => {
@@ -18,318 +32,238 @@ const page = () => {
         <PageHeading data={headingData} />
       </Section>
 
+      {/* Content Section */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="70"
-        bottomSpaceMd="120"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
-              <div className="cs_service_details text-center mb-5">
-                <h3 className="cs_service_heading">Request a Call Back</h3>
-                <p className="cs_service_subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
-                  Fill out the form below and our team will call you back at your preferred time. We'll answer all your questions and help you understand your fertility treatment options.
-                </p>
-              </div>
+            <div className="col-12">
+              <IVFContentSection data={ivfContentData} />
             </div>
           </div>
+        </div>
+      </Section>
 
-          {/* Main Image Placeholder */}
-          <div className="row mb-5">
-            <div className="col-lg-12">
-              <div className="cs_service_details_thumbnail">
-                <Image 
-                  src="/assets/img/recent_post_1.png" 
-                  alt="Call Back Form" 
-                  width={1200} 
-                  height={400}
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-              </div>
-            </div>
-          </div>
+      {/* Call Back Form Section */}
+      <Section
+        topSpaceLg="0"
+        topSpaceMd="0"
+        bottomSpaceLg="80"
+        bottomSpaceMd="120"
+      >
+        <div className="container">
 
           <div className="row cs_gap_y_40">
             <div className="col-lg-8">
-              <div className="cs_service_details">
-                <div style={{ 
-                  padding: '40px', 
-                  backgroundColor: '#f8f9fa', 
-                  borderRadius: '10px',
-                  marginBottom: '30px'
-                }}>
-                  <h4 className="cs_service_heading mb-4">Call Back Request Form</h4>
-                  
-                  <form>
-                    <div className="row">
-                      <div className="col-md-6 mb-4">
-                        <label style={{ 
-                          display: 'block', 
-                          marginBottom: '10px', 
-                          fontWeight: '600',
-                          fontSize: '16px'
-                        }}>
-                          Your Name <span style={{ color: 'red' }}>*</span>
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          placeholder="Enter your name"
-                          style={{
-                            width: '100%',
-                            padding: '12px 15px',
-                            border: '1px solid #ddd',
-                            borderRadius: '5px',
-                            fontSize: '16px'
-                          }}
-                        />
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <label style={{ 
-                          display: 'block', 
-                          marginBottom: '10px', 
-                          fontWeight: '600',
-                          fontSize: '16px'
-                        }}>
-                          Phone Number <span style={{ color: 'red' }}>*</span>
-                        </label>
-                        <input
-                          type="tel"
-                          required
-                          placeholder="Enter your phone number"
-                          style={{
-                            width: '100%',
-                            padding: '12px 15px',
-                            border: '1px solid #ddd',
-                            borderRadius: '5px',
-                            fontSize: '16px'
-                          }}
-                        />
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <label style={{ 
-                          display: 'block', 
-                          marginBottom: '10px', 
-                          fontWeight: '600',
-                          fontSize: '16px'
-                        }}>
-                          Email Address
-                        </label>
-                        <input
-                          type="email"
-                          placeholder="Enter your email (optional)"
-                          style={{
-                            width: '100%',
-                            padding: '12px 15px',
-                            border: '1px solid #ddd',
-                            borderRadius: '5px',
-                            fontSize: '16px'
-                          }}
-                        />
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <label style={{ 
-                          display: 'block', 
-                          marginBottom: '10px', 
-                          fontWeight: '600',
-                          fontSize: '16px'
-                        }}>
-                          Preferred Call Time <span style={{ color: 'red' }}>*</span>
-                        </label>
-                        <select
-                          required
-                          style={{
-                            width: '100%',
-                            padding: '12px 15px',
-                            border: '1px solid #ddd',
-                            borderRadius: '5px',
-                            fontSize: '16px'
-                          }}
-                        >
-                          <option value="">Select preferred time</option>
-                          <option value="morning">Morning (9 AM - 12 PM)</option>
-                          <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
-                          <option value="evening">Evening (4 PM - 7 PM)</option>
-                          <option value="anytime">Anytime</option>
-                        </select>
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <label style={{ 
-                          display: 'block', 
-                          marginBottom: '10px', 
-                          fontWeight: '600',
-                          fontSize: '16px'
-                        }}>
-                          Best Day to Call
-                        </label>
-                        <select
-                          style={{
-                            width: '100%',
-                            padding: '12px 15px',
-                            border: '1px solid #ddd',
-                            borderRadius: '5px',
-                            fontSize: '16px'
-                          }}
-                        >
-                          <option value="">Select day</option>
-                          <option value="monday">Monday</option>
-                          <option value="tuesday">Tuesday</option>
-                          <option value="wednesday">Wednesday</option>
-                          <option value="thursday">Thursday</option>
-                          <option value="friday">Friday</option>
-                          <option value="saturday">Saturday</option>
-                          <option value="anyday">Any Day</option>
-                        </select>
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <label style={{ 
-                          display: 'block', 
-                          marginBottom: '10px', 
-                          fontWeight: '600',
-                          fontSize: '16px'
-                        }}>
-                          Reason for Call
-                        </label>
-                        <select
-                          style={{
-                            width: '100%',
-                            padding: '12px 15px',
-                            border: '1px solid #ddd',
-                            borderRadius: '5px',
-                            fontSize: '16px'
-                          }}
-                        >
-                          <option value="">Select reason</option>
-                          <option value="consultation">General Consultation</option>
-                          <option value="treatment">Treatment Information</option>
-                          <option value="cost">Cost & Package Details</option>
-                          <option value="appointment">Book Appointment</option>
-                          <option value="followup">Follow-up Query</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-                      <div className="col-md-12 mb-4">
-                        <label style={{ 
-                          display: 'block', 
-                          marginBottom: '10px', 
-                          fontWeight: '600',
-                          fontSize: '16px'
-                        }}>
-                          Additional Message (Optional)
-                        </label>
-                        <textarea
-                          rows="4"
-                          placeholder="Tell us what you'd like to discuss or any specific questions you have"
-                          style={{
-                            width: '100%',
-                            padding: '12px 15px',
-                            border: '1px solid #ddd',
-                            borderRadius: '5px',
-                            fontSize: '16px',
-                            resize: 'vertical'
-                          }}
-                        />
-                      </div>
-                      <div className="col-md-12">
-                        <button
-                          type="submit"
-                          className="cs_btn cs_style_1 cs_color_1"
-                          style={{
-                            width: '100%',
-                            padding: '15px',
-                            fontSize: '18px',
-                            cursor: 'pointer'
-                          }}
-                        >
-                          <span>Request Call Back</span>
-                        </button>
-                      </div>
+              <div style={{ 
+                padding: '40px', 
+                backgroundColor: '#ffffff', 
+                borderRadius: '12px',
+                boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
+                border: '1px solid #e8e8e8'
+              }}>
+                <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
+                  Call Back Request Form
+                </h2>
+                
+                <form className="cs_contact_form">
+                  <div className="row cs_gap_y_30">
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Your Name <span style={{ color: '#E45352' }}>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        placeholder="Enter your name"
+                        className="cs_form_field"
+                      />
                     </div>
-                  </form>
-                </div>
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Phone Number <span style={{ color: '#E45352' }}>*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        required
+                        placeholder="Enter your phone number"
+                        className="cs_form_field"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email (optional)"
+                        className="cs_form_field"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Preferred Call Time <span style={{ color: '#E45352' }}>*</span>
+                      </label>
+                      <select name="callTime" required className="cs_form_field">
+                        <option value="">Select preferred time</option>
+                        <option value="morning">Morning (9 AM - 12 PM)</option>
+                        <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                        <option value="evening">Evening (4 PM - 7 PM)</option>
+                        <option value="anytime">Anytime</option>
+                      </select>
+                    </div>
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Best Day to Call
+                      </label>
+                      <select name="day" className="cs_form_field">
+                        <option value="">Select day</option>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                        <option value="anyday">Any Day</option>
+                      </select>
+                    </div>
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Reason for Call
+                      </label>
+                      <select name="reason" className="cs_form_field">
+                        <option value="">Select reason</option>
+                        <option value="consultation">General Consultation</option>
+                        <option value="treatment">Treatment Information</option>
+                        <option value="cost">Cost & Package Details</option>
+                        <option value="appointment">Book Appointment</option>
+                        <option value="followup">Follow-up Query</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div className="col-md-12">
+                      <label className="cs_form_label">
+                        Additional Message (Optional)
+                      </label>
+                      <textarea
+                        rows="4"
+                        name="message"
+                        placeholder="Tell us what you'd like to discuss or any specific questions you have"
+                        className="cs_form_field"
+                        style={{ resize: 'vertical' }}
+                      />
+                    </div>
+                    <div className="col-md-12">
+                      <button
+                        type="submit"
+                        className="cs_btn cs_style_1 cs_color_1"
+                        style={{ width: '100%' }}
+                      >
+                        <span>Request Call Back</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
 
-                <div style={{ 
-                  padding: '30px', 
-                  backgroundColor: '#e3f2fd', 
-                  borderRadius: '10px',
-                  borderLeft: '4px solid #2196f3'
-                }}>
-                  <h4 className="cs_service_heading mb-3" style={{ color: '#1565c0' }}>
-                    What Happens Next?
-                  </h4>
-                  <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
-                    <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0', color: '#2196f3', fontSize: '18px' }}>1.</span>
-                      <strong>Submit Form:</strong> Fill out the form above with your details
-                    </li>
-                    <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0', color: '#2196f3', fontSize: '18px' }}>2.</span>
-                      <strong>Confirmation:</strong> You'll receive a confirmation message within minutes
-                    </li>
-                    <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0', color: '#2196f3', fontSize: '18px' }}>3.</span>
-                      <strong>Our Call:</strong> Our specialist will call you at your preferred time
-                    </li>
-                    <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0', color: '#2196f3', fontSize: '18px' }}>4.</span>
-                      <strong>Discussion:</strong> We'll answer all your questions and provide guidance
-                    </li>
-                  </ul>
-                </div>
+              <div style={{ 
+                padding: '30px', 
+                backgroundColor: '#f8f9fa', 
+                borderRadius: '12px',
+                marginTop: '30px',
+                borderLeft: '4px solid #E45352'
+              }}>
+                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
+                  What Happens Next?
+                </h3>
+                <ul className="cs_list cs_list_style_1">
+                  <li><strong>Submit Form:</strong> Fill out the form above with your details</li>
+                  <li><strong>Confirmation:</strong> You'll receive a confirmation message within minutes</li>
+                  <li><strong>Our Call:</strong> Our specialist will call you at your preferred time</li>
+                  <li><strong>Discussion:</strong> We'll answer all your questions and provide guidance</li>
+                </ul>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="cs_sidebar">
-                <div className="cs_sidebar_widget cs_gray_bg mb-4">
-                  <h3 className="cs_widget_title">Response Time</h3>
-                  <p style={{ marginBottom: '15px' }}>
+                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{ 
+                  padding: '30px',
+                  borderRadius: '12px',
+                  boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'
+                }}>
+                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}>Response Time</h3>
+                  <p style={{ marginBottom: '15px', fontSize: '14px', lineHeight: '1.6' }}>
                     We typically respond to call back requests within:
                   </p>
-                  <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
-                    <li style={{ marginBottom: '10px', paddingLeft: '25px', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '18px' }}>•</span>
-                      <strong>Same Day:</strong> For requests submitted before 2 PM
+                  <ul className="cs_list cs_list_style_1">
+                    <li>
+                      <strong>Same Day:</strong><br />
+                      For requests submitted before 2 PM
                     </li>
-                    <li style={{ marginBottom: '10px', paddingLeft: '25px', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '18px' }}>•</span>
-                      <strong>Next Day:</strong> For requests submitted after 2 PM
+                    <li>
+                      <strong>Next Day:</strong><br />
+                      For requests submitted after 2 PM
                     </li>
-                    <li style={{ marginBottom: '10px', paddingLeft: '25px', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '18px' }}>•</span>
-                      <strong>Weekend:</strong> Monday morning for weekend requests
+                    <li>
+                      <strong>Weekend:</strong><br />
+                      Monday morning for weekend requests
                     </li>
                   </ul>
                 </div>
 
-                <div className="cs_sidebar_widget cs_gray_bg mb-4">
-                  <h3 className="cs_widget_title">Direct Contact</h3>
-                  <p style={{ marginBottom: '15px' }}>
+                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{ 
+                  padding: '30px',
+                  borderRadius: '12px',
+                  boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'
+                }}>
+                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}>Direct Contact</h3>
+                  <p style={{ marginBottom: '15px', fontSize: '14px', lineHeight: '1.6' }}>
                     Need immediate assistance? Contact us directly:
                   </p>
-                  <p style={{ marginBottom: '5px' }}>
-                    <strong>Phone:</strong><br />
-                    <a href="tel:+91-XXXXXXXXXX">+91-XXXXXXXXXX</a>
-                  </p>
-                  <p style={{ marginBottom: '5px' }}>
-                    <strong>Email:</strong><br />
-                    <a href="mailto:info@seedsofinnocens.com">info@seedsofinnocens.com</a>
-                  </p>
+                  <div style={{ marginBottom: '15px' }}>
+                    <p style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <FaPhoneAlt style={{ color: '#E45352', fontSize: '18px' }} />
+                      <a href="tel:+91-9810350512" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
+                        +91-9810350512
+                      </a>
+                    </p>
+                    <p style={{ marginBottom: '0', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <FaEnvelope style={{ color: '#E45352', fontSize: '18px' }} />
+                      <a href="mailto:info@seedsofinnocens.com" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
+                        info@seedsofinnocens.com
+                      </a>
+                    </p>
+                  </div>
                 </div>
 
-                <div className="cs_sidebar_widget cs_gray_bg">
-                  <h3 className="cs_widget_title">Other Options</h3>
-                  <ul className="cs_mp_0">
-                    <li style={{ marginBottom: '10px' }}>
-                      <Link href="/contact/book-appointment" style={{ color: 'var(--body-color)' }}>Book Appointment</Link>
+                <div className="cs_sidebar_widget cs_gray_bg" style={{ 
+                  padding: '30px',
+                  borderRadius: '12px',
+                  boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'
+                }}>
+                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}>Other Options</h3>
+                  <ul className="cs_list cs_list_style_1">
+                    <li>
+                      <Link href="/contact/book-appointment" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
+                        Book Appointment
+                      </Link>
                     </li>
-                    <li style={{ marginBottom: '10px' }}>
-                      <Link href="/contact/whatsapp" style={{ color: 'var(--body-color)' }}>WhatsApp Us</Link>
+                    <li>
+                      <Link href="/contact/whatsapp" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
+                        WhatsApp Us
+                      </Link>
                     </li>
-                    <li style={{ marginBottom: '10px' }}>
-                      <Link href="/contact/center-locator" style={{ color: 'var(--body-color)' }}>Find Center</Link>
+                    <li>
+                      <Link href="/contact/center-locator" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
+                        Find Center
+                      </Link>
                     </li>
                   </ul>
                 </div>

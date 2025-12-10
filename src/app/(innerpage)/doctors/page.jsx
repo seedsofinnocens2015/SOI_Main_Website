@@ -31,8 +31,6 @@ const page = () => {
   }));
 
   const appointmentSectionData = {
-    subtitle: 'OUR TEAM MEMBER',
-    title: 'Meet Our Specialist This<br> Doctor Meeting',
     doctorsData: doctorsDataFormatted,
   };
 
@@ -51,6 +49,35 @@ const page = () => {
         bottomSpaceLg="80"
         bottomSpaceMd="120"
       >
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12" style={{ textAlign: 'center', marginBottom: '40px' }}>
+              <h2 style={{ 
+                fontSize: '42px',
+                fontWeight: '700',
+                color: '#0A2A43',
+                marginBottom: '30px',
+                position: 'relative',
+                display: 'inline-block',
+                lineHeight: '1.2'
+              }}>
+                <span style={{ position: 'relative', display: 'inline-block' }}>
+                  Our
+                  <span style={{
+                    position: 'absolute',
+                    bottom: '-8px',
+                    left: '0',
+                    width: '60px',
+                    height: '4px',
+                    backgroundColor: '#E45352',
+                    borderRadius: '2px'
+                  }}></span>
+                </span>
+                {' '}Expert IVF Specialists
+              </h2>
+            </div>
+          </div>
+        </div>
         <AppointmentSection data={appointmentSectionData} />
       </Section>
     </div>

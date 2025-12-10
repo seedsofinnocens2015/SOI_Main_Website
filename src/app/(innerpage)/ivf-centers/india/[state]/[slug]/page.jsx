@@ -50,17 +50,17 @@ const page = async ({ params }) => {
   const serviceData = {
     serviceHeading: '',
     services: [],
-    mainImage: center.image || '/assets/img/recent_post_1.png',
+    mainImage: center.image || '/assets/img/recent_post2.jpg',
     serviceDetails: [],
     footerText: '',
-    additionalImages: center.image || '/assets/img/recent_post_1.png',
+    additionalImages: center.image || '/assets/img/recent_post2.jpg',
     iconBoxes: [],
     subtitle: '',
     readMoreUrl: '/appointments',
     readMoreText: 'Book Appointment',
     benefitImages: [
-      center.image || '/assets/img/recent_post_1.png',
-      center.image || '/assets/img/recent_post_1.png'
+      center.image || '/assets/img/recent_post2.jpg',
+      center.image || '/assets/img/recent_post2.jpg'
     ],
   };
 
@@ -75,7 +75,7 @@ const page = async ({ params }) => {
         paragraphs: [
           `Struggling with infertility can be emotionally and physically draining, but you are not alone. At Seeds of Innocens, our IVF Centre in ${cityName} is dedicated to turning your hopes of becoming a parent into reality. We offer advanced fertility treatments combined with personal care, giving couples the best chance of conceiving a healthy baby.`,
         ],
-        sideImage: center.image || '/assets/img/recent_post_1.png',
+        sideImage: center.image || '/assets/img/recent_post2.jpg',
       },
       {
         heading: `Why Choose Seeds of Innocens IVF Centre in ${cityName}?`,

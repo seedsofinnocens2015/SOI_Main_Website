@@ -12,7 +12,7 @@ const ProjectSection = ({ data }) => {
   
   const indiaLocations = useMemo(() => indiaTabs.flatMap(tab => tab.items) || [], [indiaTabs]);
   const internationalLocations = useMemo(() => internationalTab?.items || [], [internationalTab]);
-  
+
   // Get all locations with coordinates for map
   const allLocationsForMap = useMemo(() => {
     const all = [...indiaLocations, ...internationalLocations];
@@ -51,24 +51,24 @@ const ProjectSection = ({ data }) => {
                         </div>
                       </div>
                     ))}
-                  </div>
-                </div>
               </div>
-
+            </div>
+          </div>
+          
               {/* International Locations */}
               {internationalLocations.length > 0 && (
                 <div className="cs_location_section">
                   <h3 className="cs_location_section_title">International</h3>
                   <div className="cs_locations_scroll_container">
-                    <div className="cs_centres_grid">
+            <div className="cs_centres_grid">
                       {internationalLocations.map((item, index) => (
                         <div key={index} className="cs_centre_card">
-                          <div className="cs_centre_content">
+                  <div className="cs_centre_content">
                             <span className="cs_centre_icon">📍</span>
-                            <h3 className="cs_centre_title">{item.title}</h3>
-                          </div>
-                        </div>
-                      ))}
+                    <h3 className="cs_centre_title">{item.title}</h3>
+                  </div>
+                </div>
+              ))}
                     </div>
                   </div>
                 </div>

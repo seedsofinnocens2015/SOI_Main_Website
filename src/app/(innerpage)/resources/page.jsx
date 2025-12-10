@@ -107,7 +107,7 @@ const page = () => {
             <div className="col-lg-12">
               <div className="cs_service_details_thumbnail">
                 <Image 
-                  src="/assets/img/recent_post_1.png" 
+                  src="/assets/img/recent_post2.jpg" 
                   alt="Resources" 
                   width={1200} 
                   height={400}
@@ -191,8 +191,8 @@ const page = () => {
                   <div className="col-md-4 mb-3">
                     <div style={{ padding: '20px' }}>
                       <h5 style={{ marginBottom: '10px' }}>Call Us</h5>
-                      <a href="tel:+91-XXXXXXXXXX" style={{ color: 'var(--accent-color)', fontSize: '18px' }}>
-                        +91-XXXXXXXXXX
+                      <a href="tel:+91-9810350512" style={{ color: 'var(--accent-color)', fontSize: '18px' }}>
+                        +91-9810350512
                       </a>
                     </div>
                   </div>

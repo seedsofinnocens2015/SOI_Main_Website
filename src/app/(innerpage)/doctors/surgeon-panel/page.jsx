@@ -1,78 +1,51 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import TeamSection from '@/app/Components/TeamSection';
+import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
+import doctorsData from '../doctors-data.json';
 
 const page = () => {
   const headingData = {
     title: 'Surgeon Panel',
   };
 
-  const teamData = {
-    subtitle: 'OUR SURGEON PANEL',
-    title: 'Expert Surgical <br />Specialists',
-    sliderData: [
+  // Map doctors from JSON to TeamSection format (sliderData)
+  const sliderData = doctorsData.map((doctor) => ({
+    name: doctor.name,
+    profession: doctor.subtitle,
+    imageUrl: doctor.image,
+    link: `/doctors/${doctor.slug}`,
+    facebook: '/',
+    pinterest: '/',
+    twitter: '/',
+    instagram: '/',
+  }));
+
+  const ivfContentData = {
+    sections: [
       {
-        name: 'Dr. Rajesh Kumar',
-        profession: 'Reproductive Surgeon',
-        imageUrl: '/assets/img/team_3.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Anil Verma',
-        profession: 'Laparoscopic Surgeon',
-        imageUrl: '/assets/img/team_5.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Vikram Sharma',
-        profession: 'Hysteroscopic Surgeon',
-        imageUrl: '/assets/img/team_1.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Mohan Kapoor',
-        profession: 'Microsurgical Specialist',
-        imageUrl: '/assets/img/team_4.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Sanjay Mehta',
-        profession: 'Reproductive Surgeon',
-        imageUrl: '/assets/img/team_6.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Rakesh Malhotra',
-        profession: 'Laparoscopic Surgeon',
-        imageUrl: '/assets/img/team_7.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
+        heading: 'Expert Surgical Team',
+        paragraphs: [
+          'Our Surgeon Panel consists of highly skilled and experienced reproductive surgeons who specialize in minimally invasive procedures and advanced surgical techniques for fertility treatment.',
+        ],
+        listItems: [
+          'Laparoscopic surgery for fertility issues',
+          'Hysteroscopic procedures',
+          'Microsurgical techniques',
+          'Tubal reconstructive surgery',
+          'Myomectomy and polypectomy',
+          'Endometriosis treatment',
+          'Ovarian cystectomy',
+          'Adhesion removal procedures',
+        ],
+        sideImage: '/assets/img/recent_post2.jpg',
       },
     ],
+  };
+
+  const teamData = {
+    sliderData: sliderData,
   };
 
   return (
@@ -86,66 +59,57 @@ const page = () => {
 
       {/* Start Surgeon Panel Section */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
+      >
+        <div className="container">
+          {/* Content Section - Centered and Full Width */}
+          <div className="row">
+            <div className="col-12">
+              <IVFContentSection data={ivfContentData} />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Doctors Section */}
+      <Section
+        topSpaceLg="0"
+        topSpaceMd="0"
         bottomSpaceLg="80"
         bottomSpaceMd="120"
         className={'cs_team_section position-relative'}
       >
         <div className="container">
-          <div className="row cs_gap_y_40 align-items-center">
-            <div className="col-lg-6">
-              <div className="cs_about_thumb">
-                {/* Image placeholder */}
-                <div className="cs_about_thumb_1" style={{ 
-                  backgroundColor: '#f5f5f5', 
-                  minHeight: '400px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: '10px'
-                }}>
-                  <p style={{ color: '#999' }}>Image placeholder - Add surgeon panel image here</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <h2 className="cs_section_title cs_fs_42">Expert Surgical Team</h2>
-              <div className="cs_height_20" />
-              <p className="cs_text_style_1">
-                Our Surgeon Panel consists of highly skilled and experienced reproductive surgeons who specialize in minimally invasive procedures and advanced surgical techniques for fertility treatment.
-              </p>
-              <div className="cs_height_30" />
-              <h3 className="cs_section_title cs_fs_30">Surgical Expertise</h3>
-              <div className="cs_height_20" />
-              <ul className="cs_list cs_list_style_1">
-                <li>Laparoscopic surgery for fertility issues</li>
-                <li>Hysteroscopic procedures</li>
-                <li>Microsurgical techniques</li>
-                <li>Tubal reconstructive surgery</li>
-                <li>Myomectomy and polypectomy</li>
-                <li>Endometriosis treatment</li>
-                <li>Ovarian cystectomy</li>
-                <li>Adhesion removal procedures</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="cs_height_60" />
-          
           <div className="row">
-            <div className="col-lg-12">
-              <div className="cs_iconbox cs_style_1">
-                <h3 className="cs_section_title cs_fs_30">Advanced Surgical Techniques</h3>
-                <div className="cs_height_20" />
-                <p className="cs_text_style_1">
-                  Our surgeons utilize state-of-the-art equipment and minimally invasive techniques to ensure better outcomes, faster recovery, and minimal scarring. We are committed to providing the safest and most effective surgical solutions for fertility-related conditions.
-                </p>
-              </div>
+            <div className="col-lg-12" style={{ textAlign: 'center', marginBottom: '40px' }}>
+              <h2 style={{ 
+                fontSize: '42px',
+                fontWeight: '700',
+                color: '#0A2A43',
+                marginBottom: '30px',
+                position: 'relative',
+                display: 'inline-block',
+                lineHeight: '1.2'
+              }}>
+                <span style={{ position: 'relative', display: 'inline-block' }}>
+                  Our
+                  <span style={{
+                    position: 'absolute',
+                    bottom: '-8px',
+                    left: '0',
+                    width: '60px',
+                    height: '4px',
+                    backgroundColor: '#E45352',
+                    borderRadius: '2px'
+                  }}></span>
+                </span>
+                {' '}Surgeon Panel
+              </h2>
             </div>
           </div>
-          
-          <div className="cs_height_40" />
         </div>
         <TeamSection
           hr={true}

@@ -267,7 +267,7 @@ const CounterSection = ({ data }) => {
   }, [counters.length, hasAnimated, animationCompleted, animateCounters]);
 
   if (!data || data.length === 0) return null;
-
+  
   // Ensure we always show the correct value
   const displayCounters = counters.length > 0 
     ? counters.map(counter => ({
@@ -313,12 +313,12 @@ const CounterSection = ({ data }) => {
           }
           
           return (
-            <div key={index} className="cs_counter_item">
-              <div className="cs_counter_content">
+          <div key={index} className="cs_counter_item">
+            <div className="cs_counter_content">
                 <div className="cs_counter_number">
                   {formatNumber(valueToDisplay, counter.originalFormat || counter.number)}
                 </div>
-                <div className="cs_counter_text">{counter.title}</div>
+              <div className="cs_counter_text">{counter.title}</div>
               </div>
               {index < displayCounters.length - 1 && <span className="cs_counter_separator">|</span>}
             </div>

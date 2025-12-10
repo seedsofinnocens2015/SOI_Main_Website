@@ -1,12 +1,68 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
 
-const page = () => {
-  const headingData = {
-    title: 'Vision, Mission & Values',
-  };
+const headingData = {
+  title: 'Vision, Mission & Values',
+};
 
+const ivfContentData = {
+  sections: [
+    {
+      heading: 'Our Mission',
+      paragraphs: [
+        'Seeds of Innocence Infertility & Maternity Clinic Ghaziabad, Uttar Pradesh is committed to provide quality, free and accessible, preventive, curative, promotive and comprehensive IVF services to the community and assure the best outcome through continual quality improvement. The patient is treated with respect and dignity in a safe environment without discrimination with respect to caste, religion, gender and economic background.',
+      ],
+      sideImage: '/assets/img/recent_post2.jpg',
+    },
+    {
+      heading: 'Our Vision',
+      paragraphs: [
+        'Seeds of Innocence Infertility & Maternity Clinic to be recognized as one of the best IVF and Fertility institutions in the country.',
+        'To achieve the vision Seeds of Innocence Infertility & Maternity Clinic must strive to:',
+      ],
+      listItems: [
+        'Provide health care with love and affection that meets patients\' and community expectation',
+        'Ensure a healthy environment that nurture motivation and commitment among the staffs',
+        'Embark on a quality driven services delivery',
+      ],
+    },
+    {
+      heading: 'Our Core Values',
+      paragraphs: [
+        'At Seeds of Innocence, our values form the foundation of everything we do. These principles guide our daily operations, patient care, and organizational culture, ensuring we deliver the highest quality of service while maintaining ethical standards and compassionate care.',
+      ],
+      listItems: [
+        'Excellence: We strive for excellence in every aspect of our work, from clinical care to patient service, continuously improving our practices and outcomes through evidence-based medicine and cutting-edge technology.',
+        'Compassion: We understand the emotional journey of fertility treatment and provide compassionate, empathetic care to support our patients every step of the way, treating each individual with respect and dignity.',
+        'Integrity: We maintain the highest ethical standards, transparency, and honesty in all our interactions with patients, partners, and the community, ensuring trust and accountability in everything we do.',
+        'Innovation: We embrace cutting-edge technology and innovative treatment approaches to provide the best possible outcomes for our patients, staying at the forefront of reproductive medicine.',
+        'Accessibility: We are committed to making quality fertility care accessible to all, regardless of caste, religion, gender, or economic background, ensuring equitable healthcare delivery.',
+        'Patient-Centered Care: Every decision we make is centered around the needs and well-being of our patients, ensuring personalized treatment plans and comprehensive support throughout their journey.',
+        'Quality Improvement: We are dedicated to continual quality improvement, regularly reviewing and enhancing our services, protocols, and patient outcomes to maintain the highest standards.',
+        'Team Commitment: We foster a healthy environment that nurtures motivation and commitment among our staff, recognizing that a dedicated team is essential to delivering exceptional patient care.',
+      ],
+    },
+    {
+      heading: 'Our Commitment to You',
+      paragraphs: [
+        'Seeds of Innocence is more than just a fertility clinic; we are your partners in the journey to parenthood. Our mission, vision, and values are not just words on paper—they are the principles that drive every interaction, every treatment decision, and every moment of care we provide.',
+        'We are committed to:',
+      ],
+      listItems: [
+        'Providing comprehensive, quality healthcare services that are accessible to all',
+        'Maintaining the highest standards of medical excellence and patient safety',
+        'Treating every patient with respect, dignity, and without discrimination',
+        'Continuously improving our services through quality-driven initiatives',
+        'Creating a supportive and nurturing environment for both patients and staff',
+        'Delivering personalized care that meets and exceeds patient expectations',
+      ],
+    },
+  ],
+};
+
+const page = () => {
   return (
     <div>
       <Section
@@ -16,127 +72,22 @@ const page = () => {
         <PageHeading data={headingData} />
       </Section>
 
-      {/* Start Vision Mission Values Section */}
+      {/* Main Content Section */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
       >
         <div className="container">
-          <div className="row cs_gap_y_50">
-            {/* Vision */}
-            <div className="col-lg-4">
-              <div className="cs_iconbox cs_style_1 text-center">
-                <div className="cs_iconbox_icon cs_center" style={{
-                  width: '80px',
-                  height: '80px',
-                  backgroundColor: '#f5f5f5',
-                  borderRadius: '50%',
-                  margin: '0 auto 20px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  <p style={{ color: '#999', fontSize: '12px' }}>Vision Icon</p>
-                </div>
-                <h3 className="cs_iconbox_title">Our Vision</h3>
-                <p className="cs_iconbox_subtitle">
-                  To be the leading fertility centre globally, recognized for excellence in reproductive medicine, innovative treatments, and compassionate care. We envision a world where every couple can realize their dream of parenthood with the highest standards of medical care and emotional support.
-                </p>
-              </div>
-            </div>
-
-            {/* Mission */}
-            <div className="col-lg-4">
-              <div className="cs_iconbox cs_style_1 text-center">
-                <div className="cs_iconbox_icon cs_center" style={{
-                  width: '80px',
-                  height: '80px',
-                  backgroundColor: '#f5f5f5',
-                  borderRadius: '50%',
-                  margin: '0 auto 20px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  <p style={{ color: '#999', fontSize: '12px' }}>Mission Icon</p>
-                </div>
-                <h3 className="cs_iconbox_title">Our Mission</h3>
-                <p className="cs_iconbox_subtitle">
-                  To provide world-class fertility treatments with personalized care, using advanced technology and evidence-based medicine. We are committed to maintaining the highest success rates, continuous innovation, and making fertility treatments accessible to all who need them.
-                </p>
-              </div>
-            </div>
-
-            {/* Values */}
-            <div className="col-lg-4">
-              <div className="cs_iconbox cs_style_1 text-center">
-                <div className="cs_iconbox_icon cs_center" style={{
-                  width: '80px',
-                  height: '80px',
-                  backgroundColor: '#f5f5f5',
-                  borderRadius: '50%',
-                  margin: '0 auto 20px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  <p style={{ color: '#999', fontSize: '12px' }}>Values Icon</p>
-                </div>
-                <h3 className="cs_iconbox_title">Our Values</h3>
-                <p className="cs_iconbox_subtitle">
-                  Excellence, Compassion, Integrity, Innovation, and Patient-Centered Care. These core values guide everything we do, from medical practice to patient interactions, ensuring that we provide the best possible care while maintaining the highest ethical standards.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="cs_height_60" />
-
+          {/* Content Section - Centered and Full Width */}
           <div className="row">
-            <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36 text-center">Our Core Values in Detail</h3>
-              <div className="cs_height_40" />
-              <div className="row cs_gap_y_30">
-                <div className="col-md-6">
-                  <div className="cs_list_item">
-                    <h4 className="cs_fs_24 cs_medium">Excellence</h4>
-                    <p className="cs_text_style_1">
-                      We strive for excellence in every aspect of our work, from clinical care to patient service, continuously improving our practices and outcomes.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="cs_list_item">
-                    <h4 className="cs_fs_24 cs_medium">Compassion</h4>
-                    <p className="cs_text_style_1">
-                      We understand the emotional journey of fertility treatment and provide compassionate, empathetic care to support our patients every step of the way.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="cs_list_item">
-                    <h4 className="cs_fs_24 cs_medium">Integrity</h4>
-                    <p className="cs_text_style_1">
-                      We maintain the highest ethical standards, transparency, and honesty in all our interactions with patients, partners, and the community.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="cs_list_item">
-                    <h4 className="cs_fs_24 cs_medium">Innovation</h4>
-                    <p className="cs_text_style_1">
-                      We embrace cutting-edge technology and innovative treatment approaches to provide the best possible outcomes for our patients.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="col-12">
+              <IVFContentSection data={ivfContentData} />
             </div>
           </div>
         </div>
       </Section>
-      {/* End Vision Mission Values Section */}
     </div>
   );
 };

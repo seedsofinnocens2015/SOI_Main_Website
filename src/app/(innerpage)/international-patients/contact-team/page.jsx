@@ -1,48 +1,120 @@
-/* eslint-disable react/no-unescaped-entities */
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
-import Image from 'next/image';
-import Link from 'next/link';
+import IVFContentSection from '@/app/Components/IVFContentSection';
+import React from 'react';
 
 const headingData = {
   title: 'Contact Team',
 };
 
-const teamMembers = [
-  {
-    name: 'International Patient Coordinator',
-    role: 'Primary Contact',
-    email: 'international@seedsofinnocens.com',
-    phone: '+91-XXXXXXXXXX',
-    responsibilities: [
-      'Initial consultation coordination',
-      'Treatment plan discussions',
-      'General inquiries',
-    ],
-  },
-  {
-    name: 'Travel Support Team',
-    role: 'Travel Assistance',
-    email: 'travel@seedsofinnocens.com',
-    phone: '+91-XXXXXXXXXX',
-    responsibilities: [
-      'Visa assistance',
-      'Accommodation arrangements',
-      'Transportation coordination',
-    ],
-  },
-  {
-    name: 'Medical Concierge',
-    role: 'Medical Support',
-    email: 'concierge@seedsofinnocens.com',
-    phone: '+91-XXXXXXXXXX',
-    responsibilities: [
-      'Appointment scheduling',
-      'Medical documentation',
-      'Treatment coordination',
-    ],
-  },
-];
+const serviceData = {
+  benefitImages: [
+    '/assets/img/recent_post2.jpg',
+    '/assets/img/recent_post2.jpg'
+  ],
+};
+
+const contactContentData = {
+  sections: [
+    {
+      heading: 'International Patient Support Team',
+      paragraphs: [
+        'Our dedicated International Patient Support Team is here to assist you at every step of your journey. Whether you need information about treatments, travel arrangements, or have any questions, we are just a call or email away.',
+        'We understand that seeking fertility treatment in a different country requires trust and confidence. Our team is committed to providing you with all the information and support you need to make informed decisions about your fertility journey.',
+      ],
+      sideImage: '/assets/img/recent_post2.jpg',
+    },
+    {
+      heading: 'International Patient Coordinator',
+      paragraphs: [
+        'Your primary contact for initial consultation coordination, treatment plan discussions, and general inquiries:',
+      ],
+      listItems: [
+        'Initial consultation coordination',
+        'Treatment plan discussions and explanations',
+        'General inquiries and information',
+        'Medical information and guidance',
+        'Appointment scheduling assistance',
+        'Pre-treatment preparation guidance',
+      ],
+    },
+    {
+      heading: 'Travel Support Team',
+      paragraphs: [
+        'Dedicated team for all travel-related assistance:',
+      ],
+      listItems: [
+        'Visa application assistance and guidance',
+        'Accommodation arrangements and recommendations',
+        'Transportation coordination (airport transfers, local travel)',
+        'Travel itinerary planning',
+        'Pre-travel checklist and preparation',
+        '24/7 travel support during your stay',
+      ],
+    },
+    {
+      heading: 'Medical Concierge',
+      paragraphs: [
+        'Specialized support for medical and treatment-related needs:',
+      ],
+      listItems: [
+        'Appointment scheduling with specialists',
+        'Medical documentation assistance',
+        'Treatment coordination and follow-up',
+        'Medication management guidance',
+        'Test results and report coordination',
+        'Post-treatment care instructions',
+      ],
+    },
+    {
+      heading: 'Quick Contact Information',
+      paragraphs: [
+        'Multiple ways to reach our International Patient Support Team:',
+      ],
+      listItems: [
+        'Email: international@seedsofinnocens.com - Available 24/7 for all inquiries',
+        'Phone: +91-9810350512 - Direct line to our support team',
+        'WhatsApp: Available for instant messaging and quick queries',
+        'Online Form: Submit your inquiry through our website contact form',
+        'Video Consultation: Schedule a virtual meeting with our team',
+      ],
+    },
+    {
+      heading: 'How to Reach Us',
+      paragraphs: [
+        'Choose the communication method that works best for you:',
+      ],
+      listItems: [
+        'For urgent queries: Call our 24/7 helpline',
+        'For detailed information: Email us with your questions',
+        'For quick questions: Use WhatsApp for instant responses',
+        'For consultations: Schedule a video call with our team',
+        'For travel arrangements: Contact our Travel Support Team directly',
+        'For medical queries: Reach out to our Medical Concierge',
+      ],
+    },
+    {
+      heading: 'What to Expect When You Contact Us',
+      paragraphs: [
+        'When you reach out to our International Patient Support Team:',
+      ],
+      listItems: [
+        'Prompt response to your inquiry (within 24 hours for emails)',
+        'Personalized attention to your specific needs',
+        'Comprehensive information about treatments and services',
+        'Guidance on next steps in your fertility journey',
+        'Clear and transparent communication',
+        'Respectful and compassionate service',
+      ],
+    },
+    {
+      heading: 'Get in Touch',
+      paragraphs: [
+        'Ready to begin your fertility journey with Seeds of Innocens? Contact our International Patient Support Team today. We are here to answer all your questions, provide detailed information, and guide you through every step of the process. Your dream of parenthood starts with a simple conversation - reach out to us now!',
+      ],
+    },
+  ],
+};
 
 const page = () => {
   return (
@@ -54,341 +126,18 @@ const page = () => {
         <PageHeading data={headingData} />
       </Section>
 
+      {/* Main Content Section */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="70"
-        bottomSpaceMd="120"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
       >
         <div className="container">
+          {/* Content Section - Centered and Full Width */}
           <div className="row">
-            <div className="col-lg-12">
-              <div className="cs_service_details text-center mb-5">
-                <h3 className="cs_service_heading">International Patient Support Team</h3>
-                <p className="cs_service_subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
-                  Our dedicated International Patient Support Team is here to assist you at every step of your journey. Whether you need information about treatments, travel arrangements, or have any questions, we're just a call or email away.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Image Placeholder */}
-          <div className="row mb-5">
-            <div className="col-lg-12">
-              <div className="cs_service_details_thumbnail">
-                <Image 
-                  src="/assets/img/recent_post_1.png" 
-                  alt="Contact Team" 
-                  width={1200} 
-                  height={400}
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Team Members */}
-          <div className="row cs_gap_y_40 mb-5">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
-                <div style={{ 
-                  padding: '30px', 
-                  backgroundColor: '#f8f9fa', 
-                  borderRadius: '10px',
-                  height: '100%',
-                  border: '1px solid #e0e0e0',
-                  textAlign: 'center'
-                }}>
-                  <div style={{
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    backgroundColor: 'var(--accent-color)',
-                    color: 'white',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '32px',
-                    margin: '0 auto 20px',
-                    fontWeight: 'bold'
-                  }}>
-                    {member.name.charAt(0)}
-                  </div>
-                  <h4 className="cs_service_heading mb-2" style={{ fontSize: '20px' }}>
-                    {member.name}
-                  </h4>
-                  <p style={{ 
-                    fontSize: '14px', 
-                    color: 'var(--accent-color)', 
-                    fontWeight: '600',
-                    marginBottom: '20px'
-                  }}>
-                    {member.role}
-                  </p>
-                  <div style={{ marginBottom: '20px' }}>
-                    <p style={{ marginBottom: '10px', fontSize: '14px' }}>
-                      <strong>Email:</strong><br />
-                      <a href={`mailto:${member.email}`} style={{ color: 'var(--accent-color)' }}>
-                        {member.email}
-                      </a>
-                    </p>
-                    <p style={{ marginBottom: '10px', fontSize: '14px' }}>
-                      <strong>Phone:</strong><br />
-                      <a href={`tel:${member.phone}`} style={{ color: 'var(--accent-color)' }}>
-                        {member.phone}
-                      </a>
-                    </p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: '14px', fontWeight: '600', marginBottom: '10px' }}>
-                      Responsibilities:
-                    </p>
-                    <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0', textAlign: 'left' }}>
-                      {member.responsibilities.map((resp, respIndex) => (
-                        <li key={respIndex} style={{ 
-                          marginBottom: '8px', 
-                          paddingLeft: '20px', 
-                          position: 'relative',
-                          fontSize: '13px'
-                        }}>
-                          <span style={{ 
-                            position: 'absolute', 
-                            left: '0', 
-                            color: 'var(--accent-color)', 
-                            fontSize: '16px' 
-                          }}>•</span>
-                          {resp}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Contact Form */}
-          <div className="row mb-5">
-            <div className="col-lg-8 mx-auto">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#f8f9fa', 
-                borderRadius: '10px'
-              }}>
-                <h4 className="cs_service_heading mb-4 text-center">Get in Touch</h4>
-                <form>
-                  <div className="row">
-                    <div className="col-md-6 mb-4">
-                      <label style={{ 
-                        display: 'block', 
-                        marginBottom: '10px', 
-                        fontWeight: '600',
-                        fontSize: '16px'
-                      }}>
-                        Your Name <span style={{ color: 'red' }}>*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Enter your name"
-                        style={{
-                          width: '100%',
-                          padding: '12px 15px',
-                          border: '1px solid #ddd',
-                          borderRadius: '5px',
-                          fontSize: '16px'
-                        }}
-                      />
-                    </div>
-                    <div className="col-md-6 mb-4">
-                      <label style={{ 
-                        display: 'block', 
-                        marginBottom: '10px', 
-                        fontWeight: '600',
-                        fontSize: '16px'
-                      }}>
-                        Country <span style={{ color: 'red' }}>*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Enter your country"
-                        style={{
-                          width: '100%',
-                          padding: '12px 15px',
-                          border: '1px solid #ddd',
-                          borderRadius: '5px',
-                          fontSize: '16px'
-                        }}
-                      />
-                    </div>
-                    <div className="col-md-6 mb-4">
-                      <label style={{ 
-                        display: 'block', 
-                        marginBottom: '10px', 
-                        fontWeight: '600',
-                        fontSize: '16px'
-                      }}>
-                        Email Address <span style={{ color: 'red' }}>*</span>
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        placeholder="Enter your email"
-                        style={{
-                          width: '100%',
-                          padding: '12px 15px',
-                          border: '1px solid #ddd',
-                          borderRadius: '5px',
-                          fontSize: '16px'
-                        }}
-                      />
-                    </div>
-                    <div className="col-md-6 mb-4">
-                      <label style={{ 
-                        display: 'block', 
-                        marginBottom: '10px', 
-                        fontWeight: '600',
-                        fontSize: '16px'
-                      }}>
-                        Phone Number <span style={{ color: 'red' }}>*</span>
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        placeholder="Enter your phone with country code"
-                        style={{
-                          width: '100%',
-                          padding: '12px 15px',
-                          border: '1px solid #ddd',
-                          borderRadius: '5px',
-                          fontSize: '16px'
-                        }}
-                      />
-                    </div>
-                    <div className="col-md-12 mb-4">
-                      <label style={{ 
-                        display: 'block', 
-                        marginBottom: '10px', 
-                        fontWeight: '600',
-                        fontSize: '16px'
-                      }}>
-                        Subject <span style={{ color: 'red' }}>*</span>
-                      </label>
-                      <select
-                        required
-                        style={{
-                          width: '100%',
-                          padding: '12px 15px',
-                          border: '1px solid #ddd',
-                          borderRadius: '5px',
-                          fontSize: '16px'
-                        }}
-                      >
-                        <option value="">Select subject</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="treatment">Treatment Information</option>
-                        <option value="pricing">Pricing & Packages</option>
-                        <option value="travel">Travel Support</option>
-                        <option value="appointment">Appointment Booking</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div className="col-md-12 mb-4">
-                      <label style={{ 
-                        display: 'block', 
-                        marginBottom: '10px', 
-                        fontWeight: '600',
-                        fontSize: '16px'
-                      }}>
-                        Message <span style={{ color: 'red' }}>*</span>
-                      </label>
-                      <textarea
-                        rows="5"
-                        required
-                        placeholder="Tell us how we can help you..."
-                        style={{
-                          width: '100%',
-                          padding: '12px 15px',
-                          border: '1px solid #ddd',
-                          borderRadius: '5px',
-                          fontSize: '16px',
-                          resize: 'vertical'
-                        }}
-                      />
-                    </div>
-                    <div className="col-md-12">
-                      <button
-                        type="submit"
-                        className="cs_btn cs_style_1 cs_color_1"
-                        style={{
-                          width: '100%',
-                          padding: '15px',
-                          fontSize: '18px',
-                          cursor: 'pointer'
-                        }}
-                      >
-                        <span>Send Message</span>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          {/* Quick Contact Info */}
-          <div className="row">
-            <div className="col-lg-12">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#e3f2fd', 
-                borderRadius: '10px',
-                borderLeft: '4px solid #2196f3'
-              }}>
-                <h4 className="cs_service_heading mb-4" style={{ color: '#1565c0', textAlign: 'center' }}>
-                  Quick Contact Information
-                </h4>
-                <div className="row">
-                  <div className="col-md-4 mb-4">
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '40px', marginBottom: '15px' }}>📧</div>
-                      <h5 style={{ marginBottom: '10px' }}>Email</h5>
-                      <p style={{ margin: 0 }}>
-                        <a href="mailto:international@seedsofinnocens.com" style={{ color: 'var(--accent-color)' }}>
-                          international@seedsofinnocens.com
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-4 mb-4">
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '40px', marginBottom: '15px' }}>📞</div>
-                      <h5 style={{ marginBottom: '10px' }}>Phone</h5>
-                      <p style={{ margin: 0 }}>
-                        <a href="tel:+91-XXXXXXXXXX" style={{ color: 'var(--accent-color)' }}>
-                          +91-XXXXXXXXXX
-                        </a>
-                      </p>
-                      <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>
-                        Available 24/7 for international patients
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-4 mb-4">
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '40px', marginBottom: '15px' }}>💬</div>
-                      <h5 style={{ marginBottom: '10px' }}>WhatsApp</h5>
-                      <p style={{ margin: 0 }}>
-                        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-color)' }}>
-                          Chat with us on WhatsApp
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="col-12">
+              <IVFContentSection data={contactContentData} benefitImages={serviceData.benefitImages} />
             </div>
           </div>
         </div>
@@ -398,4 +147,3 @@ const page = () => {
 };
 
 export default page;
-

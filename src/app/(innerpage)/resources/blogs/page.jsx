@@ -11,55 +11,55 @@ const blogCategories = [
   {
     title: 'Fertility',
     description: 'Comprehensive articles about fertility, conception, and reproductive health.',
-    image: '/assets/img/recent_post_1.png',
+    image: '/assets/img/recent_post2.jpg',
     link: '/resources/blogs/fertility',
   },
   {
     title: 'IVF Process',
     description: 'Detailed guides and information about the IVF treatment process and procedures.',
-    image: '/assets/img/recent_post_1.png',
+    image: '/assets/img/recent_post2.jpg',
     link: '/resources/blogs/ivf-process',
   },
   {
     title: 'Pregnancy',
     description: 'Essential information about pregnancy, prenatal care, and what to expect.',
-    image: '/assets/img/recent_post_1.png',
+    image: '/assets/img/recent_post2.jpg',
     link: '/resources/blogs/pregnancy',
   },
   {
     title: 'Men\'s Health',
     description: 'Articles focusing on male fertility, reproductive health, and wellness.',
-    image: '/assets/img/recent_post_1.png',
+    image: '/assets/img/recent_post2.jpg',
     link: '/resources/blogs/mens-health',
   },
   {
     title: 'Women\'s Health',
     description: 'Comprehensive information about women\'s reproductive health and wellness.',
-    image: '/assets/img/recent_post_1.png',
+    image: '/assets/img/recent_post2.jpg',
     link: '/resources/blogs/womens-health',
   },
   {
     title: 'Treatment Guides',
     description: 'Step-by-step guides and detailed information about various fertility treatments.',
-    image: '/assets/img/recent_post_1.png',
+    image: '/assets/img/recent_post2.jpg',
     link: '/resources/blogs/treatment-guides',
   },
   {
     title: 'Success Stories',
     description: 'Inspiring stories from couples who achieved their dream of parenthood.',
-    image: '/assets/img/recent_post_1.png',
+    image: '/assets/img/recent_post2.jpg',
     link: '/resources/blogs/success-stories',
   },
   {
     title: 'Doctor Insights',
     description: 'Expert insights and advice from our experienced fertility specialists.',
-    image: '/assets/img/recent_post_1.png',
+    image: '/assets/img/recent_post2.jpg',
     link: '/resources/blogs/doctor-insights',
   },
   {
     title: 'News & Press',
     description: 'Latest news, updates, and press releases from Seeds of Innocens.',
-    image: '/assets/img/recent_post_1.png',
+    image: '/assets/img/recent_post2.jpg',
     link: '/resources/blogs/news-press',
   },
 ];
@@ -97,7 +97,7 @@ const page = () => {
             <div className="col-lg-12">
               <div className="cs_service_details_thumbnail">
                 <Image 
-                  src="/assets/img/recent_post_1.png" 
+                  src="/assets/img/recent_post2.jpg" 
                   alt="Blogs" 
                   width={1200} 
                   height={400}

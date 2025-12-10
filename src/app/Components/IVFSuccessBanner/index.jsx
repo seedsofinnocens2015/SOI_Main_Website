@@ -12,7 +12,7 @@ const IVFSuccessBanner = () => {
             <h3 className="cs_ivf_success_title">Calculate Your IVF Success Rate</h3>
           </div>
           <div className="cs_ivf_success_banner_right">
-            <Link href="/ivf-success-calculator" className="cs_btn cs_style_1 cs_color_1">
+            <Link href="/resources/fertility-calculator/" className="cs_btn cs_style_1 cs_color_1">
               <span>Calculate Now</span>
               <i>
                 <FaAnglesRight />

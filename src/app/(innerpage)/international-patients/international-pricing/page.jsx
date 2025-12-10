@@ -1,65 +1,124 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
-import Image from 'next/image';
-import Link from 'next/link';
+import IVFContentSection from '@/app/Components/IVFContentSection';
+import React from 'react';
 
 const headingData = {
   title: 'International Pricing',
 };
 
-const packages = [
-  {
-    name: 'Basic IVF Package',
-    price: 'USD $2,500 - $3,500',
-    originalPrice: 'USD $4,000',
-    savings: 'Save up to 30%',
-    features: [
-      'Initial consultation and evaluation',
-      'Ovarian stimulation medications',
-      'Egg retrieval procedure',
-      'IVF fertilization',
-      'Embryo transfer',
-      'Basic monitoring and follow-up',
-    ],
-    bestFor: 'Suitable for couples with no major complications',
-    popular: false,
-  },
-  {
-    name: 'Standard IVF Package',
-    price: 'USD $3,500 - $4,500',
-    originalPrice: 'USD $5,500',
-    savings: 'Save up to 35%',
-    features: [
-      'Everything in Basic Package',
-      'ICSI (if needed)',
-      'Extended embryo culture (blastocyst)',
-      'Comprehensive monitoring',
-      'Additional consultations',
-      'Extended follow-up support',
-      'Travel assistance coordination',
-    ],
-    bestFor: 'Most popular choice for comprehensive care',
-    popular: true,
-  },
-  {
-    name: 'Premium IVF Package',
-    price: 'USD $4,500 - $6,500',
-    originalPrice: 'USD $7,500',
-    savings: 'Save up to 40%',
-    features: [
-      'Everything in Standard Package',
-      'Preimplantation Genetic Testing (PGT)',
-      'Embryo freezing (1 year storage)',
-      'Priority scheduling',
-      'Dedicated care coordinator',
-      'Extended follow-up',
-      'Complimentary accommodation (3 nights)',
-      'Airport transfer service',
-    ],
-    bestFor: 'For couples requiring advanced genetic testing',
-    popular: false,
-  },
-];
+const serviceData = {
+  benefitImages: [
+    '/assets/img/recent_post2.jpg',
+    '/assets/img/recent_post2.jpg'
+  ],
+};
+
+const pricingContentData = {
+  sections: [
+    {
+      heading: 'Transparent International Pricing Packages',
+      paragraphs: [
+        'Transparent and competitive pricing designed specifically for international patients. Our packages offer significant savings compared to Western countries while maintaining the highest quality of care. All prices are in USD for easy reference and comparison.',
+        'We believe in complete transparency when it comes to pricing. There are no hidden costs - everything is clearly explained upfront, allowing you to plan your treatment journey with confidence.',
+      ],
+      sideImage: '/assets/img/recent_post2.jpg',
+    },
+    {
+      heading: 'Basic IVF Package - USD $2,500 - $3,500',
+      paragraphs: [
+        'Our Basic IVF Package is suitable for couples with no major complications and includes:',
+      ],
+      listItems: [
+        'Initial consultation and comprehensive evaluation',
+        'Ovarian stimulation medications',
+        'Egg retrieval procedure',
+        'IVF fertilization process',
+        'Embryo transfer procedure',
+        'Basic monitoring and follow-up consultations',
+        'Save up to 30% compared to standard pricing',
+      ],
+    },
+    {
+      heading: 'Standard IVF Package - USD $3,500 - $4,500',
+      paragraphs: [
+        'Our most popular choice for comprehensive care, the Standard Package includes everything in the Basic Package plus:',
+      ],
+      listItems: [
+        'ICSI (Intracytoplasmic Sperm Injection) if needed',
+        'Extended embryo culture to blastocyst stage',
+        'Comprehensive monitoring throughout the cycle',
+        'Additional consultations with specialists',
+        'Extended follow-up support',
+        'Travel assistance coordination',
+        'Save up to 35% compared to standard pricing',
+      ],
+    },
+    {
+      heading: 'Premium IVF Package - USD $4,500 - $6,500',
+      paragraphs: [
+        'For couples requiring advanced genetic testing, our Premium Package includes everything in the Standard Package plus:',
+      ],
+      listItems: [
+        'Preimplantation Genetic Testing (PGT)',
+        'Embryo freezing with 1 year storage included',
+        'Priority scheduling for all appointments',
+        'Dedicated care coordinator',
+        'Extended follow-up and support',
+        'Complimentary accommodation (3 nights)',
+        'Airport transfer service',
+        'Save up to 40% compared to standard pricing',
+      ],
+    },
+    {
+      heading: 'Important Pricing Information',
+      paragraphs: [
+        'Understanding the details of our pricing structure:',
+      ],
+      listItems: [
+        'Medications: Additional costs apply (typically USD $500 - $1,500) depending on individual requirements',
+        'Payment: Multiple payment methods accepted including wire transfer, credit card, and cash',
+        'Currency: Prices are quoted in USD; local currency conversion available upon request',
+        'Financing: Flexible payment plans and financing options available for qualifying patients',
+        'Transparency: No hidden costs - all charges are clearly explained upfront',
+        'Consultation: Free initial virtual consultation for international patients',
+      ],
+    },
+    {
+      heading: 'Cost Comparison',
+      paragraphs: [
+        'How our prices compare with Western countries:',
+      ],
+      listItems: [
+        'USA/UK: Average IVF cost ranges from $12,000 to $20,000',
+        'Seeds of Innocens: Same quality treatment at $2,500 to $6,500',
+        'Savings: Up to 70% cost savings without compromising on quality',
+        'Quality: World-class facilities and experienced specialists',
+        'Value: Best value for money in international fertility care',
+      ],
+    },
+    {
+      heading: 'What Makes Our Pricing Competitive?',
+      paragraphs: [
+        'Our competitive pricing is made possible through:',
+      ],
+      listItems: [
+        'Lower operational costs in India without compromising quality',
+        'Efficient healthcare delivery systems',
+        'Access to same advanced technology and medications',
+        'Experienced medical professionals with international training',
+        'Established infrastructure for medical tourism',
+        'Government support for medical tourism initiatives',
+      ],
+    },
+    {
+      heading: 'Customized Packages',
+      paragraphs: [
+        'We understand that every patient has unique needs. Our team can create customized packages based on your specific requirements, medical condition, and budget. Contact us to discuss a personalized treatment plan and pricing that works for you.',
+      ],
+    },
+  ],
+};
 
 const page = () => {
   return (
@@ -71,258 +130,18 @@ const page = () => {
         <PageHeading data={headingData} />
       </Section>
 
+      {/* Main Content Section */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="70"
-        bottomSpaceMd="120"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
       >
         <div className="container">
+          {/* Content Section - Centered and Full Width */}
           <div className="row">
-            <div className="col-lg-12">
-              <div className="cs_service_details text-center mb-5">
-                <h3 className="cs_service_heading">International Pricing Packages</h3>
-                <p className="cs_service_subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
-                  Transparent and competitive pricing designed specifically for international patients. Our packages offer significant savings compared to Western countries while maintaining the highest quality of care. All prices are in USD for easy reference.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Image Placeholder */}
-          <div className="row mb-5">
-            <div className="col-lg-12">
-              <div className="cs_service_details_thumbnail">
-                <Image 
-                  src="/assets/img/recent_post_1.png" 
-                  alt="International Pricing" 
-                  width={1200} 
-                  height={400}
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Pricing Packages */}
-          <div className="row cs_gap_y_40 mb-5">
-            {packages.map((pkg, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
-                <div className="cs_iconbox cs_style_2 cs_radius_15 cs_gray_bg" style={{ 
-                  height: '100%', 
-                  padding: '30px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  border: pkg.popular ? '3px solid var(--accent-color)' : '1px solid #e0e0e0',
-                  position: 'relative'
-                }}>
-                  {pkg.popular && (
-                    <div style={{
-                      position: 'absolute',
-                      top: '-15px',
-                      right: '20px',
-                      backgroundColor: 'var(--accent-color)',
-                      color: 'white',
-                      padding: '5px 15px',
-                      borderRadius: '20px',
-                      fontSize: '12px',
-                      fontWeight: 'bold'
-                    }}>
-                      MOST POPULAR
-                    </div>
-                  )}
-                  <div className="cs_iconbox_header mb-3">
-                    <h3 className="cs_iconbox_title" style={{ fontSize: '24px', marginBottom: '15px' }}>
-                      {pkg.name}
-                    </h3>
-                    <div style={{ marginBottom: '10px' }}>
-                      <div style={{ 
-                        fontSize: '32px', 
-                        fontWeight: 'bold', 
-                        color: 'var(--accent-color)',
-                        marginBottom: '5px'
-                      }}>
-                        {pkg.price}
-                      </div>
-                      <div style={{ 
-                        fontSize: '16px', 
-                        color: '#999',
-                        textDecoration: 'line-through',
-                        marginBottom: '5px'
-                      }}>
-                        {pkg.originalPrice}
-                      </div>
-                      <div style={{ 
-                        fontSize: '14px', 
-                        color: '#4caf50',
-                        fontWeight: '600'
-                      }}>
-                        {pkg.savings}
-                      </div>
-                    </div>
-                    <p style={{ 
-                      fontSize: '14px', 
-                      color: '#666', 
-                      marginBottom: '20px',
-                      fontStyle: 'italic'
-                    }}>
-                      {pkg.bestFor}
-                    </p>
-                  </div>
-                  <ul className="cs_mp_0" style={{ 
-                    listStyle: 'none', 
-                    paddingLeft: '0',
-                    flex: 1,
-                    marginBottom: '20px'
-                  }}>
-                    {pkg.features.map((feature, fIndex) => (
-                      <li key={fIndex} style={{ 
-                        marginBottom: '12px', 
-                        paddingLeft: '25px', 
-                        position: 'relative' 
-                      }}>
-                        <span style={{ 
-                          position: 'absolute', 
-                          left: '0', 
-                          color: 'var(--accent-color)', 
-                          fontSize: '18px' 
-                        }}>✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link 
-                    href="/international-patients/contact-team"
-                    className="cs_btn cs_style_1 cs_color_1"
-                    style={{ 
-                      width: '100%', 
-                      textAlign: 'center',
-                      textDecoration: 'none',
-                      display: 'block',
-                      marginTop: 'auto'
-                    }}
-                  >
-                    <span>Get Quote</span>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Additional Information */}
-          <div className="row mb-5">
-            <div className="col-lg-8 mx-auto">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#f8f9fa', 
-                borderRadius: '10px'
-              }}>
-                <h4 className="cs_service_heading mb-4">Important Information</h4>
-                <div className="row">
-                  <div className="col-md-6">
-                    <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
-                      <li style={{ marginBottom: '15px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>•</span>
-                        <strong>Medications:</strong> Additional costs apply (typically USD $500 - $1,500)
-                      </li>
-                      <li style={{ marginBottom: '15px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>•</span>
-                        <strong>Payment:</strong> Multiple payment methods accepted (wire transfer, credit card, cash)
-                      </li>
-                      <li style={{ marginBottom: '15px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>•</span>
-                        <strong>Currency:</strong> Prices in USD; local currency conversion available
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-md-6">
-                    <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
-                      <li style={{ marginBottom: '15px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>•</span>
-                        <strong>Financing:</strong> Flexible payment plans and financing options available
-                      </li>
-                      <li style={{ marginBottom: '15px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>•</span>
-                        <strong>Transparency:</strong> No hidden costs - all charges clearly explained upfront
-                      </li>
-                      <li style={{ marginBottom: '15px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>•</span>
-                        <strong>Consultation:</strong> Free initial virtual consultation for international patients
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Comparison Section */}
-          <div className="row">
-            <div className="col-lg-12">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#e8f5e9', 
-                borderRadius: '10px',
-                borderLeft: '4px solid #4caf50'
-              }}>
-                <h4 className="cs_service_heading mb-4" style={{ color: '#2e7d32', textAlign: 'center' }}>
-                  Cost Comparison
-                </h4>
-                <div className="row">
-                  <div className="col-md-4 mb-4">
-                    <div style={{ 
-                      padding: '25px', 
-                      backgroundColor: 'white', 
-                      borderRadius: '10px',
-                      textAlign: 'center',
-                      height: '100%'
-                    }}>
-                      <h5 style={{ marginBottom: '15px', color: '#2e7d32' }}>USA/UK</h5>
-                      <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#666', marginBottom: '10px' }}>
-                        $12,000 - $20,000
-                      </div>
-                      <p style={{ fontSize: '14px', margin: 0, color: '#666' }}>
-                        Average IVF cost in Western countries
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-4 mb-4">
-                    <div style={{ 
-                      padding: '25px', 
-                      backgroundColor: 'white', 
-                      borderRadius: '10px',
-                      textAlign: 'center',
-                      height: '100%'
-                    }}>
-                      <h5 style={{ marginBottom: '15px', color: 'var(--accent-color)' }}>Seeds of Innocens</h5>
-                      <div style={{ fontSize: '28px', fontWeight: 'bold', color: 'var(--accent-color)', marginBottom: '10px' }}>
-                        $2,500 - $6,500
-                      </div>
-                      <p style={{ fontSize: '14px', margin: 0, color: '#666' }}>
-                        Same quality treatment at fraction of cost
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-4 mb-4">
-                    <div style={{ 
-                      padding: '25px', 
-                      backgroundColor: 'white', 
-                      borderRadius: '10px',
-                      textAlign: 'center',
-                      height: '100%'
-                    }}>
-                      <h5 style={{ marginBottom: '15px', color: '#4caf50' }}>Savings</h5>
-                      <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#4caf50', marginBottom: '10px' }}>
-                        Up to 70%
-                      </div>
-                      <p style={{ fontSize: '14px', margin: 0, color: '#666' }}>
-                        Significant cost savings without compromising quality
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="col-12">
+              <IVFContentSection data={pricingContentData} benefitImages={serviceData.benefitImages} />
             </div>
           </div>
         </div>
@@ -332,4 +151,3 @@ const page = () => {
 };
 
 export default page;
-

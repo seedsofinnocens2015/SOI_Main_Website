@@ -2309,16 +2309,19 @@ label {
 }
 
 .cs_page_heading {
-  height: 400px;
+  height: 300px;
   padding: 80px 0 30px;
+  margin-top: 100px;
   @media (max-width: 991px) {
     height: 320px;
     padding: 60px 0 25px;
+    margin-top: 100px;
   }
   
   @media (max-width: 575px) {
     height: 280px;
     padding: 50px 0 20px;
+    margin-top: 80px;
   }
 
   .breadcrumb {

@@ -58,7 +58,7 @@ const data = {
   recentPosts: [
     {
       href: '/blog/blog-details',
-      image: 'assets/img/recent_post_1.png',
+      image: 'assets/img/recent_post2.jpg',
       date: '23 jun 2024',
       title: 'We round Solution york Blog',
     },
@@ -83,7 +83,7 @@ const Footer = () => {
     backgroundImage: '/assets/img/footer_bg.jpg',
     logo: '/assets/img/footer_logo.svg',
     contactText:
-      'Open Hours: <br /> Mon - Fri: 9.00 am. - 7.00 pm. <br /> Sat - Sun: 9.00 am. - 5.00 pm.',
+      'All Days Open <br /> Open Hours:<br />  Mon - Sun: 9.00 am. - 7.00 pm. ',
     contactText2: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
     contactText3: '+91-9810350512',
     facebookHref: '/',
@@ -115,7 +115,7 @@ const Footer = () => {
     recentPosts: [
       {
         href: '/blog/blog-details',
-        image: '/assets/img/recent_post_1.png',
+        image: '/assets/img/recent_post2.jpg',
         date: '08 Apr 2024',
         title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
       },

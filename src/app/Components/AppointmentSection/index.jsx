@@ -7,13 +7,18 @@ const AppointmentSection = ({ data }) => {
   return (
     <>
       <div className="container">
-        <SectionHeading
-          SectionSubtitle={data.subtitle}
-          SectionTitle={data.title}
-          variant={"text-center"}
-        />
+        {(data.subtitle || data.title) && (
+          <>
+            <SectionHeading
+              SectionSubtitle={data.subtitle}
+              SectionTitle={data.title}
+              variant={"text-center"}
+            />
+            <div className="cs_height_50 cs_height_lg_50" />
+          </>
+        )}
 
-        <div className="cs_height_50 cs_height_lg_50" />
+        {!data.subtitle && !data.title && <div className="cs_height_30 cs_height_lg_30" />}
         <div className="cs_doctors_grid cs_style_1">
           {data.doctorsData.map((doctor, index) => (
             <div className="cs_team cs_style_1 cs_blue_bg" key={index}>

@@ -1,58 +1,124 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
-import Image from 'next/image';
-import Link from 'next/link';
+import IVFContentSection from '@/app/Components/IVFContentSection';
+import React from 'react';
 
 const headingData = {
   title: 'Travel Support',
 };
 
-const travelServices = [
-  {
-    icon: '✈️',
-    title: 'Visa Assistance',
-    description: 'Guidance and support for medical visa applications, including required documentation and embassy coordination.',
-    details: [
-      'Medical visa application guidance',
-      'Document preparation assistance',
-      'Embassy appointment support',
-      'Visa status tracking',
-    ],
-  },
-  {
-    icon: '🏨',
-    title: 'Accommodation',
-    description: 'Assistance in finding comfortable, affordable accommodation near our centers, including hotel bookings and extended stay options.',
-    details: [
-      'Hotel recommendations and bookings',
-      'Serviced apartments for longer stays',
-      'Special rates for medical tourists',
-      'Location-based suggestions',
-    ],
-  },
-  {
-    icon: '🚗',
-    title: 'Local Transportation',
-    description: 'Airport pickup, drop-off services, and local transportation arrangements for appointments and sightseeing.',
-    details: [
-      'Airport transfer services',
-      'Appointment day transportation',
-      'Local travel assistance',
-      '24/7 emergency transport',
-    ],
-  },
-  {
-    icon: '🍽️',
-    title: 'Cultural Support',
-    description: 'Help with local customs, cuisine recommendations, translation services, and making you feel at home.',
-    details: [
-      'Cultural orientation',
-      'Restaurant recommendations',
-      'Translation services',
-      'Local area guides',
-    ],
-  },
-];
+const serviceData = {
+  benefitImages: [
+    '/assets/img/recent_post2.jpg',
+    '/assets/img/recent_post2.jpg'
+  ],
+};
+
+const travelContentData = {
+  sections: [
+    {
+      heading: 'Comprehensive Travel Support Services',
+      paragraphs: [
+        'We understand that traveling to a new country for medical treatment can be overwhelming. Our Travel Support team ensures a hassle-free experience by handling all travel-related arrangements, from visa assistance to local transportation. Our goal is to make your journey to India as smooth and stress-free as possible.',
+        'Whether you are coming from Europe, Americas, Middle East, or anywhere else in the world, our dedicated travel support team will guide you through every step of your journey, ensuring you feel comfortable and confident throughout your stay in India.',
+      ],
+      sideImage: '/assets/img/recent_post2.jpg',
+    },
+    {
+      heading: 'Visa Assistance',
+      paragraphs: [
+        'Guidance and support for medical visa applications, including required documentation and embassy coordination:',
+      ],
+      listItems: [
+        'Medical visa application guidance and documentation support',
+        'Assistance with visa application form filling',
+        'Required medical documents preparation',
+        'Embassy appointment coordination',
+        'Visa status tracking and updates',
+        'Support for visa extensions if needed',
+      ],
+    },
+    {
+      heading: 'Accommodation Arrangements',
+      paragraphs: [
+        'Assistance in finding comfortable, affordable accommodation near our centers:',
+      ],
+      listItems: [
+        'Hotel recommendations based on your preferences and budget',
+        'Special rates for medical tourists',
+        'Serviced apartments for longer stays',
+        'Location-based suggestions near treatment centers',
+        'Accommodation booking assistance',
+        'Comfortable and safe lodging options',
+      ],
+    },
+    {
+      heading: 'Local Transportation',
+      paragraphs: [
+        'Airport pickup, drop-off services, and local transportation arrangements:',
+      ],
+      listItems: [
+        'Airport transfer services (pickup and drop-off)',
+        'Appointment day transportation coordination',
+        'Local travel assistance during your stay',
+        '24/7 emergency transport availability',
+        'Reliable and safe transportation options',
+        'Flexible transportation scheduling',
+      ],
+    },
+    {
+      heading: 'Cultural Support',
+      paragraphs: [
+        'Help with local customs, cuisine recommendations, and making you feel at home:',
+      ],
+      listItems: [
+        'Cultural orientation and local customs guidance',
+        'Restaurant recommendations for dietary preferences',
+        'Translation services for daily interactions',
+        'Local area guides and information',
+        'Shopping and entertainment recommendations',
+        'Making you feel comfortable in a new environment',
+      ],
+    },
+    {
+      heading: 'Pre-Travel Checklist',
+      paragraphs: [
+        'To ensure a smooth journey, make sure you have the following items ready:',
+      ],
+      listItems: [
+        'Valid passport with minimum 6 months validity',
+        'Medical visa approval and necessary documentation',
+        'Travel insurance (highly recommended)',
+        'Medical reports and previous test results',
+        'Confirmed flight bookings',
+        'Accommodation arrangements',
+        'Emergency contact information',
+        'Currency exchange and payment methods arranged',
+      ],
+    },
+    {
+      heading: 'Why Choose Our Travel Support Services?',
+      paragraphs: [
+        'Our travel support services offer numerous advantages:',
+      ],
+      listItems: [
+        'Experienced team familiar with international patient needs',
+        'Comprehensive support from planning to departure',
+        'Cost-effective travel arrangements',
+        '24/7 assistance during your stay',
+        'Personalized service tailored to your preferences',
+        'Stress-free travel experience',
+        'Focus on your treatment while we handle logistics',
+      ],
+    },
+    {
+      heading: 'Need Travel Assistance?',
+      paragraphs: [
+        'Our Travel Support team is ready to help you with all your travel needs. Contact us to get started with your journey. We will ensure that all your travel arrangements are taken care of, allowing you to focus entirely on your treatment and recovery.',
+      ],
+    },
+  ],
+};
 
 const page = () => {
   return (
@@ -64,169 +130,18 @@ const page = () => {
         <PageHeading data={headingData} />
       </Section>
 
+      {/* Main Content Section */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="70"
-        bottomSpaceMd="120"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
       >
         <div className="container">
+          {/* Content Section - Centered and Full Width */}
           <div className="row">
-            <div className="col-lg-12">
-              <div className="cs_service_details text-center mb-5">
-                <h3 className="cs_service_heading">Comprehensive Travel Support</h3>
-                <p className="cs_service_subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
-                  We understand that traveling to a new country for medical treatment can be overwhelming. Our Travel Support team ensures a hassle-free experience by handling all travel-related arrangements, from visa assistance to local transportation.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Image Placeholder */}
-          <div className="row mb-5">
-            <div className="col-lg-12">
-              <div className="cs_service_details_thumbnail">
-                <Image 
-                  src="/assets/img/recent_post_1.png" 
-                  alt="Travel Support" 
-                  width={1200} 
-                  height={400}
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Travel Services */}
-          <div className="row cs_gap_y_40 mb-5">
-            {travelServices.map((service, index) => (
-              <div key={index} className="col-lg-6">
-                <div style={{ 
-                  padding: '30px', 
-                  backgroundColor: '#f8f9fa', 
-                  borderRadius: '10px',
-                  height: '100%',
-                  border: '1px solid #e0e0e0'
-                }}>
-                  <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-                    <div style={{ fontSize: '60px', marginBottom: '15px' }}>
-                      {service.icon}
-                    </div>
-                    <h4 className="cs_service_heading mb-3" style={{ fontSize: '22px' }}>
-                      {service.title}
-                    </h4>
-                    <p className="cs_service_subtitle" style={{ lineHeight: '1.8', marginBottom: '20px' }}>
-                      {service.description}
-                    </p>
-                  </div>
-                  <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
-                    {service.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} style={{ 
-                        marginBottom: '12px', 
-                        paddingLeft: '25px', 
-                        position: 'relative' 
-                      }}>
-                        <span style={{ 
-                          position: 'absolute', 
-                          left: '0', 
-                          color: 'var(--accent-color)', 
-                          fontSize: '18px' 
-                        }}>✓</span>
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Travel Checklist */}
-          <div className="row mb-5">
-            <div className="col-lg-8 mx-auto">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#fff3cd', 
-                borderRadius: '10px',
-                borderLeft: '4px solid #ffc107'
-              }}>
-                <h4 className="cs_service_heading mb-4" style={{ color: '#856404' }}>
-                  Pre-Travel Checklist
-                </h4>
-                <div className="row">
-                  <div className="col-md-6">
-                    <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
-                      <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: '#856404', fontSize: '18px' }}>✓</span>
-                        Valid passport (minimum 6 months validity)
-                      </li>
-                      <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: '#856404', fontSize: '18px' }}>✓</span>
-                        Medical visa approval
-                      </li>
-                      <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: '#856404', fontSize: '18px' }}>✓</span>
-                        Travel insurance (recommended)
-                      </li>
-                      <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: '#856404', fontSize: '18px' }}>✓</span>
-                        Medical reports and previous test results
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-md-6">
-                    <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
-                      <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: '#856404', fontSize: '18px' }}>✓</span>
-                        Confirmed flight bookings
-                      </li>
-                      <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: '#856404', fontSize: '18px' }}>✓</span>
-                        Accommodation arrangements
-                      </li>
-                      <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: '#856404', fontSize: '18px' }}>✓</span>
-                        Emergency contact information
-                      </li>
-                      <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: '0', color: '#856404', fontSize: '18px' }}>✓</span>
-                        Currency exchange and payment methods
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Section */}
-          <div className="row">
-            <div className="col-lg-8 mx-auto">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#e3f2fd', 
-                borderRadius: '10px',
-                borderLeft: '4px solid #2196f3',
-                textAlign: 'center'
-              }}>
-                <h4 className="cs_service_heading mb-3" style={{ color: '#1565c0' }}>
-                  Need Travel Assistance?
-                </h4>
-                <p className="cs_service_subtitle mb-4" style={{ color: '#1565c0' }}>
-                  Our Travel Support team is ready to help you with all your travel needs. Contact us to get started.
-                </p>
-                <Link 
-                  href="/international-patients/contact-team"
-                  className="cs_btn cs_style_1 cs_color_1"
-                  style={{ 
-                    display: 'inline-block',
-                    textDecoration: 'none'
-                  }}
-                >
-                  <span>Contact Travel Support</span>
-                </Link>
-              </div>
+            <div className="col-12">
+              <IVFContentSection data={travelContentData} benefitImages={serviceData.benefitImages} />
             </div>
           </div>
         </div>
@@ -236,4 +151,3 @@ const page = () => {
 };
 
 export default page;
-

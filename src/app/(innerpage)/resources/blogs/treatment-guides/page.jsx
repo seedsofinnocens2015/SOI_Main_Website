@@ -1,12 +1,172 @@
+"use client"
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
+import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
 
 const headingData = {
   title: 'Treatment Guides',
 };
 
+const blogs = [
+  {
+    title: 'Complete IVF Treatment Guide',
+    excerpt: 'Comprehensive step-by-step guide to IVF treatment, from initial consultation to pregnancy test, covering all phases and what to expect.',
+    image: '/assets/img/recent_post2.jpg',
+    date: 'December 16, 2024',
+    author: 'Dr. Gauri Agarwal',
+    category: 'Treatment Guide',
+    readTime: '12 min read',
+    link: '#',
+  },
+  {
+    title: 'IUI Treatment: A Detailed Guide',
+    excerpt: 'Everything you need to know about Intrauterine Insemination (IUI), including procedure, success rates, and preparation tips.',
+    image: '/assets/img/recent_post2.jpg',
+    date: 'December 12, 2024',
+    author: 'Dr. Aditi Bhatnagar',
+    category: 'Treatment Guide',
+    readTime: '8 min read',
+    link: '#',
+  },
+  {
+    title: 'Egg Freezing: Complete Process Guide',
+    excerpt: 'Detailed guide to egg freezing process, benefits, success rates, and what to expect during the procedure and storage.',
+    image: '/assets/img/recent_post2.jpg',
+    date: 'December 8, 2024',
+    author: 'Dr. Gauri Agarwal',
+    category: 'Treatment Guide',
+    readTime: '10 min read',
+    link: '#',
+  },
+  {
+    title: 'ICSI Treatment: Step-by-Step Guide',
+    excerpt: 'Comprehensive guide to Intracytoplasmic Sperm Injection (ICSI), when it\'s recommended, and what makes it different from IVF.',
+    image: '/assets/img/recent_post2.jpg',
+    date: 'December 4, 2024',
+    author: 'Dr. Aditi Bhatnagar',
+    category: 'Treatment Guide',
+    readTime: '9 min read',
+    link: '#',
+  },
+  {
+    title: 'PGT Testing: Understanding Genetic Screening',
+    excerpt: 'Guide to Preimplantation Genetic Testing (PGT), types of PGT, benefits, and what to expect during the testing process.',
+    image: '/assets/img/recent_post2.jpg',
+    date: 'November 28, 2024',
+    author: 'Dr. Gauri Agarwal',
+    category: 'Treatment Guide',
+    readTime: '11 min read',
+    link: '#',
+  },
+  {
+    title: 'Embryo Transfer: Preparation and Procedure',
+    excerpt: 'Complete guide to embryo transfer procedure, preparation tips, what happens during transfer, and post-transfer care.',
+    image: '/assets/img/recent_post2.jpg',
+    date: 'November 22, 2024',
+    author: 'Dr. Aditi Bhatnagar',
+    category: 'Treatment Guide',
+    readTime: '7 min read',
+    link: '#',
+  },
+  // Hindi Blogs
+  {
+    title: 'आईवीएफ उपचार की पूरी गाइड',
+    excerpt: 'आईवीएफ उपचार की व्यापक चरण-दर-चरण गाइड, प्रारंभिक परामर्श से लेकर गर्भावस्था परीक्षण तक, सभी चरणों और क्या उम्मीद करें।',
+    image: '/assets/img/recent_post2.jpg',
+    date: '16 दिसंबर, 2024',
+    author: 'Dr. Gauri Agarwal',
+    category: 'उपचार गाइड',
+    readTime: '12 मिनट पढ़ें',
+    link: '#',
+  },
+  {
+    title: 'आईयूआई उपचार: एक विस्तृत गाइड',
+    excerpt: 'इंट्रायूटेरिन इनसेमिनेशन (आईयूआई) के बारे में सब कुछ, प्रक्रिया, सफलता दर, और तैयारी युक्तियां शामिल हैं।',
+    image: '/assets/img/recent_post2.jpg',
+    date: '12 दिसंबर, 2024',
+    author: 'Dr. Aditi Bhatnagar',
+    category: 'उपचार गाइड',
+    readTime: '8 मिनट पढ़ें',
+    link: '#',
+  },
+  {
+    title: 'अंडा फ्रीजिंग: पूरी प्रक्रिया गाइड',
+    excerpt: 'अंडा फ्रीजिंग प्रक्रिया, लाभ, सफलता दर, और प्रक्रिया और भंडारण के दौरान क्या उम्मीद करें की विस्तृत गाइड।',
+    image: '/assets/img/recent_post2.jpg',
+    date: '8 दिसंबर, 2024',
+    author: 'Dr. Gauri Agarwal',
+    category: 'उपचार गाइड',
+    readTime: '10 मिनट पढ़ें',
+    link: '#',
+  },
+  {
+    title: 'आईसीएसआई उपचार: चरण-दर-चरण गाइड',
+    excerpt: 'इंट्रासाइटोप्लाज्मिक स्पर्म इंजेक्शन (आईसीएसआई) की व्यापक गाइड, यह कब अनुशंसित है, और इसे आईवीएफ से अलग क्या बनाता है।',
+    image: '/assets/img/recent_post2.jpg',
+    date: '4 दिसंबर, 2024',
+    author: 'Dr. Aditi Bhatnagar',
+    category: 'उपचार गाइड',
+    readTime: '9 मिनट पढ़ें',
+    link: '#',
+  },
+];
+
 const page = () => {
+  const router = useRouter();
+  const [selectedLanguage, setSelectedLanguage] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('treatment-guides');
+
+  const categoryRoutes = {
+    'fertility': '/resources/blogs/fertility',
+    'ivf-process': '/resources/blogs/ivf-process',
+    'pregnancy': '/resources/blogs/pregnancy',
+    'mens-health': '/resources/blogs/mens-health',
+    'womens-health': '/resources/blogs/womens-health',
+    'treatment-guides': '/resources/blogs/treatment-guides',
+    'success-stories': '/resources/blogs/success-stories',
+    'doctor-insights': '/resources/blogs/doctor-insights',
+    'news-press': '/resources/blogs/news-press',
+  };
+
+  const handleCategoryChange = (e) => {
+    const category = e.target.value;
+    setSelectedCategory(category);
+    if (categoryRoutes[category]) {
+      router.push(categoryRoutes[category]);
+    }
+  };
+
+  const handleLanguageChange = (e) => {
+    setSelectedLanguage(e.target.value);
+  };
+
+  const filteredBlogs = useMemo(() => {
+    if (selectedLanguage === 'all') {
+      return blogs;
+    } else if (selectedLanguage === 'hindi') {
+      return blogs.filter(blog => 
+        blog.category === 'उपचार गाइड' || 
+        blog.readTime.includes('मिनट') ||
+        blog.date.includes('दिसंबर') || 
+        blog.date.includes('नवंबर') ||
+        blog.title.match(/[\u0900-\u097F]/)
+      );
+    } else if (selectedLanguage === 'english') {
+      return blogs.filter(blog => 
+        blog.category === 'Treatment Guide' && 
+        !blog.readTime.includes('मिनट') &&
+        !blog.date.includes('दिसंबर') && 
+        !blog.date.includes('नवंबर') &&
+        !blog.title.match(/[\u0900-\u097F]/)
+      );
+    }
+    return blogs;
+  }, [selectedLanguage]);
+
   return (
     <div>
       <Section
@@ -17,113 +177,344 @@ const page = () => {
       </Section>
 
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="70"
-        bottomSpaceMd="120"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
       >
         <div className="container">
-          <div className="row cs_gap_y_40">
-            <div className="col-lg-8">
-              <div className="cs_service_details">
-                <h3 className="cs_service_heading">Comprehensive Treatment Guides</h3>
-                <p className="cs_service_subtitle">
-                  At Seeds of Innocens, we believe in empowering our patients with knowledge. Our comprehensive treatment guides are designed to help you understand every aspect of fertility treatments, from initial consultation to post-treatment care.
-                </p>
-                
-                <div className="cs_height_30 cs_height_lg_30" />
-                
-                {/* Image Placeholder */}
-                <div className="cs_service_details_thumbnail mb-4">
-                  <Image 
-                    src="/assets/img/recent_post_1.png" 
-                    alt="Treatment Guides" 
-                    width={800} 
-                    height={450}
-                    className="w-100"
-                  />
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="mb-5" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '20px' }}>
+                <div style={{ flex: 1, minWidth: '300px' }}>
+                  <h2 className="cs_ivf_content_heading" style={{ marginBottom: '20px' }}>
+                    Treatment Guides
+                  </h2>
+                  <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8' }}>
+                    Comprehensive, step-by-step guides to fertility treatments, procedures, and what to expect throughout your journey.
+                  </p>
                 </div>
-
-                <h4 className="cs_service_heading">Understanding Your Treatment Options</h4>
-                <p className="cs_service_subtitle">
-                  Our treatment guides cover a wide range of fertility procedures including IVF, ICSI, IUI, egg freezing, and more. Each guide provides detailed information about:
-                </p>
-                <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
-                  <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>✓</span>
-                    Treatment procedure and timeline
-                  </li>
-                  <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>✓</span>
-                    What to expect during each phase
-                  </li>
-                  <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>✓</span>
-                    Preparation and requirements
-                  </li>
-                  <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>✓</span>
-                    Success rates and outcomes
-                  </li>
-                  <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: '0', color: 'var(--accent-color)', fontSize: '20px' }}>✓</span>
-                    Post-treatment care and follow-up
-                  </li>
-                </ul>
-
-                <div className="cs_height_40 cs_height_lg_40" />
-
-                <h4 className="cs_service_heading">Step-by-Step Process</h4>
-                <p className="cs_service_subtitle">
-                  Each treatment guide includes a detailed step-by-step process, helping you understand what happens at each stage of your fertility journey. We provide clear explanations of medical procedures, timelines, and what you can expect during your treatment.
-                </p>
-
-                <div className="cs_height_30 cs_height_lg_30" />
-
-                {/* Image Placeholder */}
-                <div className="cs_service_details_thumbnail mb-4">
-                  <Image 
-                    src="/assets/img/recent_post_1.png" 
-                    alt="Treatment Process" 
-                    width={800} 
-                    height={450}
-                    className="w-100"
-                  />
+                <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', alignItems: 'flex-end' }}>
+                  <div style={{ minWidth: '200px' }}>
+                    <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', fontWeight: '600', color: '#333' }}>
+                      Select Category
+                    </label>
+                    <select
+                      value={selectedCategory}
+                      onChange={handleCategoryChange}
+                      style={{
+                        width: '100%',
+                        padding: '10px 15px',
+                        border: '1px solid #e8e8e8',
+                        borderRadius: '8px',
+                        fontSize: '15px',
+                        backgroundColor: '#fff',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--accent-color)'}
+                      onBlur={(e) => e.target.style.borderColor = '#e8e8e8'}
+                    >
+                      <option value="fertility">Fertility</option>
+                      <option value="ivf-process">IVF Process</option>
+                      <option value="pregnancy">Pregnancy</option>
+                      <option value="mens-health">Men's Health</option>
+                      <option value="womens-health">Women's Health</option>
+                      <option value="treatment-guides">Treatment Guides</option>
+                      <option value="success-stories">Success Stories</option>
+                      <option value="doctor-insights">Doctor Insights</option>
+                      <option value="news-press">News & Press</option>
+                    </select>
+                  </div>
+                  <div style={{ minWidth: '150px' }}>
+                    <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', fontWeight: '600', color: '#333' }}>
+                      Language
+                    </label>
+                    <select
+                      value={selectedLanguage}
+                      onChange={handleLanguageChange}
+                      style={{
+                        width: '100%',
+                        padding: '10px 15px',
+                        border: '1px solid #e8e8e8',
+                        borderRadius: '8px',
+                        fontSize: '15px',
+                        backgroundColor: '#fff',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--accent-color)'}
+                      onBlur={(e) => e.target.style.borderColor = '#e8e8e8'}
+                    >
+                      <option value="all">All</option>
+                      <option value="english">English</option>
+                      <option value="hindi">Hindi</option>
+                    </select>
+                  </div>
                 </div>
-
-                <h4 className="cs_service_heading">Expert Insights</h4>
-                <p className="cs_service_subtitle">
-                  Our guides are developed by our team of experienced fertility specialists, ensuring that you receive accurate, up-to-date information. We regularly update our guides to reflect the latest advances in fertility treatment and research.
-                </p>
               </div>
             </div>
-            <div className="col-lg-4">
-              <div className="cs_sidebar">
-                <div className="cs_sidebar_widget cs_gray_bg">
-                  <h3 className="cs_widget_title">Related Resources</h3>
-                  <ul className="cs_mp_0">
-                    <li style={{ marginBottom: '10px' }}>
-                      <a href="/resources/ivf-process-patient-journey" style={{ color: 'var(--body-color)' }}>IVF Process / Patient Journey</a>
-                    </li>
-                    <li style={{ marginBottom: '10px' }}>
-                      <a href="/resources/faqs" style={{ color: 'var(--body-color)' }}>FAQs</a>
-                    </li>
-                    <li style={{ marginBottom: '10px' }}>
-                      <a href="/resources/blogs/fertility" style={{ color: 'var(--body-color)' }}>Fertility Blogs</a>
-                    </li>
-                    <li style={{ marginBottom: '10px' }}>
-                      <a href="/resources/downloads" style={{ color: 'var(--body-color)' }}>Downloads</a>
-                    </li>
-                  </ul>
-                </div>
+          </div>
+
+          <div className="cs_height_50 cs_height_lg_50" />
+
+          {/* Blog Grid */}
+          <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
+            {filteredBlogs.map((blog, index) => (
+              <div key={index} className="col-lg-4 col-md-6">
+                <Link href={blog.link} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
+                  <div className="cs_blog_card cs_style_1" style={{ 
+                    height: '100%',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    backgroundColor: '#ffffff',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
+                    border: '1px solid #e8e8e8',
+                    boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-8px)';
+                    e.currentTarget.style.boxShadow = '0px 12px 30px rgba(0, 0, 0, 0.12)';
+                    e.currentTarget.style.borderColor = 'var(--accent-color)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                    e.currentTarget.style.borderColor = '#e8e8e8';
+                  }}
+                  >
+                    <div className="cs_blog_img" style={{ 
+                      overflow: 'hidden', 
+                      position: 'relative',
+                      height: '250px',
+                      width: '100%'
+                    }}>
+                      <Image 
+                        src={blog.image} 
+                        alt={blog.title} 
+                        width={400} 
+                        height={250}
+                        className="w-100"
+                        style={{ 
+                          objectFit: 'cover', 
+                          transition: 'transform 0.5s ease',
+                          width: '100%',
+                          height: '100%'
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = 'scale(1.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = 'scale(1)';
+                        }}
+                      />
+                      <div style={{
+                        position: 'absolute',
+                        top: '15px',
+                        left: '15px',
+                        backgroundColor: 'var(--accent-color)',
+                        color: 'white',
+                        padding: '6px 14px',
+                        borderRadius: '20px',
+                        fontSize: '12px',
+                        fontWeight: '600',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.5px'
+                      }}>
+                        {blog.category}
+                      </div>
+                    </div>
+                    <div className="cs_blog_info" style={{ 
+                      padding: '30px',
+                      flex: 1,
+                      display: 'flex',
+                      flexDirection: 'column'
+                    }}>
+                      <div className="cs_blog_meta mb-3" style={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '15px',
+                        fontSize: '13px',
+                        color: '#999',
+                        flexWrap: 'wrap'
+                      }}>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <FaCalendarAlt style={{ fontSize: '12px' }} />
+                          {blog.date}
+                        </span>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <FaClock style={{ fontSize: '12px' }} />
+                          {blog.readTime}
+                        </span>
+                      </div>
+                      <h3 className="cs_blog_title" style={{ 
+                        fontSize: '22px', 
+                        marginBottom: '15px', 
+                        color: '#1a1a1a',
+                        fontWeight: '600',
+                        lineHeight: '1.4',
+                        minHeight: '66px'
+                      }}>
+                        {blog.title}
+                      </h3>
+                      <p className="cs_blog_subtitle" style={{ 
+                        lineHeight: '1.8', 
+                        color: '#666', 
+                        marginBottom: '20px',
+                        fontSize: '15px',
+                        flex: 1
+                      }}>
+                        {blog.excerpt}
+                      </p>
+                      <div style={{ 
+                        display: 'flex', 
+                        justifyContent: 'space-between', 
+                        alignItems: 'center',
+                        paddingTop: '20px',
+                        borderTop: '1px solid #f0f0f0',
+                        marginTop: 'auto'
+                      }}>
+                        <span style={{ 
+                          fontSize: '14px', 
+                          color: '#999',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '6px'
+                        }}>
+                          <FaUser style={{ fontSize: '12px' }} />
+                          {blog.author}
+                        </span>
+                        <span style={{ 
+                          color: 'var(--accent-color)', 
+                          fontWeight: '600',
+                          fontSize: '14px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'gap 0.3s ease'
+                        }}
+                        className="read-more-link"
+                        >
+                          Read More
+                          <FaArrowRight style={{ fontSize: '12px', transition: 'transform 0.3s ease' }} />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="cs_height_50 cs_height_lg_50" />
+
+          {/* Pagination */}
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="cs_pagination text-center">
+                <ul className="cs_mp_0" style={{ 
+                  display: 'inline-flex', 
+                  listStyle: 'none', 
+                  gap: '8px',
+                  alignItems: 'center'
+                }}>
+                  <li>
+                    <a href="#" style={{ 
+                      padding: '12px 18px', 
+                      border: '1px solid #e8e8e8', 
+                      borderRadius: '8px',
+                      color: '#333',
+                      textDecoration: 'none',
+                      backgroundColor: '#fff',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-block'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = 'var(--accent-color)';
+                      e.currentTarget.style.color = 'white';
+                      e.currentTarget.style.borderColor = 'var(--accent-color)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#fff';
+                      e.currentTarget.style.color = '#333';
+                      e.currentTarget.style.borderColor = '#e8e8e8';
+                    }}
+                    >Previous</a>
+                  </li>
+                  <li>
+                    <a href="#" style={{ 
+                      padding: '12px 18px', 
+                      backgroundColor: 'var(--accent-color)', 
+                      color: 'white',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      border: '1px solid var(--accent-color)',
+                      display: 'inline-block'
+                    }}>1</a>
+                  </li>
+                  <li>
+                    <a href="#" style={{ 
+                      padding: '12px 18px', 
+                      border: '1px solid #e8e8e8', 
+                      borderRadius: '8px',
+                      color: '#333',
+                      textDecoration: 'none',
+                      backgroundColor: '#fff',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-block'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = 'var(--accent-color)';
+                      e.currentTarget.style.color = 'white';
+                      e.currentTarget.style.borderColor = 'var(--accent-color)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#fff';
+                      e.currentTarget.style.color = '#333';
+                      e.currentTarget.style.borderColor = '#e8e8e8';
+                    }}
+                    >2</a>
+                  </li>
+                  <li>
+                    <a href="#" style={{ 
+                      padding: '12px 18px', 
+                      border: '1px solid #e8e8e8', 
+                      borderRadius: '8px',
+                      color: '#333',
+                      textDecoration: 'none',
+                      backgroundColor: '#fff',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-block'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = 'var(--accent-color)';
+                      e.currentTarget.style.color = 'white';
+                      e.currentTarget.style.borderColor = 'var(--accent-color)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#fff';
+                      e.currentTarget.style.color = '#333';
+                      e.currentTarget.style.borderColor = '#e8e8e8';
+                    }}
+                    >Next</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </Section>
+
+      <style jsx>{`
+        .read-more-link:hover svg {
+          transform: translateX(4px);
+        }
+      `}</style>
     </div>
   );
 };
 
 export default page;
-

@@ -1,12 +1,56 @@
+"use client";
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
+import Image from 'next/image';
+
+const headingData = {
+  title: 'Media & Press',
+};
+
+const ivfContentData = {
+  sections: [
+    {
+      heading: 'Our Media Coverage',
+      paragraphs: [
+        'Seeds of Innocens has been featured in various media outlets, highlighting our innovative treatments, success stories, and contributions to the field of reproductive medicine.',
+        'Our commitment to excellence and patient care has earned recognition from leading healthcare publications, news channels, and medical journals across India and internationally.',
+        'We are proud to share our achievements, research breakthroughs, and patient success stories through various media platforms, helping to raise awareness about fertility treatments and reproductive health.',
+      ],
+      sideImage: '/assets/img/recent_post2.jpg',
+    },
+  ],
+};
+
+const pressReleasesData = [
+  {
+    date: 'March 15, 2024',
+    title: 'Seeds of Innocens Launches Advanced PGT Testing Program',
+    description: 'Seeds of Innocens announces the launch of comprehensive preimplantation genetic testing services, offering couples improved success rates and reduced genetic risk.',
+    image: '/assets/img/recent_post2.jpg',
+  },
+  {
+    date: 'February 10, 2024',
+    title: 'Record-Breaking Success Rates at Seeds of Innocens',
+    description: 'The fertility centre reports exceptional success rates, with over 20,000 successful pregnancies achieved through advanced IVF techniques and personalized care.',
+    image: '/assets/img/recent_post2.jpg',
+  },
+  {
+    date: 'January 20, 2024',
+    title: 'International Expansion: Seeds of Innocens Opens Center in Africa',
+    description: 'Seeds of Innocens expands its global presence with the opening of a new state-of-the-art fertility centre in Zambia, bringing world-class fertility care to more regions.',
+    image: '/assets/img/recent_post2.jpg',
+  },
+  {
+    date: 'December 5, 2023',
+    title: 'Dr. Gauri Agrawal Honored for Excellence in Fertility Medicine',
+    description: 'Founder Dr. Gauri Agrawal receives recognition for outstanding contributions to reproductive medicine and commitment to advancing fertility treatments.',
+    image: '/assets/img/recent_post2.jpg',
+  },
+];
 
 const page = () => {
-  const headingData = {
-    title: 'Media & Press',
-  };
-
   return (
     <div>
       <Section
@@ -16,216 +60,108 @@ const page = () => {
         <PageHeading data={headingData} />
       </Section>
 
-      {/* Start Media & Press Section */}
+      {/* Main Content Section */}
       <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
       >
         <div className="container">
+          {/* Content Section - Centered and Full Width */}
           <div className="row">
-            <div className="col-lg-12">
-              <h2 className="cs_section_title cs_fs_42 text-center">Media & Press Coverage</h2>
-              <div className="cs_height_30" />
-              <p className="cs_text_style_1 text-center" style={{ maxWidth: '800px', margin: '0 auto 50px' }}>
-                Seeds of Innocens has been featured in various media outlets, highlighting our innovative treatments, success stories, and contributions to the field of reproductive medicine.
-              </p>
-            </div>
-          </div>
-
-          <div className="row cs_gap_y_40">
-            {/* Press Release 1 */}
-            <div className="col-lg-6">
-              <div className="cs_post cs_style_1">
-                <div className="cs_post_thumb" style={{ 
-                  backgroundColor: '#f5f5f5', 
-                  minHeight: '250px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: '10px',
-                  marginBottom: '20px'
-                }}>
-                  <p style={{ color: '#999' }}>Image placeholder - Add press/media image here</p>
-                </div>
-                <div className="cs_post_info">
-                  <span className="cs_post_date">March 15, 2024</span>
-                  <h3 className="cs_post_title">
-                    <a href="#">Seeds of Innocens Launches Advanced PGT Testing Program</a>
-                  </h3>
-                  <p className="cs_post_subtitle">
-                    Seeds of Innocens announces the launch of comprehensive preimplantation genetic testing services, offering couples improved success rates and reduced genetic risk.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Press Release 2 */}
-            <div className="col-lg-6">
-              <div className="cs_post cs_style_1">
-                <div className="cs_post_thumb" style={{ 
-                  backgroundColor: '#f5f5f5', 
-                  minHeight: '250px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: '10px',
-                  marginBottom: '20px'
-                }}>
-                  <p style={{ color: '#999' }}>Image placeholder - Add press/media image here</p>
-                </div>
-                <div className="cs_post_info">
-                  <span className="cs_post_date">February 10, 2024</span>
-                  <h3 className="cs_post_title">
-                    <a href="#">Record-Breaking Success Rates at Seeds of Innocens</a>
-                  </h3>
-                  <p className="cs_post_subtitle">
-                    The fertility centre reports exceptional success rates, with over 20,000 successful pregnancies achieved through advanced IVF techniques and personalized care.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Press Release 3 */}
-            <div className="col-lg-6">
-              <div className="cs_post cs_style_1">
-                <div className="cs_post_thumb" style={{ 
-                  backgroundColor: '#f5f5f5', 
-                  minHeight: '250px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: '10px',
-                  marginBottom: '20px'
-                }}>
-                  <p style={{ color: '#999' }}>Image placeholder - Add press/media image here</p>
-                </div>
-                <div className="cs_post_info">
-                  <span className="cs_post_date">January 20, 2024</span>
-                  <h3 className="cs_post_title">
-                    <a href="#">International Expansion: Seeds of Innocens Opens Center in Africa</a>
-                  </h3>
-                  <p className="cs_post_subtitle">
-                    Seeds of Innocens expands its global presence with the opening of a new state-of-the-art fertility centre in Zambia, bringing world-class fertility care to more regions.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Press Release 4 */}
-            <div className="col-lg-6">
-              <div className="cs_post cs_style_1">
-                <div className="cs_post_thumb" style={{ 
-                  backgroundColor: '#f5f5f5', 
-                  minHeight: '250px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: '10px',
-                  marginBottom: '20px'
-                }}>
-                  <p style={{ color: '#999' }}>Image placeholder - Add press/media image here</p>
-                </div>
-                <div className="cs_post_info">
-                  <span className="cs_post_date">December 5, 2023</span>
-                  <h3 className="cs_post_title">
-                    <a href="#">Dr. Gauri Agrawal Honored for Excellence in Fertility Medicine</a>
-                  </h3>
-                  <p className="cs_post_subtitle">
-                    Founder Dr. Gauri Agrawal receives recognition for outstanding contributions to reproductive medicine and commitment to advancing fertility treatments.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="cs_height_60" />
-
-          <div className="row">
-            <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36 text-center">Video Gallery</h3>
-              <div className="cs_height_40" />
-              <div className="row cs_gap_y_30">
-                <div className="col-md-4">
-                  <div className="cs_post cs_style_1">
-                    <div className="cs_post_thumb" style={{ 
-                      backgroundColor: '#f5f5f5', 
-                      minHeight: '200px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: '10px',
-                      marginBottom: '15px'
-                    }}>
-                      <p style={{ color: '#999' }}>Video thumbnail placeholder</p>
-                    </div>
-                    <h4 className="cs_post_title cs_fs_20">
-                      <a href="#">Success Story: Priya & Rahul</a>
-                    </h4>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="cs_post cs_style_1">
-                    <div className="cs_post_thumb" style={{ 
-                      backgroundColor: '#f5f5f5', 
-                      minHeight: '200px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: '10px',
-                      marginBottom: '15px'
-                    }}>
-                      <p style={{ color: '#999' }}>Video thumbnail placeholder</p>
-                    </div>
-                    <h4 className="cs_post_title cs_fs_20">
-                      <a href="#">Our Advanced Laboratory Tour</a>
-                    </h4>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="cs_post cs_style_1">
-                    <div className="cs_post_thumb" style={{ 
-                      backgroundColor: '#f5f5f5', 
-                      minHeight: '200px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: '10px',
-                      marginBottom: '15px'
-                    }}>
-                      <p style={{ color: '#999' }}>Video thumbnail placeholder</p>
-                    </div>
-                    <h4 className="cs_post_title cs_fs_20">
-                      <a href="#">IVF Process Explained</a>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="cs_height_60" />
-
-          <div className="row">
-            <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36 text-center">Media Contact</h3>
-              <div className="cs_height_30" />
-              <div className="text-center">
-                <p className="cs_text_style_1">
-                  For media inquiries, press releases, or interview requests, please contact our media relations team:
-                </p>
-                <div className="cs_height_20" />
-                <p className="cs_text_style_1">
-                  <strong>Email:</strong> media@seedsofinnocens.com<br />
-                  <strong>Phone:</strong> +91 9876543210
-                </p>
-              </div>
+            <div className="col-12">
+              <IVFContentSection data={ivfContentData} />
             </div>
           </div>
         </div>
       </Section>
-      {/* End Media & Press Section */}
+
+      {/* Press Releases Cards Section */}
+      <Section
+        topSpaceLg="0"
+        topSpaceMd="0"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
+                Our Press Releases
+              </h2>
+            </div>
+          </div>
+          <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
+            {pressReleasesData.map((release, index) => (
+              <div key={index} className="col-lg-6 col-md-6">
+                <div style={{
+                  backgroundColor: '#ffffff',
+                  borderRadius: '12px',
+                  overflow: 'hidden',
+                  boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
+                  border: '1px solid #e8e8e8',
+                  transition: 'all 0.3s ease',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                }}
+                >
+                  <div style={{ position: 'relative', width: '100%', height: '250px', overflow: 'hidden' }}>
+                    <Image 
+                      src={release.image} 
+                      alt={release.title} 
+                      width={400} 
+                      height={250}
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        objectFit: 'cover'
+                      }}
+                    />
+                  </div>
+                  <div style={{ padding: '20px' }}>
+                    <span style={{ 
+                      fontSize: '14px', 
+                      color: '#E45352', 
+                      fontWeight: '500',
+                      marginBottom: '10px',
+                      display: 'block'
+                    }}>
+                      {release.date}
+                    </span>
+                    <h4 style={{ 
+                      fontSize: '18px', 
+                      fontWeight: '600', 
+                      color: '#0A2A43',
+                      marginBottom: '10px',
+                      lineHeight: '1.4'
+                    }}>
+                      {release.title}
+                    </h4>
+                    <p style={{ 
+                      fontSize: '14px', 
+                      color: '#666', 
+                      lineHeight: '1.6',
+                      margin: 0
+                    }}>
+                      {release.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
     </div>
   );
 };

@@ -45,13 +45,18 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
   return (
     <div className="about-team">
       <div className="container">
-        <SectionHeading
-          SectionSubtitle={data.subtitle}
-          SectionTitle={data.title}
-          variant={"text-center"}
-        />
+        {(data.subtitle || data.title) && (
+          <>
+            <SectionHeading
+              SectionSubtitle={data.subtitle}
+              SectionTitle={data.title}
+              variant={"text-center"}
+            />
+            <div className="cs_height_50 cs_height_lg_50" />
+          </>
+        )}
 
-        <div className="cs_height_50 cs_height_lg_50" />
+        {!data.subtitle && !data.title && <div className="cs_height_30 cs_height_lg_30" />}
         <div className="cs_slider cs_style_1 cs_slider_gap_24">
           <div className="cs_slider_container">
             <div className="cs_slider_wrapper">

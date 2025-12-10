@@ -284,7 +284,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Dr. Gauri Agrawal – Founder',
-            href: '/about/dr-gauri-agrawal',
+            href: '/doctors/dr-gauri-agarwal/',
           },
           {
             label: 'Leadership Team',
@@ -489,7 +489,13 @@ const Header = ({ isTopBar, variant }) => {
                         <Link
                           href={item.href}
                           onClick={(e) => {
-                            if (item.isMegaMenu || item.subItems) {
+                            // Check if navItem has megaMenuCategories with subItems
+                            const hasCategoriesWithSubItems = item.isMegaMenu && 
+                              item.megaMenuCategories && 
+                              item.megaMenuCategories.some(cat => cat.subItems && cat.subItems.length > 0);
+                            
+                            // Prevent navigation if it has megaMenuCategories with subItems, or if it has regular subItems
+                            if (hasCategoriesWithSubItems || item.subItems) {
                               e.preventDefault();
                             }
                             if (isMobileView) {
@@ -527,10 +533,13 @@ const Header = ({ isTopBar, variant }) => {
                                         <Link
                                           href={category.href}
                                           onClick={(e) => {
-                                            e.preventDefault();
-                                            setIsShowMobileMenu(
-                                              !isShowMobileMenu
-                                            );
+                                            // Only prevent navigation if category has subItems
+                                            if (hasSubItems) {
+                                              e.preventDefault();
+                                            } else {
+                                              // If no subItems, allow navigation and close menu
+                                              setIsShowMobileMenu(false);
+                                            }
                                           }}
                                         >
                                           {category.label}
@@ -712,7 +721,10 @@ const Header = ({ isTopBar, variant }) => {
                                           <Link
                                             href={category.href}
                                             onClick={(e) => {
-                                              e.preventDefault();
+                                              // Only prevent navigation if category has subItems
+                                              if (hasSubItems) {
+                                                e.preventDefault();
+                                              }
                                             }}
                                           >
                                             {category.label}

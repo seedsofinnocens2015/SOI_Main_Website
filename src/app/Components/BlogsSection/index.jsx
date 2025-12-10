@@ -47,11 +47,11 @@ const BlogSection = ({ data }) => {
     <>
       <div className="container">
         {data.sectionTitle && (
-          <SectionHeading
-            SectionSubtitle={data.sectionTitle}
+        <SectionHeading
+          SectionSubtitle={data.sectionTitle}
             SectionTitle={data.sectionSubtitle || ''}
-            variant={"text-center"}
-          />
+          variant={"text-center"}
+        />
         )}
 
         <div className="cs_height_30 cs_height_lg_30" />
