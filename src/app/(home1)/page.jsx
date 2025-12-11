@@ -105,71 +105,71 @@ const heroData = {
         iconUrl: '/assets/img/icons/IUI, IVF & ICSI.jpg',
         index: '01',
         title: 'IUI, IVF & ICSI',
-        subtitle: 'In-vitro fertilization with Intracytoplasmic sperm injection for better success',
-        link: '/service/service-details',
+        subtitle: 'We believe in bringing advanced fertility care with customized care with the start of the ART facility. ',
+        link: '/fertility-treatments/ivf-icsi/',
       },
       {
         iconUrl: '/assets/img/icons/TESA PESA.jpg',
         index: '02',
         title: 'TESA/PESA',
-        subtitle: 'TESA, MicroTESE, Semen Analysis and varicocele treatment',
-        link: '/service/service-details',
+        subtitle: 'We help in resolving the fertility issues such as TESE/PESA, Semen analysis, PESA, and the treatment for the low sperm count.',
+        link: '/advanced-fertility-care/tesa-pesa/',
       },
       {
         iconUrl: '/assets/img/icons/Genetic Testing.jpg',
         index: '03',
         title: 'Genetic Testing',
-        subtitle: 'PGT-A, PGT-M, PGT-SR and comprehensive genetic screening',
-        link: '/service/service-details',
+        subtitle: 'We ensure that healthy embryo selection improves IVF success and reduces risks such as PGT-A, PGT-M, and PGT-SR.',
+        link: '/genetic-testing-pgt/pgt-a/',
       },
       {
         iconUrl: '/assets/img/icons/Blastocyst Transfer.jpg',
         index: '04',
         title: 'Blastocyst Transfer',
-        subtitle: 'Advanced embryo transfer technique for higher pregnancy rates',
-        link: '/service/service-details',
+        subtitle: 'Blastocyst Transfer is an advanced technique where embryos are cultured in the lab for 5-6 days to reach the blastocyst stage before being transferred to the uterus.',
+        link: '/fertility-treatments/blastocyst-transfer/',
       },
       {
         iconUrl: '/assets/img/icons/Donor Program.jpg',
         index: '05',
         title: 'Donor Program',
-        subtitle: 'Donor program for couples with fertility issues like low sperm count, low motility, etc.',
-        link: '/service/service-details',
+        subtitle: 'We believe in helping couples who require additional support in achieving pregnancy. Donor sperm, Donor eggs, Donor Embryos',
+        link: '/',
       },
       {
         iconUrl: '/assets/img/icons/Surrogacy.jpg',
         index: '05',
         title: 'Surrogacy',
-        subtitle: 'Complete surrogacy services with legal support and medical care',
-        link: '/service/service-details',
+        subtitle: 'We offer ethical, medically guided surrogacy assistance with complete end-to-end care.',
+        link: '/',
       },
       {
         iconUrl: '/assets/img/icons/Cryopreservation.jpg',
         index: '06',
         title: 'Cryopreservation',
-        subtitle: 'Cryopreservation of sperm, eggs, embryos, and ovarian tissue for future use',
-        link: '/service/service-details',
+        subtitle: 'We help in preserving fertility for the future with reliable and safe freezing options.',
+        link: '/',
       },
       {
         iconUrl: '/assets/img/icons/Genetic Counselling.jpg',
         index: '08',
         title: 'Genetic Counselling',
-        subtitle: 'Genetic counselling for couples with fertility issues like low sperm count, low motility, etc.',
-        link: '/service/service-details',
+        subtitle: 'We help couples understand and manage genetic risks in family planning, assessing family history for inherited conditions guiding them through options. ',
+        link: '/',
       },
       {
         iconUrl: '/assets/img/icons/Laparoscopy & Hysteroscopy.jpg',
         index: '07',
         title: 'Laparoscopy & Hysteroscopy',
-        subtitle: 'Laparoscopy & Hysteroscopy for treatment of fertility issues',
-        link: '/service/service-details',
+        subtitle: 'We provide minimally invasive surgical procedures to diagnose and treat problems such as fibroids, blocked tubes, and endometriosis.',
+        link: '/surgeries/hysteroscopy/',
       },
       {
         iconUrl: '/assets/img/icons/PRP & Ovarian Rejuvenation.jpg',
         index: '08',
         title: 'PRP & Ovarian Rejuvenation',
-        subtitle: 'Platelet-rich plasma therapy for improved ovarian function',
-        link: '/service/service-details',
+        subtitle: 'We treat couples with an advanced and non-surgical procedure that uses the body’s own healing power to rejuvenate ovarian function.',
+        link: '/advanced-fertility-care/prp-ovarian-rejuvenation/',
       },
       
       
@@ -557,7 +557,7 @@ const heroData = {
     familyImage: '/assets/img/happy_family.png', // Please replace with actual family image
     whyChooseHeading: 'WHY CHOOSE US?',
     whyChooseText: 'Seeds of Innocens has always been the encouraged choice. Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora, Seeds of Innocens is the leading India’s best IVF centre. Seeds of Innocens has grown to over 35 centres across 8 states and has expanded overseas to Oman, Muscat, and Zambia. It is the only lab in North India that has collaborated with the Department of Reproductive Sciences, University of Gent, Belgium, for the exchange of best practices and technology in infertility.',
-    callUsLink: '/contact',
+    callUsLink: 'tel:+919810350512',
     callUsText: 'CALL US',
     selfCycleHeading: 'VISION AND MISSION',
     selfCycleText: 'At Seeds of Innocens, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
@@ -614,6 +614,7 @@ const page = () => {
         bottomSpaceLg="40"
         bottomSpaceMd="50"
         className={''}
+        id="fertility-treatments"
       >
         <Service cardBg={'cs_gray_bg'} data={serviceData} />
       </Section>

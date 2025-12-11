@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import centersData from '../india-centers-data.json';
 import { notFound } from 'next/navigation';
+import { getAssetPath } from '@/app/utils/assetPath';
 
 export async function generateStaticParams() {
   try {
@@ -49,20 +50,23 @@ const page = async ({ params }) => {
     title: center.name,
   };
 
+  // Process images with basePath for production
+  const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2.jpg');
+  
   const serviceData = {
     serviceHeading: '',
     services: [],
-    mainImage: center.image || '/assets/img/recent_post2.jpg',
+    mainImage: processedCenterImage,
     serviceDetails: [],
     footerText: '',
-    additionalImages: center.image || '/assets/img/recent_post2.jpg',
+    additionalImages: processedCenterImage,
     iconBoxes: [],
     subtitle: '',
     readMoreUrl: '/appointments',
     readMoreText: 'Book Appointment',
     benefitImages: [
-      center.image || '/assets/img/recent_post2.jpg',
-      center.image || '/assets/img/recent_post2.jpg'
+      processedCenterImage,
+      processedCenterImage
     ],
   };
 
@@ -77,7 +81,7 @@ const page = async ({ params }) => {
         paragraphs: [
           `Struggling with infertility can be emotionally and physically draining, but you are not alone. At Seeds of Innocens, our IVF Centre in ${cityName} is dedicated to turning your hopes of becoming a parent into reality. We offer advanced fertility treatments combined with personal care, giving couples the best chance of conceiving a healthy baby.`,
         ],
-        sideImage: center.image || '/assets/img/recent_post2.jpg',
+        sideImage: processedCenterImage,
       },
       {
         heading: `Why Choose Seeds of Innocens IVF Centre in ${cityName}?`,
@@ -245,19 +249,21 @@ const page = async ({ params }) => {
                   {doctor.slug ? (
                     <Link href={`/doctors/${doctor.slug}`} className="cs_team_thumbnail">
                       <Image 
-                        src={doctor.image} 
+                        src={getAssetPath(doctor.image)} 
                         alt={`${doctor.name} Thumbnail`} 
                         width={302} 
                         height={423}
+                        loading="eager"
                       />
                     </Link>
                   ) : (
                     <div className="cs_team_thumbnail">
                       <Image 
-                        src={doctor.image} 
+                        src={getAssetPath(doctor.image)} 
                         alt={`${doctor.name} Thumbnail`} 
                         width={302} 
                         height={423}
+                        loading="eager"
                       />
                     </div>
                   )}

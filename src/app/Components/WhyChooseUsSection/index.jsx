@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaPhone, FaCalendarAlt } from "react-icons/fa";
 import Slider from "react-slick";
+import { getAssetPathClient } from "../../utils/assetPath";
 
 const WhyChooseUsSection = ({ data }) => {
   const sliderRef = useRef(null);
@@ -49,11 +50,12 @@ const WhyChooseUsSection = ({ data }) => {
         <div className="col-lg-6">
           <div className="cs_why_choose_image_wrapper">
             <Image
-              src={data.familyImage}
+              src={getAssetPathClient(data.familyImage)}
               alt="Happy Family"
               width={600}
               height={500}
               className="cs_why_choose_image"
+              loading="eager"
             />
           </div>
         </div>
@@ -102,11 +104,12 @@ const WhyChooseUsSection = ({ data }) => {
         <div className="col-lg-6">
           <div className="cs_why_choose_image_wrapper cs_relative">
             <Image
-              src={data.selfieImage}
+              src={getAssetPathClient(data.selfieImage)}
               alt="Self Cycle"
               width={600}
               height={500}
               className="cs_why_choose_image"
+              loading="eager"
             />
             {data.speechBubbleText && (
               <div className="cs_speech_bubble">
@@ -138,11 +141,12 @@ const WhyChooseUsSection = ({ data }) => {
                 <div className="cs_why_choose_mobile_slide">
                   <div className="cs_why_choose_image_wrapper">
                     <Image
-                      src={data.familyImage}
+                      src={getAssetPathClient(data.familyImage)}
                       alt="Happy Family"
                       width={600}
                       height={400}
                       className="cs_why_choose_image"
+                      loading="eager"
                     />
                   </div>
                   <div className="cs_why_choose_content">
@@ -161,11 +165,12 @@ const WhyChooseUsSection = ({ data }) => {
                 <div className="cs_why_choose_mobile_slide">
                   <div className="cs_why_choose_image_wrapper cs_relative">
                     <Image
-                      src={data.selfieImage}
+                      src={getAssetPathClient(data.selfieImage)}
                       alt="Vision and Mission"
                       width={600}
                       height={400}
                       className="cs_why_choose_image"
+                      loading="eager"
                     />
                     {data.speechBubbleText && (
                       <div className="cs_speech_bubble">

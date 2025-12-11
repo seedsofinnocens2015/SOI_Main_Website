@@ -1,4 +1,6 @@
+"use client"
 import Spacing from "../Spacing";
+import { getAssetPathClient } from "../../utils/assetPath";
 
 export default function Section({
   topSpaceLg = "80",
@@ -11,15 +13,17 @@ export default function Section({
   children,
   ...props
 }) {
+  const processedBackgroundImage = backgroundImage ? getAssetPathClient(backgroundImage) : "";
+  
   return (
     <section
       className={`${className ? className : ""}`}
       id={id}
       {...props}
       style={
-        backgroundImage
+        processedBackgroundImage
           ? {
-              backgroundImage: `url(${backgroundImage})`,
+              backgroundImage: `url(${processedBackgroundImage})`,
             }
           : {}
       }

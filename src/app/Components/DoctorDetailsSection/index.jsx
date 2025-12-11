@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getAssetPath } from "@/app/utils/assetPath";
 
 const DoctorDetailsSection = ({ data }) => {
   return (
@@ -7,7 +8,7 @@ const DoctorDetailsSection = ({ data }) => {
         <div className="row cs_row_gap_30 cs_gap_y_30 align-items-center">
           <div className="col-lg-5">
             <div className="cs_doctor_details_thumbnail position-relative">
-            <Image src={data.image} alt="img" width={523} height={692}   />
+            <Image src={getAssetPath(data.image)} alt="img" width={523} height={692} loading="eager" />
               <div className="cs_doctor_thumbnail_shape1 position-absolute cs_blue_bg" />
               <div className="cs_doctor_thumbnail_shape2 position-absolute cs_accent_bg" />
             </div>

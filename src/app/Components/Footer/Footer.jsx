@@ -1,14 +1,13 @@
+"use client"
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsTwitter } from 'react-icons/bs';
 import { FaPhoneAlt } from 'react-icons/fa';
 import {
-  FaFacebookF,
-  FaInstagram,
   FaLocationDot,
-  FaPinterestP,
   FaRegClock,
 } from 'react-icons/fa6';
+import { getAssetPathClient } from '../../utils/assetPath';
 
 const data = {
   backgroundImage: 'assets/img/footer_bg.jpg',
@@ -28,7 +27,7 @@ const data = {
     },
   ],
   socialLinks: [
-    { href: '#', icon: 'fa-brands fa-facebook-f' },
+    { href: 'https://www.facebook.com/SeedsofInnocence', icon: 'fa-brands fa-facebook-f' },
     { href: '#', icon: 'fa-brands fa-pinterest-p' },
     { href: '#', icon: 'fa-brands fa-twitter' },
     { href: '#', icon: 'fa-brands fa-instagram' },
@@ -79,6 +78,13 @@ const data = {
 };
 
 const Footer = () => {
+  // Use useState to ensure images are processed on client-side
+  const [mounted, setMounted] = React.useState(false);
+  
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+  
   const data = {
     backgroundImage: '/assets/img/footer_bg.jpg',
     logo: '/assets/img/footer_logo.svg',
@@ -86,17 +92,17 @@ const Footer = () => {
       'All Days Open <br /> Open Hours:<br />  Mon - Sun: 9.00 am. - 7.00 pm. ',
     contactText2: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
     contactText3: '+91-9810350512',
-    facebookHref: '/',
-    pinterestHref: '/',
-    twitterHref: '/',
-    instagramHref: '/',
+    facebookHref: 'https://www.facebook.com/SeedsofInnocence',
+    youtubeHref: 'https://www.youtube.com/@seedsofinnocens',
+    linkedinHref: 'https://www.linkedin.com/company/seedsofinnocens',
+    instagramHref: 'https://www.instagram.com/seedsofinnocensivf',
     widgets: [
       {
         title: 'Fertility Treatment',
         links: [
           { href: '/fertility-treatments/ivf-icsi/', text: 'IVF-ICSI' },
           { href: '/fertility-treatments/iui/', text: 'IUI' },
-          { href: 'advanced-fertility-care/male-infertility/', text: 'Male Infertility' },
+          { href: '/advanced-fertility-care/male-infertility/', text: 'Male Infertility' },
           { href: '/advanced-fertility-care/egg-freezing/', text: 'Egg Freezing' },
           { href: '/fertility-treatments/blastocyst-transfer/', text: 'Blastocyst Transfer' },
         ],
@@ -105,10 +111,10 @@ const Footer = () => {
         title: 'Quick Links',
         links: [
           { href: '/', text: 'Home' },
-          { href: '/about', text: 'About Us' },
-          { href: '/infertility-treatment', text: 'Our Services' },
+          { href: '/about/our-story/', text: 'About Us' },
+          { href: '/#fertility-treatments', text: 'Our Services' },
           { href: '/doctors', text: 'Our Doctors' },
-          { href: '/contact', text: 'Contact' },
+          { href: '/contact/call-back-form/', text: 'Contact' },
         ],
       },
     ],
@@ -116,7 +122,7 @@ const Footer = () => {
       {
         href: '/blog/blog-details',
         image: '/assets/img/recent_post2.jpg',
-        date: '08 Apr 2024',
+        date: '08 Apr 2025',
         title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
       },
       {
@@ -128,10 +134,10 @@ const Footer = () => {
     ],
     copyrightText: 'Copyright © 2025 Seeds of Innocens, All Rights Reserved.',
     footerMenu: [
-      { href: '/about', text: 'About Us' },
-      { href: '/appointments', text: 'Book Appointment' },
-      { href: '/blog', text: 'Blogs' },
-      { href: '/service', text: 'Services' },
+      // { href: '/about', text: 'About Us' },
+      // { href: '/appointments', text: 'Book Appointment' },
+      // { href: '/blog', text: 'Blogs' },
+      // { href: '/service', text: 'Services' },
     ],
   };
 
@@ -146,7 +152,7 @@ const Footer = () => {
           <div className="cs_footer_col">
             <div className="cs_footer_highlight_col">
               <div className="cs_footer_logo">
-              <Image src={data.logo} alt="img" width={305} height={63} loading="eager" />
+              <Image src={mounted ? getAssetPathClient(data.logo) : data.logo} alt="img" width={305} height={63} loading="eager" />
               </div>
               <ul className="cs_footer_contact cs_mp_0">
                 <li>
@@ -194,24 +200,40 @@ const Footer = () => {
               </ul>
               <div className="cs_social_btns cs_style_1">
                 <Link href={data.facebookHref} className="cs_center">
-                  <i>
-                    <FaFacebookF />
-                  </i>
+                  <Image
+                    src={getAssetPathClient('/assets/img/icons/facebook.png')}
+                    alt="Facebook"
+                    width={20}
+                    height={20}
+                    style={{ width: '20px', height: '20px', objectFit: 'contain' }}
+                  />
                 </Link>
-                <Link href={data.pinterestHref} className="cs_center">
-                  <i>
-                    <FaPinterestP />
-                  </i>
+                <Link href={data.youtubeHref} className="cs_center">
+                  <Image
+                    src={getAssetPathClient('/assets/img/icons/youtube.png')}
+                    alt="YouTube"
+                    width={20}
+                    height={20}
+                    style={{ width: '20px', height: '20px', objectFit: 'contain' }}
+                  />
                 </Link>
-                <Link href={data.twitterHref} className="cs_center">
-                  <i>
-                    <BsTwitter />
-                  </i>
+                <Link href={data.linkedinHref} className="cs_center">
+                  <Image
+                    src={getAssetPathClient('/assets/img/icons/linkedin.png')}
+                    alt="LinkedIn"
+                    width={20}
+                    height={20}
+                    style={{ width: '20px', height: '20px', objectFit: 'contain' }}
+                  />
                 </Link>
                 <Link href={data.instagramHref} className="cs_center">
-                  <i>
-                    <FaInstagram />
-                  </i>
+                  <Image
+                    src={getAssetPathClient('/assets/img/icons/instagram.png')}
+                    alt="Instagram"
+                    width={20}
+                    height={20}
+                    style={{ width: '20px', height: '20px', objectFit: 'contain' }}
+                  />
                 </Link>
               </div>
             </div>
@@ -240,7 +262,7 @@ const Footer = () => {
                   <li key={index}>
                     <div className="cs_recent_post">
                       <Link href={post.href} className="cs_recent_post_thumb">
-                      <Image src={post.image} alt="img" width={85} height={85} loading="eager" />
+                      <Image src={mounted ? getAssetPathClient(post.image) : post.image} alt="img" width={85} height={85} loading="eager" />
                       </Link>
                       <div className="cs_recent_post_right">
                         <p>{post.date}</p>

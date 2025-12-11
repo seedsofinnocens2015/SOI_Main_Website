@@ -26,33 +26,54 @@ export function getAssetPath(path) {
  * This uses window.location to detect if we're in production
  */
 export function getAssetPathClient(path) {
+  // If path is empty, return as is
+  if (!path) {
+    return path;
+  }
+  
+  // If path already starts with '/new/', return as is (already has basePath)
+  if (path.startsWith('/new/')) {
+    return path;
+  }
+  
+  // If path already starts with 'http://' or 'https://', return as is (external URL)
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  
   // Check if we're in browser
-  if (typeof window === 'undefined') {
-    return path;
+  if (typeof window !== 'undefined') {
+    // Check if current pathname or base href includes '/new' (production basePath)
+    const pathname = window.location.pathname;
+    const baseHref = document.querySelector('base')?.getAttribute('href') || '';
+    const isProduction = pathname.startsWith('/new') || baseHref.includes('/new');
+    const basePath = isProduction ? '/new' : '';
+    
+    // If path already starts with basePath, return as is
+    if (basePath && path.startsWith(basePath)) {
+      return path;
+    }
+    
+    // If path starts with '/', add basePath prefix
+    if (path.startsWith('/')) {
+      return `${basePath}${path}`;
+    }
+    
+    // If path doesn't start with '/', add '/' and basePath prefix
+    return `${basePath}/${path}`;
   }
   
-  // Check if current pathname or base href includes '/new' (production basePath)
-  const pathname = window.location.pathname;
-  const baseHref = document.querySelector('base')?.getAttribute('href') || '';
-  const isProduction = pathname.startsWith('/new') || baseHref.includes('/new');
-  const basePath = isProduction ? '/new' : '';
-  
-  // If path already starts with basePath, return as is
-  if (path.startsWith(basePath)) {
-    return path;
-  }
-  
-  // If path already starts with '/new', return as is (already has basePath)
-  if (path.startsWith('/new')) {
-    return path;
-  }
+  // SSR: Check if we're in production build (for static export)
+  // In production, always add /new prefix for assets
+  const isProductionBuild = process.env.NODE_ENV === 'production';
+  const basePath = isProductionBuild ? '/new' : '';
   
   // If path starts with '/', add basePath prefix
   if (path.startsWith('/')) {
     return `${basePath}${path}`;
   }
   
-  // Otherwise, return path as is
-  return path;
+  // If path doesn't start with '/', add '/' and basePath prefix
+  return `${basePath}/${path}`;
 }
 

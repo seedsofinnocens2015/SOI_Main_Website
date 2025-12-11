@@ -12,6 +12,15 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  // Disable prefetching completely for static export
+  ...(isProduction && {
+    experimental: {
+      // Disable RSC prefetching in static export
+      isrMemoryCacheSize: 0,
+    },
+  }),
+  // Disable automatic prefetching for all links
+  reactStrictMode: true,
 };
 
 export default nextConfig;

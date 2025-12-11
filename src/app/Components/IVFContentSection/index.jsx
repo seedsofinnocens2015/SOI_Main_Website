@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FaClock, FaLocationDot, FaEnvelope } from 'react-icons/fa6';
 import { FaPhoneAlt, FaCalendarAlt } from 'react-icons/fa';
 import SectionHeading from '../SectionHeading';
+import { getAssetPathClient } from '../../utils/assetPath';
 
 const IVFContentSection = ({ data, benefitImages }) => {
   const [openSteps, setOpenSteps] = useState({});
@@ -43,7 +44,7 @@ const IVFContentSection = ({ data, benefitImages }) => {
                 <div className="col-lg-6 col-md-6">
                   <div className="cs_service_details_thumbnail cs_side_image">
                     <Image 
-                      src={benefitImages[0]} 
+                      src={getAssetPathClient(benefitImages[0])} 
                       alt="IVF ICSI" 
                       width={500}
                       height={300}
@@ -61,7 +62,7 @@ const IVFContentSection = ({ data, benefitImages }) => {
                 <div className="col-lg-6 col-md-6">
                   <div className="cs_service_details_thumbnail cs_side_image">
                     <Image 
-                      src={benefitImages[1]} 
+                      src={getAssetPathClient(benefitImages[1])} 
                       alt="IVF ICSI" 
                       width={500} 
                       height={300}
@@ -168,7 +169,7 @@ const IVFContentSection = ({ data, benefitImages }) => {
                       />
                     ) : (
                       <Image 
-                        src={section.sideImage} 
+                        src={getAssetPathClient(section.sideImage)} 
                         alt={section.heading || "Image"} 
                         width={500}
                         height={400}
@@ -260,7 +261,7 @@ const IVFContentSection = ({ data, benefitImages }) => {
               <div className="cs_ivf_content_bottom_image_wrapper" style={{ marginTop: '30px' }}>
                 <div className="cs_service_details_thumbnail">
                   <Image 
-                    src={section.bottomImage} 
+                    src={getAssetPathClient(section.bottomImage)} 
                     alt={section.heading || "Image"} 
                     width={1227}
                     height={253}

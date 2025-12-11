@@ -12,6 +12,7 @@ import {
   } from 'react-icons/fa6';
 import doctorsData from '../doctors-data.json';
 import { notFound } from 'next/navigation';
+import { getAssetPath } from '@/app/utils/assetPath';
 
 export async function generateStaticParams() {
   return doctorsData.map((doctor) => ({
@@ -37,7 +38,7 @@ const page = async ({ params }) => {
     name: doctor.name,
     subtitle: doctor.subtitle,
     description: doctor.description,
-    image: doctor.image,
+    image: getAssetPath(doctor.image),
     info: [
       {
         icon: <FaLocationDot />,

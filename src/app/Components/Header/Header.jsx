@@ -13,6 +13,7 @@ import {
 import { IoCall } from "react-icons/io5";
 import { FaAnglesRight, FaLocationDot } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const Header = ({ isTopBar, variant }) => {
   const router = useRouter();
@@ -225,10 +226,10 @@ const Header = ({ isTopBar, variant }) => {
             label: 'IVF Process / Patient Journey',
             href: '/resources/ivf-process-patient-journey',
           },
-          {
-            label: 'IVF Cost & Package Details',
-            href: '/resources/ivf-cost-package-details',
-          },
+          // {
+          //   label: 'IVF Cost & Package Details',
+          //   href: '/resources/ivf-cost-package-details',
+          // },
           {
             label: 'FAQs',
             href: '/resources/faqs',
@@ -241,15 +242,15 @@ const Header = ({ isTopBar, variant }) => {
             label: 'Patient Testimonial Videos',
             href: '/resources/patient-testimonial-videos',
           },
-          {
-            label: 'Downloads',
-            href: '/resources/downloads',
-            subItems: [
-              { label: 'Forms', href: '/resources/downloads/forms' },
-              { label: 'Consents', href: '/resources/downloads/consents' },
-              { label: 'Checklists', href: '/resources/downloads/checklists' },
-            ],
-          },
+          // {
+          //   label: 'Downloads',
+          //   href: '/resources/downloads',
+          //   subItems: [
+          //     { label: 'Forms', href: '/resources/downloads/forms' },
+          //     { label: 'Consents', href: '/resources/downloads/consents' },
+          //     { label: 'Checklists', href: '/resources/downloads/checklists' },
+          //   ],
+          // },
           {
             label: 'Fertility Calculator',
             href: '/resources/fertility-calculator',
@@ -433,21 +434,8 @@ const Header = ({ isTopBar, variant }) => {
     }
   }, [isShowMobileMenu]);
 
-  // Prefetch important links on mount for faster navigation
-  useEffect(() => {
-    const importantLinks = [
-      '/',
-      '/infertility-treatment',
-      '/ivf-centers',
-      '/doctors',
-      '/about',
-      '/resources',
-      '/contact',
-    ];
-    importantLinks.forEach(link => {
-      router.prefetch(link);
-    });
-  }, [router]);
+  // Disable all prefetching in static export to avoid .txt file requests
+  // Prefetching is disabled for static export builds
 
   return (
     <>
@@ -493,8 +481,14 @@ const Header = ({ isTopBar, variant }) => {
         <div className="cs_main_header">
           <div className="container">
             <div className="cs_main_header_in cs_compact_gap">
-                <Link className="cs_site_branding" href={menu.logoLink} prefetch={true}>
-                <Image src={menu.logoUrl} alt="img" width={350} height={110} loading="eager" />
+                <Link className="cs_site_branding" href={menu.logoLink} prefetch={false}>
+                <Image 
+                  src={typeof window !== 'undefined' ? getAssetPathClient(menu.logoUrl) : menu.logoUrl} 
+                  alt="img" 
+                  width={350} 
+                  height={110} 
+                  loading="eager" 
+                />
                 </Link>
               <div className="cs_main_header_right ">
                 <div className="cs_nav cs_primary_color ">
@@ -514,7 +508,7 @@ const Header = ({ isTopBar, variant }) => {
                       >
                         <Link
                           href={item.href}
-                          prefetch={true}
+                          prefetch={false}
                           onClick={(e) => {
                             // Check if navItem has megaMenuCategories with subItems
                             const hasCategoriesWithSubItems = item.isMegaMenu && 
@@ -524,9 +518,6 @@ const Header = ({ isTopBar, variant }) => {
                             // Prevent navigation if it has megaMenuCategories with subItems, or if it has regular subItems
                             if (hasCategoriesWithSubItems || item.subItems) {
                               e.preventDefault();
-                            } else {
-                              // Prefetch and navigate immediately for faster navigation
-                              router.prefetch(item.href);
                             }
                             if (isMobileView) {
                               setIsShowMobileMenu(!isShowMobileMenu);
@@ -562,14 +553,13 @@ const Header = ({ isTopBar, variant }) => {
                                       <div className="cs_mobile_category_header">
                                         <Link
                                           href={category.href}
-                                          prefetch={true}
+                                          prefetch={false}
                                           onClick={(e) => {
                                             // Only prevent navigation if category has subItems
                                             if (hasSubItems) {
                                               e.preventDefault();
                                             } else {
                                               // If no subItems, allow navigation and close menu
-                                              router.prefetch(category.href);
                                               setIsShowMobileMenu(false);
                                             }
                                           }}
@@ -614,16 +604,15 @@ const Header = ({ isTopBar, variant }) => {
                                                       <div className="cs_mobile_category_header">
                                                         <Link
                                                           href={subItem.href}
-                                                          prefetch={true}
+                                                          prefetch={false}
                                                           onClick={(e) => {
                                                             if (item.label === 'IVF Centers' && category.label === 'India') {
                                                               e.preventDefault();
-                                                            } else {
-                                                              router.prefetch(subItem.href);
                                                             }
-                                                            setIsShowMobileMenu(
-                                                              !isShowMobileMenu
-                                                            );
+                                                            // Close mobile menu on navigation
+                                                            if (isMobileView) {
+                                                              setIsShowMobileMenu(false);
+                                                            }
                                                           }}
                                                         >
                                                           {subItem.label}
@@ -656,9 +645,8 @@ const Header = ({ isTopBar, variant }) => {
                                                             <li key={nestedIndex}>
                                                               <Link
                                                                 href={nestedItem.href}
-                                                                prefetch={true}
+                                                                prefetch={false}
                                                                 onClick={() => {
-                                                                  router.prefetch(nestedItem.href);
                                                                   setIsShowMobileMenu(
                                                                     !isShowMobileMenu
                                                                   );
@@ -674,16 +662,16 @@ const Header = ({ isTopBar, variant }) => {
                                                   ) : (
                                                     <Link
                                                       href={subItem.href}
-                                                      prefetch={true}
+                                                      prefetch={false}
                                                       onClick={(e) => {
                                                         if (item.label === 'IVF Centers' && category.label === 'India') {
                                                           e.preventDefault();
                                                         } else {
-                                                          router.prefetch(subItem.href);
+                                                          // Close mobile menu on navigation
+                                                          if (isMobileView) {
+                                                            setIsShowMobileMenu(false);
+                                                          }
                                                         }
-                                                        setIsShowMobileMenu(
-                                                          !isShowMobileMenu
-                                                        );
                                                       }}
                                                     >
                                                       {subItem.label}
@@ -760,13 +748,11 @@ const Header = ({ isTopBar, variant }) => {
                                         >
                                           <Link
                                             href={category.href}
-                                            prefetch={true}
+                                            prefetch={false}
                                             onClick={(e) => {
                                               // Only prevent navigation if category has subItems
                                               if (hasSubItems) {
                                                 e.preventDefault();
-                                              } else {
-                                                router.prefetch(category.href);
                                               }
                                             }}
                                           >
@@ -829,12 +815,10 @@ const Header = ({ isTopBar, variant }) => {
                                         >
                                           <Link
                                             href={subItem.href}
-                                            prefetch={true}
+                                            prefetch={false}
                                             onClick={(e) => {
                                               if (item.label === 'IVF Centers' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India') {
                                                 e.preventDefault();
-                                              } else {
-                                                router.prefetch(subItem.href);
                                               }
                                             }}
                                           >
@@ -885,12 +869,10 @@ const Header = ({ isTopBar, variant }) => {
                                         <li key={nestedIndex}>
                                           <Link
                                             href={nestedItem.href}
-                                            prefetch={true}
+                                            prefetch={false}
                                             onClick={() => {
-                                              router.prefetch(nestedItem.href);
-                                              setIsShowMobileMenu(
-                                                !isShowMobileMenu
-                                              );
+                                                                  // Close mobile menu on navigation
+                                                                  setIsShowMobileMenu(false);
                                             }}
                                           >
                                             {nestedItem.label}
@@ -915,9 +897,8 @@ const Header = ({ isTopBar, variant }) => {
                               <li key={subIndex}>
                                 <Link
                                   href={subItem.href}
-                                  prefetch={true}
+                                  prefetch={false}
                                   onClick={() => {
-                                    router.prefetch(subItem.href);
                                     setIsShowMobileMenu(!isShowMobileMenu);
                                   }}
                                 >
@@ -980,7 +961,7 @@ const Header = ({ isTopBar, variant }) => {
                     </div>
                   </form>
                 </div>
-                <Link href={menu.btnUrl} className="cs_btn cs_style_1 cs_color_1" prefetch={true}>
+                <Link href={menu.btnUrl} className="cs_btn cs_style_1 cs_color_1" prefetch={false}>
                   <span>{menu.btnText}</span>
                   <i>
                     <FaAnglesRight />
