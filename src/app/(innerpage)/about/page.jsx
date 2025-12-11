@@ -141,7 +141,7 @@ const page = () => {
         <div className='about-page-area'>
         <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/All_Page_Header2.jpg"
+        backgroundImage="/assets/img/Top-Header.jpg"
       >
         <PageHeading data={headingData} />
       </Section>
