@@ -43,9 +43,11 @@ const Header = ({ isTopBar, variant }) => {
             subItems: [
               { label: 'IVF / ICSI', href: '/fertility-treatments/ivf-icsi' },
               { label: 'IUI', href: '/fertility-treatments/iui' },
+              { label: 'Monitoring in an IUI Cycle', href: '/fertility-treatments/monitoring-in-iui-cycle' },
               { label: 'Ovulation Induction', href: '/fertility-treatments/ovulation-induction' },
               { label: 'Follicular Monitoring', href: '/fertility-treatments/follicular-monitoring' },
               { label: 'Blastocyst Transfer', href: '/fertility-treatments/blastocyst-transfer' },
+              { label: 'Secondary Infertility', href: '/fertility-treatments/secondary-infertility' },
             ],
           },
           {
@@ -56,8 +58,13 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'PRP & Ovarian Rejuvenation', href: '/advanced-fertility-care/prp-ovarian-rejuvenation' },
               { label: 'Male Infertility', href: '/advanced-fertility-care/male-infertility' },
               { label: 'TESA / PESA', href: '/advanced-fertility-care/tesa-pesa' },
+              { label: 'MicroTESE', href: '/advanced-fertility-care/microtese' },
               { label: 'Semen Analysis', href: '/advanced-fertility-care/semen-analysis' },
+              { label: 'Semen Analysis at Home', href: '/advanced-fertility-care/semen-analysis-at-home' },
               { label: 'Azoospermia', href: '/advanced-fertility-care/azoospermia' },
+              { label: 'Non-Obstructive Azoospermia', href: '/advanced-fertility-care/non-obstructive-azoospermia' },
+              { label: 'Obstructive Azoospermia', href: '/advanced-fertility-care/obstructive-azoospermia' },
+              { label: 'Oligospermia', href: '/advanced-fertility-care/oligospermia' },
               { label: 'Blocked Seminiferous Tubules', href: '/advanced-fertility-care/blocked-seminiferous-tubules' },
               { label: 'Endocrinological Disorder', href: '/advanced-fertility-care/endocrinological-disorder' },
             ],
@@ -368,6 +375,7 @@ const Header = ({ isTopBar, variant }) => {
         isMegaMenu: false,
         subItems: [
           { label: 'Book Appointment', href: '/contact/book-appointment' },
+          { label: 'Online Payment', href: '/contact/online-payment' },
           { label: 'WhatsApp', href: '/contact/whatsapp' },
           { label: 'Call Back Form', href: '/contact/call-back-form' },
           { label: 'Center Locator', href: '/contact/center-locator' },

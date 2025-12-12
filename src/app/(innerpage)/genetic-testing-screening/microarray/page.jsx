@@ -32,7 +32,7 @@ const microarrayContentData = {
       paragraphs: [
         'Advances in genetic testing have paved the way for better diagnostics and personalised healthcare. Among these powerful tools is Microarray, a sophisticated genetic test that helps detect genetic variations linked to developmental disorders, chromosomal abnormalities, and prenatal screening. It is very valuable in pregnancy-related diagnostics and provides critical insights for expecting parents.',
       ],
-      sideImage: '/assets/img/genetic.jpg',
+      sideImage: '/assets/img/Microarray.jpg',
     },
     {
       heading: 'What is Microarray?',
