@@ -6,12 +6,19 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
 
 const headingData = {
   title: 'Fertility Blogs',
 };
 
-const blogs = [
+// Get blogs from JSON and filter by category, merge with local data if needed
+const jsonBlogs = blogsData.blogs.filter(blog => 
+  blog.category === 'Fertility' || blog.category === 'प्रजनन क्षमता'
+);
+
+// Use blogs from JSON, fallback to local if not found
+const blogs = jsonBlogs.length > 0 ? jsonBlogs : [
   {
     title: 'Understanding Fertility: A Comprehensive Guide',
     excerpt: 'Learn about the basics of fertility, factors that affect it, and when to seek help from a fertility specialist.',
@@ -20,7 +27,7 @@ const blogs = [
     author: 'Dr. Gauri Agarwal',
     category: 'Fertility',
     readTime: '5 min read',
-    link: '#',
+    slug: 'understanding-fertility-comprehensive-guide',
   },
   {
     title: 'Age and Fertility: What You Need to Know',
@@ -265,7 +272,7 @@ const Page = () => {
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
             {filteredBlogs.map((blog, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <Link href={blog.link} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
+                <Link href={blog.slug ? `/resources/blogs/${blog.slug}` : '#'} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
                   <div className="cs_blog_card cs_style_1" style={{ 
                     height: '100%',
                     transition: 'all 0.3s ease',

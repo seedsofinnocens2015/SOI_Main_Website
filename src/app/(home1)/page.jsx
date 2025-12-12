@@ -220,7 +220,7 @@ const heroData = {
         id: 'dental',
         items: [
           {
-            imgUrl: '/assets/img/Centers/malviyanagar.jpg',
+            imgUrl: '/assets/img/Centres/malviyanagar.jpg',
             title: 'Malviya Nagar, Delhi',
             subtitle:
               'Seeds of Innocens IVF, 3, opposite Aurbindo College, MMTC Road, Malviya Nagar, New Delhi-110017',
@@ -228,7 +228,7 @@ const heroData = {
             coordinates: [28.5355, 77.2167], // Delhi coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/ghaziabad.jpg',
+            imgUrl: '/assets/img/Centres/ghaziabad.jpg',
             title: 'Ghaziabad, Uttar Pradesh',
             subtitle:
               'Seeds of Innocens IVF, Yashoda Hospital Opp. Nehru Stadium, Nehru Nagar, Ghaziabad, U.P.-201001',
@@ -236,7 +236,7 @@ const heroData = {
             coordinates: [28.6692, 77.4538], // Ghaziabad coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/gurgaon.jpg',
+            imgUrl: '/assets/img/Centres/gurgaon.jpg',
             title: 'Gurgaon, Haryana',
             subtitle:
               'Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar, Nigam Office Gurugram, Haryana-122001',
@@ -244,7 +244,7 @@ const heroData = {
             coordinates: [28.4089, 77.0378], // Gurgaon coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/faridabad.jpg',
+            imgUrl: '/assets/img/Centres/faridabad.jpg',
             title: 'Faridabad, Haryana',
             subtitle:
               'Seeds of Innocens IVF, A-6/A Neelam Bata Road, Above ICICI Bank, NIT Faridabad, Haryana-121001',
@@ -252,7 +252,7 @@ const heroData = {
             coordinates: [28.4089, 77.3167], // Faridabad coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/jankpuri.jpg',
+            imgUrl: '/assets/img/Centres/jankpuri.jpg',
             title: 'Jankpuri, Delhi',
             subtitle:
               'Seeds of Innocens IVF, C1A/50A, Pankha Road, Janakpuri, New Delhi-110058',
@@ -260,7 +260,7 @@ const heroData = {
             coordinates: [28.6219, 77.0882], // Janakpuri coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/pitampura.jpg',
+            imgUrl: '/assets/img/Centres/pitampura.jpg',
             title: 'Pitampura, Delhi',
             subtitle:
               'Seeds of Innocens IVF, Plot no 1, First floor, Shiva Enclave, Near Harsh Vihar Chowk, Pitampura, Delhi-110034',
@@ -273,7 +273,7 @@ const heroData = {
         id: 'up',
         items: [
           {
-            imgUrl: '/assets/img/Centers/gorakhpur.jpg',
+            imgUrl: '/assets/img/Centres/gorakhpur.jpg',
             title: 'Gorakhpur, Uttar Pradesh',
             subtitle:
               '2nd Floor, 1076, Kamlesh Shopping Arcade, near Kalimandir, Golghar, Gorakhpur, U.P.-273001',
@@ -281,7 +281,7 @@ const heroData = {
             coordinates: [26.7588, 83.3697], // Gorakhpur coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/lucknow.jpg',
+            imgUrl: '/assets/img/Centres/lucknow.jpg',
             title: 'Lucknow, Uttar Pradesh',
             subtitle:
               'Drosia Tower, 5/5, Park Rd, Raj Bhavan Colony, Hazratganj, Lucknow, Uttar Pradesh 226001',
@@ -289,7 +289,7 @@ const heroData = {
             coordinates: [26.8467, 80.9462], // Lucknow coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/kanpur.jpg',
+            imgUrl: '/assets/img/Centres/kanpur.jpg',
             title: 'Kanpur, Uttar Pradesh',
             subtitle:
               '7/153, Kumhar Wali gali, Kanpur Vidya Mandir, Khalasi Line, Swaroop Nagar, Kanpur, Uttar Pradesh 208002',
@@ -297,7 +297,7 @@ const heroData = {
             coordinates: [26.4499, 80.3319], // Kanpur coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/meerut.jpg',
+            imgUrl: '/assets/img/Centres/meerut.jpg',
             title: 'Meerut, Uttar Pradesh',
             subtitle:
               'building 303/305, 2nd floor, Mangal Pandey Nagar, Ramgarhi, Meerut, Uttar Pradesh 250004',
@@ -305,7 +305,7 @@ const heroData = {
             coordinates: [28.9845, 77.7064], // Meerut coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/agra.jpg',
+            imgUrl: '/assets/img/Centres/agra.jpg',
             title: 'Agra, Uttar Pradesh',
             subtitle:
               '1st Floor, Shankar Point, Block No.9/4, Sanjay Palace, Sanjay Place, Civil Lines, Agra, Uttar Pradesh 282002',
@@ -319,7 +319,7 @@ const heroData = {
         id: 'kerala',
         items: [
           {
-            imgUrl: '/assets/img/Centers/kochi.jpg',
+            imgUrl: '/assets/img/Centres/kochi.jpg',
             title: 'Kochi, Kerala',
             subtitle:
               'Opp Royal drive showroom, Kannadikadu, Upasana Rd, Kundannoor, Maradu, Kochi, Kerala 682304',
@@ -327,7 +327,7 @@ const heroData = {
             coordinates: [9.9312, 76.2673], // Kochi coordinates
           },                           
           {
-            imgUrl: '/assets/img/Centers/kasaragod.jpg',
+            imgUrl: '/assets/img/Centres/kasaragod.jpg',
             title: 'Kasaragod, Kerala',
             subtitle:
               'Seeds of Innocens IVF, Wintouch Multi Speciality Hospital, Bank Road, Kasaragod, Kerala, 671121',
@@ -340,7 +340,7 @@ const heroData = {
         id: 'other',
         items: [
           {
-          imgUrl: '/assets/img/Centers/guwahati.jpg',
+          imgUrl: '/assets/img/Centres/guwahati.jpg',
             title: 'Guwahati, Assam',
             subtitle:
               'GS Rd, SATSANG VIHAR, Bhangagarh, Guwahati, Assam 781005',
@@ -348,7 +348,7 @@ const heroData = {
             coordinates: [26.1445, 91.7362], // Guwahati coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/haldwani.jpg',
+            imgUrl: '/assets/img/Centres/haldwani.jpg',
             title: 'Haldwani, Uttarakhand',
             subtitle:
               '2nd Floor, Laxmi Mohan Towers, Chauraha, Bamori Talli, Ganesh Vihar, Heera Nagar, Mukhani, Haldwani, Uttarakhand 263139',
@@ -356,7 +356,7 @@ const heroData = {
             coordinates: [29.2227, 79.5156], // Haldwani coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/ranchi.jpg',
+            imgUrl: '/assets/img/Centres/ranchi.jpg',
             title: 'Ranchi, Jharkhand',
             subtitle:
               '4th Floor, Maru Tower, Kanke Rd, Ranchi, Jharkhand 834008',
@@ -365,7 +365,7 @@ const heroData = {
           },
 
           // {
-          //   imgUrl: '/assets/img/Centers/srinagar.jpg',
+          //   imgUrl: '/assets/img/Centres/srinagar.jpg',
           //   title: 'Srinagar, Jammu and Kashmir',
           //   subtitle:
           //     'Karan Nagar Gole Market Rd, opposite Masjid, Karan Nagar, Srinagar, Jammu and Kashmir 190010',
@@ -378,7 +378,7 @@ const heroData = {
         items: [
           
           {
-            imgUrl: '/assets/img/Centers/muzaffarpur.jpg',
+            imgUrl: '/assets/img/Centres/muzaffarpur.jpg',
             title: 'Muzaffarpur, Bihar',
             subtitle:
               '2nd Floor, Hansa Complex, Maripur Main Rd, Musahri, Muzaffarpur, Bihar 842001',
@@ -386,7 +386,7 @@ const heroData = {
             coordinates: [26.1210, 85.3655], // Muzaffarpur coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/patna.jpg',
+            imgUrl: '/assets/img/Centres/patna.jpg',
             title: 'Patna, Bihar',
             subtitle:
               'Pillar no: 38, Jagmano Shree Complex, Bailey Rd, Samanpura, Khajpura, Patna, Bihar 800014',
@@ -399,7 +399,7 @@ const heroData = {
         id: 'international',
         items: [
           {
-            imgUrl: '/assets/img/Centers/lusaka.jpg',
+            imgUrl: '/assets/img/Centres/lusaka.jpg',
             title: 'Lusaka, Zambia, Africa',
             subtitle:
               'Seeds of Innocens IVF, Lusaka, Zambia, Africa',
@@ -407,7 +407,7 @@ const heroData = {
             coordinates: [-15.3875, 28.3228], // Lusaka coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/kitwe.jpg',
+            imgUrl: '/assets/img/Centres/kitwe.jpg',
             title: 'Kitwe, Zambia, Africa',
             subtitle:
               'Seeds of Innocens IVF, Kitwe, Zambia, Africa',
@@ -415,7 +415,7 @@ const heroData = {
             coordinates: [-12.8147, 28.2136], // Kitwe coordinates
           },
           {
-            imgUrl: '/assets/img/Centers/muscat.jpg',
+            imgUrl: '/assets/img/Centres/muscat.jpg',
             title: 'Mabela, Muscat, Oman',
             subtitle:
               'Seeds of Innocens IVF, Mabela, Muscat, Oman',
@@ -619,7 +619,7 @@ const page = () => {
         <Service cardBg={'cs_gray_bg'} data={serviceData} />
       </Section>
 
-      {/* 6. Centers Overview */}
+      {/* 6. Centres Overview */}
       <Section 
       topSpaceLg="60" 
       topSpaceMd="70" 

@@ -5,7 +5,7 @@
     "location": "Seeds of Innocens IVF, 3, MMTC Colony, opposite Aurobindo College, Malviya Nagar, New Delhi, 110017",
     "state": "Delhi",
     "stateSlug": "delhi",
-    "image": "/assets/img/Centers/malviyanagar.webp",
+    "image": "/assets/img/Centres/malviyanagar.webp",
     "description": [
       "Seeds of Innocens IVF Centre in Malviya Nagar, Delhi is our flagship center, offering world-class fertility treatments with state-of-the-art facilities. Located in the heart of South Delhi, this center provides comprehensive IVF services including IVF-ICSI, IUI, genetic testing, and advanced reproductive technologies.",
       "Our Malviya Nagar center is equipped with the latest technology and staffed by experienced fertility specialists. We offer personalized care tailored to each patient's unique needs, ensuring the highest success rates and patient satisfaction.",
@@ -64,7 +64,7 @@
     "location": "Seeds of Innocens IVF, Yashoda Hospital Opp. Nehru Stadium, Nehru Nagar, Ghaziabad, U.P.",
     "state": "Uttar Pradesh",
     "stateSlug": "uttar-pradesh",
-    "image": "/assets/img/Centers/ghaziabad.jpg",
+    "image": "/assets/img/Centres/ghaziabad.jpg",
     "description": [
       "Our Ghaziabad center brings world-class fertility care to Uttar Pradesh, serving patients from the National Capital Region and beyond. This modern facility offers comprehensive IVF services with a focus on personalized treatment and high success rates.",
       "The center is equipped with advanced laboratory facilities and experienced medical professionals dedicated to helping couples achieve their dream of parenthood. We understand the emotional and physical challenges of infertility and provide compassionate care throughout the journey.",
@@ -114,7 +114,7 @@
     "location": "Seeds of Innocens IVF, Drosia Tower, 5/5, Park Rd, Raj Bhavan Colony, Hazratganj, Lucknow, Uttar Pradesh 226001",
     "state": "Uttar Pradesh",
     "stateSlug": "uttar-pradesh",
-    "image": "/assets/img/Centers/lucknow.jpg",
+    "image": "/assets/img/Centres/lucknow.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Lucknow provides exceptional fertility care to couples in Uttar Pradesh. Our center combines advanced medical technology with compassionate care to help families grow.",
       "We offer a full range of fertility treatments and services, from basic evaluations to complex IVF procedures. Our team of experienced doctors and embryologists work together to provide the best possible outcomes.",
@@ -155,7 +155,7 @@
     "location": "Seeds of Innocens IVF, Block No.9/4, 1st Floor, Shankar Point, Sanjay Place, Civil Lines, Agra, U.P.",
     "state": "Uttar Pradesh",
     "stateSlug": "uttar-pradesh",
-    "image": "/assets/img/Centers/agra.jpg",
+    "image": "/assets/img/Centres/agra.jpg",
     "description": [
       "Our Agra center offers comprehensive fertility services to couples in the historic city and surrounding regions. We bring advanced reproductive medicine to make quality IVF care accessible locally.",
       "The center provides personalized treatment plans with attention to each patient's unique circumstances. Our experienced team ensures high-quality care and support throughout the entire process.",
@@ -188,7 +188,7 @@
     "location": "Seeds of Innocens IVF, 2nd Floor, 1076, Kamlesh Shopping Arcade, Near Kalimandir, Golghar, Gorakhpur U.P.",
     "state": "Uttar Pradesh",
     "stateSlug": "uttar-pradesh",
-    "image": "/assets/img/Centers/gorakhpur.jpg",
+    "image": "/assets/img/Centres/gorakhpur.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Gorakhpur extends quality fertility care to Eastern Uttar Pradesh. Our center focuses on providing accessible, affordable, and effective fertility treatments.",
       "We understand that infertility can be challenging, and our compassionate team provides emotional support alongside medical care. Our goal is to make advanced fertility treatments available to everyone who needs them.",
@@ -221,7 +221,7 @@
     "location": "Seeds of Innocens IVF, Jagmano Shree Complex, Pillar No – 38, Khajpura, Bailey Road, Patna, Bihar",
     "state": "Bihar",
     "stateSlug": "bihar",
-    "image": "/assets/img/Centers/patna.jpg",
+    "image": "/assets/img/Centres/patna.jpg",
     "description": [
       "Our Patna center brings world-class fertility care to Bihar, serving couples from across the state. We offer comprehensive IVF services with a focus on personalized treatment and excellent outcomes.",
       "The center features modern infrastructure and advanced laboratory facilities. Our team of fertility specialists and embryologists work together to provide the highest quality care.",
@@ -254,7 +254,7 @@
     "location": "Seeds of Innocens IVF, A-6/A Neelam Bata Road, Above ICICI Bank, NIT Faridabad, Haryana",
     "state": "Haryana",
     "stateSlug": "haryana",
-    "image": "/assets/img/Centers/faridabad.jpg",
+    "image": "/assets/img/Centres/faridabad.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Faridabad provides exceptional fertility care to the National Capital Region. Our center offers state-of-the-art facilities and experienced medical professionals.",
       "We provide comprehensive fertility services including IVF, IUI, and advanced reproductive technologies. Our patient-centric approach ensures personalized care tailored to each couple's needs.",
@@ -287,7 +287,7 @@
     "location": "Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar Nigam Office, Gurugram, Haryana",
     "state": "Haryana",
     "stateSlug": "haryana",
-    "image": "/assets/img/Centers/gurgaon.jpg",
+    "image": "/assets/img/Centres/gurgaon.jpg",
     "description": [
       "Our Gurugram center serves the corporate hub of India with world-class fertility services. Located in the heart of the city, we offer convenient access to advanced IVF treatments.",
       "The center features modern facilities and experienced fertility specialists. We provide comprehensive care from initial consultation to successful pregnancy, using the latest technology and techniques.",
@@ -320,7 +320,7 @@
     "location": "Seeds of Innocens IVF, 4th Floor, Maru Tower, Kanke Road, Ranchi, Jharkhand",
     "state": "Jharkhand",
     "stateSlug": "jharkhand",
-    "image": "/assets/img/Centers/ranchi.jpg",
+    "image": "/assets/img/Centres/ranchi.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Ranchi brings advanced fertility care to Jharkhand. Our center offers comprehensive IVF services with a commitment to excellence and patient satisfaction.",
       "We provide personalized treatment plans and compassionate care throughout your fertility journey. Our experienced team uses the latest technology to maximize success rates.",
@@ -353,7 +353,7 @@
     "location": "Seeds of Innocens IVF, Laxmi Mohan Towers, 2nd Floor, Mukhani Chauraha, Bamori Talli, Haldwani, Uttarakhand",
     "state": "Uttarakhand",
     "stateSlug": "uttarakhand",
-    "image": "/assets/img/Centers/haldwani.jpg",
+    "image": "/assets/img/Centres/haldwani.jpg",
     "description": [
       "Our Haldwani center extends quality fertility care to Uttarakhand. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
       "The center provides personalized care and support throughout your fertility journey. We understand the challenges of infertility and provide compassionate, expert care.",
@@ -386,7 +386,7 @@
     "location": "Seeds of Innocens IVF, 4th Floor, Aashi Complex, Near Rajib Bhawan, ABC, Guwahati",
     "state": "Assam",
     "stateSlug": "assam",
-    "image": "/assets/img/Centers/guwahati.jpg",
+    "image": "/assets/img/Centres/guwahati.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Guwahati brings world-class fertility care to Northeast India. Our center offers comprehensive IVF services with advanced technology and experienced specialists.",
       "We provide personalized treatment plans tailored to each patient's needs. Our team ensures high-quality care and support throughout the entire fertility journey.",
@@ -419,7 +419,7 @@
     "location": "Seeds of Innocens IVF, Wintouch Multi Speciality Hospital, Bank Road, Kasaragod, Kerala, 671121",
     "state": "Kerala",
     "stateSlug": "kerala",
-    "image": "/assets/img/Centers/kasaragod.jpg",
+    "image": "/assets/img/Centres/kasaragod.jpg",
     "description": [
       "Our Kasaragod center provides exceptional fertility care to Kerala. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
       "The center focuses on providing personalized care and excellent outcomes. Our team of fertility specialists ensures the highest quality treatment and support.",
@@ -460,7 +460,7 @@
     "location": "Seeds of Innocens IVF, 7/153, Kumhar Wali Gali, Near Kanpur Vidya Mandir, Khalasi Line, Swaroop Nagar, Kanpur, Uttar Pradesh 208002",
     "state": "Uttar Pradesh",
     "stateSlug": "uttar-pradesh",
-    "image": "/assets/img/Centers/kanpur.jpg",
+    "image": "/assets/img/Centres/kanpur.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Kanpur extends quality fertility care to Central Uttar Pradesh. Our center offers comprehensive IVF services with advanced technology.",
       "We provide personalized treatment plans and compassionate care. Our experienced team uses the latest techniques to maximize success rates and patient satisfaction.",
@@ -493,7 +493,7 @@
     "location": "Seeds of Innocens IVF, Opp. Royal Drive Showroom, Kannadikadu, Upasana Road, Kundannoor, Maradu, Kochi, 682304",
     "state": "Kerala",
     "stateSlug": "kerala",
-    "image": "/assets/img/Centers/kochi.jpg",
+    "image": "/assets/img/Centres/kochi.jpg",
     "description": [
       "Our Kochi center brings world-class fertility care to the beautiful state of Kerala. We offer comprehensive IVF services with state-of-the-art facilities.",
       "The center provides personalized care and support throughout your fertility journey. Our experienced team ensures high-quality treatment and excellent outcomes.",
@@ -526,7 +526,7 @@
     "location": "Seeds of Innocens IVF, Plot no 1, First floor, Shiva Enclave, Near Harsh Vihar Chowk, Pitampura, Delhi-110034",
     "state": "Delhi",
     "stateSlug": "delhi",
-    "image": "/assets/img/Centers/pitampura.jpg",
+    "image": "/assets/img/Centres/pitampura.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Pitampura, New Delhi offers comprehensive fertility services to North Delhi. Our center features modern facilities and experienced specialists.",
       "We provide personalized treatment plans with attention to each patient's unique needs. Our team ensures high-quality care and support throughout the fertility journey.",
@@ -559,7 +559,7 @@
     "location": "Seeds of Innocens IVF, 303/305 Mangal Pandey Nagar, Opp CCS University, Garh Road, Meerut, UP",
     "state": "Uttar Pradesh",
     "stateSlug": "uttar-pradesh",
-    "image": "/assets/img/Centers/meerut.jpg",
+    "image": "/assets/img/Centres/meerut.jpg",
     "description": [
       "Our Meerut center extends quality fertility care to Western Uttar Pradesh. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
       "The center provides personalized care and compassionate support. Our team of fertility specialists ensures the best possible outcomes for our patients.",
@@ -592,7 +592,7 @@
     "location": "Seeds of Innocens IVF, Hansa Complex, Maripur Main Road, Muzaffarpur, Bihar",
     "state": "Bihar",
     "stateSlug": "bihar",
-    "image": "/assets/img/Centers/muzaffarpur.jpg",
+    "image": "/assets/img/Centres/muzaffarpur.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Muzaffarpur brings world-class fertility care to Bihar. Our center offers comprehensive IVF services with advanced technology.",
       "We provide personalized treatment plans and excellent care. Our experienced team uses the latest techniques to maximize success rates and patient satisfaction.",
@@ -649,7 +649,7 @@
     "location": "Seeds of Innocens IVF, C1A/50A, Pankha Road, Janakpuri, New Delhi",
     "state": "Delhi",
     "stateSlug": "delhi",
-    "image": "/assets/img/Centers/jankpuri.jpg",
+    "image": "/assets/img/Centres/jankpuri.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Janakpuri, New Delhi offers comprehensive fertility services to West Delhi. Our center features modern facilities and experienced specialists.",
       "We provide personalized treatment plans with attention to each patient's unique needs. Our team ensures high-quality care and support throughout the fertility journey.",
@@ -673,7 +673,7 @@
     "location": "Seeds of Innocens IVF, Plot No. 03-702, Street No. 0702, AA-IID, New Town, Kolkata – 700161",
     "state": "West Bengal",
     "stateSlug": "west-bengal",
-    "image": "/assets/img/Centers/kolkata.jpg",
+    "image": "/assets/img/Centres/kolkata.jpg",
     "description": [
       "Seeds of Innocens IVF Centre in Kolkata brings world-class fertility care to Eastern India. Our center offers comprehensive IVF services with state-of-the-art facilities.",
       "We provide personalized treatment plans and compassionate care throughout your fertility journey. Our experienced team ensures high-quality treatment and excellent outcomes.",
@@ -692,7 +692,7 @@
       {
         "name": "Dr. Adrija Ghosal",
         "subtitle": "IVF Specialist",
-        "image": "/assets/img/Doctors/adrija.jpg",
+        "image": "/assets/img/Doctors/adrija.webp",
         "experience": "8+ Years",
         "location": "Kolkata-Westbengal",
         "slug": "dr-adrija-ghosal"
@@ -706,7 +706,7 @@
     "location": "Seeds of Innocens IVF, 10 Nkanchibiya Road, Near 3 Trees restaurant, Rhodespark, Lusaka, Zambia",
     "state": "Zambia",
     "stateSlug": "zambia",
-    "image": "/assets/img/Centers/lusaka.webp",
+    "image": "/assets/img/Centres/lusaka.webp",
     "description": [
       "Seeds of Innocens IVF Centre in Lusaka brings world-class fertility care to Zambia. Our center offers comprehensive IVF services with state-of-the-art facilities and experienced specialists.",
       "We provide personalized treatment plans tailored to each patient's needs. Our team ensures high-quality care and support throughout the entire fertility journey.",
@@ -740,7 +740,7 @@
     "location": "Seeds of Innocens IVF, 841, Nkana West, Near Golden Orklet Nkana West, Kitwe",
     "state": "Zambia",
     "stateSlug": "zambia",
-    "image": "/assets/img/Centers/kitwe.webp",
+    "image": "/assets/img/Centres/kitwe.webp",
     "description": [
       "Our Kitwe center extends quality fertility care to Zambia. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
       "The center provides personalized care and support throughout your fertility journey. We understand the challenges of infertility and provide compassionate, expert care.",
@@ -765,7 +765,7 @@
     "location": "Badr Al Samaa Premium Medical Centre, PC 121, PB 1269, Al K Hair Street, Al Mabella, Muscat, Sultanate of Oman",
     "state": "Oman",
     "stateSlug": "oman",
-    "image": "/assets/img/Centers/mabela.webp",
+    "image": "/assets/img/Centres/mabela.webp",
     "description": [
       "Seeds of Innocens IVF Centre in Mabela, Muscat brings world-class fertility care to Oman. Our center offers comprehensive IVF services with advanced technology and experienced specialists.",
       "We provide personalized treatment plans tailored to each patient's needs. Our team ensures high-quality care and support throughout the entire fertility journey.",

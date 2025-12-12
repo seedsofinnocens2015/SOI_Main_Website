@@ -5,6 +5,7 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import Image from "next/image";
 import SectionHeading from "../SectionHeading";
+import { getAssetPathClient } from "../../utils/assetPath";
 
 const TestimonialSection = ({ data }) => {
   const [rating, setRating] = useState();
@@ -74,7 +75,7 @@ const TestimonialSection = ({ data }) => {
                   style={{ borderRadius: '10px' }}
                 />
               ) : (
-                <Image src={data.thumbnail} alt="img" width={484} height={463} />
+                <Image src={getAssetPathClient(data.thumbnail)} alt="img" width={484} height={463} loading="eager" />
               )}
             </div>
           </div>
@@ -102,7 +103,7 @@ const TestimonialSection = ({ data }) => {
                             </div>
                             <div className="cs_avatar cs_style_1">
                               <div className="cs_avatar_thumbnail cs_center">
-                              <Image src={testimonial.avatar} alt="img" width={73} height={73}   />
+                              <Image src={getAssetPathClient(testimonial.avatar)} alt="img" width={73} height={73} loading="eager" />
                               </div>
                               <div className="cs_avatar_info">
                                 <h3 className="cs_avatar_title">

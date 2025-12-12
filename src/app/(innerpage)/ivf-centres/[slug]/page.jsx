@@ -4,14 +4,14 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import centersData from '../india-centers-data.json';
+import centresData from '../india-centres-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 
 export async function generateStaticParams() {
   try {
-    // Only generate params for international centers
-    return centersData
+    // Only generate params for international centres
+    return centresData
       .filter((center) => center.isInternational === true)
       .map((center) => ({
         slug: center.slug || '',
@@ -31,8 +31,8 @@ const page = async ({ params }) => {
     notFound();
   }
   
-  // Find center by slug - only international centers
-  const center = centersData.find(
+  // Find center by slug - only international centres
+  const center = centresData.find(
     (c) => c.slug === slug && c.isInternational === true
   );
 

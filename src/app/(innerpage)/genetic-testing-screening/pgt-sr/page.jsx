@@ -57,7 +57,7 @@ const pgtSRContentData = {
     {
       heading: 'Finding PGT-SR Testing Near Me',
       paragraphs: [
-        'If you are looking for PGT-SR testing near me, look no further than Seeds of Innocence. We have centers across India and provide advanced fertility treatments to families all over. Our dedicated genetic counselors and IVF specialists are here to support you at every step, ensuring you receive the best possible care.',
+        'If you are looking for PGT-SR testing near me, look no further than Seeds of Innocence. We have centres across India and provide advanced fertility treatments to families all over. Our dedicated genetic counselors and IVF specialists are here to support you at every step, ensuring you receive the best possible care.',
       ],
     },
     {

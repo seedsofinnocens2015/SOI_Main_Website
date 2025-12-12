@@ -1,6 +1,8 @@
+"use client"
 import { FaAnglesRight } from "react-icons/fa6";
 import Button from "../Buttons";
 import Image from "next/image";
+import { getAssetPathClient } from "../../utils/assetPath";
 
 const CtaSection = ({ data = {} }) => {
   return (
@@ -9,7 +11,7 @@ const CtaSection = ({ data = {} }) => {
         <div className="cs_cta_in">
           <div className="cs_cta_left">
             <div className="cs_cta_thumb" data-aos="fade-right">
-            <Image src={data?.imageUrl} alt="img" width={200} height={190}   />
+            <Image src={getAssetPathClient(data?.imageUrl)} alt="img" width={200} height={190} loading="eager" />
             </div>
             <div className="cs_cta_info">
               <h2 className="cs_cta_title">{data.title}</h2>

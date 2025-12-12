@@ -50,7 +50,7 @@ const jobOpenings = [
     id: 'patient-care-coordinator',
     title: 'Patient Care Coordinator',
     department: 'Administration',
-    location: 'All Centers',
+    location: 'All Centres',
     type: 'Full-time',
     experience: '1+ years',
   },

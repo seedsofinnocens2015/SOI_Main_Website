@@ -41,13 +41,13 @@ const travelContentData = {
     {
       heading: 'Accommodation Arrangements',
       paragraphs: [
-        'Assistance in finding comfortable, affordable accommodation near our centers:',
+        'Assistance in finding comfortable, affordable accommodation near our centres:',
       ],
       listItems: [
         'Hotel recommendations based on your preferences and budget',
         'Special rates for medical tourists',
         'Serviced apartments for longer stays',
-        'Location-based suggestions near treatment centers',
+        'Location-based suggestions near treatment centres',
         'Accommodation booking assistance',
         'Comfortable and safe lodging options',
       ],

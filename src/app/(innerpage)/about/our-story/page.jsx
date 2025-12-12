@@ -3,6 +3,7 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import React from 'react';
 import Image from 'next/image';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const page = () => {
   const headingData = {
@@ -35,7 +36,7 @@ const page = () => {
                   position: 'relative'
                 }}>
                   <Image
-                    src="/assets/img/ourstory.JPG"
+                    src={getAssetPathClient("/assets/img/ourstory.JPG")}
                     alt="Our Journey"
                     width={600}
                     height={400}

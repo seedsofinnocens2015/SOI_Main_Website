@@ -4,13 +4,13 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import indiaCentersData from '../../../india-centers-data.json';
+import indiaCentresData from '../../../india-centres-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 
 export async function generateStaticParams() {
   try {
-    return indiaCentersData.map((center) => ({
+    return indiaCentresData.map((center) => ({
       state: center.stateSlug || '',
       slug: center.slug || '',
     })).filter((param) => param.state && param.slug);
@@ -29,7 +29,7 @@ const page = async ({ params }) => {
   }
   
   // Find center by slug and state
-  const center = indiaCentersData.find(
+  const center = indiaCentresData.find(
     (c) => c.slug === slug && c.stateSlug === state
   );
 
@@ -40,7 +40,7 @@ const page = async ({ params }) => {
   // Extract city name from center name (e.g., "Ghaziabad, Uttar Pradesh" -> "Ghaziabad")
   const cityName = center.name.split(',')[0].trim();
 
-  // Get doctors directly from india-centers-data.json (center.doctors array)
+  // Get doctors directly from india-centres-data.json (center.doctors array)
   // Each doctor object contains: name, subtitle, image, experience, location, slug
   const centerDoctors = center.doctors || [];
 

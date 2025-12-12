@@ -39,40 +39,76 @@ export default function RootLayout({ children }) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              if (typeof window !== 'undefined') {
+              (function() {
+                if (typeof window === 'undefined') return;
+                
                 // Disable Next.js automatic prefetching
                 if (window.next && window.next.router) {
-                  window.next.router.prefetch = function() { return Promise.resolve(); };
+                  const originalPrefetch = window.next.router.prefetch;
+                  window.next.router.prefetch = function() { 
+                    return Promise.resolve(); 
+                  };
                 }
-                // Override fetch to prevent .txt file requests and fix double /new/new/ prefix
+                
+                // Block all .txt file requests
+                const blockTxtRequests = function(url) {
+                  if (typeof url === 'string' && (url.includes('.txt?_rsc=') || url.endsWith('.txt'))) {
+                    return true;
+                  }
+                  return false;
+                };
+                
+                // Fix double /new/new/ prefix
+                const fixDoublePrefix = function(url) {
+                  if (typeof url === 'string') {
+                    return url.replace(/\\/new\\/new\\//g, '/new/');
+                  }
+                  return url;
+                };
+                
+                // Override fetch to prevent .txt file requests
                 const originalFetch = window.fetch;
                 window.fetch = function(...args) {
                   const url = args[0];
-                  if (typeof url === 'string') {
-                    // Block .txt file requests
-                    if (url.includes('.txt?_rsc=')) {
-                      return Promise.reject(new Error('Prefetch disabled'));
-                    }
-                    // Fix double /new/new/ prefix
-                    if (url.includes('/new/new/')) {
-                      args[0] = url.replace('/new/new/', '/new/');
-                    }
+                  if (blockTxtRequests(url)) {
+                    return Promise.reject(new Error('Prefetch disabled'));
+                  }
+                  const fixedUrl = fixDoublePrefix(url);
+                  if (fixedUrl !== url) {
+                    args[0] = fixedUrl;
                   }
                   return originalFetch.apply(this, args);
                 };
+                
                 // Override XMLHttpRequest to prevent .txt file requests
                 const originalXHROpen = XMLHttpRequest.prototype.open;
                 XMLHttpRequest.prototype.open = function(method, url, ...rest) {
-                  if (typeof url === 'string' && url.includes('.txt?_rsc=')) {
+                  if (blockTxtRequests(url)) {
                     return;
                   }
-                  // Fix double /new/new/ prefix
-                  if (typeof url === 'string' && url.includes('/new/new/')) {
-                    url = url.replace('/new/new/', '/new/');
-                  }
-                  return originalXHROpen.call(this, method, url, ...rest);
+                  const fixedUrl = fixDoublePrefix(url);
+                  return originalXHROpen.call(this, method, fixedUrl, ...rest);
                 };
-              }
+                
+                // Override send to block .txt requests
+                const originalXHRSend = XMLHttpRequest.prototype.send;
+                XMLHttpRequest.prototype.send = function(...args) {
+                  if (this._url && blockTxtRequests(this._url)) {
+                    return;
+                  }
+                  return originalXHRSend.apply(this, args);
+                };
+                
+                // Intercept link prefetching
+                document.addEventListener('DOMContentLoaded', function() {
+                  const links = document.querySelectorAll('link[rel="prefetch"]');
+                  links.forEach(function(link) {
+                    if (link.href && blockTxtRequests(link.href)) {
+                      link.remove();
+                    }
+                  });
+                });
+              })();
             `,
           }}
         />

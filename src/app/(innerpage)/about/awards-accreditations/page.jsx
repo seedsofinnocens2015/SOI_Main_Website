@@ -49,7 +49,7 @@ const ivfContentData = {
     {
       heading: 'Quality Assurance & Compliance',
       paragraphs: [
-        'Seeds of Innocens maintains the highest standards of quality and compliance across all our centers. Our commitment to excellence is demonstrated through:',
+        'Seeds of Innocens maintains the highest standards of quality and compliance across all our centres. Our commitment to excellence is demonstrated through:',
       ],
       listItems: [
         'Regular internal and external quality audits',

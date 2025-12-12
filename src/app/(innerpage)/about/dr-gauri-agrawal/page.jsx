@@ -61,7 +61,7 @@ const page = () => {
                 <li>MBBS from prestigious medical institution</li>
                 <li>MD in Obstetrics & Gynecology</li>
                 <li>Fellowship in Reproductive Medicine</li>
-                <li>Training in Advanced IVF Techniques from international centers</li>
+                <li>Training in Advanced IVF Techniques from international centres</li>
               </ul>
               
               <div className="cs_height_30" />

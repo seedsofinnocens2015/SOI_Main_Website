@@ -50,7 +50,7 @@ const jobOpenings = [
   {
     title: 'Patient Care Coordinator',
     department: 'Administration',
-    location: 'All Centers',
+    location: 'All Centres',
     type: 'Full-time',
     experience: '1+ years',
     description: 'Help patients navigate their fertility journey. Excellent communication skills and empathy required.',

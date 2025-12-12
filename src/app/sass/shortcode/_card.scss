@@ -552,7 +552,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     
-    // In 2-column layout, last item centers if odd
+    // In 2-column layout, last item centres if odd
     &.cs_last_row_incomplete {
       &[data-last-row-count="1"] {
         .cs_last_row_item.cs_pos_0 {

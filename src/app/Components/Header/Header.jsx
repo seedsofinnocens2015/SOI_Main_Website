@@ -57,15 +57,24 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Male Infertility', href: '/advanced-fertility-care/male-infertility' },
               { label: 'TESA / PESA', href: '/advanced-fertility-care/tesa-pesa' },
               { label: 'Semen Analysis', href: '/advanced-fertility-care/semen-analysis' },
+              { label: 'Azoospermia', href: '/advanced-fertility-care/azoospermia' },
+              { label: 'Blocked Seminiferous Tubules', href: '/advanced-fertility-care/blocked-seminiferous-tubules' },
+              { label: 'Endocrinological Disorder', href: '/advanced-fertility-care/endocrinological-disorder' },
             ],
           },
           {
-            label: 'Genetic Testing (PGT)',
-            href: '/infertility-treatment/genetic-testing-pgt',
+            label: 'Genetic Testing & Screening',
+            href: '/infertility-treatment/genetic-testing-screening',
             subItems: [
-              { label: 'PGT-A', href: '/genetic-testing-pgt/pgt-a' },
-              { label: 'PGT-M', href: '/genetic-testing-pgt/pgt-m' },
-              { label: 'PGT-SR', href: '/genetic-testing-pgt/pgt-sr' },
+              { label: 'PGT-A', href: '/genetic-testing-screening/pgt-a' },
+              { label: 'PGT-M', href: '/genetic-testing-screening/pgt-m' },
+              { label: 'PGT-SR', href: '/genetic-testing-screening/pgt-sr' },
+              { label: 'Difference between PGT A & PGT-M/SR', href: '/genetic-testing-screening/difference-between-pgt-a-pgt-m-sr' },
+              { label: 'Amniocentesis', href: '/genetic-testing-screening/amniocentesis' },
+              { label: 'Chorionic Villus Sampling (CVS)', href: '/genetic-testing-screening/chorionic-villus-sampling' },
+              { label: 'Couple Carrier Screening', href: '/genetic-testing-screening/couple-carrier-screening' },
+              { label: 'Karyotyping', href: '/genetic-testing-screening/karyotyping' },
+              { label: 'HLA Matching', href: '/genetic-testing-screening/hla-matching' },
             ],
           },
           {
@@ -86,106 +95,124 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Open Surgery', href: '/surgeries/open-surgery' },
             ],
           },
+          {
+            label: 'Reproductive Health Conditions',
+            href: '/infertility-treatment/reproductive-health-conditions',
+            subItems: [
+              { label: 'Blocked Fallopian Tubes', href: '/reproductive-health-conditions/blocked-fallopian-tubes' },
+              { label: 'Endometrial and Ovarian Health', href: '/reproductive-health-conditions/endometrial-and-ovarian-health' },
+              { label: 'Endometriosis', href: '/reproductive-health-conditions/endometriosis' },
+              { label: 'Fibroids, Uterine Polyps and Adenomyosis', href: '/reproductive-health-conditions/fibroids-uterine-polyps-adenomyosis' },
+              { label: 'Genital Tuberculosis', href: '/reproductive-health-conditions/genital-tuberculosis' },
+            ],
+          },
+          {
+            label: 'Fertility Wellness',
+            href: '/infertility-treatment/fertility-wellness',
+            subItems: [
+              { label: 'Boost Fertility With Colours Of Food', href: '/fertility-wellness/boost-fertility-with-colours-of-food' },
+            ],
+          },
         ],
       },
       {
-        label: 'IVF Centers',
-        href: '/ivf-centers',
+        label: 'IVF Centres',
+        href: '/ivf-centres',
         isMegaMenu: true,
         megaMenuCategories: [
           {
             label: 'India',
-            href: '/ivf-centers/india',
+            href: '/ivf-centres/india',
             subItems: [
               {
                 label: 'Delhi',
-                href: '/ivf-centers/india/delhi',
+                href: '/ivf-centres/india/delhi',
                 subItems: [
-                  { label: 'Malviya Nagar, New Delhi', href: '/ivf-centers/india/delhi/malviya-nagar-delhi' },
-                  { label: 'Pitampura, New Delhi', href: '/ivf-centers/india/delhi/pitampura-new-delhi' },
-                  { label: 'Janakpuri, New Delhi', href: '/ivf-centers/india/delhi/janakpuri-new-delhi' },
+                  { label: 'Malviya Nagar, New Delhi', href: '/ivf-centres/india/delhi/malviya-nagar-delhi' },
+                  { label: 'Pitampura, New Delhi', href: '/ivf-centres/india/delhi/pitampura-new-delhi' },
+                  { label: 'Janakpuri, New Delhi', href: '/ivf-centres/india/delhi/janakpuri-new-delhi' },
                 ],
               },
               {
                 label: 'Uttar Pradesh',
-                href: '/ivf-centers/india/uttar-pradesh',
+                href: '/ivf-centres/india/uttar-pradesh',
                 subItems: [
-                  { label: 'Ghaziabad, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/ghaziabad-uttar-pradesh' },
-                  { label: 'Lucknow, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/lucknow-uttar-pradesh' },
-                  { label: 'Agra, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/agra-uttar-pradesh' },
-                  { label: 'Gorakhpur, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/gorakhpur-uttar-pradesh' },
-                  { label: 'Kanpur, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/kanpur-uttar-pradesh' },
-                  { label: 'Meerut, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/meerut-uttar-pradesh' },
+                  { label: 'Ghaziabad, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/ghaziabad-uttar-pradesh' },
+                  { label: 'Lucknow, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/lucknow-uttar-pradesh' },
+                  { label: 'Agra, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/agra-uttar-pradesh' },
+                  { label: 'Gorakhpur, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/gorakhpur-uttar-pradesh' },
+                  { label: 'Kanpur, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/kanpur-uttar-pradesh' },
+                  { label: 'Meerut, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/meerut-uttar-pradesh' },
                 ],
               },
               {
                 label: 'Bihar',
-                href: '/ivf-centers/india/bihar',
+                href: '/ivf-centres/india/bihar',
                 subItems: [
-                  { label: 'Patna, Bihar', href: '/ivf-centers/india/bihar/patna-bihar' },
-                  { label: 'Muzaffarpur, Bihar', href: '/ivf-centers/india/bihar/muzaffarpur-bihar' },
+                  { label: 'Patna, Bihar', href: '/ivf-centres/india/bihar/patna-bihar' },
+                  { label: 'Muzaffarpur, Bihar', href: '/ivf-centres/india/bihar/muzaffarpur-bihar' },
                 ],
               },
               {
                 label: 'Haryana',
-                href: '/ivf-centers/india/haryana',
+                href: '/ivf-centres/india/haryana',
                 subItems: [
-                  { label: 'Faridabad, Haryana', href: '/ivf-centers/india/haryana/faridabad-haryana' },
-                  { label: 'Gurugram, Haryana', href: '/ivf-centers/india/haryana/gurugram-haryana' },
+                  { label: 'Faridabad, Haryana', href: '/ivf-centres/india/haryana/faridabad-haryana' },
+                  { label: 'Gurugram, Haryana', href: '/ivf-centres/india/haryana/gurugram-haryana' },
                 ],
               },
               {
                 label: 'Jharkhand',
-                href: '/ivf-centers/india/jharkhand',
+                href: '/ivf-centres/india/jharkhand',
                 subItems: [
-                  { label: 'Ranchi, Jharkhand', href: '/ivf-centers/india/jharkhand/ranchi-jharkhand' },
+                  { label: 'Ranchi, Jharkhand', href: '/ivf-centres/india/jharkhand/ranchi-jharkhand' },
                 ],
               },
               {
                 label: 'Uttarakhand',
-                href: '/ivf-centers/india/uttarakhand',
+                href: '/ivf-centres/india/uttarakhand',
                 subItems: [
-                  { label: 'Haldwani, Uttarakhand', href: '/ivf-centers/india/uttarakhand/haldwani-uttarakhand' },
+                  { label: 'Haldwani, Uttarakhand', href: '/ivf-centres/india/uttarakhand/haldwani-uttarakhand' },
                 ],
               },
               {
                 label: 'Assam',
-                href: '/ivf-centers/india/assam',
+                href: '/ivf-centres/india/assam',
                 subItems: [
-                  { label: 'Guwahati, Assam', href: '/ivf-centers/india/assam/guwahati-assam' },
+                  { label: 'Guwahati, Assam', href: '/ivf-centres/india/assam/guwahati-assam' },
                 ],
               },
               {
                 label: 'Kerala',
-                href: '/ivf-centers/india/kerala',
+                href: '/ivf-centres/india/kerala',
                 subItems: [
-                  { label: 'Kasaragod, Kerala', href: '/ivf-centers/india/kerala/kasaragod-kerala' },
-                  { label: 'Kochi, Kerala', href: '/ivf-centers/india/kerala/kochi-kerala' },
+                  { label: 'Kasaragod, Kerala', href: '/ivf-centres/india/kerala/kasaragod-kerala' },
+                  { label: 'Kochi, Kerala', href: '/ivf-centres/india/kerala/kochi-kerala' },
                 ],
               },
               {
                 label: 'Jammu & Kashmir',
-                href: '/ivf-centers/india/jammu-kashmir',
+                href: '/ivf-centres/india/jammu-kashmir',
                 subItems: [
-                  { label: 'Srinagar, J&K', href: '/ivf-centers/india/jammu-kashmir/srinagar-jk' },
+                  { label: 'Srinagar, J&K', href: '/ivf-centres/india/jammu-kashmir/srinagar-jk' },
                 ],
               },
               {
                 label: 'West Bengal',
-                href: '/ivf-centers/india/west-bengal',
+                href: '/ivf-centres/india/west-bengal',
                 subItems: [
-                  { label: 'Kolkata', href: '/ivf-centers/india/west-bengal/kolkata' },
+                  { label: 'Kolkata', href: '/ivf-centres/india/west-bengal/kolkata' },
                 ],
               },
             ],
           },
           {
             label: 'International',
-            href: '/ivf-centers/international',
+            href: '/ivf-centres/international',
             subItems: [
-              { label: 'Lusaka, Zambia, Africa', href: '/ivf-centers/lusaka-zambia-africa' },
-              { label: 'Kitwe, Zambia, Africa', href: '/ivf-centers/kitwe-zambia-africa' },
-              { label: 'Mabela, Muscat, Oman', href: '/ivf-centers/mabela-muscat-oman' },
+              { label: 'Lusaka, Zambia, Africa', href: '/ivf-centres/lusaka-zambia-africa' },
+              { label: 'Kitwe, Zambia, Africa', href: '/ivf-centres/kitwe-zambia-africa' },
+              { label: 'Mabela, Muscat, Oman', href: '/ivf-centres/mabela-muscat-oman' },
             ],
           },
         ],
@@ -313,9 +340,9 @@ const Header = ({ isTopBar, variant }) => {
             label: 'Awards & Accreditations',
             href: '/about/awards-accreditations',
           },
-            ],
-          },
-          {
+        ],
+      },
+      {
         label: 'Doctors',
         href: '/doctors',
         isMegaMenu: true,
@@ -347,6 +374,19 @@ const Header = ({ isTopBar, variant }) => {
           { label: 'Feedback', href: '/contact/feedback' },
         ],
       },
+      // {
+      //   label: 'Training Academy',
+      //   href: '/training-academy',
+      //   isMegaMenu: false,
+      //   subItems: [
+      //     { label: 'Embryo Biopsy', href: '/training-academy/embryo-biopsy' },
+      //     { label: 'Embryologist Training Program', href: '/training-academy/embryologist-training-program' },
+      //     { label: 'Andrology Technician Training Program', href: '/training-academy/andrology-technician-training-program' },
+      //     { label: 'Gynecologic Surgical Training Program', href: '/training-academy/gynecologic-surgical-training-program' },
+      //     { label: 'Training Registration', href: '/training-academy/training-registration' },
+      //   ],
+      // },
+     
     ],
     btnUrl: '/contact/book-appointment',
     btnText: 'Book Appointment',
@@ -440,9 +480,8 @@ const Header = ({ isTopBar, variant }) => {
   return (
     <>
       <header
-        className={`cs_site_header cs_style_1 ${
-          variant ? variant : ''
-        } cs_primary_color cs_sticky_header ${isSticky ? isSticky : ''}`}
+        className={`cs_site_header cs_style_1 ${variant ? variant : ''
+          } cs_primary_color cs_sticky_header ${isSticky ? isSticky : ''}`}
       >
         {/* {isTopBar && (
           <div className="cs_top_header cs_blue_bg cs_white_color">
@@ -481,15 +520,15 @@ const Header = ({ isTopBar, variant }) => {
         <div className="cs_main_header">
           <div className="container">
             <div className="cs_main_header_in cs_compact_gap">
-                <Link className="cs_site_branding" href={menu.logoLink} prefetch={false}>
-                <Image 
-                  src={typeof window !== 'undefined' ? getAssetPathClient(menu.logoUrl) : menu.logoUrl} 
-                  alt="img" 
-                  width={350} 
-                  height={110} 
-                  loading="eager" 
+              <Link className="cs_site_branding" href={menu.logoLink} prefetch={false}>
+                <Image
+                  src={typeof window !== 'undefined' ? getAssetPathClient(menu.logoUrl) : menu.logoUrl}
+                  alt="img"
+                  width={350}
+                  height={110}
+                  loading="eager"
                 />
-                </Link>
+              </Link>
               <div className="cs_main_header_right ">
                 <div className="cs_nav cs_primary_color ">
                   <ul
@@ -501,8 +540,8 @@ const Header = ({ isTopBar, variant }) => {
                           item.isMegaMenu
                             ? 'menu-item-has-children cs_mega_menu'
                             : item.subItems
-                            ? 'menu-item-has-children'
-                            : ''
+                              ? 'menu-item-has-children'
+                              : ''
                         }
                         key={index}
                       >
@@ -511,10 +550,10 @@ const Header = ({ isTopBar, variant }) => {
                           prefetch={false}
                           onClick={(e) => {
                             // Check if navItem has megaMenuCategories with subItems
-                            const hasCategoriesWithSubItems = item.isMegaMenu && 
-                              item.megaMenuCategories && 
+                            const hasCategoriesWithSubItems = item.isMegaMenu &&
+                              item.megaMenuCategories &&
                               item.megaMenuCategories.some(cat => cat.subItems && cat.subItems.length > 0);
-                            
+
                             // Prevent navigation if it has megaMenuCategories with subItems, or if it has regular subItems
                             if (hasCategoriesWithSubItems || item.subItems) {
                               e.preventDefault();
@@ -568,9 +607,8 @@ const Header = ({ isTopBar, variant }) => {
                                         </Link>
                                         {hasSubItems && (
                                           <span
-                                            className={`cs_mobile_sub_toggle ${
-                                              isCategoryOpen ? 'active' : ''
-                                            }`}
+                                            className={`cs_mobile_sub_toggle ${isCategoryOpen ? 'active' : ''
+                                              }`}
                                             onClick={e => {
                                               e.preventDefault();
                                               e.stopPropagation();
@@ -606,7 +644,7 @@ const Header = ({ isTopBar, variant }) => {
                                                           href={subItem.href}
                                                           prefetch={false}
                                                           onClick={(e) => {
-                                                            if (item.label === 'IVF Centers' && category.label === 'India') {
+                                                            if (item.label === 'IVF Centres' && category.label === 'India') {
                                                               e.preventDefault();
                                                             }
                                                             // Close mobile menu on navigation
@@ -618,9 +656,8 @@ const Header = ({ isTopBar, variant }) => {
                                                           {subItem.label}
                                                         </Link>
                                                         <span
-                                                          className={`cs_mobile_sub_toggle ${
-                                                            isNestedOpen ? 'active' : ''
-                                                          }`}
+                                                          className={`cs_mobile_sub_toggle ${isNestedOpen ? 'active' : ''
+                                                            }`}
                                                           onClick={e => {
                                                             e.preventDefault();
                                                             e.stopPropagation();
@@ -664,7 +701,7 @@ const Header = ({ isTopBar, variant }) => {
                                                       href={subItem.href}
                                                       prefetch={false}
                                                       onClick={(e) => {
-                                                        if (item.label === 'IVF Centers' && category.label === 'India') {
+                                                        if (item.label === 'IVF Centres' && category.label === 'India') {
                                                           e.preventDefault();
                                                         } else {
                                                           // Close mobile menu on navigation
@@ -690,18 +727,17 @@ const Header = ({ isTopBar, variant }) => {
                             </ul>
                           ) : (
                             <ul
-                              className={`cs_mega_wrapper ${
-                                hoveredCategoryIndex !== null &&
-                                item.megaMenuCategories[
-                                  hoveredCategoryIndex
-                                ]?.subItems &&
-                                item.megaMenuCategories[hoveredCategoryIndex]
-                                  .subItems.length > 0
+                              className={`cs_mega_wrapper ${hoveredCategoryIndex !== null &&
+                                  item.megaMenuCategories[
+                                    hoveredCategoryIndex
+                                  ]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex]
+                                    .subItems.length > 0
                                   ? hoveredStateIndex !== null
                                     ? 'cs_has_three_columns'
                                     : 'cs_has_right_column'
                                   : ''
-                              }`}
+                                }`}
                               onMouseLeave={() => {
                                 setHoveredCategoryIndex(null);
                                 setHoveredStateIndex(null);
@@ -709,17 +745,17 @@ const Header = ({ isTopBar, variant }) => {
                             >
                               {/* Left Column - States (Categories) */}
                               <li style={{
-                                borderRight: hoveredCategoryIndex !== null && 
+                                borderRight: hoveredCategoryIndex !== null &&
                                   item.megaMenuCategories[hoveredCategoryIndex]?.subItems &&
                                   item.megaMenuCategories[hoveredCategoryIndex].subItems.length > 0
                                   ? '1px solid #e0e0e0'
                                   : 'none',
-                                paddingRight: hoveredCategoryIndex !== null && 
+                                paddingRight: hoveredCategoryIndex !== null &&
                                   item.megaMenuCategories[hoveredCategoryIndex]?.subItems &&
                                   item.megaMenuCategories[hoveredCategoryIndex].subItems.length > 0
                                   ? '20px'
                                   : '0',
-                                marginRight: hoveredCategoryIndex !== null && 
+                                marginRight: hoveredCategoryIndex !== null &&
                                   item.megaMenuCategories[hoveredCategoryIndex]?.subItems &&
                                   item.megaMenuCategories[hoveredCategoryIndex].subItems.length > 0
                                   ? '20px'
@@ -764,8 +800,8 @@ const Header = ({ isTopBar, variant }) => {
                                   )}
                                 </ul>
                               </li>
-                              {/* Middle Column - Centers of hovered state */}
-                              <li style={{ 
+                              {/* Middle Column - Centres of hovered state */}
+                              <li style={{
                                 opacity: hoveredCategoryIndex !== null &&
                                   item.megaMenuCategories[
                                     hoveredCategoryIndex
@@ -798,7 +834,7 @@ const Header = ({ isTopBar, variant }) => {
                                     ].subItems.map((subItem, subIndex) => {
                                       const hasNestedSubItems = subItem.subItems && subItem.subItems.length > 0;
                                       return (
-                                        <li 
+                                        <li
                                           key={subIndex}
                                           onMouseEnter={() => {
                                             if (hasNestedSubItems) {
@@ -817,7 +853,7 @@ const Header = ({ isTopBar, variant }) => {
                                             href={subItem.href}
                                             prefetch={false}
                                             onClick={(e) => {
-                                              if (item.label === 'IVF Centers' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India') {
+                                              if (item.label === 'IVF Centres' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India') {
                                                 e.preventDefault();
                                               }
                                             }}
@@ -829,8 +865,8 @@ const Header = ({ isTopBar, variant }) => {
                                     })}
                                 </ul>
                               </li>
-                              {/* Right Column - Nested centers of hovered state */}
-                              <li style={{ 
+                              {/* Right Column - Nested centres of hovered state */}
+                              <li style={{
                                 opacity: hoveredCategoryIndex !== null &&
                                   hoveredStateIndex !== null &&
                                   item.megaMenuCategories[
@@ -871,8 +907,8 @@ const Header = ({ isTopBar, variant }) => {
                                             href={nestedItem.href}
                                             prefetch={false}
                                             onClick={() => {
-                                                                  // Close mobile menu on navigation
-                                                                  setIsShowMobileMenu(false);
+                                              // Close mobile menu on navigation
+                                              setIsShowMobileMenu(false);
                                             }}
                                           >
                                             {nestedItem.label}
@@ -910,11 +946,10 @@ const Header = ({ isTopBar, variant }) => {
                         )}
                         {(item.subItems?.length || item.isMegaMenu) && (
                           <span
-                            className={`cs_menu_dropdown_toggle ${
-                              openMobileSubmenuIndex.includes(index)
+                            className={`cs_menu_dropdown_toggle ${openMobileSubmenuIndex.includes(index)
                                 ? 'active'
                                 : ''
-                            }`}
+                              }`}
                             onClick={() => handleOpenMobileSubmenu(index)}
                           >
                             <span></span>
@@ -924,9 +959,8 @@ const Header = ({ isTopBar, variant }) => {
                     ))}
                   </ul>
                   <span
-                    className={`cs_menu_toggle ${
-                      isShowMobileMenu && 'cs_toggle_active'
-                    }`}
+                    className={`cs_menu_toggle ${isShowMobileMenu && 'cs_toggle_active'
+                      }`}
                     onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}
                   >
                     <span></span>
@@ -943,9 +977,8 @@ const Header = ({ isTopBar, variant }) => {
                   </div> */}
                   <form
                     action="#"
-                    className={`cs_header_search_form ${
-                      isSearchActive ? 'active' : ''
-                    }`}
+                    className={`cs_header_search_form ${isSearchActive ? 'active' : ''
+                      }`}
                   >
                     <div className="cs_header_search_form_in">
                       <input

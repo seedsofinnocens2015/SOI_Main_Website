@@ -105,6 +105,9 @@ const Footer = () => {
           { href: '/advanced-fertility-care/male-infertility/', text: 'Male Infertility' },
           { href: '/advanced-fertility-care/egg-freezing/', text: 'Egg Freezing' },
           { href: '/fertility-treatments/blastocyst-transfer/', text: 'Blastocyst Transfer' },
+          { href: '/fertility-treatments/ovulation-induction/', text: 'Ovulation Induction' },
+          { href: '/fertility-treatments/follicular-monitoring/', text: 'Follicular Monitoring' },
+          { href: '/fertility-treatments/tesa-pesa/', text: 'TESA/PESA' },
         ],
       },
       {
@@ -114,23 +117,19 @@ const Footer = () => {
           { href: '/about/our-story/', text: 'About Us' },
           { href: '/#fertility-treatments', text: 'Our Services' },
           { href: '/doctors', text: 'Our Doctors' },
+          { href: '/contact/center-locator/', text: 'Our Centres' },
+          { href: '/contact/careers/', text: 'Careers' },
+          { href: '/contact/feedback/', text: 'Feedback' },
           { href: '/contact/call-back-form/', text: 'Contact' },
         ],
       },
     ],
-    recentPosts: [
-      {
-        href: '/blog/blog-details',
-        image: '/assets/img/recent_post2.jpg',
-        date: '08 Apr 2025',
-        title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
-      },
-      {
-        href: '/blog/blog-details',
-        image: '/assets/img/recent_post_2.png',
-        date: '08 Apr 2024',
-        title: 'Genetic Conditions: Understanding Their Role in Fertility and Parenthood',
-      },
+    trainingAcademyLinks: [
+      { href: '/training-academy/embryo-biopsy', text: 'Embryo Biopsy' },
+      { href: '/training-academy/embryologist-training-program', text: 'Embryologist' },
+      { href: '/training-academy/andrology-technician-training-program', text: 'Andrology Technician' },
+      { href: '/training-academy/gynecologic-surgical-training-program', text: 'Gynecologic Surgical' },
+      { href: '/training-academy/training-registration', text: 'Training Registration' },
     ],
     copyrightText: 'Copyright © 2025 Seeds of Innocens, All Rights Reserved.',
     footerMenu: [
@@ -256,21 +255,11 @@ const Footer = () => {
 
           <div className="cs_footer_col">
             <div className="cs_footer_widget">
-              <h2 className="cs_footer_widget_title">Recent Posts</h2>
-              <ul className="cs_recent_post_list cs_mp_0">
-                {data.recentPosts.map((post, index) => (
+              <h2 className="cs_footer_widget_title">Training Academy</h2>
+              <ul className="cs_footer_widget_nav_list cs_mp_0">
+                {data.trainingAcademyLinks.map((link, index) => (
                   <li key={index}>
-                    <div className="cs_recent_post">
-                      <Link href={post.href} className="cs_recent_post_thumb">
-                      <Image src={mounted ? getAssetPathClient(post.image) : post.image} alt="img" width={85} height={85} loading="eager" />
-                      </Link>
-                      <div className="cs_recent_post_right">
-                        <p>{post.date}</p>
-                        <h3 className="cs_recent_post_title">
-                          <Link href={post.href}>{post.title}</Link>
-                        </h3>
-                      </div>
-                    </div>
+                    <Link href={link.href}>{link.text}</Link>
                   </li>
                 ))}
               </ul>

@@ -6,33 +6,33 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaSearch } from 'react-icons/fa';
-import indiaCentersData from '../../ivf-centers/india-centers-data.json';
+import indiaCentresData from '../../ivf-centres/india-centres-data.json';
 
 const headingData = {
   title: 'Center Locator',
 };
 
-// Transform India centers data
-const indiaCenters = indiaCentersData.map(center => ({
+// Transform India centres data
+const indiaCentres = indiaCentresData.map(center => ({
   name: center.name,
   address: center.location,
   phone: center.phone,
   email: center.email,
   timing: center.timing,
-  link: `/ivf-centers/india/${center.stateSlug}/${center.slug}`,
+  link: `/ivf-centres/india/${center.stateSlug}/${center.slug}`,
   country: 'India',
   state: center.state,
 }));
 
-// International centers
-const internationalCenters = [
+// International centres
+const internationalCentres = [
   {
     name: 'Lusaka, Zambia, Africa',
     address: 'Lusaka, Zambia',
     phone: '+260-976832953',
     email: 'lusaka@seedsofinnocens.com',
     timing: 'Mon-Sat: 9:00 AM - 6:00 PM',
-    link: '/ivf-centers/lusaka-zambia-africa',
+    link: '/ivf-centres/lusaka-zambia-africa',
     country: 'International',
     state: 'Zambia',
   },
@@ -42,7 +42,7 @@ const internationalCenters = [
     phone: '+260-976837261',
     email: 'kitwe@seedsofinnocens.com',
     timing: 'Mon-Sat: 9:00 AM - 6:00 PM',
-    link: '/ivf-centers/kitwe-zambia-africa',
+    link: '/ivf-centres/kitwe-zambia-africa',
     country: 'International',
     state: 'Zambia',
   },
@@ -52,13 +52,13 @@ const internationalCenters = [
     phone: '+968-22717111',
     email: 'muscat@seedsofinnocens.com',
     timing: 'Mon-Sat: 9:00 AM - 6:00 PM',
-    link: '/ivf-centers/mabela-muscat-oman',
+    link: '/ivf-centres/mabela-muscat-oman',
     country: 'International',
     state: 'Oman',
   },
 ];
 
-const allCenters = [...indiaCenters, ...internationalCenters];
+const allCentres = [...indiaCentres, ...internationalCentres];
 
 const ivfContentData = {
   sections: [
@@ -75,13 +75,13 @@ const ivfContentData = {
 const Page = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredIndiaCenters = indiaCenters.filter(center =>
+  const filteredIndiaCentres = indiaCentres.filter(center =>
     center.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     center.state.toLowerCase().includes(searchQuery.toLowerCase()) ||
     center.address.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const filteredInternationalCenters = internationalCenters.filter(center =>
+  const filteredInternationalCentres = internationalCentres.filter(center =>
     center.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     center.state.toLowerCase().includes(searchQuery.toLowerCase()) ||
     center.address.toLowerCase().includes(searchQuery.toLowerCase())
@@ -112,7 +112,7 @@ const Page = () => {
         </div>
       </Section>
 
-      {/* Centers Section */}
+      {/* Centres Section */}
       <Section
         topSpaceLg="0"
         topSpaceMd="0"
@@ -154,17 +154,17 @@ const Page = () => {
             </div>
           </div>
 
-          {/* India Centers Section */}
+          {/* India Centres Section */}
           <div className="row mb-4">
             <div className="col-lg-12">
               <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                India Centers ({filteredIndiaCenters.length})
+                India Centres ({filteredIndiaCentres.length})
               </h2>
             </div>
           </div>
 
           <div className="row cs_gap_y_30 mb-5" style={{ gap: '30px 0' }}>
-            {filteredIndiaCenters.map((center, index) => (
+            {filteredIndiaCentres.map((center, index) => (
               <div key={index} className="col-lg-4 col-md-6">
                 <div style={{ 
                   backgroundColor: '#ffffff',
@@ -289,17 +289,17 @@ const Page = () => {
 
           <div className="cs_height_50 cs_height_lg_50" />
 
-          {/* International Centers Section */}
+          {/* International Centres Section */}
           <div className="row mb-4">
             <div className="col-lg-12">
               <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                International Centers ({filteredInternationalCenters.length})
+                International Centres ({filteredInternationalCentres.length})
               </h2>
             </div>
           </div>
 
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
-            {filteredInternationalCenters.map((center, index) => (
+            {filteredInternationalCentres.map((center, index) => (
               <div key={index} className="col-lg-4 col-md-6">
                 <div style={{ 
                   backgroundColor: '#ffffff',

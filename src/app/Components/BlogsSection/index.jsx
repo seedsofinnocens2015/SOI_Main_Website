@@ -6,6 +6,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import SectionHeading from "../SectionHeading";
 import Link from "next/link";
 import Image from "next/image";
+import { getAssetPathClient } from "../../utils/assetPath";
 
 const BlogSection = ({ data }) => {
   const sliderRef = useRef(null);
@@ -81,7 +82,7 @@ const BlogSection = ({ data }) => {
                               className="cs_post_thumbnail_small"
                             >
                               <Image 
-                                src={post.thumbnail} 
+                                src={getAssetPathClient(post.thumbnail)} 
                                 alt={post.title} 
                                 width={100} 
                                 height={80}

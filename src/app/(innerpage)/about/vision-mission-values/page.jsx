@@ -12,15 +12,15 @@ const ivfContentData = {
     {
       heading: 'Our Mission',
       paragraphs: [
-        'Seeds of Innocence Infertility & Maternity Clinic Ghaziabad, Uttar Pradesh is committed to provide quality, free and accessible, preventive, curative, promotive and comprehensive IVF services to the community and assure the best outcome through continual quality improvement. The patient is treated with respect and dignity in a safe environment without discrimination with respect to caste, religion, gender and economic background.',
+        'Seeds of Innocence is committed to provide quality, free and accessible, preventive, curative, promotive and comprehensive IVF services to the community and assure the best outcome through continual quality improvement. The patient is treated with respect and dignity in a safe environment without discrimination with respect to caste, religion, gender and economic background.',
       ],
       sideImage: '/assets/img/recent_post2.jpg',
     },
     {
       heading: 'Our Vision',
       paragraphs: [
-        'Seeds of Innocence Infertility & Maternity Clinic to be recognized as one of the best IVF and Fertility institutions in the country.',
-        'To achieve the vision Seeds of Innocence Infertility & Maternity Clinic must strive to:',
+        'Seeds of Innocence  to be recognized as one of the best IVF and Fertility institutions in the country.',
+        'To achieve the vision Seeds of Innocence  must strive to:',
       ],
       listItems: [
         'Provide health care with love and affection that meets patients\' and community expectation',
