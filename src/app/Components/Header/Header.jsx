@@ -74,6 +74,7 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Chorionic Villus Sampling (CVS)', href: '/genetic-testing-screening/chorionic-villus-sampling' },
               { label: 'Couple Carrier Screening', href: '/genetic-testing-screening/couple-carrier-screening' },
               { label: 'Karyotyping', href: '/genetic-testing-screening/karyotyping' },
+              { label: 'Microarray', href: '/genetic-testing-screening/microarray' },
               { label: 'HLA Matching', href: '/genetic-testing-screening/hla-matching' },
             ],
           },
@@ -116,103 +117,103 @@ const Header = ({ isTopBar, variant }) => {
         ],
       },
       {
-        label: 'IVF Centres',
-        href: '/ivf-centres',
+        label: 'IVF Centers',
+        href: '/ivf-centers',
         isMegaMenu: true,
         megaMenuCategories: [
           {
             label: 'India',
-            href: '/ivf-centres/india',
+            href: '/ivf-centers/india',
             subItems: [
               {
                 label: 'Delhi',
-                href: '/ivf-centres/india/delhi',
+                href: '/ivf-centers/india/delhi',
                 subItems: [
-                  { label: 'Malviya Nagar, New Delhi', href: '/ivf-centres/india/delhi/malviya-nagar-delhi' },
-                  { label: 'Pitampura, New Delhi', href: '/ivf-centres/india/delhi/pitampura-new-delhi' },
-                  { label: 'Janakpuri, New Delhi', href: '/ivf-centres/india/delhi/janakpuri-new-delhi' },
+                  { label: 'Malviya Nagar, New Delhi', href: '/ivf-centers/india/delhi/malviya-nagar-delhi' },
+                  { label: 'Pitampura, New Delhi', href: '/ivf-centers/india/delhi/pitampura-new-delhi' },
+                  { label: 'Janakpuri, New Delhi', href: '/ivf-centers/india/delhi/janakpuri-new-delhi' },
                 ],
               },
               {
                 label: 'Uttar Pradesh',
-                href: '/ivf-centres/india/uttar-pradesh',
+                href: '/ivf-centers/india/uttar-pradesh',
                 subItems: [
-                  { label: 'Ghaziabad, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/ghaziabad-uttar-pradesh' },
-                  { label: 'Lucknow, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/lucknow-uttar-pradesh' },
-                  { label: 'Agra, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/agra-uttar-pradesh' },
-                  { label: 'Gorakhpur, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/gorakhpur-uttar-pradesh' },
-                  { label: 'Kanpur, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/kanpur-uttar-pradesh' },
-                  { label: 'Meerut, Uttar Pradesh', href: '/ivf-centres/india/uttar-pradesh/meerut-uttar-pradesh' },
+                  { label: 'Ghaziabad, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/ghaziabad-uttar-pradesh' },
+                  { label: 'Lucknow, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/lucknow-uttar-pradesh' },
+                  { label: 'Agra, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/agra-uttar-pradesh' },
+                  { label: 'Gorakhpur, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/gorakhpur-uttar-pradesh' },
+                  { label: 'Kanpur, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/kanpur-uttar-pradesh' },
+                  { label: 'Meerut, Uttar Pradesh', href: '/ivf-centers/india/uttar-pradesh/meerut-uttar-pradesh' },
                 ],
               },
               {
                 label: 'Bihar',
-                href: '/ivf-centres/india/bihar',
+                href: '/ivf-centers/india/bihar',
                 subItems: [
-                  { label: 'Patna, Bihar', href: '/ivf-centres/india/bihar/patna-bihar' },
-                  { label: 'Muzaffarpur, Bihar', href: '/ivf-centres/india/bihar/muzaffarpur-bihar' },
+                  { label: 'Patna, Bihar', href: '/ivf-centers/india/bihar/patna-bihar' },
+                  { label: 'Muzaffarpur, Bihar', href: '/ivf-centers/india/bihar/muzaffarpur-bihar' },
                 ],
               },
               {
                 label: 'Haryana',
-                href: '/ivf-centres/india/haryana',
+                href: '/ivf-centers/india/haryana',
                 subItems: [
-                  { label: 'Faridabad, Haryana', href: '/ivf-centres/india/haryana/faridabad-haryana' },
-                  { label: 'Gurugram, Haryana', href: '/ivf-centres/india/haryana/gurugram-haryana' },
+                  { label: 'Faridabad, Haryana', href: '/ivf-centers/india/haryana/faridabad-haryana' },
+                  { label: 'Gurugram, Haryana', href: '/ivf-centers/india/haryana/gurugram-haryana' },
                 ],
               },
               {
                 label: 'Jharkhand',
-                href: '/ivf-centres/india/jharkhand',
+                href: '/ivf-centers/india/jharkhand',
                 subItems: [
-                  { label: 'Ranchi, Jharkhand', href: '/ivf-centres/india/jharkhand/ranchi-jharkhand' },
+                  { label: 'Ranchi, Jharkhand', href: '/ivf-centers/india/jharkhand/ranchi-jharkhand' },
                 ],
               },
               {
                 label: 'Uttarakhand',
-                href: '/ivf-centres/india/uttarakhand',
+                href: '/ivf-centers/india/uttarakhand',
                 subItems: [
-                  { label: 'Haldwani, Uttarakhand', href: '/ivf-centres/india/uttarakhand/haldwani-uttarakhand' },
+                  { label: 'Haldwani, Uttarakhand', href: '/ivf-centers/india/uttarakhand/haldwani-uttarakhand' },
                 ],
               },
               {
                 label: 'Assam',
-                href: '/ivf-centres/india/assam',
+                href: '/ivf-centers/india/assam',
                 subItems: [
-                  { label: 'Guwahati, Assam', href: '/ivf-centres/india/assam/guwahati-assam' },
+                  { label: 'Guwahati, Assam', href: '/ivf-centers/india/assam/guwahati-assam' },
                 ],
               },
               {
                 label: 'Kerala',
-                href: '/ivf-centres/india/kerala',
+                href: '/ivf-centers/india/kerala',
                 subItems: [
-                  { label: 'Kasaragod, Kerala', href: '/ivf-centres/india/kerala/kasaragod-kerala' },
-                  { label: 'Kochi, Kerala', href: '/ivf-centres/india/kerala/kochi-kerala' },
+                  { label: 'Kasaragod, Kerala', href: '/ivf-centers/india/kerala/kasaragod-kerala' },
+                  { label: 'Kochi, Kerala', href: '/ivf-centers/india/kerala/kochi-kerala' },
                 ],
               },
               {
                 label: 'Jammu & Kashmir',
-                href: '/ivf-centres/india/jammu-kashmir',
+                href: '/ivf-centers/india/jammu-kashmir',
                 subItems: [
-                  { label: 'Srinagar, J&K', href: '/ivf-centres/india/jammu-kashmir/srinagar-jk' },
+                  { label: 'Srinagar, J&K', href: '/ivf-centers/india/jammu-kashmir/srinagar-jk' },
                 ],
               },
               {
                 label: 'West Bengal',
-                href: '/ivf-centres/india/west-bengal',
+                href: '/ivf-centers/india/west-bengal',
                 subItems: [
-                  { label: 'Kolkata', href: '/ivf-centres/india/west-bengal/kolkata' },
+                  { label: 'Kolkata', href: '/ivf-centers/india/west-bengal/kolkata' },
                 ],
               },
             ],
           },
           {
             label: 'International',
-            href: '/ivf-centres/international',
+            href: '/ivf-centers/international',
             subItems: [
-              { label: 'Lusaka, Zambia, Africa', href: '/ivf-centres/lusaka-zambia-africa' },
-              { label: 'Kitwe, Zambia, Africa', href: '/ivf-centres/kitwe-zambia-africa' },
-              { label: 'Mabela, Muscat, Oman', href: '/ivf-centres/mabela-muscat-oman' },
+              { label: 'Lusaka, Zambia, Africa', href: '/ivf-centers/lusaka-zambia-africa' },
+              { label: 'Kitwe, Zambia, Africa', href: '/ivf-centers/kitwe-zambia-africa' },
+              { label: 'Mabela, Muscat, Oman', href: '/ivf-centers/mabela-muscat-oman' },
             ],
           },
         ],
@@ -644,7 +645,7 @@ const Header = ({ isTopBar, variant }) => {
                                                           href={subItem.href}
                                                           prefetch={false}
                                                           onClick={(e) => {
-                                                            if (item.label === 'IVF Centres' && category.label === 'India') {
+                                                            if (item.label === 'IVF Centers' && category.label === 'India') {
                                                               e.preventDefault();
                                                             }
                                                             // Close mobile menu on navigation
@@ -701,7 +702,7 @@ const Header = ({ isTopBar, variant }) => {
                                                       href={subItem.href}
                                                       prefetch={false}
                                                       onClick={(e) => {
-                                                        if (item.label === 'IVF Centres' && category.label === 'India') {
+                                                        if (item.label === 'IVF Centers' && category.label === 'India') {
                                                           e.preventDefault();
                                                         } else {
                                                           // Close mobile menu on navigation
@@ -800,7 +801,7 @@ const Header = ({ isTopBar, variant }) => {
                                   )}
                                 </ul>
                               </li>
-                              {/* Middle Column - Centres of hovered state */}
+                              {/* Middle Column - Centers of hovered state */}
                               <li style={{
                                 opacity: hoveredCategoryIndex !== null &&
                                   item.megaMenuCategories[
@@ -853,7 +854,7 @@ const Header = ({ isTopBar, variant }) => {
                                             href={subItem.href}
                                             prefetch={false}
                                             onClick={(e) => {
-                                              if (item.label === 'IVF Centres' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India') {
+                                              if (item.label === 'IVF Centers' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India') {
                                                 e.preventDefault();
                                               }
                                             }}
@@ -865,7 +866,7 @@ const Header = ({ isTopBar, variant }) => {
                                     })}
                                 </ul>
                               </li>
-                              {/* Right Column - Nested centres of hovered state */}
+                              {/* Right Column - Nested centers of hovered state */}
                               <li style={{
                                 opacity: hoveredCategoryIndex !== null &&
                                   hoveredStateIndex !== null &&

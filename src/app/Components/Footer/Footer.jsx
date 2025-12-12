@@ -117,7 +117,7 @@ const Footer = () => {
           { href: '/about/our-story/', text: 'About Us' },
           { href: '/#fertility-treatments', text: 'Our Services' },
           { href: '/doctors', text: 'Our Doctors' },
-          { href: '/contact/center-locator/', text: 'Our Centres' },
+          { href: '/contact/center-locator/', text: 'Our Centers' },
           { href: '/contact/careers/', text: 'Careers' },
           { href: '/contact/feedback/', text: 'Feedback' },
           { href: '/contact/call-back-form/', text: 'Contact' },
