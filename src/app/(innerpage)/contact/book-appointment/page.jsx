@@ -1,4 +1,6 @@
 "use client";
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
@@ -24,6 +26,52 @@ const ivfContentData = {
 };
 
 const page = () => {
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const API_BASE_URL = 'https://soi.seedsofinnocens.com';
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get('name'),
+      phone: formData.get('phone'),
+      email: formData.get('email'),
+      date: formData.get('date'),
+      time: formData.get('time'),
+      center: formData.get('center'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/new-website/book-appointment`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.ok) {
+        router.push('/contact/thank-you?type=appointment');
+      } else {
+        setError(result.error || 'Something went wrong. Please try again.');
+        setIsSubmitting(false);
+      }
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setError('Network error. Please check your connection and try again.');
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div>
       <Section
@@ -71,7 +119,20 @@ const page = () => {
                   Appointment Booking Form
                 </h2>
                 
-                <form className="cs_contact_form">
+                {error && (
+                  <div style={{
+                    padding: '12px 16px',
+                    backgroundColor: '#fee',
+                    border: '1px solid #fcc',
+                    borderRadius: '6px',
+                    marginBottom: '20px',
+                    color: '#c33'
+                  }}>
+                    {error}
+                  </div>
+                )}
+
+                <form className="cs_contact_form" onSubmit={handleSubmit}>
                   <div className="row cs_gap_y_30">
                     <div className="col-md-6">
                       <label className="cs_form_label">
@@ -179,8 +240,9 @@ const page = () => {
                         type="submit"
                         className="cs_btn cs_style_1 cs_color_1"
                         style={{ width: '100%' }}
+                        disabled={isSubmitting}
                       >
-                        <span>Book Appointment</span>
+                        <span>{isSubmitting ? 'Submitting...' : 'Book Appointment'}</span>
                       </button>
                     </div>
                   </div>

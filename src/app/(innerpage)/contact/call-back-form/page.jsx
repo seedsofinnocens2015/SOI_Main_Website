@@ -1,4 +1,6 @@
 "use client";
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
@@ -23,6 +25,52 @@ const ivfContentData = {
 };
 
 const page = () => {
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const API_BASE_URL = 'https://soi.seedsofinnocens.com';
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get('name'),
+      phone: formData.get('phone'),
+      email: formData.get('email'),
+      callTime: formData.get('callTime'),
+      date: formData.get('date'),
+      reason: formData.get('reason'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/new-website/call-back-form`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.ok) {
+        router.push('/contact/thank-you?type=call-back');
+      } else {
+        setError(result.error || 'Something went wrong. Please try again.');
+        setIsSubmitting(false);
+      }
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setError('Network error. Please check your connection and try again.');
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div>
       <Section
@@ -70,7 +118,20 @@ const page = () => {
                   Call Back Request Form
                 </h2>
                 
-                <form className="cs_contact_form">
+                {error && (
+                  <div style={{
+                    padding: '12px 16px',
+                    backgroundColor: '#fee',
+                    border: '1px solid #fcc',
+                    borderRadius: '6px',
+                    marginBottom: '20px',
+                    color: '#c33'
+                  }}>
+                    {error}
+                  </div>
+                )}
+
+                <form className="cs_contact_form" onSubmit={handleSubmit}>
                   <div className="row cs_gap_y_30">
                     <div className="col-md-6">
                       <label className="cs_form_label">
@@ -121,18 +182,13 @@ const page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Best Day to Call
+                        Preferred Date
                       </label>
-                      <select name="day" className="cs_form_field">
-                        <option value="">Select day</option>
-                        <option value="monday">Monday</option>
-                        <option value="tuesday">Tuesday</option>
-                        <option value="wednesday">Wednesday</option>
-                        <option value="thursday">Thursday</option>
-                        <option value="friday">Friday</option>
-                        <option value="saturday">Saturday</option>
-                        <option value="anyday">Any Day</option>
-                      </select>
+                      <input
+                        type="date"
+                        name="date"
+                        className="cs_form_field"
+                      />
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
@@ -165,8 +221,9 @@ const page = () => {
                         type="submit"
                         className="cs_btn cs_style_1 cs_color_1"
                         style={{ width: '100%' }}
+                        disabled={isSubmitting}
                       >
-                        <span>Request Call Back</span>
+                        <span>{isSubmitting ? 'Submitting...' : 'Request Call Back'}</span>
                       </button>
                     </div>
                   </div>
