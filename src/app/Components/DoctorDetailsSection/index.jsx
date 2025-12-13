@@ -123,7 +123,18 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
                 <div className="cs_section_header">
                   <h3 className="cs_section_title_small">Work Experience</h3>
                 </div>
-                <p className="cs_text_style_1">{data.workExperience}</p>
+                {Array.isArray(data.workExperience) ? (
+                  <ul className="cs_education_list">
+                    {data.workExperience.map((exp, index) => (
+                      <li key={index}>
+                        <span className="cs_education_number">{index + 1}.</span>
+                        {exp}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="cs_text_style_1">{data.workExperience}</p>
+                )}
               </div>
             )}
 
@@ -138,6 +149,23 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
                     <li key={index}>
                       <span className="cs_education_number">{index + 1}.</span>
                       {edu}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Awards */}
+            {data.awards && data.awards.length > 0 && (
+              <div className="cs_awards">
+                <div className="cs_section_header">
+                  <h3 className="cs_section_title_small">Awards</h3>
+                </div>
+                <ul className="cs_education_list">
+                  {data.awards.map((award, index) => (
+                    <li key={index}>
+                      <span className="cs_education_number">{index + 1}.</span>
+                      {award}
                     </li>
                   ))}
                 </ul>

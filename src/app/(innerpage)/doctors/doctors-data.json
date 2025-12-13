@@ -5,19 +5,27 @@
     "subtitle": "Founder & Chief IVF Specialist",
     "image": "/assets/img/Doctors/Dr Gauri maam.jpg",
     "description": [
-      "Dr. Gauri Agarwal is a renowned fertility specialist and the visionary founder of Seeds of Innocens IVF Centre. With over 15 years of experience in reproductive medicine, she has dedicated her career to helping couples achieve their dream of parenthood.",
-      "Her expertise spans across advanced IVF techniques, reproductive endocrinology, and minimally invasive fertility procedures. Dr. Agarwal is known for her compassionate approach to patient care and her commitment to staying at the forefront of fertility medicine.",
-      "Under her leadership, Seeds of Innocens has grown from a single center to a network of fertility clinics across India and internationally, helping thousands of couples achieve successful pregnancies through personalized, evidence-based treatments."
+      "Dr. Gauri Agarwal is a young, dynamic, and leading fertility specialist of Delhi/NCR. Dr. Agarwal is backed by visionary thinking, die-hard determination, and industry-rich experience of more than 10 years. She is the Director, IVF at Seeds of Innocence Centre. Dr. Agarwal finished her MBBS degree from Bharati Vidyapeeth Medical College, Pune. Post that, she did a Diplomate of National Board (DNB), Obstetrics and Gynaecology Residency Program from KG Superspecialty Hospital, Coimbatore. She followed this with a hard-earned Fellowship Program in Reproductive Medicine (Infertility) from the University of Gent, Belgium. Further, she received training in Embryology at the National University of Singapore."
     ],
     "location": "Delhi/NCR",
     "email": "drgauriagarwal@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
+    "qualification": "MD, DNB, MBBS",
     "specialization": "IVF, Reproductive Endocrinology, Advanced Fertility Techniques",
-    "experience": "15+ Years",
-    "workExperience": "Founder & Chief IVF Specialist at Seeds of Innocens specializing in reproductive endocrinology and Infertility management.",
+    "experience": "15+ years",
+    "workExperience": [
+      "Founder & Director at Seeds of Innocence (India, Oman & Africa).",
+      "Leading Gynecologist and highly respected IVF specialist with over 15 years of experience in Advanced Infertility Treatment & Reproductive Genetics."
+    ],
     "education": [
-      "MBBS, MD (Obstetrics & Gynecology)",
-      "Fellowship in Reproductive Medicine"
+      "Trained in Embryology at the National University of Singapore",
+      "Fellowship in IVF & ART from Ghent University, Belgium",
+      "Stanford University Graduate: School of Business",
+      "FDGSI Fertility Specialist"
+    ],
+    "awards": [
+      "The coveted Business World Healthcare 40 under 40 Leaders in India 2022",
+      "The prestigious Times 40 under 40 Healthcare Leaders in India 2022",
+      "The ET Healthworld: Induction into the Hall of Fame as the IVF Virtuoso of 2022"
     ],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 95 },
@@ -54,15 +62,21 @@
     "subtitle": "Senior IVF Specialist",
     "image": "/assets/img/Doctors/nivedita.jpg",
     "description": [
-      "Dr. Nivedita Nehal is an accomplished IVF specialist with extensive experience in reproductive endocrinology and infertility. She specializes in treating complex infertility cases and has a special interest in PCOS management and hormonal disorders.",
-      "Her expertise includes advanced IVF techniques, ovulation induction, and management of recurrent pregnancy losses. Dr. Nehal is known for her empathetic approach and dedication to helping couples achieve their parenthood goals.",
-      "She actively participates in continuing medical education and stays abreast of the latest developments in fertility treatments to provide the best care to her patients."
+      "Dr. Nivedita Nehal is a highly skilled and dedicated specialist in the field of obstetrics & gynecology. She is an expert in her field and brings a profound wealth of knowledge. She is working as an IVF Specialist at Seeds of Innocens IVF in Gorakhpur."
     ],
     "location": "Gorakhpur-Uttarpradesh",
     "email": "drniveditanehal@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Endocrinology",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology)",
     "specialization": "IVF, PCOS Management, Hormonal Disorders",
-    "experience": "10+ Years",
+    "experience": "7+ years",
+    "workExperience": [
+      "With more than 05 years of experience, she has a strong background and knowledge in gynecology and reproductive medicine. She served as a senior resident at AIIMS Bhopal.",
+      "She did her fellowship in reproductive medicine from Ferty9 Hyderabad. And also served as an IVF consultant in Ferty9 Hyderabad."
+    ],
+    "education": [
+      "She has completed her MBBS from Era Medical College, Lucknow, and MS in Obstetrics and Gynecology from DY Patil Medical College, Kolhapur. Additionally, she did her fellowships in fetal sonography, infertility, and hysteroscopy. She has also registered and earned a Medical Registration certificate from the Medical Council, Madhya Pradesh."
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 88 },
       { "label": "Patient Satisfaction", "percentage": 94 },
@@ -76,15 +90,24 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/lisha.jpg",
     "description": [
-      "Dr. Lisha Singh is a dedicated IVF specialist with comprehensive expertise in reproductive medicine. She has a special interest in treating couples with unexplained infertility and recurrent implantation failures.",
-      "Her approach combines evidence-based medicine with personalized care, ensuring optimal outcomes for her patients. Dr. Singh is committed to providing compassionate support throughout the fertility journey.",
-      "She continuously updates her knowledge through active participation in national and international fertility conferences and workshops."
+      "Dr. Lisha Singh is a highly experienced IVF specialist with over 7 years of dedicated practice in reproductive medicine. She is committed to providing compassionate and personalized care to her patients, helping them navigate their fertility journey with expertise and understanding. She is working as an IVF Specialist at Seeds of Innocence IVF in New Delhi."
     ],
     "location": "Malviya nagar-New Delhi",
     "email": "drlishasingh@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
+    "qualification": "MBBS, DGO, DNB, Fellowship in IVF",
     "specialization": "IVF, Unexplained Infertility, Recurrent Implantation Failure",
-    "experience": "9+ Years",
+    "experience": "7+ years",
+    "workExperience": [
+      "With 7 years of experience, she has a strong background and knowledge in gynecology and reproductive medicine.",
+      "She has worked as an IVF consultant at Indira IVF."
+    ],
+    "education": [
+      "MBBS from S.N. Medical College, Agra",
+      "DGO from MLB Medical College, Jhansi",
+      "DNB from The Calcutta Medical Research Institute, Kolkata",
+      "Fellowship in IVF"
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 87 },
       { "label": "Patient Satisfaction", "percentage": 93 },
@@ -120,15 +143,24 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/debilina.jpg",
     "description": [
-      "Dr. Debilina Roy is a compassionate IVF specialist with extensive experience in reproductive medicine. She specializes in personalized treatment protocols and has a keen interest in improving success rates through advanced techniques.",
-      "Her holistic approach to patient care ensures that both physical and emotional aspects of fertility treatment are addressed. Dr. Roy is known for her excellent communication skills and ability to make patients feel comfortable.",
-      "She is actively involved in research and stays updated with the latest innovations in fertility treatments to offer cutting-edge care to her patients."
+      "Dr. Debilina Roy is a highly experienced IVF specialist with over 10 years an obstetrician and gynecologist proficient in obstetric and gynecological emergencies, high-risk pregnancies. She is committed to providing compassionate and personalized care to her patients, helping them navigate their fertility journey with expertise and understanding. She is working as an IVF Specialist at Seeds of Innocence IVF in Patna."
     ],
     "location": "Patna-Bihar",
     "email": "drdebilinaroy@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), DNB in Reproductive Medicine",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), FMAS, DMAS",
     "specialization": "IVF, Personalized Treatment Protocols, Advanced Embryology",
-    "experience": "8+ Years",
+    "experience": "10+ years",
+    "workExperience": [
+      "With 10 years of experience, she has a strong background and knowledge in obstetrics and gynecology. She has been working as an IVF consultant at Seeds of innocence for a long time."
+    ],
+    "education": [
+      "MBBS R.G. Kar Medical College, Kolkata, West Bengal University of Health Sciences",
+      "MS (obs and gynac), Bankura Sammilani Medical College, West Bengal University of Health Sciences",
+      "FMAS and DMAS World Laparoscopy Hospital, Gurgaon"
+    ],
+    "awards": [
+      "Gold medal in Microbiology (2006) and Best paper presentation award at Yuva FOGSI, Guwahati, April 2013, Topic-Comparative study on infraumbilical use of oxytocin versus misoprostol in the management of retained placenta via Pipingas technique"
+    ],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 86 },
       { "label": "Patient Satisfaction", "percentage": 94 },
@@ -164,15 +196,21 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/kriti.jpg",
     "description": [
-      "Dr. Kriti Prasad is an accomplished IVF specialist known for her expertise in reproductive endocrinology and infertility management. She has a special interest in treating hormonal imbalances and their impact on fertility.",
-      "Her comprehensive approach combines advanced medical knowledge with personalized care plans. Dr. Prasad is dedicated to helping couples understand their condition and navigate their fertility journey with confidence.",
-      "She stays at the forefront of medical advances and incorporates the latest evidence-based treatments into her practice."
+      "Dr. Kriti Prasad is a highly skilled and dedicated specialist in the field of obstetrics & gynecology. She is an expert in her field and brings a profound wealth of knowledge. She is working as an IVF Specialist at Seeds of Innocens IVF in Ranchi."
     ],
     "location": "Ranchi-Jharkhand",
     "email": "drkritiprasad@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Endocrinology",
+    "qualification": "DNB (Obstetrics & Gynecology)",
     "specialization": "IVF, Reproductive Endocrinology, Hormonal Disorders",
-    "experience": "9+ Years",
+    "experience": "9+ years",
+    "workExperience": [
+      "With more than 10 years of experience, she has a strong background and knowledge in gynecology and reproductive medicine.",
+      "She served as an IVF consultant at Nova IVF Centre and Medicover Fertility Centre."
+    ],
+    "education": [
+      "Dr. Kriti has completed her DNB degree in obstetrics & gynecology from B.R. Singh Railways Hospital."
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 87 },
       { "label": "Patient Satisfaction", "percentage": 93 },
@@ -186,15 +224,21 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/pallavi.jpg",
     "description": [
-      "Dr. Pallavi Shrivastava is a skilled IVF specialist with extensive experience in reproductive medicine. She specializes in treating couples with complex infertility issues and has expertise in advanced IVF techniques.",
-      "Her patient-first philosophy ensures that every couple receives personalized attention and care. Dr. Shrivastava is known for her meticulous approach to treatment planning and monitoring.",
-      "She is committed to excellence in patient care and continuously works towards improving treatment outcomes through innovative approaches."
+      "Fellowship ( Infertility and Reproductive Endocrinology), PGIMER Chandigarh. Young and dynamic fertility and IVF expert, with over 6 years of experience. Serves as Clinical center Head at seeds of innocence, IVF center, Haldwani. Special interest - Hormonal causes of infertility and male infertility."
     ],
     "location": "Haldwani-Uttrakhand",
     "email": "drpallavishrivastava@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), DNB, Fellowship in Infertility and Reproductive Endocrinology",
     "specialization": "IVF, Complex Infertility Cases, Advanced IVF Techniques",
-    "experience": "8+ Years",
+    "experience": "6+ years",
+    "workExperience": [
+      "3 years of Senior Residency from North Bengal Medical College. Registrar ship at Neotial Getwell hospital, for 1 year. Assistant professor at Chirayu Medical College. Then, Consultant Gynecologist at Indira IVF Hospital."
+    ],
+    "education": [
+      "MBBS from GMC Bhopal. MS obstetrics and gynecology from NBMC, Darjeeling. Also did DNB in obs and gynae. Senior residency of 3 years from NBMCH, Darjeeling.",
+      "Fellowship ( Infertility and Reproductive Endocrinology), PGIMER Chandigarh."
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 85 },
       { "label": "Patient Satisfaction", "percentage": 92 },
@@ -204,19 +248,30 @@
   },
   {
     "slug": "dr-divya-shivanand",
-    "name": "Dr. Divya Shivanand",
+    "name": "Dr. Divya Shivanand Shanbhag",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/divya.jpg",
     "description": [
-      "Dr. Divya Shivanand is a compassionate IVF specialist dedicated to helping couples achieve their dream of parenthood. She has extensive experience in reproductive medicine and specializes in personalized fertility treatments.",
-      "Her holistic approach addresses both the medical and emotional aspects of infertility. Dr. Shivanand believes in open communication and works closely with patients to ensure they understand every step of their treatment.",
-      "She is actively involved in continuing education and incorporates the latest research findings into her clinical practice."
+      "Highly skilled and compassionate Gynecologist and IVF Consultant with over 4+ of experience in obstetrics, gynaecology and reproductive health, infertility treatment, and advanced gynecological care. Expertise in managing complex cases of infertility, performing ART (Assisted Reproductive Technology) procedures, and delivering evidence-based treatments tailored to patient needs. Committed to providing holistic care and achieving exceptional patient outcomes."
     ],
     "location": "Lucknow-Uttarpradesh",
     "email": "drdivyashivanand@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
+    "qualification": "MBBS, DGO, DNB",
     "specialization": "IVF, Personalized Fertility Treatments, Patient Counseling",
-    "experience": "7+ Years",
+    "experience": "4+ years",
+    "workExperience": [
+      "2020- Consultant obstetrician and gynaecologist at Government Hospital Hebri, Udupi, Karnataka - Skilled in obstetric procedures, Gynec procedures, Family planning, Antenatal care, High-risk pregnancy",
+      "2021 - Senior Resident at Sakra World Hospital, Bangalore, Karnataka - High-risk pregnancy management, OHSS management, Obs and Gyne procedures",
+      "2024- Clinical Associate in obstetrics and Gynecology at ApolloMedic Superspeciality hospital, Lucknow - Management of high-risk pregnancy, Laparoscopic gynaecology procedures, obs and gyne procedures"
+    ],
+    "education": [
+      "MBBS at Basaveshwara Medical college and hospital and Research centre, Chitradurga, Karnataka (2011-2017)",
+      "Diploma in Obstetrics and Gynecology (DGO) Vijayanagar Institute of Medical Sciences ( 2018 - 2020 )",
+      "Diplomate of the National Board at Holy Family Hospital, New Delhi (2022-2024)",
+      "MRCOG PART 1",
+      "Fellowship in minimal access surgery (FMAS) at AMASI"
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 84 },
       { "label": "Patient Satisfaction", "percentage": 91 },
@@ -230,15 +285,24 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/aiman.jpg",
     "description": [
-      "Dr. Aiman Akram is an experienced IVF specialist with a strong background in reproductive medicine. She has a special interest in treating couples with male factor infertility and advanced assisted reproductive techniques.",
-      "Her comprehensive knowledge and skill in managing complex cases have helped many couples achieve successful pregnancies. Dr. Akram is known for her thorough evaluation and personalized treatment approach.",
-      "She maintains high standards of clinical practice and is committed to providing excellent care to all her patients."
+      "Dr. Aiman Akram is a young and charismatic Reproductive Medicine and IVF expert, holding skilled experience in the field for over 7 years, with a distinguished dexterity in modern techniques and regenerative therapies in infertility. She is compassionate and dedicated towards alleviating the stigma of infertility by providing the best individualised treatment to her patients. She is working as Clinical Head and Senior Fertility Consultant at Seeds of Innocens IVF, Agra."
     ],
     "location": "Agra-Uttarpradesh",
     "email": "draimanakram@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF & Andrology",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), FRM",
     "specialization": "IVF, Male Factor Infertility, Advanced ART Techniques",
-    "experience": "9+ Years",
+    "experience": "7+ years",
+    "workExperience": [
+      "With over 7 years of experience, she is well versed with the latest developments of Reproductive Medicine, with special interests in Recurrent Pregnancy Losses and previous IVF failures."
+    ],
+    "education": [
+      "MBBS from KMC, Manipal",
+      "MS-OBGYN Dr. B R Ambedkar Med college, Bangalore",
+      "FRM- IIRRH Milann Fertility, Bangalore"
+    ],
+    "awards": [
+      "Golden Aim Most Emerging Obstetrician and Gynaecologist in UP, 2025. Best Poster for Placental Teratoma in Life Conference, 2017. Various papers have been published in national and international journals."
+    ],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 86 },
       { "label": "Patient Satisfaction", "percentage": 93 },
@@ -270,19 +334,25 @@
   },
   {
     "slug": "dr-disha-datta",
-    "name": "Dr. Disha Datta",
+    "name": "Dr. Disha Datta Choudhary",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/disha.jpg",
     "description": [
-      "Dr. Disha Datta is an accomplished IVF specialist with extensive experience in reproductive medicine. She specializes in advanced fertility treatments and has expertise in managing complex infertility cases.",
-      "Her holistic approach combines medical expertise with emotional support, ensuring that patients feel comfortable and confident throughout their journey. Dr. Datta is known for her attention to detail and personalized care.",
-      "She continuously enhances her skills and knowledge through active participation in medical conferences and training programs."
+      "Dr. Disha Datta Choudhury is a highly skilled and dedicated specialist in the field of obstetrics & gynecology. She is an expert in her field and brings a profound wealth of knowledge. She is working as an IVF Specialist at Seeds of Innocens IVF in Lucknow."
     ],
     "location": "Lucknow-Uttarpradesh",
     "email": "drdishadatta@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
     "specialization": "IVF, Advanced Fertility Treatments, Complex Cases",
-    "experience": "7+ Years",
+    "experience": "7+ years",
+    "workExperience": [
+      "With more than 7 years of experience, she has a strong background and knowledge in gynecology and reproductive medicine.",
+      "She served as an IVF consultant at Birla Fertility & IVF Centre and Iswarya Fertility Centre."
+    ],
+    "education": [
+      "Dr. Disha has completed her MS degree in obstetrics & gynecology from Vinayaka Missions and Research Foundation. She has done her Fellowship in Reproductive Medicine from Max Hospital, New Delhi."
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 84 },
       { "label": "Patient Satisfaction", "percentage": 91 },
@@ -296,15 +366,27 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/monika.jpg",
     "description": [
-      "Dr. Monika Maan is a skilled IVF specialist dedicated to helping couples overcome fertility challenges. She has extensive experience in reproductive medicine and specializes in personalized treatment protocols.",
-      "Her compassionate approach and excellent communication skills help patients navigate their fertility journey with confidence. Dr. Maan believes in empowering patients through education and support.",
-      "She stays updated with the latest research and incorporates evidence-based treatments into her practice to achieve optimal results."
+      "Dr. Monika is a young & dynamic fertility and IVF specialist with extensive & voluminous experience of more than 8 years. She has a special interest in secondary infertility & recurrent IVF failures. Dr Monika has completed her MBBS degree from Santosh Medical College, Ghaziabad. Post that, she pursued her master's in obstetrics and gynaecology from Dr. D.Y. Patil Medical College, Pune. She further pursued her fellowship in reproductive medicine (infertility) and Laparoscopy. Since then, she has been working with established high-volume Fertility chains of Delhi-NCR. She has a wide skill set, extensive knowledge, and vast experience."
     ],
     "location": "Pitampura-Delhi",
     "email": "drmonikamaan@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in ART",
     "specialization": "IVF, Personalized Treatment Protocols, Patient Empowerment",
-    "experience": "8+ Years",
+    "experience": "8+ years",
+    "workExperience": [
+      "Working as a full-time IVF consultant for the last 8 years with a high success rate, esp. in secondary infertility cases and multiple IVF failures"
+    ],
+    "education": [
+      "MBBS -Santosh Medical College, Ghaziabad",
+      "MS - Dr. D.Y. Patil Medical College, Pune",
+      "Fellowship in ART and Ultrasound: Nadkarni Hospital Test Tube Baby Centre (Gujarat)",
+      "Fellowship in ART at RISAA IVF with Dr Rita Bakshi (New Delhi)",
+      "FMAS: AMASI"
+    ],
+    "awards": [
+      "Awarded at multiple state and national conferences.",
+      "Numerous publications in national and international journals"
+    ],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 85 },
       { "label": "Patient Satisfaction", "percentage": 92 },
@@ -318,15 +400,26 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/vinod.jpg",
     "description": [
-      "Dr. Vinod Kumar B is an experienced IVF specialist with a strong background in reproductive medicine and infertility management. He has expertise in treating various infertility conditions and advanced reproductive techniques.",
-      "His patient-first approach ensures that every couple receives comprehensive care and support. Dr. Vinod Kumar is known for his thorough evaluation and evidence-based treatment strategies.",
-      "He is committed to maintaining the highest standards of clinical excellence and continuously works towards improving patient outcomes."
+      "Compassionate Obstetric, Gynecologist, and laparoscopic surgeon offering 7 years of background in developing, assessing, and creating treatment plans, accurately recording progress notes, and providing patient care and counseling. Kind-hearted and friendly professional."
     ],
     "location": "Kasargod-Kerala",
     "email": "drvinod@seedsofinnocence.com",
-    "qualification": "MBBS, DGO, DNB, DIP.ART, DIP.MAS",
+    "qualification": "MBBS, DGO, DNB",
     "specialization": "IVF, Infertility Management, Advanced Reproductive Techniques",
-    "experience": "10+ Years",
+    "experience": "7+ years",
+    "workExperience": [
+      "2019 - 2022 Senior Resident - MES MEDICAL COLLEGE AND HOSPITAL, PERINTHALMANNA - Assessed complex diagnostic cases using critical thinking skills, leading to accurate diagnoses and tailored treatments for each patient's needs. Independently performed complex cases like placental accreta, previous LSCS, large fibroid complicating pregnancy, ruptured uterus, and others, including internal iliac ligation. Skilled to identify and manage the complications in Obstetrics like preeclampsia, eclampsia, PH, shock, and others. Performed many laparoscopic procedures, including TLH. Engaged in continuous professional development, staying current on the latest medical advancements and techniques. Served as a preceptor to medical students and residents in gynecology."
+    ],
+    "education": [
+      "2007-08 - 2013-06 MBBS SS IMS&RC – Davangere",
+      "2017-06 - 2019-06 DGO: OBSTETRICS AND GYNAECOLOGY MRMC MEDICAL COLLEGE RESEARCH HOSPITAL - Gulbarga. Studied at the old Medical College of Karnataka.",
+      "2022-02 - 2024-02 DNB IN OBG: Obstetric And Gynaecology NATIONAL BOARD OF EXAMINATION - NEW DELHI"
+    ],
+    "awards": [
+      "National level Infertility quiz finalist 2022",
+      "Recipient of the certificate of commendation for thesis, 2023",
+      "Recipient of 1st Runner-up in paper Presentation at KJK ADVANCES 2023"
+    ],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 88 },
       { "label": "Patient Satisfaction", "percentage": 94 },
@@ -340,15 +433,25 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/julie.jpg",
     "description": [
-      "Dr. Julie Chhawchharia is a dedicated IVF specialist with extensive experience in reproductive medicine. She specializes in treating couples with various infertility challenges and has expertise in advanced fertility techniques.",
-      "Her empathetic approach and excellent patient communication skills have contributed to high patient satisfaction rates. Dr. Chhawchharia believes in treating each patient as unique and tailoring treatments accordingly.",
-      "She is actively involved in continuing medical education and stays updated with the latest developments in fertility medicine."
+      "Dedicated IVF and fertility specialist with extensive experience in managing complex infertility cases, including recurrent implantation failure, poor ovarian reserve, and advanced reproductive techniques. Skilled in tailoring stimulation protocols, embryo transfer strategies, and patient counseling with an evidence-based, compassionate approach. Passionate about combining cutting-edge science with personalized care to help couples achieve their dream of parenthood."
     ],
     "location": "Guwahati-Assam",
     "email": "drjuliechhawchharia@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in Minimal Access Surgery",
     "specialization": "IVF, Advanced Fertility Techniques, Patient Communication",
-    "experience": "9+ Years",
+    "experience": "10 + years",
+    "workExperience": [
+      "Worked as a Senior Resident at Gunasheela Surgical and Maternity Hospital, Bangalore.",
+      "Worked as a Junior Consultant at International Fertility Centre, New Delhi.",
+      "Worked as an IVF Consultant at Neelkanth Hospital, Gurgaon, Haryana. Traveled to places like Jammu, Varanasi, Barailly, and Moradabad as an IVF Consultant.",
+      "Worked as an IVF Consultant at Pratiksha Hospital, Guwahati.",
+      "Currently, clinical head and senior IVF Consultant at Seeds of Innocence IVF Centre, Guwahati, Assam",
+      "Also, a fertility consultant at Nagaon Nursing and Maternity Home, Nagaon, Assam"
+    ],
+    "education": [
+      "She earned her MBBS and MS (Obs & Gyn) degrees from the Institute of JJM Medical College in Devangere, Karnataka. She has also completed a fellowship and diploma in Minimal Access Surgery (laparoscopy) from World Laparoscopy Hospital, Gurgaon."
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 87 },
       { "label": "Patient Satisfaction", "percentage": 93 },
@@ -384,15 +487,26 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/pratik.jpg",
     "description": [
-      "Dr. Pratik Kakani is a skilled IVF specialist with extensive experience in reproductive medicine. He specializes in advanced fertility treatments and has expertise in managing complex infertility cases.",
-      "His patient-centered approach ensures comprehensive care and support throughout the treatment process. Dr. Kakani is known for his excellent communication skills and ability to build strong patient relationships.",
-      "He is committed to excellence in patient care and continuously works towards improving treatment outcomes through innovative approaches."
+      "Dr. Pratik Kakani is a young & dynamic Gynecologist and Endoscopic surgeon with extensive & voluminous experience of more than 6 years. He has a special interest in fertility-enhancing surgeries and Laparoscopic gynecological surgeries. Dr.Pratik completed her MBBS degree from Dr. Panjabrao Deshmukh Memorial Medical College, Amravati. Post that, he pursued his master's in obstetrics and gynaecology from Rural Medical College, Loni. He further pursued his fellowship in minimally invasive Surgeries. Since then, he has been working with established high-volume hospital chains in Delhi-NCR. He has a wide skill set, extensive knowledge, and vast experience in endometriosis surgeries."
     ],
     "location": "Ghaziabad-Uttarpradesh",
     "email": "drpratikkakani@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), FMAS",
     "specialization": "IVF, Advanced Fertility Treatments, Complex Cases",
-    "experience": "7+ Years",
+    "experience": "6+ years",
+    "workExperience": [
+      "Working as a full-time Gyne endoscopic surgeon for the last 6 years with a high success rate."
+    ],
+    "education": [
+      "MBBS -Dr. Panjabrao Deshmukh Memorial Medical College, Amravati",
+      "MS - Obstetrics and Gynaecology -Rural Medical College, Loni",
+      "Clinical Fellowship in Gynecologic Endoscopy-Dr. Hemant Kanojiya, Excell Endo Care",
+      "FMAS (Fellowship in Minimally advanced Surgeries)"
+    ],
+    "awards": [
+      "Awarded at multiple state and national conferences.",
+      "Numerous publications in national and international journals"
+    ],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 84 },
       { "label": "Patient Satisfaction", "percentage": 91 },
@@ -450,15 +564,24 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/sonia.jpg",
     "description": [
-      "Dr. Sonia Raju is a skilled IVF specialist with comprehensive expertise in reproductive medicine. She has a special interest in treating couples with unexplained infertility and recurrent pregnancy losses.",
-      "Her evidence-based approach combined with personalized care ensures optimal outcomes for her patients. Dr. Raju is known for her thorough evaluation and attention to detail.",
-      "She is committed to providing world-class fertility care and continuously enhances her skills through ongoing education and training."
+      "MBBS, MS (OBGYN), DNB, FRM, DRM. Fertility Specialist & Gynaecologist with expertise in IVF, reproductive medicine, and high-risk obstetrics. Currently at Seeds of Innocence, Kochi, helping couples achieve their dream of parenthood with compassionate, evidence-based care."
     ],
     "location": "Kochi-Kerala",
     "email": "drsoniaraju@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
+    "qualification": "MBBS, MS (OBGYN), DNB, FRM, DRM",
     "specialization": "IVF, Unexplained Infertility, Recurrent Pregnancy Loss",
-    "experience": "7+ Years",
+    "experience": "7+ years",
+    "workExperience": [
+      "2018 to 2019 - Assistant Professor at GMC Latur",
+      "2020 - Fellow in reproductive medicine at Craft Hospital, Kerala",
+      "2022- 2025 Specialist in Dept of obstetrics and gynecology, Ibra hospital, Oman",
+      "2025- IVF Consultant at Seeds of innocence, Kochi"
+    ],
+    "education": [
+      "FELLOWSHIP IN REPRODUCTIVE MEDICINE(FRM)",
+      "DIPLOMA IN REPRODUCTIVE MEDICINE(DRM)"
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 84 },
       { "label": "Patient Satisfaction", "percentage": 91 },
@@ -472,15 +595,20 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/jasna.jpg",
     "description": [
-      "Dr. Jasna Mohammed is a dedicated IVF specialist with extensive experience in reproductive medicine and infertility management. She specializes in advanced fertility treatments and has expertise in managing complex cases.",
-      "Her compassionate approach and excellent patient communication skills have contributed to high patient satisfaction rates. Dr. Mohammed believes in empowering patients through education and support.",
-      "She is actively involved in continuing medical education and stays updated with the latest developments in fertility medicine to provide cutting-edge care."
+      "Dr. Jasna Mohammed is a highly skilled and dedicated specialist in the field of obstetrics & gynecology. She is an expert in her field and brings a profound wealth of knowledge. She is working as an IVF Specialist at Seeds of Innocens IVF in Kasaragode."
     ],
     "location": "Kasargod-Kerala",
     "email": "drjasnamohammed@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
+    "qualification": "DNB (Obstetrics & Gynecology)",
     "specialization": "IVF, Advanced Fertility Treatments, Complex Cases",
-    "experience": "8+ Years",
+    "experience": "0.5+ years",
+    "workExperience": [
+      "She has a strong background and knowledge in gynecology and reproductive medicine."
+    ],
+    "education": [
+      "Dr. Jasna Mohammed has completed her DNB degree in obstetrics & gynecology from Ananthapuri Hospital and Research Institute, Trivandrum."
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 85 },
       { "label": "Patient Satisfaction", "percentage": 92 },
@@ -538,20 +666,99 @@
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/adrija.webp",
     "description": [
-      "Dr. Adrija Ghosal is a skilled IVF specialist with comprehensive expertise in reproductive medicine. She has a special interest in treating couples with complex infertility cases and advanced reproductive techniques.",
-      "Her evidence-based approach combined with personalized care ensures optimal outcomes for her patients. Dr. Ghosal is known for her thorough evaluation and attention to detail.",
-      "She is committed to providing world-class fertility care and continuously enhances her skills through ongoing education and training."
+      "Dedicated gynaecologist & infertility specialist with strong expertise in reproductive medicine & women's health. Skilled in IUI, IVF & experienced in guiding couples to turn their parenthood dreams into reality with a blend of advanced medical knowledge and compassionate care. Passionate about breaking infertility myths & spreading awareness, providing patient-centric solutions that bring positive results. Known for her empathetic, caring, and efficient nature, continuous learning, and contributing to the field through awareness campaigns & infertility camps"
     ],
     "location": "Kolkata-Westbengal",
     "email": "dradrijaghosal@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
+    "qualification": "MBBS (Honours), DNB (Obstetrics & Gynecology), FMAS",
     "specialization": "IVF, Complex Infertility Cases, Advanced Reproductive Techniques",
-    "experience": "8+ Years",
+    "experience": "5+ years",
+    "workExperience": [
+      "Initially working in a government medical College in West Bengal, where she managed both in patient and out patient services, was a bed holder who managed high-risk pregnancies and reproductive diseases, and independently conducted 1000+ complex deliveries, cesarean sections & other gynaecological surgeries. She was also involved in academic activities, teaching, and clinical research.",
+      "Then she worked in some private hospitals in West Bengal before venturing into infertility.",
+      "Thereafter joined an IVF centre and am working specifically to provide fertility evaluation and advanced infertility treatment. She is known for her holistic & patient-centric care with individualized treatment protocols."
+    ],
+    "education": [
+      "MBBS (Honours) from Malda medical College & hospital (2012-2017)",
+      "Internship completion - 2017- 2018",
+      "DNB Obstetrics & Gynecology( 2020- 2023) from Suri District Hospital, Birbhum, topper in her State.",
+      "Fellowship in Minimal Access Surgery in 2024.",
+      "Has two papers published in international journals"
+    ],
+    "awards": [],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 86 },
       { "label": "Patient Satisfaction", "percentage": 92 },
       { "label": "Success Rate", "percentage": 76 },
       { "label": "Clinical Expertise", "percentage": 84 }
+    ]
+  },
+  {
+    "slug": "dr-britika-prakash",
+    "name": "Dr. Britika Prakash",
+    "subtitle": "IVF Specialist",
+    "image": "/assets/img/Doctors/britika.png",
+    "description": [
+      "Dr. Britika Prakash is a dedicated IVF specialist with extensive experience in reproductive medicine and infertility management."
+    ],
+    "location": "Malviya nagar-New Delhi",
+    "email": "drbritikaprakash@seedsofinnocens.com",
+    "qualification": "MBBS, MD, FRM",
+    "specialization": "IVF, Infertility Management, Advanced Reproductive Techniques",
+    "experience": "7+ years",
+    "workExperience": [
+      "Work experience: KGMU 2015-2018",
+      "Vyas hospital, hp 2018-2019",
+      "Fatima Hospital, Gorakhpur -2019-2020",
+      "Senior resident, BRD Medical College, GKP 2020-2021",
+      "Assistant professor, SBMC Tirupati, 2 years",
+      "Radhakrishna IVF Bangalore 1 year",
+      "Birla IVF gkp 1 year"
+    ],
+    "education": [
+      "MBBS",
+      "MD",
+      "FRM"
+    ],
+    "awards": [],
+    "progressBars": [
+      { "label": "IVF Procedures", "percentage": 85 },
+      { "label": "Patient Satisfaction", "percentage": 92 },
+      { "label": "Success Rate", "percentage": 75 },
+      { "label": "Clinical Expertise", "percentage": 83 }
+    ]
+  },
+  {
+    "slug": "dr-sanjana-singh",
+    "name": "Dr. Sanjana Singh",
+    "subtitle": "IVF Specialist",
+    "image": "/assets/img/Doctors/sanjana.png",
+    "description": [
+      "Highly qualified obstetrician and gynecologist, and fertility expert with 7 years of experience in reproductive healthcare, infertility management, gynecological procedures, and patient counselling. Adept at managing complex obstetric cases, performing surgery, and collaborating with interdisciplinary teams for comprehensive patient care."
+    ],
+    "location": "Patna-Bihar",
+    "email": "drsanjanasingh@seedsofinnocens.com",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology)",
+    "specialization": "IVF, Infertility Management, Advanced Reproductive Techniques",
+    "experience": "7+ years",
+    "workExperience": [
+      "Senior Consultant-IVF and infertility, Seeds of innocence, Patna",
+      "Senior Resident-ESI hospital, Bihta (April 2022-April 2025)",
+      "Senior Resident -Netaji Subhash Medical College, Patna-(Jan 2022-April 2022)",
+      "Senior Resident -ESI Okhla, Delhi (June 2021 -Dec 2021)",
+      "Senior Resident (Max Hospital, Saket, New Delhi, Dec 2019-May 2021)",
+      "Registrar -Fortis Hospital, Gurgaon (Nov 2018-Nov 2019)"
+    ],
+    "education": [
+      "MS (Obstetrics and Gynecology) Bankura Sammilani Medical College and Hospital, Bankura, West Bengal (2015-2018)",
+      "MBBS KempeGowda institute of medical sciences, Bangalore, Karnataka (2008-2013)."
+    ],
+    "awards": [],
+    "progressBars": [
+      { "label": "IVF Procedures", "percentage": 87 },
+      { "label": "Patient Satisfaction", "percentage": 93 },
+      { "label": "Success Rate", "percentage": 77 },
+      { "label": "Clinical Expertise", "percentage": 85 }
     ]
   }
 ]
