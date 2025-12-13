@@ -24,7 +24,7 @@ const ivfContentData = {
   ],
 };
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -333,5 +333,5 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 

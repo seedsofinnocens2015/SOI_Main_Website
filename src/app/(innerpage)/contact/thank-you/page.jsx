@@ -1,4 +1,5 @@
 "use client";
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
@@ -9,7 +10,7 @@ const headingData = {
   title: 'Thank You',
 };
 
-const ThankYouPage = () => {
+const ThankYouContent = () => {
   const searchParams = useSearchParams();
   const formType = searchParams.get('type') || 'default';
 
@@ -271,6 +272,39 @@ const ThankYouPage = () => {
         </div>
       </Section>
     </div>
+  );
+};
+
+const ThankYouPage = () => {
+  return (
+    <Suspense fallback={
+      <div>
+        <Section
+          className={'cs_page_heading cs_bg_filed cs_center'}
+          backgroundImage="/assets/img/Top-Header.jpg"
+        >
+          <PageHeading data={headingData} />
+        </Section>
+        <Section
+          topSpaceLg="80"
+          topSpaceMd="60"
+          bottomSpaceLg="80"
+          bottomSpaceMd="60"
+        >
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-8">
+                <div style={{ textAlign: 'center', padding: '50px' }}>
+                  <p>Loading...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Section>
+      </div>
+    }>
+      <ThankYouContent />
+    </Suspense>
   );
 };
 
