@@ -781,6 +781,17 @@
     }
   }
 }
+.cs_doctor_name {
+  color: #0A2A43;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  
+}
 
 .cs_other_doctors_list {
   display: flex;

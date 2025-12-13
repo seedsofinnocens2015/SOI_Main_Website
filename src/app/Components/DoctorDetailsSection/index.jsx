@@ -152,7 +152,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
               <div className="cs_appointment_card">
                 <h3>Book an Appointment</h3>
                 <p>
-                  Schedule a consultation with {data.name.split(' ').slice(-1)[0]} to discuss your fertility journey.
+                  Schedule a consultation with <span className="cs_doctor_name">{data.name.split(' ').slice(1).join(' ')}</span> to discuss your fertility journey.
                 </p>
                 <Link 
                   href="/contact/book-appointment" 
