@@ -5,6 +5,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
+import centresData from '@/app/(innerpage)/ivf-centres/india-centres-data.json';
 
 const headingData = {
   title: 'Book Appointment',
@@ -141,9 +142,24 @@ const page = () => {
                       </label>
                       <select name="center" className="cs_form_field">
                         <option value="">Select nearest center</option>
-                        <option value="delhi">Malviya Nagar, Delhi</option>
-                        <option value="gurugram">Gurugram, Haryana</option>
-                        <option value="kolkata">Kolkata, West Bengal</option>
+                        <optgroup label="India Centers">
+                          {centresData
+                            .filter(centre => !centre.isInternational)
+                            .map((centre) => (
+                              <option key={centre.slug} value={centre.slug}>
+                                {centre.name}
+                              </option>
+                            ))}
+                        </optgroup>
+                        <optgroup label="International Centers">
+                          {centresData
+                            .filter(centre => centre.isInternational)
+                            .map((centre) => (
+                              <option key={centre.slug} value={centre.slug}>
+                                {centre.name}
+                              </option>
+                            ))}
+                        </optgroup>
                       </select>
                     </div>
                     <div className="col-md-12">

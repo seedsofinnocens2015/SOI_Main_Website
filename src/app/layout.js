@@ -58,24 +58,12 @@ export default function RootLayout({ children }) {
                   return false;
                 };
                 
-                // Fix double /new/new/ prefix
-                const fixDoublePrefix = function(url) {
-                  if (typeof url === 'string') {
-                    return url.replace(/\\/new\\/new\\//g, '/new/');
-                  }
-                  return url;
-                };
-                
                 // Override fetch to prevent .txt file requests
                 const originalFetch = window.fetch;
                 window.fetch = function(...args) {
                   const url = args[0];
                   if (blockTxtRequests(url)) {
                     return Promise.reject(new Error('Prefetch disabled'));
-                  }
-                  const fixedUrl = fixDoublePrefix(url);
-                  if (fixedUrl !== url) {
-                    args[0] = fixedUrl;
                   }
                   return originalFetch.apply(this, args);
                 };
@@ -86,8 +74,7 @@ export default function RootLayout({ children }) {
                   if (blockTxtRequests(url)) {
                     return;
                   }
-                  const fixedUrl = fixDoublePrefix(url);
-                  return originalXHROpen.call(this, method, fixedUrl, ...rest);
+                  return originalXHROpen.call(this, method, url, ...rest);
                 };
                 
                 // Override send to block .txt requests

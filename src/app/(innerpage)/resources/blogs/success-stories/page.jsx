@@ -169,7 +169,7 @@ const Page = () => {
       );
     }
     return stories;
-  }, [selectedLanguage, stories]);
+  }, [selectedLanguage]);
 
   return (
     <div>

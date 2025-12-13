@@ -60,7 +60,7 @@ const ivfContentData = {
   ],
 };
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <Section
@@ -139,5 +139,5 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 

@@ -42,7 +42,7 @@ const trainingPrograms = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <Section
@@ -223,8 +223,8 @@ const page = () => {
                 </h3>
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Registration Review:</strong> Our training team will review your registration within 2-3 business days</li>
-                  <li><strong>Confirmation:</strong> If selected, you'll receive a confirmation call or email with training details</li>
-                  <li><strong>Payment:</strong> You'll be guided through the payment process for the selected training program</li>
+                  <li><strong>Confirmation:</strong> If selected, you&apos;ll receive a confirmation call or email with training details</li>
+                  <li><strong>Payment:</strong> You&apos;ll be guided through the payment process for the selected training program</li>
                   <li><strong>Training Schedule:</strong> Final training schedule and materials will be shared before the program starts</li>
                 </ul>
               </div>
@@ -236,4 +236,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

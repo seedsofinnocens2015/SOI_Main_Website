@@ -173,7 +173,7 @@ const Page = () => {
       );
     }
     return news;
-  }, [selectedLanguage, news]);
+  }, [selectedLanguage]);
 
   return (
     <div>

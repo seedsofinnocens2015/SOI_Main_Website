@@ -85,7 +85,7 @@ const contactContentData = {
   ],
 };
 
-const page = () => {
+const Page = () => {
   const [patientType, setPatientType] = useState('india');
 
   return (
@@ -490,4 +490,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

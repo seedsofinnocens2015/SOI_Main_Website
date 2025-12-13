@@ -1,16 +1,16 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /new/
+  RewriteBase /
   
   # Handle Next.js static files
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ /new/$1 [L]
+  RewriteRule ^(.*)$ $1 [L]
   
   # Redirect to index.html for client-side routing
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ /new/index.html [L]
+  RewriteRule ^ index.html [L]
 </IfModule>
 
 # Enable compression
@@ -29,4 +29,3 @@
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
-

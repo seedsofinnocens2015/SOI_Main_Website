@@ -128,7 +128,7 @@ const videoTestimonials = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const videosPerPage = 12;
 
@@ -427,4 +427,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

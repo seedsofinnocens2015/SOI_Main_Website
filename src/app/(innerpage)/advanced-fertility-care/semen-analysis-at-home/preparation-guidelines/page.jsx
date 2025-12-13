@@ -8,7 +8,7 @@ const headingData = {
   title: 'Semen Analysis Preparation Guidelines',
 };
 
-const page = () => {
+const Page = () => {
   useEffect(() => {
     // You can add the drive link here
     // For example, if you want to auto-redirect:
@@ -80,7 +80,7 @@ const page = () => {
 
                 <div style={{ marginTop: '30px', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
                   <p style={{ margin: 0, color: '#666', fontSize: '14px' }}>
-                    <strong>Note:</strong> Replace "https://drive.google.com/file/d/1MIsb2lxru4T-MRzob1gQKhR_R33MdLbk/view" in the code with your actual Google Drive link.
+                    <strong>Note:</strong> Replace &quot;https://drive.google.com/file/d/1MIsb2lxru4T-MRzob1gQKhR_R33MdLbk/view&quot; in the code with your actual Google Drive link.
                   </p>
                 </div>
 
@@ -105,4 +105,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

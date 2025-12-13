@@ -82,7 +82,7 @@ const page = async ({ params }) => {
 
   const teamData = {
     subtitle: 'OUR TEAM MEMBER',
-    title: 'Meet Our Other <br />IVF Specialists',
+    // title: 'Meet Our Other <br />IVF Specialists',
     sliderData: otherDoctors,
   };
 

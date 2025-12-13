@@ -1,19 +1,23 @@
-"use client";
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { useParams } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowLeft } from 'react-icons/fa';
 import blogsData from '@/app/data/blogs.json';
+
+// Generate static params for static export
+export async function generateStaticParams() {
+  return blogsData.blogs.map((blog) => ({
+    slug: blog.slug,
+  }));
+}
 
 const headingData = {
   title: 'Blog Details',
 };
 
-const BlogDetailPage = () => {
-  const params = useParams();
+const BlogDetailPage = ({ params }) => {
   const slug = params?.slug;
 
   // Find the blog by slug
@@ -33,7 +37,7 @@ const BlogDetailPage = () => {
             <div className="row">
               <div className="col-lg-12 text-center">
                 <h2>Blog Not Found</h2>
-                <p>The blog you're looking for doesn't exist.</p>
+                <p>The blog you&apos;re looking for doesn&apos;t exist.</p>
                 <Link href="/resources/blogs" style={{
                   display: 'inline-block',
                   marginTop: '20px',
@@ -85,12 +89,6 @@ const BlogDetailPage = () => {
                   fontWeight: '600',
                   fontSize: '16px',
                   transition: 'gap 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.gap = '12px';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.gap = '8px';
                 }}
               >
                 <FaArrowLeft style={{ fontSize: '14px' }} />
@@ -239,14 +237,6 @@ const BlogDetailPage = () => {
                             cursor: 'pointer',
                             border: '1px solid transparent'
                           }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.backgroundColor = '#f8f9fa';
-                            e.currentTarget.style.borderColor = '#E45352';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.backgroundColor = 'transparent';
-                            e.currentTarget.style.borderColor = 'transparent';
-                          }}
                           >
                             <div style={{
                               position: 'relative',
@@ -327,14 +317,6 @@ const BlogDetailPage = () => {
                       fontWeight: '600',
                       fontSize: '14px',
                       transition: 'all 0.3s ease'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0px 4px 12px rgba(0, 0, 0, 0.2)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = 'none';
                     }}
                   >
                     Book Appointment

@@ -79,7 +79,7 @@ const page = () => {
               <p className="cs_text_style_1" style={{ marginBottom: '5px', lineHeight: '1.8' }}>
                 We at Seeds of Innocens believes that the journey of parenthood deserves dignity, joy and the premium standard of care.</p>
               <p className="cs_text_style_1" style={{ marginBottom: '5px', lineHeight: '1.8' }}>
-                Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora, Seeds of Innocens is the leading India’s best IVF centre.
+                Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora, Seeds of Innocens is the India’s best IVF centre.
               </p>
               <p className="cs_text_style_1" style={{ marginBottom: '5px', lineHeight: '1.8' }}>
                 It  has grown to over 35 centres across 8 states and has expanded overseas to Oman, Zambia and Muscat.
