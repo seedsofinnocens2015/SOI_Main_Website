@@ -14,6 +14,11 @@
     "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
     "specialization": "IVF, Reproductive Endocrinology, Advanced Fertility Techniques",
     "experience": "15+ Years",
+    "workExperience": "Founder & Chief IVF Specialist at Seeds of Innocens specializing in reproductive endocrinology and Infertility management.",
+    "education": [
+      "MBBS, MD (Obstetrics & Gynecology)",
+      "Fellowship in Reproductive Medicine"
+    ],
     "progressBars": [
       { "label": "IVF Procedures", "percentage": 95 },
       { "label": "Patient Satisfaction", "percentage": 98 },
