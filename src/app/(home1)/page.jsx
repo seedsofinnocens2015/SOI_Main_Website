@@ -9,6 +9,8 @@ import TestimonialSection from '../Components/TestimonialSection';
 import BlogSection from '../Components/BlogsSection';
 import NewsMediaSection from '../Components/NewsMediaSection';
 import WhyChooseUsSection from '../Components/WhyChooseUsSection';
+import GeneticsSection from '../Components/GeneticsSection';
+import CredibilitySection from '../Components/CredibilitySection';
 
 const heroData = {
     primarySlider: [
@@ -556,15 +558,81 @@ const heroData = {
   const whyChooseUsData = {
     familyImage: '/assets/img/happy_family.png', // Please replace with actual family image
     whyChooseHeading: 'WHY CHOOSE US?',
-    whyChooseText: 'Seeds of Innocens has always been the encouraged choice. Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora, Seeds of Innocens is the India’s best IVF centre. Seeds of Innocens has grown to over 35 centres across 8 states and has expanded overseas to Oman, Muscat, and Zambia. It is the only lab in North India that has collaborated with the Department of Reproductive Sciences, University of Gent, Belgium, for the exchange of best practices and technology in infertility.',
+    whyChooseText: 'Seeds of Innocens has always been the encouraged choice. Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora, Seeds of Innocens is the India\'s best IVF centre. Seeds of Innocens has grown to over 35 centres across 8 states and has expanded overseas to Oman, Muscat, and Zambia. It is the only lab in North India that has collaborated with the Department of Reproductive Sciences, University of Gent, Belgium, for the exchange of best practices and technology in infertility.',
     callUsLink: 'tel:+919810350512',
     callUsText: 'CALL US',
     selfCycleHeading: 'VISION AND MISSION',
-    selfCycleText: 'At Seeds of Innocens, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
+    selfCycleText: 'At Seeds of Innocens, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
     bookAppointmentLink: '/contact/book-appointment',
     bookAppointmentText: 'BOOK AN APPOINTMENT',
     selfieImage: '/assets/img/self_cycle_selfie.png', // Please replace with actual selfie image
     // speechBubbleText: 'Self-cycle™ IVF means\nA baby with your genes,\ntraits and quirks.',
+  };
+
+  const geneticsData = {
+    cards: [
+      {
+        title: 'Male Infertility',
+        bgColor: '#24608f',
+        description: 'Male infertility accounts for about 50% of infertility cases. It\'s not a reflection of masculinity, but a medical condition that can be treated. Early assessment and treatment are crucial for successful outcomes. Let\'s end the stigma together!',
+        highlightText: 'Let\'s end the stigma together!',
+        // primaryButton: {
+        //   text: 'Talk to our Andrologist today!',
+        //   link: '/advanced-fertility-care/male-infertility/',
+        // },
+        secondaryButton: {
+          text: 'Learn More',
+          link: '/advanced-fertility-care/male-infertility/',
+        },
+      },
+      {
+        title: 'Egg freezing',
+        bgColor: '#E45352',
+        description: 'Egg freezing is a smart, science-backed way to preserve your fertility on your terms. Whether you\'re focusing on your career, waiting for the right time, or facing medical reasons, egg freezing gives you control over your future.',
+        highlightText: 'Your fertility, Your choice!',
+        // primaryButton: {
+        //   text: 'Talk to our experts!',
+        //   link: '/advanced-fertility-care/egg-freezing/',
+        // },
+        secondaryButton: {
+          text: 'Learn More',
+          link: '/advanced-fertility-care/egg-freezing/',
+        },
+      },
+    ],
+  };
+
+  const credibilityData = {
+    subtitle: 'RECOGNIZED AND AWARDED',
+    title: '',
+    description: '',
+    logos: [
+      {
+        // title: 'TIMES HEALTHCARE ACHIEVERS',
+        // subtitle: 'DELHI NCR 2020',
+        image: '/assets/img/mask1.png',
+      },
+      {
+        // title: 'NATIONAL FERTILITY AWARDS',
+        // subtitle: 'Healthworld.com',
+        image: '/assets/img/mask2.png',
+      },
+      {
+          // title: 'INDIAN FERTILITY SOCIETY',
+          // subtitle: 'IFS',
+        image: '/assets/img/mask3.png',
+      },
+      {
+        // title: 'ASSOCIATION OF OBSTETRICIANS AND GYNAECOLOGISTS OF DELHI',
+        // subtitle: 'AOGD',
+        image: '/assets/img/mask4.png',
+      },
+      {
+        // title: 'दैनिक जागरण',
+        // subtitle: 'Dainik Jagran',
+        image: '/assets/img/mask5.png',
+      },
+    ],
   };
 
 const page = () => {
@@ -619,6 +687,19 @@ const page = () => {
         <Service cardBg={'cs_gray_bg'} data={serviceData} />
       </Section>
 
+      {/* 5.5. Male Infertility & Egg Freezing Section */}
+      <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className={'cs_service_feature_section'}
+      >
+        <GeneticsSection data={geneticsData} />
+      </Section>
+
+      
+
       {/* 6. Centres Overview */}
       <Section 
       topSpaceLg="60" 
@@ -651,7 +732,18 @@ const page = () => {
         <BlogSection data={blogsData} />
       </Section>
 
-      {/* 9. News and Media */}
+      {/* 9. Credibility Section */}
+      <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className={'cs_credibility_section'}
+      >
+        <CredibilitySection data={credibilityData} />
+      </Section>
+
+      {/* 10. News and Media */}
       <Section
         topSpaceLg="60"
         topSpaceMd="70"

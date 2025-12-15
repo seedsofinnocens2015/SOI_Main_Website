@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState, useCallback, useMemo } from 'react';
+import { FaPhone } from 'react-icons/fa6';
 import IVFSuccessBanner from '../IVFSuccessBanner';
 import {
   FaEnvelope,
@@ -10,6 +11,9 @@ import {
   FaInstagram,
   FaWhatsapp,
 } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaYoutube } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 import { IoCall } from "react-icons/io5";
 import { FaAnglesRight, FaLocationDot } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
@@ -29,7 +33,7 @@ const Header = ({ isTopBar, variant }) => {
   const menu = {
     email: 'info@seedsofinnocens.com',
     location: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
-    logoUrl: '/assets/img/logo.svg',
+    logoUrl: '/assets/img/SOI Logo.svg',
     logoLink: '/',
     navItems: [
       {
@@ -395,7 +399,7 @@ const Header = ({ isTopBar, variant }) => {
       //     { label: 'Training Registration', href: '/training-academy/training-registration' },
       //   ],
       // },
-     
+
     ],
     btnUrl: '/contact/book-appointment',
     btnText: 'Book Appointment',
@@ -492,40 +496,36 @@ const Header = ({ isTopBar, variant }) => {
         className={`cs_site_header cs_style_1 ${variant ? variant : ''
           } cs_primary_color cs_sticky_header ${isSticky ? isSticky : ''}`}
       >
-        {/* {isTopBar && (
-          <div className="cs_top_header cs_blue_bg cs_white_color">
-            <div className="container">
-              <div className="cs_top_header_in">
-                <div className="cs_top_header_left">
+        {/* Top Bar */}
+        <div className="cs_top_bar">
+          <div className="container">
+            <div className="cs_top_bar_in">
+              <div className="cs_top_bar_left">
+                <div className="cs_social_icons">
+                  <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <FaFacebookF />
+                  </Link>
+                  <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <FaInstagram />
+                  </Link>
+                  
+                  <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <FaYoutube />
+                  </Link>
+                  <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <FaLinkedinIn />
+                  </Link>
                 </div>
-                <div className="cs_top_header_right">
-                  <div className="cs_social_btns cs_style_1">
-                    <Link href="/" className="cs_center cs_call">
-                      <i>
-                        <IoCall />
-                      </i>
-                    </Link>
-                    <Link href="/" className="cs_center cs_facebook">
-                      <i>
-                        <FaFacebookF />
-                      </i>
-                    </Link>
-                    <Link href="/" className="cs_center cs_whatsapp">
-                      <i>
-                        <FaWhatsapp />
-                      </i>
-                    </Link>
-                    <Link href="/" className="cs_center cs_instagram">
-                      <i>
-                        <FaInstagram />
-                      </i>
-                    </Link>
-                  </div>
-                </div>
+              </div>
+              <div className="cs_top_bar_right">
+                <a href="tel:+91-9810350512" className="cs_phone_banner">
+                  <span><FaPhone /> +91-9810350512</span>
+                </a>
               </div>
             </div>
           </div>
-        )} */}
+        </div>
+        
         <div className="cs_main_header">
           <div className="container">
             <div className="cs_main_header_in cs_compact_gap">
@@ -737,15 +737,15 @@ const Header = ({ isTopBar, variant }) => {
                           ) : (
                             <ul
                               className={`cs_mega_wrapper ${hoveredCategoryIndex !== null &&
-                                  item.megaMenuCategories[
-                                    hoveredCategoryIndex
-                                  ]?.subItems &&
-                                  item.megaMenuCategories[hoveredCategoryIndex]
-                                    .subItems.length > 0
-                                  ? hoveredStateIndex !== null
-                                    ? 'cs_has_three_columns'
-                                    : 'cs_has_right_column'
-                                  : ''
+                                item.megaMenuCategories[
+                                  hoveredCategoryIndex
+                                ]?.subItems &&
+                                item.megaMenuCategories[hoveredCategoryIndex]
+                                  .subItems.length > 0
+                                ? hoveredStateIndex !== null
+                                  ? 'cs_has_three_columns'
+                                  : 'cs_has_right_column'
+                                : ''
                                 }`}
                               onMouseLeave={() => {
                                 setHoveredCategoryIndex(null);
@@ -956,8 +956,8 @@ const Header = ({ isTopBar, variant }) => {
                         {(item.subItems?.length || item.isMegaMenu) && (
                           <span
                             className={`cs_menu_dropdown_toggle ${openMobileSubmenuIndex.includes(index)
-                                ? 'active'
-                                : ''
+                              ? 'active'
+                              : ''
                               }`}
                             onClick={() => handleOpenMobileSubmenu(index)}
                           >
