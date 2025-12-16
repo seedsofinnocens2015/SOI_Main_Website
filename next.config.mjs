@@ -12,6 +12,26 @@ const nextConfig = {
   trailingSlash: true,
   // Disable automatic prefetching for all links
   reactStrictMode: true,
+  // Redirects for International Centers (SEO routes)
+  async redirects() {
+    return [
+      {
+        source: '/best-ivf-centre-in-lusaka-zambia',
+        destination: '/international/lusaka-zambia',
+        permanent: true,
+      },
+      {
+        source: '/best-ivf-centre-in-kitwe-zambia',
+        destination: '/international/kitwe-zambia',
+        permanent: true,
+      },
+      {
+        source: '/best-ivf-centre-in-mabela-muscat',
+        destination: '/international/mabela-muscat',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

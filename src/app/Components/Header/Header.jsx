@@ -226,9 +226,9 @@ const Header = ({ isTopBar, variant }) => {
             label: 'International',
             href: '/ivf-centres/international',
             subItems: [
-              { label: 'Lusaka, Zambia, Africa', href: '/ivf-centres/lusaka-zambia-africa' },
-              { label: 'Kitwe, Zambia, Africa', href: '/ivf-centres/kitwe-zambia-africa' },
-              { label: 'Mabela, Muscat, Oman', href: '/ivf-centres/mabela-muscat-oman' },
+              { label: 'Lusaka, Zambia, Africa', href: '/lusaka-zambia-ivf-centre' },
+              { label: 'Kitwe, Zambia, Africa', href: '/best-ivf-centre-in-kitwe-zambia' },
+              { label: 'Mabela, Muscat, Oman', href: '/best-ivf-centre-in-muscat-oman' },
             ],
           },
         ],
