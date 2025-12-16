@@ -1533,6 +1533,24 @@ label {
   }
 }
 
+/* Mobile Grid - 3x3 Layout */
+.cs_service_mobile_grid {
+  @media (max-width: 767px) {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 15px 10px;
+    margin: 0;
+    
+    .col-4 {
+      flex: 0 0 calc(33.333% - 7px) !important;
+      max-width: calc(33.333% - 7px) !important;
+      padding: 0 !important;
+      width: calc(33.333% - 7px) !important;
+      margin: 0;
+    }
+  }
+}
+
 /* Desktop and Mobile View Toggle for Services */
 .cs_service_desktop_view {
   display: block;
@@ -1550,7 +1568,7 @@ label {
   }
 }
 
-/* Service Slider Styles */
+/* Service Slider Styles - Not used in mobile anymore, keeping for potential future use */
 .cs_service_slider_wrapper {
   width: 100%;
 }

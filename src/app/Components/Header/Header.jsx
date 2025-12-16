@@ -71,6 +71,7 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Oligospermia', href: '/advanced-fertility-care/oligospermia' },
               { label: 'Blocked Seminiferous Tubules', href: '/advanced-fertility-care/blocked-seminiferous-tubules' },
               { label: 'Endocrinological Disorder', href: '/advanced-fertility-care/endocrinological-disorder' },
+              { label: 'Retrograde Ejaculation', href: '/advanced-fertility-care/retrograde-ejaculation' },
             ],
           },
           {
@@ -96,6 +97,7 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'High-Risk Pregnancy', href: '/maternal-fetal-medicine/high-risk-pregnancy' },
               { label: 'Fetal Reduction', href: '/maternal-fetal-medicine/fetal-reduction' },
               { label: 'MFM Scans & Diagnostics', href: '/maternal-fetal-medicine/mfm-scans-diagnostics' },
+              { label: 'Pregnancy and Coronavirus', href: '/maternal-fetal-medicine/pregnancy-and-coronavirus' },
             ],
           },
           {
@@ -116,6 +118,8 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Endometriosis', href: '/reproductive-health-conditions/endometriosis' },
               { label: 'Fibroids, Uterine Polyps and Adenomyosis', href: '/reproductive-health-conditions/fibroids-uterine-polyps-adenomyosis' },
               { label: 'Genital Tuberculosis', href: '/reproductive-health-conditions/genital-tuberculosis' },
+              { label: 'Recurrent Miscarriages', href: '/reproductive-health-conditions/recurrent-miscarriages' },
+              { label: 'Delayed Periods But Not Pregnant', href: '/reproductive-health-conditions/delayed-periods-not-pregnant' },
             ],
           },
           {
@@ -129,16 +133,16 @@ const Header = ({ isTopBar, variant }) => {
       },
       {
         label: 'IVF Centers',
-        href: '/ivf-centres',
+        href: '',
         isMegaMenu: true,
         megaMenuCategories: [
           {
             label: 'India',
-            href: '/ivf-centres/india',
+            href: '',
             subItems: [
               {
                 label: 'Delhi',
-                href: '/ivf-centres/india/delhi',
+                href: '',
                 subItems: [
                   { label: 'Malviya Nagar, New Delhi', href: '/ivf-centres/india/delhi/malviya-nagar-delhi' },
                   { label: 'Pitampura, New Delhi', href: '/ivf-centres/india/delhi/pitampura-new-delhi' },
