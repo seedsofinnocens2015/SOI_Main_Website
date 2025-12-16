@@ -59,7 +59,7 @@ const Page = () => {
       const result = await response.json();
 
       if (result.ok) {
-        router.push('/contact/thank-you?type=call-back');
+        router.push('/thank-you?type=call-back');
       } else {
         setError(result.error || 'Something went wrong. Please try again.');
         setIsSubmitting(false);

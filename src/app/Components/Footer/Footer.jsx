@@ -125,10 +125,10 @@ const Footer = () => {
       },
     ],
     trainingAcademyLinks: [
-      { href: '/training-academy/embryo-biopsy', text: 'Embryo Biopsy' },
-      { href: '/training-academy/embryologist-training-program', text: 'Embryologist' },
+      { href: '/embryo-biopsy-training-program', text: 'Embryo Biopsy' },
+      { href: '/embryologist-training-program', text: 'Embryologist' },
       { href: '/training-academy/andrology-technician-training-program', text: 'Andrology Technician' },
-      { href: '/training-academy/gynecologic-surgical-training-program', text: 'Gynecologic Surgical' },
+      { href: '/gynecologic-surgical-training-program', text: 'Gynecologic Surgical' },
       { href: '/training-academy/training-registration', text: 'Training Registration' },
     ],
     copyrightText: 'Copyright © 2025 Seeds of Innocens, All Rights Reserved.',
