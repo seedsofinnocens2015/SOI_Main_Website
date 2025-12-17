@@ -60,7 +60,7 @@ const Page = () => {
       const result = await response.json();
 
       if (result.ok) {
-        router.push('/contact/thank-you?type=appointment');
+        router.push('/thank-you?type=appointment');
       } else {
         setError(result.error || 'Something went wrong. Please try again.');
         setIsSubmitting(false);

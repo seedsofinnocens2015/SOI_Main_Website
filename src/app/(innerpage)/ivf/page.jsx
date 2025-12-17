@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const headingData = {
-  title: 'IVF / ICSI',
+  title: 'IVF (In-Vitro Fertilization)',
 };
 
 const serviceData = {
