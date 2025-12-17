@@ -28,69 +28,66 @@ const serviceData = {
 const pcosContentData = {
   sections: [
     {
-      heading: 'Understanding PCOS (Polycystic Ovarian Syndrome)',
+      heading: 'PCOS Symptoms, Treatment, Cost and Side Effects',
       paragraphs: [
-        'Polycystic Ovarian Syndrome (PCOS) is one of the most common hormonal disorders affecting women of reproductive age. It is characterized by irregular menstrual periods, excess androgen levels, and polycystic ovaries.',
-        'PCOS is a leading cause of infertility in women, but with proper diagnosis and treatment, many women with PCOS can achieve successful pregnancies. At Seeds of Innocence, we specialize in diagnosing and treating PCOS to help women achieve their fertility goals.',
+        'PCOS is an imbalance in the hormones of a female that cause irregular menstrual cycles in a female. Some common PCOS side effects are infertility, cardiovascular diseases, and altered physical appearances. There are different types of PCOS and it can be managed with a PCOS diet at an early PCOS stage. The term Polycystic Ovarian Syndrome describes the appearance of the ovaries when viewed under ultrasound. They appear to have cysts growing around them.',
+        'In PCOS, there may be anywhere from 12 to more cysts on the ovaries, that range in size from 2 mm to 9 mm. What this does is that the condition hinders ovulation, making it irregular or non existent. Naturally, an absent ovulation cycle means that the lady will have issues in conceiving naturally.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+    },
+    {
+      heading: 'Cause of PCOS',
+      paragraphs: [
+        'The exact cause of PCOS in women is unknown as of yet. However, it may have a genetic basis as it is seen to run in families. If a female in your family has had history of PCOS, there are chances that even you may be at a higher risk of developing the condition yourself.',
+      ],
     },
     {
       heading: 'Symptoms of PCOS',
-      paragraphs: [
-        'Common symptoms of PCOS include:',
-      ],
       listItems: [
-        'Irregular or absent menstrual periods',
-        'Excess hair growth (hirsutism)',
-        'Acne',
-        'Weight gain or difficulty losing weight',
-        'Thinning hair or hair loss',
-        'Dark patches of skin',
-        'Difficulty conceiving',
+        'Irregular Menstrual Cycle',
+        'Difficulty in Natural conception',
+        'Rapid increase in weight',
+        'Increase in facial and body hair',
+        'Thick and dark brown patches on skin',
+        'Skin tags or excess skin patches in neck folds and armpits',
+        'Hair loss',
+        'Oily skin and acne',
+        'Mood swings',
+        'Pelvic pain',
+        'Sleep apnea or interrupted breathing while sleeping',
       ],
     },
     {
-      heading: 'How PCOS Affects Fertility',
+      heading: 'Effects of PCOS on fertility',
       paragraphs: [
-        'PCOS can impact fertility in several ways:',
-      ],
-      listItems: [
-        'Irregular or absent ovulation',
-        'Hormonal imbalances',
-        'Increased risk of miscarriage',
-        'Insulin resistance affecting egg quality',
-        'Metabolic issues',
+        'Absence of Ovulation (Anovulation)',
+        'One of the major effects of PCOS on the female reproductive system is anovulation. Because of this, the chances of getting pregnant get very slim for a women.',
+        'Weight Gain',
+        'An excessive weight gain will only further decrease the chances of getting pregnant as it already a known factor of infertility. Furthermore, increased weight also is a known cause of the body resisting any ovulation inducing drugs as well.',
       ],
     },
     {
-      heading: 'Treatment Options for PCOS',
+      heading: 'Q. How Do I Know If I Have PCOS?',
       paragraphs: [
-        'At Seeds of Innocence, we offer comprehensive PCOS treatment:',
-      ],
-      listItems: [
-        'Lifestyle modifications (diet and exercise)',
-        'Weight management programs',
-        'Ovulation induction medications',
-        'Insulin-sensitizing medications',
-        'Hormone therapy',
-        'Laparoscopic ovarian drilling',
-        'In Vitro Fertilization (IVF)',
-        'Intrauterine Insemination (IUI)',
+        'There are set symptoms for PCOS that tell you about the condition. The most obvious is the abnormal irregularity of your menstrual cycle. Aside from this, excessive weight gain, facial hair growth, oily skin and acne are major telltale signs.',
       ],
     },
     {
-      heading: 'Success Rates with PCOS Treatment',
+      heading: 'Q. What is the main cause of PCOS?',
       paragraphs: [
-        'With proper treatment, many women with PCOS can achieve successful pregnancies:',
+        'An exact cause of PCOS is not known. However, it is true that it has a genetic factor to it as it is commonly observed to run in families. If you think you have family history of the disease, you can get checked by one of our experts at Seeds of Innocence. Book an appointment today.',
       ],
-      listItems: [
-        'Lifestyle changes can restore ovulation in many cases',
-        'Ovulation induction has high success rates',
-        'IVF success rates are comparable to other causes of infertility',
-        'Early diagnosis and treatment improve outcomes',
+    },
+    {
+      heading: 'Q. How does PCOS affect fertility?',
+      paragraphs: [
+        'PCOS causes anovulation and brings excessive weight gain. Both of these are huge factors of infertility.',
       ],
-      bottomImage: '/assets/img/recent_post2.jpg',
+    },
+    {
+      heading: 'Q. Does PCOS make you smell?',
+      paragraphs: [
+        'Yes. Another common symptom of PCOS is that it causes excessive body odour problems in females.',
+      ],
     },
   ],
 };
