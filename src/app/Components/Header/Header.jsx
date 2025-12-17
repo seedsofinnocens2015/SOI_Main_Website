@@ -64,6 +64,8 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Embryo Freezing', href: '/embryo-freezing' },
               { label: 'Cryopreservation', href: '/cryopreservation' },
               { label: 'PRP & Ovarian Rejuvenation', href: '/prp' },
+              { label: 'Surrogacy', href: '/surrogacy' },
+              { label: 'Donor Program', href: '/donor-program' },
               { label: 'Male Infertility', href: '/male-infertility-treatment-in-india' },
               { label: 'TESA / PESA', href: '/tesa' },
               { label: 'MicroTESE', href: '/microtese' },
@@ -76,6 +78,8 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Blocked Seminiferous Tubules', href: '/blocked-seminiferous-tubules' },
               { label: 'Endocrinological Disorder in Men', href: '/endocrinological-disorder-in-men' },
               { label: 'Retrograde Ejaculation', href: '/retrograde-ejaculation' },
+              { label: 'Varicocele', href: '/varicocele' },
+              { label: 'Vasectomy Reversal', href: '/vasectomy-reversal' },
             ],
           },
           {
@@ -83,6 +87,7 @@ const Header = ({ isTopBar, variant }) => {
             href: '/infertility-treatment/genetic-testing-screening',
             subItems: [
               { label: 'Genetic Testing', href: '/genetic-testing' },
+              { label: 'Genetic Factors', href: '/genetic-factors' },
               { label: 'PGT-A', href: '/pgt-a' },
               { label: 'PGT-M', href: '/pgt-m' },
               { label: 'PGT-SR', href: '/pgt-sr' },
@@ -138,6 +143,7 @@ const Header = ({ isTopBar, variant }) => {
             href: '/infertility-treatment/fertility-wellness',
             subItems: [
               { label: 'Boost Fertility With Colours Of Food', href: '/how-to-boost-up-fertility-with-the-colours-of-food' },
+              { label: 'Yoga and Fertility', href: '/yoga-and-fertility-heres-how-yoga-can-support-fertility' },
             ],
           },
         ],
