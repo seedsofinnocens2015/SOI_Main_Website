@@ -38,12 +38,12 @@ const Header = ({ isTopBar, variant }) => {
     navItems: [
       {
         label: 'Infertility Treatment',
-        href: '/infertility-treatment',
+        href: '',
         isMegaMenu: true,
         megaMenuCategories: [
           {
             label: 'Fertility Treatments',
-            href: '/infertility-treatment/fertility-treatments',
+            href: '',
             subItems: [
               { label: 'IVF', href: '/ivf' },
               { label: 'ICSI', href: '/icsi' },
@@ -57,8 +57,8 @@ const Header = ({ isTopBar, variant }) => {
             ],
           },
           {
-            label: 'Advanced Fertility Care',
-            href: '/infertility-treatment/advanced-fertility-care',
+            label: 'IVF Procedures & Preservation',
+            href: '',
             subItems: [
               { label: 'Egg Freezing', href: '/egg-freezing' },
               { label: 'Embryo Freezing', href: '/embryo-freezing' },
@@ -66,11 +66,25 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'PRP & Ovarian Rejuvenation', href: '/prp' },
               { label: 'Surrogacy', href: '/surrogacy' },
               { label: 'Donor Program', href: '/donor-program' },
+            ],
+          },
+          {
+            label: 'Male Infertility Treatments',
+            href: '',
+            subItems: [
               { label: 'Male Infertility', href: '/male-infertility-treatment-in-india' },
               { label: 'TESA / PESA', href: '/tesa' },
               { label: 'MicroTESE', href: '/microtese' },
               { label: 'Semen Analysis', href: '/semen-analysis' },
               { label: 'Semen Analysis at Home', href: '/semen-analysis-at-home' },
+              { label: 'Varicocele', href: '/varicocele' },
+              { label: 'Vasectomy Reversal', href: '/vasectomy-reversal' },
+            ],
+          },
+          {
+            label: 'Male Fertility Conditions',
+            href: '',
+            subItems: [
               { label: 'Azoospermia', href: '/azoospermia' },
               { label: 'Non-Obstructive Azoospermia', href: '/non-obstructive-azoospermia' },
               { label: 'Obstructive Azoospermia', href: '/obstructive-azoospermia' },
@@ -78,13 +92,11 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Blocked Seminiferous Tubules', href: '/blocked-seminiferous-tubules' },
               { label: 'Endocrinological Disorder in Men', href: '/endocrinological-disorder-in-men' },
               { label: 'Retrograde Ejaculation', href: '/retrograde-ejaculation' },
-              { label: 'Varicocele', href: '/varicocele' },
-              { label: 'Vasectomy Reversal', href: '/vasectomy-reversal' },
             ],
           },
           {
             label: 'Genetic Testing & Screening',
-            href: '/infertility-treatment/genetic-testing-screening',
+            href: '',
             subItems: [
               { label: 'Genetic Testing', href: '/genetic-testing' },
               { label: 'Genetic Factors', href: '/genetic-factors' },
@@ -102,7 +114,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Maternal–Fetal Medicine (MFM)',
-            href: '/infertility-treatment/maternal-fetal-medicine',
+            href: '',
             subItems: [
               // { label: 'Maternal and Fetal Medicine', href: '/maternal-and-fetal-medicine' },
               { label: 'High-Risk Pregnancy', href: '/maternal-fetal-medicine/high-risk-pregnancy' },
@@ -113,7 +125,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Surgeries',
-            href: '/infertility-treatment/surgeries',
+            href: '',
             subItems: [
               // { label: 'Laparoscopy and Hysteroscopy', href: '/laparoscopy-and-hysteroscopy' },
               { label: 'Hysteroscopy', href: '/hysteroscopy' },
@@ -140,7 +152,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Fertility Wellness',
-            href: '/infertility-treatment/fertility-wellness',
+            href: '',
             subItems: [
               { label: 'Boost Fertility With Colours Of Food', href: '/how-to-boost-up-fertility-with-the-colours-of-food' },
               { label: 'Yoga and Fertility', href: '/yoga-and-fertility-heres-how-yoga-can-support-fertility' },
@@ -252,7 +264,7 @@ const Header = ({ isTopBar, variant }) => {
       },
       {
         label: 'International Patients',
-        href: '/international-patients',
+        href: '',
         isMegaMenu: true,
         megaMenuCategories: [
           {
