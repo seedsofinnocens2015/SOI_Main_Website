@@ -14,57 +14,63 @@ const CredibilitySection = ({ data }) => {
         backgroundColor: '#fff'
       }}
     >
-      {/* Decorative Laurel Wreaths - Left */}
-      <div 
-        style={{
-          position: 'absolute',
-          left: '0',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          width: '120px',
-          height: '100px',
-          opacity: 0.5,
-          zIndex: 0
-        }}
-      >
-        <svg width="120" height="200" viewBox="0 0 120 200" fill="none">
-          <path 
-            d="M60,20 Q80,40 70,60 Q60,80 50,100 Q40,120 60,140 Q80,160 70,180" 
-            stroke="#666" 
-            strokeWidth="2" 
-            fill="none"
-            strokeLinecap="round"
+      {/* Decorative Image - Left */}
+      {data.leftImage && (
+        <div 
+          className="d-none d-md-block"
+          style={{
+            position: 'absolute',
+            left: '0',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            width: '120px',
+            height: 'auto',
+            opacity: 0.1,
+            zIndex: 0
+          }}
+        >
+          <Image
+            src={getAssetPathClient(data.leftImage)}
+            alt="Decorative left"
+            width={120}
+            height={200}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
           />
-          <circle cx="50" cy="50" r="3" fill="#666" />
-          <circle cx="70" cy="150" r="3" fill="#666" />
-        </svg>
-      </div>
+        </div>
+      )}
 
-      {/* Decorative Laurel Wreaths - Right */}
-      <div 
-        style={{
-          position: 'absolute',
-          right: '0',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          width: '120px',
-          height: '100px',
-          opacity: 0.5,
-          zIndex: 0
-        }}
-      >
-        <svg width="120" height="200" viewBox="0 0 120 200" fill="none">
-          <path 
-            d="M60,20 Q40,40 50,60 Q60,80 70,100 Q80,120 60,140 Q40,160 50,180" 
-            stroke="#666" 
-            strokeWidth="2" 
-            fill="none"
-            strokeLinecap="round"
+      {/* Decorative Image - Right */}
+      {data.rightImage && (
+        <div 
+          className="d-none d-md-block"
+          style={{
+            position: 'absolute',
+            right: '0',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            width: '120px',
+            height: 'auto',
+            opacity: 0.1,
+            zIndex: 0
+          }}
+        >
+          <Image
+            src={getAssetPathClient(data.rightImage)}
+            alt="Decorative right"
+            width={120}
+            height={200}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
           />
-          <circle cx="70" cy="50" r="3" fill="#666" />
-          <circle cx="50" cy="150" r="3" fill="#666" />
-        </svg>
-      </div>
+        </div>
+      )}
 
       {/* Heading - Using SectionHeading Component */}
       {data.subtitle && (
@@ -115,8 +121,6 @@ const CredibilitySection = ({ data }) => {
                       loading="lazy"
                       style={{
                         objectFit: 'contain',
-                        filter: 'grayscale(100%)',
-                        opacity: 0.8,
                         maxWidth: '100%',
                         height: 'auto'
                       }}

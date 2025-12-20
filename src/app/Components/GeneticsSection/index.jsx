@@ -1,22 +1,25 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const GeneticsSection = ({ data }) => {
   return (
     <div className="container">
       <div className="row cs_gap_y_30">
         {data.cards && data.cards.map((card, index) => (
-          <div key={index} className="col-lg-6 col-md-12">
+          <div key={index} className="col-lg-6 col-md-12" style={{ position: 'relative', paddingTop: card.imageUrl ? '100px' : '0' }}>
             <div 
               className="cs_service_feature_card"
               style={{
                 position: 'relative',
                 borderRadius: '20px',
-                overflow: 'hidden',
+                overflow: 'visible',
                 backgroundColor: card.bgColor || '#E45352',
                 padding: '30px 40px',
-                minHeight: '300px',
+                paddingTop: card.imageUrl ? '50px' : '30px',
+                minHeight: '400px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -41,7 +44,8 @@ const GeneticsSection = ({ data }) => {
                   right: 0,
                   height: '80px',
                   overflow: 'hidden',
-                  zIndex: 1
+                  zIndex: 1,
+                  borderRadius: '20px 20px 0 0'
                 }}
               >
                 <svg 
@@ -58,17 +62,45 @@ const GeneticsSection = ({ data }) => {
                 </svg>
               </div>
 
+              {/* Doctor Image - Half Outside, Half Inside */}
+              {card.imageUrl && (
+                <div style={{
+                  position: 'absolute',
+                  top: '-100px',
+                  left: card.title === 'Male Infertility' ? '30%' : '65%',
+                  transform: 'translateX(-50%)',
+                  zIndex: 3,
+                  width: '80%',
+                  maxWidth: '300px',
+                  textAlign: 'center'
+                }}>
+                  <Image
+                    src={typeof window !== 'undefined' ? getAssetPathClient(card.imageUrl) : card.imageUrl}
+                    alt={card.title}
+                    width={300}
+                    height={200}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxHeight: '210px',                  
+                      objectFit: 'cover',
+                    }}
+                  />
+                </div>
+              )}
+
               {/* Content */}
               <div style={{ position: 'relative', zIndex: 2, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 {/* Title */}
-                <div style={{ marginBottom: '25px', marginTop: '20px' }}>
+                <div style={{ marginBottom: '25px', marginTop: card.imageUrl ? '0' : '20px' }}>
                   <h2 
                     style={{
                       fontSize: '32px',
                       fontWeight: '700',
                       color: '#fff',
                       marginBottom: '0px',
-                      lineHeight: '1.3'
+                      lineHeight: '1.3',
+                      textAlign: card.title === 'Male Infertility' ? 'right' : 'inherit'
                     }}
                   >
                     {card.title}

@@ -573,6 +573,7 @@ const heroData = {
     cards: [
       {
         title: 'Male Infertility',
+        imageUrl: '/assets/img/Male Infertility1.png',
         bgColor: '#24608f',
         description: 'Male infertility accounts for about 50% of infertility cases. It\'s not a reflection of masculinity, but a medical condition that can be treated. Early assessment and treatment are crucial for successful outcomes. Let\'s end the stigma together!',
         highlightText: 'Let\'s end the stigma together!',
@@ -582,12 +583,13 @@ const heroData = {
         // },
         secondaryButton: {
           text: 'Learn More',
-          link: '/advanced-fertility-care/male-infertility/',
+          link: '/male-infertility-treatment-in-india',
         },
       },
       {
         title: 'Egg freezing',
         bgColor: '#E45352',
+        imageUrl: '/assets/img/Egg freezing1.png',
         description: 'Egg freezing is a smart, science-backed way to preserve your fertility on your terms. Whether you\'re focusing on your career, waiting for the right time, or facing medical reasons, egg freezing gives you control over your future.',
         highlightText: 'Your fertility, Your choice!',
         // primaryButton: {
@@ -596,7 +598,7 @@ const heroData = {
         // },
         secondaryButton: {
           text: 'Learn More',
-          link: '/advanced-fertility-care/egg-freezing/',
+          link: '/egg-freezing',
         },
       },
     ],
@@ -606,31 +608,33 @@ const heroData = {
     subtitle: 'RECOGNIZED AND AWARDED',
     title: '',
     description: '',
+    leftImage: '/assets/img/decorative-left.png', // Add your left decorative image path here
+    rightImage: '/assets/img/decorative-right.png', // Add your right decorative image path here
     logos: [
       {
         // title: 'TIMES HEALTHCARE ACHIEVERS',
         // subtitle: 'DELHI NCR 2020',
-        image: '/assets/img/mask1.png',
+        image: '/assets/img/Times-Healthcare-Achievers.png',
       },
       {
         // title: 'NATIONAL FERTILITY AWARDS',
         // subtitle: 'Healthworld.com',
-        image: '/assets/img/mask2.png',
+        image: '/assets/img/National-Fertility-Awards-2022.png',
       },
       {
           // title: 'INDIAN FERTILITY SOCIETY',
           // subtitle: 'IFS',
-        image: '/assets/img/mask3.png',
+        image: '/assets/img/Indian-Fertility-Society.png',
       },
       {
         // title: 'ASSOCIATION OF OBSTETRICIANS AND GYNAECOLOGISTS OF DELHI',
         // subtitle: 'AOGD',
-        image: '/assets/img/mask4.png',
+        image: '/assets/img/Association-of-Obstetricians-And-Gynaecologists-of-Delhi.png',
       },
       {
         // title: 'दैनिक जागरण',
         // subtitle: 'Dainik Jagran',
-        image: '/assets/img/mask5.png',
+        image: '/assets/img/Screenshot_2025-05-02_155258-removebg-preview.png',
       },
     ],
   };
