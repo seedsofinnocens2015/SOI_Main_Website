@@ -17,110 +17,19 @@ const jsonBlogs = blogsData.blogs.filter(blog =>
   blog.category === 'Fertility' || blog.category === 'प्रजनन क्षमता'
 );
 
-// Use blogs from JSON, fallback to local if not found
-const blogs = jsonBlogs.length > 0 ? jsonBlogs : [
-  {
-    title: 'Understanding Fertility: A Comprehensive Guide',
-    excerpt: 'Learn about the basics of fertility, factors that affect it, and when to seek help from a fertility specialist.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 15, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Fertility',
-    readTime: '5 min read',
-    slug: 'understanding-fertility-comprehensive-guide',
-  },
-  {
-    title: 'Age and Fertility: What You Need to Know',
-    excerpt: 'Explore how age impacts fertility in both men and women, and understand the biological factors at play.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 10, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Fertility',
-    readTime: '7 min read',
-    link: '#',
-  },
-  {
-    title: 'Lifestyle Factors That Affect Fertility',
-    excerpt: 'Discover how diet, exercise, stress, and other lifestyle factors can impact your fertility and what you can do to optimize it.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 5, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Fertility',
-    readTime: '6 min read',
-    link: '#',
-  },
-  {
-    title: 'Natural Ways to Boost Fertility',
-    excerpt: 'Evidence-based tips and natural methods to improve fertility health and increase your chances of conception.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 28, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Fertility',
-    readTime: '8 min read',
-    link: '#',
-  },
-  {
-    title: 'When to See a Fertility Specialist',
-    excerpt: 'Learn about the signs and circumstances that indicate it\'s time to consult with a fertility specialist.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 20, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Fertility',
-    readTime: '5 min read',
-    link: '#',
-  },
-  {
-    title: 'Fertility Myths Debunked',
-    excerpt: 'Separating fact from fiction: common fertility myths and the truth behind them based on scientific evidence.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 15, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Fertility',
-    readTime: '6 min read',
-    link: '#',
-  },
-  // Hindi Blogs
-  {
-    title: 'प्रजनन क्षमता को समझना: एक व्यापक मार्गदर्शिका',
-    excerpt: 'प्रजनन क्षमता की मूल बातें, इसे प्रभावित करने वाले कारक और प्रजनन विशेषज्ञ से सहायता कब लेनी चाहिए, इसके बारे में जानें।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '15 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'प्रजनन क्षमता',
-    readTime: '5 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'उम्र और प्रजनन क्षमता: आपको क्या जानना चाहिए',
-    excerpt: 'जानें कि उम्र पुरुषों और महिलाओं दोनों में प्रजनन क्षमता को कैसे प्रभावित करती है, और जैविक कारकों को समझें।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '10 दिसंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'प्रजनन क्षमता',
-    readTime: '7 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'जीवनशैली के कारक जो प्रजनन क्षमता को प्रभावित करते हैं',
-    excerpt: 'जानें कि आहार, व्यायाम, तनाव और अन्य जीवनशैली कारक आपकी प्रजनन क्षमता को कैसे प्रभावित कर सकते हैं और इसे अनुकूलित करने के लिए क्या कर सकते हैं।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '5 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'प्रजनन क्षमता',
-    readTime: '6 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'प्रजनन क्षमता बढ़ाने के प्राकृतिक तरीके',
-    excerpt: 'प्रजनन स्वास्थ्य में सुधार और गर्भधारण की संभावना बढ़ाने के लिए साक्ष्य-आधारित युक्तियां और प्राकृतिक विधियां।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '28 नवंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'प्रजनन क्षमता',
-    readTime: '8 मिनट पढ़ें',
-    link: '#',
-  },
-];
+// Use blogs from JSON, fallback to empty array
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  // Determine if blog is Hindi or English based on category or content
+  const isHindi = blog.category === 'प्रजनन क्षमता' || 
+                 blog.title.match(/[\u0900-\u097F]/) ||
+                 blog.content.match(/[\u0900-\u097F]/);
+  const blogRoute = isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`;
+  
+  return {
+    ...blog,
+    link: blogRoute,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -272,7 +181,7 @@ const Page = () => {
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
             {filteredBlogs.map((blog, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <Link href={blog.slug ? `/resources/blogs/${blog.slug}` : '#'} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
+                <Link href={blog.link || (blog.slug ? `/english/${blog.slug}/` : '#')} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
                   <div className="cs_blog_card cs_style_1" style={{ 
                     height: '100%',
                     transition: 'all 0.3s ease',

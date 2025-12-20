@@ -6,114 +6,28 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
 
 const headingData = {
   title: 'IVF Process Blogs',
 };
 
-const blogs = [
-  {
-    title: 'Complete Guide to the IVF Process',
-    excerpt: 'A step-by-step explanation of the entire IVF journey from initial consultation to pregnancy test, including what to expect at each stage.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 12, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'IVF Process',
-    readTime: '10 min read',
-    link: '#',
-  },
-  {
-    title: 'Understanding Ovarian Stimulation in IVF',
-    excerpt: 'Learn about fertility medications, how they work, monitoring protocols, and what to expect during the stimulation phase.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 8, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'IVF Process',
-    readTime: '8 min read',
-    link: '#',
-  },
-  {
-    title: 'Egg Retrieval: What to Expect',
-    excerpt: 'Comprehensive guide to the egg retrieval procedure, preparation, recovery, and post-procedure care instructions.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 3, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'IVF Process',
-    readTime: '7 min read',
-    link: '#',
-  },
-  {
-    title: 'Embryo Transfer: The Final Step',
-    excerpt: 'Everything you need to know about embryo transfer procedure, preparation, what happens during transfer, and post-transfer care.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 25, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'IVF Process',
-    readTime: '6 min read',
-    link: '#',
-  },
-  {
-    title: 'IVF vs ICSI: Understanding the Difference',
-    excerpt: 'Learn about the differences between traditional IVF and ICSI, when each is recommended, and success rates for both procedures.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 18, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'IVF Process',
-    readTime: '9 min read',
-    link: '#',
-  },
-  {
-    title: 'The Two-Week Wait: Managing Expectations',
-    excerpt: 'Tips for managing anxiety and expectations during the crucial two-week wait period after embryo transfer.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 12, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'IVF Process',
-    readTime: '5 min read',
-    link: '#',
-  },
-  // Hindi Blogs
-  {
-    title: 'आईवीएफ प्रक्रिया की पूरी गाइड',
-    excerpt: 'प्रारंभिक परामर्श से लेकर गर्भावस्था परीक्षण तक पूरे आईवीएफ सफर की चरण-दर-चरण व्याख्या, प्रत्येक चरण में क्या उम्मीद करें।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '12 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'आईवीएफ प्रक्रिया',
-    readTime: '10 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'आईवीएफ में अंडाशय उत्तेजना को समझना',
-    excerpt: 'प्रजनन दवाओं के बारे में जानें, वे कैसे काम करती हैं, निगरानी प्रोटोकॉल और उत्तेजना चरण के दौरान क्या उम्मीद करें।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '8 दिसंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'आईवीएफ प्रक्रिया',
-    readTime: '8 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'अंडे की पुनर्प्राप्ति: क्या उम्मीद करें',
-    excerpt: 'अंडे की पुनर्प्राप्ति प्रक्रिया, तैयारी, रिकवरी और प्रक्रिया के बाद की देखभाल निर्देशों की व्यापक गाइड।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '3 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'आईवीएफ प्रक्रिया',
-    readTime: '7 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'भ्रूण स्थानांतरण: अंतिम कदम',
-    excerpt: 'भ्रूण स्थानांतरण प्रक्रिया, तैयारी, स्थानांतरण के दौरान क्या होता है, और स्थानांतरण के बाद की देखभाल के बारे में सब कुछ।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '25 नवंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'आईवीएफ प्रक्रिया',
-    readTime: '6 मिनट पढ़ें',
-    link: '#',
-  },
-];
+// Get blogs from JSON and filter by category
+const jsonBlogs = blogsData.blogs.filter(blog => 
+  blog.category === 'IVF Process' || blog.category === 'आईवीएफ प्रक्रिया'
+);
+
+// Use blogs from JSON, fallback to empty array
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => ({
+  title: blog.title,
+  excerpt: blog.excerpt,
+  image: blog.image,
+  date: blog.date,
+  author: blog.author,
+  category: blog.category,
+  readTime: blog.readTime,
+  link: `/english/${blog.slug}/`,
+})) : [];
 
 const Page = () => {
   const router = useRouter();

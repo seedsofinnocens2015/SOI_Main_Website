@@ -6,114 +6,28 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
 
 const headingData = {
   title: 'Women\'s Health Blogs',
 };
 
-const blogs = [
-  {
-    title: 'Understanding PCOS and Fertility',
-    excerpt: 'Comprehensive guide to Polycystic Ovary Syndrome, its impact on fertility, and treatment options for women with PCOS.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 11, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Women\'s Health',
-    readTime: '9 min read',
-    link: '#',
-  },
-  {
-    title: 'Endometriosis and Fertility: What You Need to Know',
-    excerpt: 'Understanding endometriosis, how it affects fertility, and treatment options to improve conception chances.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 6, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Women\'s Health',
-    readTime: '8 min read',
-    link: '#',
-  },
-  {
-    title: 'Irregular Periods and Fertility',
-    excerpt: 'Causes of irregular menstrual cycles, their impact on fertility, and treatment approaches to regulate periods.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 1, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Women\'s Health',
-    readTime: '7 min read',
-    link: '#',
-  },
-  {
-    title: 'Ovulation: Understanding Your Cycle',
-    excerpt: 'Learn about ovulation, how to track it, signs of ovulation, and optimizing timing for conception.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 23, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Women\'s Health',
-    readTime: '6 min read',
-    link: '#',
-  },
-  {
-    title: 'Hormonal Imbalances and Fertility',
-    excerpt: 'Understanding hormonal imbalances that affect fertility, symptoms, diagnosis, and treatment options.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 16, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Women\'s Health',
-    readTime: '8 min read',
-    link: '#',
-  },
-  {
-    title: 'Uterine Fibroids and Their Impact on Fertility',
-    excerpt: 'Information about uterine fibroids, how they affect fertility, and treatment options including surgical and non-surgical approaches.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 10, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Women\'s Health',
-    readTime: '7 min read',
-    link: '#',
-  },
-  // Hindi Blogs
-  {
-    title: 'पीसीओएस और प्रजनन क्षमता को समझना',
-    excerpt: 'पॉलीसिस्टिक अंडाशय सिंड्रोम, प्रजनन क्षमता पर इसके प्रभाव, और पीसीओएस वाली महिलाओं के लिए उपचार विकल्पों की व्यापक गाइड।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '11 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'महिला स्वास्थ्य',
-    readTime: '9 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'एंडोमेट्रियोसिस और प्रजनन क्षमता: आपको क्या जानना चाहिए',
-    excerpt: 'एंडोमेट्रियोसिस को समझना, यह प्रजनन क्षमता को कैसे प्रभावित करता है, और गर्भधारण की संभावना बढ़ाने के लिए उपचार विकल्प।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '6 दिसंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'महिला स्वास्थ्य',
-    readTime: '8 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'अनियमित मासिक धर्म और प्रजनन क्षमता',
-    excerpt: 'अनियमित मासिक धर्म चक्र के कारण, प्रजनन क्षमता पर उनके प्रभाव, और अवधि को नियंत्रित करने के लिए उपचार दृष्टिकोण।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '1 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'महिला स्वास्थ्य',
-    readTime: '7 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'ओव्यूलेशन: अपने चक्र को समझना',
-    excerpt: 'ओव्यूलेशन के बारे में जानें, इसे कैसे ट्रैक करें, ओव्यूलेशन के संकेत, और गर्भधारण के लिए समय अनुकूलन।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '23 नवंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'महिला स्वास्थ्य',
-    readTime: '6 मिनट पढ़ें',
-    link: '#',
-  },
-];
+// Get blogs from JSON and filter by category
+const jsonBlogs = blogsData.blogs.filter(blog => 
+  blog.category === 'Women\'s Health' || blog.category === 'महिला स्वास्थ्य'
+);
+
+// Use blogs from JSON, fallback to empty array
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => ({
+  title: blog.title,
+  excerpt: blog.excerpt,
+  image: blog.image,
+  date: blog.date,
+  author: blog.author,
+  category: blog.category,
+  readTime: blog.readTime,
+  link: `/english/${blog.slug}/`,
+})) : [];
 
 const Page = () => {
   const router = useRouter();
