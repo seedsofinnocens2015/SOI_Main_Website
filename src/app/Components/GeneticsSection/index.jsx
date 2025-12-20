@@ -84,7 +84,6 @@ const GeneticsSection = ({ data }) => {
                       height: 'auto',
                       maxHeight: '210px',                  
                       objectFit: 'cover',
-                      // boxShadow: '0 4px 20px 15px rgba(0, 0, 0, 0.2)'
                     }}
                   />
                 </div>
