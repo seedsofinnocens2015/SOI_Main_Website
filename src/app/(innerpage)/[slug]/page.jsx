@@ -1,10 +1,12 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import indiaCentresData from '../ivf-centres/india-centres-data.json';
+import doctorsData from '../doctors/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 
@@ -18,7 +20,7 @@ function cityNameToSlug(cityName) {
 
 export async function generateStaticParams() {
   try {
-    return indiaCentresData
+    const centerParams = indiaCentresData
       .filter((center) => center.stateSlug && !center.isInternational)
       .map((center) => {
         // Special case: Malviya Nagar, Delhi should use "best-ivf-centre-in-delhi"
@@ -35,6 +37,14 @@ export async function generateStaticParams() {
         };
       })
       .filter((param) => param.slug);
+
+    const doctorParams = doctorsData
+      .map((doctor) => ({
+        slug: doctor.newSlug || doctor.slug + '-ivf-specialist',
+      }))
+      .filter((param) => param.slug);
+
+    return [...centerParams, ...doctorParams];
   } catch (error) {
     console.error('Error generating static params:', error);
     return [];
@@ -52,6 +62,59 @@ const page = async ({ params }) => {
   // Remove trailing slash if present
   const cleanSlug = slug.replace(/\/$/, '');
   
+  // Check if this is a doctor route (starts with "dr-" and ends with "-ivf-specialist" or "-ivf-specialists")
+  const isDoctorRoute = cleanSlug.startsWith('dr-') && (cleanSlug.endsWith('-ivf-specialist') || cleanSlug.endsWith('-ivf-specialists'));
+  
+  if (isDoctorRoute) {
+    // Handle doctor route
+    const doctor = doctorsData.find((d) => {
+      const doctorSlug = d.newSlug || d.slug + '-ivf-specialist';
+      return doctorSlug === cleanSlug;
+    });
+
+    if (!doctor) {
+      console.error(`Doctor not found for slug: ${cleanSlug}`);
+      notFound();
+    }
+
+    // Get other doctors for sidebar (exclude current doctor)
+    const otherDoctors = doctorsData
+      .filter((d) => d.slug !== doctor.slug)
+      .slice(0, 5)
+      .map((d) => ({
+        name: d.name,
+        profession: d.subtitle,
+        imageUrl: d.image,
+        experience: d.experience,
+        link: `/${d.newSlug || d.slug + '-ivf-specialist'}`,
+      }));
+
+    const headingData = {
+      title: doctor.name,
+    };
+
+    return (
+      <div>
+        <Section
+          className={'cs_page_heading cs_bg_filed cs_center'}
+          backgroundImage="/assets/img/Top-Header.jpg"
+        >
+          <PageHeading data={headingData} />
+        </Section>
+
+        <Section
+          topSpaceLg="50"
+          topSpaceMd="60"
+          bottomSpaceLg="70"
+          bottomSpaceMd="120"
+        >
+          <DoctorDetailsSection data={doctor} otherDoctors={otherDoctors} />
+        </Section>
+      </div>
+    );
+  }
+  
+  // Handle IVF center route
   // Extract city slug from the format: "best-ivf-centre-in-malviya-nagar" -> "malviya-nagar"
   const citySlug = cleanSlug.replace(/^best-ivf-centre-in-/, '');
   
@@ -288,34 +351,42 @@ const page = async ({ params }) => {
               {centerDoctors.map((doctor, index) => (
                 <div className="cs_team cs_style_1 cs_blue_bg" key={index}>
                   <div className="cs_team_shape cs_accent_bg" />
-                  {doctor.slug ? (
-                    <Link href={`/doctors/${doctor.slug}`} className="cs_team_thumbnail">
-                      <Image 
-                        src={getAssetPath(doctor.image)} 
-                        alt={`${doctor.name} Thumbnail`} 
-                        width={302} 
-                        height={423}
-                        loading="eager"
-                      />
-                    </Link>
-                  ) : (
-                    <div className="cs_team_thumbnail">
-                      <Image 
-                        src={getAssetPath(doctor.image)} 
-                        alt={`${doctor.name} Thumbnail`} 
-                        width={302} 
-                        height={423}
-                        loading="eager"
-                      />
-                    </div>
-                  )}
+                  {(() => {
+                    const doctorData = doctorsData.find(d => d.slug === doctor.slug);
+                    const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
+                    return doctorLink ? (
+                      <Link href={doctorLink} className="cs_team_thumbnail">
+                        <Image 
+                          src={getAssetPath(doctor.image)} 
+                          alt={`${doctor.name} Thumbnail`} 
+                          width={302} 
+                          height={423}
+                          loading="eager"
+                        />
+                      </Link>
+                    ) : (
+                      <div className="cs_team_thumbnail">
+                        <Image 
+                          src={getAssetPath(doctor.image)} 
+                          alt={`${doctor.name} Thumbnail`} 
+                          width={302} 
+                          height={423}
+                          loading="eager"
+                        />
+                      </div>
+                    );
+                  })()}
                   <div className="cs_team_bio">
                     <h3 className="cs_team_title cs_extra_bold mb-0">
-                      {doctor.slug ? (
-                        <Link href={`/doctors/${doctor.slug}`}>{doctor.name}</Link>
-                      ) : (
-                        <span>{doctor.name}</span>
-                      )}
+                      {(() => {
+                        const doctorData = doctorsData.find(d => d.slug === doctor.slug);
+                        const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
+                        return doctorLink ? (
+                          <Link href={doctorLink}>{doctor.name}</Link>
+                        ) : (
+                          <span>{doctor.name}</span>
+                        );
+                      })()}
                     </h3>
                     <p className="cs_team_subtitle">{doctor.subtitle}</p>
                     {doctor.experience && (

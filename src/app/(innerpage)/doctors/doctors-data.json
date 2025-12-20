@@ -28,11 +28,24 @@
       "The ET Healthworld: Induction into the Hall of Fame as the IVF Virtuoso of 2022"
     ],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 95 },
-      { "label": "Patient Satisfaction", "percentage": 98 },
-      { "label": "Success Rate", "percentage": 85 },
-      { "label": "Clinical Expertise", "percentage": 92 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 95
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 98
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 85
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 92
+      }
+    ],
+    "newSlug": "dr-gauri-agarwal-ivf-specialist"
   },
   {
     "slug": "dr-aditi-bhatnagar",
@@ -50,11 +63,24 @@
     "specialization": "IVF, ICSI, Advanced Reproductive Techniques",
     "experience": "12+ Years",
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 90 },
-      { "label": "Patient Satisfaction", "percentage": 95 },
-      { "label": "Success Rate", "percentage": 80 },
-      { "label": "Clinical Expertise", "percentage": 88 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 90
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 95
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 80
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 88
+      }
+    ],
+    "newSlug": "dr-aditi-bhatnagar-ivf-specialist"
   },
   {
     "slug": "dr-nivedita-nehal",
@@ -78,11 +104,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 88 },
-      { "label": "Patient Satisfaction", "percentage": 94 },
-      { "label": "Success Rate", "percentage": 78 },
-      { "label": "Clinical Expertise", "percentage": 86 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 88
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 94
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 78
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 86
+      }
+    ],
+    "newSlug": "dr-nivedita-nehal-ivf-specialist"
   },
   {
     "slug": "dr-lisha-singh",
@@ -109,11 +148,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 87 },
-      { "label": "Patient Satisfaction", "percentage": 93 },
-      { "label": "Success Rate", "percentage": 77 },
-      { "label": "Clinical Expertise", "percentage": 85 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 87
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 93
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 77
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 85
+      }
+    ],
+    "newSlug": "dr-lisha-singh-ivf-specialist"
   },
   {
     "slug": "dr-beena-upadhyay",
@@ -131,11 +183,24 @@
     "specialization": "IVF, High-Risk Pregnancies, Age-Related Fertility",
     "experience": "11+ Years",
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 89 },
-      { "label": "Patient Satisfaction", "percentage": 96 },
-      { "label": "Success Rate", "percentage": 79 },
-      { "label": "Clinical Expertise", "percentage": 87 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 89
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 96
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 79
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 87
+      }
+    ],
+    "newSlug": "dr-beena-upadhyay-ivf-specialist"
   },
   {
     "slug": "dr-debilina-roy",
@@ -162,11 +227,24 @@
       "Gold medal in Microbiology (2006) and Best paper presentation award at Yuva FOGSI, Guwahati, April 2013, Topic-Comparative study on infraumbilical use of oxytocin versus misoprostol in the management of retained placenta via Pipingas technique"
     ],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 86 },
-      { "label": "Patient Satisfaction", "percentage": 94 },
-      { "label": "Success Rate", "percentage": 76 },
-      { "label": "Clinical Expertise", "percentage": 84 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 86
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 94
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 76
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 84
+      }
+    ],
+    "newSlug": "dr-debilina-roy-ivf-specialist"
   },
   {
     "slug": "dr-rashmi-singh",
@@ -184,11 +262,24 @@
     "specialization": "IVF, Infertility Management, Advanced Reproductive Techniques",
     "experience": "10+ Years",
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 88 },
-      { "label": "Patient Satisfaction", "percentage": 95 },
-      { "label": "Success Rate", "percentage": 78 },
-      { "label": "Clinical Expertise", "percentage": 86 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 88
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 95
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 78
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 86
+      }
+    ],
+    "newSlug": "dr-rashmi-singh-ivf-specialist"
   },
   {
     "slug": "dr-kriti-prasad",
@@ -212,11 +303,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 87 },
-      { "label": "Patient Satisfaction", "percentage": 93 },
-      { "label": "Success Rate", "percentage": 77 },
-      { "label": "Clinical Expertise", "percentage": 85 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 87
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 93
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 77
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 85
+      }
+    ],
+    "newSlug": "dr-kriti-prasad-ivf-specialist"
   },
   {
     "slug": "dr-pallavi-shrivastava",
@@ -240,11 +344,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 85 },
-      { "label": "Patient Satisfaction", "percentage": 92 },
-      { "label": "Success Rate", "percentage": 75 },
-      { "label": "Clinical Expertise", "percentage": 83 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 85
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 92
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 75
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 83
+      }
+    ],
+    "newSlug": "dr-pallavi-shrivastava-ivf-specialist"
   },
   {
     "slug": "dr-divya-shivanand",
@@ -273,11 +390,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 84 },
-      { "label": "Patient Satisfaction", "percentage": 91 },
-      { "label": "Success Rate", "percentage": 74 },
-      { "label": "Clinical Expertise", "percentage": 82 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 84
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 91
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 74
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 82
+      }
+    ],
+    "newSlug": "dr-divya-shivanand-ivf-specialist"
   },
   {
     "slug": "dr-aiman-akram",
@@ -304,11 +434,24 @@
       "Golden Aim Most Emerging Obstetrician and Gynaecologist in UP, 2025. Best Poster for Placental Teratoma in Life Conference, 2017. Various papers have been published in national and international journals."
     ],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 86 },
-      { "label": "Patient Satisfaction", "percentage": 93 },
-      { "label": "Success Rate", "percentage": 76 },
-      { "label": "Clinical Expertise", "percentage": 84 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 86
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 93
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 76
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 84
+      }
+    ],
+    "newSlug": "dr-aiman-akram-ivf-specialist"
   },
   {
     "slug": "dr-preeti",
@@ -326,11 +469,24 @@
     "specialization": "IVF, Ovulatory Disorders, PCOS Management",
     "experience": "8+ Years",
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 85 },
-      { "label": "Patient Satisfaction", "percentage": 92 },
-      { "label": "Success Rate", "percentage": 75 },
-      { "label": "Clinical Expertise", "percentage": 83 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 85
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 92
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 75
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 83
+      }
+    ],
+    "newSlug": "dr-preeti-ivf-specialist"
   },
   {
     "slug": "dr-disha-datta",
@@ -354,11 +510,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 84 },
-      { "label": "Patient Satisfaction", "percentage": 91 },
-      { "label": "Success Rate", "percentage": 74 },
-      { "label": "Clinical Expertise", "percentage": 82 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 84
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 91
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 74
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 82
+      }
+    ],
+    "newSlug": "dr-disha-datta-choudhury-ivf-specialist"
   },
   {
     "slug": "dr-monika-maan",
@@ -388,11 +557,24 @@
       "Numerous publications in national and international journals"
     ],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 85 },
-      { "label": "Patient Satisfaction", "percentage": 92 },
-      { "label": "Success Rate", "percentage": 75 },
-      { "label": "Clinical Expertise", "percentage": 83 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 85
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 92
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 75
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 83
+      }
+    ],
+    "newSlug": "dr-monika-mann-ivf-specialist"
   },
   {
     "slug": "dr-vinod-kumar-b",
@@ -421,11 +603,24 @@
       "Recipient of 1st Runner-up in paper Presentation at KJK ADVANCES 2023"
     ],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 88 },
-      { "label": "Patient Satisfaction", "percentage": 94 },
-      { "label": "Success Rate", "percentage": 78 },
-      { "label": "Clinical Expertise", "percentage": 86 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 88
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 94
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 78
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 86
+      }
+    ],
+    "newSlug": "dr-vinod-kumar-b-ivf-specialists"
   },
   {
     "slug": "dr-julie-chhawchharia",
@@ -453,11 +648,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 87 },
-      { "label": "Patient Satisfaction", "percentage": 93 },
-      { "label": "Success Rate", "percentage": 77 },
-      { "label": "Clinical Expertise", "percentage": 85 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 87
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 93
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 77
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 85
+      }
+    ],
+    "newSlug": "dr-julie-chhawchharia-ivf-specialist"
   },
   {
     "slug": "dr-varkha-chandra",
@@ -475,11 +683,24 @@
     "specialization": "IVF, Endometriosis, Gynecological Conditions",
     "experience": "8+ Years",
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 85 },
-      { "label": "Patient Satisfaction", "percentage": 92 },
-      { "label": "Success Rate", "percentage": 75 },
-      { "label": "Clinical Expertise", "percentage": 83 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 85
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 92
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 75
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 83
+      }
+    ],
+    "newSlug": "dr-varkha-chandra-ivf-specialist"
   },
   {
     "slug": "dr-pratik-kakani",
@@ -508,11 +729,24 @@
       "Numerous publications in national and international journals"
     ],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 84 },
-      { "label": "Patient Satisfaction", "percentage": 91 },
-      { "label": "Success Rate", "percentage": 74 },
-      { "label": "Clinical Expertise", "percentage": 82 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 84
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 91
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 74
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 82
+      }
+    ],
+    "newSlug": "dr-pratik-kakani-ivf-specialists"
   },
   {
     "slug": "dr-mangla-kawade",
@@ -530,11 +764,24 @@
     "specialization": "IVF, Tubal Factor Infertility, Structural Issues",
     "experience": "9+ Years",
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 86 },
-      { "label": "Patient Satisfaction", "percentage": 93 },
-      { "label": "Success Rate", "percentage": 76 },
-      { "label": "Clinical Expertise", "percentage": 84 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 86
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 93
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 76
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 84
+      }
+    ],
+    "newSlug": "dr-mangla-kawade-ivf-specialist"
   },
   {
     "slug": "dr-khushboo-singh",
@@ -552,11 +799,24 @@
     "specialization": "IVF, Personalized Fertility Treatments, Patient Communication",
     "experience": "8+ Years",
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 85 },
-      { "label": "Patient Satisfaction", "percentage": 92 },
-      { "label": "Success Rate", "percentage": 75 },
-      { "label": "Clinical Expertise", "percentage": 83 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 85
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 92
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 75
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 83
+      }
+    ],
+    "newSlug": "dr-khushboo-singh-ivf-specialist"
   },
   {
     "slug": "dr-sonia-raju",
@@ -583,11 +843,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 84 },
-      { "label": "Patient Satisfaction", "percentage": 91 },
-      { "label": "Success Rate", "percentage": 74 },
-      { "label": "Clinical Expertise", "percentage": 82 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 84
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 91
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 74
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 82
+      }
+    ],
+    "newSlug": "dr-sonia-raju-aluvilayil-ivf-specialist"
   },
   {
     "slug": "dr-jasna-mohammed",
@@ -610,11 +883,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 85 },
-      { "label": "Patient Satisfaction", "percentage": 92 },
-      { "label": "Success Rate", "percentage": 75 },
-      { "label": "Clinical Expertise", "percentage": 83 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 85
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 92
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 75
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 83
+      }
+    ],
+    "newSlug": "dr-jasna-mohammed-ivf-specialist"
   },
   {
     "slug": "dr-alpana-razadan",
@@ -632,11 +918,24 @@
     "specialization": "IVF, Advanced Fertility Treatments, Patient Care",
     "experience": "10+ Years",
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 88 },
-      { "label": "Patient Satisfaction", "percentage": 94 },
-      { "label": "Success Rate", "percentage": 78 },
-      { "label": "Clinical Expertise", "percentage": 86 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 88
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 94
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 78
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 86
+      }
+    ],
+    "newSlug": "dr-alpana-razadan-ivf-specialist"
   },
   {
     "slug": "dr-ranjana-mishra",
@@ -654,11 +953,24 @@
     "specialization": "IVF, Infertility Management, Patient Support",
     "experience": "9+ Years",
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 87 },
-      { "label": "Patient Satisfaction", "percentage": 93 },
-      { "label": "Success Rate", "percentage": 77 },
-      { "label": "Clinical Expertise", "percentage": 85 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 87
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 93
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 77
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 85
+      }
+    ],
+    "newSlug": "dr-ranjana-mishra-ivf-specialist"
   },
   {
     "slug": "dr-adrija-ghosal",
@@ -687,11 +999,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 86 },
-      { "label": "Patient Satisfaction", "percentage": 92 },
-      { "label": "Success Rate", "percentage": 76 },
-      { "label": "Clinical Expertise", "percentage": 84 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 86
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 92
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 76
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 84
+      }
+    ],
+    "newSlug": "dr-adrija-ghosal-ivf-specialist"
   },
   {
     "slug": "dr-britika-prakash",
@@ -722,11 +1047,24 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 85 },
-      { "label": "Patient Satisfaction", "percentage": 92 },
-      { "label": "Success Rate", "percentage": 75 },
-      { "label": "Clinical Expertise", "percentage": 83 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 85
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 92
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 75
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 83
+      }
+    ],
+    "newSlug": "dr-britika-prakash-ivf-specialist"
   },
   {
     "slug": "dr-sanjana-singh",
@@ -755,11 +1093,23 @@
     ],
     "awards": [],
     "progressBars": [
-      { "label": "IVF Procedures", "percentage": 87 },
-      { "label": "Patient Satisfaction", "percentage": 93 },
-      { "label": "Success Rate", "percentage": 77 },
-      { "label": "Clinical Expertise", "percentage": 85 }
-    ]
+      {
+        "label": "IVF Procedures",
+        "percentage": 87
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 93
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 77
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 85
+      }
+    ],
+    "newSlug": "dr-sanjana-singh-ivf-specialist"
   }
 ]
-

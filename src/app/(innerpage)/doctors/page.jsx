@@ -25,7 +25,7 @@ const page = () => {
     name: doctor.name,
     specialty: doctor.subtitle,
     imageUrl: doctor.image,
-    profileLink: `/doctors/${doctor.slug}`,
+    profileLink: `/${doctor.newSlug || doctor.slug + '-ivf-specialist'}`,
     experience: doctor.experience,
     state: getStateFromLocation(doctor.location),
   }));

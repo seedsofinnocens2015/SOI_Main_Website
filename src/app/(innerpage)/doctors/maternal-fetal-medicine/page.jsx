@@ -15,7 +15,7 @@ const page = () => {
     name: doctor.name,
     profession: doctor.subtitle,
     imageUrl: doctor.image,
-    link: `/doctors/${doctor.slug}`,
+    link: `/${doctor.newSlug || doctor.slug + '-ivf-specialist'}`,
     facebook: '/',
     pinterest: '/',
     twitter: '/',

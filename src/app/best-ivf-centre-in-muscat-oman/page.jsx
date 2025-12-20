@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import centresData from '../(innerpage)/ivf-centres/india-centres-data.json';
+import doctorsData from '../(innerpage)/doctors/doctors-data.json';
 import { getAssetPath } from '@/app/utils/assetPath';
 
 // Find Mabela center (Muscat, Oman)
@@ -213,34 +214,42 @@ export default function Page() {
               {centerDoctors.map((doctor, index) => (
                 <div className="cs_team cs_style_1 cs_blue_bg" key={index}>
                   <div className="cs_team_shape cs_accent_bg" />
-                  {doctor.slug ? (
-                    <Link href={`/doctors/${doctor.slug}`} className="cs_team_thumbnail">
-                      <Image 
-                        src={getAssetPath(doctor.image)} 
-                        alt={`${doctor.name} Thumbnail`} 
-                        width={302} 
-                        height={423}
-                        loading="eager"
-                      />
-                    </Link>
-                  ) : (
-                    <div className="cs_team_thumbnail">
-                      <Image 
-                        src={getAssetPath(doctor.image)} 
-                        alt={`${doctor.name} Thumbnail`} 
-                        width={302} 
-                        height={423}
-                        loading="eager"
-                      />
-                    </div>
-                  )}
+                  {(() => {
+                    const doctorData = doctorsData.find(d => d.slug === doctor.slug);
+                    const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
+                    return doctorLink ? (
+                      <Link href={doctorLink} className="cs_team_thumbnail">
+                        <Image 
+                          src={getAssetPath(doctor.image)} 
+                          alt={`${doctor.name} Thumbnail`} 
+                          width={302} 
+                          height={423}
+                          loading="eager"
+                        />
+                      </Link>
+                    ) : (
+                      <div className="cs_team_thumbnail">
+                        <Image 
+                          src={getAssetPath(doctor.image)} 
+                          alt={`${doctor.name} Thumbnail`} 
+                          width={302} 
+                          height={423}
+                          loading="eager"
+                        />
+                      </div>
+                    );
+                  })()}
                   <div className="cs_team_bio">
                     <h3 className="cs_team_title cs_extra_bold mb-0">
-                      {doctor.slug ? (
-                        <Link href={`/doctors/${doctor.slug}`}>{doctor.name}</Link>
-                      ) : (
-                        <span>{doctor.name}</span>
-                      )}
+                      {(() => {
+                        const doctorData = doctorsData.find(d => d.slug === doctor.slug);
+                        const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
+                        return doctorLink ? (
+                          <Link href={doctorLink}>{doctor.name}</Link>
+                        ) : (
+                          <span>{doctor.name}</span>
+                        );
+                      })()}
                     </h3>
                     <p className="cs_team_subtitle">{doctor.subtitle}</p>
                     {doctor.experience && (
