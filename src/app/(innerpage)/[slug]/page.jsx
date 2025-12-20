@@ -4,7 +4,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import indiaCentresData from '../../ivf-centres/india-centres-data.json';
+import indiaCentresData from '../ivf-centres/india-centres-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 
@@ -16,13 +16,6 @@ function cityNameToSlug(cityName) {
     .replace(/[^a-z0-9-]/g, '');
 }
 
-// Helper function to generate new slug format from center data
-function generateNewSlug(center) {
-  const cityName = center.name.split(',')[0].trim();
-  const citySlug = cityNameToSlug(cityName);
-  return `best-ivf-centre-in-${citySlug}`;
-}
-
 export async function generateStaticParams() {
   try {
     return indiaCentresData
@@ -31,7 +24,6 @@ export async function generateStaticParams() {
         // Special case: Malviya Nagar, Delhi should use "best-ivf-centre-in-delhi"
         if (center.name === 'Malviya Nagar, Delhi' && center.stateSlug === 'delhi') {
           return {
-            state: center.stateSlug || '',
             slug: 'best-ivf-centre-in-delhi',
           };
         }
@@ -39,11 +31,10 @@ export async function generateStaticParams() {
         const cityName = center.name.split(',')[0].trim();
         const citySlug = cityNameToSlug(cityName);
         return {
-          state: center.stateSlug || '',
           slug: `best-ivf-centre-in-${citySlug}`,
         };
       })
-      .filter((param) => param.state && param.slug);
+      .filter((param) => param.slug);
   } catch (error) {
     console.error('Error generating static params:', error);
     return [];
@@ -52,29 +43,32 @@ export async function generateStaticParams() {
 
 const page = async ({ params }) => {
   const resolvedParams = await params;
-  const { state, slug } = resolvedParams || {};
+  const { slug } = resolvedParams || {};
   
-  if (!state || !slug) {
+  if (!slug) {
     notFound();
   }
   
-  // Extract city slug from the new format: "best-ivf-centre-in-malviya-nagar" -> "malviya-nagar"
-  const citySlug = slug.replace(/^best-ivf-centre-in-/, '');
+  // Remove trailing slash if present
+  const cleanSlug = slug.replace(/\/$/, '');
   
-  // Special case: If slug is "best-ivf-centre-in-delhi" and state is "delhi", map to Malviya Nagar center
+  // Extract city slug from the format: "best-ivf-centre-in-malviya-nagar" -> "malviya-nagar"
+  const citySlug = cleanSlug.replace(/^best-ivf-centre-in-/, '');
+  
+  // Special case: If slug is "best-ivf-centre-in-delhi", map to Malviya Nagar center
   let center;
-  if (slug === 'best-ivf-centre-in-delhi' && state === 'delhi') {
+  if (cleanSlug === 'best-ivf-centre-in-delhi') {
     center = indiaCentresData.find((c) => {
       return c.name === 'Malviya Nagar, Delhi' && c.stateSlug === 'delhi' && !c.isInternational;
     });
   } else {
-    // Find center by matching state and city name
+    // Find center by matching city name (without state requirement)
     center = indiaCentresData.find((c) => {
-      if (c.stateSlug !== state || c.isInternational) {
+      if (c.isInternational) {
         return false;
       }
       
-      // Extract city name from center name (e.g., "Malviya Nagar, Delhi" -> "Malviya Nagar")
+      // Extract city name from center name (e.g., "Pitampura, New Delhi" -> "Pitampura")
       const cityName = c.name.split(',')[0].trim();
       const centerCitySlug = cityNameToSlug(cityName);
       
@@ -83,6 +77,7 @@ const page = async ({ params }) => {
   }
 
   if (!center) {
+    console.error(`Center not found for slug: ${cleanSlug}, citySlug: ${citySlug}`);
     notFound();
   }
 
