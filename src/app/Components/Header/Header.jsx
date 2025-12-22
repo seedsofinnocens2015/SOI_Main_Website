@@ -350,7 +350,7 @@ const Header = ({ isTopBar, variant }) => {
       },
       {
         label: 'About us',
-        href: '/about',
+        href: '#',
         isMegaMenu: true,
         megaMenuCategories: [
           {
@@ -381,10 +381,10 @@ const Header = ({ isTopBar, variant }) => {
             label: 'Media & Press',
             href: '/about/media-press',
           },
-          {
-            label: 'Awards & Accreditations',
-            href: '/about/awards-accreditations',
-          },
+          // {
+          //   label: 'Awards & Accreditations',
+          //   href: '/about/awards-accreditations',
+          // },
         ],
       },
       {
