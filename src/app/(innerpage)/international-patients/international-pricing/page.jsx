@@ -22,7 +22,7 @@ const pricingContentData = {
         'Transparent and competitive pricing designed specifically for international patients. Our packages offer significant savings compared to Western countries while maintaining the highest quality of care. All prices are in USD for easy reference and comparison.',
         'We believe in complete transparency when it comes to pricing. There are no hidden costs - everything is clearly explained upfront, allowing you to plan your treatment journey with confidence.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/International Pricing.jpeg',
     },
     {
       heading: 'Basic IVF Package - USD $2,500 - $3,500',
