@@ -18,7 +18,7 @@ const ivfContentData = {
         'Our commitment to excellence and patient care has earned recognition from leading healthcare publications, news channels, and medical journals across India and internationally.',
         'We are proud to share our achievements, research breakthroughs, and patient success stories through various media platforms, helping to raise awareness about fertility treatments and reproductive health.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/Media & Press.jpg',
     },
   ],
 };

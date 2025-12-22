@@ -18,7 +18,7 @@ const ivfContentData = {
         'Our state-of-the-art facilities include advanced air filtration systems, precise temperature and humidity controls, and cutting-edge equipment for embryo culture, selection, and preservation.',
         'We are committed to maintaining the highest standards of quality and safety, with continuous monitoring and regular quality audits to ensure consistent, excellent outcomes for all our patients.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/Embryology Lab.png',
     },
   ],
 };

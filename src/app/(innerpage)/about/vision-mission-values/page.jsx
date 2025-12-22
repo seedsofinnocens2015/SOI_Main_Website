@@ -14,7 +14,7 @@ const ivfContentData = {
       paragraphs: [
         'Seeds of Innocence is committed to provide quality, free and accessible, preventive, curative, promotive and comprehensive IVF services to the community and assure the best outcome through continual quality improvement. The patient is treated with respect and dignity in a safe environment without discrimination with respect to caste, religion, gender and economic background.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/Vision, Mission & Values.png',
     },
     {
       heading: 'Our Vision',

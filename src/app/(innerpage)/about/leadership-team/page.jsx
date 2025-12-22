@@ -36,7 +36,7 @@ const ivfContentData = {
       paragraphs: [
         'Our leadership team consists of experienced and dedicated professionals who bring together decades of combined expertise in fertility medicine, embryology, genetics, and patient care. They are committed to providing the highest quality of care and ensuring the best possible outcomes for our patients.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      // sideImage: '/assets/img/recent_post2.jpg',
     },
     {
       heading: 'Our Vision',

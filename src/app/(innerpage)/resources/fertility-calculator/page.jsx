@@ -26,7 +26,7 @@ const calculatorContentData = {
         'Use our fertility calculator to get an estimate of your chances of natural conception. This tool provides general guidance based on age and time trying to conceive. Our calculator uses established fertility research data to help you understand your fertility potential.',
         'Please note that this calculator provides general estimates only. Many factors affect fertility including medical history, lifestyle, partner factors, and underlying health conditions. For accurate assessment and personalized treatment recommendations, please schedule a consultation with our fertility specialists.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/Fertility Calculator.jpg',
     },
     {
       heading: 'Understanding Fertility by Age',
@@ -481,7 +481,7 @@ const FertilityCalculatorPage = () => {
                     Get personalized fertility assessment and treatment recommendations from our expert specialists.
                   </p>
                   <Link 
-                    href="/contact" 
+                    href="/contact/book-appointment" 
                     className="cs_btn cs_style_1 cs_color_1"
                     style={{ 
                       width: '100%', 

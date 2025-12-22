@@ -22,7 +22,7 @@ const journeyContentData = {
         'At Seeds of Innocens, we guide you through every step of your IVF journey with care, expertise, and support. Understanding the process helps reduce anxiety and sets realistic expectations. Here\'s what you can expect during your journey with us.',
         'From the initial consultation to the pregnancy test and beyond, our dedicated team ensures that you feel supported, informed, and confident at every stage. We believe that a well-informed patient is better prepared for success.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/IVF Process.webp',
     },
     {
       heading: 'Step 1: Initial Consultation',

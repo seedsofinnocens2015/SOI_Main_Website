@@ -44,7 +44,7 @@ const firstSectionData = {
         'At Seeds of Innocens, we are proud of our consistently high success rates. Our commitment to excellence, advanced technology, and personalized care has helped thousands of couples achieve their dream of parenthood.',
         'Our success rates reflect our dedication to providing the highest quality of fertility care, utilizing state-of-the-art technology, and maintaining the highest standards in embryology and patient care.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/Success Rates.jpg',
     },
   ],
 };
