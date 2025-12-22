@@ -252,24 +252,24 @@ const page = async ({ params }) => {
                     const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
                     return doctorLink ? (
                       <Link href={doctorLink} className="cs_team_thumbnail">
-                        <Image 
-                          src={getAssetPath(doctor.image)} 
-                          alt={`${doctor.name} Thumbnail`} 
-                          width={302} 
-                          height={423}
-                          loading="eager"
-                        />
-                      </Link>
-                    ) : (
-                      <div className="cs_team_thumbnail">
-                        <Image 
-                          src={getAssetPath(doctor.image)} 
-                          alt={`${doctor.name} Thumbnail`} 
-                          width={302} 
-                          height={423}
-                          loading="eager"
-                        />
-                      </div>
+                      <Image 
+                        src={getAssetPath(doctor.image)} 
+                        alt={`${doctor.name} Thumbnail`} 
+                        width={302} 
+                        height={423}
+                        loading="eager"
+                      />
+                    </Link>
+                  ) : (
+                    <div className="cs_team_thumbnail">
+                      <Image 
+                        src={getAssetPath(doctor.image)} 
+                        alt={`${doctor.name} Thumbnail`} 
+                        width={302} 
+                        height={423}
+                        loading="eager"
+                      />
+                    </div>
                     );
                   })()}
                   <div className="cs_team_bio">
@@ -279,8 +279,8 @@ const page = async ({ params }) => {
                         const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
                         return doctorLink ? (
                           <Link href={doctorLink}>{doctor.name}</Link>
-                        ) : (
-                          <span>{doctor.name}</span>
+                      ) : (
+                        <span>{doctor.name}</span>
                         );
                       })()}
                     </h3>
