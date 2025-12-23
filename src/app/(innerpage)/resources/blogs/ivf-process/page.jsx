@@ -18,16 +18,19 @@ const jsonBlogs = blogsData.blogs.filter(blog =>
 );
 
 // Use blogs from JSON, fallback to empty array
-const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => ({
-  title: blog.title,
-  excerpt: blog.excerpt,
-  image: blog.image,
-  date: blog.date,
-  author: blog.author,
-  category: blog.category,
-  readTime: blog.readTime,
-  link: `/english/${blog.slug}/`,
-})) : [];
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  const isHindi = blog.category === 'आईवीएफ प्रक्रिया' || blog.title.match(/[\u0900-\u097F]/);
+  return {
+    title: blog.title,
+    excerpt: blog.excerpt,
+    image: blog.image,
+    date: blog.date,
+    author: blog.author,
+    category: blog.category,
+    readTime: blog.readTime,
+    link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -328,7 +331,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -420,7 +423,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 

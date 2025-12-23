@@ -6,33 +6,30 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
 
 const headingData = {
   title: 'Treatment Guides',
 };
 
-const blogs = [
-  {
-    title: 'Medical Treatment & Chronic Illnesses: What You Need to Know',
-    excerpt: 'Chronic illness is a long-term health condition that requires ongoing care. For many people, it can feel overwhelming to balance treatment, daily life, and future plans such as starting a family.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'September 13, 2025',
-    author: 'admin',
-    category: 'Treatment Guide',
-    readTime: '8 min read',
-    link: '/english/medical-treatment-chronic-illnesses/',
-  },
-  {
-    title: 'Genetic Conditions: Understanding Their Role in Fertility and Parenthood',
-    excerpt: 'When couples begin their journey toward parenthood, questions about health and heredity often arise. Among the most important concerns are genetic conditions. These are health problems caused by changes in our genes, which are the instructions that guide how our bodies grow and function.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'September 8, 2025',
-    author: 'admin',
-    category: 'Treatment Guide',
-    readTime: '9 min read',
-    link: '/english/genetic-conditions-understanding-their-role-in-fertility-and-parenthood/',
-  },
-];
+  // Get blogs from JSON and filter by category
+const jsonBlogs = blogsData.blogs.filter(blog => 
+  blog.category === 'Treatment Guides' || blog.category === 'उपचार गाइड'
+);
+// Map blogs with correct link based on language
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  const isHindi = blog.category === 'उपचार गाइड' || blog.title.match(/[\u0900-\u097F]/);
+  return {
+    title: blog.title,
+    excerpt: blog.excerpt,
+    image: blog.image,
+    date: blog.date,
+    author: blog.author,
+    category: blog.category,
+    readTime: blog.readTime,
+    link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -332,7 +329,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -424,7 +421,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 

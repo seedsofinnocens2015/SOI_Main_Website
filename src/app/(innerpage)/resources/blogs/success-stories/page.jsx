@@ -11,7 +11,23 @@ const headingData = {
   title: 'Success Stories',
 };
 
-const stories = [];
+// const stories = [];
+// Get blogs from JSON and filter by category
+const stories = blogsData.blogs.filter(blog => 
+  blog.category === 'Success Stories' || blog.category === 'सफलता कहानियां'
+);
+
+// Map blogs with correct link based on language
+const mappedStories = stories.map(story => ({
+  title: story.title,
+  excerpt: story.excerpt,
+  image: story.image,
+  date: story.date,
+  author: story.author,
+  category: story.category,
+  readTime: story.readTime,
+  link: isHindi ? `/hindi/${story.slug}/` : `/english/${story.slug}/`,
+}));
 
 const Page = () => {
   const router = useRouter();
@@ -343,7 +359,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -435,7 +451,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 

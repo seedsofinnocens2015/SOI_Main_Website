@@ -279,10 +279,10 @@ const Header = ({ isTopBar, variant }) => {
             label: 'International Pricing',
             href: '/international-patients/international-pricing',
           },
-          // {
-          //   label: 'Patient Stories',
-          //   href: '/international-patients/patient-stories',
-          // },
+          {
+            label: 'Patient Stories',
+            href: '/international-patients/patient-stories',
+          },
           {
             label: 'Contact Team',
             href: '/international-patients/contact-team',
@@ -306,10 +306,10 @@ const Header = ({ isTopBar, variant }) => {
             label: 'FAQs',
             href: '/resources/faqs',
           },
-          // {
-          //   label: 'Success Stories',
-          //   href: '/success-stories',
-          // },
+          {
+            label: 'Success Stories',
+            href: '/success-stories',
+          },
           {
             label: 'Patient Testimonial Videos',
             href: '/resources/patient-testimonial-videos',
@@ -350,7 +350,7 @@ const Header = ({ isTopBar, variant }) => {
       },
       {
         label: 'About us',
-        href: '#',
+        href: '/about',
         isMegaMenu: true,
         megaMenuCategories: [
           {
@@ -381,10 +381,10 @@ const Header = ({ isTopBar, variant }) => {
             label: 'Media & Press',
             href: '/about/media-press',
           },
-          // {
-          //   label: 'Awards & Accreditations',
-          //   href: '/about/awards-accreditations',
-          // },
+          {
+            label: 'Awards & Accreditations',
+            href: '/about/awards-accreditations',
+          },
         ],
       },
       {

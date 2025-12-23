@@ -6,12 +6,31 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
 
 const headingData = {
   title: 'Pregnancy Blogs',
 };
 
-const blogs = [];
+// Get blogs from JSON and filter by category
+const jsonBlogs = blogsData.blogs.filter(blog =>
+  blog.category === 'Pregnancy' || blog.category === 'गर्भावस्था'
+);
+
+// Map blogs with correct link based on language
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  const isHindi = blog.category === 'गर्भावस्था' || blog.title.match(/[\u0900-\u097F]/);
+  return {
+    title: blog.title,
+    excerpt: blog.excerpt,
+    image: blog.image,
+    date: blog.date,
+    author: blog.author,
+    category: blog.category,
+    readTime: blog.readTime,
+    link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -311,7 +330,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -403,7 +422,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 

@@ -6,12 +6,28 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaTag, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
 
 const headingData = {
   title: 'News & Press',
 };
 
-const news = [];
+// Get blogs from JSON and filter by category
+const jsonBlogs = blogsData.blogs.filter(blog => 
+  blog.category === 'News & Press' || blog.category === 'खबर और प्रेस रिलीज'
+);
+
+// Map blogs with correct link based on language
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => ({
+  title: blog.title,
+  excerpt: blog.excerpt,
+  image: blog.image,
+  date: blog.date,
+  author: blog.author,
+  category: blog.category,
+  readTime: blog.readTime,
+  link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+})) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -346,7 +362,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -438,7 +454,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 

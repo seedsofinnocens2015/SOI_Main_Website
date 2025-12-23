@@ -33,6 +33,7 @@ const getCategoryRoute = (category) => {
     'Fertility': 'fertility',
     'प्रजनन क्षमता': 'fertility', // Hindi for Fertility
     'IVF Process': 'ivf-process',
+    'आईवीएफ प्रक्रिया': 'ivf-process', // Hindi for IVF Process
     'Pregnancy': 'pregnancy',
     'Success Stories': 'success-stories',
     'Doctor Insights': 'doctor-insights',

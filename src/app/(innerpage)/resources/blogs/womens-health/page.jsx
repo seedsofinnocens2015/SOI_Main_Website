@@ -17,7 +17,7 @@ const jsonBlogs = blogsData.blogs.filter(blog =>
   blog.category === 'Women\'s Health' || blog.category === 'महिला स्वास्थ्य'
 );
 
-// Use blogs from JSON, fallback to empty array
+// Map blogs with correct link based on language
 const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => ({
   title: blog.title,
   excerpt: blog.excerpt,
@@ -26,7 +26,7 @@ const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => ({
   author: blog.author,
   category: blog.category,
   readTime: blog.readTime,
-  link: `/english/${blog.slug}/`,
+  link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
 })) : [];
 
 const Page = () => {
@@ -327,7 +327,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -419,7 +419,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 
