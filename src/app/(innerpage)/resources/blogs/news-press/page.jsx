@@ -14,20 +14,24 @@ const headingData = {
 
 // Get blogs from JSON and filter by category
 const jsonBlogs = blogsData.blogs.filter(blog => 
-  blog.category === 'News & Press' || blog.category === 'खबर और प्रेस रिलीज'
+  blog.category === 'News & Press' || blog.category === 'समाचार और प्रेस'
 );
 
 // Map blogs with correct link based on language
-const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => ({
-  title: blog.title,
-  excerpt: blog.excerpt,
-  image: blog.image,
-  date: blog.date,
-  author: blog.author,
-  category: blog.category,
-  readTime: blog.readTime,
-  link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
-})) : [];
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  // Determine if blog is Hindi or English based on category
+  const isHindi = blog.category === 'समाचार और प्रेस';
+  return {
+    title: blog.title,
+    excerpt: blog.excerpt,
+    image: blog.image,
+    date: blog.date,
+    author: blog.author,
+    category: blog.category,
+    readTime: blog.readTime,
+    link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -60,33 +64,25 @@ const Page = () => {
 
   const filteredBlogs = useMemo(() => {
     if (selectedLanguage === 'all') {
-      return news;
+      return blogs;
     } else if (selectedLanguage === 'hindi') {
-      return news.filter(item => 
-        item.category === 'प्रेस विज्ञप्ति' || 
-        item.category === 'पुरस्कार' ||
-        item.category === 'अनुसंधान' ||
-        item.category === 'कार्यक्रम' ||
-        item.readTime.includes('मिनट') ||
-        item.date.includes('दिसंबर') || 
-        item.date.includes('नवंबर') ||
-        item.title.match(/[\u0900-\u097F]/)
+      return blogs.filter(blog => 
+        blog.category === 'समाचार और प्रेस' || 
+        blog.readTime.includes('मिनट') ||
+        blog.date.includes('दिसंबर') || 
+        blog.date.includes('नवंबर') ||
+        blog.title.match(/[\u0900-\u097F]/)
       );
     } else if (selectedLanguage === 'english') {
-      return news.filter(item => 
-        (item.category === 'Press Release' || 
-         item.category === 'Award' ||
-         item.category === 'Research' ||
-         item.category === 'Event' ||
-         item.category === 'Announcement' ||
-         item.category === 'Achievement') && 
-        !item.readTime.includes('मिनट') &&
-        !item.date.includes('दिसंबर') && 
-        !item.date.includes('नवंबर') &&
-        !item.title.match(/[\u0900-\u097F]/)
+      return blogs.filter(blog => 
+        blog.category === 'News & Press' && 
+        !blog.readTime.includes('मिनट') &&
+        !blog.date.includes('दिसंबर') && 
+        !blog.date.includes('नवंबर') &&
+        !blog.title.match(/[\u0900-\u097F]/)
       );
     }
-    return news;
+    return blogs;
   }, [selectedLanguage]);
 
   return (
@@ -341,7 +337,6 @@ const Page = () => {
                 padding: '40px',
                 backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
-                textAlign: 'center',
                 border: '1px solid #e8e8e8'
               }}>
                 <h3 className="cs_ivf_content_heading" style={{ marginBottom: '15px', fontSize: '24px' }}>

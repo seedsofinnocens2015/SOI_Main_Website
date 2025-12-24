@@ -14,20 +14,24 @@ const headingData = {
 
 // Get blogs from JSON and filter by category
 const jsonBlogs = blogsData.blogs.filter(blog => 
-  blog.category === 'Women\'s Health' || blog.category === 'महिला स्वास्थ्य'
+  blog.category === 'Women\'s Health' || blog.category === 'महिलाओं का स्वास्थ्य'
 );
 
 // Map blogs with correct link based on language
-const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => ({
-  title: blog.title,
-  excerpt: blog.excerpt,
-  image: blog.image,
-  date: blog.date,
-  author: blog.author,
-  category: blog.category,
-  readTime: blog.readTime,
-  link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
-})) : [];
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  // Determine if blog is Hindi or English based on category
+  const isHindi = blog.category === 'महिलाओं का स्वास्थ्य';
+  return {
+    title: blog.title,
+    excerpt: blog.excerpt,
+    image: blog.image,
+    date: blog.date,
+    author: blog.author,
+    category: blog.category,
+    readTime: blog.readTime,
+    link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -63,7 +67,7 @@ const Page = () => {
       return blogs;
     } else if (selectedLanguage === 'hindi') {
       return blogs.filter(blog => 
-        blog.category === 'महिला स्वास्थ्य' || 
+        blog.category === 'महिलाओं का स्वास्थ्य' || 
         blog.readTime.includes('मिनट') ||
         blog.date.includes('दिसंबर') || 
         blog.date.includes('नवंबर') ||

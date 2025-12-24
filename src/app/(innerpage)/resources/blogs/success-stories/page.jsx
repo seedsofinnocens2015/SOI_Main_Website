@@ -6,6 +6,8 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight, FaQuoteLeft } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
+
 
 const headingData = {
   title: 'Success Stories',
