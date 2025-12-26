@@ -337,9 +337,9 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Men\'s Health', href: '/resources/blogs/mens-health' },
               { label: 'Women\'s Health', href: '/resources/blogs/womens-health' },
               { label: 'Treatment Guides', href: '/resources/blogs/treatment-guides' },
-              { label: 'Success Stories', href: '/resources/blogs/success-stories' },
-              { label: 'Doctor Insights', href: '/resources/blogs/doctor-insights' },
-              { label: 'News & Press', href: '/resources/blogs/news-press' },
+              // { label: 'Success Stories', href: '/resources/blogs/success-stories' },
+              // { label: 'Doctor Insights', href: '/resources/blogs/doctor-insights' },
+              // { label: 'News & Press', href: '/resources/blogs/news-press' },
             ],
           },
           {

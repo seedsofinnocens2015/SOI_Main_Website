@@ -119,9 +119,7 @@ const Page = () => {
                       <option value="mens-health">Men&apos;s Health</option>
                       <option value="womens-health">Women&apos;s Health</option>
                       <option value="treatment-guides">Treatment Guides</option>
-                      <option value="success-stories">Success Stories</option>
-                      <option value="doctor-insights">Doctor Insights</option>
-                      <option value="news-press">News & Press</option>
+                      
                     </select>
                   </div>
                   <div style={{ minWidth: '150px' }}>
