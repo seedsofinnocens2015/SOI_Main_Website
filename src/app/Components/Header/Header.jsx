@@ -306,10 +306,10 @@ const Header = ({ isTopBar, variant }) => {
             label: 'FAQs',
             href: '/resources/faqs',
           },
-          {
-            label: 'Success Stories',
-            href: '/success-stories',
-          },
+          // {
+          //   label: 'Success Stories',
+          //   href: '/success-stories',
+          // },
           {
             label: 'Patient Testimonial Videos',
             href: '/resources/patient-testimonial-videos',
