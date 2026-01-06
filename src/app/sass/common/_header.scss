@@ -74,12 +74,17 @@
   left: 0;
   top: 0px;
   transition: all 0.4s ease;
+  margin-bottom: 0;
 }
 
 /* Top Bar Styles */
 .cs_top_bar {
-  background-color: #dddcdca0; /* Light beige background */
+  background-color: #FCE8DD; /* Light peach/beige background */
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 5px 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
   .container {
     padding-left: 60px;
     padding-right: 60px;
@@ -98,71 +103,260 @@
       padding-right: 15px;
     }
   }
+  // Desktop Layout
+  .cs_top_bar_desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+    @media (max-width: 991px) {
+      display: none !important;
+    }
+  }
   .cs_top_bar_in {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+  }
+  // Marquee wrapper for mobile
+  .cs_top_bar_marquee {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      white-space: nowrap;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100%;
+        background: linear-gradient(to right, #FCE8DD, transparent);
+        z-index: 10;
+        pointer-events: none;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100%;
+        background: linear-gradient(to left, #FCE8DD, transparent);
+        z-index: 10;
+        pointer-events: none;
+      }
+    }
+  }
+  // Content wrapper for marquee
+  .cs_top_bar_marquee .cs_top_bar_content {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    padding-right: 30px;
+    @media (max-width: 991px) {
+      animation: marquee 40s linear infinite;
+      will-change: transform;
+      // Ensure links are clickable during animation
+      a {
+        pointer-events: auto !important;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+      }
+      .cs_social_icon {
+        pointer-events: auto !important;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+      }
+      // Pause animation on hover for better UX
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+  // Keyframes for marquee animation
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
   .cs_top_bar_left {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+  }
+  .cs_location_info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .cs_location_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #000;
+    font-size: 12px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .cs_location_text {
+    color: #000;
+    font-size: 11px;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .cs_top_bar_center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 0;
+  }
+  .cs_top_bar_separator {
+    width: 1px;
+    height: 15px;
+    background-color: #000;
+    opacity: 0.3;
+    flex-shrink: 0;
+  }
+  .cs_timing_text {
+    color: #000;
+    font-size: 11px;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .cs_top_bar_right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .cs_phone_banner {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .cs_phone_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #000;
+    font-size: 12px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .cs_phone_text {
+    color: #000;
+    font-size: 11px;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .cs_social_icons {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     @media (max-width: 767px) {
-      gap: 8px;
+      gap: 6px;
     }
   }
   .cs_social_icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
-    color: #1a365d; /* Dark blue color */
-    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    color: #000;
+    font-size: 11px;
     transition: all 0.3s ease;
     text-decoration: none;
-    @media (max-width: 767px) {
-      width: 24px;
-      height: 24px;
-      font-size: 12px;
-    }
+    flex-shrink: 0;
     &:hover {
-      color: #2c5282;
+      opacity: 0.7;
       transform: translateY(-2px);
     }
-  }
-  .cs_top_bar_right {
-    display: flex;
-    align-items: center;
-  }
-  .cs_phone_banner {
-    position: relative;
-    border-radius: 100px;
-    // background-color: #1a365d; /* Dark blue background */
-    color: #1a365d;
-    padding: 0px 18px;
-    font-size: 20px;
-    font-weight: 600;
-    white-space: nowrap;
-    display: inline-block;
-    cursor: pointer;
-
-    &:hover {
-      color: #2c5282;
-      transform: translateY(-2px);
-      text-decoration: underline;
-
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
-   
-   
+  }
+  // YouTube icon styling - red
+  .cs_social_icon:nth-child(1) {
+    color: #FF0000;
+  }
+  // Instagram icon styling - purple/orange gradient effect
+  .cs_social_icon:nth-child(2) {
+    color: #E4405F; // Instagram pink/purple
+  }
+  // Facebook icon styling - blue
+  .cs_social_icon:nth-child(3) {
+    color: #1877F2;
+  }
+  // LinkedIn icon styling - blue
+  .cs_social_icon:nth-child(4) {
+    color: #0077B5;
   }
   @media (max-width: 767px) {
-    padding: 6px 0;
+    padding: 10px 0;
   }
 }
 
@@ -190,6 +384,7 @@
     }
   }
   .cs_main_header {
+    margin-bottom: 0;
     .container {
       padding-left: 60px;
       padding-right: 60px;
@@ -481,7 +676,8 @@
 }
 
 .cs_site_header_spacing_150 {
-  height: 133px; /* Increased to account for top bar (28px) + header (105px) */
+  height: 105px; /* Top bar (30px) + header (75px) */
+  margin-top: 0;
 }
 
 @media screen and (max-width: 1199px) {
@@ -498,7 +694,8 @@
     }
   }
   .cs_site_header_spacing_150 {
-    height: 118px; /* Increased to account for top bar (28px) + header (90px) */
+    height: 100px; /* Top bar (30px) + header (70px) */
+    margin-top: 0;
   }
   .cs_main_header {
     .container {
@@ -623,7 +820,8 @@
     }
   }
   .cs_site_header_spacing_150 {
-    height: 88px; /* Increased to account for top bar (28px) + header (60px) */
+    height: 100px; /* Top bar (30px) + header (70px) */
+    margin-top: 0;
   }
 }
 .cs_nav {

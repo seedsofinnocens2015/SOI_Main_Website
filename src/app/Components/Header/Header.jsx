@@ -3,19 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState, useCallback, useMemo } from 'react';
-import { FaPhone } from 'react-icons/fa6';
-import IVFSuccessBanner from '../IVFSuccessBanner';
 import {
   FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
   FaWhatsapp,
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { FaYoutube } from 'react-icons/fa';
-import { FaLinkedinIn } from 'react-icons/fa';
 import { IoCall } from "react-icons/io5";
-import { FaAnglesRight, FaLocationDot } from 'react-icons/fa6';
+import { FaAnglesRight } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
 import { getAssetPathClient } from '@/app/utils/assetPath';
 
@@ -435,7 +429,7 @@ const Header = ({ isTopBar, variant }) => {
 
     ],
     btnUrl: '/contact/book-appointment',
-    btnText: 'Book Appointment',
+    btnText: 'Book a Visit',
   };
 
   const handleOpenMobileSubmenu = index => {
@@ -532,28 +526,201 @@ const Header = ({ isTopBar, variant }) => {
         {/* Top Bar */}
         <div className="cs_top_bar">
           <div className="container">
-            <div className="cs_top_bar_in">
+            {/* Desktop Layout */}
+            <div className="cs_top_bar_in cs_top_bar_desktop">
               <div className="cs_top_bar_left">
-                <div className="cs_social_icons">
-                  <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
-                    <FaFacebookF />
-                  </Link>
-                  <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
-                    <FaInstagram />
-                  </Link>
-                  
-                  <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
-                    <FaYoutube />
-                  </Link>
-                  <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
-                    <FaLinkedinIn />
-                  </Link>
+                <div className="cs_location_info">
+                  <div className="cs_location_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/Location.png')}
+                      alt="Location"
+                      width={20}
+                      height={20}
+                    />
+                  </div>
+                  <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
+                  <div className="cs_top_bar_separator"></div>
+                  <span className="cs_timing_text">United States Mon - Sun: 9:30 am - 6:30 pm,</span>
                 </div>
               </div>
               <div className="cs_top_bar_right">
                 <a href="tel:+91-9810350512" className="cs_phone_banner">
-                  <span><FaPhone /> +91-9810350512</span>
+                  <div className="cs_phone_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/Call.png')}
+                      alt="Phone"
+                      width={20}
+                      height={20}
+                    />
+                  </div>
+                  <span className="cs_phone_text">9810350 512</span>
                 </a>
+                <div className="cs_social_icons">
+                  <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/you.png')}
+                      alt="YouTube"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                  <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/029-instagram.png')}
+                      alt="Instagram"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                  <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/036-facebook.png')}
+                      alt="Facebook"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                  <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/027-linkedin.png')}
+                      alt="LinkedIn"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* Mobile Marquee Layout */}
+            <div className="cs_top_bar_marquee">
+              <div className="cs_top_bar_content">
+                <div className="cs_top_bar_left">
+                  <div className="cs_location_info">
+                    <div className="cs_location_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/Location.png')}
+                        alt="Location"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                    <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
+                    <div className="cs_top_bar_separator"></div>
+                    <span className="cs_timing_text">United States Mon - Sun: 9:30 am - 6:30 pm,</span>
+                  </div>
+                </div>
+                <div className="cs_top_bar_right">
+                  <a href="tel:+91-9810350512" className="cs_phone_banner">
+                    <div className="cs_phone_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/Call.png')}
+                        alt="Phone"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                    <span className="cs_phone_text">9810350 512</span>
+                  </a>
+                  <div className="cs_social_icons">
+                    <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/you.png')}
+                        alt="YouTube"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/029-instagram.png')}
+                        alt="Instagram"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/036-facebook.png')}
+                        alt="Facebook"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/027-linkedin.png')}
+                        alt="LinkedIn"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              {/* Duplicate for seamless loop */}
+              <div className="cs_top_bar_content">
+                <div className="cs_top_bar_left">
+                  <div className="cs_location_info">
+                    <div className="cs_location_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/Location.png')}
+                        alt="Location"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                    <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
+                    <div className="cs_top_bar_separator"></div>
+                    <span className="cs_timing_text">United States Mon - Sun: 9:30 am - 6:30 pm,</span>
+                  </div>
+                </div>
+                <div className="cs_top_bar_right">
+                  <a href="tel:+91-9810350512" className="cs_phone_banner">
+                    <div className="cs_phone_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/Call.png')}
+                        alt="Phone"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                    <span className="cs_phone_text">9810350 512</span>
+                  </a>
+                  <div className="cs_social_icons">
+                    <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/you.png')}
+                        alt="YouTube"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/029-instagram.png')}
+                        alt="Instagram"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/036-facebook.png')}
+                        alt="Facebook"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/027-linkedin.png')}
+                        alt="LinkedIn"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1046,7 +1213,6 @@ const Header = ({ isTopBar, variant }) => {
             </div>
           </div>
         </div>
-        <IVFSuccessBanner />
         {variant == 'cs_type_1' && (
           <div className="cs_main_header_shape">
             <svg
