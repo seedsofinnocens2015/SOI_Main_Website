@@ -706,7 +706,7 @@ const page = () => {
         bottomSpaceLg="0"
         bottomSpaceMd="0"
         className={
-          'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
+          'cs_cta cs_style_1 cs_white_bg position-relative overflow-hidden'
         }
       >
         <CtaSection data={ctaData} />
