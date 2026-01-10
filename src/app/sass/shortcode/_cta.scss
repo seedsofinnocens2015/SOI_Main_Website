@@ -14,26 +14,28 @@
   // Curved top border (concave curve - dips down in the middle)
   // Creates a smooth concave curve that dips down in the center
   clip-path: polygon(
-  0% 28px,
-  6% 42px,
-  12% 58px,
-  18% 75px,
-  24% 92px,
-  30% 108px,
-  36% 122px,
-  42% 132px,
-  50% 138px,   /* center */
-  58% 132px,
-  64% 122px,
-  70% 108px,
-  76% 92px,
-  82% 75px,
-  88% 58px,
-  94% 42px,
-  100% 28px,
-  100% 100%,
-  0% 100%
-);
+    0% 65px,
+    6% 72px,
+    12% 82px,
+    18% 94px,
+    24% 106px,
+    30% 118px,
+    36% 128px,
+    42% 135px,
+    50% 138px,  /* center (soft deep) */
+    58% 135px,
+    64% 128px,
+    70% 118px,
+    76% 106px,
+    82% 94px,
+    88% 82px,
+    94% 72px,
+    100% 65px,
+    100% 100%,
+    0% 100%
+  );
+  
+
 
 
   

@@ -1,18 +1,13 @@
-import { Lato, Work_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './sass/style.scss';
 
-const lato = Lato({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400', '500', '600', '700'],
   variable: '--body-font',
-});
-const workSans = Work_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--heading-font',
 });
 
 export const metadata = {
@@ -35,6 +30,11 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="author" content="Themeservices" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        {/* Lemon Milk Font - Load from CDN or local file */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.cdnfonts.com/css/lemon-milk"
+        />
         {/* Disable Next.js automatic prefetching for static export */}
         <script
           dangerouslySetInnerHTML={{
@@ -100,7 +100,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${lato.variable} ${workSans.variable}`}>
+      <body className={`${inter.variable}`}>
         {children}
       </body>
     </html>

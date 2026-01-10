@@ -211,16 +211,16 @@ label {
   align-items: center;
   justify-content: center;
   flex: none;
-  font-size: 17px;
-  font-weight: 500;
-  padding: 11px 28px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 14px 32px;
   line-height: 1.6em;
-  gap: 8px;
+  gap: 10px;
   line-height: 1.6em;
   border-radius: 1.6em;
 
   i {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   &.cs_color_1 {
@@ -248,6 +248,20 @@ label {
     &:hover {
       background-color: var(--accent-color);
       color: #fff;
+    }
+  }
+
+  &.cs_green_btn {
+    background-color: #CCC968;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(154, 205, 50, 0.3);
+
+    &:hover {
+      background-color: #9c9825;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(154, 205, 50, 0.4);
+      transform: translateY(-1px);
     }
   }
 }

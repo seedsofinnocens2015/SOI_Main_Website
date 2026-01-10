@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useRef, useState } from "react";
 import { FaAnglesRight } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
 import Slider from "react-slick";
 import Button from "../Buttons";
 import Image from "next/image";
@@ -317,15 +318,21 @@ const HeroSection = ({ data }) => {
                   <div
                     className={`cs_hero cs_style_1 cs_center cs_bg_filed${
                       isVideo ? " cs_has_video_bg" : ""
-                    }`}
+                    }${items.isCenterLayout && !isVideo ? " cs_has_bg_image" : ""}`}
                     style={
                       isVideo
                         ? undefined
                         : {
                             backgroundImage: `url(${bgImagePath})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
                           }
                     }
                   >
+                    {items.isCenterLayout && !isVideo && (
+                      <div className="cs_hero_overlay_dark"></div>
+                    )}
                     {/* {!isVideo && (
                       <div className="cs_hero_overlay"></div>
                     )} */}
@@ -395,8 +402,8 @@ const HeroSection = ({ data }) => {
                       </>
                     )}
                     <div className="container">
-                      <div className="cs_hero_text">
-                        <div className="cs_hero_text_in">
+                      <div className={`cs_hero_text ${items.isCenterLayout ? 'cs_hero_text_center' : ''}`}>
+                        <div className={`cs_hero_text_in ${items.isCenterLayout ? 'cs_hero_text_in_center' : ''}`}>
                           <h1
                             className={`cs_hero_title ${
                               items.titleClass ?? ""
@@ -406,28 +413,37 @@ const HeroSection = ({ data }) => {
                           />
                           <p
                             className="cs_hero_subtitle"
+                            style={items.subtitleStyle}
                             dangerouslySetInnerHTML={{
                               __html: items.contactSubtitle,
                             }}
                           />
-                          <div className="cs_hero_btns">
+                          <div className={`cs_hero_btns ${items.isCenterLayout ? 'cs_hero_btns_center' : ''}`}>
                             <Button
                               btnText={items.btnText1}
-                              variant={"cs_btn cs_style_1 cs_color_1"}
+                              variant={`cs_btn cs_style_1 ${items.btnStyle || 'cs_color_1'}`}
                               btnIcons={<FaAnglesRight />}
                               btnUrl={items.link}
                             />
+                            {items.phoneNumber && (
+                              <a href={items.phoneLink || `tel:+91${items.phoneNumber.replace(/\s/g, '')}`} className="cs_hero_phone">
+                                <FaPhoneAlt className="cs_hero_phone_icon" />
+                                <span className="cs_hero_phone_text">{items.phoneNumber}</span>
+                              </a>
+                            )}
                           </div>
                         </div>
-                        <div className="cs_hero_shape">
-                          <Image
-                            src={iconImagePath}
-                            className="cs_spinner_img"
-                            alt="img"
-                            width={142}
-                            height={190}
-                          />
-                        </div>
+                        {!items.isCenterLayout && (
+                          <div className="cs_hero_shape">
+                            <Image
+                              src={iconImagePath}
+                              className="cs_spinner_img"
+                              alt="img"
+                              width={142}
+                              height={190}
+                            />
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
