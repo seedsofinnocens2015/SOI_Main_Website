@@ -390,6 +390,9 @@
       padding-right: 60px;
       max-width: 1920px;
       margin: 0 auto;
+      @media (min-width: 1600px) {
+        padding-right: 40px;
+      }
       @media (max-width: 1400px) {
         padding-left: 40px;
         padding-right: 40px;
@@ -655,7 +658,7 @@
     }
     @media (min-width: 1400px) {
       .container {
-        max-width: 1500px;
+        max-width: 1800px;
       }
     }
   }
