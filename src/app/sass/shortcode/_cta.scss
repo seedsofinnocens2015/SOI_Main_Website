@@ -2,26 +2,87 @@
   14. CTA
 ----------------------------------------------------------------*/
 .cs_cta.cs_style_1 {
-  padding: 0;
-  min-height: 190px;
+  padding: 60px 0 60px 0;
+  min-height: 520px;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: -200px;
+  z-index: 1;
+  
+  // Curved top border (concave curve - dips down in the middle)
+  // Creates a smooth concave curve that dips down in the center
+  clip-path: polygon(
+  0% 28px,
+  6% 42px,
+  12% 58px,
+  18% 75px,
+  24% 92px,
+  30% 108px,
+  36% 122px,
+  42% 132px,
+  50% 138px,   /* center */
+  58% 132px,
+  64% 122px,
+  70% 108px,
+  76% 92px,
+  82% 75px,
+  88% 58px,
+  94% 42px,
+  100% 28px,
+  100% 100%,
+  0% 100%
+);
+
+
   
   @media (max-width: 991px) {
     min-height: auto;
-    padding: 20px 0;
+    padding: 50px 0 50px 0;
+    clip-path: polygon(
+      0% 70px,
+      10% 65px,
+      20% 60px,
+      30% 55px,
+      40% 52px,
+      50% 50px,
+      60% 52px,
+      70% 55px,
+      80% 60px,
+      90% 65px,
+      100% 70px,
+      100% 100%,
+      0% 100%
+    );
   }
   
   @media (max-width: 575px) {
-    padding: 15px 0;
+    padding: 45px 0 45px 0;
+    clip-path: polygon(
+      0% 60px,
+      10% 55px,
+      20% 50px,
+      30% 45px,
+      40% 42px,
+      50% 40px,
+      60% 42px,
+      70% 45px,
+      80% 50px,
+      90% 55px,
+      100% 60px,
+      100% 100%,
+      0% 100%
+    );
   }
+  
 
   .cs_cta_in {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 190px;
+    min-height: 260px;
 
     @media (max-width: 991px) {
       flex-direction: column;
