@@ -177,11 +177,39 @@ const heroData = {
     description: '',
     services: [
       {
-        iconUrl: '/assets/img/icons/IUI, IVF & ICSI.jpg',
+        iconUrl: '/assets/img/icons/IUI, IVF & ICSI.svg',
         index: '01',
         title: 'IUI, IVF & ICSI',
         subtitle: 'We believe in bringing advanced fertility care with customized care with the start of the ART facility. ',
         link: '/fertility-treatments/ivf-icsi/',
+      },
+      {
+        iconUrl: '/assets/img/icons/Genetic Testing.svg',
+        index: '03',
+        title: 'Genetic testing (PGT-A & PGT-M)',
+        subtitle: 'We ensure that healthy embryo selection improves IVF success and reduces risks such as PGT-A, PGT-M, and PGT-SR.',
+        link: '/genetic-testing-pgt/pgt-a/',
+      },
+      {
+        iconUrl: '/assets/img/icons/Blastocyst Transfer.svg',
+        index: '04',
+        title: 'Blastocyst Transfer',
+        subtitle: 'Blastocyst Transfer is an advanced technique where embryos are cultured in the lab for 5-6 days to reach the blastocyst stage before being transferred to the uterus.',
+        link: '/fertility-treatments/blastocyst-transfer/',
+      },
+      {
+        iconUrl: '/assets/img/icons/Cryopreservation.svg',
+        index: '06',
+        title: 'Cryopreservation (Egg, Sperm & Embryos)',
+        subtitle: 'We help in preserving fertility for the future with reliable and safe freezing options.',
+        link: '/',
+      },
+      {
+        iconUrl: '/assets/img/icons/PRP & Ovarian Rejuvenation.svg',
+        index: '08',
+        title: 'PRP & Ovarian Rejuvenation',
+        subtitle: 'We treat couples with an advanced and non-surgical procedure that uses the body’s own healing power to rejuvenate ovarian function.',
+        link: '/advanced-fertility-care/prp-ovarian-rejuvenation/',
       },
       {
         iconUrl: '/assets/img/icons/TESA PESA.jpg',
@@ -189,20 +217,6 @@ const heroData = {
         title: 'TESA/PESA',
         subtitle: 'We help in resolving the fertility issues such as TESA/PESA, Semen analysis, PESA, and the treatment for the low sperm count.',
         link: '/advanced-fertility-care/tesa-pesa/',
-      },
-      {
-        iconUrl: '/assets/img/icons/Genetic Testing.jpg',
-        index: '03',
-        title: 'Genetic Testing',
-        subtitle: 'We ensure that healthy embryo selection improves IVF success and reduces risks such as PGT-A, PGT-M, and PGT-SR.',
-        link: '/genetic-testing-pgt/pgt-a/',
-      },
-      {
-        iconUrl: '/assets/img/icons/Blastocyst Transfer.jpg',
-        index: '04',
-        title: 'Blastocyst Transfer',
-        subtitle: 'Blastocyst Transfer is an advanced technique where embryos are cultured in the lab for 5-6 days to reach the blastocyst stage before being transferred to the uterus.',
-        link: '/fertility-treatments/blastocyst-transfer/',
       },
       {
         iconUrl: '/assets/img/icons/Donor Program.jpg',
@@ -218,13 +232,7 @@ const heroData = {
         subtitle: 'We offer ethical, medically guided surrogacy assistance with complete end-to-end care.',
         link: '/',
       },
-      {
-        iconUrl: '/assets/img/icons/Cryopreservation.jpg',
-        index: '06',
-        title: 'Cryopreservation',
-        subtitle: 'We help in preserving fertility for the future with reliable and safe freezing options.',
-        link: '/',
-      },
+      
       {
         iconUrl: '/assets/img/icons/Genetic Counselling.jpg',
         index: '08',
@@ -239,13 +247,7 @@ const heroData = {
         subtitle: 'We provide minimally invasive surgical procedures to diagnose and treat problems such as fibroids, blocked tubes, and endometriosis.',
         link: '/surgeries/hysteroscopy/',
       },
-      {
-        iconUrl: '/assets/img/icons/PRP & Ovarian Rejuvenation.jpg',
-        index: '08',
-        title: 'PRP & Ovarian Rejuvenation',
-        subtitle: 'We treat couples with an advanced and non-surgical procedure that uses the body’s own healing power to rejuvenate ovarian function.',
-        link: '/advanced-fertility-care/prp-ovarian-rejuvenation/',
-      },
+      
       
       
      
