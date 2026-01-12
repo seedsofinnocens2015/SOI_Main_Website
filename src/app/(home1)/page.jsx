@@ -631,7 +631,14 @@ const heroData = {
   const whyChooseUsData = {
     familyImage: '/assets/img/happy_family.png', // Please replace with actual family image
     whyChooseHeading: 'WHY CHOOSE US?',
-    whyChooseText: 'Seeds of Innocens has always been the encouraged choice. Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora, Seeds of Innocens is the India\'s best IVF centre. Seeds of Innocens has grown to over 35 centres across 8 states and has expanded overseas to Oman, Muscat, and Zambia. It is the only lab in North India that has collaborated with the Department of Reproductive Sciences, University of Gent, Belgium, for the exchange of best practices and technology in infertility.',
+    whyChooseText: [
+      'Seeds of Innocens has always been the encouraged choice',
+      'Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora',
+      'Seeds of Innocens is India\'s best IVF centre',
+      'Grown to over 35 centres across 8 states',
+      'Expanded overseas to Oman, Muscat, and Zambia',
+      'Only lab in North India that has collaborated with the Department of Reproductive Sciences, University of Gent, Belgium, for the exchange of best practices and technology in infertility'
+    ],
     callUsLink: 'tel:+919810350512',
     callUsText: 'CALL US',
     selfCycleHeading: 'VISION AND MISSION',

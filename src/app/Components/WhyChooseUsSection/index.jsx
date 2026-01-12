@@ -64,7 +64,27 @@ const WhyChooseUsSection = ({ data }) => {
         <div className="col-lg-6 d-flex align-items-center">
           <div className="cs_why_choose_content">
             <h2 className="cs_why_choose_heading">{data.whyChooseHeading}</h2>
-            <p className="cs_why_choose_text">{data.whyChooseText}</p>
+            {Array.isArray(data.whyChooseText) ? (
+              <ul className="cs_why_choose_list" style={{ listStyle: 'none', paddingLeft: 0, marginBottom: '20px' }}>
+                {data.whyChooseText.map((point, index) => (
+                  <li key={index} style={{ marginBottom: '12px', paddingLeft: '30px', position: 'relative', fontSize: '16px', lineHeight: '1.6', color: '#333' }}>
+                    <span style={{ position: 'absolute', left: '0', top: '2px', width: '25px', height: '30px', display: 'inline-block' }}>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
+                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <rect width="24" height="24" fill="white"></rect>
+                          <path fillRule="evenodd" clipRule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="#CCC968"></path>
+                        </g>
+                      </svg>
+                    </span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="cs_why_choose_text">{data.whyChooseText}</p>
+            )}
             <Link href={data.callUsLink || '/contact'} className="cs_why_choose_btn">
               <FaPhone className="cs_btn_icon" />
               <span>{data.callUsText || 'CALL US'}</span>
@@ -151,7 +171,27 @@ const WhyChooseUsSection = ({ data }) => {
                   </div>
                   <div className="cs_why_choose_content">
                     <h2 className="cs_why_choose_heading">{data.whyChooseHeading}</h2>
-                    <p className="cs_why_choose_text">{data.whyChooseText}</p>
+                    {Array.isArray(data.whyChooseText) ? (
+                      <ul className="cs_why_choose_list" style={{ listStyle: 'none', paddingLeft: 0, marginBottom: '20px' }}>
+                        {data.whyChooseText.map((point, index) => (
+                          <li key={index} style={{ marginBottom: '12px', paddingLeft: '30px', position: 'relative', fontSize: '16px', lineHeight: '1.6', color: '#333' }}>
+                            <span style={{ position: 'absolute', left: '0', top: '2px', width: '20px', height: '20px', display: 'inline-block' }}>
+                              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
+                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                  <rect width="24" height="24" fill="white"></rect>
+                                  <path fillRule="evenodd" clipRule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="#CCC968"></path>
+                                </g>
+                              </svg>
+                            </span>
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="cs_why_choose_text">{data.whyChooseText}</p>
+                    )}
                     <Link href={data.callUsLink || '/contact'} className="cs_why_choose_btn">
                       <FaPhone className="cs_btn_icon" />
                       <span>{data.callUsText || 'CALL US'}</span>
