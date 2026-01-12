@@ -129,28 +129,47 @@ const heroData = {
     buttonText: 'Our Doctors',
   };
   
-  const countersData = [
-    {
-      iconUrl: '/assets/img/icons/counter_icon_1.png',
-      number: '20,000+',
-      title: 'Successful Pregnancies',
+  const countersData = {
+    badgeText: 'Outstanding cess rates',
+    heading: {
+      highlighted: '20,000+',
+      rest: 'SUCCESS STORIES AND THE JOURNEY CONTINUES.'
     },
-    {
-      iconUrl: '/assets/img/icons/counter_icon_2.png',
-      number: '35+',
-      title: 'Centres Across India',
-    },
-    {
-      iconUrl: '/assets/img/icons/counter_icon_3.png',
-      number: '30+',
-      title: 'Expert Doctors',
-    },
-    {
-      iconUrl: '/assets/img/icons/counter_icon_4.png',
-      number: '78%',
-      title: 'Success Rate',
-    },
-  ];
+    counters: [
+      {
+        number: '20,000+',
+        title: (
+          <>
+            Healthy Babies,<br />Countless Smiles
+          </>
+        ),
+      },
+      {
+        number: '35+',
+        title: (
+          <>
+            IVF Centres Spreading<br />Parenthood Joy
+          </>
+        ),
+      },
+      {
+        number: '78%',
+        title: (
+          <>
+            Success Rate Bringing<br />Hope to Families
+          </>
+        ),
+      },
+      {
+        number: '30+',
+        title: (
+          <>
+            Dedicated Fertility<br />Specialists
+          </>
+        ),
+      },
+    ],
+  };
   
   const serviceData = {
     subtitle: 'FERTILITY TREATMENTS',

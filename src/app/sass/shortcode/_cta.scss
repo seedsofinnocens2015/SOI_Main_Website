@@ -10,74 +10,49 @@
   overflow: hidden;
   margin-top: -200px;
   z-index: 1;
-  
+
   // Curved top border (concave curve - dips down in the middle)
   // Creates a smooth concave curve that dips down in the center
-  clip-path: polygon(
-    0% 65px,
-    6% 72px,
-    12% 82px,
-    18% 94px,
-    24% 106px,
-    30% 118px,
-    36% 128px,
-    42% 135px,
-    50% 138px,  /* center (soft deep) */
-    58% 135px,
-    64% 128px,
-    70% 118px,
-    76% 106px,
-    82% 94px,
-    88% 82px,
-    94% 72px,
-    100% 65px,
-    100% 100%,
-    0% 100%
-  );
-  
+  clip-path: polygon(0% 80px,
+      25% 110px,
+      50% 125px,
+      /* bowl center */
+      75% 110px,
+      100% 80px,
+      100% 100%,
+      0% 100%);
 
 
 
-  
+
+
+
   @media (max-width: 991px) {
     min-height: auto;
     padding: 50px 0 50px 0;
-    clip-path: polygon(
-      0% 70px,
-      10% 65px,
-      20% 60px,
-      30% 55px,
-      40% 52px,
-      50% 50px,
-      60% 52px,
-      70% 55px,
-      80% 60px,
-      90% 65px,
-      100% 70px,
-      100% 100%,
-      0% 100%
-    );
+    clip-path: polygon(0% 80px,
+        25% 107px,
+        50% 120px,
+        /* bowl center */
+        75% 107px,
+        100% 80px,
+        100% 100%,
+        0% 100%);
   }
-  
+
   @media (max-width: 575px) {
     padding: 45px 0 45px 0;
-    clip-path: polygon(
-      0% 60px,
-      10% 55px,
-      20% 50px,
-      30% 45px,
-      40% 42px,
-      50% 40px,
-      60% 42px,
-      70% 45px,
-      80% 50px,
-      90% 55px,
-      100% 60px,
-      100% 100%,
-      0% 100%
-    );
+    clip-path: polygon(0% 80px,
+        25% 107px,
+        50% 120px,
+        /* bowl center */
+        75% 107px,
+        100% 80px,
+        100% 100%,
+        0% 100%);
+
   }
-  
+
 
   .cs_cta_in {
     display: flex;
@@ -85,7 +60,7 @@
     align-items: center;
     width: 100%;
     min-height: 260px;
-     
+
 
     @media (max-width: 991px) {
       flex-direction: column;
@@ -93,7 +68,7 @@
       min-height: auto;
       align-items: flex-start;
     }
-    
+
     @media (max-width: 575px) {
       gap: 25px 0;
     }
@@ -159,7 +134,11 @@
     }
 
     @media (max-width: 575px) {
-      font-size: clamp(18px, 4vw, 26px);
+      font-size: clamp(30px, 5vw, 32px);
+      
+      br {
+        display: none;
+      }
     }
   }
 
@@ -325,14 +304,16 @@
 
   &.cs_type_1 {
     padding: 40px 0;
-    
+
     @media (max-width: 991px) {
       padding: 35px 0;
     }
+
     .cs_cta_in {
       padding: 0;
       position: relative;
       z-index: 1;
+
       @media (max-width: 991px) {
         padding: 0;
       }
@@ -367,6 +348,7 @@
         top: 0;
         background-color: var(--blue-color);
         border-radius: 100px 0 0 100px;
+
         @media (max-width: 991px) {
           left: 50%;
           transform: translateX(-50%);
@@ -419,13 +401,11 @@
 
   .cs_play_btn_text {
     background-repeat: no-repeat;
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      color-stop(0, currentColor),
-      to(currentColor)
-    );
+    background-image: -webkit-gradient(linear,
+        left top,
+        right top,
+        color-stop(0, currentColor),
+        to(currentColor));
     background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
     transition: background-size 0.42s cubic-bezier(0.49, 0.49, 0.08, 1),
       color 0.27s ease-out;

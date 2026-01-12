@@ -32,7 +32,7 @@ const CtaSection = ({ data = {} }) => {
       <div className="container">
         <div className="cs_cta_in">
           <div className="cs_cta_left">
-            <h2 className="cs_cta_title">BEGIN YOUR<br />FERTILITY JOURNEY<br />TODAY.</h2>
+            <h2 className="cs_cta_title">BEGIN YOUR<br /> FERTILITY JOURNEY<br /> TODAY.</h2>
           </div>
           <div className="cs_cta_right">
             <div className="cs_cta_cards">

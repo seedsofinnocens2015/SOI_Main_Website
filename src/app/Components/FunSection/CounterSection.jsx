@@ -47,10 +47,12 @@ const CounterSection = ({ data }) => {
   };
 
   useEffect(() => {
-    if (!data || data.length === 0) return;
+    // Handle both old format (array) and new format (object with counters array)
+    const countersArray = data?.counters || data || [];
+    if (!countersArray || countersArray.length === 0) return;
 
     // Always initialize with 0 for animation, never skip animation on mount
-    const initialCounters = data.map(counter => {
+    const initialCounters = countersArray.map(counter => {
       const targetValue = parseNumber(counter.number);
       return {
         ...counter,
@@ -266,7 +268,9 @@ const CounterSection = ({ data }) => {
     };
   }, [counters.length, hasAnimated, animationCompleted, animateCounters]);
 
-  if (!data || data.length === 0) return null;
+  // Handle both old format (array) and new format (object with counters array)
+  const countersArray = data?.counters || data || [];
+  if (!countersArray || countersArray.length === 0) return null;
   
   // Ensure we always show the correct value
   const displayCounters = counters.length > 0 
@@ -279,7 +283,7 @@ const CounterSection = ({ data }) => {
         targetValue: counter.targetValue || parseNumber(counter.number),
         originalFormat: counter.originalFormat || counter.number,
       }))
-    : (data || []).map(counter => {
+    : countersArray.map(counter => {
         const targetValue = parseNumber(counter.number);
         return {
           ...counter,
@@ -290,40 +294,61 @@ const CounterSection = ({ data }) => {
       });
 
   return (
-    <div className="container" ref={sectionRef}>
-      <div className="cs_counter_simple_line">
-        {displayCounters.map((counter, index) => {
-          // Always use targetValue if animation is completed, otherwise use displayValue
-          // Fallback to targetValue if displayValue is 0 and we have a valid targetValue
-          let valueToDisplay = animationCompleted 
-            ? (counter.targetValue || parseNumber(counter.number))
-            : (counter.displayValue !== undefined ? counter.displayValue : 0);
-          
-          // Safety fallback: if valueToDisplay is 0 but we have a targetValue, use targetValue
-          if (valueToDisplay === 0 && counter.targetValue && counter.targetValue > 0) {
-            valueToDisplay = counter.targetValue;
-          }
-          
-          // Final fallback: parse from original number if still 0
-          if (valueToDisplay === 0 && counter.number) {
-            const parsed = parseNumber(counter.number);
-            if (parsed > 0) {
-              valueToDisplay = parsed;
+    <div className="cs_counter_figma_wrapper" ref={sectionRef}>
+      <div className="container">
+        {/* Top Badge */}
+        {data?.badgeText && (
+          <div className="cs_counter_badge">
+            {data.badgeText}
+          </div>
+        )}
+
+        {/* Main Heading */}
+        {data?.heading && (
+          <div className="cs_counter_heading">
+            <span className="cs_counter_heading_highlighted">
+              {data.heading.highlighted}
+            </span>
+            <span className="cs_counter_heading_rest">
+              {' '}{data.heading.rest}
+            </span>
+          </div>
+        )}
+
+        {/* Counter Items */}
+        <div className="cs_counter_simple_line">
+          {displayCounters.map((counter, index) => {
+            // Always use targetValue if animation is completed, otherwise use displayValue
+            // Fallback to targetValue if displayValue is 0 and we have a valid targetValue
+            let valueToDisplay = animationCompleted 
+              ? (counter.targetValue || parseNumber(counter.number))
+              : (counter.displayValue !== undefined ? counter.displayValue : 0);
+            
+            // Safety fallback: if valueToDisplay is 0 but we have a targetValue, use targetValue
+            if (valueToDisplay === 0 && counter.targetValue && counter.targetValue > 0) {
+              valueToDisplay = counter.targetValue;
             }
-          }
-          
-          return (
-          <div key={index} className="cs_counter_item">
-            <div className="cs_counter_content">
-                <div className="cs_counter_number">
-                  {formatNumber(valueToDisplay, counter.originalFormat || counter.number)}
+            
+            // Final fallback: parse from original number if still 0
+            if (valueToDisplay === 0 && counter.number) {
+              const parsed = parseNumber(counter.number);
+              if (parsed > 0) {
+                valueToDisplay = parsed;
+              }
+            }
+            
+            return (
+              <div key={index} className="cs_counter_item">
+                <div className="cs_counter_content">
+                  <div className="cs_counter_number">
+                    {formatNumber(valueToDisplay, counter.originalFormat || counter.number)}
+                  </div>
+                  <div className="cs_counter_text">{counter.title}</div>
                 </div>
-              <div className="cs_counter_text">{counter.title}</div>
               </div>
-              {index < displayCounters.length - 1 && <span className="cs_counter_separator">|</span>}
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
