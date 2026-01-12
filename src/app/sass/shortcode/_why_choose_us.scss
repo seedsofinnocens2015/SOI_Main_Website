@@ -36,10 +36,12 @@
   flex-direction: column;
   gap: 20px;
   padding: 0 10px;
+  overflow: visible !important;
   
   .cs_why_choose_image_wrapper {
     width: 100%;
     margin-bottom: 0;
+    overflow: visible;
   }
   
   .cs_why_choose_content {
@@ -135,7 +137,7 @@
   white-space: nowrap;
 
   &:hover {
-    background-color: #BA4D4F;
+    background-color: #9c9825;
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(77, 182, 232, 0.3);
