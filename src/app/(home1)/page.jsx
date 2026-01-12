@@ -630,6 +630,7 @@ const heroData = {
 
   const whyChooseUsData = {
     familyImage: '/assets/img/happy_family.png', // Please replace with actual family image
+    designImage: '/assets/img/leaf.png', // Design image for left side background
     whyChooseHeading: 'WHY CHOOSE US?',
     whyChooseText: [
       'Seeds of Innocens has always been the encouraged choice',

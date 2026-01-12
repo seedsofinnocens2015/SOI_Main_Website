@@ -47,8 +47,35 @@ const WhyChooseUsSection = ({ data }) => {
     <>
       <div className="row cs_gap_y_40">
         {/* Top Row - Left: Family Image */}
-        <div className="col-lg-6">
-          <div className="cs_why_choose_image_wrapper">
+        <div className="col-lg-6" style={{ position: 'relative' }}>
+          {/* Design Image - Left Side Background */}
+          {data.designImage && (
+            <div 
+              style={{
+                position: 'absolute',
+                left: '-130px',
+                top: '50%',
+                transform: 'translateY(-71%) rotate(0deg)',
+                width: '300px',
+                height: 'auto',
+                zIndex: 0,
+                pointerEvents: 'none'
+              }}
+            >
+              <Image
+                src={getAssetPathClient(data.designImage)}
+                alt="Design Background"
+                width={150}
+                height={200}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain'
+                }}
+              />
+            </div>
+          )}
+          <div className="cs_why_choose_image_wrapper" style={{ position: 'relative', zIndex: 1 }}>
             <Image
               src={getAssetPathClient(data.familyImage)}
               alt="Happy Family"
@@ -121,8 +148,35 @@ const WhyChooseUsSection = ({ data }) => {
         </div>
 
         {/* Bottom Row - Right: Selfie Image with Speech Bubble */}
-        <div className="col-lg-6">
-          <div className="cs_why_choose_image_wrapper cs_relative">
+        <div className="col-lg-6" style={{ position: 'relative' }}>
+          {/* Design Image - Right Side Background */}
+          {data.designImage && (
+            <div 
+              style={{
+                position: 'absolute',
+                right: '-150px',
+                top: '50%',
+                transform: 'translateY(-46%) rotate(18deg)',
+                width: '300px',
+                height: 'auto',
+                zIndex: 0,
+                pointerEvents: 'none'
+              }}
+            >
+              <Image
+                src={getAssetPathClient(data.designImage)}
+                alt="Design Background"
+                width={150}
+                height={200}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain'
+                }}
+              />
+            </div>
+          )}
+          <div className="cs_why_choose_image_wrapper cs_relative" style={{ position: 'relative', zIndex: 1 }}>
             <Image
               src={getAssetPathClient(data.selfieImage)}
               alt="Self Cycle"
@@ -159,15 +213,45 @@ const WhyChooseUsSection = ({ data }) => {
               {/* Slide 1: Why Choose Us */}
               <div className="cs_slide">
                 <div className="cs_why_choose_mobile_slide">
-                  <div className="cs_why_choose_image_wrapper">
-                    <Image
-                      src={getAssetPathClient(data.familyImage)}
-                      alt="Happy Family"
-                      width={600}
-                      height={400}
-                      className="cs_why_choose_image"
-                      loading="eager"
-                    />
+                  <div style={{ position: 'relative' }}>
+                    {/* Design Image - Left Side Background */}
+                    {data.designImage && (
+                      <div 
+                        style={{
+                          position: 'absolute',
+                          left: '-20px',
+                          top: '50%',
+                          transform: 'translateY(-50%) rotate(-15deg)',
+                          width: '100px',
+                          height: 'auto',
+                          opacity: 0.3,
+                          zIndex: 0,
+                          pointerEvents: 'none'
+                        }}
+                      >
+                        <Image
+                          src={getAssetPathClient(data.designImage)}
+                          alt="Design Background"
+                          width={100}
+                          height={150}
+                          style={{
+                            width: '100%',
+                            height: 'auto',
+                            objectFit: 'contain'
+                          }}
+                        />
+                      </div>
+                    )}
+                    <div className="cs_why_choose_image_wrapper" style={{ position: 'relative', zIndex: 1 }}>
+                      <Image
+                        src={getAssetPathClient(data.familyImage)}
+                        alt="Happy Family"
+                        width={600}
+                        height={400}
+                        className="cs_why_choose_image"
+                        loading="eager"
+                      />
+                    </div>
                   </div>
                   <div className="cs_why_choose_content">
                     <h2 className="cs_why_choose_heading">{data.whyChooseHeading}</h2>
