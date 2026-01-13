@@ -13,7 +13,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f7f9faf4;
+    background-color: #FCE8DD;
     opacity: 0.9;
     z-index: 0;
   }
@@ -143,5 +143,126 @@
   
   @media(max-width:575px) {
     height: 300px;
+  }
+}
+
+/* Card-based Testimonial Styles */
+.cs_testimonial_card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  @media(max-width:991px) {
+    margin-bottom: 25px;
+    padding: 20px 15px;
+  }
+
+  @media(max-width:575px) {
+    padding: 15px 10px;
+    margin-bottom: 15px;
+  }
+}
+
+.cs_testimonial_avatar_wrapper {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs_testimonial_avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #FFD700;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  @media(max-width:575px) {
+    width: 70px;
+    height: 70px;
+    border-width: 2px;
+  }
+}
+
+.cs_testimonial_rating_wrapper {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+  padding: 4px 0;
+  
+  svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  
+  polygon,
+  path {
+    fill: #CCC968;
+  }
+}
+
+.cs_testimonial_name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 12px;
+  text-align: center;
+  line-height: 1.3;
+
+  @media(max-width:991px) {
+    font-size: 17px;
+  }
+
+  @media(max-width:575px) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+.cs_testimonial_text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555555;
+  text-align: left;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+
+  @media(max-width:991px) {
+    font-size: 13px;
+  }
+
+  @media(max-width:575px) {
+    font-size: 12px;
+    line-height: 1.4;
   }
 }

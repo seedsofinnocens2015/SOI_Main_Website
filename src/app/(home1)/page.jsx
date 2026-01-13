@@ -671,9 +671,15 @@ const heroData = {
     ],
   };
 
-  const testimonialData = {
-    subtitle: 'REAL STORIES OF HOPE',
-    title: '',
+  const testimonialData = {  
+    sectionTitle: {
+      part1: 'HAPPY FAMILIES',
+      part2: 'ABOUT US',
+    },
+    sectionSubtitle: {
+      part1: 'Thank you for trusting us with your journey.',
+      part2: 'Please leave us a 5-star review to help others on their path to parenthood.',
+    },
     description: '',
     thumbnail: '/assets/img/testimonial_1.png',
     testimonials: [
@@ -704,6 +710,15 @@ const heroData = {
         position: 'Grateful Parents',
         videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
       },
+      // {
+      //   rating: 5,
+      //   subtitle:
+      //     'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
+      //   avatar: '/assets/img/avatar_1.png',
+      //   name: 'Family from New Delhi, India',
+      //   position: 'Grateful Parents',
+      //   videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
+      // },
     ],
   };
 
@@ -861,6 +876,28 @@ const page = () => {
         <BlogSection data={blogsData} />
       </Section>
 
+       {/* 10. News and Media */}
+       <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+      >
+        <NewsMediaSection data={newsMediaData} />
+      </Section>
+
+       {/* 7. Testimonials Preview */}
+       <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className="cs_testimonial_area"
+
+      >
+        <TestimonialSection data={testimonialData} />
+      </Section>
+
       {/* 5.5. Male Infertility & Egg Freezing Section */}
       <Section
         topSpaceLg="60"
@@ -884,17 +921,7 @@ const page = () => {
         <ProjectSection data={projectData} />
       </Section>
 
-      {/* 7. Testimonials Preview */}
-      <Section
-        topSpaceLg="60"
-        topSpaceMd="70"
-        bottomSpaceLg="40"
-        bottomSpaceMd="50"
-        className="cs_testimonial_area"
-        // backgroundImage="/assets/img/testomonial_bg_1.png"
-      >
-        <TestimonialSection data={testimonialData} />
-      </Section>
+     
 
      
 
@@ -909,15 +936,7 @@ const page = () => {
         <CredibilitySection data={credibilityData} />
       </Section>
 
-      {/* 10. News and Media */}
-      <Section
-        topSpaceLg="60"
-        topSpaceMd="70"
-        bottomSpaceLg="40"
-        bottomSpaceMd="50"
-      >
-        <NewsMediaSection data={newsMediaData} />
-      </Section>
+     
 
         </div>
     );
