@@ -71,11 +71,38 @@ const NewsMediaSection = ({ data }) => {
     <>
       <div className="container">
         {data.sectionTitle && (
-          <SectionHeading
-            SectionSubtitle={data.sectionTitle}
-            SectionTitle={data.sectionSubtitle || ''}
-            variant={"text-center"}
-          />
+          <div className="cs_service_title_section">
+            <h2 className="cs_service_main_title">
+              {typeof data.sectionTitle === 'object' && data.sectionTitle.part1 ? (
+                <>
+                  <span className="cs_news_media_main_title" style={{ color: '#CCC968' }}>
+                    {data.sectionTitle.part1}
+                  </span>{' '}
+                  <span style={{ color: '#000000' }}>{data.sectionTitle.part2}</span>
+                </>
+              ) : (
+                data.sectionTitle
+              )}
+            </h2>
+            {data.sectionSubtitle && (
+              <p
+                style={{
+                  fontSize: 'clamp(14px, 2vw, 18px)',
+                  color: '#555555',
+                  fontWeight: '400',
+                  textAlign: 'center',
+                  textTransform: 'none',
+                  marginTop: '10px',
+                  display: 'block',
+                  width: '100%',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}
+              >
+                {data.sectionSubtitle}
+              </p>
+            )}
+          </div>
         )}
 
         <div className="cs_height_30 cs_height_lg_30" />
@@ -104,7 +131,16 @@ const NewsMediaSection = ({ data }) => {
                         <div className="cs_news_media_content">
                           <h3 className="cs_news_media_title">{video.title}</h3>
                           {video.description && (
-                            <p className="cs_news_media_description">{video.description}</p>
+                            <p className="cs_news_media_description">
+                              <a 
+                                href="https://www.youtube.com/@seedsofinnocens" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                style={{ color: '#474343', textDecoration: 'underline', cursor: 'pointer' }}
+                              >
+                                {video.description}
+                              </a>
+                            </p>
                           )}
                           {video.date && (
                             <div className="cs_news_media_date">{video.date}</div>

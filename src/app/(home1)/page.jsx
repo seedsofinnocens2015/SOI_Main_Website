@@ -526,32 +526,35 @@ const heroData = {
   };
   
   const newsMediaData = {
-    sectionTitle: 'NEWS AND MEDIA',
-    sectionSubtitle: '',
+    sectionTitle: {
+      part1: 'GET EXPERT KNOWLEDGE',
+      part2: 'ON FERTILITY TESTS AND TREATMENTS',
+    },
+    sectionSubtitle: 'watch these informative videos from our fertility specialists.',
     videos: [
       {
         videoUrl: 'https://www.youtube.com/watch?v=OpgqOL4fpoU&t=75s', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_1')
-        title: '', // Optional: Video title
-        description: '', // Optional: Video description
-        date: '', // Optional: Video date
+        title: 'The Lallantop Show', // Optional: Video title
+        description: 'Seeds of Innocens- IVF Centre', // Optional: Video description
+        date: '144k views  1 year ago', // Optional: Video date
       },
       {
-        videoUrl: 'https://www.youtube.com/watch?v=E04J-XxA1Y0', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
-        title: '', // Optional: Video title
-        description: '', // Optional: Video description
-        date: '', // Optional: Video date
+        videoUrl: 'https://www.youtube.com/watch?v=E04J-XxA1Y0', //Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
+        title: 'The Lallantop Show', // Optional: Video title
+        description: 'Seeds of Innocens- IVF Centre', // Optional: Video description
+        date: '144k views  1 year ago', // Optional: Video date
       },
       {
         videoUrl: 'https://www.youtube.com/watch?v=9_K6ksAefj4', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
-        title: '', // Optional: Video title
-        description: '', // Optional: Video description
-        date: '', // Optional: Video date
+        title: 'The Lallantop Show', // Optional: Video title
+        description: 'Seeds of Innocens- IVF Centre', // Optional: Video description
+        date: '144k views  1 year ago', // Optional: Video date
       },
       {
         videoUrl: 'https://www.youtube.com/watch?v=PzkrtU5dchg', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_4')
-        title: '', // Optional: Video title
-        description: '', // Optional: Video description
-        date: '', // Optional: Video date
+        title: 'The Lallantop Show', // Optional: Video title
+        description: 'Seeds of Innocens- IVF Centre', // Optional: Video description
+        date: '144k views  1 year ago', // Optional: Video date
       },
     ],
   };
