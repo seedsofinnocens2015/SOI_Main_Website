@@ -8,15 +8,15 @@
 .cs_counter_area {
   position: relative;
   z-index: 1;
-  background-color: #FAF8F1;
-  border-bottom:3px solid #FCE4D8;
-  border-top:3px solid #FCE4D8;
+  background-color: #FFFCFB;
+  border-bottom:3px solid #FCE8DD;
+  border-top:3px solid #FCE8DD;
 
   &::after {
     content: '';
     width: 100%;
     height: 50%;
-    background-color: #FAF8F1;
+    background-color: #FFFCFB;
     position: absolute;
     left: 0;
     top: 0;
@@ -30,7 +30,7 @@
 }
 
 .cs_counter_figma_wrapper {
-  background-color: #FAF8F1;
+  background-color: #FFFCFB;
   text-align: center;
 
   @media (max-width: 991px) {
@@ -44,7 +44,7 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 0 80px;
   }
 
   .cs_counter_badge {

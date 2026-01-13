@@ -281,7 +281,7 @@ const heroData = {
   
   const projectData = {
     title: '',
-    subtitle: 'OUR LOCATIONS',
+    subtitle: 'Across Multiple Locations',
     description: '',
     mainCentres: [
       {
@@ -898,6 +898,16 @@ const page = () => {
         <TestimonialSection data={testimonialData} />
       </Section>
 
+       {/* 6. Centres Overview */}
+       <Section 
+      topSpaceLg="60" 
+      topSpaceMd="70" 
+      bottomSpaceLg="40" 
+      bottomSpaceMd="50" 
+      className="cs_tabs">
+        <ProjectSection data={projectData} />
+      </Section>
+
       {/* 5.5. Male Infertility & Egg Freezing Section */}
       <Section
         topSpaceLg="60"
@@ -911,15 +921,7 @@ const page = () => {
 
       
 
-      {/* 6. Centres Overview */}
-      <Section 
-      topSpaceLg="60" 
-      topSpaceMd="70" 
-      bottomSpaceLg="40" 
-      bottomSpaceMd="50" 
-      className="cs_tabs">
-        <ProjectSection data={projectData} />
-      </Section>
+     
 
      
 
