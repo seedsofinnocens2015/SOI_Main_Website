@@ -18,10 +18,10 @@ const WhyChooseUsSection = ({ data }) => {
             <div 
               style={{
                 position: 'absolute',
-                left: '-130px',
+                left: '-170px',
                 top: '50%',
-                transform: 'translateY(-71%) rotate(0deg)',
-                width: '300px',
+                transform: 'translateY(-72%) rotate(-1deg)',
+                width: '390px',
                 height: 'auto',
                 zIndex: 0,
                 pointerEvents: 'none'
@@ -119,10 +119,10 @@ const WhyChooseUsSection = ({ data }) => {
             <div 
               style={{
                 position: 'absolute',
-                right: '-150px',
+                right: '-175px',
                 top: '50%',
-                transform: 'translateY(-46%) rotate(18deg)',
-                width: '300px',
+                transform: 'translateY(-46%) rotate(24deg)',
+                width: '390px',
                 height: 'auto',
                 zIndex: 0,
                 pointerEvents: 'none'
