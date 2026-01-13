@@ -98,10 +98,28 @@ const Service = ({ data, cardBg }) => {
     setSelectedServiceIndex(index);
   };
 
+  // Get selected service subHeading
+  const getSelectedServiceSubHeading = () => {
+    const selectedService = data?.services?.[selectedServiceIndex];
+    return selectedService?.subHeading || '';
+  };
+
   // Get selected service subtitle
   const getSelectedServiceSubtitle = () => {
     const selectedService = data?.services?.[selectedServiceIndex];
     return selectedService?.subtitle || '';
+  };
+
+  // Get selected service title
+  const getSelectedServiceTitle = () => {
+    const selectedService = data?.services?.[selectedServiceIndex];
+    return selectedService?.title || '';
+  };
+
+  // Get selected service icon/image
+  const getSelectedServiceImage = () => {
+    const selectedService = data?.services?.[selectedServiceIndex];
+    return selectedService?.imageUrl || '';
   };
 
   // Get selected service link
@@ -213,15 +231,50 @@ const Service = ({ data, cardBg }) => {
         
         {/* Subtitle Rectangle Box */}
         <div className="cs_service_subtitle_box">
-          <p className="cs_service_subtitle_text">{getSelectedServiceSubtitle()}</p>
-          <Link href={getSelectedServiceLink()} className="cs_service_learn_more_link">
-            Learn More
-            <span>
-              <i>
-                <FaAngleDoubleRight />
-              </i>
-            </span>
-          </Link>
+          {/* Design Image - Background (behind the box) */}
+          {data?.designImage && (
+            <div 
+              style={{
+                position: 'absolute',
+                left: '-196px',
+                top: '50%',
+                transform: 'translateY(-50%) rotate(-13deg)',
+                width: '370px',
+                height: 'auto',
+                zIndex: 0,
+                pointerEvents: 'none',
+              }}
+            >
+              <Image
+                src={getAssetPathClient(data.designImage)}
+                alt="Design Background"
+                width={300}
+                height={400}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain'
+                }}
+              />
+            </div>
+          )}
+          <div 
+            className="cs_service_subtitle_image_section"
+            style={{
+              backgroundImage: `url(${getAssetPathClient(getSelectedServiceImage())})`,
+              position: 'relative',
+              overflow: 'visible',
+              zIndex: 1
+            }}
+          >
+          </div>
+          <div className="cs_service_subtitle_content_section">
+            <h3 className="cs_service_subtitle_title">{getSelectedServiceSubHeading()}</h3>
+            <p className="cs_service_subtitle_text" dangerouslySetInnerHTML={{ __html: getSelectedServiceSubtitle() }} />
+            <Link href={getSelectedServiceLink()} className="cs_service_learn_more_link">
+              Learn More
+            </Link>
+          </div>
         </div>
       </>
     );
@@ -330,15 +383,50 @@ const Service = ({ data, cardBg }) => {
         
         {/* Subtitle Rectangle Box for Mobile */}
         <div className="cs_service_subtitle_box">
-          <p className="cs_service_subtitle_text">{getSelectedServiceSubtitle()}</p>
-          <Link href={getSelectedServiceLink()} className="cs_service_learn_more_link">
-            Learn More
-            <span>
-              <i>
-                <FaAngleDoubleRight />
-              </i>
-            </span>
-          </Link>
+          {/* Design Image - Background (behind the box) */}
+          {/* {data?.designImage && (
+            <div 
+              style={{
+                position: 'absolute',
+                left: '-60px',
+                top: '50%',
+                transform: 'translateY(-50%) rotate(-7deg)',
+                width: '180px',
+                height: 'auto',
+                zIndex: 0,
+                pointerEvents: 'none',
+              }}
+            >
+              <Image
+                src={getAssetPathClient(data.designImage)}
+                alt="Design Background"
+                width={180}
+                height={240}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain'
+                }}
+              />
+            </div>
+          )} */}
+          <div 
+            className="cs_service_subtitle_image_section"
+            style={{
+              backgroundImage: `url(${getAssetPathClient(getSelectedServiceImage())})`,
+              position: 'relative',
+              overflow: 'visible',
+              zIndex: 1
+            }}
+          >
+          </div>
+          <div className="cs_service_subtitle_content_section">
+            <h3 className="cs_service_subtitle_title">{getSelectedServiceSubHeading()}</h3>
+            <p className="cs_service_subtitle_text" dangerouslySetInnerHTML={{ __html: getSelectedServiceSubtitle() }} />
+            <Link href={getSelectedServiceLink()} className="cs_service_learn_more_link">
+              Learn More
+            </Link>
+          </div>
         </div>
       </>
     );
