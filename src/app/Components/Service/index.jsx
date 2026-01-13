@@ -233,18 +233,7 @@ const Service = ({ data, cardBg }) => {
         <div className="cs_service_subtitle_box">
           {/* Design Image - Background (behind the box) */}
           {data?.designImage && (
-            <div 
-              style={{
-                position: 'absolute',
-                left: '-196px',
-                top: '50%',
-                transform: 'translateY(-50%) rotate(-13deg)',
-                width: '370px',
-                height: 'auto',
-                zIndex: 0,
-                pointerEvents: 'none',
-              }}
-            >
+            <div className="cs_service_subtitle_design_image">
               <Image
                 src={getAssetPathClient(data.designImage)}
                 alt="Design Background"
@@ -384,19 +373,8 @@ const Service = ({ data, cardBg }) => {
         {/* Subtitle Rectangle Box for Mobile */}
         <div className="cs_service_subtitle_box">
           {/* Design Image - Background (behind the box) */}
-          {/* {data?.designImage && (
-            <div 
-              style={{
-                position: 'absolute',
-                left: '-60px',
-                top: '50%',
-                transform: 'translateY(-50%) rotate(-7deg)',
-                width: '180px',
-                height: 'auto',
-                zIndex: 0,
-                pointerEvents: 'none',
-              }}
-            >
+          {data?.designImage && (
+            <div className="cs_service_subtitle_design_image">
               <Image
                 src={getAssetPathClient(data.designImage)}
                 alt="Design Background"
@@ -409,7 +387,7 @@ const Service = ({ data, cardBg }) => {
                 }}
               />
             </div>
-          )} */}
+          )}
           <div 
             className="cs_service_subtitle_image_section"
             style={{

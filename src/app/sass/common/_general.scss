@@ -2009,6 +2009,53 @@ label {
   }
 }
 
+/* Design Image for Subtitle Box */
+.cs_service_subtitle_design_image {
+  position: absolute;
+  left: -196px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-13deg);
+  width: 370px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  
+  @media (max-width: 1400px) {
+    left: -150px;
+    width: 300px;
+  }
+  
+  @media (max-width: 1199px) {
+    left: -120px;
+    width: 250px;
+    transform: translateY(-50%) rotate(-12deg);
+  }
+  
+  @media (max-width: 991px) {
+    left: -100px;
+    width: 200px;
+    transform: translateY(-50%) rotate(-10deg);
+  }
+  
+  @media (max-width: 767px) {
+    left: -80px;
+    width: 150px;
+    transform: translateY(-50%) rotate(-8deg);
+  }
+  
+  @media (max-width: 575px) {
+    left: -60px;
+    width: 120px;
+    transform: translateY(-50%) rotate(-7deg);
+  }
+  
+  @media (max-width: 480px) {
+    left: -50px;
+    width: 100px;
+    transform: translateY(-50%) rotate(-5deg);
+  }
+}
+
 /* Image Section (Left) */
 .cs_service_subtitle_image_section {
   flex: 1;

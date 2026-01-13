@@ -557,8 +557,9 @@ const heroData = {
   };
   
   const blogsData = {
-    sectionTitle: 'FROM OUR BLOG',
+    sectionTitle: 'LATEST BLOGS',
     sectionSubtitle: '',
+    designImage: '/assets/img/leaf.png', // Design image for right side background
     postsData: [
       {
         title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
@@ -574,7 +575,7 @@ const heroData = {
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       },
       {
-        title: 'Genetic Conditions: Understanding Their Role in Fertility and Parenthood',
+        title: 'Genetic Conditions',
         subtitle:
           'When couples begin their journey toward parenthood, questions about health and heredity often arise...',
         date: 'April 08',
@@ -600,7 +601,59 @@ const heroData = {
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       },
       {
-        title: 'Hormonal Imbalances: Understanding and Managing Their Impact on Fertility',
+        title: 'Hormonal Imbalances',
+        subtitle:
+          'Hormonal health plays a key role in overall well-being and reproductive health...',
+        date: 'April 08',
+        category: 'Female Infertility',
+        author: 'Admin',
+        thumbnail: '/assets/img/post_4.jpg',
+        btnText: 'Read More',
+        postLink: '/blog/blog-details',
+        authorIcon: '/assets/img/icons/post_user_icon.png',
+        commentIcon: '/assets/img/icons/post_comment_icon.png',
+      },
+      {
+        title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
+        subtitle:
+          'शुक्राणु संख्या में कमी को आमतौर पे "मेल इन्फर्टिलिटी" कहते है। यह एक ऐसी समस्या...',
+        date: 'April 08',
+        category: 'Male Fertility',
+        author: 'Admin',
+        thumbnail: '/assets/img/post_1.jpg',
+        btnText: 'Read More',
+        postLink: '/blog/blog-details',
+        authorIcon: '/assets/img/icons/post_user_icon.png',
+        commentIcon: '/assets/img/icons/post_comment_icon.png',
+      },
+      {
+        title: 'Genetic Conditions',
+        subtitle:
+          'When couples begin their journey toward parenthood, questions about health and heredity often arise...',
+        date: 'April 08',
+        category: 'Genetic Conditions',
+        author: 'Admin',
+        thumbnail: '/assets/img/post_2.jpg',
+        btnText: 'Read More',
+        postLink: '/blog/blog-details',
+        authorIcon: '/assets/img/icons/post_user_icon.png',
+        commentIcon: '/assets/img/icons/post_comment_icon.png',
+      },
+      {
+        title: 'शीघ्रपतन के उपाय, लक्षण और इलाज',
+        subtitle:
+          'शीघ्रपतन एक ऐसी समस्य है जो पुरुषों को किसी न किसी चरण में अनुभव करनी...',
+        date: 'April 08',
+        category: 'Male Fertility',
+        author: 'Admin',
+        thumbnail: '/assets/img/post_3.jpg',
+        btnText: 'Read More',
+        postLink: '/blog/blog-details',
+        authorIcon: '/assets/img/icons/post_user_icon.png',
+        commentIcon: '/assets/img/icons/post_comment_icon.png',
+      },
+      {
+        title: 'Hormonal Imbalances',
         subtitle:
           'Hormonal health plays a key role in overall well-being and reproductive health...',
         date: 'April 08',
@@ -795,6 +848,16 @@ const page = () => {
         <Service cardBg={'cs_gray_bg'} data={serviceData} />
       </Section>
 
+       {/* 8. Blogs Preview */}
+       <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+      >
+        <BlogSection data={blogsData} />
+      </Section>
+
       {/* 5.5. Male Infertility & Egg Freezing Section */}
       <Section
         topSpaceLg="60"
@@ -830,15 +893,7 @@ const page = () => {
         <TestimonialSection data={testimonialData} />
       </Section>
 
-      {/* 8. Blogs Preview */}
-      <Section
-        topSpaceLg="60"
-        topSpaceMd="70"
-        bottomSpaceLg="40"
-        bottomSpaceMd="50"
-      >
-        <BlogSection data={blogsData} />
-      </Section>
+     
 
       {/* 9. Credibility Section */}
       <Section
