@@ -27,7 +27,7 @@ const Header = ({ isTopBar, variant }) => {
   const menu = {
     email: 'info@seedsofinnocens.com',
     location: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
-    logoUrl: '/assets/img/SOI Logo.svg',
+    logoUrl: '/assets/img/Header Logo.svg',
     logoLink: '/',
     navItems: [
       {
@@ -731,7 +731,7 @@ const Header = ({ isTopBar, variant }) => {
             <div className="cs_main_header_in cs_compact_gap">
               <Link className="cs_site_branding" href={menu.logoLink} prefetch={false}>
                 <Image
-                  src={typeof window !== 'undefined' ? getAssetPathClient(menu.logoUrl) : menu.logoUrl}
+                  src={getAssetPathClient(menu.logoUrl)}
                   alt="img"
                   width={350}
                   height={110}

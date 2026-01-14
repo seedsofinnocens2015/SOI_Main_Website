@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaPhone, FaCalendarAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaCalendarAlt } from "react-icons/fa";
 import { getAssetPathClient } from "../../utils/assetPath";
 
 const WhyChooseUsSection = ({ data }) => {
@@ -78,7 +78,7 @@ const WhyChooseUsSection = ({ data }) => {
               <p className="cs_why_choose_text">{data.whyChooseText}</p>
             )}
             <Link href={data.callUsLink || '/contact'} className="cs_why_choose_btn">
-              <FaPhone className="cs_btn_icon" />
+              <FaPhoneAlt className="cs_btn_icon" />
               <span>{data.callUsText || 'CALL US'}</span>
             </Link>
           </div>
@@ -237,7 +237,7 @@ const WhyChooseUsSection = ({ data }) => {
             <p className="cs_why_choose_text">{data.whyChooseText}</p>
           )}
           <Link href={data.callUsLink || '/contact'} className="cs_why_choose_btn">
-            <FaPhone className="cs_btn_icon" />
+            <FaPhoneAlt className="cs_btn_icon" />
             <span>{data.callUsText || 'CALL US'}</span>
           </Link>
         </div>

@@ -3,6 +3,7 @@ import { useMemo } from "react";
 import Spacing from "../Spacing";
 import LocationsMap from "../LocationsMap";
 import Image from "next/image";
+import { getAssetPathClient } from "../../utils/assetPath";
 
 const ProjectSection = ({ data }) => {
   
@@ -88,7 +89,7 @@ const ProjectSection = ({ data }) => {
           <div className="col-lg-5 col-md-12">
             <div className="cs_locations_map_wrapper">
               {/* <LocationsMap locations={allLocationsForMap} /> */}
-              <Image src="/assets/img/map.svg" alt="map" width={1500} height={1500} />
+              <Image src={getAssetPathClient("/assets/img/map.svg")} alt="map" width={1500} height={1500} />
             </div>
           </div>
         </div>

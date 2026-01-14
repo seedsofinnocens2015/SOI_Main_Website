@@ -2,6 +2,8 @@
 const isProduction = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
+  // Base path for testing on Hostinger (/new)
+  basePath: '/new',
   // Only use static export for production builds
   ...(isProduction && {
     output: 'export',

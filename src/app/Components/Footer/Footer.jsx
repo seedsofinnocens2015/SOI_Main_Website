@@ -5,16 +5,9 @@ import Link from 'next/link';
 import { getAssetPathClient } from '../../utils/assetPath';
 
 const Footer = () => {
-  // Use useState to ensure images are processed on client-side
-  const [mounted, setMounted] = React.useState(false);
-  
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-  
   const data = {
  
-    logo: '/assets/img/footer_logo.svg',
+    logo: '/assets/img/Footer Logo.svg',
     contactText:
       'All Days Open <br /> Open Hours:<br />  Mon - Sun: 9.00 am. - 7.00 pm. ',
     contactText2: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
@@ -66,7 +59,7 @@ const Footer = () => {
             <div className="cs_footer_company_info">
               <div className="cs_footer_logo">
                 <Image 
-                  src={mounted ? getAssetPathClient(data.logo) : data.logo} 
+                  src={getAssetPathClient(data.logo)} 
                   alt="Seeds of Innocens IVF" 
                   width={305} 
                   height={63} 
