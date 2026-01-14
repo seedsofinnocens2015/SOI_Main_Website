@@ -26,6 +26,8 @@ const StarIcon = () => (
 );
 
 const TestimonialSection = ({ data }) => {
+  // Duplicate testimonials for seamless loop
+  const duplicatedTestimonials = [...data.testimonials, ...data.testimonials];
 
   return (
     <>
@@ -72,42 +74,44 @@ const TestimonialSection = ({ data }) => {
           </div>
         )}
         <div className="cs_height_30 cs_height_lg_30" />
-        <div className="row cs_gap_y_50 justify-content-center">
-          {data.testimonials.map((testimonial, index) => (
-            <div key={index} className="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-delay={index * 100}>
-              <div className="cs_testimonial_card">
-                {/* Profile Picture */}
-                <div className="cs_testimonial_avatar_wrapper">
-                  <div className="cs_testimonial_avatar">
-                    <Image 
-                      src={getAssetPathClient(testimonial.avatar)} 
-                      alt={testimonial.name} 
-                      width={80} 
-                      height={80} 
-                      loading="eager"
-                    />
+        <div className="cs_testimonial_marquee_wrapper">
+          <div className="cs_testimonial_marquee">
+            {duplicatedTestimonials.map((testimonial, index) => (
+              <div key={index} className="cs_testimonial_marquee_item">
+                <div className="cs_testimonial_card">
+                  {/* Profile Picture */}
+                  <div className="cs_testimonial_avatar_wrapper">
+                    <div className="cs_testimonial_avatar">
+                      <Image 
+                        src={getAssetPathClient(testimonial.avatar)} 
+                        alt={testimonial.name} 
+                        width={80} 
+                        height={80} 
+                        loading="eager"
+                      />
+                    </div>
                   </div>
+                  
+                  {/* Star Rating */}
+                  <div className="cs_testimonial_rating_wrapper">
+                    {Array.from({ length: testimonial.rating || 5 }).map((_, starIndex) => (
+                      <StarIcon key={starIndex} />
+                    ))}
+                  </div>
+                  
+                  {/* Name */}
+                  <h3 className="cs_testimonial_name">
+                    {testimonial.name}
+                  </h3>
+                  
+                  {/* Testimonial Text */}
+                  <p className="cs_testimonial_text">
+                    {testimonial.subtitle}
+                  </p>
                 </div>
-                
-                {/* Star Rating */}
-                <div className="cs_testimonial_rating_wrapper">
-                  {Array.from({ length: testimonial.rating || 5 }).map((_, starIndex) => (
-                    <StarIcon key={starIndex} />
-                  ))}
-                </div>
-                
-                {/* Name */}
-                <h3 className="cs_testimonial_name">
-                  {testimonial.name}
-                </h3>
-                
-                {/* Testimonial Text */}
-                <p className="cs_testimonial_text">
-                  {testimonial.subtitle}
-                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>

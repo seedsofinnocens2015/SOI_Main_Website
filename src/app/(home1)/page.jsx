@@ -714,6 +714,33 @@ const heroData = {
       {
         rating: 5,
         subtitle:
+          'Seeds of Innocens gave us the gift of parenthood. The doctors were compassionate, the staff was supportive, and the treatment was excellent. We are forever grateful for our beautiful baby.',
+        avatar: '/assets/img/avatar_1.png',
+        name: 'Couple from Sydney, Australia',
+        position: 'Successful Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=0XD9OrkunWI', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_1')
+      },
+      {
+        rating: 5,
+        subtitle:
+          'The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream of becoming parents. Highly recommended!',
+        avatar: '/assets/img/avatar_1.png',
+        name: 'Parents from Jharkhand, India',
+        position: 'Happy Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=wmZZrZFaGB8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
+      },
+      {
+        rating: 5,
+        subtitle:
+          'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
+        avatar: '/assets/img/avatar_1.png',
+        name: 'Family from New Delhi, India',
+        position: 'Grateful Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
+      },
+      {
+        rating: 5,
+        subtitle:
           'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
         avatar: '/assets/img/avatar_1.png',
         name: 'Family from New Delhi, India',
