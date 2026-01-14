@@ -1,6 +1,6 @@
 import About from '@/app/Components/About';
-import CtaSection1 from '@/app/Components/CtaSection/CtaSection1';
-import CounterSection2 from '@/app/Components/FunSection/CounterSection2';
+import VideoSection from '@/app/Components/VideoSection';
+import CounterSection from '@/app/Components/FunSection/CounterSection';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import TeamSection from '@/app/Components/TeamSection';
@@ -166,7 +166,7 @@ const page = () => {
         bottomSpaceMd="120"
         className="cs_counter_area_2"
       >
-        <CounterSection2 data={counterData} />
+        <CounterSection data={counterData.map(item => ({ number: `${item.countTo}${item.suffix}`, title: item.title }))} />
       </Section>
       {/* End Counter Section */}
 
@@ -179,7 +179,7 @@ const page = () => {
         className={'cs_cta cs_style_2 cs_blue_bg cs_bg_filed cs_center'}
         backgroundImage="/assets/img/cta_bg_1.jpeg"
       >
-        <CtaSection1 data={ctaData} />
+        <VideoSection data={{ videoUrl: ctaData.videoLink, subtitle: ctaData.subtitle, title: ctaData.title, btnText: ctaData.buttonText, btnLink: ctaData.buttonLink, shapeImage: ctaData.brandImage }} />
       </Section>
       {/* End CTA Section */}
 

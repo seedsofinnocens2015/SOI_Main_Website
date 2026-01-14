@@ -143,7 +143,7 @@ const youtubeVideosData = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const openModal = (video) => {
@@ -508,5 +508,5 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 

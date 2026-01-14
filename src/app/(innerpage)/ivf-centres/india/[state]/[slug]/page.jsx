@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import indiaCentresData from '../../../india-centres-data.json';
-import doctorsData from '../../../doctors/doctors-data.json';
+import doctorsData from '../../../../doctors/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 

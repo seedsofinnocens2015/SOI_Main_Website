@@ -1,7 +1,7 @@
-import CounterSection2 from '@/app/Components/FunSection/CounterSection2';
+import CounterSection from '@/app/Components/FunSection/CounterSection';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
-import ServiceSection4 from '@/app/Components/Service/ServiceSection4';
+import Image from 'next/image';
 import React from 'react';
 
 const headingData = {
@@ -94,13 +94,25 @@ const page = () => {
         bottomSpaceLg="70"
         bottomSpaceMd="120"
       >
-        <ServiceSection4 data={serviceData} />
+        <div className="container">
+          <div className="cs_service_details_wrapper">
+            {serviceData.serviceHeading && <h2>{serviceData.serviceHeading}</h2>}
+            {serviceData.mainImage && (
+              <div className="cs_service_details_image">
+                <Image src={serviceData.mainImage} alt="Service" width={800} height={600} />
+              </div>
+            )}
+            {serviceData.serviceDetails && serviceData.serviceDetails.map((detail, index) => (
+              <p key={index}>{detail}</p>
+            ))}
+          </div>
+        </div>
       </Section>
       {/* End Service Details Section */}
 
       {/* Start Counter Section */}
       <Section bottomSpaceLg="70" bottomSpaceMd="120">
-        <CounterSection2 data={counterData} />
+        <CounterSection data={counterData.map(item => ({ number: `${item.countTo}${item.suffix}`, title: item.title }))} />
       </Section>
       {/* End Counter Section */}
 
