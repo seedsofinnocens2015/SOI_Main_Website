@@ -14,7 +14,7 @@ const NewsMediaSection = ({ data }) => {
     fade: false,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
     pauseOnFocus: true,
     pauseOnDotsHover: true,

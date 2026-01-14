@@ -711,15 +711,15 @@ const heroData = {
         position: 'Grateful Parents',
         videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
       },
-      // {
-      //   rating: 5,
-      //   subtitle:
-      //     'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
-      //   avatar: '/assets/img/avatar_1.png',
-      //   name: 'Family from New Delhi, India',
-      //   position: 'Grateful Parents',
-      //   videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
-      // },
+      {
+        rating: 5,
+        subtitle:
+          'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
+        avatar: '/assets/img/avatar_1.png',
+        name: 'Family from New Delhi, India',
+        position: 'Grateful Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
+      },
     ],
   };
 
@@ -743,76 +743,6 @@ const heroData = {
     bookAppointmentText: 'BOOK AN APPOINTMENT',
     selfieImage: '/assets/img/babywithgirl.svg', // Please replace with actual selfie image
     // speechBubbleText: 'Self-cycle™ IVF means\nA baby with your genes,\ntraits and quirks.',
-  };
-
-  const geneticsData = {
-    cards: [
-      {
-        title: 'Male Infertility',
-        imageUrl: '/assets/img/Male Infertility1.png',
-        bgColor: '#24608f',
-        description: 'Male infertility accounts for about 50% of infertility cases. It\'s not a reflection of masculinity, but a medical condition that can be treated. Early assessment and treatment are crucial for successful outcomes. Let\'s end the stigma together!',
-        highlightText: 'Let\'s end the stigma together!',
-        // primaryButton: {
-        //   text: 'Talk to our Andrologist today!',
-        //   link: '/advanced-fertility-care/male-infertility/',
-        // },
-        secondaryButton: {
-          text: 'Learn More',
-          link: '/male-infertility-treatment-in-india',
-        },
-      },
-      {
-        title: 'Egg freezing',
-        bgColor: '#E45352',
-        imageUrl: '/assets/img/Egg freezing1.png',
-        description: 'Egg freezing is a smart, science-backed way to preserve your fertility on your terms. Whether you\'re focusing on your career, waiting for the right time, or facing medical reasons, egg freezing gives you control over your future.',
-        highlightText: 'Your fertility, Your choice!',
-        // primaryButton: {
-        //   text: 'Talk to our experts!',
-        //   link: '/advanced-fertility-care/egg-freezing/',
-        // },
-        secondaryButton: {
-          text: 'Learn More',
-          link: '/egg-freezing',
-        },
-      },
-    ],
-  };
-
-  const credibilityData = {
-    subtitle: 'RECOGNIZED AND AWARDED',
-    title: '',
-    description: '',
-    leftImage: '/assets/img/decorative-left.png', // Add your left decorative image path here
-    rightImage: '/assets/img/decorative-right.png', // Add your right decorative image path here
-    logos: [
-      {
-        // title: 'TIMES HEALTHCARE ACHIEVERS',
-        // subtitle: 'DELHI NCR 2020',
-        image: '/assets/img/Times-Healthcare-Achievers.png',
-      },
-      {
-        // title: 'NATIONAL FERTILITY AWARDS',
-        // subtitle: 'Healthworld.com',
-        image: '/assets/img/National-Fertility-Awards-2022.png',
-      },
-      {
-          // title: 'INDIAN FERTILITY SOCIETY',
-          // subtitle: 'IFS',
-        image: '/assets/img/Indian-Fertility-Society.png',
-      },
-      {
-        // title: 'ASSOCIATION OF OBSTETRICIANS AND GYNAECOLOGISTS OF DELHI',
-        // subtitle: 'AOGD',
-        image: '/assets/img/Association-of-Obstetricians-And-Gynaecologists-of-Delhi.png',
-      },
-      {
-        // title: 'दैनिक जागरण',
-        // subtitle: 'Dainik Jagran',
-        image: '/assets/img/Screenshot_2025-05-02_155258-removebg-preview.png',
-      },
-    ],
   };
 
   const faqData = {
