@@ -11,6 +11,7 @@ import NewsMediaSection from '../Components/NewsMediaSection';
 import WhyChooseUsSection from '../Components/WhyChooseUsSection';
 import GeneticsSection from '../Components/GeneticsSection';
 import CredibilitySection from '../Components/CredibilitySection';
+import FAQSection from '../Components/FAQSection';
 
 const heroData = {
     primarySlider: [
@@ -814,6 +815,40 @@ const heroData = {
     ],
   };
 
+  const faqData = {
+    sectionTitle: {
+      part1: 'HAVE ANY QUESTIONS?',
+      part2: 'OUR EXPERTS ARE HAPPY TO GUIDE YOU.',
+    },
+    designImage: '/assets/img/leaf.png', // Design image for left side background
+    faqCategories: [
+      {
+        icon: '/assets/img/icons/ffc.svg',
+        title: 'Female Frequently Asked Questions',
+        description: 'Details on ovarian function, egg retrieval, reproductive health, and treatment planning.',
+        link: '/faq/female',
+      },
+      {
+        icon: '/assets/img/icons/mfc.svg',
+        title: 'Male Frequently Asked Questions',
+        description: 'Insights into male reproductive health, semen analysis, diagnostic tests, and care.',
+        link: '/faq/male',
+      },
+      {
+        icon: '/assets/img/icons/cgt.svg',
+        title: 'Genetic Frequently Asked Questions',
+        description: 'Information on genetic screening, inherited conditions, embryo testing, and risk assessment.',
+        link: '/faq/genetic',
+      },
+      {
+        icon: '/assets/img/icons/fa.svg',
+        title: 'Learning Frequently Asked Questions',
+        description: 'Structured learning on reproductive health and assisted fertility.',
+        link: '/faq/learning',
+      },
+    ],
+  };
+
 const page = () => {
     return (
         <div>
@@ -898,6 +933,8 @@ const page = () => {
         <TestimonialSection data={testimonialData} />
       </Section>
 
+      
+
        {/* 6. Centres Overview */}
        <Section 
       topSpaceLg="60" 
@@ -908,8 +945,19 @@ const page = () => {
         <ProjectSection data={projectData} />
       </Section>
 
-      {/* 5.5. Male Infertility & Egg Freezing Section */}
+      {/* 8. FAQ Section */}
       <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className="cs_faq_area"
+      >
+        <FAQSection data={faqData} />
+      </Section>
+
+      {/* 5.5. Male Infertility & Egg Freezing Section */}
+      {/* <Section
         topSpaceLg="60"
         topSpaceMd="70"
         bottomSpaceLg="40"
@@ -917,7 +965,7 @@ const page = () => {
         className={'cs_service_feature_section'}
       >
         <GeneticsSection data={geneticsData} />
-      </Section>
+      </Section> */}
 
       
 
@@ -928,7 +976,7 @@ const page = () => {
      
 
       {/* 9. Credibility Section */}
-      <Section
+      {/* <Section
         topSpaceLg="60"
         topSpaceMd="70"
         bottomSpaceLg="40"
@@ -936,7 +984,7 @@ const page = () => {
         className={'cs_credibility_section'}
       >
         <CredibilitySection data={credibilityData} />
-      </Section>
+      </Section> */}
 
      
 
