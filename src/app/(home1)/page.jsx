@@ -185,7 +185,7 @@ const heroData = {
         subHeading: 'In-Vitro Fertilization (IVF) Overview',
         subtitle: '<strong>In-Vitro Fertilization (IVF)</strong> is a method that helps couples with fertility related problems and in conceiving a child. During the IVF treatment, the mature eggs are retrieved from the ovaries of women and sperms from the partner which are further fertilized in the laboratory to make embryos. After a few days, these embryos are transferred into the uterus of the woman.',
         imageUrl: '/assets/img/IVF-ICSI.jpg',
-        link: '/fertility-treatments/ivf-icsi/',
+        link: '/ivf/',
       },
       {
         iconUrl: '/assets/img/icons/Genetic Testing.svg',
@@ -783,25 +783,25 @@ const heroData = {
         icon: '/assets/img/icons/ffc.svg',
         title: 'Female Frequently Asked Questions',
         description: 'Details on ovarian function, egg retrieval, reproductive health, and treatment planning.',
-        link: '/faq/female',
+        link: '/',
       },
       {
         icon: '/assets/img/icons/mfc.svg',
         title: 'Male Frequently Asked Questions',
         description: 'Insights into male reproductive health, semen analysis, diagnostic tests, and care.',
-        link: '/faq/male',
+        link: '/',
       },
       {
         icon: '/assets/img/icons/cgt.svg',
         title: 'Genetic Frequently Asked Questions',
         description: 'Information on genetic screening, inherited conditions, embryo testing, and risk assessment.',
-        link: '/faq/genetic',
+        link: '/',
       },
       {
         icon: '/assets/img/icons/fa.svg',
         title: 'Learning Frequently Asked Questions',
         description: 'Structured learning on reproductive health and assisted fertility.',
-        link: '/faq/learning',
+        link: '/',
       },
     ],
   };

@@ -8,7 +8,7 @@ const CtaSection = ({ data = {} }) => {
     {
       imageUrl: "/assets/img/icons/ffc.svg",
       title: "Female fertility care",
-      link:  "/female-infertility",
+      link:  "/",
     },
     {
       imageUrl: "/assets/img/icons/mfc.svg",
@@ -23,7 +23,7 @@ const CtaSection = ({ data = {} }) => {
     {
       imageUrl:"/assets/img/icons/fa.svg",
       title: "Fertility Academy",
-      link:  "/fertility-academy",
+      link:  "/",
     },
   ];
 
