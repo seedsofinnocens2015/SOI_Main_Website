@@ -205,17 +205,27 @@
     height: 100px;
     width: 100%;
 
-    img {
-      width: auto;
+    .cs_cta_icon {
+      width: 100px;
       height: 100px;
-      object-fit: contain;
+      display: block;
+      background-color: var(--cta-icon-color, #CB3148);
+      -webkit-mask-image: var(--cta-icon-url);
+      mask-image: var(--cta-icon-url);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-size: contain;
+      mask-size: contain;
     }
 
     @media (max-width: 991px) {
       margin-bottom: 12px;
       height: 80px;
 
-      img {
+      .cs_cta_icon {
+        width: 80px;
         height: 80px;
       }
     }
@@ -224,7 +234,8 @@
       margin-bottom: 10px;
       height: 70px;
 
-      img {
+      .cs_cta_icon {
+        width: 70px;
         height: 70px;
       }
     }

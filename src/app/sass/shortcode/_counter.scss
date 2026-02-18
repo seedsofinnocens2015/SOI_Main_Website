@@ -49,7 +49,7 @@
 
   .cs_counter_badge {
     display: inline-block;
-    background-color: #CCC968;
+    background-color: #CB3148;
     color: #ffffff;
     padding: 5px 50px;
     border-radius: 25px;
@@ -83,7 +83,7 @@
 
     .cs_counter_heading_highlighted {
       font-size: 30px;
-      color: #B3C56F;
+      color: #CB3148;
     }
 
     .cs_counter_heading_rest {
@@ -126,6 +126,7 @@
     justify-content: center;
     gap: 0;
     min-width: 0;
+    --counter-color: #CB3148;
     
     @media (max-width: 991px) {
       justify-content: center;
@@ -145,7 +146,7 @@
   .cs_counter_number {
     font-size: clamp(36px, 5vw, 64px);
     font-weight: 700;
-    color: #B3C56F;
+    color: var(--counter-color, #CB3148);
     font-family: var(--heading-font, sans-serif);
     line-height: 1.2;
     

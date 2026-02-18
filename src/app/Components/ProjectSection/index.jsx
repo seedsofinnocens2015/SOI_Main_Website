@@ -6,6 +6,48 @@ import Image from "next/image";
 import { getAssetPathClient } from "../../utils/assetPath";
 
 const ProjectSection = ({ data }) => {
+  const getCentreBorderColor = (title) => {
+    const key = (title || "").toString().trim().toLowerCase();
+
+    const groupCB3148 = new Set([
+      "malviya nagar, delhi",
+      "jankpuri, delhi",
+      "pitampura, delhi",
+      "ranchi, jharkhand",
+      "mabela, muscat, oman",
+      "lusaka, zambia, africa",
+    ]);
+
+    const group53A7A7 = new Set([
+      "haldwani, uttarakhand",
+      "muzaffarpur, bihar",
+      "patna, bihar",
+      "kitwe, zambia, africa",
+    ]);
+
+    const groupE1B41A = new Set([
+      "gurgaon, haryana",
+      "faridabad, haryana",
+      "guwahati, assam",
+      "kochi, kerala",
+      "kasaragod, kerala",
+    ]);
+
+    const group38425B = new Set([
+      "gorakhpur, uttar pradesh",
+      "lucknow, uttar pradesh",
+      "kanpur, uttar pradesh",
+      "meerut, uttar pradesh",
+      "agra, uttar pradesh",
+    ]);
+
+    if (groupCB3148.has(key)) return "#CB3148";
+    if (group53A7A7.has(key)) return "#53A7A7";
+    if (groupE1B41A.has(key)) return "#E1B41A";
+    if (group38425B.has(key)) return "#38425B";
+
+    return "#CB3148";
+  };
   
   // Separate India and International locations
   const indiaTabs = useMemo(() => data?.tabData?.filter(tab => tab.id !== 'international') || [], [data?.tabData]);
@@ -55,7 +97,11 @@ const ProjectSection = ({ data }) => {
                 <div className="cs_locations_container">
                   <div className="cs_centres_grid">
                     {indiaLocations.map((item, index) => (
-                      <div key={index} className="cs_centre_card">
+                      <div
+                        key={index}
+                        className="cs_centre_card"
+                        style={{ "--centre-border-color": getCentreBorderColor(item.title) }}
+                      >
                         <div className="cs_centre_content">
                           <h3 className="cs_centre_title">{item.title}</h3>
                         </div>
@@ -72,7 +118,11 @@ const ProjectSection = ({ data }) => {
                   <div className="cs_locations_scroll_container">
             <div className="cs_centres_grid">
                       {internationalLocations.map((item, index) => (
-                        <div key={index} className="cs_centre_card">
+                        <div
+                          key={index}
+                          className="cs_centre_card"
+                          style={{ "--centre-border-color": getCentreBorderColor(item.title) }}
+                        >
                   <div className="cs_centre_content">
                     <h3 className="cs_centre_title">{item.title}</h3>
                   </div>

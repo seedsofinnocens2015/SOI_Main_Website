@@ -193,7 +193,7 @@ const heroData = {
         title: 'Genetic testing (PGT-A & PGT-M)',
         subHeading: 'Understanding PGT-SR',
         subtitle: '<strong>PGT-SR</strong> is a specialized test that looks at embryos for possible chromosomal abnormalities produced by structural rearrangements in translocations, deletions, and duplications. Advanced testing aids in identifying embryos with higher probabilities of implantation and subsequent development. At Seeds of Innocens, we provide cutting-edge PGT-SR testing as part of our all-inclusive IVF services, guiding couples toward fulfilling their dreams of parenthood.',
-        imageUrl: '/assets/img/PGT-A.jpg',
+        imageUrl: '/assets/img/PGT-A.webp',
         link: '/genetic-testing-pgt/pgt-a/',
       },
       {
@@ -202,7 +202,7 @@ const heroData = {
         title: 'Blastocyst Transfer',
         subHeading: 'Blastocyst Transfer',
         subtitle: '<strong>Blastocyst Transfer</strong> is an advanced technique where embryos are cultured in the lab for 5-6 days to reach the blastocyst stage before being transferred to the uterus. This stage is considered the most viable for implantation, as it indicates the embryo\'s ability to successfully attach to the uterine wall and grow.',
-        imageUrl: '/assets/img/Blastocyst-Transfer.jpg',
+        imageUrl: '/assets/img/Blastocyst-Transfer.png',
         link: '/fertility-treatments/blastocyst-transfer/',
       },
       {
@@ -247,7 +247,7 @@ const heroData = {
         title: 'Surrogacy',
         subHeading: 'Surrogacy: Ethical, Medically Guided Assistance with Complete End-to-End Care',
         subtitle: '<strong>Surrogacy</strong> is an ethical, medically guided process that provides assistance with complete end-to-end care. This approach allows couples to achieve pregnancy through the use of a surrogate mother, offering hope and a pathway to parenthood.',
-        imageUrl: '/assets/img/Surrogacy.jpg',
+        imageUrl: '/assets/img/Surrogacy1.jpg',
         link: '/',
       },
       

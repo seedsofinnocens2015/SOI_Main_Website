@@ -126,7 +126,7 @@
 }
 
 .cs_faq_title_part1 {
-  color: #CCC968;
+  color: #CB3148;
 }
 
 .cs_faq_title_part2 {
@@ -219,11 +219,21 @@
   justify-content: center;
   width: 100px;
   height: 100px;
+  --faq-icon-color: #CB3148;
 
-  img {
+  .cs_faq_icon_mask {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    display: block;
+    background-color: var(--faq-icon-color, #CB3148);
+    -webkit-mask-image: var(--faq-icon-url);
+    mask-image: var(--faq-icon-url);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
   }
 
   @media (max-width: 767px) {
@@ -302,7 +312,7 @@
 
 .cs_faq_explore_link {
   display: inline-block;
-  color: #CCC968;
+  color: #CB3148;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;

@@ -224,11 +224,11 @@ label {
   }
 
   &.cs_color_1 {
-    background-color: #CCC968;
+    background-color: #CB3148;
     color: #fff;
 
     &:hover {
-      background-color: #9c9825;
+      background-color: #CB3148;
     }
   }
 
@@ -252,13 +252,13 @@ label {
   }
 
   &.cs_green_btn {
-    background-color: #CCC968;
+    background-color: #CB3148;
     color: #ffffff;
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(154, 205, 50, 0.3);
 
     &:hover {
-      background-color: #9c9825;
+      background-color: #CB3148;
       color: #ffffff;
       box-shadow: 0 4px 12px rgba(154, 205, 50, 0.4);
       transform: translateY(-1px);
@@ -1614,7 +1614,7 @@ label {
 }
 
 .cs_service_main_title_span {
-  color: #CCC968;
+  color: #CB3148;
 }
 
 /* Service Slider Container */
@@ -1964,7 +1964,7 @@ label {
   left: 0;
   top: 0;
   height: 100%;
-  background-color: #CCC968;
+  background-color: #CB3148;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -2179,7 +2179,7 @@ label {
 .cs_service_subtitle_title {
   font-size: 28px;
   font-weight: 700;
-  color: #CCC968;
+  color: #CB3148;
   margin: 0;
   line-height: 1.3;
   text-transform: uppercase;
@@ -2230,7 +2230,7 @@ label {
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
-  background-color: #CCC968;
+  background-color: #CB3148;
   text-decoration: none;
   padding: 12px 32px;
   border-radius: 50px;
@@ -2240,7 +2240,7 @@ label {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   
   &:hover {
-    background-color: #CCC968;
+    background-color: #CB3148;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
@@ -2897,7 +2897,7 @@ label {
 .cs_page_heading {
   height: 300px;
   padding: 80px 0 30px;
-  margin-top: 144px;
+  margin-top: 110px;
   @media (max-width: 991px) {
     height: 320px;
     padding: 60px 0 25px;

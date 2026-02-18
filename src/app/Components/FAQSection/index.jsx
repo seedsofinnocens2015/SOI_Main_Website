@@ -4,6 +4,17 @@ import Image from 'next/image';
 import { getAssetPathClient } from '../../utils/assetPath';
 
 const FAQSection = ({ data }) => {
+  const getFaqIconColor = (iconUrl) => {
+    const normalized = (iconUrl || '').toString().toLowerCase();
+
+    // Same palette mapping by icon filename
+    if (normalized.endsWith('/ffc.svg') || normalized.includes('ffc.svg')) return '#CB3148';
+    if (normalized.endsWith('/mfc.svg') || normalized.includes('mfc.svg')) return '#53A7A7';
+    if (normalized.endsWith('/cgt.svg') || normalized.includes('cgt.svg')) return '#E1B41A';
+    if (normalized.endsWith('/fa.svg') || normalized.includes('fa.svg')) return '#38425B';
+
+    return '#CB3148';
+  };
 
   return (
     <div className="cs_faq_section">
@@ -14,7 +25,7 @@ const FAQSection = ({ data }) => {
             <h2 className="cs_faq_main_title">
               {typeof data.sectionTitle === 'object' && data.sectionTitle.part1 ? (
                 <>
-                  <span className="cs_faq_title_part1" style={{ color: '#CCC968' }}>
+                  <span className="cs_faq_title_part1" style={{ color: '#CB3148' }}>
                     {data.sectionTitle.part1}
                   </span>{' '}
                   <span className="cs_faq_title_part2" style={{ color: '#333333' }}>
@@ -56,14 +67,14 @@ const FAQSection = ({ data }) => {
                 <div className="cs_faq_card">
                   <div className="cs_faq_card_content">
                     {category.icon && (
-                      <div className="cs_faq_icon">
-                        <Image 
-                          src={getAssetPathClient(category.icon)} 
-                          alt={category.title} 
-                          width={40} 
-                          height={40} 
-                          loading="eager"
-                        />
+                      <div
+                        className="cs_faq_icon"
+                        style={{
+                          '--faq-icon-color': getFaqIconColor(category.icon),
+                          '--faq-icon-url': `url("${getAssetPathClient(category.icon)}")`,
+                        }}
+                      >
+                        <span className="cs_faq_icon_mask" aria-hidden="true" />
                       </div>
                     )}
                     <div className="cs_faq_card_body">

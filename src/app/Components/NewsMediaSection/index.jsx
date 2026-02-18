@@ -75,7 +75,7 @@ const NewsMediaSection = ({ data }) => {
             <h2 className="cs_service_main_title">
               {typeof data.sectionTitle === 'object' && data.sectionTitle.part1 ? (
                 <>
-                  <span className="cs_news_media_main_title" style={{ color: '#CCC968' }}>
+                  <span className="cs_news_media_main_title" style={{ color: '#CB3148' }}>
                     {data.sectionTitle.part1}
                   </span>{' '}
                   <span style={{ color: '#000000' }}>{data.sectionTitle.part2}</span>

@@ -575,7 +575,7 @@
   display: flex;
   flex-direction: column;
   border-radius: 12px;
-  border: 1px solid #CCC968;
+  border: 1px solid #CB3148;
   background-color: var(--white);
   overflow: hidden;
   transition: all 0.3s ease;
@@ -686,14 +686,14 @@
 .cs_blog_card_link {
   font-size: 15px;
   font-weight: 400;
-  color: #CCC968;
+  color: #CB3148;
   text-decoration: none;
   transition: color 0.3s ease;
   display: inline-block;
   margin-top: auto;
   
   &:hover {
-    color: #CCC968;
+    color: #CB3148;
   }
   
   @media (max-width: 767px) {

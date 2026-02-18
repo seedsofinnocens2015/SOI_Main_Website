@@ -83,7 +83,7 @@ const Footer = () => {
               <div className="cs_social_btns cs_style_1">
                 <Link href={data.facebookHref} target="_blank" rel="noopener noreferrer" className="cs_center">
                   <Image
-                    src={getAssetPathClient('/assets/img/icons/facebook.png')}
+                    src={getAssetPathClient('/assets/img/icons/facebook.svg')}
                     alt="Facebook"
                     width={20}
                     height={20}
@@ -92,7 +92,7 @@ const Footer = () => {
                 </Link>
                 <Link href={data.youtubeHref} target="_blank" rel="noopener noreferrer" className="cs_center">
                   <Image
-                    src={getAssetPathClient('/assets/img/icons/youtube.png')}
+                    src={getAssetPathClient('/assets/img/icons/youtube.svg')}
                     alt="YouTube"
                     width={20}
                     height={20}
@@ -101,7 +101,7 @@ const Footer = () => {
                 </Link>
                 <Link href={data.linkedinHref} target="_blank" rel="noopener noreferrer" className="cs_center">
                   <Image
-                    src={getAssetPathClient('/assets/img/icons/linkedin.png')}
+                    src={getAssetPathClient('/assets/img/icons/linkedin.svg')}
                     alt="LinkedIn"
                     width={20}
                     height={20}
@@ -110,7 +110,7 @@ const Footer = () => {
                 </Link>
                 <Link href={data.instagramHref} target="_blank" rel="noopener noreferrer" className="cs_center">
                   <Image
-                    src={getAssetPathClient('/assets/img/icons/instagram.png')}
+                    src={getAssetPathClient('/assets/img/icons/instagram.svg')}
                     alt="Instagram"
                     width={20}
                     height={20}

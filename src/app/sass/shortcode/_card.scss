@@ -593,7 +593,7 @@
 .cs_centre_card {
   padding: 10px 12px;
   background-color: var(--white);
-  border: 1px solid #CCC968;
+  border: 1px solid var(--centre-border-color, #CB3148);
   border-radius: 8px;
   transition: all 0.3s ease;
   display: flex;
@@ -951,7 +951,7 @@
 .cs_location_section_title {
   font-size: 24px;
   font-weight: 600;
-  color: #CCC968;
+  color: #CB3148;
   margin-bottom: 15px;
   
   @media (max-width: 767px) {
@@ -1072,7 +1072,7 @@
   }
   
   &:hover {
-    border-color: #CD2527;
+    border-color: #CB3148;
     box-shadow: 0 2px 8px rgba(205, 37, 39, 0.1);
   }
 }
@@ -1096,12 +1096,12 @@
     border-bottom: 1px solid #e0e0e0;
     
     .cs_location_dropdown_title {
-      color: #CD2527;
+      color: #CB3148;
     }
     
     .cs_location_dropdown_icon {
       transform: rotate(180deg);
-      color: #CD2527;
+      color: #CB3148;
     }
   }
   
