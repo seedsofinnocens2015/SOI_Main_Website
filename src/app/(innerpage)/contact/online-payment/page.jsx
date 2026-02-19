@@ -2,6 +2,7 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import Image from 'next/image';
 import React from 'react';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'Online Payment',
@@ -43,7 +44,7 @@ const page = () => {
                     justifyContent: 'center'
                   }}>
                     <Image
-                      src="/assets/img/Online Payment.webp"
+                      src={getAssetPathClient("/assets/img/Online Payment.webp")}
                       alt="Payment QR Code"
                       width={300}
                       height={300}

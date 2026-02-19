@@ -7,6 +7,7 @@ import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaTag, FaArrowRight } from 'react-icons/fa';
 import blogsData from '@/app/data/blogs.json';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'News & Press',
@@ -209,23 +210,14 @@ const Page = () => {
                       width: '100%'
                     }}>
                       <Image 
-                        src={item.image} 
+                        src={getAssetPathClient(item.image)} 
                         alt={item.title} 
                         width={400} 
                         height={250}
                         className="w-100"
                         loading="eager"
                         style={{ 
-                          objectFit: 'cover', 
-                          transition: 'transform 0.5s ease',
-                          width: '100%',
-                          height: '100%'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = 'scale(1.1)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = 'scale(1)';
+                          objectFit: 'contain', 
                         }}
                       />
                       <div style={{

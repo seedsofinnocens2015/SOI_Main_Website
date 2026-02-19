@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAssetPathClient } from '../../utils/assetPath';
 
+const SOCIAL_COLORS = ['#CB3148', '#53A7A7', '#E1B41A', '#38425B'];
+
 const Footer = () => {
   const data = {
  
@@ -81,42 +83,27 @@ const Footer = () => {
                 </div>
               </div>
               <div className="cs_social_btns cs_style_1">
-                <Link href={data.facebookHref} target="_blank" rel="noopener noreferrer" className="cs_center">
-                  <Image
-                    src={getAssetPathClient('/assets/img/icons/facebook.svg')}
-                    alt="Facebook"
-                    width={20}
-                    height={20}
-                    style={{ width: '20px', height: '20px', objectFit: 'contain' }}
-                  />
-                </Link>
-                <Link href={data.youtubeHref} target="_blank" rel="noopener noreferrer" className="cs_center">
-                  <Image
-                    src={getAssetPathClient('/assets/img/icons/youtube.svg')}
-                    alt="YouTube"
-                    width={20}
-                    height={20}
-                    style={{ width: '20px', height: '20px', objectFit: 'contain' }}
-                  />
-                </Link>
-                <Link href={data.linkedinHref} target="_blank" rel="noopener noreferrer" className="cs_center">
-                  <Image
-                    src={getAssetPathClient('/assets/img/icons/linkedin.svg')}
-                    alt="LinkedIn"
-                    width={20}
-                    height={20}
-                    style={{ width: '20px', height: '20px', objectFit: 'contain' }}
-                  />
-                </Link>
-                <Link href={data.instagramHref} target="_blank" rel="noopener noreferrer" className="cs_center">
-                  <Image
-                    src={getAssetPathClient('/assets/img/icons/instagram.svg')}
-                    alt="Instagram"
-                    width={20}
-                    height={20}
-                    style={{ width: '20px', height: '20px', objectFit: 'contain' }}
-                  />
-                </Link>
+                {[
+                  { href: data.facebookHref, icon: '/assets/img/icons/facebook.svg', alt: 'Facebook' },
+                  { href: data.youtubeHref, icon: '/assets/img/icons/youtube.svg', alt: 'YouTube' },
+                  { href: data.linkedinHref, icon: '/assets/img/icons/linkedin.svg', alt: 'LinkedIn' },
+                  { href: data.instagramHref, icon: '/assets/img/icons/instagram.svg', alt: 'Instagram' },
+                ].map((item, index) => (
+                  <Link
+                    key={item.alt}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cs_footer_social_link"
+                    style={{
+                      backgroundColor: SOCIAL_COLORS[index],
+                      ['--footer-social-icon-url']: `url("${getAssetPathClient(item.icon)}")`,
+                    }}
+                    aria-label={item.alt}
+                  >
+                    <span className="cs_footer_social_icon" aria-hidden="true" />
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

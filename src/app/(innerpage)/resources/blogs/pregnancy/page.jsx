@@ -7,6 +7,7 @@ import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
 import blogsData from '@/app/data/blogs.json';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'Pregnancy Blogs',
@@ -208,7 +209,7 @@ const Page = () => {
                       width: '100%'
                     }}>
                       <Image 
-                        src={blog.image} 
+                        src={getAssetPathClient(blog.image)} 
                         alt={blog.title} 
                         width={400} 
                         height={250}

@@ -25,6 +25,8 @@ const StarIcon = () => (
   </svg>
 );
 
+const CARD_BG_COLORS = ['#53A7A7', '#E1B41A', '#38425B'];
+
 const TestimonialSection = ({ data }) => {
   // Duplicate testimonials for seamless loop
   const duplicatedTestimonials = [...data.testimonials, ...data.testimonials];
@@ -78,7 +80,10 @@ const TestimonialSection = ({ data }) => {
           <div className="cs_testimonial_marquee">
             {duplicatedTestimonials.map((testimonial, index) => (
               <div key={index} className="cs_testimonial_marquee_item">
-                <div className="cs_testimonial_card">
+                <div
+                  className="cs_testimonial_card cs_testimonial_card_tinted"
+                  style={{ backgroundColor: CARD_BG_COLORS[index % CARD_BG_COLORS.length] }}
+                >
                   {/* Profile Picture */}
                   <div className="cs_testimonial_avatar_wrapper">
                     <div className="cs_testimonial_avatar">
