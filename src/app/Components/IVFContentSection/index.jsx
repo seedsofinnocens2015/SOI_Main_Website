@@ -271,7 +271,7 @@ const IVFContentSection = ({ data, benefitImages }) => {
                       height: 'auto',
                       maxHeight: '400px',
                       borderRadius: '15px',
-                      objectFit: 'cover',
+                      objectFit: 'contain',
                       display: 'block'
                     }} 
                   />
