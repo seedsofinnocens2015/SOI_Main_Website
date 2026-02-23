@@ -26,7 +26,7 @@ const insuranceContentData = {
         'At Seeds of Innocens, we understand that fertility treatment is a significant investment. We are committed to making quality fertility care accessible through various insurance and financing options. Our team will work with you to find the best payment solution for your needs.',
         'We believe that financial concerns should not be a barrier to building your family. That\'s why we offer multiple payment options, accept major insurance plans, and provide flexible financing solutions tailored to your circumstances.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/Insurance.jpg',
     },
     {
       heading: 'Insurance Coverage',

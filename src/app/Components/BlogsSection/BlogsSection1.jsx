@@ -2,6 +2,7 @@ import Link from "next/link";
 import SectionHeading from "../SectionHeading";
 import { FaAngleRight } from "react-icons/fa";
 import Image from "next/image";
+import { getAssetPathClient } from "../../utils/assetPath";
 
 const BlogsSection1 = ({ data }) => {
   return (
@@ -20,7 +21,7 @@ const BlogsSection1 = ({ data }) => {
                 href={blog.link}
                 className="cs_post_thumbnail position-relative"
               >
-                <Image src={blog.image} alt="img" width={392} height={277}   />
+                <Image src={getAssetPathClient(blog.image)} alt="img" width={392} height={277}   />
                 <div className="cs_post_category position-absolute">
                   {blog.category}
                 </div>

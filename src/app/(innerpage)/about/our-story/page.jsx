@@ -146,7 +146,7 @@ const page = () => {
                   >
                     <div style={{ position: 'relative', width: '100%', height: '250px', overflow: 'hidden' }}>
                       <Image
-                        src="/assets/img/Picture1.png"
+                        src={getAssetPathClient("/assets/img/Picture1.png")}
                         alt="Ghaziabad Centre Inauguration"
                         width={400}
                         height={250}
@@ -204,7 +204,7 @@ const page = () => {
                   >
                     <div style={{ position: 'relative', width: '100%', height: '250px', overflow: 'hidden' }}>
                       <Image
-                        src="/assets/img/Picture2.png"
+                        src={getAssetPathClient("/assets/img/Picture2.png")}
                         alt="Lucknow Centre Inauguration"
                         width={400}
                         height={250}
@@ -262,7 +262,7 @@ const page = () => {
                   >
                     <div style={{ position: 'relative', width: '100%', height: '250px', overflow: 'hidden' }}>
                       <Image
-                        src="/assets/img/Picture3.png"
+                        src={getAssetPathClient("/assets/img/Picture3.png")}
                         alt="Patna Centre Inauguration"
                         width={400}
                         height={250}
@@ -320,7 +320,7 @@ const page = () => {
                   >
                     <div style={{ position: 'relative', width: '100%', height: '250px', overflow: 'hidden' }}>
                       <Image
-                        src="/assets/img/Picture4.png"
+                        src={getAssetPathClient("/assets/img/Picture4.png")}
                         alt="Genestrings Diagnostic Centre Inauguration"
                         width={400}
                         height={250}
@@ -378,7 +378,7 @@ const page = () => {
                   >
                     <div style={{ position: 'relative', width: '100%', height: '250px', overflow: 'hidden' }}>
                       <Image
-                        src="/assets/img/Picture5.png"
+                        src={getAssetPathClient("/assets/img/Picture5.png")}
                         alt="Jagriti Enclave Centre Inauguration"
                         width={400}
                         height={250}
@@ -436,7 +436,7 @@ const page = () => {
                   >
                     <div style={{ position: 'relative', width: '100%', height: '250px', overflow: 'hidden' }}>
                       <Image
-                        src="/assets/img/Picture6.png"
+                        src={getAssetPathClient("/assets/img/Picture6.png")}
                         alt="Genestrings Diagnostic Centre Inauguration"
                         width={400}
                         height={250}
@@ -496,7 +496,7 @@ const page = () => {
                   >
                     <div style={{ position: 'relative', width: '100%', height: '250px', overflow: 'hidden' }}>
                       <Image
-                        src="/assets/img/Picture7.png"
+                        src={getAssetPathClient("/assets/img/Picture7.png")}
                         alt="Faridabad Centre Inauguration"
                         width={400}
                         height={250}
@@ -554,7 +554,7 @@ const page = () => {
                   >
                     <div style={{ position: 'relative', width: '100%', height: '250px', overflow: 'hidden' }}>
                       <Image
-                        src="/assets/img/Picture8.png"
+                        src={getAssetPathClient("/assets/img/Picture8.png")}
                         alt="Faridabad Centre Inauguration"
                         width={400}
                         loading="eager"

@@ -3,19 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState, useCallback, useMemo } from 'react';
-import { FaPhone } from 'react-icons/fa6';
-import IVFSuccessBanner from '../IVFSuccessBanner';
 import {
   FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
   FaWhatsapp,
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { FaYoutube } from 'react-icons/fa';
-import { FaLinkedinIn } from 'react-icons/fa';
 import { IoCall } from "react-icons/io5";
-import { FaAnglesRight, FaLocationDot } from 'react-icons/fa6';
+import { FaAnglesRight } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
 import { getAssetPathClient } from '@/app/utils/assetPath';
 
@@ -33,7 +27,7 @@ const Header = ({ isTopBar, variant }) => {
   const menu = {
     email: 'info@seedsofinnocens.com',
     location: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
-    logoUrl: '/assets/img/SOI Logo.svg',
+    logoUrl: '/assets/img/Header Logo.svg',
     logoLink: '/',
     navItems: [
       {
@@ -173,80 +167,80 @@ const Header = ({ isTopBar, variant }) => {
                 label: 'Delhi',
                 href: '',
                 subItems: [
-                  { label: 'Malviya Nagar, New Delhi', href: '/delhi/best-ivf-centre-in-delhi' },
-                  { label: 'Pitampura, New Delhi', href: '/delhi/best-ivf-centre-in-pitampura' },
-                  { label: 'Janakpuri, New Delhi', href: '/delhi/best-ivf-centre-in-janakpuri' },
+                  { label: 'Malviya Nagar, New Delhi', href: '/best-ivf-centre-in-delhi' },
+                  { label: 'Pitampura, New Delhi', href: '/best-ivf-centre-in-pitampura' },
+                  { label: 'Janakpuri, New Delhi', href: '/best-ivf-centre-in-janakpuri' },
                 ],
               },
               {
                 label: 'Uttar Pradesh',
                 href: '',
                 subItems: [
-                  { label: 'Ghaziabad, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-ghaziabad' },
-                  { label: 'Lucknow, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-lucknow' },
-                  { label: 'Agra, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-agra' },
-                  { label: 'Gorakhpur, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-gorakhpur' },
-                  { label: 'Kanpur, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-kanpur' },
-                  { label: 'Meerut, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-meerut' },
+                  { label: 'Ghaziabad, Uttar Pradesh', href: '/best-ivf-centre-in-ghaziabad' },
+                  { label: 'Lucknow, Uttar Pradesh', href: '/best-ivf-centre-in-lucknow' },
+                  { label: 'Agra, Uttar Pradesh', href: '/best-ivf-centre-in-agra' },
+                  { label: 'Gorakhpur, Uttar Pradesh', href: '/best-ivf-centre-in-gorakhpur' },
+                  { label: 'Kanpur, Uttar Pradesh', href: '/best-ivf-centre-in-kanpur' },
+                  { label: 'Meerut, Uttar Pradesh', href: '/best-ivf-centre-in-meerut' },
                 ],
               },
               {
                 label: 'Bihar',
                 href: '',
                 subItems: [
-                  { label: 'Patna, Bihar', href: '/bihar/best-ivf-centre-in-patna' },
-                  { label: 'Muzaffarpur, Bihar', href: '/bihar/best-ivf-centre-in-muzaffarpur' },
+                  { label: 'Patna, Bihar', href: '/best-ivf-centre-in-patna' },
+                  { label: 'Muzaffarpur, Bihar', href: '/best-ivf-centre-in-muzaffarpur' },
                 ],
               },
               {
                 label: 'Haryana',
                 href: '',
                 subItems: [
-                  { label: 'Faridabad, Haryana', href: '/haryana/best-ivf-centre-in-faridabad' },
-                  { label: 'Gurugram, Haryana', href: '/haryana/best-ivf-centre-in-gurugram' },
+                  { label: 'Faridabad, Haryana', href: '/best-ivf-centre-in-faridabad' },
+                  { label: 'Gurugram, Haryana', href: '/best-ivf-centre-in-gurugram' },
                 ],
               },
               {
                 label: 'Jharkhand',
                 href: '',
                 subItems: [
-                  { label: 'Ranchi, Jharkhand', href: '/jharkhand/best-ivf-centre-in-ranchi' },
+                  { label: 'Ranchi, Jharkhand', href: '/best-ivf-centre-in-ranchi' },
                 ],
               },
               {
                 label: 'Uttarakhand',
                 href: '',
                 subItems: [
-                  { label: 'Haldwani, Uttarakhand', href: '/uttarakhand/best-ivf-centre-in-haldwani' },
+                  { label: 'Haldwani, Uttarakhand', href: '/best-ivf-centre-in-haldwani' },
                 ],
               },
               {
                 label: 'Assam',
                 href: '',
                 subItems: [
-                  { label: 'Guwahati, Assam', href: '/assam/best-ivf-centre-in-guwahati' },
+                  { label: 'Guwahati, Assam', href: '/best-ivf-centre-in-guwahati' },
                 ],
               },
               {
                 label: 'Kerala',
                 href: '',
                 subItems: [
-                  { label: 'Kasaragod, Kerala', href: '/kerala/best-ivf-centre-in-kasaragod' },
-                  { label: 'Kochi, Kerala', href: '/kerala/best-ivf-centre-in-kochi' },
+                  { label: 'Kasaragod, Kerala', href: '/best-ivf-centre-in-kasaragod' },
+                  { label: 'Kochi, Kerala', href: '/best-ivf-centre-in-kochi' },
                 ],
               },
               {
                 label: 'Jammu & Kashmir',
                 href: '',
                 subItems: [
-                  { label: 'Srinagar, J&K', href: '/jammu-kashmir/best-ivf-centre-in-srinagar' },
+                  { label: 'Srinagar, J&K', href: '/best-ivf-centre-in-srinagar' },
                 ],
               },
               {
                 label: 'West Bengal',
                 href: '',
                 subItems: [
-                  { label: 'Kolkata', href: '/west-bengal/best-ivf-centre-in-kolkata' },
+                  { label: 'Kolkata', href: '/best-ivf-centre-in-kolkata' },
                 ],
               },
             ],
@@ -306,10 +300,10 @@ const Header = ({ isTopBar, variant }) => {
             label: 'FAQs',
             href: '/resources/faqs',
           },
-          {
-            label: 'Success Stories',
-            href: '/success-stories',
-          },
+          // {
+          //   label: 'Success Stories',
+          //   href: '/success-stories',
+          // },
           {
             label: 'Patient Testimonial Videos',
             href: '/resources/patient-testimonial-videos',
@@ -337,9 +331,9 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Men\'s Health', href: '/resources/blogs/mens-health' },
               { label: 'Women\'s Health', href: '/resources/blogs/womens-health' },
               { label: 'Treatment Guides', href: '/resources/blogs/treatment-guides' },
-              { label: 'Success Stories', href: '/resources/blogs/success-stories' },
-              { label: 'Doctor Insights', href: '/resources/blogs/doctor-insights' },
-              { label: 'News & Press', href: '/resources/blogs/news-press' },
+              // { label: 'Success Stories', href: '/resources/blogs/success-stories' },
+              // { label: 'Doctor Insights', href: '/resources/blogs/doctor-insights' },
+              // { label: 'News & Press', href: '/resources/blogs/news-press' },
             ],
           },
           {
@@ -359,7 +353,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Dr. Gauri Agrawal – Founder',
-            href: '/doctors/dr-gauri-agarwal/',
+            href: '/dr-gauri-agarwal-ivf-specialist/',
           },
           {
             label: 'Leadership Team',
@@ -435,7 +429,7 @@ const Header = ({ isTopBar, variant }) => {
 
     ],
     btnUrl: '/contact/book-appointment',
-    btnText: 'Book Appointment',
+    btnText: 'Book a Visit',
   };
 
   const handleOpenMobileSubmenu = index => {
@@ -532,28 +526,204 @@ const Header = ({ isTopBar, variant }) => {
         {/* Top Bar */}
         <div className="cs_top_bar">
           <div className="container">
-            <div className="cs_top_bar_in">
+            {/* Desktop Layout */}
+            <div className="cs_top_bar_in cs_top_bar_desktop">
               <div className="cs_top_bar_left">
-                <div className="cs_social_icons">
-                  <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
-                    <FaFacebookF />
-                  </Link>
-                  <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
-                    <FaInstagram />
-                  </Link>
-                  
-                  <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
-                    <FaYoutube />
-                  </Link>
-                  <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
-                    <FaLinkedinIn />
-                  </Link>
+                <div className="cs_location_info">
+                  <div className="cs_location_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/Location.png')}
+                      alt="Location"
+                      width={20}
+                      height={20}
+                    />
+                  </div>
+                  <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
+                  <div className="cs_top_bar_separator"></div>
+                  <span className="cs_timing_text">India Mon - Sun: 9:00 am - 7:00 pm,</span>
                 </div>
               </div>
               <div className="cs_top_bar_right">
-                <a href="tel:+91-9810350512" className="cs_phone_banner">
-                  <span><FaPhone /> +91-9810350512</span>
+                <a href="/new/dr-gauri-agarwal-ivf-specialist/" className="cs_location_text">
+                  Dr. Gauri Agarwal, MD
                 </a>
+                <a href="tel:+91-9810350512" className="cs_phone_banner">
+                  <div className="cs_phone_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/Call.png')}
+                      alt="Phone"
+                      width={20}
+                      height={20}
+                    />
+                  </div>
+                  <span className="cs_phone_text">9810350 512</span>
+                </a>
+                <div className="cs_social_icons">
+                  <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/you.png')}
+                      alt="YouTube"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                  <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/029-instagram.png')}
+                      alt="Instagram"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                  <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/036-facebook.png')}
+                      alt="Facebook"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                  <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Image
+                      src={getAssetPathClient('/assets/img/icons/027-linkedin.png')}
+                      alt="LinkedIn"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* Mobile Marquee Layout */}
+            <div className="cs_top_bar_marquee">
+              <div className="cs_top_bar_content">
+                <div className="cs_top_bar_left">
+                  <div className="cs_location_info">
+                    <div className="cs_location_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/Location.png')}
+                        alt="Location"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                    <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
+                    <div className="cs_top_bar_separator"></div>
+                    <span className="cs_timing_text">India Mon - Sun: 9:00 am - 7:00 pm,</span>
+                  </div>
+                </div>
+                <div className="cs_top_bar_right">
+                  <a href="tel:+91-9810350512" className="cs_phone_banner">
+                    <div className="cs_phone_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/Call.png')}
+                        alt="Phone"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                    <span className="cs_phone_text">9810350 512</span>
+                  </a>
+                  <div className="cs_social_icons">
+                    <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/you.png')}
+                        alt="YouTube"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/029-instagram.png')}
+                        alt="Instagram"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/036-facebook.png')}
+                        alt="Facebook"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/027-linkedin.png')}
+                        alt="LinkedIn"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              {/* Duplicate for seamless loop */}
+              <div className="cs_top_bar_content">
+                <div className="cs_top_bar_left">
+                  <div className="cs_location_info">
+                    <div className="cs_location_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/Location.png')}
+                        alt="Location"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                    <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
+                    <div className="cs_top_bar_separator"></div>
+                    <span className="cs_timing_text">India Mon - Sun: 9:00 am - 7:00 pm,</span>
+                  </div>
+                </div>
+                <div className="cs_top_bar_right">
+                  <a href="tel:+91-9810350512" className="cs_phone_banner">
+                    <div className="cs_phone_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/Call.png')}
+                        alt="Phone"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                    <span className="cs_phone_text">9810350 512</span>
+                  </a>
+                  <div className="cs_social_icons">
+                    <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/you.png')}
+                        alt="YouTube"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/029-instagram.png')}
+                        alt="Instagram"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/036-facebook.png')}
+                        alt="Facebook"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                    <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                      <Image
+                        src={getAssetPathClient('/assets/img/icons/027-linkedin.png')}
+                        alt="LinkedIn"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -564,7 +734,7 @@ const Header = ({ isTopBar, variant }) => {
             <div className="cs_main_header_in cs_compact_gap">
               <Link className="cs_site_branding" href={menu.logoLink} prefetch={false}>
                 <Image
-                  src={typeof window !== 'undefined' ? getAssetPathClient(menu.logoUrl) : menu.logoUrl}
+                  src={getAssetPathClient(menu.logoUrl)}
                   alt="img"
                   width={350}
                   height={110}
@@ -1046,7 +1216,6 @@ const Header = ({ isTopBar, variant }) => {
             </div>
           </div>
         </div>
-        <IVFSuccessBanner />
         {variant == 'cs_type_1' && (
           <div className="cs_main_header_shape">
             <svg

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowLeft } from 'react-icons/fa';
 import blogsData from '@/app/data/blogs.json';
+import { getAssetPath } from '@/app/utils/assetPath';
 
 // Generate static params for static export
 export async function generateStaticParams() {
@@ -108,7 +109,7 @@ const BlogDetailPage = ({ params }) => {
                 {/* Blog Image */}
                 <div style={{ position: 'relative', width: '100%', height: '400px', overflow: 'hidden' }}>
                   <Image
-                    src={blog.image}
+                    src={getAssetPath(blog.image)}
                     alt={blog.title}
                     fill
                     style={{ objectFit: 'cover' }}
@@ -247,7 +248,7 @@ const BlogDetailPage = ({ params }) => {
                               flexShrink: 0
                             }}>
                               <Image
-                                src={relatedBlog.image}
+                                src={getAssetPath(relatedBlog.image)}
                                 alt={relatedBlog.title}
                                 fill
                                 style={{ objectFit: 'cover' }}

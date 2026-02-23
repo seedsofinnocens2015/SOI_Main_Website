@@ -566,7 +566,7 @@
   
   @media (max-width: 767px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 8px;
     
     &.cs_last_row_incomplete {
       &[data-last-row-count="1"] {
@@ -580,22 +580,27 @@
   }
   
   @media (max-width: 575px) {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
   }
 }
 
 .cs_centre_card {
-  padding: 16px 18px;
+  padding: 10px 12px;
   background-color: var(--white);
-  border: 2px solid #f0f0f0;
-  border-radius: 12px;
+  border: 1px solid var(--centre-border-color, #CB3148);
+  border-radius: 8px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   grid-column: span 1;
-  min-height: 60px;
+  min-height: 45px;
   position: relative;
   overflow: hidden;
   
@@ -610,39 +615,25 @@
     transition: all 0.3s ease;
   }
   
-  &:hover {
-    border-color: var(--accent-color);
-    background-color: #fff9f9;
-    box-shadow: 0 4px 12px rgba(242, 101, 101, 0.12);
-    // transform: translateY(-2px);
-    z-index: 2;
-    
-    &::before {
-      background-color: var(--accent-color);
-    }
-    
-    .cs_centre_title {
-      color: var(--accent-color);
-    }
-    
-    .cs_centre_icon {
-      transform: scale(1.1);
-    }
-  }
   
   @media (max-width: 991px) {
-    padding: 14px 16px;
-    min-height: 56px;
+    padding: 9px 11px;
+    min-height: 42px;
   }
   
   @media (max-width: 767px) {
-    padding: 12px 14px;
-    min-height: 52px;
+    padding: 7px 9px;
+    min-height: 38px;
   }
   
   @media (max-width: 575px) {
-    padding: 12px 16px;
-    min-height: 50px;
+    padding: 6px 8px;
+    min-height: 36px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 5px 7px;
+    min-height: 34px;
   }
 }
 
@@ -651,12 +642,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   width: 100%;
 }
 
 .cs_centre_icon {
-  font-size: 18px;
+  font-size: 14px;
   flex-shrink: 0;
   transition: all 0.3s ease;
   opacity: 0.7;
@@ -667,36 +658,37 @@
   }
   
   @media (max-width: 575px) {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
 .cs_centre_title {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   margin: 0;
-  line-height: 1.5;
-  color: var(--heading-color);
+  line-height: 1.4;
+  color: #4b4b4b;
   transition: all 0.3s ease;
   text-align: center;
   
   @media (max-width: 991px) {
-    font-size: 14px;
+    font-size: 11px;
   }
   
   @media (max-width: 575px) {
-    font-size: 13px;
+    font-size: 10px;
+    line-height: 1.3;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 9px;
+    line-height: 1.2;
   }
 }
 
 .cs_locations_map_wrapper {
   width: 100%;
   height: 500px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 20px;
   
   @media (max-width: 991px) {
     height: 400px;
@@ -705,8 +697,19 @@
     margin-bottom: 30px;
   }
   
-  @media (max-width: 575px) {
+  @media (max-width: 767px) {
     height: 350px;
+    margin-bottom: 25px;
+  }
+  
+  @media (max-width: 575px) {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 480px) {
+    height: 280px;
+    margin-bottom: 15px;
   }
   
   // Leaflet map container
@@ -920,8 +923,12 @@
     margin-top: 50px;
   }
   
-  @media (max-width: 575px) {
+  @media (max-width: 767px) {
     margin-top: 30px;
+  }
+  
+  @media (max-width: 575px) {
+    margin-top: 20px;
   }
 }
 
@@ -932,22 +939,52 @@
     margin-bottom: 0;
   }
   
+  @media (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+  
   @media (max-width: 575px) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
 .cs_location_section_title {
   font-size: 24px;
   font-weight: 600;
-  color: var(--heading-color);
-  // margin-bottom: 20px;
-  // padding-bottom: 10px;
-  border-bottom: 2px solid #0A2A43;
+  color: #CB3148;
+  margin-bottom: 15px;
+  
+  @media (max-width: 767px) {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
   
   @media (max-width: 575px) {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.cs_locations_container {
+  .cs_centres_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
   }
 }
 
@@ -977,15 +1014,22 @@
   
   .cs_centres_grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     
     @media (max-width: 991px) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
     }
     
-    @media (max-width: 575px) {
-      grid-template-columns: repeat(1, 1fr);
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
     }
   }
   
@@ -993,8 +1037,12 @@
     max-height: 250px;
   }
   
+  @media (max-width: 767px) {
+    max-height: 280px;
+  }
+  
   @media (max-width: 575px) {
-    max-height: 220px;
+    max-height: 240px;
   }
 }
 
@@ -1024,7 +1072,7 @@
   }
   
   &:hover {
-    border-color: #CD2527;
+    border-color: #CB3148;
     box-shadow: 0 2px 8px rgba(205, 37, 39, 0.1);
   }
 }
@@ -1048,12 +1096,12 @@
     border-bottom: 1px solid #e0e0e0;
     
     .cs_location_dropdown_title {
-      color: #CD2527;
+      color: #CB3148;
     }
     
     .cs_location_dropdown_icon {
       transform: rotate(180deg);
-      color: #CD2527;
+      color: #CB3148;
     }
   }
   
@@ -1108,4 +1156,10 @@
       padding: 20px;
     }
   }
+}
+
+.cs_tabs {
+  background-color: #FFFCFB;
+  border-top: 2px solid #FCE8DD;
+  border-bottom: 2px solid #FCE8DD;
 }

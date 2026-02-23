@@ -8,7 +8,11 @@ import { getAssetPathClient } from '../../utils/assetPath';
 
 const Service = ({ data, cardBg }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [hoveredServiceIndex, setHoveredServiceIndex] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentMobileSlide, setCurrentMobileSlide] = useState(0);
+  const [selectedServiceIndex, setSelectedServiceIndex] = useState(0);
+  const servicesPerSlide = 5;
+  const servicesPerSlideMobile = 3;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -21,161 +25,401 @@ const Service = ({ data, cardBg }) => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Desktop View (Original Grid)
-  const DesktopView = () => (
-    <div className="row cs_service_simple_grid">
-      {data?.services.map((service, index) => (
-        <div key={index} className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-          <div 
-            className="cs_service_simple_item"
-            onMouseEnter={() => setHoveredServiceIndex(index)}
-            onMouseLeave={() => setHoveredServiceIndex(null)}
-            style={{ position: 'relative' }}
-          >
-            <Link href={service.link} className="cs_service_simple_link">
-              <div className="cs_service_simple_icon">
-                <Image 
-                  src={getAssetPathClient(service.iconUrl)} 
-                  alt={service.title} 
-                  width={40} 
-                  height={40}
-                  loading="eager"
-                />
-              </div>
-              <h4 className="cs_service_simple_title">{service.title}</h4>
-            </Link>
-            {service.subtitle && hoveredServiceIndex === index && (
-              <div
-                className="cs_service_tooltip"
-                style={{
-                  position: 'absolute',
-                  bottom: '100%',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  marginBottom: '10px',
-                  padding: '12px 16px',
-                  backgroundColor: '#fff',
-                  color: '#333',
-                  borderRadius: '8px',
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
-                  fontSize: '14px',
-                  lineHeight: '1.5',
-                  maxWidth: '280px',
-                  width: 'max-content',
-                  zIndex: 1000,
-                  whiteSpace: 'normal',
-                  wordWrap: 'break-word',
-                  border: '1px solid #e8e8e8',
-                  pointerEvents: 'none',
-                }}
-              >
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: 0,
-                    height: 0,
-                    borderLeft: '8px solid transparent',
-                    borderRight: '8px solid transparent',
-                    borderTop: '8px solid #fff',
-                  }}
-                />
-                {service.subtitle}
-              </div>
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+  // Calculate total slides for desktop
+  const totalSlides = Math.ceil((data?.services?.length || 0) / servicesPerSlide);
+  
+  // Calculate total slides for mobile
+  const totalMobileSlides = Math.ceil((data?.services?.length || 0) / servicesPerSlideMobile);
 
-  // Mobile View (3x3 Grid - No Slider)
-  const MobileView = () => (
-    <div className="row cs_service_simple_grid cs_service_mobile_grid">
-      {data?.services.map((service, index) => (
-        <div key={index} className="col-4">
-          <div 
-            className="cs_service_simple_item"
-            onMouseEnter={() => setHoveredServiceIndex(index)}
-            onMouseLeave={() => setHoveredServiceIndex(null)}
-            onTouchStart={() => setHoveredServiceIndex(index)}
-            style={{ position: 'relative' }}
-          >
-            <Link href={service.link} className="cs_service_simple_link">
-              <div className="cs_service_simple_icon">
-                <Image 
-                  src={getAssetPathClient(service.iconUrl)} 
-                  alt={service.title} 
-                  width={40} 
-                  height={40}
-                  loading="eager"
-                />
-              </div>
-              <h4 className="cs_service_simple_title">{service.title}</h4>
-            </Link>
-            {service.subtitle && hoveredServiceIndex === index && (
-              <div
-                className="cs_service_tooltip"
+  // Get services for current slide (desktop)
+  const getCurrentSlideServices = () => {
+    const start = currentSlide * servicesPerSlide;
+    const end = start + servicesPerSlide;
+    return data?.services?.slice(start, end) || [];
+  };
+  
+  // Get services for current mobile slide
+  const getCurrentMobileSlideServices = () => {
+    const start = currentMobileSlide * servicesPerSlideMobile;
+    const end = start + servicesPerSlideMobile;
+    return data?.services?.slice(start, end) || [];
+  };
+
+  // Handle next slide
+  const handleNext = () => {
+    setCurrentSlide((prev) => {
+      const newSlide = (prev + 1) % totalSlides;
+      // Update selected service to first service of new slide
+      setSelectedServiceIndex(newSlide * servicesPerSlide);
+      return newSlide;
+    });
+  };
+
+  // Handle previous slide
+  const handlePrev = () => {
+    setCurrentSlide((prev) => {
+      const newSlide = (prev - 1 + totalSlides) % totalSlides;
+      // Update selected service to first service of new slide
+      setSelectedServiceIndex(newSlide * servicesPerSlide);
+      return newSlide;
+    });
+  };
+
+  // Handle slide indicator click
+  const handleSlideClick = (index) => {
+    setCurrentSlide(index);
+    // Update selected service to first service of clicked slide
+    setSelectedServiceIndex(index * servicesPerSlide);
+  };
+  
+  // Handle mobile next slide
+  const handleMobileNext = () => {
+    setCurrentMobileSlide((prev) => {
+      const newSlide = (prev + 1) % totalMobileSlides;
+      // Update selected service to first service of new slide
+      setSelectedServiceIndex(newSlide * servicesPerSlideMobile);
+      return newSlide;
+    });
+  };
+
+  // Handle mobile previous slide
+  const handleMobilePrev = () => {
+    setCurrentMobileSlide((prev) => {
+      const newSlide = (prev - 1 + totalMobileSlides) % totalMobileSlides;
+      // Update selected service to first service of new slide
+      setSelectedServiceIndex(newSlide * servicesPerSlideMobile);
+      return newSlide;
+    });
+  };
+
+  // Handle service icon click
+  const handleServiceClick = (index, e) => {
+    e.preventDefault();
+    setSelectedServiceIndex(index);
+  };
+
+  // Get selected service subHeading
+  const getSelectedServiceSubHeading = () => {
+    const selectedService = data?.services?.[selectedServiceIndex];
+    return selectedService?.subHeading || '';
+  };
+
+  // Get selected service subtitle
+  const getSelectedServiceSubtitle = () => {
+    const selectedService = data?.services?.[selectedServiceIndex];
+    return selectedService?.subtitle || '';
+  };
+
+  // Get selected service title
+  const getSelectedServiceTitle = () => {
+    const selectedService = data?.services?.[selectedServiceIndex];
+    return selectedService?.title || '';
+  };
+
+  // Get selected service icon/image
+  const getSelectedServiceImage = () => {
+    const selectedService = data?.services?.[selectedServiceIndex];
+    return selectedService?.imageUrl || '';
+  };
+
+  // Get selected service link
+  const getSelectedServiceLink = () => {
+    const selectedService = data?.services?.[selectedServiceIndex];
+    return selectedService?.link || '/';
+  };
+
+  // Desktop View with Slider (5 services per slide)
+  const DesktopView = () => {
+    const currentServices = getCurrentSlideServices();
+    // Find active service position in current slide (0-4)
+    const activePositionInSlide = selectedServiceIndex >= currentSlide * servicesPerSlide && 
+                                  selectedServiceIndex < (currentSlide + 1) * servicesPerSlide
+                                  ? selectedServiceIndex - (currentSlide * servicesPerSlide)
+                                  : 0;
+    
+    return (
+      <>
+        <div className="cs_service_slider_container">
+          <div className="cs_service_slider_wrapper">
+            <div className="cs_service_slider_slide">
+              {currentServices.map((service, index) => {
+                const globalIndex = currentSlide * servicesPerSlide + index;
+                const isSelected = globalIndex === selectedServiceIndex;
+                
+                return (
+                  <div key={globalIndex} className="cs_service_slider_item">
+                    <div className="cs_service_simple_item">
+                      <div 
+                        className="cs_service_simple_link_wrapper"
+                        onClick={(e) => handleServiceClick(globalIndex, e)}
+                      >
+                        <div className="cs_service_simple_link">
+                          <div 
+                            className={`cs_service_simple_icon ${isSelected ? 'cs_service_icon_active' : ''}`}
+                          >
+                            <Image 
+                              src={getAssetPathClient(service.iconUrl)} 
+                              alt={service.title} 
+                              width={80} 
+                              height={80}
+                              loading="eager"
+                            />
+                          </div>
+                          <h4 className="cs_service_simple_title">{service.title}</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          
+          {/* Single Continuous Line */}
+          <div className="cs_service_single_line">
+            <div 
+              className="cs_service_single_line_active"
+              style={{
+                width: `${100 / servicesPerSlide}%`,
+                left: `${(activePositionInSlide / servicesPerSlide) * 100}%`,
+              }}
+            />
+          </div>
+          
+          {/* Slider Navigation */}
+          {totalSlides > 1 && (
+            <div className="cs_service_slider_navigation">
+              {/* Show Previous button only when NOT on first slide */}
+              {currentSlide > 0 && (
+                <button 
+                  className="cs_service_slider_btn cs_service_slider_btn_prev"
+                  onClick={handlePrev}
+                  aria-label="Previous slide"
+                >
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#CB3148">
+                    <g strokeWidth="0"></g>
+                    <g strokeLinecap="round" strokeLinejoin="round"></g>
+                    <g>
+                      <polyline fill="none" stroke="#CB3148" strokeWidth="2" points="7 2 17 12 7 22" transform="matrix(-1 0 0 1 24 0)"></polyline>
+                    </g>
+                  </svg>
+                </button>
+              )}
+              {/* Show Next button only when NOT on last slide */}
+              {currentSlide < totalSlides - 1 && (
+                <button 
+                  className="cs_service_slider_btn cs_service_slider_btn_next"
+                  onClick={handleNext}
+                  aria-label="Next slide"
+                >
+                  <svg fill="#CB3148" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlSpace="preserve">
+                    <g strokeWidth="0"></g>
+                    <g strokeLinecap="round" strokeLinejoin="round"></g>
+                    <g>
+                      <g>
+                        <g>
+                          <polygon points="6.8,23.7 5.4,22.3 15.7,12 5.4,1.7 6.8,0.3 18.5,12 "></polygon>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+        
+        {/* Subtitle Rectangle Box */}
+        <div className="cs_service_subtitle_box">
+          {/* Design Image - Background (behind the box) */}
+          {data?.designImage && (
+            <div className="cs_service_subtitle_design_image">
+              <Image
+                src={getAssetPathClient(data.designImage)}
+                alt="Design Background"
+                width={300}
+                height={400}
                 style={{
-                  position: 'absolute',
-                  bottom: '100%',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  marginBottom: '10px',
-                  padding: '12px 16px',
-                  backgroundColor: '#fff',
-                  color: '#333',
-                  borderRadius: '8px',
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
-                  fontSize: '14px',
-                  lineHeight: '1.5',
-                  maxWidth: isMobile ? '90vw' : '280px',
-                  width: isMobile ? 'auto' : 'max-content',
-                  zIndex: 1000,
-                  whiteSpace: 'normal',
-                  wordWrap: 'break-word',
-                  border: '1px solid #e8e8e8',
-                  pointerEvents: 'none',
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain'
                 }}
-              >
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: 0,
-                    height: 0,
-                    borderLeft: '8px solid transparent',
-                    borderRight: '8px solid transparent',
-                    borderTop: '8px solid #fff',
-                  }}
-                />
-                {service.subtitle}
-              </div>
-            )}
+              />
+            </div>
+          )}
+          <div 
+            className="cs_service_subtitle_image_section"
+            style={{
+              backgroundImage: `url(${getAssetPathClient(getSelectedServiceImage())})`,
+              position: 'relative',
+              overflow: 'visible',
+              zIndex: 1
+            }}
+          >
+          </div>
+          <div className="cs_service_subtitle_content_section">
+            <h3 className="cs_service_subtitle_title">{getSelectedServiceSubHeading()}</h3>
+            <p className="cs_service_subtitle_text" dangerouslySetInnerHTML={{ __html: getSelectedServiceSubtitle() }} />
+            <Link href={getSelectedServiceLink()} className="cs_service_learn_more_link">
+              Learn More
+            </Link>
           </div>
         </div>
-      ))}
-    </div>
-  );
+      </>
+    );
+  };
+
+  // Mobile View with Slider (3 services per slide)
+  const MobileView = () => {
+    const currentServices = getCurrentMobileSlideServices();
+    // Find active service position in current mobile slide (0-2)
+    const activePositionInSlide = selectedServiceIndex >= currentMobileSlide * servicesPerSlideMobile && 
+                                  selectedServiceIndex < (currentMobileSlide + 1) * servicesPerSlideMobile
+                                  ? selectedServiceIndex - (currentMobileSlide * servicesPerSlideMobile)
+                                  : 0;
+    
+    return (
+      <>
+        <div className="cs_service_slider_container">
+          <div className="cs_service_slider_wrapper">
+            <div className="cs_service_slider_slide cs_service_slider_slide_mobile">
+              {currentServices.map((service, index) => {
+                const globalIndex = currentMobileSlide * servicesPerSlideMobile + index;
+                const isSelected = globalIndex === selectedServiceIndex;
+                
+                return (
+                  <div key={globalIndex} className="cs_service_slider_item cs_service_slider_item_mobile">
+                    <div className="cs_service_simple_item">
+                      <div 
+                        className="cs_service_simple_link_wrapper"
+                        onClick={(e) => handleServiceClick(globalIndex, e)}
+                      >
+                        <div className="cs_service_simple_link">
+                          <div 
+                            className={`cs_service_simple_icon ${isSelected ? 'cs_service_icon_active' : ''}`}
+                          >
+                            <Image 
+                              src={getAssetPathClient(service.iconUrl)} 
+                              alt={service.title} 
+                              width={80} 
+                              height={80}
+                              loading="eager"
+                            />
+                          </div>
+                          <h4 className="cs_service_simple_title">{service.title}</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          
+          {/* Single Continuous Line for Mobile */}
+          <div className="cs_service_single_line">
+            <div 
+              className="cs_service_single_line_active"
+              style={{
+                width: `${100 / servicesPerSlideMobile}%`,
+                left: `${(activePositionInSlide / servicesPerSlideMobile) * 100}%`,
+              }}
+            />
+          </div>
+          
+          {/* Slider Navigation for Mobile */}
+          {totalMobileSlides > 1 && (
+            <div className="cs_service_slider_navigation cs_service_slider_navigation_mobile">
+              {/* Show Previous button only when NOT on first slide */}
+              {currentMobileSlide > 0 && (
+                <button 
+                  className="cs_service_slider_btn cs_service_slider_btn_prev"
+                  onClick={handleMobilePrev}
+                  aria-label="Previous slide"
+                >
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#CB3148">
+                    <g strokeWidth="0"></g>
+                    <g strokeLinecap="round" strokeLinejoin="round"></g>
+                    <g>
+                      <polyline fill="none" stroke="#CB3148" strokeWidth="2" points="7 2 17 12 7 22" transform="matrix(-1 0 0 1 24 0)"></polyline>
+                    </g>
+                  </svg>
+                </button>
+              )}
+              {/* Show Next button only when NOT on last slide */}
+              {currentMobileSlide < totalMobileSlides - 1 && (
+                <button 
+                  className="cs_service_slider_btn cs_service_slider_btn_next"
+                  onClick={handleMobileNext}
+                  aria-label="Next slide"
+                >
+                  <svg fill="#CB3148" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlSpace="preserve">
+                    <g strokeWidth="0"></g>
+                    <g strokeLinecap="round" strokeLinejoin="round"></g>
+                    <g>
+                      <g>
+                        <g>
+                          <polygon points="6.8,23.7 5.4,22.3 15.7,12 5.4,1.7 6.8,0.3 18.5,12 "></polygon>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+        
+        {/* Subtitle Rectangle Box for Mobile */}
+        <div className="cs_service_subtitle_box">
+          {/* Design Image - Background (behind the box) */}
+          {data?.designImage && (
+            <div className="cs_service_subtitle_design_image">
+              <Image
+                src={getAssetPathClient(data.designImage)}
+                alt="Design Background"
+                width={180}
+                height={240}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain'
+                }}
+              />
+            </div>
+          )}
+          <div 
+            className="cs_service_subtitle_image_section"
+            style={{
+              backgroundImage: `url(${getAssetPathClient(getSelectedServiceImage())})`,
+              position: 'relative',
+              overflow: 'visible',
+              zIndex: 1
+            }}
+          >
+          </div>
+          <div className="cs_service_subtitle_content_section">
+            <h3 className="cs_service_subtitle_title">{getSelectedServiceSubHeading()}</h3>
+            <p className="cs_service_subtitle_text" dangerouslySetInnerHTML={{ __html: getSelectedServiceSubtitle() }} />
+            <Link href={getSelectedServiceLink()} className="cs_service_learn_more_link">
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </>
+    );
+  };
 
   return (
     <>
       <div className="container">
-        {data.subtitle && (
-          <SectionHeading
-            variant={'text-center'}
-            SectionTitle={data.title || ''}
-            SectionSubtitle={data.subtitle}
-            SectionDescription={data.description || ''}
-          />
-        )}
+        {/* Title Section - "OUR SERVICES" */}
+        <div className="cs_service_title_section">
+          <h2 className="cs_service_main_title"><span className="cs_service_main_title_span">OUR</span> SERVICES</h2>
+        </div>
         <div className="cs_height_30 cs_height_lg_30" />
         
-        {/* Desktop View */}
+        {/* Desktop View with Slider */}
         <div className="cs_service_desktop_view">
           <DesktopView />
         </div>

@@ -1,19 +1,14 @@
 /**
- * Get the correct asset path
- * @param {string} path - The asset path (e.g., '/assets/img/image.jpg')
- * @returns {string} - The asset path
+ * Base path for the application (should match next.config.mjs)
  */
-export function getAssetPath(path) {
-  // Return path as is (no basePath needed for root domain)
-  return path;
-}
+const BASE_PATH = '/new';
 
 /**
- * Get asset path for client-side (browser)
- * This uses window.location to detect the correct path
+ * Get the correct asset path
+ * @param {string} path - The asset path (e.g., '/assets/img/image.jpg')
+ * @returns {string} - The asset path with basePath prefix
  */
-export function getAssetPathClient(path) {
-  // If path is empty, return as is
+export function getAssetPath(path) {
   if (!path) {
     return path;
   }
@@ -23,6 +18,43 @@ export function getAssetPathClient(path) {
     return path;
   }
   
-  // Return path as is (no basePath needed for root domain)
+  // If path already starts with basePath, return as is
+  if (path.startsWith(BASE_PATH)) {
+    return path;
+  }
+  
+  // Add basePath prefix if it's a relative path starting with '/'
+  if (path.startsWith('/')) {
+    return `${BASE_PATH}${path}`;
+  }
+  
+  return path;
+}
+
+/**
+ * Get asset path for client-side (browser)
+ * @param {string} path - The asset path (e.g., '/assets/img/image.jpg')
+ * @returns {string} - The asset path with basePath prefix
+ */
+export function getAssetPathClient(path) {
+  if (!path) {
+    return path;
+  }
+  
+  // If path already starts with 'http://' or 'https://', return as is (external URL)
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  
+  // If path already starts with basePath, return as is
+  if (path.startsWith(BASE_PATH)) {
+    return path;
+  }
+  
+  // Add basePath prefix if it's a relative path starting with '/'
+  if (path.startsWith('/')) {
+    return `${BASE_PATH}${path}`;
+  }
+  
   return path;
 }

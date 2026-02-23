@@ -6,114 +6,33 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaTag, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'News & Press',
 };
 
-const news = [
-  {
-    title: 'Seeds of Innocens Opens New Center in Mumbai',
-    excerpt: 'We are excited to announce the opening of our new state-of-the-art IVF center in Mumbai. The center is equipped with the latest technology and staffed by experienced fertility specialists to serve patients in the region.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 2024',
-    category: 'Press Release',
-    readTime: '3 min read',
-    link: '#',
-    type: 'Press Release',
-  },
-  {
-    title: 'Best IVF Center Award 2024',
-    excerpt: 'Seeds of Innocens has been recognized as the Best IVF Center in India for 2024. This award reflects our commitment to excellence in fertility care and our high success rates.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 2024',
-    category: 'Award',
-    readTime: '4 min read',
-    link: '#',
-    type: 'Award',
-  },
-  {
-    title: 'New PGT Technology Implementation',
-    excerpt: 'We have successfully implemented the latest Preimplantation Genetic Testing (PGT) technology, improving our success rates and helping more couples achieve healthy pregnancies.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'October 2024',
-    category: 'Research',
-    readTime: '5 min read',
-    link: '#',
-    type: 'Research',
-  },
-  {
-    title: 'Fertility Awareness Month Campaign',
-    excerpt: 'Seeds of Innocens launched a comprehensive fertility awareness campaign, offering free consultations and educational seminars to help couples understand their fertility options.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'September 2024',
-    category: 'Event',
-    readTime: '4 min read',
-    link: '#',
-    type: 'Event',
-  },
-  {
-    title: 'International Center Expansion Announcement',
-    excerpt: 'Seeds of Innocens announces the expansion of international services with new partnerships in Africa and Southeast Asia, bringing world-class fertility care to more regions.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'August 2024',
-    category: 'Announcement',
-    readTime: '5 min read',
-    link: '#',
-    type: 'Announcement',
-  },
-  {
-    title: 'Record Success Rates Achieved in 2024',
-    excerpt: 'Seeds of Innocens celebrates record-breaking success rates across all treatment modalities, reaffirming our position as a leader in fertility care.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'July 2024',
-    category: 'Achievement',
-    readTime: '3 min read',
-    link: '#',
-    type: 'Achievement',
-  },
-  // Hindi Blogs
-  {
-    title: 'Seeds of Innocens मुंबई में नया केंद्र खोलता है',
-    excerpt: 'हम मुंबई में अपने नए अत्याधुनिक आईवीएफ केंद्र के उद्घाटन की घोषणा करते हुए खुशी व्यक्त करते हैं। केंद्र नवीनतम प्रौद्योगिकी से सुसज्जित है और क्षेत्र में रोगियों की सेवा करने के लिए अनुभवी प्रजनन विशेषज्ञों द्वारा संचालित है।',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'दिसंबर 2024',
-    category: 'प्रेस विज्ञप्ति',
-    readTime: '3 मिनट पढ़ें',
-    link: '#',
-    type: 'प्रेस विज्ञप्ति',
-  },
-  {
-    title: '2024 का सर्वश्रेष्ठ आईवीएफ केंद्र पुरस्कार',
-    excerpt: 'Seeds of Innocens को 2024 में भारत का सर्वश्रेष्ठ आईवीएफ केंद्र के रूप में मान्यता दी गई है। यह पुरस्कार प्रजनन देखभाल में उत्कृष्टता के लिए हमारी प्रतिबद्धता और उच्च सफलता दर को दर्शाता है।',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'नवंबर 2024',
-    category: 'पुरस्कार',
-    readTime: '4 मिनट पढ़ें',
-    link: '#',
-    type: 'पुरस्कार',
-  },
-  {
-    title: 'नई पीजीटी प्रौद्योगिकी कार्यान्वयन',
-    excerpt: 'हमने सफलतापूर्वक नवीनतम प्रीइम्प्लांटेशन जेनेटिक टेस्टिंग (पीजीटी) प्रौद्योगिकी को लागू किया है, जिससे हमारी सफलता दर में सुधार हुआ है और अधिक जोड़ों को स्वस्थ गर्भावस्था प्राप्त करने में मदद मिल रही है।',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'अक्टूबर 2024',
-    category: 'अनुसंधान',
-    readTime: '5 मिनट पढ़ें',
-    link: '#',
-    type: 'अनुसंधान',
-  },
-  {
-    title: 'प्रजनन जागरूकता माह अभियान',
-    excerpt: 'Seeds of Innocens ने एक व्यापक प्रजनन जागरूकता अभियान शुरू किया, जोड़ों को उनके प्रजनन विकल्पों को समझने में मदद करने के लिए निःशुल्क परामर्श और शैक्षिक सेमिनार प्रदान कर रहा है।',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'सितंबर 2024',
-    category: 'कार्यक्रम',
-    readTime: '4 मिनट पढ़ें',
-    link: '#',
-    type: 'कार्यक्रम',
-  },
-];
+// Get blogs from JSON and filter by category
+const jsonBlogs = blogsData.blogs.filter(blog => 
+  blog.category === 'News & Press' || blog.category === 'समाचार और प्रेस'
+);
+
+// Map blogs with correct link based on language
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  // Determine if blog is Hindi or English based on category
+  const isHindi = blog.category === 'समाचार और प्रेस';
+  return {
+    title: blog.title,
+    excerpt: blog.excerpt,
+    image: blog.image,
+    date: blog.date,
+    author: blog.author,
+    category: blog.category,
+    readTime: blog.readTime,
+    link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -146,33 +65,25 @@ const Page = () => {
 
   const filteredBlogs = useMemo(() => {
     if (selectedLanguage === 'all') {
-      return news;
+      return blogs;
     } else if (selectedLanguage === 'hindi') {
-      return news.filter(item => 
-        item.category === 'प्रेस विज्ञप्ति' || 
-        item.category === 'पुरस्कार' ||
-        item.category === 'अनुसंधान' ||
-        item.category === 'कार्यक्रम' ||
-        item.readTime.includes('मिनट') ||
-        item.date.includes('दिसंबर') || 
-        item.date.includes('नवंबर') ||
-        item.title.match(/[\u0900-\u097F]/)
+      return blogs.filter(blog => 
+        blog.category === 'समाचार और प्रेस' || 
+        blog.readTime.includes('मिनट') ||
+        blog.date.includes('दिसंबर') || 
+        blog.date.includes('नवंबर') ||
+        blog.title.match(/[\u0900-\u097F]/)
       );
     } else if (selectedLanguage === 'english') {
-      return news.filter(item => 
-        (item.category === 'Press Release' || 
-         item.category === 'Award' ||
-         item.category === 'Research' ||
-         item.category === 'Event' ||
-         item.category === 'Announcement' ||
-         item.category === 'Achievement') && 
-        !item.readTime.includes('मिनट') &&
-        !item.date.includes('दिसंबर') && 
-        !item.date.includes('नवंबर') &&
-        !item.title.match(/[\u0900-\u097F]/)
+      return blogs.filter(blog => 
+        blog.category === 'News & Press' && 
+        !blog.readTime.includes('मिनट') &&
+        !blog.date.includes('दिसंबर') && 
+        !blog.date.includes('नवंबर') &&
+        !blog.title.match(/[\u0900-\u097F]/)
       );
     }
-    return news;
+    return blogs;
   }, [selectedLanguage]);
 
   return (
@@ -229,9 +140,7 @@ const Page = () => {
                       <option value="mens-health">Men&apos;s Health</option>
                       <option value="womens-health">Women&apos;s Health</option>
                       <option value="treatment-guides">Treatment Guides</option>
-                      <option value="success-stories">Success Stories</option>
-                      <option value="doctor-insights">Doctor Insights</option>
-                      <option value="news-press">News & Press</option>
+                      
                     </select>
                   </div>
                   <div style={{ minWidth: '150px' }}>
@@ -301,23 +210,14 @@ const Page = () => {
                       width: '100%'
                     }}>
                       <Image 
-                        src={item.image} 
+                        src={getAssetPathClient(item.image)} 
                         alt={item.title} 
                         width={400} 
                         height={250}
                         className="w-100"
                         loading="eager"
                         style={{ 
-                          objectFit: 'cover', 
-                          transition: 'transform 0.5s ease',
-                          width: '100%',
-                          height: '100%'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = 'scale(1.1)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = 'scale(1)';
+                          objectFit: 'contain', 
                         }}
                       />
                       <div style={{
@@ -427,7 +327,6 @@ const Page = () => {
                 padding: '40px',
                 backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
-                textAlign: 'center',
                 border: '1px solid #e8e8e8'
               }}>
                 <h3 className="cs_ivf_content_heading" style={{ marginBottom: '15px', fontSize: '24px' }}>
@@ -448,7 +347,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -540,7 +439,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 

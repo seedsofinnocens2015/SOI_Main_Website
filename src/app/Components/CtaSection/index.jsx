@@ -1,34 +1,74 @@
 "use client"
-import { FaAnglesRight } from "react-icons/fa6";
-import Button from "../Buttons";
-import Image from "next/image";
+import Link from "next/link";
 import { getAssetPathClient } from "../../utils/assetPath";
 
 const CtaSection = ({ data = {} }) => {
+  const getCtaIconColor = (imageUrl) => {
+    const normalized = (imageUrl || "").toString().toLowerCase();
+
+    // Same 4-color palette mapping by icon URL
+    if (normalized.endsWith("/ffc.svg") || normalized.includes("ffc.svg")) return "#CB3148";
+    if (normalized.endsWith("/mfc.svg") || normalized.includes("mfc.svg")) return "#53A7A7";
+    if (normalized.endsWith("/cgt.svg") || normalized.includes("cgt.svg")) return "#E1B41A";
+    if (normalized.endsWith("/fa.svg") || normalized.includes("fa.svg")) return "#38425B";
+
+    return "#CB3148";
+  };
+
+  const serviceCards = [
+    {
+      imageUrl: "/assets/img/icons/ffc.svg",
+      title: "Female fertility care",
+      link:  "/",
+    },
+    {
+      imageUrl: "/assets/img/icons/mfc.svg",
+      title: "Male fertility care",
+      link:  "/male-infertility-treatment-in-india",
+    },
+    {
+      imageUrl:  "/assets/img/icons/cgt.svg",
+      title: "Couples genetic testing",
+      link:  "/couple-carrier-screening",
+    },
+    {
+      imageUrl:"/assets/img/icons/fa.svg",
+      title: "Fertility Academy",
+      link:  "/",
+    },
+  ];
+
   return (
     <>
       <div className="container">
         <div className="cs_cta_in">
           <div className="cs_cta_left">
-            <div className="cs_cta_thumb" data-aos="fade-right">
-            <Image src={getAssetPathClient(data?.imageUrl)} alt="img" width={200} height={190} loading="eager" />
-            </div>
-            <div className="cs_cta_info">
-              <h2 className="cs_cta_title">{data.title}</h2>
-              <p className="cs_cta_subtitle">{data.subtitle}</p>
-            </div>
+            <h2 className="cs_cta_title">BEGIN YOUR<br /> FERTILITY JOURNEY<br /> TODAY.</h2>
           </div>
           <div className="cs_cta_right">
-            <Button
-              btnText={data.buttonText}
-              variant={"cs_btn cs_style_1 cs_color_3"}
-              btnIcons={<FaAnglesRight />}
-              btnUrl={data.buttonUrl}
-            />
+            <div className="cs_cta_cards">
+              {serviceCards.map((card, index) => (
+                <Link
+                  href={card.link}
+                  key={index}
+                  className="cs_cta_card"
+                  style={{
+                    "--cta-icon-color": getCtaIconColor(card.imageUrl),
+                    "--cta-icon-url": `url("${getAssetPathClient(card.imageUrl)}")`,
+                  }}
+                >
+                  <div className="cs_cta_card_image">
+                    <span className="cs_cta_icon" aria-hidden="true" />
+                  </div>
+                  <h3 className="cs_cta_card_title">{card.title}</h3>
+                  <span className="cs_cta_card_link">START NOW →</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-      <div className="cs_cta_shape" />
+      {/* <div className="cs_cta_shape" /> */}
     </>
   );
 };

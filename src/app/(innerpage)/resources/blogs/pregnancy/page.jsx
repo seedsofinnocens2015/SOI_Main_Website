@@ -6,114 +6,32 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'Pregnancy Blogs',
 };
 
-const blogs = [
-  {
-    title: 'First Trimester: What to Expect',
-    excerpt: 'Comprehensive guide to the first trimester of pregnancy, including symptoms, development milestones, and essential care tips.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 14, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Pregnancy',
-    readTime: '8 min read',
-    link: '#',
-  },
-  {
-    title: 'Nutrition During Pregnancy',
-    excerpt: 'Essential nutrients, dietary guidelines, and foods to include or avoid during pregnancy for optimal health.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 9, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Pregnancy',
-    readTime: '7 min read',
-    link: '#',
-  },
-  {
-    title: 'Exercise and Fitness During Pregnancy',
-    excerpt: 'Safe exercise guidelines, recommended activities, and fitness tips for maintaining health during pregnancy.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 4, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Pregnancy',
-    readTime: '6 min read',
-    link: '#',
-  },
-  {
-    title: 'Prenatal Care: Your Guide to Healthy Pregnancy',
-    excerpt: 'Understanding prenatal appointments, tests, screenings, and what to expect throughout your pregnancy journey.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 27, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Pregnancy',
-    readTime: '9 min read',
-    link: '#',
-  },
-  {
-    title: 'Managing Pregnancy Symptoms',
-    excerpt: 'Practical tips for managing common pregnancy symptoms like morning sickness, fatigue, and mood changes.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 19, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Pregnancy',
-    readTime: '6 min read',
-    link: '#',
-  },
-  {
-    title: 'Preparing for Delivery',
-    excerpt: 'Essential information about preparing for labor and delivery, including birth plans and what to pack.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 13, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Pregnancy',
-    readTime: '7 min read',
-    link: '#',
-  },
-  // Hindi Blogs
-  {
-    title: 'पहली तिमाही: क्या उम्मीद करें',
-    excerpt: 'गर्भावस्था की पहली तिमाही की व्यापक गाइड, लक्षण, विकास मील के पत्थर, और आवश्यक देखभाल युक्तियां शामिल हैं।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '14 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'गर्भावस्था',
-    readTime: '8 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'गर्भावस्था के दौरान पोषण',
-    excerpt: 'गर्भावस्था के दौरान आवश्यक पोषक तत्व, आहार दिशानिर्देश, और शामिल करने या बचने के लिए खाद्य पदार्थ।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '9 दिसंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'गर्भावस्था',
-    readTime: '7 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'गर्भावस्था के दौरान व्यायाम और फिटनेस',
-    excerpt: 'गर्भावस्था के दौरान सुरक्षित व्यायाम दिशानिर्देश, अनुशंसित गतिविधियां, और स्वास्थ्य बनाए रखने के लिए फिटनेस युक्तियां।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '4 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'गर्भावस्था',
-    readTime: '6 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'प्रसवपूर्व देखभाल: स्वस्थ गर्भावस्था की आपकी गाइड',
-    excerpt: 'प्रसवपूर्व अपॉइंटमेंट, परीक्षण, स्क्रीनिंग को समझना, और आपकी गर्भावस्था यात्रा के दौरान क्या उम्मीद करें।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '27 नवंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'गर्भावस्था',
-    readTime: '9 मिनट पढ़ें',
-    link: '#',
-  },
-];
+// Get blogs from JSON and filter by category
+const jsonBlogs = blogsData.blogs.filter(blog =>
+  blog.category === 'Pregnancy' || blog.category === 'गर्भावस्था'
+);
+
+// Map blogs with correct link based on language
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  const isHindi = blog.category === 'गर्भावस्था' || blog.title.match(/[\u0900-\u097F]/);
+  return {
+    title: blog.title,
+    excerpt: blog.excerpt,
+    image: blog.image,
+    date: blog.date,
+    author: blog.author,
+    category: blog.category,
+    readTime: blog.readTime,
+    link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -221,9 +139,7 @@ const Page = () => {
                       <option value="mens-health">Men&apos;s Health</option>
                       <option value="womens-health">Women&apos;s Health</option>
                       <option value="treatment-guides">Treatment Guides</option>
-                      <option value="success-stories">Success Stories</option>
-                      <option value="doctor-insights">Doctor Insights</option>
-                      <option value="news-press">News & Press</option>
+                      
                     </select>
                   </div>
                   <div style={{ minWidth: '150px' }}>
@@ -293,7 +209,7 @@ const Page = () => {
                       width: '100%'
                     }}>
                       <Image 
-                        src={blog.image} 
+                        src={getAssetPathClient(blog.image)} 
                         alt={blog.title} 
                         width={400} 
                         height={250}
@@ -413,7 +329,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -505,7 +421,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 

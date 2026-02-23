@@ -22,7 +22,7 @@ const conciergeContentData = {
         'At Seeds of Innocens, we understand that traveling to a new country for medical treatment can be overwhelming. Our dedicated Patient Concierge team provides personalized support throughout your entire fertility treatment journey, ensuring a smooth and comfortable experience from initial consultation to post-treatment follow-up.',
         'Our concierge services are designed to eliminate stress and make your medical journey as seamless as possible. Whether you need assistance with appointments, documentation, language support, or simply have questions about your treatment, our team is here to help you 24/7.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/Patient Concierge.webp',
     },
     {
       heading: 'Pre-Treatment Consultation',

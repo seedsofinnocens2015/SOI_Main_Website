@@ -2,6 +2,7 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getAssetPath } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'Blogs',
@@ -97,7 +98,7 @@ const page = () => {
             <div className="col-lg-12">
               <div className="cs_service_details_thumbnail">
                 <Image 
-                  src="/assets/img/recent_post2.jpg" 
+                  src={getAssetPath("/assets/img/recent_post2.jpg")} 
                   alt="Blogs" 
                   width={1200} 
                   height={400}
@@ -121,7 +122,7 @@ const page = () => {
                   >
                     <div className="cs_blog_img" style={{ overflow: 'hidden', borderRadius: '10px 10px 0 0' }}>
                       <Image 
-                        src={category.image} 
+                        src={getAssetPath(category.image)} 
                         alt={category.title} 
                         width={400} 
                         height={250}

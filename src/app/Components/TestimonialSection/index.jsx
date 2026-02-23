@@ -1,127 +1,121 @@
 "use client"
-import { useState } from "react";
-import Slider from "react-slick";
-import { Rating } from "@smastrom/react-rating";
-import "@smastrom/react-rating/style.css";
 import Image from "next/image";
-import SectionHeading from "../SectionHeading";
 import { getAssetPathClient } from "../../utils/assetPath";
 
-const TestimonialSection = ({ data }) => {
-  const [rating, setRating] = useState();
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    swipeToSlide: true,
-    afterChange: (index) => {
-      setCurrentSlide(index);
-    },
-    appendDots: (dots) => (
-      <div>
-        <ul>{dots}</ul>
-      </div>
-    ),
-    dotsClass: `cs_pagination cs_style_2 cs_accent_color cs_flex_left`,
-  };
+const StarIcon = () => (
+  <svg viewBox="0 -0.5 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#CB3148" width="20" height="20">
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+      <title>star</title>
+      <desc>Created with Sketch.</desc>
+      <defs></defs>
+      <g id="Vivid.JS" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Vivid-Icons" transform="translate(-903.000000, -411.000000)" fill="#CB3148">
+          <g id="Icons" transform="translate(37.000000, 169.000000)">
+            <g id="star" transform="translate(858.000000, 234.000000)">
+              <g transform="translate(7.000000, 8.000000)" id="Shape">
+                <polygon points="27.865 31.83 17.615 26.209 7.462 32.009 9.553 20.362 0.99 12.335 12.532 10.758 17.394 0 22.436 10.672 34 12.047 25.574 20.22"></polygon>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+);
 
-  // Get current video URL based on slide index
-  const getCurrentVideoUrl = () => {
-    if (data.testimonials && data.testimonials[currentSlide] && data.testimonials[currentSlide].videoUrl) {
-      const videoUrl = data.testimonials[currentSlide].videoUrl;
-      // Convert YouTube URL to embed format if needed
-      if (videoUrl.includes('youtube.com/watch?v=')) {
-        const videoId = videoUrl.split('v=')[1]?.split('&')[0];
-        return `https://www.youtube.com/embed/${videoId}`;
-      } else if (videoUrl.includes('youtu.be/')) {
-        const videoId = videoUrl.split('youtu.be/')[1]?.split('?')[0];
-        return `https://www.youtube.com/embed/${videoId}`;
-      } else if (videoUrl.includes('youtube.com/embed/')) {
-        return videoUrl;
-      }
-      return videoUrl;
-    }
-    return null;
-  };
+const CARD_BG_COLORS = ['#9de3e3', '#f0d473', '#99ade0'];
+
+const TestimonialSection = ({ data }) => {
+  // Duplicate testimonials for seamless loop
+  const duplicatedTestimonials = [...data.testimonials, ...data.testimonials];
 
   return (
     <>
       <div className="container">
-        {data.subtitle && (
-          <SectionHeading
-            variant={'text-center'}
-            SectionTitle={data.title || ''}
-            SectionSubtitle={data.subtitle}
-            SectionDescription={data.description || ''}
-          />
+        {data.sectionTitle && (
+          <div className="cs_service_title_section">
+            <h2 className="cs_service_main_title">
+              {typeof data.sectionTitle === 'object' && data.sectionTitle.part1 ? (
+                <>
+                  <span className="cs_news_media_main_title" style={{ color: '#CB3148' }}>
+                    {data.sectionTitle.part1}
+                  </span>{' '}
+                  <span style={{ color: '#000000' }}>{data.sectionTitle.part2}</span>
+                </>
+              ) : (
+                data.sectionTitle
+              )}
+            </h2>
+            {data.sectionSubtitle && (
+              <div
+                style={{
+                  fontSize: 'clamp(14px, 2vw, 18px)',
+                  color: '#555555',
+                  fontWeight: '700',
+                  textAlign: 'center',
+                  textTransform: 'none',
+                  marginTop: '10px',
+                  display: 'block',
+                  width: '100%',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}
+              >
+                {typeof data.sectionSubtitle === 'object' && data.sectionSubtitle.part1 ? (
+                  <>
+                    <div>{data.sectionSubtitle.part1}</div>
+                    <div>{data.sectionSubtitle.part2}</div>
+                  </>
+                ) : (
+                  data.sectionSubtitle
+                )}
+              </div>
+            )}
+          </div>
         )}
         <div className="cs_height_30 cs_height_lg_30" />
-        <div className="row cs_gap_y_50 align-items-center">
-          <div className="col-lg-5" data-aos="fade-left">
-            <div className="cs_testimonial_thumbnail">
-              {getCurrentVideoUrl() ? (
-                <iframe
-                  key={currentSlide}
-                  width="100%"
-                  height="463"
-                  src={getCurrentVideoUrl()}
-                  title="Testimonial Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ borderRadius: '10px' }}
-                />
-              ) : (
-                <Image src={getAssetPathClient(data.thumbnail)} alt="img" width={484} height={463} loading="eager" />
-              )}
-            </div>
-          </div>
-          <div className="col-lg-7">
-            <div className="cs_testimonial_content">
-              <div className="cs_slider cs_style_1 cs_slider_gap_24 position-relative">
-                <div className="cs_slider_container">
-                  <div className="cs_slider_wrapper">
-                    <Slider {...settings}>
-                      {data.testimonials.map((testimonial, index) => (
-                        <div key={index} className="cs_slide">
-                          <div className="cs_testimonial cs_style_1">
-                            <div className="cs_testimonial_info">
-                              <div className="cs_rating_container">
-                                <Rating
-                                  style={{ maxWidth: 150 }}
-                                  value={testimonial.rating}
-                                  onChange={() => setRating(testimonial.rating)}
-                                  isRequired
-                                />
-                              </div>
-                              <p className="cs_testimonial_subtitle">
-                                {testimonial.subtitle}
-                              </p>
-                            </div>
-                            <div className="cs_avatar cs_style_1">
-                              <div className="cs_avatar_thumbnail cs_center">
-                              <Image src={getAssetPathClient(testimonial.avatar)} alt="img" width={73} height={73} loading="eager" />
-                              </div>
-                              <div className="cs_avatar_info">
-                                <h3 className="cs_avatar_title">
-                                  {testimonial.name}
-                                </h3>
-                                <p className="cs_avatar_subtitle mb-0">
-                                  {testimonial.position}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </Slider>
+        <div className="cs_testimonial_marquee_wrapper">
+          <div className="cs_testimonial_marquee">
+            {duplicatedTestimonials.map((testimonial, index) => (
+              <div key={index} className="cs_testimonial_marquee_item">
+                <div
+                  className="cs_testimonial_card cs_testimonial_card_tinted"
+                  style={{ backgroundColor: CARD_BG_COLORS[index % CARD_BG_COLORS.length] }}
+                >
+                  {/* Profile Picture */}
+                  <div className="cs_testimonial_avatar_wrapper">
+                    <div className="cs_testimonial_avatar">
+                      <Image 
+                        src={getAssetPathClient(testimonial.avatar)} 
+                        alt={testimonial.name} 
+                        width={80} 
+                        height={80} 
+                        loading="eager"
+                      />
+                    </div>
                   </div>
+                  
+                  {/* Star Rating */}
+                  <div className="cs_testimonial_rating_wrapper">
+                    {Array.from({ length: testimonial.rating || 5 }).map((_, starIndex) => (
+                      <StarIcon key={starIndex} />
+                    ))}
+                  </div>
+                  
+                  {/* Name */}
+                  <h3 className="cs_testimonial_name">
+                    {testimonial.name}
+                  </h3>
+                  
+                  {/* Testimonial Text */}
+                  <p className="cs_testimonial_text">
+                    {testimonial.subtitle}
+                  </p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

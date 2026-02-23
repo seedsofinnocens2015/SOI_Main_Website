@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'Leadership Team',
@@ -14,7 +15,7 @@ const leadershipTeamData = [
   {
     name: 'Dr. Gauri Agarwal',
     profession: 'Founder & Chief Fertility Specialist',
-    imageUrl: '/assets/img/Doctors/Dr%20Gauri%20maam.jpg',
+    imageUrl: getAssetPathClient("/assets/img/Doctors/Dr%20Gauri%20maam.jpg"),
     profileLink: '/about/dr-gauri-agrawal',
     experience: '15+ Years',
     location: 'Delhi/NCR',
@@ -22,7 +23,7 @@ const leadershipTeamData = [
   {
     name: 'Dr. Rajat Arora',
     profession: 'Co-Founder & Director',
-    imageUrl: '/assets/img/Doctors/rajat.png',
+    imageUrl: getAssetPathClient("/assets/img/Doctors/rajat.png"),
     profileLink: '/doctors/doctor-details',
     experience: '15+ Years',
     location: 'Delhi/NCR',
@@ -36,7 +37,7 @@ const ivfContentData = {
       paragraphs: [
         'Our leadership team consists of experienced and dedicated professionals who bring together decades of combined expertise in fertility medicine, embryology, genetics, and patient care. They are committed to providing the highest quality of care and ensuring the best possible outcomes for our patients.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      // sideImage: '/assets/img/recent_post2.jpg',
     },
     {
       heading: 'Our Vision',

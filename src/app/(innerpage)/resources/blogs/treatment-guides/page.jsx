@@ -6,114 +6,31 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'Treatment Guides',
 };
 
-const blogs = [
-  {
-    title: 'Complete IVF Treatment Guide',
-    excerpt: 'Comprehensive step-by-step guide to IVF treatment, from initial consultation to pregnancy test, covering all phases and what to expect.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 16, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Treatment Guide',
-    readTime: '12 min read',
-    link: '#',
-  },
-  {
-    title: 'IUI Treatment: A Detailed Guide',
-    excerpt: 'Everything you need to know about Intrauterine Insemination (IUI), including procedure, success rates, and preparation tips.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 12, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Treatment Guide',
-    readTime: '8 min read',
-    link: '#',
-  },
-  {
-    title: 'Egg Freezing: Complete Process Guide',
-    excerpt: 'Detailed guide to egg freezing process, benefits, success rates, and what to expect during the procedure and storage.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 8, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Treatment Guide',
-    readTime: '10 min read',
-    link: '#',
-  },
-  {
-    title: 'ICSI Treatment: Step-by-Step Guide',
-    excerpt: 'Comprehensive guide to Intracytoplasmic Sperm Injection (ICSI), when it\'s recommended, and what makes it different from IVF.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 4, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Treatment Guide',
-    readTime: '9 min read',
-    link: '#',
-  },
-  {
-    title: 'PGT Testing: Understanding Genetic Screening',
-    excerpt: 'Guide to Preimplantation Genetic Testing (PGT), types of PGT, benefits, and what to expect during the testing process.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 28, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Treatment Guide',
-    readTime: '11 min read',
-    link: '#',
-  },
-  {
-    title: 'Embryo Transfer: Preparation and Procedure',
-    excerpt: 'Complete guide to embryo transfer procedure, preparation tips, what happens during transfer, and post-transfer care.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 22, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Treatment Guide',
-    readTime: '7 min read',
-    link: '#',
-  },
-  // Hindi Blogs
-  {
-    title: 'आईवीएफ उपचार की पूरी गाइड',
-    excerpt: 'आईवीएफ उपचार की व्यापक चरण-दर-चरण गाइड, प्रारंभिक परामर्श से लेकर गर्भावस्था परीक्षण तक, सभी चरणों और क्या उम्मीद करें।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '16 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'उपचार गाइड',
-    readTime: '12 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'आईयूआई उपचार: एक विस्तृत गाइड',
-    excerpt: 'इंट्रायूटेरिन इनसेमिनेशन (आईयूआई) के बारे में सब कुछ, प्रक्रिया, सफलता दर, और तैयारी युक्तियां शामिल हैं।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '12 दिसंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'उपचार गाइड',
-    readTime: '8 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'अंडा फ्रीजिंग: पूरी प्रक्रिया गाइड',
-    excerpt: 'अंडा फ्रीजिंग प्रक्रिया, लाभ, सफलता दर, और प्रक्रिया और भंडारण के दौरान क्या उम्मीद करें की विस्तृत गाइड।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '8 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'उपचार गाइड',
-    readTime: '10 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'आईसीएसआई उपचार: चरण-दर-चरण गाइड',
-    excerpt: 'इंट्रासाइटोप्लाज्मिक स्पर्म इंजेक्शन (आईसीएसआई) की व्यापक गाइड, यह कब अनुशंसित है, और इसे आईवीएफ से अलग क्या बनाता है।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '4 दिसंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'उपचार गाइड',
-    readTime: '9 मिनट पढ़ें',
-    link: '#',
-  },
-];
+  // Get blogs from JSON and filter by category
+const jsonBlogs = blogsData.blogs.filter(blog => 
+  blog.category === 'Treatment Guides' || blog.category === 'उपचार गाइड'
+);
+// Map blogs with correct link based on language
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  const isHindi = blog.category === 'उपचार गाइड' || blog.title.match(/[\u0900-\u097F]/);
+  return {
+    title: blog.title,
+    excerpt: blog.excerpt,
+    image: blog.image,
+    date: blog.date,
+    author: blog.author,
+    category: blog.category,
+    readTime: blog.readTime,
+    link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -221,9 +138,7 @@ const Page = () => {
                       <option value="mens-health">Men&apos;s Health</option>
                       <option value="womens-health">Women&apos;s Health</option>
                       <option value="treatment-guides">Treatment Guides</option>
-                      <option value="success-stories">Success Stories</option>
-                      <option value="doctor-insights">Doctor Insights</option>
-                      <option value="news-press">News & Press</option>
+                      
                     </select>
                   </div>
                   <div style={{ minWidth: '150px' }}>
@@ -293,23 +208,14 @@ const Page = () => {
                       width: '100%'
                     }}>
                       <Image 
-                        src={blog.image} 
+                        src={getAssetPathClient(blog.image)} 
                         alt={blog.title} 
                         width={400} 
                         height={250}
                         className="w-100"
                         loading="eager"
                         style={{ 
-                          objectFit: 'cover', 
-                          transition: 'transform 0.5s ease',
-                          width: '100%',
-                          height: '100%'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = 'scale(1.1)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = 'scale(1)';
+                          objectFit: 'contain', 
                         }}
                       />
                       <div style={{
@@ -413,7 +319,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -505,7 +411,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 

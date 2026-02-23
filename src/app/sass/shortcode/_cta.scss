@@ -2,113 +2,282 @@
   14. CTA
 ----------------------------------------------------------------*/
 .cs_cta.cs_style_1 {
-  padding: 0;
-  min-height: 190px;
+  padding: 60px 0 60px 0;
+  min-height: 520px;
   display: flex;
   align-items: center;
-  
+  position: relative;
+  overflow: hidden;
+  margin-top: -200px;
+  z-index: 1;
+
+  // Curved top border (concave curve - dips down in the middle)
+  // Creates a smooth concave curve that dips down in the center
+  clip-path: polygon(0% 80px,
+      25% 110px,
+      50% 125px,
+      /* bowl center */
+      75% 110px,
+      100% 80px,
+      100% 100%,
+      0% 100%);
+
+
+
+
+
+
   @media (max-width: 991px) {
     min-height: auto;
-    padding: 20px 0;
+    padding: 50px 0 50px 0;
+    clip-path: polygon(0% 80px,
+        25% 107px,
+        50% 120px,
+        /* bowl center */
+        75% 107px,
+        100% 80px,
+        100% 100%,
+        0% 100%);
   }
-  
+
   @media (max-width: 575px) {
-    padding: 15px 0;
+    padding: 45px 0 45px 0;
+    clip-path: polygon(0% 80px,
+        25% 107px,
+        50% 120px,
+        /* bowl center */
+        75% 107px,
+        100% 80px,
+        100% 100%,
+        0% 100%);
+
   }
+
 
   .cs_cta_in {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 190px;
+    min-height: 260px;
+
 
     @media (max-width: 991px) {
       flex-direction: column;
-      gap: 15px 0;
+      gap: 30px 0;
       min-height: auto;
+      align-items: flex-start;
     }
-    
+
     @media (max-width: 575px) {
-      gap: 12px 0;
+      gap: 25px 0;
     }
   }
 
   .cs_cta_left {
+    flex: 1;
     display: flex;
     align-items: center;
-    gap: 30px 70px;
 
     @media (max-width: 991px) {
-      flex-direction: column;
-      text-align: center;
-      gap: 15px 0;
-    }
-    
-    @media (max-width: 575px) {
-      gap: 10px 0;
+      width: 100%;
     }
   }
 
   .cs_cta_right {
-    flex: none;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 991px) {
+      width: 100%;
+      justify-content: flex-start;
+    }
   }
 
   .container {
     position: relative;
     z-index: 2;
+    margin-top: 160px;
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: 100%;
+
+    @media (max-width: 1400px) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    @media (max-width: 1199px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media (max-width: 767px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   .cs_cta_title {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #fff;
-  }
+    font-size: clamp(22px, 3vw, 40px);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.742);
 
-  .cs_cta_subtitle {
-    margin-bottom: 0;
-    color: rgba(255, 255, 255, 0.75);
-  }
+    @media (max-width: 991px) {
+      font-size: clamp(20px, 3.5vw, 32px);
+    }
 
-  .cs_cta_thumb {
-    flex: none;
-    width: 200px;
-    height: 190px;
-    position: relative;
-
-    &::before {
-      content: '';
-      height: 110px;
-      width: 110px;
-      background-color: var(--accent-color);
-      position: absolute;
-      transform: rotate(45deg);
-      right: -20px;
-      top: 50%;
-      margin-top: -55px;
-
-      @media (max-width: 991px) {
+    @media (max-width: 575px) {
+      font-size: clamp(30px, 5vw, 32px);
+      
+      br {
         display: none;
       }
     }
+  }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: relative;
-      z-index: 1;
-    }
-    
+  .cs_cta_cards {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: flex-start;
+
     @media (max-width: 991px) {
-      width: 150px;
-      height: 140px;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
     }
-    
+
+    @media (max-width: 767px) {
+      gap: 10px;
+    }
+  }
+
+  .cs_cta_card {
+    flex: none;
+    width: 246px;
+    height: 282px;
+    background-color: #FFFBF8;
+    border: 1px solid #FCE2D4;
+    border-radius: 30px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 991px) {
+      width: calc(50% - 6px);
+      height: auto;
+      min-height: 240px;
+      padding: 20px 15px;
+    }
+
     @media (max-width: 575px) {
-      width: 120px;
-      height: 110px;
+      width: calc(50% - 5px);
+      min-height: 220px;
+      padding: 18px 12px;
+      border-radius: 25px;
     }
+  }
+
+  .cs_cta_card_image {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+
+    .cs_cta_icon {
+      width: 100px;
+      height: 100px;
+      display: block;
+      background-color: var(--cta-icon-color, #CB3148);
+      -webkit-mask-image: var(--cta-icon-url);
+      mask-image: var(--cta-icon-url);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
+
+    @media (max-width: 991px) {
+      margin-bottom: 12px;
+      height: 80px;
+
+      .cs_cta_icon {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      margin-bottom: 10px;
+      height: 70px;
+
+      .cs_cta_icon {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  .cs_cta_card_title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+    text-transform: capitalize;
+
+    @media (max-width: 991px) {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .cs_cta_card_link {
+    font-size: 14px;
+    color: #888;
+    font-weight: 500;
+    margin-top: auto;
+    transition: color 0.3s ease;
+
+    @media (max-width: 991px) {
+      font-size: 13px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 12px;
+    }
+  }
+
+  .cs_cta_card:hover .cs_cta_card_link {
+    color: #A1B057;
   }
 
   .cs_cta_shape {
@@ -146,14 +315,16 @@
 
   &.cs_type_1 {
     padding: 40px 0;
-    
+
     @media (max-width: 991px) {
       padding: 35px 0;
     }
+
     .cs_cta_in {
       padding: 0;
       position: relative;
       z-index: 1;
+
       @media (max-width: 991px) {
         padding: 0;
       }
@@ -188,6 +359,7 @@
         top: 0;
         background-color: var(--blue-color);
         border-radius: 100px 0 0 100px;
+
         @media (max-width: 991px) {
           left: 50%;
           transform: translateX(-50%);
@@ -240,13 +412,11 @@
 
   .cs_play_btn_text {
     background-repeat: no-repeat;
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      color-stop(0, currentColor),
-      to(currentColor)
-    );
+    background-image: -webkit-gradient(linear,
+        left top,
+        right top,
+        color-stop(0, currentColor),
+        to(currentColor));
     background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
     transition: background-size 0.42s cubic-bezier(0.49, 0.49, 0.08, 1),
       color 0.27s ease-out;

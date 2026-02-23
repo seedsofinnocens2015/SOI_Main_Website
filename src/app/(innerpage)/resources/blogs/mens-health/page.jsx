@@ -6,114 +6,33 @@ import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowRight } from 'react-icons/fa';
+import blogsData from '@/app/data/blogs.json';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'Men\'s Health Blogs',
 };
 
-const blogs = [
-  {
-    title: 'Understanding Male Infertility',
-    excerpt: 'Comprehensive guide to male infertility causes, diagnosis, and treatment options including lifestyle factors and medical interventions.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 13, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Men\'s Health',
-    readTime: '9 min read',
-    link: '#',
-  },
-  {
-    title: 'Sperm Health: Factors That Matter',
-    excerpt: 'Learn about factors affecting sperm quality, count, and motility, and what you can do to improve male fertility health.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 7, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Men\'s Health',
-    readTime: '7 min read',
-    link: '#',
-  },
-  {
-    title: 'Lifestyle and Male Fertility',
-    excerpt: 'How diet, exercise, stress, and lifestyle choices impact male fertility and practical tips for optimization.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'December 2, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Men\'s Health',
-    readTime: '8 min read',
-    link: '#',
-  },
-  {
-    title: 'Semen Analysis: Understanding Your Results',
-    excerpt: 'Guide to understanding semen analysis reports, what the numbers mean, and when to seek treatment.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 24, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Men\'s Health',
-    readTime: '6 min read',
-    link: '#',
-  },
-  {
-    title: 'Male Fertility Treatments: TESA, PESA, and More',
-    excerpt: 'Overview of male fertility treatments including surgical sperm retrieval procedures and their success rates.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 17, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'Men\'s Health',
-    readTime: '7 min read',
-    link: '#',
-  },
-  {
-    title: 'Age and Male Fertility',
-    excerpt: 'How age affects male fertility, sperm quality changes over time, and what men should know about biological clocks.',
-    image: '/assets/img/recent_post2.jpg',
-    date: 'November 11, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'Men\'s Health',
-    readTime: '5 min read',
-    link: '#',
-  },
-  // Hindi Blogs
-  {
-    title: 'पुरुष बांझपन को समझना',
-    excerpt: 'पुरुष बांझपन के कारणों, निदान और उपचार विकल्पों की व्यापक गाइड, जिसमें जीवनशैली कारक और चिकित्सा हस्तक्षेप शामिल हैं।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '13 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'पुरुष स्वास्थ्य',
-    readTime: '9 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'शुक्राणु स्वास्थ्य: महत्वपूर्ण कारक',
-    excerpt: 'शुक्राणु गुणवत्ता, संख्या और गतिशीलता को प्रभावित करने वाले कारकों के बारे में जानें, और पुरुष प्रजनन स्वास्थ्य में सुधार के लिए क्या कर सकते हैं।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '7 दिसंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'पुरुष स्वास्थ्य',
-    readTime: '7 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'जीवनशैली और पुरुष प्रजनन क्षमता',
-    excerpt: 'आहार, व्यायाम, तनाव और जीवनशैली विकल्प पुरुष प्रजनन क्षमता को कैसे प्रभावित करते हैं और अनुकूलन के लिए व्यावहारिक युक्तियां।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '2 दिसंबर, 2024',
-    author: 'Dr. Gauri Agarwal',
-    category: 'पुरुष स्वास्थ्य',
-    readTime: '8 मिनट पढ़ें',
-    link: '#',
-  },
-  {
-    title: 'वीर्य विश्लेषण: अपने परिणामों को समझना',
-    excerpt: 'वीर्य विश्लेषण रिपोर्ट को समझने की गाइड, संख्याओं का क्या मतलब है, और उपचार कब लेना चाहिए।',
-    image: '/assets/img/recent_post2.jpg',
-    date: '24 नवंबर, 2024',
-    author: 'Dr. Aditi Bhatnagar',
-    category: 'पुरुष स्वास्थ्य',
-    readTime: '6 मिनट पढ़ें',
-    link: '#',
-  },
-];
+// Get blogs from JSON and filter by category
+const jsonBlogs = blogsData.blogs.filter(blog => 
+  blog.category === 'Men\'s Health' || blog.category === 'पुरुषों का स्वास्थ्य'
+);
+
+// Use blogs from JSON, fallback to empty array
+const blogs = jsonBlogs.length > 0 ? jsonBlogs.map(blog => {
+  // Determine if blog is Hindi or English based on category
+  const isHindi = blog.category === 'पुरुषों का स्वास्थ्य';
+  return {
+    title: blog.title,
+    excerpt: blog.excerpt,
+    image: blog.image,
+    date: blog.date,
+    author: blog.author,
+    category: blog.category,
+    readTime: blog.readTime,
+    link: isHindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+  };
+}) : [];
 
 const Page = () => {
   const router = useRouter();
@@ -149,7 +68,7 @@ const Page = () => {
       return blogs;
     } else if (selectedLanguage === 'hindi') {
       return blogs.filter(blog => 
-        blog.category === 'पुरुष स्वास्थ्य' || 
+        blog.category === 'पुरुषों का स्वास्थ्य' || 
         blog.readTime.includes('मिनट') ||
         blog.date.includes('दिसंबर') || 
         blog.date.includes('नवंबर') ||
@@ -221,9 +140,7 @@ const Page = () => {
                       <option value="mens-health">Men&apos;s Health</option>
                       <option value="womens-health">Women&apos;s Health</option>
                       <option value="treatment-guides">Treatment Guides</option>
-                      <option value="success-stories">Success Stories</option>
-                      <option value="doctor-insights">Doctor Insights</option>
-                      <option value="news-press">News & Press</option>
+                      
                     </select>
                   </div>
                   <div style={{ minWidth: '150px' }}>
@@ -293,23 +210,14 @@ const Page = () => {
                       width: '100%'
                     }}>
                       <Image 
-                        src={blog.image} 
+                        src={getAssetPathClient(blog.image)} 
                         alt={blog.title} 
                         width={400} 
                         height={250}
                         className="w-100"
                         loading="eager"
                         style={{ 
-                          objectFit: 'cover', 
-                          transition: 'transform 0.5s ease',
-                          width: '100%',
-                          height: '100%'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = 'scale(1.1)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = 'scale(1)';
+                          objectFit: 'contain', 
                         }}
                       />
                       <div style={{
@@ -413,7 +321,7 @@ const Page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Pagination */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="cs_pagination text-center">
                 <ul className="cs_mp_0" style={{ 
@@ -505,7 +413,7 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
 

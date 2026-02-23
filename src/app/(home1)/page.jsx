@@ -11,53 +11,108 @@ import NewsMediaSection from '../Components/NewsMediaSection';
 import WhyChooseUsSection from '../Components/WhyChooseUsSection';
 import GeneticsSection from '../Components/GeneticsSection';
 import CredibilitySection from '../Components/CredibilitySection';
+import FAQSection from '../Components/FAQSection';
 
 const heroData = {
     primarySlider: [
       {
-        bgImageUrl: '/assets/img/herobanner.jpg',
-        mobileBgImageUrl: '/assets/img/herobanner_mobile.jpg', // Add mobile image path here
-        title: 'Seeds of Innocens IVF Centre <span>India\'s Best Fertility Clinic</span>',
+        bgImageUrl: '/assets/img/banner.png',
+        mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
+        title: 'YOUR JOURNEY TO<br/>PARENTHOOD STARTS HERE.',
         titleClass: 'cs_single_line_title',
         titleStyle: {
-          fontSize: 'clamp(22px, 4vw, 48px)',
-          marginTop: 'clamp(-120px, -8vw, -40px)',
+          fontSize: 'clamp(32px, 5vw, 72px)',
+          // fontWeight: 'bold',
+          textTransform: 'uppercase',
+          textAlign: 'center',
+          color: '#FFFFFF',
+          lineHeight: '1.2',
+          letterSpacing: '1px',
+          textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.5)',
         },
         contactSubtitle:
-          'One Stop Solution For All Your Fertility Problems!',
-        btnText1: 'Book Appointment',
+          'Care that goes beyond pregnancy.',
+        subtitleStyle: {
+          fontSize: 'clamp(22px, 3.5vw, 32px)',
+          textAlign: 'center',
+          color: '#FFFFFF',
+          // fontWeight: '400',
+          marginBottom: '30px',
+          textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6), 3px 3px 8px rgba(0, 0, 0, 0.5)',
+        },
+        btnText1: 'Schedule a Visit',
+        btnStyle: 'cs_green_btn',
         link: '/contact/book-appointment',
+        phoneNumber: '9810350 512',
+        phoneLink: 'tel:+919810350512',
         iconImgUrl: '/assets/img/icons/hero_icon.png',
+        isCenterLayout: true,
       },
       {
-        bgImageUrl: '/assets/img/hero_slider_21.jpg',
-        mobileBgImageUrl: '/assets/img/hero_slider_21_mobile.jpg', // Add mobile image path here
-        title: 'Expert Fertility <span>Care.</span>',
+        bgImageUrl: '/assets/img/banner.png',
+        mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
+        title: 'YOUR JOURNEY TO<br/>PARENTHOOD STARTS HERE.',
         titleClass: 'cs_single_line_title',
         titleStyle: {
-          fontSize: 'clamp(22px, 4vw, 48px)',
-          marginTop: 'clamp(-120px, -8vw, -40px)',
+          fontSize: 'clamp(32px, 5vw, 72px)',
+          // fontWeight: 'bold',
+          textTransform: 'uppercase',
+          textAlign: 'center',
+          color: '#FFFFFF',
+          lineHeight: '1.2',
+          letterSpacing: '1px',
+          textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.5)',
         },
         contactSubtitle:
-          'Expert Fertility Care with World-Class Treatment.',
-        btnText1: 'Book Appointment',
+          'Care that goes beyond pregnancy.',
+        subtitleStyle: {
+          fontSize: 'clamp(22px, 3.5vw, 32px)',
+          textAlign: 'center',
+          color: '#FFFFFF',
+          // fontWeight: '400',
+          marginBottom: '30px',
+          textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6), 3px 3px 8px rgba(0, 0, 0, 0.5)',
+        },
+        btnText1: 'Schedule a Visit',
+        btnStyle: 'cs_green_btn',
         link: '/contact/book-appointment',
+        phoneNumber: '9810350 512',
+        phoneLink: 'tel:+919810350512',
         iconImgUrl: '/assets/img/icons/hero_icon.png',
+        isCenterLayout: true,
       },
       {
-        bgImageUrl: '/assets/img/hero_slider_12.jpg',
-        mobileBgImageUrl: '/assets/img/hero_slider_12_mobile.jpg', // Add mobile image path here
-        title: 'Advanced IVF <span>Treatments.</span>',
+        bgImageUrl: '/assets/img/banner.png',
+        mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
+        title: 'YOUR JOURNEY TO<br/>PARENTHOOD STARTS HERE.',
         titleClass: 'cs_single_line_title',
         titleStyle: {
-          fontSize: 'clamp(22px, 4vw, 48px)',
-          marginTop: 'clamp(-120px, -8vw, -40px)',
+          fontSize: 'clamp(32px, 5vw, 72px)',
+          // fontWeight: 'bold',
+          textTransform: 'uppercase',
+          textAlign: 'center',
+          color: '#FFFFFF',
+          lineHeight: '1.2',
+          letterSpacing: '1px',
+          textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.5)',
         },
         contactSubtitle:
-          'Advanced IVF Treatments with Cutting-Edge Solutions.',
-        btnText1: 'Book Appointment',
+          'Care that goes beyond pregnancy.',
+        subtitleStyle: {
+          fontSize: 'clamp(22px, 3.5vw, 32px)',
+          textAlign: 'center',
+          color: '#FFFFFF',
+          //  fontWeight: '400',
+          marginBottom: '30px',
+          textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6), 3px 3px 8px rgba(0, 0, 0, 0.5)',
+        },
+        btnText1: 'Schedule a Visit',
+        btnStyle: 'cs_green_btn',
         link: '/contact/book-appointment',
+        phoneNumber: '9810350 512',
+        phoneLink: 'tel:+919810350512',
         iconImgUrl: '/assets/img/icons/hero_icon.png',
+        isCenterLayout: true,
       },
     ],
     // secondarySlider: [
@@ -75,104 +130,146 @@ const heroData = {
     buttonText: 'Our Doctors',
   };
   
-  const countersData = [
-    {
-      iconUrl: '/assets/img/icons/counter_icon_1.png',
-      number: '20,000+',
-      title: 'Successful Pregnancies',
+  const countersData = {
+    badgeText: 'Outstanding cess rates',
+    heading: {
+      highlighted: '20,000+',
+      rest: 'SUCCESS STORIES AND THE JOURNEY CONTINUES.'
     },
-    {
-      iconUrl: '/assets/img/icons/counter_icon_2.png',
-      number: '35+',
-      title: 'Centres Across India',
-    },
-    {
-      iconUrl: '/assets/img/icons/counter_icon_3.png',
-      number: '30+',
-      title: 'Expert Doctors',
-    },
-    {
-      iconUrl: '/assets/img/icons/counter_icon_4.png',
-      number: '78%',
-      title: 'Success Rate',
-    },
-  ];
+    counters: [
+      {
+        number: '20,000+',
+        title: (
+          <>
+            Healthy Babies,<br />Countless Smiles
+          </>
+        ),
+      },
+      {
+        number: '35+',
+        title: (
+          <>
+            IVF Centres Spreading<br />Parenthood Joy
+          </>
+        ),
+      },
+      {
+        number: '78%',
+        title: (
+          <>
+            Success Rate Bringing<br />Hope to Families
+          </>
+        ),
+      },
+      {
+        number: '30+',
+        title: (
+          <>
+            Dedicated Fertility<br />Specialists
+          </>
+        ),
+      },
+    ],
+  };
   
   const serviceData = {
     subtitle: 'FERTILITY TREATMENTS',
     title: '',
     description: '',
+    designImage: '/assets/img/leaf.png', // Design image for subtitle box background
     services: [
       {
-        iconUrl: '/assets/img/icons/IUI, IVF & ICSI.jpg',
+        iconUrl: '/assets/img/icons/IUI, IVF & ICSI.svg',
         index: '01',
         title: 'IUI, IVF & ICSI',
-        subtitle: 'We believe in bringing advanced fertility care with customized care with the start of the ART facility. ',
-        link: '/fertility-treatments/ivf-icsi/',
+        subHeading: 'In-Vitro Fertilization (IVF) Overview',
+        subtitle: '<strong>In-Vitro Fertilization (IVF)</strong> is a method that helps couples with fertility related problems and in conceiving a child. During the IVF treatment, the mature eggs are retrieved from the ovaries of women and sperms from the partner which are further fertilized in the laboratory to make embryos. After a few days, these embryos are transferred into the uterus of the woman.',
+        imageUrl: '/assets/img/IVF-ICSI.jpg',
+        link: '/ivf/',
+      },
+      {
+        iconUrl: '/assets/img/icons/Genetic Testing.svg',
+        index: '03',
+        title: 'Genetic testing (PGT-A & PGT-M)',
+        subHeading: 'Understanding PGT-SR',
+        subtitle: '<strong>PGT-SR</strong> is a specialized test that looks at embryos for possible chromosomal abnormalities produced by structural rearrangements in translocations, deletions, and duplications. Advanced testing aids in identifying embryos with higher probabilities of implantation and subsequent development. At Seeds of Innocens, we provide cutting-edge PGT-SR testing as part of our all-inclusive IVF services, guiding couples toward fulfilling their dreams of parenthood.',
+        imageUrl: '/assets/img/PGT-A.webp',
+        link: '/genetic-testing-pgt/pgt-a/',
+      },
+      {
+        iconUrl: '/assets/img/icons/Blastocyst Transfer.svg',
+        index: '04',
+        title: 'Blastocyst Transfer',
+        subHeading: 'Blastocyst Transfer',
+        subtitle: '<strong>Blastocyst Transfer</strong> is an advanced technique where embryos are cultured in the lab for 5-6 days to reach the blastocyst stage before being transferred to the uterus. This stage is considered the most viable for implantation, as it indicates the embryo\'s ability to successfully attach to the uterine wall and grow.',
+        imageUrl: '/assets/img/Blastocyst-Transfer.png',
+        link: '/fertility-treatments/blastocyst-transfer/',
+      },
+      {
+        iconUrl: '/assets/img/icons/Cryopreservation.svg',
+        index: '06',
+        title: 'Cryopreservation (Egg, Sperm & Embryos)',
+        subHeading: 'Cryopreservation',
+        subtitle: '<strong>Cryopreservation</strong> is a process where fertility-related cells, such as eggs, sperm, and embryos, are frozen and stored for future use. This technique allows couples to preserve their fertility and access it when needed, making it an invaluable option for those facing fertility challenges.',
+        imageUrl: '/assets/img/Cryopreservation.jpg',
+        link: '/',
+      },
+      {
+        iconUrl: '/assets/img/icons/PRP & Ovarian Rejuvenation.svg',
+        index: '08',
+        title: 'PRP & Ovarian Rejuvenation',
+        subHeading: 'PRP & Ovarian Rejuvenation',
+        subtitle: '<strong>PRP & Ovarian Rejuvenation</strong> is an advanced, non-surgical procedure that uses the body’s own healing power to rejuvenate ovarian function. This innovative approach involves injecting Platelet-Rich Plasma (PRP) into the ovaries to stimulate growth, improve blood flow, and enhance overall ovarian health, making it a promising option for couples facing fertility challenges.',
+        imageUrl: '/assets/img/PRP-Ovarian-Rejuvenation.jpg',
+        link: '/advanced-fertility-care/prp-ovarian-rejuvenation/',
       },
       {
         iconUrl: '/assets/img/icons/TESA PESA.jpg',
         index: '02',
         title: 'TESA/PESA',
-        subtitle: 'We help in resolving the fertility issues such as TESA/PESA, Semen analysis, PESA, and the treatment for the low sperm count.',
+        subHeading: 'TESA/PESA: Advanced Fertility Treatment for Male Infertility',
+        subtitle: '<strong>TESA/PESA</strong> is a specialized surgical procedure that helps in resolving the fertility issues such as TESA/PESA, Semen analysis, PESA, and the treatment for the low sperm count. This technique involves collecting sperm from the testicles or epididymis, allowing for analysis and treatment of male infertility.',
+        imageUrl: '/assets/img/TESA-PESA.jpg',
         link: '/advanced-fertility-care/tesa-pesa/',
-      },
-      {
-        iconUrl: '/assets/img/icons/Genetic Testing.jpg',
-        index: '03',
-        title: 'Genetic Testing',
-        subtitle: 'We ensure that healthy embryo selection improves IVF success and reduces risks such as PGT-A, PGT-M, and PGT-SR.',
-        link: '/genetic-testing-pgt/pgt-a/',
-      },
-      {
-        iconUrl: '/assets/img/icons/Blastocyst Transfer.jpg',
-        index: '04',
-        title: 'Blastocyst Transfer',
-        subtitle: 'Blastocyst Transfer is an advanced technique where embryos are cultured in the lab for 5-6 days to reach the blastocyst stage before being transferred to the uterus.',
-        link: '/fertility-treatments/blastocyst-transfer/',
       },
       {
         iconUrl: '/assets/img/icons/Donor Program.jpg',
         index: '05',
         title: 'Donor Program',
-        subtitle: 'We believe in helping couples who require additional support in achieving pregnancy. Donor sperm, Donor eggs, Donor Embryos',
+        subHeading: 'Donor Program: Third Party Reproduction',
+        subtitle: '<strong>Donor Program</strong> is a third-party reproduction option that allows couples to achieve pregnancy through the use of donor sperm, donor eggs, or donor embryos. This approach provides a solution for couples who are unable to conceive naturally, offering hope and a pathway to parenthood.',
+        imageUrl: '/assets/img/Donor-Program.jpg',
         link: '/',
       },
       {
         iconUrl: '/assets/img/icons/Surrogacy.jpg',
         index: '05',
         title: 'Surrogacy',
-        subtitle: 'We offer ethical, medically guided surrogacy assistance with complete end-to-end care.',
+        subHeading: 'Surrogacy: Ethical, Medically Guided Assistance with Complete End-to-End Care',
+        subtitle: '<strong>Surrogacy</strong> is an ethical, medically guided process that provides assistance with complete end-to-end care. This approach allows couples to achieve pregnancy through the use of a surrogate mother, offering hope and a pathway to parenthood.',
+        imageUrl: '/assets/img/Surrogacy1.jpg',
         link: '/',
       },
-      {
-        iconUrl: '/assets/img/icons/Cryopreservation.jpg',
-        index: '06',
-        title: 'Cryopreservation',
-        subtitle: 'We help in preserving fertility for the future with reliable and safe freezing options.',
-        link: '/',
-      },
+      
       {
         iconUrl: '/assets/img/icons/Genetic Counselling.jpg',
         index: '08',
         title: 'Genetic Counselling',
-        subtitle: 'We help couples understand and manage genetic risks in family planning, assessing family history for inherited conditions guiding them through options. ',
+        subHeading: 'Genetic Counselling: Understanding and Managing Genetic Risks in Family Planning',
+        subtitle: '<strong>Genetic Counselling</strong> is a process that helps couples understand and manage genetic risks in family planning, assessing family history for inherited conditions guiding them through options. This approach allows couples to make informed decisions about their fertility and family planning.',
+        imageUrl: '/assets/img/Genetic-Counselling.jpg',
         link: '/',
       },
       {
         iconUrl: '/assets/img/icons/Laparoscopy & Hysteroscopy.jpg',
         index: '07',
         title: 'Laparoscopy & Hysteroscopy',
-        subtitle: 'We provide minimally invasive surgical procedures to diagnose and treat problems such as fibroids, blocked tubes, and endometriosis.',
+        subHeading: 'Laparoscopy & Hysteroscopy',
+        subtitle: '<strong>Laparoscopy & Hysteroscopy</strong> is a minimally invasive surgical procedure that helps diagnose and treat problems such as fibroids, blocked tubes, and endometriosis. This technique involves inserting a laparoscope or hysteroscope through the vagina to visualize the uterus and pelvic organs, allowing for precise diagnosis and treatment.',
+        imageUrl: '/assets/img/Laparoscopy-Hysteroscopy.jpg',
         link: '/surgeries/hysteroscopy/',
       },
-      {
-        iconUrl: '/assets/img/icons/PRP & Ovarian Rejuvenation.jpg',
-        index: '08',
-        title: 'PRP & Ovarian Rejuvenation',
-        subtitle: 'We treat couples with an advanced and non-surgical procedure that uses the body’s own healing power to rejuvenate ovarian function.',
-        link: '/advanced-fertility-care/prp-ovarian-rejuvenation/',
-      },
+      
       
       
      
@@ -185,7 +282,7 @@ const heroData = {
   
   const projectData = {
     title: '',
-    subtitle: 'OUR LOCATIONS',
+    subtitle: 'Across Multiple Locations',
     description: '',
     mainCentres: [
       {
@@ -430,39 +527,43 @@ const heroData = {
   };
   
   const newsMediaData = {
-    sectionTitle: 'NEWS AND MEDIA',
-    sectionSubtitle: '',
+    sectionTitle: {
+      part1: 'GET EXPERT KNOWLEDGE',
+      part2: 'ON FERTILITY TESTS AND TREATMENTS',
+    },
+    sectionSubtitle: 'watch these informative videos from our fertility specialists.',
     videos: [
       {
         videoUrl: 'https://www.youtube.com/watch?v=OpgqOL4fpoU&t=75s', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_1')
-        title: '', // Optional: Video title
-        description: '', // Optional: Video description
-        date: '', // Optional: Video date
+        title: 'The Lallantop Show', // Optional: Video title
+        description: 'Seeds of Innocens- IVF Centre', // Optional: Video description
+        date: '144k views  1 year ago', // Optional: Video date
       },
       {
-        videoUrl: 'https://www.youtube.com/watch?v=E04J-XxA1Y0', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
-        title: '', // Optional: Video title
-        description: '', // Optional: Video description
-        date: '', // Optional: Video date
+        videoUrl: 'https://www.youtube.com/watch?v=E04J-XxA1Y0', //Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
+        title: 'The Lallantop Show', // Optional: Video title
+        description: 'Seeds of Innocens- IVF Centre', // Optional: Video description
+        date: '144k views  1 year ago', // Optional: Video date
       },
       {
         videoUrl: 'https://www.youtube.com/watch?v=9_K6ksAefj4', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
-        title: '', // Optional: Video title
-        description: '', // Optional: Video description
-        date: '', // Optional: Video date
+        title: 'The Lallantop Show', // Optional: Video title
+        description: 'Seeds of Innocens- IVF Centre', // Optional: Video description
+        date: '144k views  1 year ago', // Optional: Video date
       },
       {
         videoUrl: 'https://www.youtube.com/watch?v=PzkrtU5dchg', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_4')
-        title: '', // Optional: Video title
-        description: '', // Optional: Video description
-        date: '', // Optional: Video date
+        title: 'The Lallantop Show', // Optional: Video title
+        description: 'Seeds of Innocens- IVF Centre', // Optional: Video description
+        date: '144k views  1 year ago', // Optional: Video date
       },
     ],
   };
   
   const blogsData = {
-    sectionTitle: 'FROM OUR BLOG',
+    sectionTitle: 'LATEST BLOGS',
     sectionSubtitle: '',
+    designImage: '/assets/img/leaf.png', // Design image for right side background
     postsData: [
       {
         title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
@@ -471,20 +572,20 @@ const heroData = {
         date: 'April 08',
         category: 'Male Fertility',
         author: 'Admin',
-        thumbnail: '/assets/img/post_1.jpg',
+        thumbnail: '/assets/img/Low.png',
         btnText: 'Read More',
         postLink: '/blog/blog-details',
         authorIcon: '/assets/img/icons/post_user_icon.png',
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       },
       {
-        title: 'Genetic Conditions: Understanding Their Role in Fertility and Parenthood',
+        title: 'Genetic Conditions',
         subtitle:
           'When couples begin their journey toward parenthood, questions about health and heredity often arise...',
         date: 'April 08',
         category: 'Genetic Conditions',
         author: 'Admin',
-        thumbnail: '/assets/img/post_2.jpg',
+        thumbnail: '/assets/img/Low.png',
         btnText: 'Read More',
         postLink: '/blog/blog-details',
         authorIcon: '/assets/img/icons/post_user_icon.png',
@@ -497,20 +598,72 @@ const heroData = {
         date: 'April 08',
         category: 'Male Fertility',
         author: 'Admin',
-        thumbnail: '/assets/img/post_3.jpg',
+        thumbnail: '/assets/img/Low.png',
         btnText: 'Read More',
         postLink: '/blog/blog-details',
         authorIcon: '/assets/img/icons/post_user_icon.png',
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       },
       {
-        title: 'Hormonal Imbalances: Understanding and Managing Their Impact on Fertility',
+        title: 'Hormonal Imbalances',
         subtitle:
           'Hormonal health plays a key role in overall well-being and reproductive health...',
         date: 'April 08',
         category: 'Female Infertility',
         author: 'Admin',
-        thumbnail: '/assets/img/post_4.jpg',
+        thumbnail: '/assets/img/Low.png',
+        btnText: 'Read More',
+        postLink: '/blog/blog-details',
+        authorIcon: '/assets/img/icons/post_user_icon.png',
+        commentIcon: '/assets/img/icons/post_comment_icon.png',
+      },
+      {
+        title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
+        subtitle:
+          'शुक्राणु संख्या में कमी को आमतौर पे "मेल इन्फर्टिलिटी" कहते है। यह एक ऐसी समस्या...',
+        date: 'April 08',
+        category: 'Male Fertility',
+        author: 'Admin',
+        thumbnail: '/assets/img/Low.png',
+        btnText: 'Read More',
+        postLink: '/blog/blog-details',
+        authorIcon: '/assets/img/icons/post_user_icon.png',
+        commentIcon: '/assets/img/icons/post_comment_icon.png',
+      },
+      {
+        title: 'Genetic Conditions',
+        subtitle:
+          'When couples begin their journey toward parenthood, questions about health and heredity often arise...',
+        date: 'April 08',
+        category: 'Genetic Conditions',
+        author: 'Admin',
+        thumbnail: '/assets/img/Low.png',
+        btnText: 'Read More',
+        postLink: '/blog/blog-details',
+        authorIcon: '/assets/img/icons/post_user_icon.png',
+        commentIcon: '/assets/img/icons/post_comment_icon.png',
+      },
+      {
+        title: 'शीघ्रपतन के उपाय, लक्षण और इलाज',
+        subtitle:
+          'शीघ्रपतन एक ऐसी समस्य है जो पुरुषों को किसी न किसी चरण में अनुभव करनी...',
+        date: 'April 08',
+        category: 'Male Fertility',
+        author: 'Admin',
+        thumbnail: '/assets/img/Low.png',
+        btnText: 'Read More',
+        postLink: '/blog/blog-details',
+        authorIcon: '/assets/img/icons/post_user_icon.png',
+        commentIcon: '/assets/img/icons/post_comment_icon.png',
+      },
+      {
+        title: 'Hormonal Imbalances',
+        subtitle:
+          'Hormonal health plays a key role in overall well-being and reproductive health...',
+        date: 'April 08',
+        category: 'Female Infertility',
+        author: 'Admin',
+        thumbnail: '/assets/img/Low.png',
         btnText: 'Read More',
         postLink: '/blog/blog-details',
         authorIcon: '/assets/img/icons/post_user_icon.png',
@@ -519,17 +672,23 @@ const heroData = {
     ],
   };
 
-  const testimonialData = {
-    subtitle: 'REAL STORIES OF HOPE',
-    title: '',
+  const testimonialData = {  
+    sectionTitle: {
+      part1: 'HAPPY FAMILIES',
+      part2: 'ABOUT US',
+    },
+    sectionSubtitle: {
+      part1: 'Thank you for trusting us with your journey.',
+      part2: 'Please leave us a 5-star review to help others on their path to parenthood.',
+    },
     description: '',
-    thumbnail: '/assets/img/testimonial_1.png',
+    thumbnail: '/assets/img/new.svg',
     testimonials: [
       {
         rating: 5,
         subtitle:
           'Seeds of Innocens gave us the gift of parenthood. The doctors were compassionate, the staff was supportive, and the treatment was excellent. We are forever grateful for our beautiful baby.',
-        avatar: '/assets/img/avatar_1.png',
+        avatar: '/assets/img/new.svg',
         name: 'Couple from Sydney, Australia',
         position: 'Successful Parents',
         videoUrl: 'https://www.youtube.com/watch?v=0XD9OrkunWI', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_1')
@@ -538,7 +697,7 @@ const heroData = {
         rating: 5,
         subtitle:
           'The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream of becoming parents. Highly recommended!',
-        avatar: '/assets/img/avatar_1.png',
+        avatar: '/assets/img/new.svg',
         name: 'Parents from Jharkhand, India',
         position: 'Happy Parents',
         videoUrl: 'https://www.youtube.com/watch?v=wmZZrZFaGB8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
@@ -547,7 +706,43 @@ const heroData = {
         rating: 5,
         subtitle:
           'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
-        avatar: '/assets/img/avatar_1.png',
+        avatar: '/assets/img/new.svg',
+        name: 'Family from New Delhi, India',
+        position: 'Grateful Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
+      },
+      {
+        rating: 5,
+        subtitle:
+          'Seeds of Innocens gave us the gift of parenthood. The doctors were compassionate, the staff was supportive, and the treatment was excellent. We are forever grateful for our beautiful baby.',
+        avatar: '/assets/img/new.svg',
+        name: 'Couple from Sydney, Australia',
+        position: 'Successful Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=0XD9OrkunWI', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_1')
+      },
+      {
+        rating: 5,
+        subtitle:
+          'The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream of becoming parents. Highly recommended!',
+        avatar: '/assets/img/new.svg',
+        name: 'Parents from Jharkhand, India',
+        position: 'Happy Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=wmZZrZFaGB8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
+      },
+      {
+        rating: 5,
+        subtitle:
+          'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
+        avatar: '/assets/img/new.svg',
+        name: 'Family from New Delhi, India',
+        position: 'Grateful Parents',
+        videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
+      },
+      {
+        rating: 5,
+        subtitle:
+          'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
+        avatar: '/assets/img/new.svg',
         name: 'Family from New Delhi, India',
         position: 'Grateful Parents',
         videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
@@ -556,85 +751,57 @@ const heroData = {
   };
 
   const whyChooseUsData = {
-    familyImage: '/assets/img/happy_family.png', // Please replace with actual family image
+    familyImage: '/assets/img/shoegirl.svg', // Please replace with actual family image
+    designImage: '/assets/img/leaf.png', // Design image for left side background
     whyChooseHeading: 'WHY CHOOSE US?',
-    whyChooseText: 'Seeds of Innocens has always been the encouraged choice. Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora, Seeds of Innocens is the India\'s best IVF centre. Seeds of Innocens has grown to over 35 centres across 8 states and has expanded overseas to Oman, Muscat, and Zambia. It is the only lab in North India that has collaborated with the Department of Reproductive Sciences, University of Gent, Belgium, for the exchange of best practices and technology in infertility.',
+    whyChooseText: [
+      'Seeds of Innocens has always been the encouraged choice',
+      'Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora',
+      'Seeds of Innocens is India\'s best IVF centre',
+      'Grown to over 35 centres across 8 states',
+      'Expanded overseas to Oman, Muscat, and Zambia',
+      'Only lab in North India that has collaborated with the Department of Reproductive Sciences, University of Gent, Belgium, for the exchange of best practices and technology in infertility'
+    ],
     callUsLink: 'tel:+919810350512',
     callUsText: 'CALL US',
     selfCycleHeading: 'VISION AND MISSION',
     selfCycleText: 'At Seeds of Innocens, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
     bookAppointmentLink: '/contact/book-appointment',
     bookAppointmentText: 'BOOK AN APPOINTMENT',
-    selfieImage: '/assets/img/self_cycle_selfie.png', // Please replace with actual selfie image
+    selfieImage: '/assets/img/babywithgirl.svg', // Please replace with actual selfie image
     // speechBubbleText: 'Self-cycle™ IVF means\nA baby with your genes,\ntraits and quirks.',
   };
 
-  const geneticsData = {
-    cards: [
+  const faqData = {
+    sectionTitle: {
+      part1: 'HAVE ANY QUESTIONS?',
+      part2: 'OUR EXPERTS ARE HAPPY TO GUIDE YOU.',
+    },
+    designImage: '/assets/img/leaf.png', // Design image for left side background
+    faqCategories: [
       {
-        title: 'Male Infertility',
-        imageUrl: '/assets/img/Male Infertility1.png',
-        bgColor: '#24608f',
-        description: 'Male infertility accounts for about 50% of infertility cases. It\'s not a reflection of masculinity, but a medical condition that can be treated. Early assessment and treatment are crucial for successful outcomes. Let\'s end the stigma together!',
-        highlightText: 'Let\'s end the stigma together!',
-        // primaryButton: {
-        //   text: 'Talk to our Andrologist today!',
-        //   link: '/advanced-fertility-care/male-infertility/',
-        // },
-        secondaryButton: {
-          text: 'Learn More',
-          link: '/male-infertility-treatment-in-india',
-        },
+        icon: '/assets/img/icons/ffc.svg',
+        title: 'Female Frequently Asked Questions',
+        description: 'Details on ovarian function, egg retrieval, reproductive health, and treatment planning.',
+        link: '/',
       },
       {
-        title: 'Egg freezing',
-        bgColor: '#E45352',
-        imageUrl: '/assets/img/Egg freezing1.png',
-        description: 'Egg freezing is a smart, science-backed way to preserve your fertility on your terms. Whether you\'re focusing on your career, waiting for the right time, or facing medical reasons, egg freezing gives you control over your future.',
-        highlightText: 'Your fertility, Your choice!',
-        // primaryButton: {
-        //   text: 'Talk to our experts!',
-        //   link: '/advanced-fertility-care/egg-freezing/',
-        // },
-        secondaryButton: {
-          text: 'Learn More',
-          link: '/egg-freezing',
-        },
-      },
-    ],
-  };
-
-  const credibilityData = {
-    subtitle: 'RECOGNIZED AND AWARDED',
-    title: '',
-    description: '',
-    leftImage: '/assets/img/decorative-left.png', // Add your left decorative image path here
-    rightImage: '/assets/img/decorative-right.png', // Add your right decorative image path here
-    logos: [
-      {
-        // title: 'TIMES HEALTHCARE ACHIEVERS',
-        // subtitle: 'DELHI NCR 2020',
-        image: '/assets/img/Times-Healthcare-Achievers.png',
+        icon: '/assets/img/icons/mfc.svg',
+        title: 'Male Frequently Asked Questions',
+        description: 'Insights into male reproductive health, semen analysis, diagnostic tests, and care.',
+        link: '/',
       },
       {
-        // title: 'NATIONAL FERTILITY AWARDS',
-        // subtitle: 'Healthworld.com',
-        image: '/assets/img/National-Fertility-Awards-2022.png',
+        icon: '/assets/img/icons/cgt.svg',
+        title: 'Genetic Frequently Asked Questions',
+        description: 'Information on genetic screening, inherited conditions, embryo testing, and risk assessment.',
+        link: '/',
       },
       {
-          // title: 'INDIAN FERTILITY SOCIETY',
-          // subtitle: 'IFS',
-        image: '/assets/img/Indian-Fertility-Society.png',
-      },
-      {
-        // title: 'ASSOCIATION OF OBSTETRICIANS AND GYNAECOLOGISTS OF DELHI',
-        // subtitle: 'AOGD',
-        image: '/assets/img/Association-of-Obstetricians-And-Gynaecologists-of-Delhi.png',
-      },
-      {
-        // title: 'दैनिक जागरण',
-        // subtitle: 'Dainik Jagran',
-        image: '/assets/img/Screenshot_2025-05-02_155258-removebg-preview.png',
+        icon: '/assets/img/icons/fa.svg',
+        title: 'Learning Frequently Asked Questions',
+        description: 'Structured learning on reproductive health and assisted fertility.',
+        link: '/',
       },
     ],
   };
@@ -652,7 +819,7 @@ const page = () => {
         bottomSpaceLg="0"
         bottomSpaceMd="0"
         className={
-          'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
+          'cs_cta cs_style_1 cs_white_bg position-relative overflow-hidden'
         }
       >
         <CtaSection data={ctaData} />
@@ -691,43 +858,8 @@ const page = () => {
         <Service cardBg={'cs_gray_bg'} data={serviceData} />
       </Section>
 
-      {/* 5.5. Male Infertility & Egg Freezing Section */}
-      <Section
-        topSpaceLg="60"
-        topSpaceMd="70"
-        bottomSpaceLg="40"
-        bottomSpaceMd="50"
-        className={'cs_service_feature_section'}
-      >
-        <GeneticsSection data={geneticsData} />
-      </Section>
-
-      
-
-      {/* 6. Centres Overview */}
-      <Section 
-      topSpaceLg="60" 
-      topSpaceMd="70" 
-      bottomSpaceLg="40" 
-      bottomSpaceMd="50" 
-      className="cs_tabs">
-        <ProjectSection data={projectData} />
-      </Section>
-
-      {/* 7. Testimonials Preview */}
-      <Section
-        topSpaceLg="60"
-        topSpaceMd="70"
-        bottomSpaceLg="40"
-        bottomSpaceMd="50"
-        className="cs_testimonial_area"
-        // backgroundImage="/assets/img/testomonial_bg_1.png"
-      >
-        <TestimonialSection data={testimonialData} />
-      </Section>
-
-      {/* 8. Blogs Preview */}
-      <Section
+       {/* 8. Blogs Preview */}
+       <Section
         topSpaceLg="60"
         topSpaceMd="70"
         bottomSpaceLg="40"
@@ -736,19 +868,8 @@ const page = () => {
         <BlogSection data={blogsData} />
       </Section>
 
-      {/* 9. Credibility Section */}
-      <Section
-        topSpaceLg="60"
-        topSpaceMd="70"
-        bottomSpaceLg="40"
-        bottomSpaceMd="50"
-        className={'cs_credibility_section'}
-      >
-        <CredibilitySection data={credibilityData} />
-      </Section>
-
-      {/* 10. News and Media */}
-      <Section
+       {/* 10. News and Media */}
+       <Section
         topSpaceLg="60"
         topSpaceMd="70"
         bottomSpaceLg="40"
@@ -756,6 +877,73 @@ const page = () => {
       >
         <NewsMediaSection data={newsMediaData} />
       </Section>
+
+       {/* 7. Testimonials Preview */}
+       <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className="cs_testimonial_area"
+
+      >
+        <TestimonialSection data={testimonialData} />
+      </Section>
+
+      
+
+       {/* 6. Centres Overview */}
+       <Section 
+      topSpaceLg="60" 
+      topSpaceMd="70" 
+      bottomSpaceLg="40" 
+      bottomSpaceMd="50" 
+      className="cs_tabs">
+        <ProjectSection data={projectData} />
+      </Section>
+
+      {/* 8. FAQ Section */}
+      <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className="cs_faq_area"
+      >
+        <FAQSection data={faqData} />
+      </Section>
+
+      {/* 5.5. Male Infertility & Egg Freezing Section */}
+      {/* <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className={'cs_service_feature_section'}
+      >
+        <GeneticsSection data={geneticsData} />
+      </Section> */}
+
+      
+
+     
+
+     
+
+     
+
+      {/* 9. Credibility Section */}
+      {/* <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
+        className={'cs_credibility_section'}
+      >
+        <CredibilitySection data={credibilityData} />
+      </Section> */}
+
+     
 
         </div>
     );

@@ -1,108 +1,81 @@
 "use client"
-import { useRef } from "react";
-import Slider from "react-slick";
-import Button from "../Buttons";
-import { FaAngleRight } from "react-icons/fa6";
-import SectionHeading from "../SectionHeading";
 import Link from "next/link";
 import Image from "next/image";
 import { getAssetPathClient } from "../../utils/assetPath";
 
 const BlogSection = ({ data }) => {
-  const sliderRef = useRef(null);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 3,
-    fade: false,
-    swipeToSlide: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnHover: true,
-    pauseOnFocus: true,
-    pauseOnDotsHover: true,
-    appendDots: (dots) => (
-      <div>
-        <ul>{dots}</ul>
-      </div>
-    ),
-    dotsClass: "cs_pagination cs_style_2",
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+  // Split the title to get first word and rest
+  const getTitleParts = (title) => {
+    if (!title) return { first: '', rest: '' };
+    const words = title.split(' ');
+    const first = words[0] || '';
+    const rest = words.slice(1).join(' ');
+    return { first, rest };
   };
+
+  const titleParts = getTitleParts(data.sectionTitle);
+
   return (
     <>
       <div className="container">
         {data.sectionTitle && (
-        <SectionHeading
-          SectionSubtitle={data.sectionTitle}
-            SectionTitle={data.sectionSubtitle || ''}
-          variant={"text-center"}
-        />
+          <div className="cs_service_title_section">
+            <h2 className="cs_service_main_title">
+              <span className="cs_service_main_title_span">{titleParts.first}</span> {titleParts.rest}
+            </h2>
+          </div>
         )}
 
         <div className="cs_height_30 cs_height_lg_30" />
-        <div className="cs_slider cs_style_1 cs_slider_gap_24">
-          <div className="cs_slider_container">
-            <div className="cs_slider_wrapper">
-              <Slider ref={sliderRef} {...settings}>
-                {data.postsData.map((post, index) => (
-                  <div
-                    key={index}
-                    className="cs_slide"
-                    onMouseEnter={() => sliderRef.current?.slickPause()}
-                    onMouseLeave={() => sliderRef.current?.slickPlay()}
-                  >
-                    <article className="cs_post cs_style_1 cs_post_clean">
-                      <div className="cs_post_content position-relative">
-                        <div className="cs_post_date">
-                          {post.date}
-                        </div>
-                        <div className="cs_post_title_wrapper">
-                          <h3 className="cs_post_title">
-                            <Link href={post.postLink}>{post.title}</Link>
-                          </h3>
-                          {post.thumbnail && (
-                            <Link
-                              href={post.postLink}
-                              className="cs_post_thumbnail_small"
-                            >
-                              <Image 
-                                src={getAssetPathClient(post.thumbnail)} 
-                                alt={post.title} 
-                                width={100} 
-                                height={80}
-                                loading="eager"
-                              />
-                            </Link>
-                          )}
-                        </div>
-                        <Button
-                          variant={"cs_post_btn"}
-                          btnIcons={<FaAngleRight />}
-                          btnUrl={post.postLink}
-                          btnText={post.btnText}
-                        />
-                      </div>
-                    </article>
-                  </div>
-                ))}
-              </Slider>
+        <div className="cs_blog_section_wrapper">
+          {/* Design Image - Background (behind the grid, right side) */}
+          {data?.designImage && (
+            <div className="cs_blog_design_image">
+              <Image
+                src={getAssetPathClient(data.designImage)}
+                alt="Design Background"
+                width={300}
+                height={400}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain'
+                }}
+              />
             </div>
+          )}
+          <div className="cs_blog_grid">
+            {data.postsData.map((post, index) => (
+              <article key={index} className="cs_blog_card_figma">
+                {post.thumbnail && (
+                  <Link
+                    href={post.postLink}
+                    className="cs_blog_card_image"
+                  >
+                    <Image 
+                      src={getAssetPathClient(post.thumbnail)} 
+                      alt={post.title} 
+                      width={396} 
+                      height={261}
+                      loading="eager"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                      }}
+                    />
+                  </Link>
+                )}
+                <div className="cs_blog_card_content">
+                  <h3 className="cs_blog_card_title">
+                    <Link href={post.postLink}>{post.title}</Link>
+                  </h3>
+                  <Link href={post.postLink} className="cs_blog_card_link">
+                    {post.btnText || "Explore Now-"}
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>

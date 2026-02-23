@@ -2,125 +2,116 @@
   8. Footer
 ----------------------------------------------------------------*/
 .cs_footer {
-  padding-top: 1px;
+  padding-top: 60px;
+  padding-bottom: 0;
   margin-top: 25px;
-  color: #FFFFFF;
+  background-color: #FCE8DD;
+  color: #000000;
+  border-top: 2px solid #CB3148;
 
-  .cs_social_btns.cs_style_1 {
-    margin-top: 50px;
-
-    a {
-      height: 40px;
-      width: 40px;
-      background-color: #f9f9f9;
-      box-shadow: 0px 0px 57px rgba(0, 0, 0, 0.05);
-      font-size: 16px;
-      color: #FFFFFF;
-
-     
-    }
-  }
-  
   a {
-    color: #FFFFFF;
+    color: #000000;
+    transition: color 0.3s ease;
     
     &:hover {
-      // color: #4DB6E8;
+      color: #000000;
     }
   }
 }
 
-.cs_footer_highlight_col {
-  padding: 60px 35px;
-  margin-top: -26px;
-  border-radius: 5px 5px 0 0;
-  border: 3px solid rgb(251, 250, 250);
-  background-color: #CC2627;
-  @media (max-width: 1199px) {
-    padding: 50px 15px;
-  }
+.cs_footer_company_info {
+  padding: 0;
 }
 
 .cs_footer_logo {
-  padding-bottom: 30px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #fff;
+ padding-bottom: 20px;
 }
 
-.cs_footer_contact {
-  li {
-    position: relative;
-    padding-left: 25px;
-    color: #FFFFFF;
+.cs_footer_contact_info {
+  .cs_footer_open_hours {
+    margin-bottom: 20px;
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
+  .cs_footer_address {
+    margin-bottom: 20px;
+  }
 
-    i {
-      position: absolute;
-      left: 0;
-      top: 5px;
-      width: 16px;
-      text-align: center;
-      color: #f9f9f9;
-    }
-    
-    span {
-      color: #FFFFFF;
-    }
+  .cs_footer_phone {
+    margin-bottom: 30px;
   }
 }
 
-.cs_footer_menu {
+.cs_social_btns.cs_style_1 {
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px 25px;
-  
-  @media (max-width: 767px) {
-    display: none !important;
+  gap: 12px;
+  margin-top: 20px;
+
+  .cs_footer_social_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
   }
+
+  .cs_footer_social_icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: #ffffff;
+    -webkit-mask-image: var(--footer-social-icon-url);
+    mask-image: var(--footer-social-icon-url);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+}
+
+.cs_footer_label {
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.cs_footer_text {
+  font-size: 17px;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
   
-  li {
-    a {
-      color: #FFFFFF;
-      transition: color 0.3s ease;
-      
-      &:hover {
-        color: #4DB6E8;
-      }
-    }
+  &:not(:last-child) {
+    margin-bottom: 4px;
   }
 }
 
 .cs_footer_bottom {
-  background-color: #031322;
-  color: #FFFFFF;
-  
-  a {
-    color: #FFFFFF;
-    transition: color 0.3s ease;
-    
-    &:hover {
-      color: #4DB6E8;
-    }
-  }
+  background-color: #CB3148;
+  color: #000000;
+  padding: 20px 0;
+  margin-top: 60px;
 }
 
 .cs_footer_bottom_in {
   display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   
   @media (max-width: 767px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
   }
   
   .cs_footer_copyright {
-    color: #FFFFFF;
+    color: #fffefe;
+    font-size: 17px;
+    margin: 0;
     
     @media (max-width: 767px) {
       width: 100%;
@@ -130,104 +121,113 @@
 }
 
 .cs_footer_widget_title {
-  color: #FFFFFF;
+  color: #000000;
   font-size: 22px;
-  margin-bottom: 30px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  
   @media (max-width: 767px) {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    font-size: 20px;
   }
 }
 
 .cs_footer_widget_nav_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
   li {
+    position: relative;
+    padding-left: 20px;
+    
     &:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+    }
+    
+    &::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #000000;
+      font-size: 18px;
     }
     
     a {
-      color: #FFFFFF;
+      color: #000000;
+      font-size: 17px;
       transition: color 0.3s ease;
+      text-decoration: none;
       
       &:hover {
-        color: #4DB6E8;
+        color: #CB3148;
       }
     }
   }
 }
 
 .cs_footer_widget {
-  padding: 95px 0;
+  padding: 0;
+  
   @media (max-width: 1199px) {
-    padding: 70px 0;
+    padding: 0;
   }
+  
   @media (max-width: 767px) {
     padding: 0;
+    margin-bottom: 30px;
   }
 }
 
 .cs_footer_row {
   display: flex;
-  gap: 80px;
+  gap: 60px;
+  
+  
   @media (max-width: 1400px) {
+    gap: 50px;
+  }
+  
+  @media (max-width: 1199px) {
     gap: 40px;
   }
-  @media (max-width: 1199px) {
-    gap: 40px 25px;
-  }
+  
   @media (max-width: 991px) {
+    gap: 30px;
     flex-wrap: wrap;
-    gap: 0px 0px;
   }
+  
   @media (max-width: 767px) {
     gap: 30px 20px;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .cs_footer_col {
     flex: 1;
+    
     @media (max-width: 991px) {
-      flex: none !important;
-      width: 30%;
+      flex: 1 1 calc(50% - 15px);
+      min-width: 200px;
     }
+    
     @media (max-width: 767px) {
+      flex: 1 1 100%;
       width: 100%;
     }
 
     &:first-child {
-      flex: 1.6;
+      flex: 1.2;
+      
       @media (max-width: 991px) {
+        flex: 1 1 100%;
         width: 100%;
+        margin-bottom: 30px;
       }
+      
       @media (max-width: 767px) {
-        width: 100% !important;
-        margin-bottom: 0;
-      }
-    }
-
-    /* Hide Recent Posts on mobile */
-    &:last-child {
-      flex: 1.4;
-      @media (max-width: 991px) {
-        width: 40%;
-      }
-      @media (max-width: 767px) {
-        display: block !important;
-        width: calc(33.333% - 14px) !important;
-        flex: 0 0 calc(33.333% - 14px) !important;
-        max-width: calc(33.333% - 14px);
-      }
-    }
-    
-    /* Make Fertility Treatment, Quick Links, and Training Academy side by side on mobile */
-    @media (max-width: 767px) {
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4) {
-        width: calc(33.333% - 14px) !important;
-        flex: 0 0 calc(33.333% - 14px) !important;
-        max-width: calc(33.333% - 14px);
+        width: 100%;
+        margin-bottom: 30px;
       }
     }
   }
