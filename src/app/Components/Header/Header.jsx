@@ -167,80 +167,80 @@ const Header = ({ isTopBar, variant }) => {
                 label: 'Delhi',
                 href: '',
                 subItems: [
-                  { label: 'Malviya Nagar, New Delhi', href: '/best-ivf-centre-in-delhi' },
-                  { label: 'Pitampura, New Delhi', href: '/best-ivf-centre-in-pitampura' },
-                  { label: 'Janakpuri, New Delhi', href: '/best-ivf-centre-in-janakpuri' },
+                  { label: 'Malviya Nagar, New Delhi', href: '/delhi/best-ivf-centre-in-delhi' },
+                  { label: 'Pitampura, New Delhi', href: '/pitampura/best-ivf-centre-in-pitampura' },
+                  { label: 'Janakpuri, New Delhi', href: '/janakpuri/best-ivf-centre-in-janakpuri' },
                 ],
               },
               {
                 label: 'Uttar Pradesh',
                 href: '',
                 subItems: [
-                  { label: 'Ghaziabad, Uttar Pradesh', href: '/best-ivf-centre-in-ghaziabad' },
-                  { label: 'Lucknow, Uttar Pradesh', href: '/best-ivf-centre-in-lucknow' },
-                  { label: 'Agra, Uttar Pradesh', href: '/best-ivf-centre-in-agra' },
-                  { label: 'Gorakhpur, Uttar Pradesh', href: '/best-ivf-centre-in-gorakhpur' },
-                  { label: 'Kanpur, Uttar Pradesh', href: '/best-ivf-centre-in-kanpur' },
-                  { label: 'Meerut, Uttar Pradesh', href: '/best-ivf-centre-in-meerut' },
+                  { label: 'Ghaziabad, Uttar Pradesh', href: '/ghaziabad/best-ivf-centre-in-ghaziabad' },
+                  { label: 'Lucknow, Uttar Pradesh', href: '/lucknow/best-ivf-centre-in-lucknow' },
+                  { label: 'Agra, Uttar Pradesh', href: '/agra/best-ivf-centre-in-agra' },
+                  { label: 'Gorakhpur, Uttar Pradesh', href: '/gorakhpur/best-ivf-centre-in-gorakhpur' },
+                  { label: 'Kanpur, Uttar Pradesh', href: '/kanpur/best-ivf-centre-in-kanpur' },
+                  { label: 'Meerut, Uttar Pradesh', href: '/meerut/best-ivf-centre-in-meerut' },
                 ],
               },
               {
                 label: 'Bihar',
                 href: '',
                 subItems: [
-                  { label: 'Patna, Bihar', href: '/best-ivf-centre-in-patna' },
-                  { label: 'Muzaffarpur, Bihar', href: '/best-ivf-centre-in-muzaffarpur' },
+                  { label: 'Patna, Bihar', href: '/patna/best-ivf-centre-in-patna' },
+                  { label: 'Muzaffarpur, Bihar', href: '/muzaffarpur/best-ivf-centre-in-muzaffarpur' },
                 ],
               },
               {
                 label: 'Haryana',
                 href: '',
                 subItems: [
-                  { label: 'Faridabad, Haryana', href: '/best-ivf-centre-in-faridabad' },
-                  { label: 'Gurugram, Haryana', href: '/best-ivf-centre-in-gurugram' },
+                  { label: 'Faridabad, Haryana', href: '/faridabad/best-ivf-centre-in-faridabad' },
+                  { label: 'Gurugram, Haryana', href: '/gurugram/best-ivf-centre-in-gurugram' },
                 ],
               },
               {
                 label: 'Jharkhand',
                 href: '',
                 subItems: [
-                  { label: 'Ranchi, Jharkhand', href: '/best-ivf-centre-in-ranchi' },
+                  { label: 'Ranchi, Jharkhand', href: '/ranchi/best-ivf-centre-in-ranchi' },
                 ],
               },
               {
                 label: 'Uttarakhand',
                 href: '',
                 subItems: [
-                  { label: 'Haldwani, Uttarakhand', href: '/best-ivf-centre-in-haldwani' },
+                  { label: 'Haldwani, Uttarakhand', href: '/haldwani/best-ivf-centre-in-haldwani' },
                 ],
               },
               {
                 label: 'Assam',
                 href: '',
                 subItems: [
-                  { label: 'Guwahati, Assam', href: '/best-ivf-centre-in-guwahati' },
+                  { label: 'Guwahati, Assam', href: '/guwahati/best-ivf-centre-in-guwahati' },
                 ],
               },
               {
                 label: 'Kerala',
                 href: '',
                 subItems: [
-                  { label: 'Kasaragod, Kerala', href: '/best-ivf-centre-in-kasaragod' },
-                  { label: 'Kochi, Kerala', href: '/best-ivf-centre-in-kochi' },
+                  { label: 'Kasaragod, Kerala', href: '/kasaragod/best-ivf-centre-in-kasaragod' },
+                  { label: 'Kochi, Kerala', href: '/kochi/best-ivf-centre-in-kochi' },
                 ],
               },
               {
                 label: 'Jammu & Kashmir',
                 href: '',
                 subItems: [
-                  { label: 'Srinagar, J&K', href: '/best-ivf-centre-in-srinagar' },
+                  { label: 'Srinagar, J&K', href: '/srinagar/best-ivf-centre-in-srinagar' },
                 ],
               },
               {
                 label: 'West Bengal',
                 href: '',
                 subItems: [
-                  { label: 'Kolkata', href: '/best-ivf-centre-in-kolkata' },
+                  { label: 'Kolkata', href: '/kolkata/best-ivf-centre-in-kolkata' },
                 ],
               },
             ],

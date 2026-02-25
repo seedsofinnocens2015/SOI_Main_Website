@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import indiaCentresData from '../../../india-centres-data.json';
+import centerContentConfig from '../../../centerContent.json';
 import doctorsData from '../../../../doctors/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
@@ -24,11 +25,11 @@ export async function generateStaticParams() {
 const page = async ({ params }) => {
   const resolvedParams = await params;
   const { state, slug } = resolvedParams || {};
-  
+
   if (!state || !slug) {
     notFound();
   }
-  
+
   // Find center by slug and state
   const center = indiaCentresData.find(
     (c) => c.slug === slug && c.stateSlug === state
@@ -51,7 +52,7 @@ const page = async ({ params }) => {
 
   // Process images with basePath for production
   const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2.jpg');
-  
+
   const serviceData = {
     serviceHeading: '',
     services: [],
@@ -72,6 +73,10 @@ const page = async ({ params }) => {
   // Generate Google Maps embed URL
   const mapAddress = encodeURIComponent(center.location);
   const mapUrl = `https://www.google.com/maps?q=${mapAddress}&output=embed`;
+
+  // Helper for city name replacement in JSON-configured content
+  const replaceCityName = (text) =>
+    typeof text === 'string' ? text.replace(/{{cityName}}/g, cityName) : text;
 
   const centerContentData = {
     sections: [
@@ -203,6 +208,28 @@ const page = async ({ params }) => {
     ],
   };
 
+  // Build FAQ content from shared JSON (centerContent.json) - per center
+  const rawFaqs =
+    (centerContentConfig[center.slug] &&
+      centerContentConfig[center.slug].faqs) ||
+    (centerContentConfig.default && centerContentConfig.default.faqs) ||
+    [];
+
+  const faqContentData =
+    rawFaqs.length > 0
+      ? {
+        sections: [
+          {
+            heading: `FAQs about IVF in ${cityName}`,
+            steps: rawFaqs.map((faq) => ({
+              title: replaceCityName(faq.question),
+              description: replaceCityName(faq.answer),
+            })),
+          },
+        ],
+      }
+      : null;
+
   return (
     <div>
       <Section
@@ -238,7 +265,7 @@ const page = async ({ params }) => {
           bottomSpaceMd="60"
         >
           <div className="container">
-            <h2 className="cs_ivf_content_heading" style={{marginBottom: '30px' }}>
+            <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
               Available Doctors at {center.name}
             </h2>
             <div className="cs_doctors_grid cs_style_1">
@@ -250,20 +277,20 @@ const page = async ({ params }) => {
                     const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
                     return doctorLink ? (
                       <Link href={doctorLink} className="cs_team_thumbnail">
-                        <Image 
-                          src={getAssetPath(doctor.image)} 
-                          alt={`${doctor.name} Thumbnail`} 
-                          width={302} 
+                        <Image
+                          src={getAssetPath(doctor.image)}
+                          alt={`${doctor.name} Thumbnail`}
+                          width={302}
                           height={423}
                           loading="eager"
                         />
                       </Link>
                     ) : (
                       <div className="cs_team_thumbnail">
-                        <Image 
-                          src={getAssetPath(doctor.image)} 
-                          alt={`${doctor.name} Thumbnail`} 
-                          width={302} 
+                        <Image
+                          src={getAssetPath(doctor.image)}
+                          alt={`${doctor.name} Thumbnail`}
+                          width={302}
                           height={423}
                           loading="eager"
                         />
@@ -318,6 +345,24 @@ const page = async ({ params }) => {
           </div>
         </div>
       </Section>
+
+      {/* FAQs Section (per center) */}
+      {faqContentData && (
+        <Section
+          topSpaceLg="0"
+          topSpaceMd="0"
+          bottomSpaceLg="70"
+          bottomSpaceMd="120"
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <IVFContentSection data={faqContentData} />
+              </div>
+            </div>
+          </div>
+        </Section>
+      )}
     </div>
   );
 };

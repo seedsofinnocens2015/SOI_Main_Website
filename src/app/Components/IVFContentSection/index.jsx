@@ -43,52 +43,54 @@ const IVFContentSection = ({ data, benefitImages }) => {
               <div className="row cs_gap_y_20">
                 <div className="col-lg-6 col-md-6">
                   <div className="cs_service_details_thumbnail cs_side_image">
-                    <Image 
-                      src={getAssetPathClient(benefitImages[0])} 
-                      alt="IVF ICSI" 
+                    <Image
+                      src={getAssetPathClient(benefitImages[0])}
+                      alt="IVF ICSI"
                       width={500}
                       height={300}
                       loading="eager"
-                      style={{ 
-                        width: '100%', 
-                        height: 'auto', 
+                      style={{
+                        width: '100%',
+                        height: 'auto',
                         borderRadius: '15px',
                         objectFit: 'cover',
                         display: 'block'
-                      }} 
+                      }}
                     />
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6">
                   <div className="cs_service_details_thumbnail cs_side_image">
-                    <Image 
-                      src={getAssetPathClient(benefitImages[1])} 
-                      alt="IVF ICSI" 
-                      width={500} 
+                    <Image
+                      src={getAssetPathClient(benefitImages[1])}
+                      alt="IVF ICSI"
+                      width={500}
                       height={300}
                       loading="eager"
-                      style={{ 
-                        width: '100%', 
-                        height: 'auto', 
+                      style={{
+                        width: '100%',
+                        height: 'auto',
                         borderRadius: '15px',
                         objectFit: 'cover',
                         display: 'block'
-                      }} 
+                      }}
                     />
                   </div>
                 </div>
               </div>
             </div>
           )}
-          
+
           <div className="cs_ivf_content_section">
             {/* Check if section has sideImage - if yes, use two-column layout */}
             {section.sideImage ? (
               <div className="row cs_gap_y_30 align-items-center">
                 <div className="col-lg-6">
                   {/* Section Heading */}
-                  <h2 className="cs_ivf_content_heading">{section.heading}</h2>
-                  
+                  {section.heading && (
+                    <h2 className="cs_ivf_content_heading">{section.heading}</h2>
+                  )}
+
                   {/* Paragraphs */}
                   {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => {
                     // Check if paragraph has label format (e.g., "Label: Value")
@@ -111,28 +113,53 @@ const IVFContentSection = ({ data, benefitImages }) => {
                       </p>
                     );
                   })}
-                  
+
                   {/* List Items */}
                   {section.listItems && (
                     <ul className="cs_ivf_content_list">
-                      {section.listItems.map((item, itemIndex) => (
-                        <li key={itemIndex} className="cs_ivf_content_list_item">
-                          {item}
-                        </li>
-                      ))}
+                      {section.listItems.map((item, itemIndex) => {
+                        if (typeof item === 'string') {
+                          return (
+                            <li key={itemIndex} className="cs_ivf_content_list_item">
+                              {item}
+                            </li>
+                          );
+                        }
+
+                        // Robustly handle object items
+                        const itemObj = item || {};
+                        const before = String(itemObj.before || '');
+                        const linkText = String(itemObj.linkText || '');
+                        const href = String(itemObj.href || '');
+                        const after = String(itemObj.after || '');
+
+                        return (
+                          <li key={itemIndex} className="cs_ivf_content_list_item">
+                            {before}
+                            {href ? (
+                              <a href={href} style={{ color: '#E45352', textDecoration: 'none' }}>
+                                {linkText}
+                              </a>
+                            ) : (
+                              linkText
+                            )}
+                            {after}
+                          </li>
+                        );
+                      })}
                     </ul>
                   )}
-                  
+
                   {/* Steps - Accordion Style */}
                   {section.steps && (
                     <div className="cs_ivf_content_steps">
                       {section.steps.map((step, stepIndex) => (
-                        <div 
-                          key={stepIndex} 
+                        <div
+                          key={stepIndex}
                           className={`cs_ivf_content_step ${openSteps[stepIndex] ? 'cs_step_open' : ''}`}
                         >
-                          <div 
-                            className="cs_ivf_step_header" 
+                          <div
+                            className="cs_ivf_step_header"
                             onClick={() => toggleStep(stepIndex)}
                           >
                             <span className="cs_ivf_step_number">{stepIndex + 1}</span>
@@ -168,20 +195,20 @@ const IVFContentSection = ({ data, benefitImages }) => {
                         referrerPolicy="no-referrer-when-downgrade"
                       />
                     ) : (
-                      <Image 
-                        src={getAssetPathClient(section.sideImage)} 
-                        alt={section.heading || "Image"} 
+                      <Image
+                        src={getAssetPathClient(section.sideImage)}
+                        alt={section.heading || "Image"}
                         width={500}
                         height={400}
                         loading="eager"
-                        style={{ 
-                          width: '100%', 
-                          height: 'auto', 
+                        style={{
+                          width: '100%',
+                          height: 'auto',
                           maxHeight: "370px",
                           borderRadius: '15px',
                           objectFit: 'contain',
                           display: 'block'
-                        }} 
+                        }}
                       />
                     )}
                   </div>
@@ -190,8 +217,10 @@ const IVFContentSection = ({ data, benefitImages }) => {
             ) : (
               <>
                 {/* Section Heading */}
-                <h2 className="cs_ivf_content_heading">{section.heading}</h2>
-                
+                {section.heading && (
+                  <h2 className="cs_ivf_content_heading">{section.heading}</h2>
+                )}
+
                 {/* Paragraphs */}
                 {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => {
                   // Check if paragraph has label format (e.g., "Label: Value")
@@ -214,28 +243,53 @@ const IVFContentSection = ({ data, benefitImages }) => {
                     </p>
                   );
                 })}
-                
+
                 {/* List Items */}
                 {section.listItems && (
                   <ul className="cs_ivf_content_list">
-                    {section.listItems.map((item, itemIndex) => (
-                      <li key={itemIndex} className="cs_ivf_content_list_item">
-                        {item}
-                      </li>
-                    ))}
+                    {section.listItems.map((item, itemIndex) => {
+                      if (typeof item === 'string') {
+                        return (
+                          <li key={itemIndex} className="cs_ivf_content_list_item">
+                            {item}
+                          </li>
+                        );
+                      }
+
+                      // Robustly handle object items
+                      const itemObj = item || {};
+                      const before = String(itemObj.before || '');
+                      const linkText = String(itemObj.linkText || '');
+                      const href = String(itemObj.href || '');
+                      const after = String(itemObj.after || '');
+
+                      return (
+                        <li key={itemIndex} className="cs_ivf_content_list_item">
+                          {before}
+                          {href ? (
+                            <a href={href} style={{ color: '#E45352', textDecoration: 'none' }}>
+                              {linkText}
+                            </a>
+                          ) : (
+                            linkText
+                          )}
+                          {after}
+                        </li>
+                      );
+                    })}
                   </ul>
                 )}
-                
+
                 {/* Steps - Accordion Style */}
                 {section.steps && (
                   <div className="cs_ivf_content_steps">
                     {section.steps.map((step, stepIndex) => (
-                      <div 
-                        key={stepIndex} 
+                      <div
+                        key={stepIndex}
                         className={`cs_ivf_content_step ${openSteps[stepIndex] ? 'cs_step_open' : ''}`}
                       >
-                        <div 
-                          className="cs_ivf_step_header" 
+                        <div
+                          className="cs_ivf_step_header"
                           onClick={() => toggleStep(stepIndex)}
                         >
                           <span className="cs_ivf_step_number">{stepIndex + 1}</span>
@@ -255,25 +309,25 @@ const IVFContentSection = ({ data, benefitImages }) => {
                 )}
               </>
             )}
-            
+
             {/* Bottom Image - Full Width Rectangle Image */}
             {section.bottomImage && (
               <div className="cs_ivf_content_bottom_image_wrapper" style={{ marginTop: '30px' }}>
                 <div className="cs_service_details_thumbnail">
-                  <Image 
-                    src={getAssetPathClient(section.bottomImage)} 
-                    alt={section.heading || "Image"} 
+                  <Image
+                    src={getAssetPathClient(section.bottomImage)}
+                    alt={section.heading || "Image"}
                     width={1227}
                     height={253}
                     loading="eager"
-                    style={{ 
-                      width: '100%', 
+                    style={{
+                      width: '100%',
                       height: 'auto',
                       maxHeight: '400px',
                       borderRadius: '15px',
                       objectFit: 'contain',
                       display: 'block'
-                    }} 
+                    }}
                   />
                 </div>
               </div>

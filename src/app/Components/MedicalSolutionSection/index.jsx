@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import Button from "../Buttons";
 import { FaAnglesRight } from "react-icons/fa6";
 import SectionHeading from "../SectionHeading";
@@ -41,7 +41,7 @@ const MedicalSolutionSection = ({ data }) => {
                           <i>
                             <FaCheckCircle />
                           </i>
-                          {item}
+                          {typeof item === 'string' ? item : JSON.stringify(item)}
                         </li>
                       ))}
                     </ul>
