@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getAssetPathClient } from "../../utils/assetPath";
 
 const StarIcon = () => (
-  <svg viewBox="0 -0.5 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#CB3148" width="20" height="20">
+  <svg viewBox="0 -0.5 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#df3655" width="20" height="20">
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
@@ -11,7 +11,7 @@ const StarIcon = () => (
       <desc>Created with Sketch.</desc>
       <defs></defs>
       <g id="Vivid.JS" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="Vivid-Icons" transform="translate(-903.000000, -411.000000)" fill="#CB3148">
+        <g id="Vivid-Icons" transform="translate(-903.000000, -411.000000)" fill="#df3655">
           <g id="Icons" transform="translate(37.000000, 169.000000)">
             <g id="star" transform="translate(858.000000, 234.000000)">
               <g transform="translate(7.000000, 8.000000)" id="Shape">
@@ -39,7 +39,7 @@ const TestimonialSection = ({ data }) => {
             <h2 className="cs_service_main_title">
               {typeof data.sectionTitle === 'object' && data.sectionTitle.part1 ? (
                 <>
-                  <span className="cs_news_media_main_title" style={{ color: '#CB3148' }}>
+                  <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                     {data.sectionTitle.part1}
                   </span>{' '}
                   <span style={{ color: '#000000' }}>{data.sectionTitle.part2}</span>

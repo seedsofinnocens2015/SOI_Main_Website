@@ -8,12 +8,12 @@ const FAQSection = ({ data }) => {
     const normalized = (iconUrl || '').toString().toLowerCase();
 
     // Same palette mapping by icon filename
-    if (normalized.endsWith('/ffc.svg') || normalized.includes('ffc.svg')) return '#CB3148';
+    if (normalized.endsWith('/ffc.svg') || normalized.includes('ffc.svg')) return '#df3655';
     if (normalized.endsWith('/mfc.svg') || normalized.includes('mfc.svg')) return '#53A7A7';
     if (normalized.endsWith('/cgt.svg') || normalized.includes('cgt.svg')) return '#E1B41A';
     if (normalized.endsWith('/fa.svg') || normalized.includes('fa.svg')) return '#38425B';
 
-    return '#CB3148';
+    return '#df3655';
   };
 
   return (
@@ -25,7 +25,7 @@ const FAQSection = ({ data }) => {
             <h2 className="cs_faq_main_title">
               {typeof data.sectionTitle === 'object' && data.sectionTitle.part1 ? (
                 <>
-                  <span className="cs_faq_title_part1" style={{ color: '#CB3148' }}>
+                  <span className="cs_faq_title_part1" style={{ color: '#df3655' }}>
                     {data.sectionTitle.part1}
                   </span>{' '}
                   <span className="cs_faq_title_part2" style={{ color: '#333333' }}>

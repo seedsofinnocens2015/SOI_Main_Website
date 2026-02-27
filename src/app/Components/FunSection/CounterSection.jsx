@@ -51,16 +51,16 @@ const CounterSection = ({ data }) => {
     const normalized = (original || '').toString().replace(/\s+/g, '');
 
     // Requested mapping:
-    // 20,000 => #CB3148
+    // 20,000 => #df3655
     // 35+    => #53A7A7
     // 78%    => #E1B41A
     // 30+    => #38425B
-    if (normalized.startsWith('20,000') || normalized.startsWith('20000')) return '#CB3148';
+    if (normalized.startsWith('20,000') || normalized.startsWith('20000')) return '#df3655';
     if ((normalized.startsWith('35') || normalized === '35+') && normalized.includes('+')) return '#53A7A7';
     if ((normalized.startsWith('78') || normalized === '78%') && normalized.includes('%')) return '#E1B41A';
     if ((normalized.startsWith('30') || normalized === '30+') && normalized.includes('+')) return '#38425B';
 
-    return '#CB3148';
+    return '#df3655';
   };
 
   useEffect(() => {
