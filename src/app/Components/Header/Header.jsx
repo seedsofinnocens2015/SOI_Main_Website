@@ -167,7 +167,7 @@ const Header = ({ isTopBar, variant }) => {
                 label: 'Delhi',
                 href: '',
                 subItems: [
-                  { label: 'Malviya Nagar, New Delhi', href: '/delhi/best-ivf-centre-in-delhi' },
+                  { label: 'Malviya Nagar, New Delhi', href: '/delhi/best-ivf-centre-in-malviyanagar' },
                   { label: 'Pitampura, New Delhi', href: '/pitampura/best-ivf-centre-in-pitampura' },
                   { label: 'Janakpuri, New Delhi', href: '/janakpuri/best-ivf-centre-in-janakpuri' },
                 ],
@@ -540,12 +540,12 @@ const Header = ({ isTopBar, variant }) => {
                   </div>
                   <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
                   <div className="cs_top_bar_separator"></div>
-                  <span className="cs_timing_text">India Mon - Sun: 9:00 am - 7:00 pm,</span>
+                  <span className="cs_timing_text">India Mon - Sun: 9:00 am - 6:00 pm</span>
                 </div>
               </div>
               <div className="cs_top_bar_right">
                 <a href="/new/dr-gauri-agarwal-ivf-specialist/" className="cs_location_text">
-                  Dr. Gauri Agarwal, MD
+                  Dr. Gauri Agarwal
                 </a>
                 <a href="tel:+91-9810350512" className="cs_phone_banner">
                   <div className="cs_phone_icon">
