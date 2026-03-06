@@ -36,13 +36,13 @@ export async function generateStaticParams() {
 
                 let slug;
                 if (isMalviyaDelhi) {
-                    slug = 'best-ivf-centre-in-delhi';
+                    slug = 'best-ivf-centre-in-malviyanagar';
                 } else {
                     slug = `best-ivf-centre-in-${cityParam}`;
                 }
 
                 return {
-                    slug: cityParam, // Outer segment [slug]
+                    slug: center.stateSlug, // Outer segment [slug] (Now becomes stateSlug)
                     centerSlug: slug, // Inner segment [centerSlug]
                 };
             })
