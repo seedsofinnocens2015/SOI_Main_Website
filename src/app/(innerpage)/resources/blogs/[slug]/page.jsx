@@ -64,6 +64,28 @@ const BlogDetailPage = ({ params }) => {
     .filter(b => b.category === blog.category && b.slug !== blog.slug)
     .slice(0, 3);
 
+  // Function to get the correct slug for a category (handles Hindi mapping)
+  const getCategorySlug = (category) => {
+    const mapping = {
+      "Fertility": "fertility",
+      "प्रजनन क्षमता": "fertility",
+      "IVF Process": "ivf-process",
+      "आईवीएफ प्रक्रिया": "ivf-process",
+      "Men's Health": "mens-health",
+      "पुरुषों का स्वास्थ्य": "mens-health",
+      "Women's Health": "womens-health",
+      "महिलाओं का स्वास्थ्य": "womens-health",
+      "Pregnancy": "pregnancy",
+      "गर्भावस्था": "pregnancy",
+      "Success Stories": "success-stories",
+      "Treatment Guides": "treatment-guides",
+      "Doctor Insights": "doctor-insights",
+      "News & Press": "news-press"
+    };
+
+    return mapping[category] || category.toLowerCase().replace(/\s+/g, '-');
+  };
+
   return (
     <div>
       <Section
@@ -80,7 +102,7 @@ const BlogDetailPage = ({ params }) => {
             {/* Back Button */}
             <div className="col-lg-12" style={{ marginBottom: '30px' }}>
               <Link 
-                href={`/resources/blogs/${blog.category.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/resources/blogs/${getCategorySlug(blog.category)}`}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',

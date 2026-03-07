@@ -12,6 +12,8 @@ import WhyChooseUsSection from '../Components/WhyChooseUsSection';
 import GeneticsSection from '../Components/GeneticsSection';
 import CredibilitySection from '../Components/CredibilitySection';
 import FAQSection from '../Components/FAQSection';
+import blogsDataJson from '../data/blogs.json';
+
 
 const heroData = {
     primarySlider: [
@@ -51,7 +53,7 @@ const heroData = {
       {
         bgImageUrl: '/assets/img/banner.png',
         mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
-        title: 'YOUR JOURNEY TO<br/>PARENTHOOD STARTS HERE.',
+        title: '<br/>Experience the Bliss of Parenthood.',
         titleClass: 'cs_single_line_title',
         titleStyle: {
           fontSize: 'clamp(32px, 5vw, 72px)',
@@ -64,7 +66,7 @@ const heroData = {
           textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.5)',
         },
         contactSubtitle:
-          'Care that goes beyond pregnancy.',
+          'A little miracle of joy awaits you. ',
         subtitleStyle: {
           fontSize: 'clamp(22px, 3.5vw, 32px)',
           textAlign: 'center',
@@ -84,7 +86,7 @@ const heroData = {
       {
         bgImageUrl: '/assets/img/banner.png',
         mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
-        title: 'YOUR JOURNEY TO<br/>PARENTHOOD STARTS HERE.',
+        title: 'Tiny hands, Sweet smile,<br/> and the bliss of a fulfilled dream',
         titleClass: 'cs_single_line_title',
         titleStyle: {
           fontSize: 'clamp(32px, 5vw, 72px)',
@@ -97,7 +99,7 @@ const heroData = {
           textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.5)',
         },
         contactSubtitle:
-          'Care that goes beyond pregnancy.',
+          'Creating beautiful beginings with a smile.',
         subtitleStyle: {
           fontSize: 'clamp(22px, 3.5vw, 32px)',
           textAlign: 'center',
@@ -564,113 +566,24 @@ const heroData = {
     sectionTitle: 'LATEST BLOGS',
     sectionSubtitle: '',
     designImage: '/assets/img/leaf.png', // Design image for right side background
-    postsData: [
-      {
-        title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
-        subtitle:
-          'शुक्राणु संख्या में कमी को आमतौर पे "मेल इन्फर्टिलिटी" कहते है। यह एक ऐसी समस्या...',
-        date: 'April 08',
-        category: 'Male Fertility',
-        author: 'Admin',
-        thumbnail: '/assets/img/Low.png',
+    postsData: blogsDataJson.blogs
+      .slice()
+      .reverse()
+      .slice(0, 8)
+      .map((blog) => ({
+        title: blog.title,
+        subtitle: blog.excerpt,
+        date: blog.date,
+        category: blog.category,
+        author: blog.author,
+        thumbnail: blog.image,
         btnText: 'Read More',
-        postLink: '/blog/blog-details',
+        postLink: `/resources/blogs/${blog.slug}`,
         authorIcon: '/assets/img/icons/post_user_icon.png',
         commentIcon: '/assets/img/icons/post_comment_icon.png',
-      },
-      {
-        title: 'Genetic Conditions',
-        subtitle:
-          'When couples begin their journey toward parenthood, questions about health and heredity often arise...',
-        date: 'April 08',
-        category: 'Genetic Conditions',
-        author: 'Admin',
-        thumbnail: '/assets/img/Low.png',
-        btnText: 'Read More',
-        postLink: '/blog/blog-details',
-        authorIcon: '/assets/img/icons/post_user_icon.png',
-        commentIcon: '/assets/img/icons/post_comment_icon.png',
-      },
-      {
-        title: 'शीघ्रपतन के उपाय, लक्षण और इलाज',
-        subtitle:
-          'शीघ्रपतन एक ऐसी समस्य है जो पुरुषों को किसी न किसी चरण में अनुभव करनी...',
-        date: 'April 08',
-        category: 'Male Fertility',
-        author: 'Admin',
-        thumbnail: '/assets/img/Low.png',
-        btnText: 'Read More',
-        postLink: '/blog/blog-details',
-        authorIcon: '/assets/img/icons/post_user_icon.png',
-        commentIcon: '/assets/img/icons/post_comment_icon.png',
-      },
-      {
-        title: 'Hormonal Imbalances',
-        subtitle:
-          'Hormonal health plays a key role in overall well-being and reproductive health...',
-        date: 'April 08',
-        category: 'Female Infertility',
-        author: 'Admin',
-        thumbnail: '/assets/img/Low.png',
-        btnText: 'Read More',
-        postLink: '/blog/blog-details',
-        authorIcon: '/assets/img/icons/post_user_icon.png',
-        commentIcon: '/assets/img/icons/post_comment_icon.png',
-      },
-      {
-        title: 'कम शुक्राणु संख्या: कारण, लक्षण, और उपचार',
-        subtitle:
-          'शुक्राणु संख्या में कमी को आमतौर पे "मेल इन्फर्टिलिटी" कहते है। यह एक ऐसी समस्या...',
-        date: 'April 08',
-        category: 'Male Fertility',
-        author: 'Admin',
-        thumbnail: '/assets/img/Low.png',
-        btnText: 'Read More',
-        postLink: '/blog/blog-details',
-        authorIcon: '/assets/img/icons/post_user_icon.png',
-        commentIcon: '/assets/img/icons/post_comment_icon.png',
-      },
-      {
-        title: 'Genetic Conditions',
-        subtitle:
-          'When couples begin their journey toward parenthood, questions about health and heredity often arise...',
-        date: 'April 08',
-        category: 'Genetic Conditions',
-        author: 'Admin',
-        thumbnail: '/assets/img/Low.png',
-        btnText: 'Read More',
-        postLink: '/blog/blog-details',
-        authorIcon: '/assets/img/icons/post_user_icon.png',
-        commentIcon: '/assets/img/icons/post_comment_icon.png',
-      },
-      {
-        title: 'शीघ्रपतन के उपाय, लक्षण और इलाज',
-        subtitle:
-          'शीघ्रपतन एक ऐसी समस्य है जो पुरुषों को किसी न किसी चरण में अनुभव करनी...',
-        date: 'April 08',
-        category: 'Male Fertility',
-        author: 'Admin',
-        thumbnail: '/assets/img/Low.png',
-        btnText: 'Read More',
-        postLink: '/blog/blog-details',
-        authorIcon: '/assets/img/icons/post_user_icon.png',
-        commentIcon: '/assets/img/icons/post_comment_icon.png',
-      },
-      {
-        title: 'Hormonal Imbalances',
-        subtitle:
-          'Hormonal health plays a key role in overall well-being and reproductive health...',
-        date: 'April 08',
-        category: 'Female Infertility',
-        author: 'Admin',
-        thumbnail: '/assets/img/Low.png',
-        btnText: 'Read More',
-        postLink: '/blog/blog-details',
-        authorIcon: '/assets/img/icons/post_user_icon.png',
-        commentIcon: '/assets/img/icons/post_comment_icon.png',
-      },
-    ],
+      })),
   };
+
 
   const testimonialData = {  
     sectionTitle: {
