@@ -150,7 +150,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -166,11 +166,11 @@ const page = () => {
           {/* First Content Section */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection 
+              <IVFContentSection
                 data={{
                   sections: [insuranceContentData.sections[0]]
-                }} 
-                benefitImages={serviceData.benefitImages} 
+                }}
+                benefitImages={serviceData.benefitImages}
               />
             </div>
           </div>
@@ -191,8 +191,8 @@ const page = () => {
               const IconComponent = plan.icon;
               return (
                 <div key={index} className="col-lg-4 col-md-6">
-                  <div className="cs_iconbox cs_style_2 cs_radius_15" style={{ 
-                    height: '100%', 
+                  <div className="cs_iconbox cs_style_2 cs_radius_15" style={{
+                    height: '100%',
                     padding: '30px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -203,16 +203,16 @@ const page = () => {
                     position: 'relative',
                     overflow: 'hidden'
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                    e.currentTarget.style.borderColor = plan.color;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                    e.currentTarget.style.borderColor = '#e8e8e8';
-                  }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-5px)';
+                      e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                      e.currentTarget.style.borderColor = plan.color;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                      e.currentTarget.style.borderColor = '#e8e8e8';
+                    }}
                   >
                     <div className="cs_iconbox_header mb-3" style={{ flex: 1 }}>
                       <div className="cs_iconbox_icon cs_center mb-3" style={{
@@ -228,8 +228,8 @@ const page = () => {
                       }}>
                         <IconComponent style={{ fontSize: '36px', color: plan.color }} />
                       </div>
-                      <h3 className="cs_iconbox_title" style={{ 
-                        fontSize: '20px', 
+                      <h3 className="cs_iconbox_title" style={{
+                        fontSize: '20px',
                         marginBottom: '12px',
                         fontWeight: '600',
                         color: '#1a1a1a',
@@ -238,31 +238,31 @@ const page = () => {
                       }}>
                         {plan.title}
                       </h3>
-                      <p className="cs_iconbox_subtitle" style={{ 
-                        fontSize: '14px', 
-                        lineHeight: '1.7', 
+                      <p className="cs_iconbox_subtitle" style={{
+                        fontSize: '14px',
+                        lineHeight: '1.7',
                         marginBottom: '20px',
                         color: '#555',
                         textAlign: 'center'
                       }}>
                         {plan.description}
                       </p>
-                      <ul className="cs_mp_0" style={{ 
-                        listStyle: 'none', 
+                      <ul className="cs_mp_0" style={{
+                        listStyle: 'none',
                         paddingLeft: '0',
                         fontSize: '14px'
                       }}>
                         {plan.features.map((feature, fIndex) => (
-                          <li key={fIndex} style={{ 
-                            marginBottom: '10px', 
-                            paddingLeft: '25px', 
+                          <li key={fIndex} style={{
+                            marginBottom: '10px',
+                            paddingLeft: '25px',
                             position: 'relative',
                             color: '#555'
                           }}>
-                            <FaCheckCircle style={{ 
-                              position: 'absolute', 
-                              left: '0', 
-                              color: plan.color, 
+                            <FaCheckCircle style={{
+                              position: 'absolute',
+                              left: '0',
+                              color: plan.color,
                               fontSize: '16px',
                               top: '2px'
                             }} />
@@ -293,8 +293,8 @@ const page = () => {
               const IconComponent = option.icon;
               return (
                 <div key={index} className="col-lg-4 col-md-6">
-                  <div className="cs_iconbox cs_style_2 cs_radius_15" style={{ 
-                    height: '100%', 
+                  <div className="cs_iconbox cs_style_2 cs_radius_15" style={{
+                    height: '100%',
                     padding: '30px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -305,16 +305,16 @@ const page = () => {
                     position: 'relative',
                     overflow: 'hidden'
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                    e.currentTarget.style.borderColor = option.color;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                    e.currentTarget.style.borderColor = '#e8e8e8';
-                  }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-5px)';
+                      e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                      e.currentTarget.style.borderColor = option.color;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                      e.currentTarget.style.borderColor = '#e8e8e8';
+                    }}
                   >
                     <div className="cs_iconbox_header mb-3" style={{ flex: 1 }}>
                       <div className="cs_iconbox_icon cs_center mb-3" style={{
@@ -330,8 +330,8 @@ const page = () => {
                       }}>
                         <IconComponent style={{ fontSize: '36px', color: option.color }} />
                       </div>
-                      <h3 className="cs_iconbox_title" style={{ 
-                        fontSize: '20px', 
+                      <h3 className="cs_iconbox_title" style={{
+                        fontSize: '20px',
                         marginBottom: '12px',
                         fontWeight: '600',
                         color: '#1a1a1a',
@@ -340,31 +340,31 @@ const page = () => {
                       }}>
                         {option.title}
                       </h3>
-                      <p className="cs_iconbox_subtitle" style={{ 
-                        fontSize: '14px', 
-                        lineHeight: '1.7', 
+                      <p className="cs_iconbox_subtitle" style={{
+                        fontSize: '14px',
+                        lineHeight: '1.7',
                         marginBottom: '20px',
                         color: '#555',
                         textAlign: 'center'
                       }}>
                         {option.description}
                       </p>
-                      <ul className="cs_mp_0" style={{ 
-                        listStyle: 'none', 
+                      <ul className="cs_mp_0" style={{
+                        listStyle: 'none',
                         paddingLeft: '0',
                         fontSize: '14px'
                       }}>
                         {option.features.map((feature, fIndex) => (
-                          <li key={fIndex} style={{ 
-                            marginBottom: '10px', 
-                            paddingLeft: '25px', 
+                          <li key={fIndex} style={{
+                            marginBottom: '10px',
+                            paddingLeft: '25px',
                             position: 'relative',
                             color: '#555'
                           }}>
-                            <FaCheckCircle style={{ 
-                              position: 'absolute', 
-                              left: '0', 
-                              color: option.color, 
+                            <FaCheckCircle style={{
+                              position: 'absolute',
+                              left: '0',
+                              color: option.color,
                               fontSize: '16px',
                               top: '2px'
                             }} />
@@ -384,11 +384,11 @@ const page = () => {
           {/* Remaining Content Sections */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection 
+              <IVFContentSection
                 data={{
                   sections: insuranceContentData.sections.slice(1)
-                }} 
-                benefitImages={serviceData.benefitImages} 
+                }}
+                benefitImages={serviceData.benefitImages}
               />
             </div>
           </div>
@@ -398,9 +398,9 @@ const page = () => {
           {/* Contact Section */}
           <div className="row">
             <div className="col-lg-10 mx-auto">
-              <div className="cs_ivf_content_section" style={{ 
-                padding: '40px', 
-                backgroundColor: '#e3f2fd', 
+              <div className="cs_ivf_content_section" style={{
+                padding: '40px',
+                backgroundColor: '#e3f2fd',
                 borderRadius: '10px',
                 borderLeft: '4px solid #2196f3',
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'
@@ -416,9 +416,9 @@ const page = () => {
                     Financial Counseling Services
                   </h3>
                 </div>
-                <p className="cs_ivf_content_paragraph" style={{ 
-                  fontSize: '16px', 
-                  lineHeight: '1.8', 
+                <p className="cs_ivf_content_paragraph" style={{
+                  fontSize: '16px',
+                  lineHeight: '1.8',
                   marginBottom: '25px',
                   color: '#333'
                 }}>
@@ -461,10 +461,10 @@ const page = () => {
                   </div>
                 </div>
                 <div style={{ marginTop: '25px', textAlign: 'center' }}>
-                  <Link 
-                    href="/contact/book-appointment/" 
+                  <Link
+                    href="/contact/book-appointment/"
                     className="cs_btn cs_style_1 cs_color_1"
-                    style={{ 
+                    style={{
                       display: 'inline-block',
                       textDecoration: 'none',
                       padding: '14px 30px',

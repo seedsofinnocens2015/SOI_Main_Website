@@ -51,7 +51,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -78,10 +78,10 @@ const page = () => {
           <div className="row mb-5">
             <div className="col-lg-12">
               <div className="cs_service_details_thumbnail">
-                <Image 
-                  src="/assets/img/recent_post2.jpg" 
-                  alt="International Patients" 
-                  width={1200} 
+                <Image
+                  src="/assets/img/recent_post2.jpg"
+                  alt="International Patients"
+                  width={1200}
                   height={400}
                   className="w-100"
                   style={{ borderRadius: '10px' }}
@@ -95,8 +95,8 @@ const page = () => {
             {services.map((service, index) => (
               <div key={index} className="col-lg-4 col-md-6">
                 <Link href={service.link} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
-                  <div className="cs_iconbox cs_style_2 cs_radius_15 cs_gray_bg" style={{ 
-                    height: '100%', 
+                  <div className="cs_iconbox cs_style_2 cs_radius_15 cs_gray_bg" style={{
+                    height: '100%',
                     padding: '30px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -105,9 +105,9 @@ const page = () => {
                     border: '2px solid transparent'
                   }}>
                     <div className="cs_iconbox_header mb-3">
-                      <div className="cs_iconbox_icon cs_center mb-3" style={{ 
-                        width: '80px', 
-                        height: '80px', 
+                      <div className="cs_iconbox_icon cs_center mb-3" style={{
+                        width: '80px',
+                        height: '80px',
                         borderRadius: '50%',
                         backgroundColor: service.color + '20',
                         display: 'flex',
@@ -115,10 +115,10 @@ const page = () => {
                         justifyContent: 'center',
                         margin: '0 auto'
                       }}>
-                        <Image 
-                          src={service.icon} 
-                          alt={service.title} 
-                          width={50} 
+                        <Image
+                          src={service.icon}
+                          alt={service.title}
+                          width={50}
                           height={50}
                         />
                       </div>
@@ -130,8 +130,8 @@ const page = () => {
                       </p>
                     </div>
                     <div style={{ marginTop: 'auto', textAlign: 'center' }}>
-                      <span style={{ 
-                        color: service.color, 
+                      <span style={{
+                        color: service.color,
                         fontWeight: '600',
                         fontSize: '16px'
                       }}>
@@ -149,9 +149,9 @@ const page = () => {
           {/* Why Choose Us Section */}
           <div className="row">
             <div className="col-lg-12">
-              <div style={{ 
-                padding: '50px', 
-                backgroundColor: '#f8f9fa', 
+              <div style={{
+                padding: '50px',
+                backgroundColor: '#f8f9fa',
                 borderRadius: '10px'
               }}>
                 <h4 className="cs_service_heading mb-4 text-center">Why International Patients Choose Seeds of Innocens</h4>

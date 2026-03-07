@@ -51,7 +51,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -78,10 +78,10 @@ const page = () => {
           <div className="row mb-5">
             <div className="col-lg-12">
               <div className="cs_service_details_thumbnail">
-                <Image 
-                  src="/assets/img/recent_post2.jpg" 
-                  alt="Downloads" 
-                  width={1200} 
+                <Image
+                  src="/assets/img/recent_post2.jpg"
+                  alt="Downloads"
+                  width={1200}
                   height={400}
                   className="w-100"
                   style={{ borderRadius: '10px' }}
@@ -94,18 +94,18 @@ const page = () => {
           <div className="row cs_gap_y_40">
             {downloadCategories.map((category, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <div className="cs_iconbox cs_style_2 cs_radius_15 cs_gray_bg" style={{ 
-                  height: '100%', 
+                <div className="cs_iconbox cs_style_2 cs_radius_15 cs_gray_bg" style={{
+                  height: '100%',
                   padding: '30px',
                   display: 'flex',
                   flexDirection: 'column'
                 }}>
                   <div className="cs_iconbox_header mb-3">
                     <div className="cs_iconbox_icon cs_center mb-3">
-                      <Image 
-                        src={category.icon} 
-                        alt={category.title} 
-                        width={60} 
+                      <Image
+                        src={category.icon}
+                        alt={category.title}
+                        width={60}
                         height={60}
                       />
                     </div>
@@ -116,33 +116,33 @@ const page = () => {
                       {category.description}
                     </p>
                   </div>
-                  <ul className="cs_mp_0" style={{ 
-                    listStyle: 'none', 
+                  <ul className="cs_mp_0" style={{
+                    listStyle: 'none',
                     paddingLeft: '0',
                     flex: 1,
                     marginBottom: '20px'
                   }}>
                     {category.items.map((item, itemIndex) => (
-                      <li key={itemIndex} style={{ 
-                        marginBottom: '10px', 
-                        paddingLeft: '25px', 
-                        position: 'relative' 
+                      <li key={itemIndex} style={{
+                        marginBottom: '10px',
+                        paddingLeft: '25px',
+                        position: 'relative'
                       }}>
-                        <span style={{ 
-                          position: 'absolute', 
-                          left: '0', 
-                          color: 'var(--accent-color)', 
-                          fontSize: '16px' 
+                        <span style={{
+                          position: 'absolute',
+                          left: '0',
+                          color: 'var(--accent-color)',
+                          fontSize: '16px'
                         }}>•</span>
                         {item}
                       </li>
                     ))}
                   </ul>
-                  <Link 
-                    href={category.link} 
+                  <Link
+                    href={category.link}
                     className="cs_btn cs_style_1 cs_color_1"
-                    style={{ 
-                      width: '100%', 
+                    style={{
+                      width: '100%',
                       textAlign: 'center',
                       textDecoration: 'none',
                       display: 'block'
@@ -160,9 +160,9 @@ const page = () => {
           {/* Important Notes */}
           <div className="row">
             <div className="col-lg-8 mx-auto">
-              <div className="cs_service_details" style={{ 
-                padding: '30px', 
-                backgroundColor: '#fff3cd', 
+              <div className="cs_service_details" style={{
+                padding: '30px',
+                backgroundColor: '#fff3cd',
                 borderRadius: '10px',
                 borderLeft: '4px solid #ffc107'
               }}>

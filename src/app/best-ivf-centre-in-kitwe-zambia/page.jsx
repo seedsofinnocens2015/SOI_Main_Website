@@ -177,7 +177,7 @@ export default function Page() {
       <Header />
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -207,7 +207,7 @@ export default function Page() {
           bottomSpaceMd="60"
         >
           <div className="container">
-            <h2 className="cs_ivf_content_heading" style={{marginBottom: '30px' }}>
+            <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
               Available Doctors at {center.name}
             </h2>
             <div className="cs_doctors_grid cs_style_1">
@@ -219,24 +219,24 @@ export default function Page() {
                     const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
                     return doctorLink ? (
                       <Link href={doctorLink} className="cs_team_thumbnail">
-                      <Image 
-                        src={getAssetPath(doctor.image)} 
-                        alt={`${doctor.name} Thumbnail`} 
-                        width={302} 
-                        height={423}
-                        loading="eager"
-                      />
-                    </Link>
-                  ) : (
-                    <div className="cs_team_thumbnail">
-                      <Image 
-                        src={getAssetPath(doctor.image)} 
-                        alt={`${doctor.name} Thumbnail`} 
-                        width={302} 
-                        height={423}
-                        loading="eager"
-                      />
-                    </div>
+                        <Image
+                          src={getAssetPath(doctor.image)}
+                          alt={`${doctor.name} Thumbnail`}
+                          width={302}
+                          height={423}
+                          loading="eager"
+                        />
+                      </Link>
+                    ) : (
+                      <div className="cs_team_thumbnail">
+                        <Image
+                          src={getAssetPath(doctor.image)}
+                          alt={`${doctor.name} Thumbnail`}
+                          width={302}
+                          height={423}
+                          loading="eager"
+                        />
+                      </div>
                     );
                   })()}
                   <div className="cs_team_bio">
@@ -246,8 +246,8 @@ export default function Page() {
                         const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
                         return doctorLink ? (
                           <Link href={doctorLink}>{doctor.name}</Link>
-                      ) : (
-                        <span>{doctor.name}</span>
+                        ) : (
+                          <span>{doctor.name}</span>
                         );
                       })()}
                     </h3>

@@ -106,7 +106,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -123,10 +123,10 @@ const page = () => {
           <div className="row">
             <div className="col-12">
               <IVFContentSection data={semenAnalysisAtHomeContentData} benefitImages={serviceData.benefitImages} />
-              
+
               {/* Guidelines Button Section */}
               <div style={{ marginTop: '40px', textAlign: 'center' }}>
-                <Link 
+                <Link
                   href="/advanced-fertility-care/semen-analysis-at-home/preparation-guidelines"
                   style={{
                     display: 'inline-block',

@@ -44,17 +44,17 @@ export async function generateStaticParams() {
 const page = async ({ params }) => {
   const resolvedParams = await params;
   const { slug } = resolvedParams || {};
-  
+
   if (!slug) {
     notFound();
   }
-  
+
   // Find center by matching the international slug format
   const center = centresData.find((c) => {
     if (!c.isInternational) {
       return false;
     }
-    
+
     const centerSlug = getInternationalSlug(c.name);
     return centerSlug === slug;
   });
@@ -75,7 +75,7 @@ const page = async ({ params }) => {
 
   // Process images with basePath for production
   const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2.jpg');
-  
+
   const serviceData = {
     serviceHeading: '',
     services: [],
@@ -231,7 +231,7 @@ const page = async ({ params }) => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -262,7 +262,7 @@ const page = async ({ params }) => {
           bottomSpaceMd="60"
         >
           <div className="container">
-            <h2 className="cs_ivf_content_heading" style={{marginBottom: '30px' }}>
+            <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
               Available Doctors at {center.name}
             </h2>
             <div className="cs_doctors_grid cs_style_1">
@@ -274,24 +274,24 @@ const page = async ({ params }) => {
                     const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
                     return doctorLink ? (
                       <Link href={doctorLink} className="cs_team_thumbnail">
-                      <Image 
-                        src={getAssetPath(doctor.image)} 
-                        alt={`${doctor.name} Thumbnail`} 
-                        width={302} 
-                        height={423}
-                        loading="eager"
-                      />
-                    </Link>
-                  ) : (
-                    <div className="cs_team_thumbnail">
-                      <Image 
-                        src={getAssetPath(doctor.image)} 
-                        alt={`${doctor.name} Thumbnail`} 
-                        width={302} 
-                        height={423}
-                        loading="eager"
-                      />
-                    </div>
+                        <Image
+                          src={getAssetPath(doctor.image)}
+                          alt={`${doctor.name} Thumbnail`}
+                          width={302}
+                          height={423}
+                          loading="eager"
+                        />
+                      </Link>
+                    ) : (
+                      <div className="cs_team_thumbnail">
+                        <Image
+                          src={getAssetPath(doctor.image)}
+                          alt={`${doctor.name} Thumbnail`}
+                          width={302}
+                          height={423}
+                          loading="eager"
+                        />
+                      </div>
                     );
                   })()}
                   <div className="cs_team_bio">
@@ -301,8 +301,8 @@ const page = async ({ params }) => {
                         const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
                         return doctorLink ? (
                           <Link href={doctorLink}>{doctor.name}</Link>
-                      ) : (
-                        <span>{doctor.name}</span>
+                        ) : (
+                          <span>{doctor.name}</span>
                         );
                       })()}
                     </h3>

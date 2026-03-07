@@ -27,7 +27,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -59,9 +59,9 @@ const page = () => {
 
           <div className="row cs_gap_y_40">
             <div className="col-lg-8">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#ffffff', 
+              <div style={{
+                padding: '40px',
+                backgroundColor: '#ffffff',
                 borderRadius: '12px',
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8',
@@ -81,7 +81,7 @@ const page = () => {
                 <p style={{ fontSize: '18px', marginBottom: '30px', lineHeight: '1.8' }}>
                   Click the button below to chat with us on WhatsApp. Our fertility specialists are ready to assist you with all your queries.
                 </p>
-                <a 
+                <a
                   href="https://wa.me/919810350512"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -102,9 +102,9 @@ const page = () => {
 
               <div className="row cs_gap_y_30" style={{ marginBottom: '30px' }}>
                 <div className="col-md-6">
-                  <div style={{ 
-                    padding: '30px', 
-                    backgroundColor: '#ffffff', 
+                  <div style={{
+                    padding: '30px',
+                    backgroundColor: '#ffffff',
                     borderRadius: '12px',
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                     border: '1px solid #e8e8e8',
@@ -119,9 +119,9 @@ const page = () => {
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <div style={{ 
-                    padding: '30px', 
-                    backgroundColor: '#ffffff', 
+                  <div style={{
+                    padding: '30px',
+                    backgroundColor: '#ffffff',
                     borderRadius: '12px',
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                     border: '1px solid #e8e8e8',
@@ -136,9 +136,9 @@ const page = () => {
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <div style={{ 
-                    padding: '30px', 
-                    backgroundColor: '#ffffff', 
+                  <div style={{
+                    padding: '30px',
+                    backgroundColor: '#ffffff',
                     borderRadius: '12px',
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                     border: '1px solid #e8e8e8',
@@ -153,9 +153,9 @@ const page = () => {
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <div style={{ 
-                    padding: '30px', 
-                    backgroundColor: '#ffffff', 
+                  <div style={{
+                    padding: '30px',
+                    backgroundColor: '#ffffff',
                     borderRadius: '12px',
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                     border: '1px solid #e8e8e8',
@@ -171,9 +171,9 @@ const page = () => {
                 </div>
               </div>
 
-              <div style={{ 
-                padding: '30px', 
-                backgroundColor: '#f8f9fa', 
+              <div style={{
+                padding: '30px',
+                backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
                 borderLeft: '4px solid #E45352'
               }}>
@@ -191,7 +191,7 @@ const page = () => {
             </div>
             <div className="col-lg-4">
               <div className="cs_sidebar">
-                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{ 
+                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{
                   padding: '30px',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
@@ -205,7 +205,7 @@ const page = () => {
                   <p style={{ marginBottom: '20px', fontSize: '14px', lineHeight: '1.6' }}>
                     Save this number to your contacts for easy access. You can start a conversation anytime.
                   </p>
-                  <a 
+                  <a
                     href="https://wa.me/919810350512"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -224,7 +224,7 @@ const page = () => {
                   </a>
                 </div>
 
-                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{ 
+                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{
                   padding: '30px',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'
@@ -246,7 +246,7 @@ const page = () => {
                   </ul>
                 </div>
 
-                <div className="cs_sidebar_widget cs_gray_bg" style={{ 
+                <div className="cs_sidebar_widget cs_gray_bg" style={{
                   padding: '30px',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'

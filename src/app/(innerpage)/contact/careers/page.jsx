@@ -78,7 +78,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -116,9 +116,9 @@ const page = () => {
           </div>
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
             <div className="col-lg-4 col-md-6">
-              <div style={{ 
-                padding: '30px', 
-                backgroundColor: '#ffffff', 
+              <div style={{
+                padding: '30px',
+                backgroundColor: '#ffffff',
                 borderRadius: '12px',
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8',
@@ -126,14 +126,14 @@ const page = () => {
                 height: '100%',
                 transition: 'all 0.3s ease'
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-              }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                }}
               >
                 <FaTrophy style={{ fontSize: '50px', color: '#E45352', marginBottom: '15px' }} />
                 <h5 style={{ marginBottom: '10px', fontWeight: '600', color: '#0A2A43' }}>Excellence</h5>
@@ -143,9 +143,9 @@ const page = () => {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div style={{ 
-                padding: '30px', 
-                backgroundColor: '#ffffff', 
+              <div style={{
+                padding: '30px',
+                backgroundColor: '#ffffff',
                 borderRadius: '12px',
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8',
@@ -153,14 +153,14 @@ const page = () => {
                 height: '100%',
                 transition: 'all 0.3s ease'
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-              }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                }}
               >
                 <FaUsers style={{ fontSize: '50px', color: '#E45352', marginBottom: '15px' }} />
                 <h5 style={{ marginBottom: '10px', fontWeight: '600', color: '#0A2A43' }}>Team Culture</h5>
@@ -170,9 +170,9 @@ const page = () => {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div style={{ 
-                padding: '30px', 
-                backgroundColor: '#ffffff', 
+              <div style={{
+                padding: '30px',
+                backgroundColor: '#ffffff',
                 borderRadius: '12px',
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8',
@@ -180,14 +180,14 @@ const page = () => {
                 height: '100%',
                 transition: 'all 0.3s ease'
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-              }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                }}
               >
                 <FaBriefcase style={{ fontSize: '50px', color: '#E45352', marginBottom: '15px' }} />
                 <h5 style={{ marginBottom: '10px', fontWeight: '600', color: '#0A2A43' }}>Growth</h5>
@@ -221,9 +221,9 @@ const page = () => {
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
             {jobOpenings.map((job, index) => (
               <div key={index} className="col-lg-6">
-                <div style={{ 
-                  padding: '30px', 
-                  backgroundColor: '#ffffff', 
+                <div style={{
+                  padding: '30px',
+                  backgroundColor: '#ffffff',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                   border: '1px solid #e8e8e8',
@@ -232,18 +232,18 @@ const page = () => {
                   flexDirection: 'column',
                   transition: 'all 0.3s ease'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-5px)';
+                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                  }}
                 >
-                  <h4 style={{ 
-                    fontSize: '20px', 
-                    fontWeight: '600', 
+                  <h4 style={{
+                    fontSize: '20px',
+                    fontWeight: '600',
                     color: '#0A2A43',
                     marginBottom: '15px',
                     lineHeight: '1.4'
@@ -251,7 +251,7 @@ const page = () => {
                     {job.title}
                   </h4>
                   <div style={{ marginBottom: '15px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                    <span style={{ 
+                    <span style={{
                       display: 'inline-block',
                       padding: '5px 12px',
                       backgroundColor: '#e3f2fd',
@@ -262,7 +262,7 @@ const page = () => {
                     }}>
                       {job.department}
                     </span>
-                    <span style={{ 
+                    <span style={{
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '5px',
@@ -276,7 +276,7 @@ const page = () => {
                       <FaMapMarkerAlt style={{ fontSize: '10px' }} />
                       {job.location}
                     </span>
-                    <span style={{ 
+                    <span style={{
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '5px',
@@ -298,10 +298,10 @@ const page = () => {
                     <FaUserTie style={{ color: '#E45352', fontSize: '16px' }} />
                     <strong>Experience Required:</strong> {job.experience}
                   </p>
-                  <Link 
+                  <Link
                     href="/contact/careers/apply"
                     className="cs_btn cs_style_1 cs_color_1"
-                    style={{ 
+                    style={{
                       textDecoration: 'none',
                       display: 'inline-block',
                       width: '100%',
@@ -320,9 +320,9 @@ const page = () => {
           {/* General Application Section */}
           <div className="row">
             <div className="col-lg-8 mx-auto">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#f8f9fa', 
+              <div style={{
+                padding: '40px',
+                backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
                 borderLeft: '4px solid #E45352',
                 textAlign: 'center'
@@ -333,10 +333,10 @@ const page = () => {
                 <p style={{ marginBottom: '25px', fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
                   Don&apos;t see a position that matches your skills? Send us your resume and we&apos;ll keep you in mind for future opportunities.
                 </p>
-                <Link 
+                <Link
                   href="/contact/careers/general-application"
                   className="cs_btn cs_style_1 cs_color_1"
-                  style={{ 
+                  style={{
                     display: 'inline-block',
                     textDecoration: 'none'
                   }}

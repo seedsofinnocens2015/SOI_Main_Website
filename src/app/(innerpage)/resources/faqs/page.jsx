@@ -26,7 +26,7 @@ const FAQAccordion = ({ faqs }) => {
   return (
     <div className="faq-accordion" style={{ marginTop: '30px' }}>
       {faqs.map((faq, index) => (
-        <div 
+        <div
           key={index}
           style={{
             marginBottom: '15px',
@@ -86,14 +86,14 @@ const FAQAccordion = ({ faqs }) => {
                 </div>
               )}
               {faq.listItems && (
-                <ul style={{ 
-                  marginTop: '10px', 
+                <ul style={{
+                  marginTop: '10px',
                   paddingLeft: '20px',
                   listStyle: 'disc'
                 }}>
                   {faq.listItems.map((item, itemIndex) => (
-                    <li key={itemIndex} style={{ 
-                      marginBottom: '8px', 
+                    <li key={itemIndex} style={{
+                      marginBottom: '8px',
                       fontSize: '15px',
                       lineHeight: '1.8'
                     }}>
@@ -246,7 +246,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>

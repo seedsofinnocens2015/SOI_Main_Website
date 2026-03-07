@@ -158,7 +158,7 @@ const Page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -209,24 +209,24 @@ const Page = () => {
                   display: 'flex',
                   flexDirection: 'column'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-5px)';
+                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                  }}
                 >
                   <div style={{ position: 'relative', width: '100%', height: '300px', overflow: 'hidden', cursor: 'pointer' }}
                     onClick={() => openModal(video)}
                   >
-                    <img 
-                      src={video.thumbnail} 
+                    <img
+                      src={video.thumbnail}
                       alt={video.title}
-                      style={{ 
-                        width: '100%', 
-                        height: '100%', 
+                      style={{
+                        width: '100%',
+                        height: '100%',
                         objectFit: 'cover'
                       }}
                       onError={(e) => {
@@ -248,64 +248,64 @@ const Page = () => {
                       cursor: 'pointer',
                       transition: 'all 0.3s ease'
                     }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(228, 83, 82, 0.9)';
-                      e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1.1)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgb(254, 2, 2)';
-                      e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1)';
-                    }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(228, 83, 82, 0.9)';
+                        e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgb(254, 2, 2)';
+                        e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1)';
+                      }}
                     >
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                        <path d="M8 5v14l11-7z"/>
+                        <path d="M8 5v14l11-7z" />
                       </svg>
                     </div>
                   </div>
                   <div style={{ padding: '20px' }}>
-                    <div style={{ 
-                      display: 'flex', 
-                      justifyContent: 'space-between', 
+                    <div style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
                       alignItems: 'center',
                       marginBottom: '10px'
                     }}>
-                      <span style={{ 
-                        fontSize: '14px', 
-                        color: '#E45352', 
+                      <span style={{
+                        fontSize: '14px',
+                        color: '#E45352',
                         fontWeight: '500'
                       }}>
                         {video.date}
                       </span>
-                      <span style={{ 
-                        fontSize: '12px', 
-                        color: '#666', 
+                      <span style={{
+                        fontSize: '12px',
+                        color: '#666',
                         fontWeight: '400'
                       }}>
                         {video.channel}
                       </span>
                     </div>
-                    <h4 style={{ 
-                      fontSize: '18px', 
-                      fontWeight: '600', 
+                    <h4 style={{
+                      fontSize: '18px',
+                      fontWeight: '600',
                       color: '#0A2A43',
                       marginBottom: '10px',
                       lineHeight: '1.4',
                       cursor: 'pointer'
                     }}
-                    onClick={() => window.open(video.youtubeUrl, '_blank')}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = '#E45352';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.color = '#0A2A43';
-                    }}
+                      onClick={() => window.open(video.youtubeUrl, '_blank')}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = '#E45352';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = '#0A2A43';
+                      }}
                     >
                       {video.title}
                     </h4>
                     <div>
-                      <p style={{ 
-                        fontSize: '14px', 
-                        color: '#666', 
+                      <p style={{
+                        fontSize: '14px',
+                        color: '#666',
                         lineHeight: '1.6',
                         margin: 0,
                         marginBottom: '8px',
@@ -434,39 +434,39 @@ const Page = () => {
 
             {/* Video Details */}
             <div style={{ padding: '25px' }}>
-              <div style={{ 
-                display: 'flex', 
-                justifyContent: 'space-between', 
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
                 alignItems: 'center',
                 marginBottom: '15px'
               }}>
-                <span style={{ 
-                  fontSize: '14px', 
-                  color: '#E45352', 
+                <span style={{
+                  fontSize: '14px',
+                  color: '#E45352',
                   fontWeight: '500'
                 }}>
                   {selectedVideo.date}
                 </span>
-                <span style={{ 
-                  fontSize: '12px', 
-                  color: '#666', 
+                <span style={{
+                  fontSize: '12px',
+                  color: '#666',
                   fontWeight: '400'
                 }}>
                   {selectedVideo.channel}
                 </span>
               </div>
-              <h3 style={{ 
-                fontSize: '22px', 
-                fontWeight: '600', 
+              <h3 style={{
+                fontSize: '22px',
+                fontWeight: '600',
                 color: '#0A2A43',
                 marginBottom: '15px',
                 lineHeight: '1.4'
               }}>
                 {selectedVideo.title}
               </h3>
-              <div style={{ 
-                fontSize: '15px', 
-                color: '#666', 
+              <div style={{
+                fontSize: '15px',
+                color: '#666',
                 lineHeight: '1.8',
                 whiteSpace: 'pre-wrap'
               }}>

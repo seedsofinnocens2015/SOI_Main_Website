@@ -7,141 +7,141 @@ import TeamSection from '@/app/Components/TeamSection';
 import React from 'react';
 
 const headingData = {
-    title: 'About Seeds of Innocens',
-  };
-  
-  const aboutData = {
-    sectionSubtitle: 'ABOUT US',
-    sectionTitle: 'Seeds of Innocens - Leading IVF Centre in India.',
-    aboutText:
-      "Seeds of Innocens IVF Centre is India's best fertility clinic, providing comprehensive fertility solutions across multiple locations. We offer advanced treatments including IVF-ICSI, IUI, Surrogacy, Genetic Testing, and more, helping thousands of couples achieve their dream of parenthood.",
-    service:
-      "We provide world-class fertility treatments with high success rates and personalized care <a href='/service'>READ MORE +</a>",
-    experienceYears: '10+',
-    experienceTitle: 'Years Experience',
-    videoUrl: 'https://www.youtube.com/embed/rRid6GCJtgc',
-    videoText: 'How We Work',
-    iconboxes: [
-      {
-        imgUrl: '/assets/img/icons/about_icon_1.png',
-        title: 'Patient Support',
-        subtitle: '24/7 support and guidance throughout your fertility journey.',
-      },
-      {
-        imgUrl: '/assets/img/icons/about_icon_2.png',
-        title: 'Expert Doctors',
-        subtitle: 'Trained and certified fertility specialists with years of experience.',
-      },
-    ],
-  
-    btnUrl: '/service',
-    btnText: 'Our Services',
-    sectionImgUrl: '/assets/img/about_section_img_12.png',
-    headImgUrl: '/assets/img/about_img_7.jpeg',
-  };
-  
-  const counterData = [
+  title: 'About Seeds of Innocens',
+};
+
+const aboutData = {
+  sectionSubtitle: 'ABOUT US',
+  sectionTitle: 'Seeds of Innocens - Leading IVF Centre in India.',
+  aboutText:
+    "Seeds of Innocens IVF Centre is India's best fertility clinic, providing comprehensive fertility solutions across multiple locations. We offer advanced treatments including IVF-ICSI, IUI, Surrogacy, Genetic Testing, and more, helping thousands of couples achieve their dream of parenthood.",
+  service:
+    "We provide world-class fertility treatments with high success rates and personalized care <a href='/service'>READ MORE +</a>",
+  experienceYears: '10+',
+  experienceTitle: 'Years Experience',
+  videoUrl: 'https://www.youtube.com/embed/rRid6GCJtgc',
+  videoText: 'How We Work',
+  iconboxes: [
     {
-      iconSrc: '/assets/img/icons/counter_icon_1.png',
-      countTo: 20000,
-      suffix: '+',
-      title: 'Successful Pregnancies',
+      imgUrl: '/assets/img/icons/about_icon_1.png',
+      title: 'Patient Support',
+      subtitle: '24/7 support and guidance throughout your fertility journey.',
     },
     {
-      iconSrc: '/assets/img/icons/counter_icon_2.png',
-      countTo: 35,
-      suffix: '+',
-      title: 'Centres Across India',
-    },
-    {
-      iconSrc: '/assets/img/icons/counter_icon_3.png',
-      countTo: 30,
-      suffix: '+',
+      imgUrl: '/assets/img/icons/about_icon_2.png',
       title: 'Expert Doctors',
+      subtitle: 'Trained and certified fertility specialists with years of experience.',
+    },
+  ],
+
+  btnUrl: '/service',
+  btnText: 'Our Services',
+  sectionImgUrl: '/assets/img/about_section_img_12.png',
+  headImgUrl: '/assets/img/about_img_7.jpeg',
+};
+
+const counterData = [
+  {
+    iconSrc: '/assets/img/icons/counter_icon_1.png',
+    countTo: 20000,
+    suffix: '+',
+    title: 'Successful Pregnancies',
+  },
+  {
+    iconSrc: '/assets/img/icons/counter_icon_2.png',
+    countTo: 35,
+    suffix: '+',
+    title: 'Centres Across India',
+  },
+  {
+    iconSrc: '/assets/img/icons/counter_icon_3.png',
+    countTo: 30,
+    suffix: '+',
+    title: 'Expert Doctors',
+  },
+  {
+    iconSrc: '/assets/img/icons/counter_icon_4.png',
+    countTo: 10,
+    suffix: '+',
+    title: 'Years Experience',
+  },
+];
+
+const teamData = {
+  subtitle: 'OUR TEAM',
+  title: 'Our Team of Trained <br />Certified Doctors',
+  sliderData: [
+    {
+      name: 'Dr. Gauri Agarwal',
+      profession: 'IVF Specialist',
+      imageUrl: '/assets/img/gauri.jpg',
+      link: '/doctors/doctor-details',
+      facebook: '/',
+      pinterest: '/',
+      twitter: '/',
+      instagram: '/',
     },
     {
-      iconSrc: '/assets/img/icons/counter_icon_4.png',
-      countTo: 10,
-      suffix: '+',
-      title: 'Years Experience',
+      name: 'Dr. Rajesh Kumar',
+      profession: 'Fertility Specialist',
+      imageUrl: '/assets/img/team_3.jpg',
+      link: '/doctors/doctor-details',
+      facebook: '/',
+      pinterest: '/',
+      twitter: '/',
+      instagram: '/',
     },
-  ];
-  
-  const teamData = {
-    subtitle: 'OUR TEAM',
-    title: 'Our Team of Trained <br />Certified Doctors',
-    sliderData: [
-      {
-        name: 'Dr. Gauri Agarwal',
-        profession: 'IVF Specialist',
-        imageUrl: '/assets/img/gauri.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Rajesh Kumar',
-        profession: 'Fertility Specialist',
-        imageUrl: '/assets/img/team_3.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Priya Sharma',
-        profession: 'Reproductive Endocrinologist',
-        imageUrl: '/assets/img/team_4.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Anil Verma',
-        profession: 'Andrologist',
-        imageUrl: '/assets/img/team_5.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Meera Singh',
-        profession: 'Embryologist',
-        imageUrl: '/assets/img/team_6.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-    ],
-  };
-  
-  const ctaData = {
-    videoLink: 'https://www.youtube.com/embed/rRid6GCJtgc',
-    videoButtonText: 'WATCH VIDEO',
-    subtitle: 'WATCH VIDEO',
-    title: 'Professional Fertility Care & Treatment.',
-    description:
-      'Experience world-class fertility treatments with our expert team. We provide comprehensive care from initial consultation to successful pregnancy, using advanced technology and personalized treatment plans.',
-    buttonLink: '/contact',
-    buttonText: 'Contact Us',
-    brandImage: '/assets/img/medical_brand.png',
-  };
+    {
+      name: 'Dr. Priya Sharma',
+      profession: 'Reproductive Endocrinologist',
+      imageUrl: '/assets/img/team_4.jpg',
+      link: '/doctors/doctor-details',
+      facebook: '/',
+      pinterest: '/',
+      twitter: '/',
+      instagram: '/',
+    },
+    {
+      name: 'Dr. Anil Verma',
+      profession: 'Andrologist',
+      imageUrl: '/assets/img/team_5.jpg',
+      link: '/doctors/doctor-details',
+      facebook: '/',
+      pinterest: '/',
+      twitter: '/',
+      instagram: '/',
+    },
+    {
+      name: 'Dr. Meera Singh',
+      profession: 'Embryologist',
+      imageUrl: '/assets/img/team_6.jpg',
+      link: '/doctors/doctor-details',
+      facebook: '/',
+      pinterest: '/',
+      twitter: '/',
+      instagram: '/',
+    },
+  ],
+};
+
+const ctaData = {
+  videoLink: 'https://www.youtube.com/embed/rRid6GCJtgc',
+  videoButtonText: 'WATCH VIDEO',
+  subtitle: 'WATCH VIDEO',
+  title: 'Professional Fertility Care & Treatment.',
+  description:
+    'Experience world-class fertility treatments with our expert team. We provide comprehensive care from initial consultation to successful pregnancy, using advanced technology and personalized treatment plans.',
+  buttonLink: '/contact',
+  buttonText: 'Contact Us',
+  brandImage: '/assets/img/medical_brand.png',
+};
 
 const page = () => {
-    return (
-        <div className='about-page-area'>
-        <Section
+  return (
+    <div className='about-page-area'>
+      <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -199,8 +199,8 @@ const page = () => {
       {/* End Team Section */}
 
 
-        </div>
-    );
+    </div>
+  );
 };
 
 export default page;

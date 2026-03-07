@@ -70,7 +70,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -97,10 +97,10 @@ const page = () => {
           <div className="row mb-5">
             <div className="col-lg-12">
               <div className="cs_service_details_thumbnail">
-                <Image 
-                  src={getAssetPath("/assets/img/recent_post2.jpg")} 
-                  alt="Blogs" 
-                  width={1200} 
+                <Image
+                  src={getAssetPath("/assets/img/recent_post2.jpg")}
+                  alt="Blogs"
+                  width={1200}
                   height={400}
                   className="w-100"
                   style={{ borderRadius: '10px' }}
@@ -114,17 +114,17 @@ const page = () => {
             {blogCategories.map((category, index) => (
               <div key={index} className="col-lg-4 col-md-6">
                 <Link href={category.link} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
-                  <div className="cs_blog_card cs_style_1" style={{ 
+                  <div className="cs_blog_card cs_style_1" style={{
                     height: '100%',
                     transition: 'all 0.3s ease',
                     cursor: 'pointer'
                   }}
                   >
                     <div className="cs_blog_img" style={{ overflow: 'hidden', borderRadius: '10px 10px 0 0' }}>
-                      <Image 
-                        src={getAssetPath(category.image)} 
-                        alt={category.title} 
-                        width={400} 
+                      <Image
+                        src={getAssetPath(category.image)}
+                        alt={category.title}
+                        width={400}
                         height={250}
                         className="w-100"
                         style={{ objectFit: 'cover', transition: 'transform 0.3s ease' }}
@@ -152,19 +152,19 @@ const page = () => {
           {/* Newsletter Section */}
           <div className="row">
             <div className="col-lg-8 mx-auto">
-              <div className="cs_service_details text-center" style={{ 
-                padding: '40px', 
-                backgroundColor: '#f8f9fa', 
-                borderRadius: '10px' 
+              <div className="cs_service_details text-center" style={{
+                padding: '40px',
+                backgroundColor: '#f8f9fa',
+                borderRadius: '10px'
               }}>
                 <h4 className="cs_service_heading mb-3">Stay Updated</h4>
                 <p className="cs_service_subtitle mb-4">
                   Subscribe to our newsletter to receive the latest blog posts, fertility tips, and updates directly in your inbox.
                 </p>
                 <div style={{ maxWidth: '500px', margin: '0 auto' }}>
-                  <input 
-                    type="email" 
-                    placeholder="Enter your email address" 
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
                     style={{
                       width: '70%',
                       padding: '12px 15px',
@@ -173,7 +173,7 @@ const page = () => {
                       fontSize: '16px'
                     }}
                   />
-                  <button 
+                  <button
                     className="cs_btn cs_style_1 cs_color_1"
                     style={{
                       padding: '12px 25px',

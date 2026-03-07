@@ -29,7 +29,7 @@ const BlogDetailPage = ({ params }) => {
       <div>
         <Section
           className={'cs_page_heading cs_bg_filed cs_center'}
-          backgroundImage="/assets/img/Top-Header.jpg"
+          backgroundImage="/assets/img/Top-Header.png"
         >
           <PageHeading data={{ title: 'Blog Not Found' }} />
         </Section>
@@ -90,7 +90,7 @@ const BlogDetailPage = ({ params }) => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -101,7 +101,7 @@ const BlogDetailPage = ({ params }) => {
           <div className="row">
             {/* Back Button */}
             <div className="col-lg-12" style={{ marginBottom: '30px' }}>
-              <Link 
+              <Link
                 href={`/resources/blogs/${getCategorySlug(blog.category)}`}
                 style={{
                   display: 'inline-flex',
@@ -208,7 +208,7 @@ const BlogDetailPage = ({ params }) => {
                   </div>
 
                   {/* Blog Content */}
-                  <div 
+                  <div
                     className="blog-content"
                     style={{
                       fontSize: '16px',

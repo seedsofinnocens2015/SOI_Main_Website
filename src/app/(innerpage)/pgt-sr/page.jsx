@@ -53,7 +53,7 @@ const pgtSRContentData = {
         'At Seeds of Innocence, we understand that every family\'s journey is unique. We are highly skilled in using advanced genetic testing, such as PGT-SR, to give you the customized care you need. State-of-the-art technology and a compassionate team of experts help us increase your chances of having a successful and healthy pregnancy.',
       ],
     },
-    
+
     {
       heading: 'Finding PGT-SR Testing Near Me',
       paragraphs: [
@@ -124,7 +124,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>

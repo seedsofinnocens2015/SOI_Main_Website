@@ -10,12 +10,12 @@ import { getAssetPath } from '@/app/utils/assetPath';
 // Generate static params for static export
 export async function generateStaticParams() {
   // Filter only Hindi blogs (those with Hindi category names or Hindi content)
-  const hindiBlogs = blogsData.blogs.filter(blog => 
-    blog.category === 'प्रजनन क्षमता' || 
+  const hindiBlogs = blogsData.blogs.filter(blog =>
+    blog.category === 'प्रजनन क्षमता' ||
     blog.title.match(/[\u0900-\u097F]/) ||
     blog.content.match(/[\u0900-\u097F]/)
   );
-  
+
   return hindiBlogs.map((blog) => ({
     slug: blog.slug,
   }));
@@ -40,7 +40,7 @@ const getCategoryRoute = (category) => {
     'Doctor Insights': 'doctor-insights',
     'News & Press': 'news-press',
   };
-  
+
   return categoryRouteMap[category] || category.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '');
 };
 
@@ -56,7 +56,7 @@ const BlogDetailPage = async ({ params }) => {
       <div>
         <Section
           className={'cs_page_heading cs_bg_filed cs_center'}
-          backgroundImage="/assets/img/Top-Header.jpg"
+          backgroundImage="/assets/img/Top-Header.png"
         >
           <PageHeading data={{ title: 'Blog Not Found' }} />
         </Section>
@@ -95,7 +95,7 @@ const BlogDetailPage = async ({ params }) => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -106,7 +106,7 @@ const BlogDetailPage = async ({ params }) => {
           <div className="row">
             {/* Back Button */}
             <div className="col-lg-12" style={{ marginBottom: '30px' }}>
-              <Link 
+              <Link
                 href={`/resources/blogs/${getCategoryRoute(blog.category)}`}
                 style={{
                   display: 'inline-flex',
@@ -213,7 +213,7 @@ const BlogDetailPage = async ({ params }) => {
                   </div>
 
                   {/* Blog Content */}
-                  <div 
+                  <div
                     className="blog-content"
                     style={{
                       fontSize: '16px',
@@ -295,11 +295,11 @@ const BlogDetailPage = async ({ params }) => {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                       {relatedBlogs.map((relatedBlog) => {
                         // Determine if related blog is Hindi or English
-                        const isHindi = relatedBlog.category === 'प्रजनन क्षमता' || 
-                                       relatedBlog.title.match(/[\u0900-\u097F]/) ||
-                                       relatedBlog.content.match(/[\u0900-\u097F]/);
+                        const isHindi = relatedBlog.category === 'प्रजनन क्षमता' ||
+                          relatedBlog.title.match(/[\u0900-\u097F]/) ||
+                          relatedBlog.content.match(/[\u0900-\u097F]/);
                         const blogRoute = isHindi ? `/hindi/${relatedBlog.slug}` : `/english/${relatedBlog.slug}`;
-                        
+
                         return (
                           <Link
                             key={relatedBlog.id}

@@ -66,7 +66,7 @@ const Page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -100,11 +100,11 @@ const Page = () => {
               <div className="cs_team cs_style_1 cs_blue_bg" key={index}>
                 <div className="cs_team_shape cs_accent_bg" />
                 <Link href={member.profileLink} className="cs_team_thumbnail">
-                  <Image 
-                    src={member.imageUrl} 
-                    alt={`${member.name} Thumbnail`} 
-                    width={302} 
-                    height={423} 
+                  <Image
+                    src={member.imageUrl}
+                    alt={`${member.name} Thumbnail`}
+                    width={302}
+                    height={423}
                   />
                 </Link>
                 <div className="cs_team_bio">

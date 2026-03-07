@@ -55,7 +55,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -107,27 +107,27 @@ const page = () => {
                   flexDirection: 'column',
                   padding: '30px'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-5px)';
+                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                  }}
                 >
-                  <h4 style={{ 
-                    fontSize: '20px', 
-                    fontWeight: '600', 
+                  <h4 style={{
+                    fontSize: '20px',
+                    fontWeight: '600',
                     color: '#0A2A43',
                     marginBottom: '15px',
                     lineHeight: '1.4'
                   }}>
                     {tech.title}
                   </h4>
-                  <p style={{ 
-                    fontSize: '15px', 
-                    color: '#666', 
+                  <p style={{
+                    fontSize: '15px',
+                    color: '#666',
                     lineHeight: '1.6',
                     margin: 0
                   }}>

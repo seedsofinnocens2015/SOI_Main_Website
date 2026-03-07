@@ -10,15 +10,15 @@ const headingData = {
 // Convert YouTube URL to embed format
 const getEmbedUrl = (url) => {
   if (!url) return '';
-  
+
   // If already in embed format
   if (url.includes('youtube.com/embed/')) {
     return url;
   }
-  
+
   // Extract video ID from different YouTube URL formats
   let videoId = '';
-  
+
   if (url.includes('youtube.com/watch?v=')) {
     videoId = url.split('v=')[1]?.split('&')[0];
   } else if (url.includes('youtu.be/')) {
@@ -26,11 +26,11 @@ const getEmbedUrl = (url) => {
   } else if (url.includes('youtube.com/embed/')) {
     videoId = url.split('embed/')[1]?.split('?')[0];
   }
-  
+
   if (videoId) {
     return `https://www.youtube.com/embed/${videoId}`;
   }
-  
+
   return url;
 };
 
@@ -109,12 +109,12 @@ const videoTestimonials = [
   {
     id: 14,
     videoUrl: 'https://www.youtube.com/watch?v=t83B5YaAzGo',
-    quote: commonQuote, 
+    quote: commonQuote,
   },
   {
     id: 15,
     videoUrl: 'https://www.youtube.com/watch?v=7aSViXkirBY',
-    quote: commonQuote, 
+    quote: commonQuote,
   },
   {
     id: 16,
@@ -147,7 +147,7 @@ const Page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>

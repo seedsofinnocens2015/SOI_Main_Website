@@ -13,7 +13,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -30,8 +30,8 @@ const page = () => {
             <div className="col-lg-6">
               <div className="cs_about_thumb">
                 {/* Image placeholder - add Dr. Gauri Agrawal's image path here */}
-                <div className="cs_about_thumb_1" style={{ 
-                  backgroundColor: '#f5f5f5', 
+                <div className="cs_about_thumb_1" style={{
+                  backgroundColor: '#f5f5f5',
                   minHeight: '500px',
                   display: 'flex',
                   alignItems: 'center',
@@ -54,7 +54,7 @@ const page = () => {
                 Her expertise spans across advanced IVF techniques, reproductive endocrinology, and minimally invasive fertility procedures. Dr. Agrawal is known for her compassionate approach to patient care and her commitment to staying at the forefront of fertility medicine.
               </p>
               <div className="cs_height_30" />
-              
+
               <h3 className="cs_section_title cs_fs_30">Education & Qualifications</h3>
               <div className="cs_height_20" />
               <ul className="cs_list cs_list_style_1">
@@ -63,9 +63,9 @@ const page = () => {
                 <li>Fellowship in Reproductive Medicine</li>
                 <li>Training in Advanced IVF Techniques from international centres</li>
               </ul>
-              
+
               <div className="cs_height_30" />
-              
+
               <h3 className="cs_section_title cs_fs_30">Professional Achievements</h3>
               <div className="cs_height_20" />
               <ul className="cs_list cs_list_style_1">
@@ -76,9 +76,9 @@ const page = () => {
               </ul>
             </div>
           </div>
-          
+
           <div className="cs_height_60" />
-          
+
           <div className="row">
             <div className="col-lg-12">
               <h3 className="cs_section_title cs_fs_36">Vision & Philosophy</h3>
