@@ -43,7 +43,43 @@ const PageHeading = ({ data }) => {
 
   return (
     <div className="container">
-      <div className="row justify-content-end align-items-center">
+      <div className="row align-items-center">
+        {/* USP Content Section */}
+        <div className="col-lg-8 col-md-12 mb-4 mb-lg-0">
+          <div className="cs_header_usp_wrapper">
+            <h2 className="cs_header_usp_topline">
+              {data?.uspTitle ? (
+                <span dangerouslySetInnerHTML={{ __html: data.uspTitle }} />
+              ) : (
+                <>
+                  EXPERT HANDS, PROVEN SUCCESS. <br />
+                  <span className="cs_accent_color">YOUR MIRACLE AWAITS</span>
+                </>
+              )}
+            </h2>
+            
+            <div className="cs_header_stats_grid">
+              <div className="cs_header_stat_item">
+                <div className="cs_stat_number cs_stat_1">20,000+</div>
+                <div className="cs_stat_text">Healthy Babies, <br /> Countless Smiles</div>
+              </div>
+              <div className="cs_header_stat_item">
+                <div className="cs_stat_number cs_stat_2">35+</div>
+                <div className="cs_stat_text">IVF Centres Spreading <br /> Parenthood Joy</div>
+              </div>
+              <div className="cs_header_stat_item">
+                <div className="cs_stat_number cs_stat_3">78%</div>
+                <div className="cs_stat_text">Success Rate Bringing <br /> Hope to Families</div>
+              </div>
+              <div className="cs_header_stat_item">
+                <div className="cs_stat_number cs_stat_4">30+</div>
+                <div className="cs_stat_text">Dedicated Fertility <br /> Specialists</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Appointment Form Section */}
         <div className="col-lg-4 col-md-6 col-sm-12">
           <div className="cs_header_form_wrapper">
             <h3 className="cs_header_form_title">Book Appointment</h3>
@@ -112,35 +148,3 @@ const PageHeading = ({ data }) => {
 };
 
 export default PageHeading;
-
-
-
-// const PageHeading = ({ data }) => {
-//   const [urlSegments, setUrlSegments] = useState([]);
-//   useEffect(() => {
-//     const pathSegments = window.location.pathname
-//       .split("/")
-//       .filter((segment) => segment !== "");
-//     setUrlSegments(pathSegments);
-//   }, []);
-//   return (
-//     <div className="container">
-//       <h1 className="cs_page_title">{data?.title}</h1>
-//       <ol className="breadcrumb text-capitalize">
-//         <li className="breadcrumb-item">
-//           <Link href="/">Home</Link>
-//         </li>
-//         {urlSegments.map((segment, index) => (
-//           <li key={index} className="breadcrumb-item">
-//             {index < urlSegments.length - 1 ? (
-//               <Link href={`/${urlSegments.slice(0, index + 1).join("/")}`}>
-//                 {segment}
-//               </Link>
-//             ) : (
-//               <span className="active">{segment}</span>
-//             )}
-//           </li>
-//         ))}
-//       </ol>
-//     </div>
-//   );

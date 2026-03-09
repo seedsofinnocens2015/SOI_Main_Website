@@ -85,6 +85,7 @@ const StatePage = async ({ params }) => {
 
     const headingData = {
         title: `${stateName}`,
+        uspTitle: rawStateContent.uspTitle,
     };
 
     const rawStateContent =
@@ -124,7 +125,7 @@ const StatePage = async ({ params }) => {
         <>
             <Section
                 className={'cs_page_heading cs_bg_filed cs_center'}
-                backgroundImage="/assets/img/Top-Header.png"
+                backgroundImage={rawStateContent.headerImage || "/assets/img/Top-Header.png"}
             >
                 <PageHeading data={headingData} />
             </Section>

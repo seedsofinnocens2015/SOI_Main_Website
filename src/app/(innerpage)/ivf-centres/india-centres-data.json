@@ -6,6 +6,8 @@
     "state": "Delhi",
     "stateSlug": "delhi",
     "image": "/assets/img/Centres/malviyanagar.webp",
+    "headerImage": "/assets/img/Top-Header.png",
+    "uspTitle": "WORLD-CLASS FERTILITY CARE. <br /> <span class=\"cs_accent_color\">IN THE HEART OF DELHI</span>",
     "description": [
       "Seeds of Innocens IVF Centre in Malviya Nagar, Delhi is our flagship center, offering world-class fertility treatments with state-of-the-art facilities. Located in the heart of South Delhi, this center provides comprehensive IVF services including IVF-ICSI, IUI, genetic testing, and advanced reproductive technologies.",
       "Our Malviya Nagar center is equipped with the latest technology and staffed by experienced fertility specialists. We offer personalized care tailored to each patient's unique needs, ensuring the highest success rates and patient satisfaction.",
@@ -65,6 +67,7 @@
     "state": "Uttar Pradesh",
     "stateSlug": "uttar-pradesh",
     "image": "/assets/img/Centres/ghaziabad.jpg",
+    "headerImage": "/assets/img/Top-Header.png",
     "description": [
       "Our Ghaziabad center brings world-class fertility care to Uttar Pradesh, serving patients from the National Capital Region and beyond. This modern facility offers comprehensive IVF services with a focus on personalized treatment and high success rates.",
       "The center is equipped with advanced laboratory facilities and experienced medical professionals dedicated to helping couples achieve their dream of parenthood. We understand the emotional and physical challenges of infertility and provide compassionate care throughout the journey.",
