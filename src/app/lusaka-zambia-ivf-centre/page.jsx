@@ -6,7 +6,8 @@ import Footer from '@/app/Components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import centresData from '../(innerpage)/ivf-centres/india-centres-data.json';
+import centresAllData from '../(innerpage)/ivf-centres/centres-data.json';
+const centresData = centresAllData.centres;
 import doctorsData from '../(innerpage)/doctors/doctors-data.json';
 import { getAssetPath } from '@/app/utils/assetPath';
 

@@ -5,8 +5,9 @@ import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import indiaCentresData from '../../ivf-centres/india-centres-data.json';
-import centerContentConfig from '../../ivf-centres/centerContent.json';
+import centresAllData from '../../ivf-centres/centres-data.json';
+const indiaCentresData = centresAllData.centres;
+const centerContentConfig = centresAllData.centerContent;
 import doctorsData from '../../doctors/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
@@ -55,9 +56,10 @@ export async function generateStaticParams() {
     }
 }
 
+import BestIVFCentre from '@/app/Components/BestIVFCentre';
+
 const page = async ({ params }) => {
     const resolvedParams = await params;
-    // Rename variables to match the new dynamic segment names
     const { centerSlug } = resolvedParams || {};
 
     if (!centerSlug) {
@@ -65,8 +67,6 @@ const page = async ({ params }) => {
     }
 
     const cleanSlug = centerSlug.replace(/\/$/, '');
-
-    // Handle IVF center route
     const citySlug = cleanSlug.replace(/^best-ivf-centre-in-/, '');
 
     let center;
@@ -86,53 +86,26 @@ const page = async ({ params }) => {
             if (c.isInternational) {
                 return false;
             }
-
             const cityName = c.name.split(',')[0].trim();
             const centerCitySlug = cityNameToSlug(cityName);
-
             return centerCitySlug === citySlug;
         });
     }
 
     if (!center) {
-        console.error(
-            `Center not found for slug (city route): ${cleanSlug}, citySlug: ${citySlug}`
-        );
         notFound();
     }
 
     const cityName = center.name.split(',')[0].trim();
-
-    const centerDoctors = center.doctors || [];
-
-    const headingData = {
-        title: center.name,
-        uspTitle: center.uspTitle,
-    };
-
-    const processedCenterImage = getAssetPath(
-        center.image || '/assets/img/recent_post2.jpg'
-    );
-
-    const serviceData = {
-        serviceHeading: '',
-        services: [],
-        mainImage: processedCenterImage,
-        serviceDetails: [],
-        footerText: '',
-        additionalImages: processedCenterImage,
-        iconBoxes: [],
-        subtitle: '',
-        readMoreUrl: '/appointments',
-        readMoreText: 'Book Appointment',
-        benefitImages: [processedCenterImage, processedCenterImage],
-    };
-
+    const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2.jpg');
+    
+    // Map Address for Google Maps
     const mapAddress = encodeURIComponent(center.location);
     const mapUrl = `https://www.google.com/maps?q=${mapAddress}&output=embed`;
 
-    const rawCenterContent =
-        centerContentConfig[center.slug] || centerContentConfig.default;
+    // Fetch Content and Services with Icons
+    const rawCenterContent = centerContentConfig[center.slug] || centerContentConfig.default;
+    const servicesWithIcons = rawCenterContent.servicesWithIcons || centerContentConfig.default.servicesWithIcons;
 
     const replaceCityName = (text) =>
         typeof text === 'string' ? text.replace(/{{cityName}}/g, cityName) : text;
@@ -148,18 +121,16 @@ const page = async ({ params }) => {
         })),
     };
 
-    const allSections = centerContentData.sections || [];
+    const firstSection = centerContentData.sections[0];
+    const allSections = centerContentData.sections.slice(1);
+    
     let topSections = allSections;
     let bottomSections = [];
 
+    // Special logic for Malviya Nagar section ordering
     if (center.slug === 'malviya-nagar-delhi') {
-        const teamIndex = allSections.findIndex(
-            (s) => s.heading === 'Our Expert Team of Doctors'
-        );
-        const locationIndex = allSections.findIndex(
-            (s) => s.heading ===
-                'Location of Seeds of Innocens IVF in Malviya Nagar'
-        );
+        const teamIndex = allSections.findIndex((s) => s.heading === 'Our Expert Team of Doctors');
+        const locationIndex = allSections.findIndex((s) => s.heading === 'Location of Seeds of Innocens IVF in Malviya Nagar');
 
         if (teamIndex !== -1) {
             topSections = allSections.slice(0, teamIndex + 1);
@@ -174,222 +145,37 @@ const page = async ({ params }) => {
     const topCenterContentData = {
         ...centerContentData,
         sections: topSections,
+        _benefitImages: [processedCenterImage, processedCenterImage]
     };
 
-    const bottomCenterContentData =
-        bottomSections.length > 0
-            ? { ...centerContentData, sections: bottomSections }
-            : null;
-
-    const rawFaqs =
-        (centerContentConfig[center.slug] &&
-            centerContentConfig[center.slug].faqs) ||
-        centerContentConfig.default.faqs ||
-        [];
-
-    const faqContentData =
-        rawFaqs.length > 0
-            ? {
-                sections: [
-                    {
-                        heading: `Frequently Asked Questions`,
-                        steps: rawFaqs.map((faq) => ({
-                            title: replaceCityName(faq.question),
-                            description: replaceCityName(faq.answer),
-                        })),
-                    },
-                ],
-            }
-            : null;
-
-    const locationContentData = {
+    // FAQ Content Data
+    const rawFaqs = (centerContentConfig[center.slug] && centerContentConfig[center.slug].faqs) || centerContentConfig.default.faqs || [];
+    const faqContentData = rawFaqs.length > 0 ? {
         sections: [
             {
-                paragraphs: [
-                    `Open Days: All Days (Monday to Sunday)`,
-                    `Timings: ${center.timing || '9:00 AM to 6:00 PM'}`,
-                    `Email: ${center.email}`,
-                    `Phone: ${center.phone}`,
-                    `Address: ${center.location}`,
-                ],
-                sideImage: mapUrl,
-                isMapEmbed: true,
+                heading: `Frequently Asked Questions`,
+                steps: rawFaqs.map((faq) => ({
+                    title: replaceCityName(faq.question),
+                    description: replaceCityName(faq.answer),
+                })),
             },
         ],
-    };
+    } : null;
 
     return (
-        <div>
-            <Section
-                className={'cs_page_heading cs_bg_filed cs_center'}
-                backgroundImage={center.headerImage || "/assets/img/Top-Header.png"}
-            >
-                <PageHeading data={headingData} />
-            </Section>
-
-            <Section
-                topSpaceLg="50"
-                topSpaceMd="60"
-                bottomSpaceLg="50"
-                bottomSpaceMd="60"
-            >
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <IVFContentSection
-                                data={topCenterContentData}
-                                benefitImages={serviceData.benefitImages}
-                            />
-                        </div>
-                    </div>
-                </div>
-            </Section>
-
-            {centerDoctors.length > 0 && (
-                <Section
-                    topSpaceLg="0"
-                    topSpaceMd="0"
-                    bottomSpaceLg="50"
-                    bottomSpaceMd="60"
-                >
-                    <div className="container">
-                        <div className="cs_doctors_grid cs_style_1">
-                            {centerDoctors.map((doctor, index) => (
-                                <div className="cs_team cs_style_1 cs_blue_bg" key={index}>
-                                    <div className="cs_team_shape cs_accent_bg" />
-                                    {(() => {
-                                        const doctorData = doctorsData.find(
-                                            (d) => d.slug === doctor.slug
-                                        );
-                                        const doctorLink = doctorData
-                                            ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}`
-                                            : null;
-                                        return doctorLink ? (
-                                            <Link href={doctorLink} className="cs_team_thumbnail">
-                                                <Image
-                                                    src={getAssetPath(doctor.image)}
-                                                    alt={`${doctor.name} Thumbnail`}
-                                                    width={302}
-                                                    height={423}
-                                                    loading="eager"
-                                                />
-                                            </Link>
-                                        ) : (
-                                            <div className="cs_team_thumbnail">
-                                                <Image
-                                                    src={getAssetPath(doctor.image)}
-                                                    alt={`${doctor.name} Thumbnail`}
-                                                    width={302}
-                                                    height={423}
-                                                    loading="eager"
-                                                />
-                                            </div>
-                                        );
-                                    })()}
-                                    <div className="cs_team_bio">
-                                        <h3 className="cs_team_title cs_extra_bold mb-0">
-                                            {(() => {
-                                                const doctorData = doctorsData.find(
-                                                    (d) => d.slug === doctor.slug
-                                                );
-                                                const doctorLink = doctorData
-                                                    ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}`
-                                                    : null;
-                                                return doctorLink ? (
-                                                    <Link href={doctorLink}>{doctor.name}</Link>
-                                                ) : (
-                                                    <span>{doctor.name}</span>
-                                                );
-                                            })()}
-                                        </h3>
-                                        <p className="cs_team_subtitle">{doctor.subtitle}</p>
-                                        {doctor.experience && (
-                                            <p
-                                                className="cs_team_experience"
-                                                style={{
-                                                    color: '#ffffff',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    gap: '8px',
-                                                    marginBottom: '8px',
-                                                }}
-                                            >
-                                                <FaSuitcase style={{ fontSize: '14px' }} />
-                                                <span>{doctor.experience} Experience</span>
-                                            </p>
-                                        )}
-                                        {doctor.location && (
-                                            <p
-                                                style={{
-                                                    color: '#ffffff',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    gap: '8px',
-                                                    marginBottom: '0',
-                                                }}
-                                            >
-                                                <FaLocationDot style={{ fontSize: '14px' }} />
-                                                <span>{doctor.location}</span>
-                                            </p>
-                                        )}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </Section>
-            )}
-
-            {bottomCenterContentData && (
-                <Section
-                    topSpaceLg="0"
-                    topSpaceMd="0"
-                    bottomSpaceLg="50"
-                    bottomSpaceMd="60"
-                >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12">
-                                <IVFContentSection data={bottomCenterContentData} />
-                            </div>
-                        </div>
-                    </div>
-                </Section>
-            )}
-
-            <Section
-                topSpaceLg="0"
-                topSpaceMd="0"
-                bottomSpaceLg="70"
-                bottomSpaceMd="120"
-            >
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <IVFContentSection data={locationContentData} />
-                        </div>
-                    </div>
-                </div>
-            </Section>
-
-            {faqContentData && (
-                <Section
-                    topSpaceLg="0"
-                    topSpaceMd="0"
-                    bottomSpaceLg="70"
-                    bottomSpaceMd="120"
-                >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12">
-                                <IVFContentSection data={faqContentData} />
-                            </div>
-                        </div>
-                    </div>
-                </Section>
-            )}
-        </div>
+        <BestIVFCentre
+            center={center}
+            cityName={cityName}
+            description={Array.isArray(center.description) ? center.description.join(' ') : (center.description || firstSection?.paragraphs?.join(' '))}
+            services={servicesWithIcons}
+            doctorsData={doctorsData}
+            faqContentData={faqContentData}
+        />
     );
 };
 
 export default page;
+
+
+
+

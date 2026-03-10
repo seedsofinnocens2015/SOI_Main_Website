@@ -51,9 +51,9 @@ const heroData = {
         isCenterLayout: true,
       },
       {
-        bgImageUrl: '/assets/img/banner.png',
+        bgImageUrl: '/assets/img/banner-2.png',
         mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
-        title: '<br/>Experience the Bliss of Parenthood.',
+        title: 'Experience the Bliss of Parenthood.',
         titleClass: 'cs_single_line_title',
         titleStyle: {
           fontSize: 'clamp(32px, 5vw, 72px)',
@@ -83,39 +83,39 @@ const heroData = {
         iconImgUrl: '/assets/img/icons/hero_icon.png',
         isCenterLayout: true,
       },
-      {
-        bgImageUrl: '/assets/img/banner.png',
-        mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
-        title: 'Tiny hands, Sweet smile,<br/> and the bliss of a fulfilled dream',
-        titleClass: 'cs_single_line_title',
-        titleStyle: {
-          fontSize: 'clamp(32px, 5vw, 72px)',
-          // fontWeight: 'bold',
-          textTransform: 'uppercase',
-          textAlign: 'center',
-          color: '#FFFFFF',
-          lineHeight: '1.2',
-          letterSpacing: '1px',
-          textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.5)',
-        },
-        contactSubtitle:
-          'Creating beautiful beginings with a smile.',
-        subtitleStyle: {
-          fontSize: 'clamp(22px, 3.5vw, 32px)',
-          textAlign: 'center',
-          color: '#FFFFFF',
-          //  fontWeight: '400',
-          marginBottom: '30px',
-          textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6), 3px 3px 8px rgba(0, 0, 0, 0.5)',
-        },
-        btnText1: 'Schedule a Visit',
-        btnStyle: 'cs_green_btn',
-        link: '/contact/book-appointment',
-        phoneNumber: '9810350 512',
-        phoneLink: 'tel:+919810350512',
-        iconImgUrl: '/assets/img/icons/hero_icon.png',
-        isCenterLayout: true,
-      },
+      // {
+      //   bgImageUrl: '/assets/img/banner.png',
+      //   mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
+      //   title: 'Tiny hands, Sweet smile,<br/> and the bliss of a fulfilled dream',
+      //   titleClass: 'cs_single_line_title',
+      //   titleStyle: {
+      //     fontSize: 'clamp(32px, 5vw, 72px)',
+      //     // fontWeight: 'bold',
+      //     textTransform: 'uppercase',
+      //     textAlign: 'center',
+      //     color: '#FFFFFF',
+      //     lineHeight: '1.2',
+      //     letterSpacing: '1px',
+      //     textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.5)',
+      //   },
+      //   contactSubtitle:
+      //     'Creating beautiful beginings with a smile.',
+      //   subtitleStyle: {
+      //     fontSize: 'clamp(22px, 3.5vw, 32px)',
+      //     textAlign: 'center',
+      //     color: '#FFFFFF',
+      //     //  fontWeight: '400',
+      //     marginBottom: '30px',
+      //     textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6), 3px 3px 8px rgba(0, 0, 0, 0.5)',
+      //   },
+      //   btnText1: 'Schedule a Visit',
+      //   btnStyle: 'cs_green_btn',
+      //   link: '/contact/book-appointment',
+      //   phoneNumber: '9810350 512',
+      //   phoneLink: 'tel:+919810350512',
+      //   iconImgUrl: '/assets/img/icons/hero_icon.png',
+      //   isCenterLayout: true,
+      // },
     ],
     // secondarySlider: [
     //   '/assets/img/hero_slider_sm_1.png',
@@ -226,7 +226,7 @@ const heroData = {
         link: '/advanced-fertility-care/prp-ovarian-rejuvenation/',
       },
       {
-        iconUrl: '/assets/img/icons/TESA PESA.jpg',
+        iconUrl: '/assets/img/icons/TESA-PESA.svg',
         index: '02',
         title: 'TESA/PESA',
         subHeading: 'TESA/PESA: Advanced Fertility Treatment for Male Infertility',
@@ -235,7 +235,7 @@ const heroData = {
         link: '/advanced-fertility-care/tesa-pesa/',
       },
       {
-        iconUrl: '/assets/img/icons/Donor Program.jpg',
+        iconUrl: '/assets/img/icons/Donor Program.svg',
         index: '05',
         title: 'Donor Program',
         subHeading: 'Donor Program: Third Party Reproduction',
@@ -244,7 +244,7 @@ const heroData = {
         link: '/',
       },
       {
-        iconUrl: '/assets/img/icons/Surrogacy.jpg',
+        iconUrl: '/assets/img/icons/Surrogacy.svg',
         index: '05',
         title: 'Surrogacy',
         subHeading: 'Surrogacy: Ethical, Medically Guided Assistance with Complete End-to-End Care',
@@ -254,7 +254,7 @@ const heroData = {
       },
       
       {
-        iconUrl: '/assets/img/icons/Genetic Counselling.jpg',
+        iconUrl: '/assets/img/icons/Genetic Counselling.svg',
         index: '08',
         title: 'Genetic Counselling',
         subHeading: 'Genetic Counselling: Understanding and Managing Genetic Risks in Family Planning',
@@ -263,7 +263,7 @@ const heroData = {
         link: '/',
       },
       {
-        iconUrl: '/assets/img/icons/Laparoscopy & Hysteroscopy.jpg',
+        iconUrl: '/assets/img/icons/Laparoscopy & Hysteroscopy.svg',
         index: '07',
         title: 'Laparoscopy & Hysteroscopy',
         subHeading: 'Laparoscopy & Hysteroscopy',

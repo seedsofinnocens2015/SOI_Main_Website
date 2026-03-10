@@ -1,0 +1,1254 @@
+{
+  "centres": [
+    {
+      "slug": "malviya-nagar-delhi",
+      "name": "Malviya Nagar, Delhi",
+      "location": "Seeds of Innocens IVF, 3, MMTC Colony, opposite Aurobindo College, Malviya Nagar, New Delhi, 110017",
+      "state": "Delhi",
+      "stateSlug": "delhi",
+      "image": "/assets/img/Centres/malviyanagar.webp",
+      "headerImage": "/assets/img/Headers/delhi.png",     
+      "uspTitle": "WORLD-CLASS FERTILITY CARE <br /> <span class=\"cs_accent_color\">IN THE HEART OF Delhi</span>",
+      "description": [
+        "Seeds of Innocens IVF Centre in Malviya Nagar, Delhi is our flagship center, offering world-class fertility treatments with state-of-the-art facilities. Located in the heart of South Delhi, this center provides comprehensive IVF services including IVF-ICSI, IUI, genetic testing, and advanced reproductive technologies.",
+        "Our Malviya Nagar center is equipped with the latest technology and staffed by experienced fertility specialists. We offer personalized care tailored to each patient's unique needs, ensuring the highest success rates and patient satisfaction.",
+        "The center features a modern embryology laboratory, comfortable consultation rooms, and a patient-friendly environment. We are committed to making your fertility journey as smooth and successful as possible."
+      ],
+      "phone": "8276002727",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Egg Freezing",
+        "Genetic Testing (PGT)",
+        "Embryo Freezing",
+        "Male Infertility Treatment",
+        "Laparoscopy & Hysteroscopy"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Gauri Agarwal",
+          "subtitle": "Founder & Chief IVF Specialist",
+          "image": "/assets/img/Doctors/Dr Gauri maam.jpg",
+          "experience": "15+ Years",
+          "location": "Delhi/NCR",
+          "slug": "dr-gauri-agarwal"
+        },
+        {
+          "name": "Dr. Alpana Razadan",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/alpana.jpg",
+          "experience": "10+ Years",
+          "location": "Malviya nagar-New Delhi",
+          "slug": "dr-alpana-razadan"
+        },
+        {
+          "name": "Dr. Ranjana Mishra",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/ranjana.jpg",
+          "experience": "9+ Years",
+          "location": "Delhi/NCR",
+          "slug": "dr-ranjana-mishra"
+        },
+        {
+          "name": "Dr. Lisha Singh",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/lisha.jpg",
+          "experience": "9+ Years",
+          "location": "Malviya nagar-New Delhi",
+          "slug": "dr-lisha-singh"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "testimonials": [
+        {
+          "videoId": "0XD9OrkunWI",
+          "name": "Couple from Delhi",
+          "link": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+          "initials": "CD",
+          "role": "Successful Parents",
+          "stars": 5,
+          "text": "Seeds of Innocens gave us the gift of parenthood. The doctors were compassionate, the staff was supportive, and the treatment was excellent."
+        },
+        {
+          "videoId": "wmZZrZFaGB8",
+          "name": "Parents from Malviya Nagar",
+          "link": "https://www.youtube.com/watch?v=wmZZrZFaGB8",
+          "initials": "PM",
+          "role": "Happy Parents",
+          "stars": 5,
+          "text": "The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream."
+        }
+      ],
+      "aboutUs": {
+        "title": "About Seeds of Innocens IVF Centre Malviya Nagar",
+        "image": "/assets/img/Centres/malviyanagar.webp",
+        "paragraphs": [
+          "Seeds of Innocens IVF Centre in Malviya Nagar, Delhi is our flagship center, offering world-class fertility treatments with state-of-the-art facilities.",
+          "Our Malviya Nagar center is equipped with the latest technology and staffed by experienced fertility specialists who offer personalized care tailored to each patient's unique needs.",
+          "The center features a modern embryology laboratory and a patient-friendly environment designed to make your fertility journey as smooth as possible."
+        ]
+      },
+      "contactInfo": {
+        "title": "Seeds of Innocens - Best IVF Centre in Malviya Nagar | Fertility Clinics",
+        "openDays": "All Days (Monday to Sunday)",
+        "timings": "9:00 AM to 6:00 PM",
+        "address": "Seeds of Innocens IVF, 3, MMTC Colony, opposite Aurobindo College, Malviya Nagar, New Delhi, 110017",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.513233851532!2d77.214152875501!3d28.535549075720177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1f7d5c58a5b%3A0xc3f73634026366e!2sSeeds%20of%20Innocence%20IVF%20Centre%20Malviya%20Nagar!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
+        "phone": "+919810350512"
+      }
+    },
+    {
+      "slug": "ghaziabad-uttar-pradesh",
+      "name": "Ghaziabad, Uttar Pradesh",
+      "location": "Seeds of Innocens IVF, Yashoda Hospital Opp. Nehru Stadium, Nehru Nagar, Ghaziabad, U.P.",
+      "state": "Uttar Pradesh",
+      "stateSlug": "uttar-pradesh",
+      "image": "/assets/img/Centres/ghaziabad.jpg",
+      "headerImage": "/assets/img/Headers/ghaziabad.png",
+      "uspTitle": "Unfold the Joy of Your   <br /> <span class=\"cs_accent_color\">Parenthood Journey</span>",
+      "description": [
+        "Our Ghaziabad center brings world-class fertility care to Uttar Pradesh, serving patients from the National Capital Region and beyond. This modern facility offers comprehensive IVF services with a focus on personalized treatment and high success rates.",
+        "The center is equipped with advanced laboratory facilities and experienced medical professionals dedicated to helping couples achieve their dream of parenthood. We understand the emotional and physical challenges of infertility and provide compassionate care throughout the journey.",
+        "Located strategically in Ghaziabad, our center is easily accessible and offers convenient appointment scheduling. We provide all major fertility treatments including IVF, IUI, and advanced reproductive technologies."
+      ],
+      "phone": "8276003535",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Male Infertility Treatment",
+        "Fertility Assessment",
+        "Ovulation Induction",
+        "Follicular Monitoring"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Gauri Agarwal",
+          "subtitle": "Founder & Chief IVF Specialist",
+          "image": "/assets/img/Doctors/Dr Gauri maam.jpg",
+          "experience": "15+ Years",
+          "location": "Delhi/NCR",
+          "slug": "dr-gauri-agarwal"
+        },
+        {
+          "name": "Dr. Ranjana Mishra",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/ranjana.jpg",
+          "experience": "9+ Years",
+          "location": "Delhi/NCR",
+          "slug": "dr-ranjana-mishra"
+        },
+        {
+          "name": "Dr. Pratik Kakani",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/pratik.jpg",
+          "experience": "7+ Years",
+          "location": "Ghaziabad-Uttarpradesh",
+          "slug": "dr-pratik-kakani"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM"
+    },
+    {
+      "slug": "lucknow-uttar-pradesh",
+      "name": "Lucknow, Uttar Pradesh",
+      "location": "Seeds of Innocens IVF, Drosia Tower, 5/5, Park Rd, Raj Bhavan Colony, Hazratganj, Lucknow, Uttar Pradesh 226001",
+      "state": "Uttar Pradesh",
+      "stateSlug": "uttar-pradesh",
+      "image": "/assets/img/Centres/lucknow.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Lucknow provides exceptional fertility care to couples in Uttar Pradesh. Our center combines advanced medical technology with compassionate care to help families grow.",
+        "We offer a full range of fertility treatments and services, from basic evaluations to complex IVF procedures. Our team of experienced doctors and embryologists work together to provide the best possible outcomes.",
+        "The Lucknow center features modern infrastructure, state-of-the-art equipment, and a patient-centric approach that ensures comfort and confidence throughout your fertility journey."
+      ],
+      "phone": "9459023333",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Male Infertility",
+        "PCOS Treatment"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Divya Shivanand",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/divya.jpg",
+          "experience": "7+ Years",
+          "location": "Lucknow-Uttarpradesh",
+          "slug": "dr-divya-shivanand"
+        },
+        {
+          "name": "Dr. Disha Datta",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/disha.jpg",
+          "experience": "7+ Years",
+          "location": "Lucknow-Uttarpradesh",
+          "slug": "dr-disha-datta"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/lucknow-uttar-pradesh.png"
+    },
+    {
+      "slug": "agra-uttar-pradesh",
+      "name": "Agra, Uttar Pradesh",
+      "location": "Seeds of Innocens IVF, Block No.9/4, 1st Floor, Shankar Point, Sanjay Place, Civil Lines, Agra, U.P.",
+      "state": "Uttar Pradesh",
+      "stateSlug": "uttar-pradesh",
+      "image": "/assets/img/Centres/agra.jpg",
+      "description": [
+        "Our Agra center offers comprehensive fertility services to couples in the historic city and surrounding regions. We bring advanced reproductive medicine to make quality IVF care accessible locally.",
+        "The center provides personalized treatment plans with attention to each patient's unique circumstances. Our experienced team ensures high-quality care and support throughout the entire process.",
+        "Equipped with modern facilities and advanced technology, our Agra center maintains the same standards of excellence as all Seeds of Innocens facilities across India."
+      ],
+      "phone": "8448180814",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Embryo Transfer",
+        "Frozen Embryo Transfer"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Aiman Akram",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/aiman.jpg",
+          "experience": "9+ Years",
+          "location": "Agra-Uttarpradesh",
+          "slug": "dr-aiman-akram"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/agra-uttar-pradesh.png"
+    },
+    {
+      "slug": "gorakhpur-uttar-pradesh",
+      "name": "Gorakhpur, Uttar Pradesh",
+      "location": "Seeds of Innocens IVF, 2nd Floor, 1076, Kamlesh Shopping Arcade, Near Kalimandir, Golghar, Gorakhpur U.P.",
+      "state": "Uttar Pradesh",
+      "stateSlug": "uttar-pradesh",
+      "image": "/assets/img/Centres/gorakhpur.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Gorakhpur extends quality fertility care to Eastern Uttar Pradesh. Our center focuses on providing accessible, affordable, and effective fertility treatments.",
+        "We understand that infertility can be challenging, and our compassionate team provides emotional support alongside medical care. Our goal is to make advanced fertility treatments available to everyone who needs them.",
+        "The Gorakhpur center offers comprehensive fertility services with experienced doctors and modern facilities. We are committed to helping couples achieve successful pregnancies."
+      ],
+      "phone": "9459053333",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Hormone Testing",
+        "Ovulation Monitoring"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Nivedita Nehal",
+          "subtitle": "Senior IVF Specialist",
+          "image": "/assets/img/Doctors/nivedita.jpg",
+          "experience": "10+ Years",
+          "location": "Gorakhpur-Uttarpradesh",
+          "slug": "dr-nivedita-nehal"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/gorakhpur-uttar-pradesh.png"
+    },
+    {
+      "slug": "patna-bihar",
+      "name": "Patna, Bihar",
+      "location": "Seeds of Innocens IVF, Jagmano Shree Complex, Pillar No – 38, Khajpura, Bailey Road, Patna, Bihar",
+      "state": "Bihar",
+      "stateSlug": "bihar",
+      "image": "/assets/img/Centres/patna.jpg",
+      "description": [
+        "Our Patna center brings world-class fertility care to Bihar, serving couples from across the state. We offer comprehensive IVF services with a focus on personalized treatment and excellent outcomes.",
+        "The center features modern infrastructure and advanced laboratory facilities. Our team of fertility specialists and embryologists work together to provide the highest quality care.",
+        "We understand the importance of accessible fertility care and strive to make advanced treatments available to all. Our Patna center maintains the same standards of excellence as our flagship center."
+      ],
+      "phone": "8276004040",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Male Infertility Treatment",
+        "Egg Freezing",
+        "Embryo Freezing"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Debilina Roy",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/debilina.jpg",
+          "experience": "8+ Years",
+          "location": "Patna-Bihar",
+          "slug": "dr-debilina-roy"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/patna-bihar.png"
+    },
+    {
+      "slug": "faridabad-haryana",
+      "name": "Faridabad, Haryana",
+      "location": "Seeds of Innocens IVF, A-6/A Neelam Bata Road, Above ICICI Bank, NIT Faridabad, Haryana",
+      "state": "Haryana",
+      "stateSlug": "haryana",
+      "image": "/assets/img/Centres/faridabad.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Faridabad provides exceptional fertility care to the National Capital Region. Our center offers state-of-the-art facilities and experienced medical professionals.",
+        "We provide comprehensive fertility services including IVF, IUI, and advanced reproductive technologies. Our patient-centric approach ensures personalized care tailored to each couple's needs.",
+        "The Faridabad center is easily accessible and offers convenient appointment scheduling. We are committed to making your fertility journey successful and stress-free."
+      ],
+      "phone": "8276003737",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Genetic Testing",
+        "Blastocyst Transfer",
+        "Fertility Assessment"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Beena Upadhyay",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/beena.jpg",
+          "experience": "11+ Years",
+          "location": "Faridabad-Haryana",
+          "slug": "dr-beena-upadhyay"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/faridabad-haryana.png"
+    },
+    {
+      "slug": "gurugram-haryana",
+      "name": "Gurugram, Haryana",
+      "location": "Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar Nigam Office, Gurugram, Haryana",
+      "state": "Haryana",
+      "stateSlug": "haryana",
+      "image": "/assets/img/Centres/gurgaon.jpg",
+      "description": [
+        "Our Gurugram center serves the corporate hub of India with world-class fertility services. Located in the heart of the city, we offer convenient access to advanced IVF treatments.",
+        "The center features modern facilities and experienced fertility specialists. We provide comprehensive care from initial consultation to successful pregnancy, using the latest technology and techniques.",
+        "We understand the busy lifestyles of our patients and offer flexible scheduling and efficient services. Our team ensures that quality care is delivered with convenience and comfort."
+      ],
+      "phone": "9266157675",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Egg Freezing",
+        "Male Infertility",
+        "Advanced Fertility Care"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Aditi Bhatnagar",
+          "subtitle": "Senior IVF Specialist",
+          "image": "/assets/img/Doctors/aditi.jpg",
+          "experience": "12+ Years",
+          "location": "Gurugram-Haryana",
+          "slug": "dr-aditi-bhatnagar"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/gurugram-haryana.png"
+    },
+    {
+      "slug": "ranchi-jharkhand",
+      "name": "Ranchi, Jharkhand",
+      "location": "Seeds of Innocens IVF, 4th Floor, Maru Tower, Kanke Road, Ranchi, Jharkhand",
+      "state": "Jharkhand",
+      "stateSlug": "jharkhand",
+      "image": "/assets/img/Centres/ranchi.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Ranchi brings advanced fertility care to Jharkhand. Our center offers comprehensive IVF services with a commitment to excellence and patient satisfaction.",
+        "We provide personalized treatment plans and compassionate care throughout your fertility journey. Our experienced team uses the latest technology to maximize success rates.",
+        "The Ranchi center features modern infrastructure and comfortable facilities. We are dedicated to making advanced fertility treatments accessible to couples in the region."
+      ],
+      "phone": "8276004545",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Ovulation Induction",
+        "Follicular Monitoring"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Kriti Prasad",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/kriti.jpg",
+          "experience": "9+ Years",
+          "location": "Ranchi-Jharkhand",
+          "slug": "dr-kriti-prasad"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/ranchi-jharkhand.png"
+    },
+    {
+      "slug": "haldwani-uttarakhand",
+      "name": "Haldwani, Uttarakhand",
+      "location": "Seeds of Innocens IVF, Laxmi Mohan Towers, 2nd Floor, Mukhani Chauraha, Bamori Talli, Haldwani, Uttarakhand",
+      "state": "Uttarakhand",
+      "stateSlug": "uttarakhand",
+      "image": "/assets/img/Centres/haldwani.jpg",
+      "description": [
+        "Our Haldwani center extends quality fertility care to Uttarakhand. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
+        "The center provides personalized care and support throughout your fertility journey. We understand the challenges of infertility and provide compassionate, expert care.",
+        "Equipped with advanced technology and comfortable facilities, our Haldwani center ensures the best possible outcomes for our patients."
+      ],
+      "phone": "8448180800",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Hormone Testing",
+        "Embryo Transfer"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Pallavi Shrivastava",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/pallavi.jpg",
+          "experience": "8+ Years",
+          "location": "Haldwani-Uttrakhand",
+          "slug": "dr-pallavi-shrivastava"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/haldwani-uttarakhand.png"
+    },
+    {
+      "slug": "guwahati-assam",
+      "name": "Guwahati, Assam",
+      "location": "Seeds of Innocens IVF, 4th Floor, Aashi Complex, Near Rajib Bhawan, ABC, Guwahati",
+      "state": "Assam",
+      "stateSlug": "assam",
+      "image": "/assets/img/Centres/guwahati.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Guwahati brings world-class fertility care to Northeast India. Our center offers comprehensive IVF services with advanced technology and experienced specialists.",
+        "We provide personalized treatment plans tailored to each patient's needs. Our team ensures high-quality care and support throughout the entire fertility journey.",
+        "The Guwahati center features modern facilities and comfortable environments. We are committed to making advanced fertility treatments accessible to couples in the Northeast."
+      ],
+      "phone": "8276007474",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Male Infertility Treatment",
+        "Egg Freezing",
+        "Fertility Assessment"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Julie Chhawchharia",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/julie.jpg",
+          "experience": "9+ Years",
+          "location": "Guwahati-Assam",
+          "slug": "dr-julie-chhawchharia"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/guwahati-assam.png"
+    },
+    {
+      "slug": "kasaragod-kerala",
+      "name": "Kasaragod, Kerala",
+      "location": "Seeds of Innocens IVF, Wintouch Multi Speciality Hospital, Bank Road, Kasaragod, Kerala, 671121",
+      "state": "Kerala",
+      "stateSlug": "kerala",
+      "image": "/assets/img/Centres/kasaragod.jpg",
+      "description": [
+        "Our Kasaragod center provides exceptional fertility care to Kerala. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
+        "The center focuses on providing personalized care and excellent outcomes. Our team of fertility specialists ensures the highest quality treatment and support.",
+        "Located in Kasaragod, our center serves patients from Kerala and neighboring regions. We maintain the same standards of excellence as all Seeds of Innocens facilities."
+      ],
+      "phone": "9459083333",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Ovulation Induction",
+        "Follicular Monitoring"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Vinod Kumar B",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/vinod.jpg",
+          "experience": "10+ Years",
+          "location": "Kasaragod-Kerala",
+          "slug": "dr-vinod-kumar-b"
+        },
+        {
+          "name": "Dr. Jasna Mohammed",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/jasna.jpg",
+          "experience": "8+ Years",
+          "location": "Kasaragod-Kerala",
+          "slug": "dr-jasna-mohammed"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/kasaragod-kerala.png"
+    },
+    {
+      "slug": "kanpur-uttar-pradesh",
+      "name": "Kanpur, Uttar Pradesh",
+      "location": "Seeds of Innocens IVF, 7/153, Kumhar Wali Gali, Near Kanpur Vidya Mandir, Khalasi Line, Swaroop Nagar, Kanpur, Uttar Pradesh 208002",
+      "state": "Uttar Pradesh",
+      "stateSlug": "uttar-pradesh",
+      "image": "/assets/img/Centres/kanpur.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Kanpur extends quality fertility care to Central Uttar Pradesh. Our center offers comprehensive IVF services with advanced technology.",
+        "We provide personalized treatment plans and compassionate care. Our experienced team uses the latest techniques to maximize success rates and patient satisfaction.",
+        "The Kanpur center features modern infrastructure and comfortable facilities. We are dedicated to helping couples achieve their dream of parenthood."
+      ],
+      "phone": "8276006464",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Male Infertility Treatment",
+        "Embryo Transfer",
+        "Fertility Assessment"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Preeti",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/preeti.jpg",
+          "experience": "8+ Years",
+          "location": "Kanpur-Uttarpradesh",
+          "slug": "dr-preeti"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/kanpur-uttar-pradesh.png"
+    },
+    {
+      "slug": "kochi-kerala",
+      "name": "Kochi, Kerala",
+      "location": "Seeds of Innocens IVF, Opp. Royal Drive Showroom, Kannadikadu, Upasana Road, Kundannoor, Maradu, Kochi, 682304",
+      "state": "Kerala",
+      "stateSlug": "kerala",
+      "image": "/assets/img/Centres/kochi.jpg",
+      "description": [
+        "Our Kochi center brings world-class fertility care to the beautiful state of Kerala. We offer comprehensive IVF services with state-of-the-art facilities.",
+        "The center provides personalized care and support throughout your fertility journey. Our experienced team ensures high-quality treatment and excellent outcomes.",
+        "Located in Kochi, our center serves patients from across Kerala. We maintain the highest standards of medical excellence and patient care."
+      ],
+      "phone": "9958885242",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Genetic Testing",
+        "Egg Freezing",
+        "Advanced Fertility Care"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Sonia Raju",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/sonia.jpg",
+          "experience": "7+ Years",
+          "location": "Kochi-Kerala",
+          "slug": "dr-sonia-raju"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/kochi-kerala.png"
+    },
+    {
+      "slug": "pitampura-new-delhi",
+      "name": "Pitampura, New Delhi",
+      "location": "Seeds of Innocens IVF, Plot no 1, First floor, Shiva Enclave, Near Harsh Vihar Chowk, Pitampura, Delhi-110034",
+      "state": "Delhi",
+      "stateSlug": "delhi",
+      "image": "/assets/img/Centres/pitampura.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Pitampura, New Delhi offers comprehensive fertility services to North Delhi. Our center features modern facilities and experienced specialists.",
+        "We provide personalized treatment plans with attention to each patient's unique needs. Our team ensures high-quality care and support throughout the fertility journey.",
+        "The Pitampura center is easily accessible and offers convenient appointment scheduling. We are committed to making your fertility journey successful and comfortable."
+      ],
+      "phone": "9266300157",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Ovulation Monitoring",
+        "Embryo Transfer"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Monika Maan",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/monika.jpg",
+          "experience": "8+ Years",
+          "location": "Pitampura-Delhi",
+          "slug": "dr-monika-maan"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/pitampura-new-delhi.png"
+    },
+    {
+      "slug": "meerut-uttar-pradesh",
+      "name": "Meerut, Uttar Pradesh",
+      "location": "Seeds of Innocens IVF, 303/305 Mangal Pandey Nagar, Opp CCS University, Garh Road, Meerut, UP",
+      "state": "Uttar Pradesh",
+      "stateSlug": "uttar-pradesh",
+      "image": "/assets/img/Centres/meerut.jpg",
+      "description": [
+        "Our Meerut center extends quality fertility care to Western Uttar Pradesh. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
+        "The center provides personalized care and compassionate support. Our team of fertility specialists ensures the best possible outcomes for our patients.",
+        "Equipped with advanced technology, our Meerut center maintains the same standards of excellence as our flagship facilities."
+      ],
+      "phone": "8276008484",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Male Infertility",
+        "Fertility Assessment",
+        "Hormone Testing"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Varkha Chandra",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/varkha.jpg",
+          "experience": "8+ Years",
+          "location": "Meerut-Uttarpradesh",
+          "slug": "dr-varkha-chandra"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/meerut-uttar-pradesh.png"
+    },
+    {
+      "slug": "muzaffarpur-bihar",
+      "name": "Muzaffarpur, Bihar",
+      "location": "Seeds of Innocens IVF, Hansa Complex, Maripur Main Road, Muzaffarpur, Bihar",
+      "state": "Bihar",
+      "stateSlug": "bihar",
+      "image": "/assets/img/Centres/muzaffarpur.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Muzaffarpur brings world-class fertility care to Bihar. Our center offers comprehensive IVF services with advanced technology.",
+        "We provide personalized treatment plans and excellent care. Our experienced team uses the latest techniques to maximize success rates and patient satisfaction.",
+        "The Muzaffarpur center features modern infrastructure and comfortable facilities. We are dedicated to making advanced fertility treatments accessible to all."
+      ],
+      "phone": "8276006565",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Ovulation Induction",
+        "Embryo Transfer"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Disha Datta",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/disha.jpg",
+          "experience": "7+ Years",
+          "location": "Muzaffarpur, Bihar",
+          "slug": "dr-disha-datta"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/muzaffarpur-bihar.png"
+    },
+    {
+      "slug": "srinagar-jk",
+      "name": "Srinagar, J&K",
+      "location": "Seeds of Innocens IVF, The Apollo Clinic, Karan Nagar, Near National School, Srinagar",
+      "state": "Jammu & Kashmir",
+      "stateSlug": "jammu-kashmir",
+      "image": "/assets/img/recent_post2.jpg",
+      "description": [
+        "Our Srinagar center extends quality fertility care to Jammu & Kashmir. We offer comprehensive IVF services with modern facilities and experienced specialists.",
+        "The center provides personalized care and compassionate support throughout your fertility journey. Our team ensures high-quality treatment and excellent outcomes.",
+        "Located in the beautiful city of Srinagar, our center serves patients from across Jammu & Kashmir. We maintain the highest standards of medical excellence."
+      ],
+      "phone": "9459073333",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Male Infertility Treatment",
+        "Fertility Assessment",
+        "Egg Freezing"
+      ],
+      "doctors": [],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/srinagar-jk.png"
+    },
+    {
+      "slug": "janakpuri-new-delhi",
+      "name": "Janakpuri, New Delhi",
+      "location": "Seeds of Innocens IVF, C1A/50A, Pankha Road, Janakpuri, New Delhi",
+      "state": "Delhi",
+      "stateSlug": "delhi",
+      "image": "/assets/img/Centres/jankpuri.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Janakpuri, New Delhi offers comprehensive fertility services to West Delhi. Our center features modern facilities and experienced specialists.",
+        "We provide personalized treatment plans with attention to each patient's unique needs. Our team ensures high-quality care and support throughout the fertility journey.",
+        "The Janakpuri center is easily accessible and offers convenient appointment scheduling. We are committed to making your fertility journey successful and comfortable."
+      ],
+      "phone": "9459043333",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Genetic Testing",
+        "Blastocyst Transfer",
+        "Fertility Assessment"
+      ],
+      "doctors": [],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/janakpuri-new-delhi.png"
+    },
+    {
+      "slug": "kolkata",
+      "name": "Kolkata",
+      "location": "Seeds of Innocens IVF, Plot No. 03-702, Street No. 0702, AA-IID, New Town, Kolkata – 700161",
+      "state": "West Bengal",
+      "stateSlug": "west-bengal",
+      "image": "/assets/img/Centres/kolkata.jpg",
+      "description": [
+        "Seeds of Innocens IVF Centre in Kolkata brings world-class fertility care to Eastern India. Our center offers comprehensive IVF services with state-of-the-art facilities.",
+        "We provide personalized treatment plans and compassionate care throughout your fertility journey. Our experienced team ensures high-quality treatment and excellent outcomes.",
+        "The Kolkata center features modern infrastructure and comfortable facilities. We are committed to making advanced fertility treatments accessible to couples in the region."
+      ],
+      "phone": "8276005454",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Male Infertility Treatment",
+        "Egg Freezing",
+        "Advanced Fertility Care"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Adrija Ghosal",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/adrija.png",
+          "experience": "8+ Years",
+          "location": "Kolkata-Westbengal",
+          "slug": "dr-adrija-ghosal"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "headerImage": "/assets/img/Headers/kolkata.png",
+      "testimonials": [
+        {
+          "videoId": "0XD9OrkunWI",
+          "name": "Couple from West Bengal",
+          "link": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+          "initials": "CW",
+          "role": "Successful Parents",
+          "stars": 5,
+          "text": "Seeds of Innocens gave us the gift of parenthood. The doctors were compassionate, the staff was supportive, and the treatment was excellent."
+        },
+        {
+          "videoId": "wmZZrZFaGB8",
+          "name": "Parents from Kolkata",
+          "link": "https://www.youtube.com/watch?v=wmZZrZFaGB8",
+          "initials": "PK",
+          "role": "Happy Parents",
+          "stars": 5,
+          "text": "The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream."
+        },
+        {
+          "videoId": "GzfaoO4W_D8",
+          "name": "Family from Howrah",
+          "link": "https://www.youtube.com/watch?v=GzfaoO4W_D8",
+          "initials": "FH",
+          "role": "Grateful Parents",
+          "stars": 5,
+          "text": "After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference."
+        },
+        {
+          "videoId": "GfgHnx7gMQM",
+          "name": "Kolkata Couple",
+          "link": "https://www.youtube.com/watch?v=GfgHnx7gMQM",
+          "initials": "KC",
+          "role": "Happy Parents",
+          "stars": 5,
+          "text": "Our experience was wonderful. The medical team is highly professional and the support staff is very caring."
+        }
+      ],
+      "aboutUs": {
+        "title": "About Seeds of Innocens IVF Centre Kolkata",
+        "image": "/assets/img/icons/kolkata.webp",
+        "paragraphs": [
+          "Seeds of Innocens IVF is a renowned infertility centre that specializes in delivering successful fertility treatments at the forefront of innovative artificial reproductive technology.",
+          "The team of experts at Seeds of Innocens IVF in Kolkata includes exceptional professionals such as consultant fertility specialists, sonographers, embryologists, nurses and counselors who work together to provide the highest quality treatment to couples seeking parenthood in the most caring and nurturing environment possible.",
+          "The infertility centre boasts of all the latest equipment and technologies that are designed to provide the most effective treatments in response to infertility problems faced by childless couples."
+        ]
+      },
+      "contactInfo": {
+        "title": "Seeds of Innocens - Best IVF Centre in Kolkata | Fertility Clinics",
+        "openDays": "All Days (Monday to Sunday)",
+        "timings": "9:00 AM to 6:00 PM",
+        "address": "Plot Number 03-702, Plot-IID/41/1, Major Arterial Road (North Extension), Street No-0702, AA-IID, J.L No-12, Raigachi, Mouza, Kolkata, West Bengal 700161",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.4754564257853!2d88.45934147596245!3d22.626544931908487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89fd528a95cf9%3A0x52c81a2c4b48ed8b!2sSeeds%20of%20Innocence%20IVF%20Centre%20Kolkata!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
+        "phone": "+919810350512"
+      }
+    },
+    {
+      "slug": "lusaka-zambia-africa",
+      "name": "Lusaka, Zambia, Africa",
+      "location": "Seeds of Innocens IVF, 10 Nkanchibiya Road, Near 3 Trees restaurant, Rhodespark, Lusaka, Zambia",
+      "state": "Zambia",
+      "stateSlug": "zambia",
+      "image": "/assets/img/Centres/lusaka.webp",
+      "description": [
+        "Seeds of Innocens IVF Centre in Lusaka brings world-class fertility care to Zambia. Our center offers comprehensive IVF services with state-of-the-art facilities and experienced specialists.",
+        "We provide personalized treatment plans tailored to each patient's needs. Our team ensures high-quality care and support throughout the entire fertility journey.",
+        "The Lusaka center features modern facilities and comfortable environments. We are committed to making advanced fertility treatments accessible to couples in Zambia and across Africa."
+      ],
+      "phone": "+260 976832953",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Male Infertility Treatment",
+        "Egg Freezing",
+        "Fertility Assessment"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Khushboo Singh",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/khushboo.jpg",
+          "experience": "8+ Years",
+          "location": "Lusaka-Zambia-Africa",
+          "slug": "dr-khushboo-singh"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "isInternational": true,
+      "headerImage": "/assets/img/Headers/lusaka-zambia-africa.png"
+    },
+    {
+      "slug": "kitwe-zambia-africa",
+      "name": "Kitwe, Zambia, Africa",
+      "location": "Seeds of Innocens IVF, 841, Nkana West, Near Golden Orklet Nkana West, Kitwe",
+      "state": "Zambia",
+      "stateSlug": "zambia",
+      "image": "/assets/img/Centres/kitwe.webp",
+      "description": [
+        "Our Kitwe center extends quality fertility care to Zambia. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
+        "The center provides personalized care and support throughout your fertility journey. We understand the challenges of infertility and provide compassionate, expert care.",
+        "Equipped with advanced technology and comfortable facilities, our Kitwe center ensures the best possible outcomes for our patients."
+      ],
+      "phone": "+260 976837261",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Hormone Testing",
+        "Embryo Transfer"
+      ],
+      "doctors": [],
+      "timing": "9:00 AM to 6:00 PM",
+      "isInternational": true,
+      "headerImage": "/assets/img/Headers/kitwe-zambia-africa.png"
+    },
+    {
+      "slug": "mabela-muscat-oman",
+      "name": "Mabela, Muscat, Oman",
+      "location": "Badr Al Samaa Premium Medical Centre, PC 121, PB 1269, Al K Hair Street, Al Mabella, Muscat, Sultanate of Oman",
+      "state": "Oman",
+      "stateSlug": "oman",
+      "image": "/assets/img/Centres/mabela.webp",
+      "description": [
+        "Seeds of Innocens IVF Centre in Mabela, Muscat brings world-class fertility care to Oman. Our center offers comprehensive IVF services with advanced technology and experienced specialists.",
+        "We provide personalized treatment plans tailored to each patient's needs. Our team ensures high-quality care and support throughout the entire fertility journey.",
+        "The Mabela center features modern facilities and comfortable environments. We are committed to making advanced fertility treatments accessible to couples in Oman and the Middle East."
+      ],
+      "phone": "+968 22717111",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Genetic Testing",
+        "Egg Freezing",
+        "Advanced Fertility Care"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Rashmi Singh",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/rashmi.jpg",
+          "experience": "10+ Years",
+          "location": "Mabela-Muscat-Oman",
+          "slug": "dr-rashmi-singh"
+        },
+        {
+          "name": "Dr. Mangla Kawade",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/mangla.jpg",
+          "experience": "9+ Years",
+          "location": "Mabela-Muscat-Oman",
+          "slug": "dr-mangla-kawade"
+        }
+      ],
+      "timing": "9:00 AM to 6:00 PM",
+      "isInternational": true,
+      "headerImage": "/assets/img/Headers/mabela-muscat-oman.png"
+    }
+  ],
+  "centerContent": {
+    "default": {
+      "servicesWithIcons": [
+        { 
+          "title": "IUI, IVF & ICSI", 
+          "icon": "/assets/img/icons/IUI, IVF & ICSI.svg" 
+        },
+        { 
+          "title": "Blastocyst Transfer", 
+          "icon": "/assets/img/icons/Blastocyst Transfer.svg" 
+        },
+        { 
+          "title": "Cryopreservation", 
+          "subtitle": "(Egg, Sperm & Embryos)", 
+          "icon": "/assets/img/icons/Cryopreservation.svg" 
+        },
+        { 
+          "title": "PRP & Ovarian Rejuvenation", 
+          "icon": "/assets/img/icons/PRP & Ovarian Rejuvenation.svg" 
+        },
+        { 
+          "title": "Genetic Testing", 
+          "subtitle": "(PGT-A & PGT-M)", 
+          "icon": "/assets/img/icons/Genetic Testing.svg" 
+        },
+        { 
+          "title": "Genetic Counseling", 
+          "icon": "/assets/img/icons/Genetic Counselling.svg" 
+        },
+        { 
+          "title": "TESA/PESA", 
+          "icon": "/assets/img/icons/TESA-PESA.svg" 
+        },
+        { 
+          "title": "Laparoscopy & Hysteroscopy", 
+          "icon": "/assets/img/icons/Laparoscopy & Hysteroscopy.svg" 
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Best IVF Centre in {{cityName}} – Bringing Hope to Parenthood",
+          "paragraphs": [
+            "Struggling with infertility can be emotionally and physically draining, but you are not alone. At Seeds of Innocens, our IVF Centre in {{cityName}} is dedicated to turning your hopes of becoming a parent into reality. We offer advanced fertility treatments combined with personal care, giving couples the best chance of conceiving a healthy baby."
+          ]
+        },
+        {
+          "heading": "Why Choose Seeds of Innocens IVF Centre in {{cityName}}?",
+          "paragraphs": [
+            "We understand that every couple's fertility journey is different. That is why we offer customised treatment plans at our modern and fully equipped IVF hospital in {{cityName}}. Here's what makes us stand out:"
+          ],
+          "listItems": [
+            "Experienced IVF Specialists: Our IVF specialists in {{cityName}} are some of the most experienced fertility experts in the country. With years of successful treatments and compassionate care, they help couples feel confident and supported throughout their journey.",
+            "Modern Infrastructure: Seeds of Innocens boasts a cutting-edge lab and fertility unit. From egg retrieval to embryo transfer, all processes are handled using the most advanced technology, making us a trusted IVF clinic in {{cityName}}.",
+            "Full Range of Fertility Services: Our fertility centre in {{cityName}} provides a wide variety of services under one roof."
+          ]
+        },
+        {
+          "heading": "Services Offered",
+          "paragraphs": [
+            "Our comprehensive fertility services include:"
+          ],
+          "listItems": [
+            "IVF (In Vitro Fertilisation)",
+            "IUI (Intrauterine Insemination)",
+            "ICSI (Intracytoplasmic Sperm Injection)",
+            "Donor Egg and Donor Sperm programs",
+            "Surrogacy coordination",
+            "Genetic Testing for healthier embryo selection",
+            "Egg freezing and sperm freezing for future family planning"
+          ]
+        },
+        {
+          "heading": "Transparent Process and Emotional Support",
+          "paragraphs": [
+            "We make sure our patients are involved in every step. There are no hidden costs or procedures. Our caring team ensures that you feel emotionally supported from consultation to delivery."
+          ]
+        },
+        {
+          "heading": "The IVF Process at Seeds of Innocens {{cityName}}",
+          "paragraphs": [
+            "At our IVF Centre in {{cityName}}, we believe in making the process as smooth as possible. Here is what the journey looks like:"
+          ],
+          "listItems": [
+            "Consultation and Testing: Our expert IVF specialist conducts a detailed medical review and performs essential fertility tests for both partners.",
+            "Creating a Treatment Plan: Based on test results, a personalised treatment plan is made for you. We clearly explain the approach and what to expect at each stage.",
+            "Ovarian Stimulation and Egg Retrieval: Medications are given to stimulate the ovaries. Once the eggs mature, they are collected safely from the ovaries.",
+            "Fertilisation and Embryo Monitoring: In our advanced lab, the eggs are fertilised with sperm. We closely monitor embryo development and also perform genetic testing if required.",
+            "Embryo Transfer: Healthy embryos are carefully placed in the uterus. This is a simple procedure, but highly important.",
+            "Pregnancy Test and Continued Support: Two weeks later, a blood test confirms pregnancy. If positive, we will continue to monitor and support you until a healthy delivery."
+          ]
+        },
+        {
+          "heading": "Trusted IVF Clinic in {{cityName}}",
+          "paragraphs": [
+            "We are proud to be known as the best IVF clinic in {{cityName}} due to our:"
+          ],
+          "listItems": [
+            "High success rates",
+            "Individualised treatment plans",
+            "Ethical and transparent practices",
+            "Experienced team of doctors and embryologists",
+            "Warm and compassionate patient care"
+          ]
+        },
+        {
+          "heading": "Your Reliable Partner",
+          "paragraphs": [
+            "Whether you're looking for a well-known IVF centre near me or planning your fertility journey in {{cityName}}, Seeds of Innocens is your reliable partner."
+          ]
+        },
+        {
+          "heading": "Special Services Offered at Our {{cityName}} Centre",
+          "paragraphs": [
+            "In addition to regular IVF services, we also offer:"
+          ],
+          "listItems": [
+            "Egg Freezing: Preserve your eggs today for a future pregnancy. Ideal for career planning, medical conditions, or personal reasons.",
+            "Genetic Testing (PGT-A/PGT-M): Ensure healthy pregnancies and lower risk of inherited conditions.",
+            "Donor Programs: We offer egg, sperm, and embryo donor support to suit your needs.",
+            "Fertility Counselling: A licensed counsellor is always available to support your emotional well-being during treatment."
+          ]
+        },
+        {
+          "heading": "Easy to Reach, Easy to Trust",
+          "paragraphs": [
+            "Our IVF centre in {{cityName}} is located at a convenient spot, making it accessible for patients from {{cityName}} and nearby regions. With Seeds of Innocens, your search for an expert IVF centre near me ends here."
+          ]
+        },
+        {
+          "heading": "Affordable IVF Treatment in {{cityName}}",
+          "paragraphs": [
+            "Infertility treatment should be accessible to everyone. That's why we offer fair and transparent pricing. Our packages for IVF treatment are designed to suit various needs without compromising on quality or care."
+          ]
+        },
+        {
+          "heading": "Words from Our Happy Parents",
+          "paragraphs": [
+            "We are honoured to have helped thousands of couples bring their babies into the world. Many have shared their inspiring stories of success after receiving treatment from our IVF hospital."
+          ]
+        },
+        {
+          "heading": "Let Us Help You Begin Your Journey",
+          "paragraphs": [
+            "Seeds of Innocens is more than just a fertility centre in {{cityName}}. It is a place where science meets hope. If you are dreaming of becoming a parent, we are here to make that dream come true with care, commitment, and compassion."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What is the success rate of IVF at Seeds of Innocens in {{cityName}}?",
+          "answer": "Success rates depend on age, medical history, and the cause of infertility. At Seeds of Innocens in {{cityName}}, our advanced lab, experienced fertility specialists, and personalized treatment plans help us achieve strong clinical pregnancy and live birth rates across different age groups."
+        },
+        {
+          "question": "How do I know which fertility treatment is right for me?",
+          "answer": "During your first consultation at our {{cityName}} centre, our IVF specialist will study your medical history, evaluate test reports, and understand your goals. Based on this, we suggest the most suitable option such as IVF, IUI, ICSI, donor programs, or fertility preservation."
+        },
+        {
+          "question": "Is IVF treatment painful or risky?",
+          "answer": "Most women tolerate IVF treatment well. You may experience mild discomfort from injections or procedures like egg retrieval, but these are usually short-lived and managed with medications. Our team in {{cityName}} closely monitors every step to minimise risks and keep you safe and comfortable."
+        },
+        {
+          "question": "How long does a complete IVF cycle take at the {{cityName}} centre?",
+          "answer": "A typical IVF cycle usually takes 4–6 weeks from the start of ovarian stimulation to the pregnancy test. The exact timeline can vary slightly depending on your response to medication and your personalised treatment plan."
+        }
+      ]
+    },
+    "malviya-nagar-delhi": {
+      "sections": [
+        {
+          "heading": "Best IVF Centre in Malviya Nagar",
+          "paragraphs": [
+            "If you are looking for the best IVF centre in Malviya Nagar, then you are at the right place because Seeds of Innocens IVF is your trusted partner. As a leading ivf centre in Malviya Nagar, we specialize in advanced fertility treatments (Assisted Reproductive Technology-ART) designed to guide couples to overcome the challenges of infertility and realize their dream of beginning a family."
+          ]
+        },
+        {
+          "heading": "What makes Seeds of Innocens best IVF centre?",
+          "paragraphs": [
+            "The defining characteristic that establishes Seeds of Innocens as the best IVF center:",
+            "1. Our IVF clinic in Malviya Nagar provides customized treatment options because each couple experiences their own unique fertility challenges.",
+            "2. Our IVF treatments achieve high success rates through our use of cutting-edge technology and our state-of-the-art facilities.",
+            "3. Our IVF center in Malviya Nagar provides multiple fertility services that clients can access from a single location.",
+            "4. Our IVF specialists in Malviya Nagar represent the most skilled fertility doctors who practice in India."
+          ]
+        },
+        {
+          "heading": "Treatments offered in Seeds of Innocens IVF, Malviya Nagar",
+          "paragraphs": [
+            "We offer complete infertility treatment services in Malviya Nagar to fulfill all reproductive health needs."
+          ],
+          "listItems": [
+            {
+              "before": "",
+              "linkText": "IVF (In Vitro Fertilization)",
+              "href": "/new/ivf/",
+              "after": ": It is perfect for patients who suffer from blocked tubes or endometriosis or unexplained infertility."
+            },
+            {
+              "before": "",
+              "linkText": "IUI (Intrauterine Insemination)",
+              "href": "/new/iui/",
+              "after": ": It represents a fertility treatment in Malviya Nagar that delivers healthy sperm directly into the uterus during the ovulation period."
+            },
+            {
+              "before": "",
+              "linkText": "ICSI",
+              "href": "/new/icsi/",
+              "after": ": It serves as the primary method for treating male infertility cases, which involve motility issues or low sperm count problems."
+            },
+            "The fertility preservation service enables individuals to freeze their eggs or sperm for later use.",
+            "Laparoscopy & Hysteroscopy represent advanced fertility enhancement techniques which doctors use to treat tubal problems and physical uterine problems."
+          ]
+        },
+        {
+          "heading": "IVF Process at Seeds of Innocens IVF?",
+          "paragraphs": [
+            "The best IVF center in Malviya Nagar is very well known as Seeds of Innocens IVF, provides patients with a path that begins with hope and reaches its peak when they become parents. The following steps show how we help you during your complete journey."
+          ],
+          "listItems": [
+            "Initial Consultation: The process begins with an initial consultation during which the Delhi-based IVF specialist assesses your fertility condition through testing and scanning procedures.",
+            "Treatment Planning: A customized treatment plan will be created according to your specific diagnosis. Our team creates treatment plans that match your personal needs through our IVF, ICSI, and donor program options.",
+            "Ovarian Stimulation: The process begins with medical professionals administering medications that activate the ovaries. The medical team performs a minor procedure to collect the mature eggs from the patient.",
+            "Fertilization: The eggs from your body undergo fertilization through a process which uses both your partner's sperm and the donor sperm in our advanced lab. Our facility also provides genetic testing services.",
+            "Embryo Transfer: The procedure transfers healthy embryos into the uterus, which raises your likelihood of becoming pregnant.",
+            "Pregnancy Test and Support: The blood test occurs after a period of two weeks. If you succeed, our center will continue providing you with medical support."
+          ]
+        },
+        {
+          "heading": "Our Expert Team of Doctors",
+          "paragraphs": [
+            "Our team of fertility experts is our strength. We nurture a supportive environment. With over 35+ centres and 20,000+ successful babies delivered, we believe in offering our best fertility services, and we know that the foundation of great patient care is open communication, transparency, and trust. Our team of fertility experts in Malviya Nagar will prioritize your health and the best results. "
+          ]
+        },
+        {
+          "heading": "Location of Seeds of Innocens IVF in Malviya Nagar",
+          "paragraphs": [
+            "Seeds of Innocens IVF has established modern IVF clinics in Malviya Nagar. We offer the best fertility services. However, this centre is convenient. With advanced reproductive solutions that are not far from reach.",
+            "Discover our IVF treatments in Malviya Nagar and book a consultation to start your parenthood journey."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Why is Seeds of Innocens is the best ivf clinic in Malviya Nagar?",
+          "answer": "Our centre is located near you for access to the best fertility treatment in the city. We also have some of the best IVF doctors who will help you have a seamless fertility experience. Moreover, you can meet Dr. Gauri Agarwal and Dr. Lisha Singh at Malviya Nagar, who will guide you throughout your fertility journey."
+        },
+        {
+          "question": "What is Fertility Preservation, and how is it beneficial?",
+          "answer": "Azoospermia treatment, which is often referred to as a zero sperm count, is obstructive or non-obstructive"
+        },
+        {
+          "question": "When Should You Visit a Fertility Clinic?",
+          "answer": "If you are trying to conceive naturally for over a year but are unsuccessful in all attempts, then it is an indication that medical intervention is needed. Moreover, if you are suffering from problems such as PCOS and thyroid issues."
+        },
+        {
+          "question": "How to Ensure the IVF is Successful?",
+          "answer": "Our fertility experts at Seeds of Innocens IVF, Malviya Nagar offers customized treatment solutions relying on their medical condition. To know more, book a consultation with a fertility expert today. "
+        }
+      ]
+    }
+  },
+  "stateContent": {
+    "default": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in {{stateName}} – Leading Fertility Care",
+          "paragraphs": [
+            "Seeds of Innocens is proud to bring world-class fertility treatments to {{stateName}}. With multiple state-of-the-art centres across the region, we are dedicated to helping couples achieve their dream of parenthood through advanced reproductive technologies and compassionate care.",
+            "Our centres in {{stateName}} are equipped with the latest IVF labs and staffed by highly experienced fertility specialists. We offer a comprehensive range of services, including IVF, IUI, ICSI, and genetic testing, all tailored to meet the unique needs of our patients."
+          ]
+        },
+        {
+          "heading": "Why Choose Seeds of Innocens in {{stateName}}?",
+          "paragraphs": [
+            "Choosing the right fertility partner is a crucial step in your journey. Here is why Seeds of Innocens is the preferred choice for thousands of couples in {{stateName}}:"
+          ],
+          "listItems": [
+            "High Success Rates: Our clinical excellence and advanced technology ensure consistently high success rates across all our centres.",
+            "Expert Medical Team: Our team includes some of India's most renowned IVF specialists and embryologists.",
+            "Affordable & Transparent: We believe in making fertility care accessible with transparent pricing and no hidden costs.",
+            "Patient-Centric Approach: Every patient receives a personalized treatment plan and dedicated emotional support."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How many Seeds of Innocens centres are there in {{stateName}}?",
+          "answer": "Seeds of Innocens has multiple centres strategically located across {{stateName}} to ensure easy access to quality fertility care for everyone in the region."
+        },
+        {
+          "question": "What fertility services are available in {{stateName}} centres?",
+          "answer": "All our centres in {{stateName}} offer a full range of services, including IVF, IUI, ICSI, egg freezing, donor programs, and advanced genetic testing (PGT)."
+        }
+      ],
+      "headerImage": "/assets/img/Headers/state-default.png"
+    },
+    "delhi": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in Delhi NCR – Your Journey to Parenthood Starts Here",
+          "paragraphs": [
+            "Delhi is home to our flagship centres, offering the highest standards of fertility care in North India. At Seeds of Innocens Delhi, we combine medical expertise with cutting-edge technology to provide successful outcomes for couples facing infertility.",
+            "With locations in Malviya Nagar, Pitampura, and Janakpuri, we ensure that world-class fertility treatment is always within your reach in the capital."
+          ],
+          "sideImage": "/assets/img/delhi.png"
+        },
+        {
+          "heading": "Why Choose Seeds of Innocens in Delhi NCR?",
+          "paragraphs": [
+            "Choosing the right fertility partner is a crucial step in your journey. Here is why Seeds of Innocens is the preferred choice for thousands of couples in Delhi NCR:"
+          ],
+          "listItems": [
+            "High Success Rates: Our clinical excellence and advanced technology ensure consistently high success rates across all our centres.",
+            "Expert Medical Team: Our team includes some of India's most renowned IVF specialists and embryologists.",
+            "Affordable & Transparent: We believe in making fertility care accessible with transparent pricing and no hidden costs.",
+            "Patient-Centric Approach: Every patient receives a personalized treatment plan and dedicated emotional support."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Which is the best IVF centre in Delhi?",
+          "answer": "Seeds of Innocens is widely regarded as one of the best IVF centres in Delhi, with flagship centres in Malviya Nagar, Pitampura, and Janakpuri offering advanced fertility solutions."
+        },
+        {
+          "question": "What is the cost of IVF in Delhi?",
+          "answer": "The cost of IVF in Delhi varies depending on the treatment complexity. At Seeds of Innocens, we provide affordable and transparent pricing for all our fertility treatments."
+        }
+      ],
+      "headerImage": "/assets/img/Headers/state-delhi.png"
+    }
+  }
+}

@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { getAssetPathClient } from '../../utils/assetPath';
 
 const PageHeading = ({ data }) => {
   const router = useRouter();
@@ -59,20 +60,28 @@ const PageHeading = ({ data }) => {
             </h2>
             
             <div className="cs_header_stats_grid">
-              <div className="cs_header_stat_item">
-                <div className="cs_stat_number cs_stat_1">20,000+</div>
-                <div className="cs_stat_text">Healthy Babies, <br /> Countless Smiles</div>
+              <div className="cs_header_stat_item">               
+                <div className="cs_stat_number cs_stat_1">
+                  <img src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="Healthy Babies" className="cs_stat_icon" /> 20,000+
+                </div>
+                <div className="cs_stat_text">Healthy Babies, Countless <br /> Smiles</div>
               </div>
               <div className="cs_header_stat_item">
-                <div className="cs_stat_number cs_stat_2">35+</div>
+                <div className="cs_stat_number cs_stat_2">
+                  <img src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="IVF Centres" className="cs_stat_icon" /> 35+
+                </div>
                 <div className="cs_stat_text">IVF Centres Spreading <br /> Parenthood Joy</div>
               </div>
               <div className="cs_header_stat_item">
-                <div className="cs_stat_number cs_stat_3">78%</div>
+                <div className="cs_stat_number cs_stat_3">
+                  <img src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Success Rate" className="cs_stat_icon" /> 78%
+                </div>
                 <div className="cs_stat_text">Success Rate Bringing <br /> Hope to Families</div>
               </div>
               <div className="cs_header_stat_item">
-                <div className="cs_stat_number cs_stat_4">30+</div>
+                <div className="cs_stat_number cs_stat_4">
+                  <img src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="Dedicated Fertility" className="cs_stat_icon" /> 30+
+                </div>
                 <div className="cs_stat_text">Dedicated Fertility <br /> Specialists</div>
               </div>
             </div>
@@ -82,7 +91,7 @@ const PageHeading = ({ data }) => {
         {/* Appointment Form Section */}
         <div className="col-lg-4 col-md-6 col-sm-12">
           <div className="cs_header_form_wrapper">
-            <h3 className="cs_header_form_title">Book Appointment</h3>
+            <h3 className="cs_header_form_title"><span className="cs_accent_color">Book </span>Appointment</h3>
             
             <form onSubmit={handleSubmit}>
               <div className="cs_form_group">

@@ -1,0 +1,128 @@
+// SOI IVF V2 Extra Styles & Utilities
+// This file provides minimal Tailwind-like utilities and specific styles for the new IVF center design
+
+.w-full { width: 100%; }
+.max-w-7xl { max-width: 1280px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.bg-gray-100 { background-color: #f3f4f6; }
+.bg-white { background-color: #ffffff; }
+.bg-red-600 { background-color: #df3655; }
+
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.sm\:py-12 { 
+  @media (min-width: 640px) { padding-top: 3rem; padding-bottom: 3rem; }
+}
+.lg\:py-16 { 
+  @media (min-width: 1024px) { padding-top: 4rem; padding-bottom: 4rem; }
+}
+
+.text-center { text-align: center; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.sm\:text-3xl { 
+  @media (min-width: 640px) { font-size: 1.875rem; line-height: 2.25rem; }
+}
+.lg\:text-4xl { 
+  @media (min-width: 1024px) { font-size: 2.25rem; line-height: 2.5rem; }
+}
+.font-bold { font-weight: 700; }
+.text-red-600 { color: #df3655; }
+.text-gray-900 { color: #111827; }
+.text-gray-700 { color: #374151; }
+.text-gray-500 { color: #6b7280; }
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.lg\:flex-row { 
+  @media (min-width: 1024px) { flex-direction: row; }
+}
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-center { justify-content: center; }
+.gap-8 { gap: 2rem; }
+.gap-4 { gap: 1rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-6 { gap: 1.5rem; }
+
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.sm\:grid-cols-2 { 
+  @media (min-width: 640px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.lg\:grid-cols-4 { 
+  @media (min-width: 1024px) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-sm { border-radius: 0.125rem; }
+.rounded-md { border-radius: 0.375rem; }
+.rounded-full { border-radius: 9999px; }
+
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1); }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+
+.border { border-width: 1px; }
+.border-gray-200 { border-color: #e5e7eb; }
+.border-red-300 { border-color: #fca5a5; }
+
+.overflow-hidden { overflow: hidden; }
+.overflow-x-auto { overflow-x: auto; }
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.aspect-video { aspect-ratio: 16 / 9; }
+.object-cover { object-fit: cover; }
+.object-contain { object-fit: contain; }
+
+.inline-block { display: inline-block; }
+.block { display: block; }
+.hidden { display: none; }
+.sm\:block { 
+  @media (min-width: 640px) { display: block; }
+}
+.hidden.sm\:grid { 
+  @media (min-width: 640px) { display: grid; }
+}
+
+.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.duration-300 { transition-duration: 300ms; }
+
+.group:hover .group-hover\:shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); }
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Custom animations from the provided design
+.animated-underline {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #df3655;
+    transition: width 0.3s ease;
+  }
+  .group:hover &::after {
+    width: 100%;
+  }
+}
+
+// Fixed aspect ratio for map in desktop
+.min-h-\[350px\] { min-height: 350px; }
+.min-h-\[335px\] { min-height: 335px; }

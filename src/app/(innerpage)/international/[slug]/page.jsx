@@ -1,10 +1,12 @@
 import PageHeading from '@/app/Components/PageHeading';
+import BestIVFCentre from '@/app/Components/BestIVFCentre';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import centresData from '../../ivf-centres/india-centres-data.json';
+import centresAllData from '../../ivf-centres/centres-data.json';
+const centresData = centresAllData.centres;
 import doctorsData from '../../doctors/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
@@ -97,7 +99,7 @@ const page = async ({ params }) => {
   const mapAddress = encodeURIComponent(center.location);
   const mapUrl = `https://www.google.com/maps?q=${mapAddress}&output=embed`;
 
-  const centerContentData = {
+  const rawCenterContentData = {
     sections: [
       {
         heading: `Best IVF Centre in ${cityName} – Bringing Hope to Parenthood`,
@@ -210,6 +212,15 @@ const page = async ({ params }) => {
     ],
   };
 
+  const rawCenterContent = { ...rawCenterContentData };
+
+  // Convert for IVFContentSection (excluding first section)
+  const centerContentData = {
+    sections: rawCenterContentData.sections.slice(1)
+  };
+
+  const firstSection = rawCenterContentData.sections[0];
+
   const locationContentData = {
     sections: [
       {
@@ -236,35 +247,23 @@ const page = async ({ params }) => {
         <PageHeading data={headingData} />
       </Section>
 
-      {/* Main Content Section */}
-      <Section
-        topSpaceLg="50"
-        topSpaceMd="60"
-        bottomSpaceLg="50"
-        bottomSpaceMd="60"
-      >
-        <div className="container">
-          {/* Content Section - Centered and Full Width */}
-          <div className="row">
-            <div className="col-12">
-              <IVFContentSection data={centerContentData} benefitImages={serviceData.benefitImages} />
-            </div>
-          </div>
-        </div>
-      </Section>
+      <BestIVFCentre 
+        centerName={cityName} 
+        description={firstSection?.paragraphs?.join(' ')} 
+      />
 
-      {/* Doctor Information Section */}
+      {/* Doctor Information Section - Moved here as per user request */}
       {centerDoctors.length > 0 && (
         <Section
-          topSpaceLg="0"
-          topSpaceMd="0"
+          topSpaceLg="50"
+          topSpaceMd="40"
           bottomSpaceLg="50"
           bottomSpaceMd="60"
         >
           <div className="container">
-            <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
-              Available Doctors at {center.name}
-            </h2>
+            <div className="cs_section_heading cs_style_1 text-center mb-5">
+              <h2 className="cs_section_title">Our Expert Team of Doctors</h2>
+            </div>
             <div className="cs_doctors_grid cs_style_1">
               {centerDoctors.map((doctor, index) => (
                 <div className="cs_team cs_style_1 cs_blue_bg" key={index}>
@@ -326,6 +325,26 @@ const page = async ({ params }) => {
           </div>
         </Section>
       )}
+
+      {/* Main Content Section */}
+      <Section
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
+      >
+        <div className="container">
+          {/* Content Section - Centered and Full Width */}
+          <div className="row">
+            <div className="col-12">
+              <IVFContentSection data={centerContentData} benefitImages={serviceData.benefitImages} />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Doctor Information Section */}
+
 
       {/* Location Section */}
       <Section

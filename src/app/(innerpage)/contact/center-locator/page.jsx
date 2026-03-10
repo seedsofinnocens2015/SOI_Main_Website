@@ -6,7 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaSearch } from 'react-icons/fa';
-import indiaCentresData from '../../ivf-centres/india-centres-data.json';
+import centresAllData from '../../ivf-centres/centres-data.json';
+const indiaCentresData = centresAllData.centres;
 
 const headingData = {
   title: 'Center Locator',

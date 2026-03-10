@@ -7,7 +7,8 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
-import centresData from '@/app/(innerpage)/ivf-centres/india-centres-data.json';
+import centresAllData from '@/app/(innerpage)/ivf-centres/centres-data.json';
+const centresData = centresAllData.centres;
 
 const headingData = {
   title: 'Book Appointment',
