@@ -5,6 +5,8 @@ import Link from 'next/link';
 import centresAllData from '../ivf-centres/centres-data.json';
 const centresData = centresAllData.centres;
 const stateContentConfig = centresAllData.stateContent;
+import doctorsData from '../doctors/doctors-data.json';
+import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 import IVFContentSection from '@/app/Components/IVFContentSection';
@@ -40,6 +42,25 @@ function getCenterLink(center) {
 
 export async function generateMetadata({ params }) {
     const { slug } = await params;
+
+    // Check if it's a doctor page
+    const doctor = doctorsData.find(d => 
+        (d.newSlug === slug) || 
+        (slug === d.slug + '-ivf-specialist')
+    );
+
+    if (doctor) {
+        return {
+            title: `${doctor.name} | ${doctor.subtitle} | Seeds of Innocens`,
+            description: doctor.description ? doctor.description[0] : `Meet ${doctor.name}, ${doctor.subtitle} at Seeds of Innocens IVF Centre.`,
+        };
+    }
+
+    // Otherwise treat as state page
+    if (!slug.startsWith('best-ivf-center-in-')) {
+        return { title: 'Not Found' };
+    }
+
     const stateSlug = slug.replace('best-ivf-center-in-', '');
     const filteredCentres = centresData.filter(c => c.stateSlug === stateSlug);
 
@@ -58,20 +79,66 @@ export async function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
     try {
+        // State params
         const states = [...new Set(centresData.filter(c => !c.isInternational).map(c => c.stateSlug))];
-        return states.map(stateSlug => ({
+        const stateParams = states.map(stateSlug => ({
             slug: `best-ivf-center-in-${stateSlug}`
         }));
+
+        // Doctor params
+        const doctorParams = doctorsData.map(d => ({
+            slug: d.newSlug || d.slug + '-ivf-specialist'
+        }));
+
+        return [...stateParams, ...doctorParams];
     } catch (error) {
         console.error('Error in generateStaticParams:', error);
         return [];
     }
 }
 
-const StatePage = async ({ params }) => {
+const DynamicPage = async ({ params }) => {
     const { slug } = await params;
 
-    if (!slug || !slug.startsWith('best-ivf-center-in-')) {
+    if (!slug) {
+        notFound();
+    }
+
+    // 1. Check if it's a doctor slug
+    const doctor = doctorsData.find(d => 
+        (d.newSlug === slug) || 
+        (slug === d.slug + '-ivf-specialist')
+    );
+
+    if (doctor) {
+        const otherDoctors = doctorsData
+            .filter(d => d.slug !== doctor.slug)
+            .slice(0, 5)
+            .map(d => ({
+                name: d.name,
+                imageUrl: d.image,
+                profession: d.subtitle,
+                experience: d.experience,
+                link: `/${d.newSlug || d.slug + '-ivf-specialist'}`
+            }));
+
+        return (
+            <div className="cs_doctor_details_page">
+                <Section
+                    className={'cs_page_heading cs_bg_filed cs_center'}
+                    backgroundImage="/assets/img/Top-Header.png"
+                >
+                    <PageHeading data={{ title: doctor.name }} />
+                </Section>
+                <Section topSpaceLg="80" topSpaceMd="110" bottomSpaceLg="80" bottomSpaceMd="120">
+                    <DoctorDetailsSection data={doctor} otherDoctors={otherDoctors} />
+                </Section>
+            </div>
+        );
+    }
+
+    // 2. Otherwise handle as State Page
+    if (!slug.startsWith('best-ivf-center-in-')) {
         notFound();
     }
 
@@ -83,12 +150,6 @@ const StatePage = async ({ params }) => {
     }
 
     const stateName = filteredCentres[0].state;
-
-    const headingData = {
-        title: `${stateName}`,
-        uspTitle: rawStateContent.uspTitle,
-    };
-
     const rawStateContent =
         stateContentConfig[stateSlug] || stateContentConfig.default;
 
@@ -104,6 +165,11 @@ const StatePage = async ({ params }) => {
             listItems: (section.listItems || []).map(replaceStateName),
             sideImage: section.sideImage ? getAssetPath(section.sideImage) : undefined,
         })),
+    };
+
+    const headingData = {
+        title: `${stateName}`,
+        uspTitle: rawStateContent.uspTitle,
     };
 
     const faqs = rawStateContent.faqs || stateContentConfig.default.faqs || [];
@@ -206,4 +272,4 @@ const StatePage = async ({ params }) => {
     );
 };
 
-export default StatePage;
+export default DynamicPage;

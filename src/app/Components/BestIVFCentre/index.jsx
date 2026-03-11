@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Slider from "react-slick";
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import Section from '../Section';
 import PageHeading from '../PageHeading';
@@ -9,10 +10,10 @@ import IVFContentSection from '../IVFContentSection';
 import LazyGoogleMap from '../LazyGoogleMap';
 import { getAssetPathClient } from '@/app/utils/assetPath';
 
-const BestIVFCentre = ({ 
-    center, 
-    cityName, 
-    description, 
+const BestIVFCentre = ({
+    center,
+    cityName,
+    description,
     services: injectedServices,
     doctorsData = [],
     topCenterContentData,
@@ -22,42 +23,94 @@ const BestIVFCentre = ({
 }) => {
     const serviceRow1Ref = useRef(null);
     const serviceRow2Ref = useRef(null);
+    const testimonialSliderRef = useRef(null);
+
+    // Slider settings matching NewsMediaSection
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 3,
+        fade: false,
+        swipeToSlide: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        pauseOnDotsHover: true,
+        appendDots: (dots) => (
+            <div>
+                <ul>{dots}</ul>
+            </div>
+        ),
+        dotsClass: "cs_pagination cs_style_2",
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
+
+    // Convert YouTube URL to embed format matching NewsMediaSection
+    const getEmbedUrl = (url) => {
+        if (!url) return '';
+        if (url.includes('youtube.com/embed/')) return url;
+        let videoId = '';
+        if (url.includes('youtube.com/watch?v=')) {
+            videoId = url.split('v=')[1]?.split('&')[0];
+        } else if (url.includes('youtu.be/')) {
+            videoId = url.split('youtu.be/')[1]?.split('?')[0];
+        } else if (url.includes('youtube.com/embed/')) {
+            videoId = url.split('embed/')[1]?.split('?')[0];
+        }
+        if (videoId) return `https://www.youtube.com/embed/${videoId}`;
+        return url;
+    };
 
     // Default services fallback
     const defaultServices = [
-        { 
-            title: "IUI, IVF & ICSI", 
-            icon: "/assets/img/icons/IUI, IVF & ICSI.svg" 
+        {
+            title: "IUI, IVF & ICSI",
+            icon: "/assets/img/icons/IUI, IVF & ICSI.svg"
         },
-        { 
-            title: "Blastocyst Transfer", 
-            icon: "/assets/img/icons/Blastocyst Transfer.svg" 
+        {
+            title: "Blastocyst Transfer",
+            icon: "/assets/img/icons/Blastocyst Transfer.svg"
         },
-        { 
-            title: "Cryopreservation", 
-            subtitle: "(Egg, Sperm & Embryos)", 
-            icon: "/assets/img/icons/Cryopreservation.svg" 
+        {
+            title: "Cryopreservation",
+            subtitle: "(Egg, Sperm & Embryos)",
+            icon: "/assets/img/icons/Cryopreservation.svg"
         },
-        { 
-            title: "PRP & Ovarian Rejuvenation", 
-            icon: "/assets/img/icons/PRP & Ovarian Rejuvenation.svg" 
+        {
+            title: "PRP & Ovarian Rejuvenation",
+            icon: "/assets/img/icons/PRP & Ovarian Rejuvenation.svg"
         },
-        { 
-            title: "Genetic Testing", 
-            subtitle: "(PGT-A & PGT-M)", 
-            icon: "/assets/img/icons/Genetic Testing.svg" 
+        {
+            title: "Genetic Testing",
+            subtitle: "(PGT-A & PGT-M)",
+            icon: "/assets/img/icons/Genetic Testing.svg"
         },
-        { 
-            title: "Genetic Counseling", 
-            icon: "/assets/img/icons/Genetic Counselling.svg" 
+        {
+            title: "Genetic Counseling",
+            icon: "/assets/img/icons/Genetic Counselling.svg"
         },
-        { 
-            title: "TESA/PESA", 
-            icon: "/assets/img/icons/TESA-PESA.svg" 
+        {
+            title: "TESA/PESA",
+            icon: "/assets/img/icons/TESA-PESA.svg"
         },
-        { 
-            title: "Laparoscopy & Hysteroscopy", 
-            icon: "/assets/img/icons/Laparoscopy & Hysteroscopy.svg" 
+        {
+            title: "Laparoscopy & Hysteroscopy",
+            icon: "/assets/img/icons/Laparoscopy & Hysteroscopy.svg"
         },
     ];
 
@@ -110,11 +163,11 @@ const BestIVFCentre = ({
                                 {services.slice(0, 4).map((service, idx) => (
                                     <div key={idx} className="cs_service_card_mobile">
                                         <div className="cs_service_icon_box">
-                                            <Image 
-                                                src={getAssetPathClient(service.icon)} 
-                                                alt={service.title} 
-                                                width={48} 
-                                                height={48} 
+                                            <Image
+                                                src={getAssetPathClient(service.icon)}
+                                                alt={service.title}
+                                                width={48}
+                                                height={48}
                                                 className="w-12 h-12 object-contain"
                                             />
                                         </div>
@@ -127,11 +180,11 @@ const BestIVFCentre = ({
                                 {services.slice(4, 8).map((service, idx) => (
                                     <div key={idx} className="cs_service_card_mobile">
                                         <div className="cs_service_icon_box">
-                                            <Image 
-                                                src={getAssetPathClient(service.icon)} 
-                                                alt={service.title} 
-                                                width={48} 
-                                                height={48} 
+                                            <Image
+                                                src={getAssetPathClient(service.icon)}
+                                                alt={service.title}
+                                                width={48}
+                                                height={48}
                                                 className="w-12 h-12 object-contain"
                                             />
                                         </div>
@@ -182,7 +235,7 @@ const BestIVFCentre = ({
                 >
                     <div className="container">
                         <div className="cs_section_heading cs_style_1 text-center mb-5">
-                            <h2 className="cs_section_title">Our Expert Team of <span style={{color: '#000000'}}>Doctors</span></h2>
+                            <h2 className="cs_section_title">Our Expert  <span style={{ color: '#000000' }}>Team of Doctors</span></h2>
                         </div>
                         <div className="cs_doctors_grid cs_style_1">
                             {centerDoctors.map((doctor, index) => {
@@ -190,7 +243,7 @@ const BestIVFCentre = ({
                                 const doctorLink = matchedDoctorData
                                     ? `/${matchedDoctorData.newSlug || matchedDoctorData.slug + '-ivf-specialist'}`
                                     : null;
-                                
+
                                 return (
                                     <div className="cs_team cs_style_1 cs_blue_bg" key={index}>
                                         <div className="cs_team_shape cs_accent_bg" />
@@ -262,134 +315,130 @@ const BestIVFCentre = ({
                 </Section>
             )}
 
-            {/* Testimonials Component */}
+            {/* Testimonials Component - Design matching NewsMediaSection */}
             {testimonials.length > 0 && (
-                <section className="w-full bg-gray-100 py-8 sm:py-12 lg:py-16">
-                    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                        {/* Main Heading */}
-                        <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 mb-8 sm:mb-12">
-                            What Our Happy Couples Are Saying!
-                        </h2>
-                        
-                        {/* Testimonials Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {testimonials.map((t) => (
-                                <article
-                                    key={t.videoId || `${t.name}-${t.link}`}
-                                    className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden transition-all duration-300 group hover:shadow-xl"
-                                >
-                                    {/* Video Thumbnail */}
-                                    <div className="relative w-full aspect-video bg-gray-200">
-                                        <a
-                                            href={t.link}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="absolute inset-0 block"
-                                            aria-label={`Play testimonial video: ${t.name}`}
-                                        >
-                                            <img
-                                                src={`https://img.youtube.com/vi/${t.videoId}/hqdefault.jpg`}
-                                                alt={t.name}
-                                                className="h-full w-full object-cover"
-                                                loading="lazy"
-                                            />
-                                            <span className="absolute inset-0 flex items-center justify-center">
-                                                <span className="h-10 w-14 rounded-xl bg-[#FF0000] text-white flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 24 24"
-                                                        fill="currentColor"
-                                                        className="h-6 w-6"
-                                                    >
-                                                        <path d="M8 5v14l11-7-11-7z" />
-                                                    </svg>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
+                <Section
+                    topSpaceLg="50"
+                    topSpaceMd="40"
+                    bottomSpaceLg="50"
+                    bottomSpaceMd="60"
+                >
+                    <div className="container">
+                        {/* Section Heading matching NewsMediaSection style */}
+                        <div className="cs_service_title_section">
+                            <h2 className="cs_service_main_title">
+                                <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                    WHAT OUR HAPPY
+                                </span>{' '}
+                                <span style={{ color: '#000000' }}>COUPLES ARE SAYING!</span>
+                            </h2>
+                            <p
+                                style={{
+                                    fontSize: 'clamp(14px, 2vw, 18px)',
+                                    color: '#555555',
+                                    fontWeight: '400',
+                                    textAlign: 'center',
+                                    textTransform: 'none',
+                                    marginTop: '10px',
+                                    display: 'block',
+                                    width: '100%',
+                                    marginLeft: 'auto',
+                                    marginRight: 'auto',
+                                }}
+                            >
+                                Watch these heartfelt testimonials from families who found hope with us.
+                            </p>
+                        </div>
 
-                                    {/* Content Body */}
-                                    <div className="p-5 flex flex-col h-full">
-                                        {/* Stars */}
-                                        <div className="flex items-center gap-1 text-red-600 mb-3" aria-label={`${t.stars} star rating`}>
-                                            {Array.from({ length: 5 }).map((_, i) => (
-                                                <svg
-                                                    key={i}
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 20 20"
-                                                    fill="currentColor"
-                                                    className={`h-4 w-4 ${i < t.stars ? 'opacity-100' : 'opacity-20'}`}
-                                                >
-                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.802 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.802-2.036a1 1 0 00-1.175 0l-2.802 2.036c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.88 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                </svg>
-                                            ))}
-                                        </div>
+                        <div className="cs_height_30 cs_height_lg_30" />
 
-                                        {/* Testimonial Text */}
-                                        <p className="text-sm text-gray-700 text-justify leading-relaxed mb-5 line-clamp-4 flex-grow">
-                                            {t.text}
-                                        </p>
-
-                                        {/* Watch Video Button */}
-                                        <div className="mt-auto">
-                                            <a
-                                                href={t.link}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="inline-block text-xs font-bold text-red-600 border border-gray-200 rounded-lg px-4 py-2 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300"
+                        <div className="cs_slider cs_style_1 cs_slider_gap_24">
+                            <div className="cs_slider_container">
+                                <div className="cs_slider_wrapper">
+                                    <Slider ref={testimonialSliderRef} {...sliderSettings}>
+                                        {testimonials.map((t, index) => (
+                                            <div
+                                                key={index}
+                                                className="cs_slide"
+                                                onMouseEnter={() => testimonialSliderRef.current?.slickPause()}
+                                                onMouseLeave={() => testimonialSliderRef.current?.slickPlay()}
                                             >
-                                                Watch Video
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            ))}
+                                                <div className="cs_news_media_item">
+                                                    <div className="cs_news_media_video">
+                                                        <iframe
+                                                            src={getEmbedUrl(t.link)}
+                                                            title={t.name || `Testimonial Video ${index + 1}`}
+                                                            frameBorder="0"
+                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                            allowFullScreen
+                                                        />
+                                                    </div>
+                                                    <div className="cs_news_media_content">
+                                                        <h3 className="cs_news_media_title" style={{ color: '#df3655' }}>{t.name}</h3>
+                                                        <p className="cs_news_media_description" style={{ color: '#474343' }}>
+                                                            {t.text}
+                                                        </p>
+                                                        {t.role && (
+                                                            <div className="cs_news_media_date">{t.role}</div>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </Slider>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </section>
+                </Section>
             )}
 
             {/* Why Choose Us Component */}
             <section className="w-full py-8 sm:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    {/* Main Heading */}
-                    <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-red-600 mb-4 sm:mb-6">
-                        Why Choose Seeds of Innocens IVF
-                    </h2>
+                    {/* Section Heading matching NewsMediaSection style */}
+                    <div className="cs_service_title_section mb-10">
+                        <h2 className="cs_service_main_title">
+                            <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                WHY CHOOSE
+                            </span>{' '}
+                            <span style={{ color: '#000000' }}>SEEDS OF INNOCENS IVF</span>
+                        </h2>
+                    </div>
                     {/* Feature Grid - Mobile 2 Rows */}
-                    <div className="sm:hidden mt-4">
+                    <div className="d-block d-sm-none mt-4">
                         {/* Row 1 - First 4 features */}
                         <div ref={featuresRow1Ref} className="flex gap-3 overflow-x-auto pb-2 mb-3 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                             {[
                                 {
                                     title: '35+ IVF Centres',
                                     desc: "With over 35 IVF centres across the National and International, Seeds of Innocens brings fertility care closer to you.",
-                                    icon: <img src="/assets/img/icons/IVF Centres.svg" alt="35+ IVF Centres" className="h-10 w-10 object-contain" loading="lazy" />,
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: '20,000+ Healthy Babies',
                                     desc: 'At Seeds of Innocens, we are proud to have helped over 20,000 families welcome healthy babies into the world.',
-                                    icon: <img src="/assets/img/icons/Healthy Babies.svg" alt="20,000+ Healthy Babies" className="h-10 w-10 object-contain" loading="lazy" />,
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'Upto 78% Success Rate',
                                     desc: 'We maintain an impressive IVF success rate of 78%, higher than the average.',
-                                    icon: <img src="/assets/img/icons/Success Rate.svg" alt="Upto 78% Success Rate" className="h-10 w-10 object-contain" loading="lazy" />,
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Upto 78% Success Rate" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: '30+ Certified Trained Clinicians',
                                     desc: 'Our team includes over 30 certified and highly trained fertility specialists and embryologists.',
-                                    icon: <img src="/assets/img/icons/Dedicated Fertility.svg" alt="30+ Certified Trained Clinicians" className="h-10 w-10 object-contain" loading="lazy" />,
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="30+ Certified Trained Clinicians" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                             ].map((f, idx) => (
                                 <div
                                     key={idx}
                                     className="border border-gray-200 p-4 text-center flex flex-col items-center flex-shrink-0 w-[180px] group rounded-lg bg-white"
                                 >
-                                    <div className="w-10 h-10 flex items-center justify-center">
+                                    <div style={{ width: '45px', height: '45px' }} className="flex items-center justify-center">
                                         {f.icon}
                                     </div>
-                                    <h3 className="mt-2 text-sm font-semibold text-red-600 leading-tight">
+                                    <h3 className="mt-2 font-semibold text-red-600 leading-tight" style={{ fontSize: '11px' }}>
                                         {f.title}
                                     </h3>
                                 </div>
@@ -401,32 +450,32 @@ const BestIVFCentre = ({
                                 {
                                     title: 'Affordable IVF Care',
                                     desc: 'We provide affordable IVF treatment and offer quality services to patients, with customised packages.',
-                                    icon: <img src="/assets/img/icons/IUI, IVF & ICSI.svg" alt="Affordable IVF Care" className="h-10 w-10 object-contain" loading="lazy" />,
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/IUI, IVF & ICSI.svg")} alt="Affordable IVF Care" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'Fetal Medicine',
                                     desc: 'We offer fetal medicine services including ultrasound scans, fetal echocardiography, and diagnostic procedures.',
-                                    icon: <img src="/assets/img/icons/Blastocyst Transfer.svg" alt="Fetal Medicine" className="h-10 w-10 object-contain" loading="lazy" />,
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/Blastocyst Transfer.svg")} alt="Fetal Medicine" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'Expert Fertility Counsellor',
                                     desc: 'Genetic counselors evaluate family histories and identify potential genetic risks.',
-                                    icon: <img src="/assets/img/icons/Genetic Counselling.svg" alt="Expert Fertility Counsellor" className="h-10 w-10 object-contain" loading="lazy" />,
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Counselling.svg")} alt="Expert Fertility Counsellor" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'In-House Genetic Lab',
                                     desc: 'We are the first IVF centre in India to establish an in-house genetic lab.',
-                                    icon: <img src="/assets/img/icons/Genetic Testing.svg" alt="In-House Genetic Lab" className="h-10 w-10 object-contain" loading="lazy" />,
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="In-House Genetic Lab" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                             ].map((f, idx) => (
                                 <div
                                     key={idx}
                                     className="border border-gray-200 p-4 text-center flex flex-col items-center flex-shrink-0 w-[180px] group rounded-lg bg-white"
                                 >
-                                    <div className="w-10 h-10 flex items-center justify-center">
+                                    <div style={{ width: '45px', height: '45px' }} className="flex items-center justify-center">
                                         {f.icon}
                                     </div>
-                                    <h3 className="mt-2 text-sm font-semibold text-red-600 leading-tight">
+                                    <h3 className="mt-2 font-semibold text-red-600 leading-tight" style={{ fontSize: '11px' }}>
                                         {f.title}
                                     </h3>
                                 </div>
@@ -435,55 +484,57 @@ const BestIVFCentre = ({
                     </div>
 
                     {/* Feature Grid - Tablet/Desktop */}
-                    <div className="hidden sm:grid grid-cols-1 mt-15 sm:grid-cols-2 lg:grid-cols-4 gap-0 rounded-md overflow-hidden bg-white">
+                    <div className="d-none d-sm-grid grid-cols-1 mt-15 sm:grid-cols-2 lg:grid-cols-4 gap-0 rounded-md overflow-hidden bg-white">
                         {[
                             {
                                 title: '35+ IVF Centres',
                                 desc: "With over 35 IVF centres across the National and International, Seeds of Innocens brings fertility care closer to you. Whether you're in a metro or a smaller city, expert help is never far away.",
-                                icon: <img src="/assets/img/icons/IVF Centres.svg" alt="35+ IVF Centres" className="h-14 w-14 object-contain" loading="lazy" />,
+                                icon: <img src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: '20,000+ Healthy Babies',
                                 desc: 'At Seeds of Innocens, we are proud to have helped over 20,000 families welcome healthy babies into the world. Our commitment to quality fertility care and personalised treatment.',
-                                icon: <img src="/assets/img/icons/Healthy Babies.svg" alt="20,000+ Healthy Babies" className="h-14 w-14 object-contain" loading="lazy" />,
+                                icon: <img src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Upto 78% Success Rate',
                                 desc: 'We maintain an impressive IVF success rate of 78%, higher than the average. Our advanced lab technology and individualised treatment plans make this possible.',
-                                icon: <img src="/assets/img/icons/Success Rate.svg" alt="Upto 78% Success Rate" className="h-14 w-14 object-contain" loading="lazy" />,
+                                icon: <img src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Upto 78% Success Rate" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: '30+ Certified Trained Clinicians',
                                 desc: 'Our team includes over 30 certified and highly trained fertility specialists and embryologists. With years of experience and global expertise.',
-                                icon: <img src="/assets/img/icons/Dedicated Fertility.svg" alt="30+ Certified Trained Clinicians" className="h-14 w-14 object-contain" loading="lazy" />,
+                                icon: <img src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="30+ Certified Trained Clinicians" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Affordable IVF Care',
                                 desc: 'We provide affordable IVF treatment and offer quality services to patients, with customised packages and financing options to make your journey easier.',
-                                icon: <img src="/assets/img/icons/IUI, IVF & ICSI.svg" alt="Affordable IVF Care" className="h-14 w-14 object-contain" loading="lazy" />,
+                                icon: <img src={getAssetPathClient("/assets/img/icons/IUI, IVF & ICSI.svg")} alt="Affordable IVF Care" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Fetal Medicine',
                                 desc: 'We offer fetal medicine services including ultrasound scans, fetal echocardiography, and diagnostic procedures like amniocentesis and CVS.',
-                                icon: <img src="/assets/img/icons/Blastocyst Transfer.svg" alt="Fetal Medicine" className="h-14 w-14 object-contain" loading="lazy" />,
+                                icon: <img src={getAssetPathClient("/assets/img/icons/Blastocyst Transfer.svg")} alt="Fetal Medicine" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Expert Fertility Counsellor',
                                 desc: 'Genetic counselors evaluate family histories and identify potential genetic risks that could affect reproductive outcomes.',
-                                icon: <img src="/assets/img/icons/Genetic Counselling.svg" alt="Expert Fertility Counsellor" className="h-14 w-14 object-contain" loading="lazy" />,
+                                icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Counselling.svg")} alt="Expert Fertility Counsellor" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'In-House Genetic Lab',
                                 desc: 'We are the first IVF centre in India to establish an in-house genetic lab with testing services including PGT-A.',
-                                icon: <img src="/assets/img/icons/Genetic Testing.svg" alt="In-House Genetic Lab" className="h-14 w-14 object-contain" loading="lazy" />,
+                                icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="In-House Genetic Lab" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                         ].map((f, idx) => (
                             <div
                                 key={idx}
-                                className="border border-gray-200 p-6 text-center flex flex-col items-center group"
+                                className="border border-gray-200 text-center flex flex-col items-center group" style={{ padding: '20px' }}
                             >
-                                {f.icon}
-                                <h3 className="mt-3 text-lg font-semibold text-red-600 animated-underline transition-all duration-200">
+                                <div style={{ width: '60px', height: '60px' }} className="flex items-center justify-center">
+                                    {f.icon}
+                                </div>
+                                <h3 className="mt-3 font-semibold text-red-600 animated-underline transition-all duration-200" style={{ fontSize: '14px' }}>
                                     {f.title}
                                 </h3>
                                 <p className="mt-2 text-sm text-gray-700 leading-6 hidden sm:block">{f.desc}</p>
@@ -496,38 +547,40 @@ const BestIVFCentre = ({
 
             {/* About Us Component */}
             {aboutUs && (
-                <section className="w-full bg-gray-100 py-8 sm:py-12 lg:py-16">
-                    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <section className="cs_about_us_section_v2">
+                    <div className="cs_about_v2_container">
                         {/* Main Heading */}
-                        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-red-600 mb-4 sm:mb-6">
-                            {aboutUs.title || `About Seeds of Innocens IVF Centre ${cityName}`}
-                        </h2>
-                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 p-4 sm:p-8">
+                        <div className="cs_service_title_section mb-10">
+                            <h2 className="cs_service_main_title">
+                                <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                    About Seeds of Innocens IVF
+                                </span>{' '}
+                                <span style={{ color: '#000000' }}> Centre {cityName}</span>
+                            </h2>
+                        </div>
+                        <div className="cs_about_v2_wrapper">
                             {/* Building image */}
-                            <div className="w-full max-w-xl flex-shrink-0">
+                            <div className="cs_about_v2_img_col">
                                 <img
                                     src={getAssetPathClient(aboutUs.image || center.image)}
-                                    alt={`${aboutUs.title || 'About Seeds of Innocens'} building`}
-                                    className="rounded-sm w-full max-h-[450px] object-contain"
+                                    alt={`${aboutUs.title || 'About Seeds of Innocens'}`}
+                                    className="cs_about_v2_img"
                                     loading="lazy"
-                                    style={{ height: 'auto' }}
                                 />
                             </div>
 
                             {/* Text + CTA */}
-                            <div className="flex-1 flex flex-col justify-center lg:justify-start mt-7 lg:mt-0">
+                            <div className="cs_about_v2_text_col">
                                 {aboutUs.paragraphs && aboutUs.paragraphs.map((para, i) => (
-                                    <p key={i} className="text-gray-900 text-base sm:text-lg mb-3 leading-snug">
+                                    <p key={i} className="cs_about_v2_para">
                                         {para}
                                     </p>
                                 ))}
-                                <button
-                                    onClick={() => setIsContactOpen(true)}
-                                    className="bg-red-600 text-white px-6 py-3 rounded-lg font-bold text-lg shadow hover:bg-red-700 active:bg-red-800 focus:outline-none mt-2 w-full max-w-xs text-center"
-                                    style={{ letterSpacing: '0.5px' }}
-                                >
-                                    Get Free Consultation
-                                </button>
+                                <div className="cs_best_ivf_cta">
+                                    <a href="/new/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
+                                        Get Free Consultation
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -536,113 +589,62 @@ const BestIVFCentre = ({
 
             {/* Map & Contact Information Component */}
             {contactInfo && (
-                <section className="w-full py-8 sm:py-12 lg:py-16">
-                    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-10">
-                        <div className="flex flex-col lg:flex-row gap-8">
+                <section className="cs_map_contact_section">
+                    <div className="cs_map_contact_container">
+                        <div className="cs_map_contact_wrapper">
                             {/* Address + Details Card */}
-                            <div className="w-full lg:w-1/2 flex flex-col">
-                                <div className=" p-5 sm:p-6">
-                                    <h3 className="font-bold text-xl sm:text-2xl text-gray-900 leading-snug">{contactInfo.title}</h3>
-                                    <div className="mt-4 space-y-3">
-                                        <div className="flex items-start gap-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0"><path d="M6.75 3A2.25 2.25 0 0 0 4.5 5.25v13.5A2.25 2.25 0 0 0 6.75 21h10.5A2.25 2.25 0 0 0 19.5 18.75V5.25A2.25 2.25 0 0 0 17.25 3H6.75Zm1.5 3h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 8.25 6Zm0 3h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1 0-1.5Zm0 3h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5Z" /></svg>
-                                            <p className="text-base sm:text-lg text-gray-900">
-                                                <span className="font-semibold">Open Days:</span> {contactInfo.openDays}
+                            <div className="cs_contact_info_col">
+                                <div className="cs_contact_info_box">
+                                    <h3 className="cs_contact_title">
+                                        {contactInfo.title.includes('in ') ? (
+                                            <>
+                                                <span style={{ color: '#df3655' }}>{contactInfo.title.split('in ')[0]}in </span>
+                                                <span style={{ color: '#000000' }}>{contactInfo.title.split('in ')[1]}</span>
+                                            </>
+                                        ) : (
+                                            contactInfo.title
+                                        )}
+                                    </h3>
+                                    <div className="cs_contact_list">
+                                        <div className="cs_contact_item">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="cs_contact_icon"><path d="M6.75 3A2.25 2.25 0 0 0 4.5 5.25v13.5A2.25 2.25 0 0 0 6.75 21h10.5A2.25 2.25 0 0 0 19.5 18.75V5.25A2.25 2.25 0 0 0 17.25 3H6.75Zm1.5 3h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 8.25 6Zm0 3h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1 0-1.5Zm0 3h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5Z" /></svg>
+                                            <p className="cs_contact_text">
+                                                <span>Open Days:</span> {contactInfo.openDays}
                                             </p>
                                         </div>
-                                        <div className="flex items-start gap-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0"><path d="M12 1.5a.75.75 0 0 1 .75.75V3h2.25a.75.75 0 0 1 0 1.5H12.75v2.25a.75.75 0 0 1-1.5 0V4.5H9a.75.75 0 0 1 0-1.5h2.25V2.25A.75.75 0 0 1 12 1.5Zm-6 4.5A2.25 2.25 0 0 0 3.75 8.25v9A2.25 2.25 0 0 0 6 19.5h12a2.25 2.25 0 0 0 2.25-2.25v-9A2.25 2.25 0 0 0 18 6H6Z" /></svg>
-                                            <p className="text-base sm:text-lg text-gray-900">
-                                                <span className="font-semibold">Timings:</span> {contactInfo.timings}
+                                        <div className="cs_contact_item">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="cs_contact_icon"><path d="M12 1.5a.75.75 0 0 1 .75.75V3h2.25a.75.75 0 0 1 0 1.5H12.75v2.25a.75.75 0 0 1-1.5 0V4.5H9a.75.75 0 0 1 0-1.5h2.25V2.25A.75.75 0 0 1 12 1.5Zm-6 4.5A2.25 2.25 0 0 0 3.75 8.25v9A2.25 2.25 0 0 0 6 19.5h12a2.25 2.25 0 0 0 2.25-2.25v-9A2.25 2.25 0 0 0 18 6H6Z" /></svg>
+                                            <p className="cs_contact_text">
+                                                <span>Timings:</span> {contactInfo.timings}
                                             </p>
                                         </div>
-                                        <div className="flex items-start gap-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0"><path d="M12 2.25c-3.728 0-6.75 3.022-6.75 6.75 0 4.989 6.75 12.75 6.75 12.75s6.75-7.761 6.75-12.75c0-3.728-3.022-6.75-6.75-6.75Zm0 9.75a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" /></svg>
-                                            <p className="text-base sm:text-lg text-gray-900">
-                                                <span className="font-semibold">Address:</span> {contactInfo.address}
+                                        <div className="cs_contact_item">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="cs_contact_icon"><path d="M12 2.25c-3.728 0-6.75 3.022-6.75 6.75 0 4.989 6.75 12.75 6.75 12.75s6.75-7.761 6.75-12.75c0-3.728-3.022-6.75-6.75-6.75Zm0 9.75a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" /></svg>
+                                            <p className="cs_contact_text">
+                                                <span>Address:</span> {contactInfo.address}
                                             </p>
-                                        </div> 
+                                        </div>
                                     </div>
-                                    <div className="mt-5 flex flex-wrap gap-3">
-                                        <a href={contactInfo.mapUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-red-700 transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-white mt-0.5 flex-shrink-0"><path d="M12 2.25c-3.728 0-6.75 3.022-6.75 6.75 0 4.989 6.75 12.75 6.75 12.75s6.75-7.761 6.75-12.75c0-3.728-3.022-6.75-6.75-6.75Zm0 9.75a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" /></svg>
+                                    <div className="cs_contact_btn_group">
+                                        <a href={contactInfo.direction} target="_blank" rel="noreferrer" className="cs_contact_btn_primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25c-3.728 0-6.75 3.022-6.75 6.75 0 4.989 6.75 12.75 6.75 12.75s6.75-7.761 6.75-12.75c0-3.728-3.022-6.75-6.75-6.75Zm0 9.75a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" /></svg>
                                             Get Directions
                                         </a>
-                                        <a href={`tel:${contactInfo.phone}`} className="inline-flex items-center gap-2 border border-gray-300 text-gray-800 px-4 py-2 rounded-md text-sm font-semibold hover:border-red-400 hover:text-red-600 transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M2.25 4.5c0-1.243 1.007-2.25 2.25-2.25h3A2.25 2.25 0 0 1 9.75 4.5v1.38c0 .57-.225 1.118-.626 1.52l-1.2 1.2a1.5 1.5 0 0 0-.3 1.71 12.03 12.03 0 0 0 6.066 6.066 1.5 1.5 0 0 0 1.71-.3l1.2-1.2c.402-.401.95-.626 1.52-.626H19.5A2.25 2.25 0 0 1 21.75 18v3A2.25 2.25 0 0 1 19.5 23.25C10.663 23.25 3.75 16.337 3.75 7.5A3 3 0 0 1 6.75 4.5H5.25A2.25 2.25 0 0 1 3 2.25 2.25 2.25 0 0 0 2.25 4.5Z" /></svg>
+                                        <a href={`tel:${contactInfo.phone}`} className="cs_contact_btn_secondary">
+                                            <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>phone-call</title> <path d="M18.037 6.635c-0.011-0.001-0.023-0.001-0.035-0.001-0.414 0-0.75 0.336-0.75 0.75 0 0.399 0.312 0.726 0.706 0.749l0.002 0c3.533 0.231 6.311 3.153 6.311 6.723 0 0.186-0.008 0.37-0.022 0.552l0.002-0.024c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0c0.009-0.143 0.014-0.31 0.014-0.479 0-4.38-3.397-7.967-7.7-8.269l-0.026-0.001zM17.963 2.749c0.449 0.022 10.998 0.688 10.998 12.635 0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0c0.015-0.238 0.024-0.515 0.024-0.795 0-7.059-5.471-12.841-12.405-13.335l-0.043-0.002c-0.009-0-0.019-0.001-0.029-0.001-0.403 0-0.732 0.314-0.757 0.71l-0 0.002c-0.001 0.011-0.001 0.024-0.001 0.037 0 0.401 0.315 0.729 0.711 0.749l0.002 0zM30.637 23.15c-0.109-0.675-0.334-1.281-0.654-1.823l0.013 0.024c-0.114-0.186-0.301-0.317-0.521-0.353l-0.004-0.001-8.969-1.424c-0.035-0.006-0.076-0.009-0.117-0.009-0.207 0-0.395 0.083-0.531 0.218l0-0c-0.676 0.68-1.194 1.516-1.496 2.451l-0.012 0.044c-4.016-1.64-7.141-4.765-8.742-8.675l-0.038-0.105c0.978-0.314 1.814-0.833 2.493-1.509l-0 0c0.136-0.136 0.22-0.324 0.22-0.531 0-0.041-0.003-0.081-0.010-0.12l0.001 0.004-1.425-8.969c-0.036-0.224-0.167-0.412-0.35-0.524l-0.003-0.002c-0.505-0.301-1.094-0.522-1.724-0.626l-0.029-0.004c-0.315-0.070-0.677-0.111-1.048-0.111-0.025 0-0.050 0-0.075 0.001l0.004-0h-0.006c-3.497 0.024-6.326 2.855-6.347 6.351v0.002c0.015 12.761 10.355 23.102 23.115 23.117h0.002c3.5-0.023 6.331-2.854 6.354-6.351v-0.002c0-0.020 0-0.044 0-0.068 0-0.356-0.036-0.703-0.106-1.038l0.006 0.033zM24.383 29.076c-11.933-0.014-21.602-9.684-21.616-21.616v-0.001c0.019-2.673 2.182-4.835 4.854-4.853h0.002c0.016-0 0.036-0 0.055-0 0.272 0 0.537 0.030 0.793 0.086l-0.024-0.005c0.366 0.060 0.695 0.161 1.003 0.3l-0.025-0.010 1.302 8.202c-0.628 0.528-1.404 0.901-2.257 1.050l-0.029 0.004c-0.355 0.064-0.62 0.37-0.62 0.739 0 0.088 0.015 0.172 0.043 0.25l-0.002-0.005c1.772 5.072 5.695 8.994 10.646 10.729l0.121 0.037c0.073 0.026 0.157 0.041 0.245 0.041 0.368 0 0.674-0.265 0.737-0.615l0.001-0.005c0.153-0.882 0.526-1.658 1.061-2.295l-0.006 0.007 8.201 1.303c0.133 0.294 0.237 0.636 0.296 0.994l0.003 0.024c0.046 0.219 0.073 0.471 0.073 0.729 0 0.018-0 0.035-0 0.053l0-0.003c-0.016 2.675-2.179 4.84-4.852 4.859h-0.002z"></path> </g></svg>
                                             Call Now
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             {/* Google Map */}
-                            <div className="w-full lg:w-1/2 flex flex-col">
-                                <div className="rounded-lg overflow-hidden shadow-sm border border-gray-200 h-full min-h-[350px]">
-                                    <LazyGoogleMap title={`${cityName} IVF Centre Location`} height={'100%'} src={contactInfo.mapUrl} />
-                                </div>
+                            <div className="cs_map_col">
+                                <LazyGoogleMap title={`${cityName} IVF Centre Location`} src={contactInfo.mapUrl} />
                             </div>
                         </div>
                     </div>
                 </section>
             )}
-
-            {/* Top Content Sections (Now only for additional sections not covered above) */}
-            {topCenterContentData && topCenterContentData.sections && topCenterContentData.sections.length > 0 && (
-                <Section
-                    topSpaceLg="50"
-                    topSpaceMd="60"
-                    bottomSpaceLg="50"
-                    bottomSpaceMd="60"
-                >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12">
-                                <IVFContentSection
-                                    data={topCenterContentData}
-                                    benefitImages={topCenterContentData._benefitImages}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </Section>
-            )}
-
-            {/* Bottom Content Sections */}
-            {bottomCenterContentData && bottomCenterContentData.sections && bottomCenterContentData.sections.length > 0 && (
-                <Section
-                    topSpaceLg="0"
-                    topSpaceMd="0"
-                    bottomSpaceLg="50"
-                    bottomSpaceMd="60"
-                >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12">
-                                <IVFContentSection data={bottomCenterContentData} />
-                            </div>
-                        </div>
-                    </div>
-                </Section>
-            )}
-
-            {/* Location Section */}
-            {locationContentData && (
-                <Section
-                    topSpaceLg="0"
-                    topSpaceMd="0"
-                    bottomSpaceLg="70"
-                    bottomSpaceMd="120"
-                >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12">
-                                <IVFContentSection data={locationContentData} />
-                            </div>
-                        </div>
-                    </div>
-                </Section>
-            )}
-
             {/* FAQ Section */}
             {faqContentData && (
                 <Section
@@ -652,9 +654,23 @@ const BestIVFCentre = ({
                     bottomSpaceMd="120"
                 >
                     <div className="container">
+                        {/* Section Heading matching NewsMediaSection style */}
+                        <div className="cs_service_title_section mb-10">
+                            <h2 className="cs_service_main_title">
+                                <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                    FREQUENTLY ASKED
+                                </span>{' '}
+                                <span style={{ color: '#000000' }}>QUESTIONS</span>
+                            </h2>
+                        </div>
                         <div className="row">
                             <div className="col-12">
-                                <IVFContentSection data={faqContentData} />
+                                <IVFContentSection 
+                                    data={{
+                                        ...faqContentData, 
+                                        sections: faqContentData.sections.map(s => ({...s, heading: ''}))
+                                    }} 
+                                />
                             </div>
                         </div>
                     </div>
