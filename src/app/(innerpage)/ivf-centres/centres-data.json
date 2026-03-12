@@ -605,7 +605,7 @@
       "stateSlug": "haryana",
       "image": "/assets/img/Centres/faridabad.jpg",
       "headerImage": "/assets/img/Headers/faridabad.png",     
-      "uspTitle": "ADVANCED IVF & FERTILITY CARE <br /> <span class=\"cs_accent_color\">TRUSTED BY FAMILIES IN FARIDABAD</span>",
+      "uspTitle": "ADVANCED IVF & FERTILITY CARE <br /> <span class=\"cs_accent_color\">TRUSTED BY FAMILIES <br />IN FARIDABAD</span>",
       "description": [
         "Seeds of Innocens IVF Centre in Faridabad provides exceptional fertility care to the National Capital Region. Our center offers state-of-the-art facilities and experienced medical professionals.",
         "We provide comprehensive fertility services including IVF, IUI, and advanced reproductive technologies. Our patient-centric approach ensures personalized care tailored to each couple's needs.",
@@ -878,7 +878,7 @@
       "stateSlug": "uttarakhand",
       "image": "/assets/img/Centres/haldwani.jpg",
       "headerImage": "/assets/img/Headers/haldwani.png",     
-      "uspTitle": "HOPEFUL BEGINNINGS IN  <br /> <span class=\"cs_accent_color\">PARENTHOOD FOR COUPLES IN HALDWANI</span>",
+      "uspTitle": "HOPEFUL BEGINNINGS IN  <br /> <span class=\"cs_accent_color\">PARENTHOOD FOR COUPLES <br /> IN HALDWANI</span>",
       "description": [
         "Our Haldwani center extends quality fertility care to Uttarakhand. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
         "The center provides personalized care and support throughout your fertility journey. We understand the challenges of infertility and provide compassionate, expert care.",
@@ -1060,7 +1060,7 @@
       "stateSlug": "kerala",
       "image": "/assets/img/Centres/kasaragod.jpg",
       "headerImage": "/assets/img/Headers/kasaragod.png",     
-      "uspTitle": "COMPASSIONATE IVF CARE <br /> <span class=\"cs_accent_color\">CENTER IN KASARGOD</span>",
+      "uspTitle": "COMPASSIONATE IVF CARE <br /> <span class=\"cs_accent_color\">CENTER IN KASARAGOD</span>",
       "description": [
         "Our Kasaragod center provides exceptional fertility care to Kerala. We offer comprehensive IVF services with modern facilities and experienced medical professionals.",
         "The center focuses on providing personalized care and excellent outcomes. Our team of fertility specialists ensures the highest quality treatment and support.",
@@ -2387,7 +2387,7 @@
     "default": {
       "sections": [
         {
-          "heading": "Best IVF Centres in {{stateName}} – Leading Fertility Care",
+          "heading": "Best IVF Centres in {{stateName}}",
           "paragraphs": [
             "Seeds of Innocens is proud to bring world-class fertility treatments to {{stateName}}. With multiple state-of-the-art centres across the region, we are dedicated to helping couples achieve their dream of parenthood through advanced reproductive technologies and compassionate care.",
             "Our centres in {{stateName}} are equipped with the latest IVF labs and staffed by highly experienced fertility specialists. We offer a comprehensive range of services, including IVF, IUI, ICSI, and genetic testing, all tailored to meet the unique needs of our patients."
@@ -2419,25 +2419,13 @@
       "headerImage": "/assets/img/Headers/state-default.png"
     },
     "delhi": {
-      "sections": [
+      "uspTitle": "WHERE HOPE MEETS SCIENCE <br /> <span class=\"cs_accent_color\">YOUR PARENTHOOD BEGINS</span>",
+      "sections": [ 
         {
-          "heading": "Best IVF Centres in Delhi NCR – Your Journey to Parenthood Starts Here",
+          "heading": "Best IVF Centres in Delhi NCR",
           "paragraphs": [
             "Delhi is home to our flagship centres, offering the highest standards of fertility care in North India. At Seeds of Innocens Delhi, we combine medical expertise with cutting-edge technology to provide successful outcomes for couples facing infertility.",
             "With locations in Malviya Nagar, Pitampura, and Janakpuri, we ensure that world-class fertility treatment is always within your reach in the capital."
-          ],
-          "sideImage": "/assets/img/delhi.png"
-        },
-        {
-          "heading": "Why Choose Seeds of Innocens in Delhi NCR?",
-          "paragraphs": [
-            "Choosing the right fertility partner is a crucial step in your journey. Here is why Seeds of Innocens is the preferred choice for thousands of couples in Delhi NCR:"
-          ],
-          "listItems": [
-            "High Success Rates: Our clinical excellence and advanced technology ensure consistently high success rates across all our centres.",
-            "Expert Medical Team: Our team includes some of India's most renowned IVF specialists and embryologists.",
-            "Affordable & Transparent: We believe in making fertility care accessible with transparent pricing and no hidden costs.",
-            "Patient-Centric Approach: Every patient receives a personalized treatment plan and dedicated emotional support."
           ]
         }
       ],
