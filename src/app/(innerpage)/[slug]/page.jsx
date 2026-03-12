@@ -1,432 +1,333 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
-import IVFContentSection from '@/app/Components/IVFContentSection';
-import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import indiaCentresData from '../ivf-centres/india-centres-data.json';
+import centresAllData from '../ivf-centres/centres-data.json';
+const centresData = centresAllData.centres;
+const stateContentConfig = centresAllData.stateContent;
 import doctorsData from '../doctors/doctors-data.json';
+import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
+import IVFContentSection from '@/app/Components/IVFContentSection';
+import BestIVFCentre from '@/app/Components/BestIVFCentre';
+import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 
-// Helper function to convert city name to slug
 function cityNameToSlug(cityName) {
-  return cityName
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9-]/g, '');
+    return cityName
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9-]/g, '');
+}
+
+function getCenterLink(center) {
+    const isMalviyaDelhi =
+        center.name === 'Malviya Nagar, Delhi' && center.stateSlug === 'delhi';
+
+    let cityParam;
+    if (isMalviyaDelhi) {
+        cityParam = 'delhi';
+    } else {
+        const cityName = center.name.split(',')[0].trim();
+        cityParam = cityNameToSlug(cityName);
+    }
+
+    let slug;
+    if (isMalviyaDelhi) {
+        slug = 'best-ivf-centre-in-malviyanagar';
+    } else {
+        slug = `best-ivf-centre-in-${cityParam}`;
+    }
+
+    return `/${center.stateSlug}/${slug}/`;
+}
+
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+
+    // 1. Check if it's a doctor page
+    const doctor = doctorsData.find(d => 
+        (d.newSlug === slug) || 
+        (slug === d.slug + '-ivf-specialist')
+    );
+
+    if (doctor) {
+        return {
+            title: `${doctor.name} | ${doctor.subtitle} | Seeds of Innocens`,
+            description: doctor.description ? doctor.description[0] : `Meet ${doctor.name}, ${doctor.subtitle} at Seeds of Innocens IVF Centre.`,
+        };
+    }
+
+    // 2. Check if it's an international center slug
+    const internationalCenter = centresData.find(c => c.isInternational && c.slug === slug);
+    if (internationalCenter) {
+        return {
+            title: internationalCenter.name + ' | Seeds of Innocens',
+            description: internationalCenter.description ? internationalCenter.description[0] : `Best IVF Centre in ${internationalCenter.name}.`,
+        };
+    }
+
+    // 3. Otherwise treat as state page
+    if (!slug.startsWith('best-ivf-center-in-')) {
+        return { title: 'Not Found' };
+    }
+
+    const stateSlug = slug.replace('best-ivf-center-in-', '');
+    const filteredCentres = centresData.filter(c => c.stateSlug === stateSlug);
+
+    if (filteredCentres.length === 0) {
+        return {
+            title: 'Best IVF Centres',
+        };
+    }
+
+    const stateName = filteredCentres[0].state;
+    return {
+        title: `Best IVF Centre in ${stateName} | Seeds of Innocens`,
+        description: `Looking for the best IVF centre in ${stateName}? Seeds of Innocens offers advanced fertility treatments with high success rates and experienced specialists in ${stateName}.`,
+    };
 }
 
 export async function generateStaticParams() {
-  try {
-    const centerParams = indiaCentresData
-      .filter((center) => center.stateSlug && !center.isInternational)
-      .map((center) => {
-        // Special case: Malviya Nagar, Delhi should use "best-ivf-centre-in-delhi"
-        if (center.name === 'Malviya Nagar, Delhi' && center.stateSlug === 'delhi') {
-          return {
-            slug: 'best-ivf-centre-in-delhi',
-          };
-        }
-        
-        const cityName = center.name.split(',')[0].trim();
-        const citySlug = cityNameToSlug(cityName);
-        return {
-          slug: `best-ivf-centre-in-${citySlug}`,
-        };
-      })
-      .filter((param) => param.slug);
+    try {
+        // State params
+        const states = [...new Set(centresData.filter(c => !c.isInternational).map(c => c.stateSlug))];
+        const stateParams = states.map(stateSlug => ({
+            slug: `best-ivf-center-in-${stateSlug}`
+        }));
 
-    const doctorParams = doctorsData
-      .map((doctor) => ({
-        slug: doctor.newSlug || doctor.slug + '-ivf-specialist',
-      }))
-      .filter((param) => param.slug);
+        // Doctor params
+        const doctorParams = doctorsData.map(d => ({
+            slug: d.newSlug || d.slug + '-ivf-specialist'
+        }));
 
-    return [...centerParams, ...doctorParams];
-  } catch (error) {
-    console.error('Error generating static params:', error);
-    return [];
-  }
+        // International center params (SEO slugs)
+        const internationalParams = centresData
+            .filter(c => c.isInternational && c.slug)
+            .map(c => ({
+                slug: c.slug
+            }));
+
+        return [...stateParams, ...doctorParams, ...internationalParams];
+    } catch (error) {
+        console.error('Error in generateStaticParams:', error);
+        return [];
+    }
 }
 
-const page = async ({ params }) => {
-  const resolvedParams = await params;
-  const { slug } = resolvedParams || {};
-  
-  if (!slug) {
-    notFound();
-  }
-  
-  // Remove trailing slash if present
-  const cleanSlug = slug.replace(/\/$/, '');
-  
-  // Check if this is a doctor route (starts with "dr-" and ends with "-ivf-specialist" or "-ivf-specialists")
-  const isDoctorRoute = cleanSlug.startsWith('dr-') && (cleanSlug.endsWith('-ivf-specialist') || cleanSlug.endsWith('-ivf-specialists'));
-  
-  if (isDoctorRoute) {
-    // Handle doctor route
-    const doctor = doctorsData.find((d) => {
-      const doctorSlug = d.newSlug || d.slug + '-ivf-specialist';
-      return doctorSlug === cleanSlug;
-    });
+const DynamicPage = async ({ params }) => {
+    const { slug } = await params;
 
-    if (!doctor) {
-      console.error(`Doctor not found for slug: ${cleanSlug}`);
-      notFound();
+    if (!slug) {
+        notFound();
     }
 
-    // Get other doctors for sidebar (exclude current doctor)
-    const otherDoctors = doctorsData
-      .filter((d) => d.slug !== doctor.slug)
-      .slice(0, 5)
-      .map((d) => ({
-        name: d.name,
-        profession: d.subtitle,
-        imageUrl: d.image,
-        experience: d.experience,
-        link: `/${d.newSlug || d.slug + '-ivf-specialist'}`,
-      }));
+    // 1. Check if it's a doctor slug
+    const doctor = doctorsData.find(d => 
+        (d.newSlug === slug) || 
+        (slug === d.slug + '-ivf-specialist')
+    );
 
-    const headingData = {
-      title: doctor.name,
+    if (doctor) {
+        const otherDoctors = doctorsData
+            .filter(d => d.slug !== doctor.slug)
+            .slice(0, 5)
+            .map(d => ({
+                name: d.name,
+                imageUrl: d.image,
+                profession: d.subtitle,
+                experience: d.experience,
+                link: `/${d.newSlug || d.slug + '-ivf-specialist'}`
+            }));
+
+        return (
+            <div className="cs_doctor_details_page">
+                <Section
+                    className={'cs_page_heading cs_bg_filed cs_center'}
+                    backgroundImage="/assets/img/Top-Header.png"
+                >
+                    <PageHeading data={{ title: doctor.name }} />
+                </Section>
+                <Section topSpaceLg="80" topSpaceMd="110" bottomSpaceLg="80" bottomSpaceMd="120">
+                    <DoctorDetailsSection data={doctor} otherDoctors={otherDoctors} />
+                </Section>
+            </div>
+        );
+    }
+
+    // 2. Check if it's an International Center Slug
+    const center = centresData.find(c => c.isInternational && c.slug === slug);
+    if (center) {
+        const cityName = center.name.split(',')[0].trim();
+        const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2.jpg');
+        
+        // Fetch Content and Services with Icons
+        const centerContentConfig = centresAllData.centerContent;
+        const rawCenterContent = centerContentConfig[center.slug] || centerContentConfig.default;
+        const servicesWithIcons = rawCenterContent.servicesWithIcons || centerContentConfig.default.servicesWithIcons;
+
+        const replaceCityName = (text) =>
+            typeof text === 'string' ? text.replace(/{{cityName}}/g, cityName) : text;
+
+        // FAQ Content Data
+        const rawFaqs = (centerContentConfig[center.slug] && centerContentConfig[center.slug].faqs) || centerContentConfig.default.faqs || [];
+        const faqContentData = rawFaqs.length > 0 ? {
+            sections: [
+                {
+                    heading: `Frequently Asked Questions`,
+                    steps: rawFaqs.map((faq) => ({
+                        title: replaceCityName(faq.question),
+                        description: replaceCityName(faq.answer),
+                    })),
+                },
+            ],
+        } : null;
+
+        return (
+            <BestIVFCentre 
+                center={center}
+                cityName={cityName} 
+                description={Array.isArray(center.description) ? center.description.join(' ') : center.description} 
+                services={servicesWithIcons}
+                doctorsData={doctorsData}
+                faqContentData={faqContentData}
+            />
+        );
+    }
+
+    // 3. Otherwise handle as State Page
+    if (!slug.startsWith('best-ivf-center-in-')) {
+        notFound();
+    }
+
+    const stateSlug = slug.replace('best-ivf-center-in-', '');
+    const filteredCentres = centresData.filter(c => c.stateSlug === stateSlug);
+
+    if (filteredCentres.length === 0) {
+        notFound();
+    }
+
+    const stateName = filteredCentres[0].state;
+    const rawStateContent =
+        stateContentConfig[stateSlug] || stateContentConfig.default;
+
+    const replaceStateName = (text) =>
+        typeof text === 'string' ? text.replace(/{{stateName}}/g, stateName) : text;
+
+    const stateContentData = {
+        ...rawStateContent,
+        sections: (rawStateContent.sections || []).map((section) => ({
+            ...section,
+            heading: replaceStateName(section.heading),
+            paragraphs: (section.paragraphs || []).map(replaceStateName),
+            listItems: (section.listItems || []).map(replaceStateName),
+            sideImage: section.sideImage ? getAssetPath(section.sideImage) : undefined,
+        })),
     };
 
+    const headingData = {
+        title: `${stateName}`,
+        uspTitle: rawStateContent.uspTitle,
+    };
+
+    const faqs = rawStateContent.faqs || stateContentConfig.default.faqs || [];
+
+    const faqContentData =
+        faqs.length > 0
+            ? {
+                sections: [
+                    {
+                        steps: faqs.map((faq) => ({
+                            title: replaceStateName(faq.question),
+                            description: replaceStateName(faq.answer),
+                        })),
+                    },
+                ],
+            }
+            : null;
+
     return (
-      <div>
-        <Section
-          className={'cs_page_heading cs_bg_filed cs_center'}
-          backgroundImage="/assets/img/Top-Header.jpg"
-        >
-          <PageHeading data={headingData} />
-        </Section>
+        <>
+            <Section
+                className={'cs_page_heading cs_bg_filed cs_center'}
+                backgroundImage={rawStateContent.headerImage || "/assets/img/Top-Header.png"}
+            >
+                <PageHeading data={headingData} />
+            </Section>
 
-        <Section
-          topSpaceLg="50"
-          topSpaceMd="60"
-          bottomSpaceLg="70"
-          bottomSpaceMd="120"
-        >
-          <DoctorDetailsSection data={doctor} otherDoctors={otherDoctors} />
-        </Section>
-      </div>
-    );
-  }
-  
-  // Handle IVF center route
-  // Extract city slug from the format: "best-ivf-centre-in-malviya-nagar" -> "malviya-nagar"
-  const citySlug = cleanSlug.replace(/^best-ivf-centre-in-/, '');
-  
-  // Special case: If slug is "best-ivf-centre-in-delhi", map to Malviya Nagar center
-  let center;
-  if (cleanSlug === 'best-ivf-centre-in-delhi') {
-    center = indiaCentresData.find((c) => {
-      return c.name === 'Malviya Nagar, Delhi' && c.stateSlug === 'delhi' && !c.isInternational;
-    });
-  } else {
-    // Find center by matching city name (without state requirement)
-    center = indiaCentresData.find((c) => {
-      if (c.isInternational) {
-        return false;
-      }
-      
-      // Extract city name from center name (e.g., "Pitampura, New Delhi" -> "Pitampura")
-      const cityName = c.name.split(',')[0].trim();
-      const centerCitySlug = cityNameToSlug(cityName);
-      
-      return centerCitySlug === citySlug;
-    });
-  }
-
-  if (!center) {
-    console.error(`Center not found for slug: ${cleanSlug}, citySlug: ${citySlug}`);
-    notFound();
-  }
-
-  // Extract city name from center name (e.g., "Ghaziabad, Uttar Pradesh" -> "Ghaziabad")
-  const cityName = center.name.split(',')[0].trim();
-
-  // Get doctors directly from india-centres-data.json (center.doctors array)
-  // Each doctor object contains: name, subtitle, image, experience, location, slug
-  const centerDoctors = center.doctors || [];
-
-  const headingData = {
-    title: center.name,
-  };
-
-  // Process images with basePath for production
-  const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2.jpg');
-  
-  const serviceData = {
-    serviceHeading: '',
-    services: [],
-    mainImage: processedCenterImage,
-    serviceDetails: [],
-    footerText: '',
-    additionalImages: processedCenterImage,
-    iconBoxes: [],
-    subtitle: '',
-    readMoreUrl: '/appointments',
-    readMoreText: 'Book Appointment',
-    benefitImages: [
-      processedCenterImage,
-      processedCenterImage
-    ],
-  };
-
-  // Generate Google Maps embed URL
-  const mapAddress = encodeURIComponent(center.location);
-  const mapUrl = `https://www.google.com/maps?q=${mapAddress}&output=embed`;
-
-  const centerContentData = {
-    sections: [
-      {
-        heading: `Best IVF Centre in ${cityName} – Bringing Hope to Parenthood`,
-        paragraphs: [
-          `Struggling with infertility can be emotionally and physically draining, but you are not alone. At Seeds of Innocens, our IVF Centre in ${cityName} is dedicated to turning your hopes of becoming a parent into reality. We offer advanced fertility treatments combined with personal care, giving couples the best chance of conceiving a healthy baby.`,
-        ],
-        sideImage: processedCenterImage,
-      },
-      {
-        heading: `Why Choose Seeds of Innocens IVF Centre in ${cityName}?`,
-        paragraphs: [
-          `We understand that every couple's fertility journey is different. That is why we offer customised treatment plans at our modern and fully equipped IVF hospital in ${cityName}. Here's what makes us stand out:`,
-        ],
-        listItems: [
-          `Experienced IVF Specialists: Our IVF specialists in ${cityName} are some of the most experienced fertility experts in the country. With years of successful treatments and compassionate care, they help couples feel confident and supported throughout their journey.`,
-          `Modern Infrastructure: Seeds of Innocens boasts a cutting-edge lab and fertility unit. From egg retrieval to embryo transfer, all processes are handled using the most advanced technology, making us a trusted IVF clinic in ${cityName}.`,
-          `Full Range of Fertility Services: Our fertility centre in ${cityName} provides a wide variety of services under one roof.`,
-        ],
-      },
-      {
-        heading: 'Services Offered',
-        paragraphs: [
-          'Our comprehensive fertility services include:',
-        ],
-        listItems: [
-          'IVF (In Vitro Fertilisation)',
-          'IUI (Intrauterine Insemination)',
-          'ICSI (Intracytoplasmic Sperm Injection)',
-          'Donor Egg and Donor Sperm programs',
-          'Surrogacy coordination',
-          'Genetic Testing for healthier embryo selection',
-          'Egg freezing and sperm freezing for future family planning',
-        ],
-      },
-      {
-        heading: 'Transparent Process and Emotional Support',
-        paragraphs: [
-          'We make sure our patients are involved in every step. There are no hidden costs or procedures. Our caring team ensures that you feel emotionally supported from consultation to delivery.',
-        ],
-      },
-      {
-        heading: `The IVF Process at Seeds of Innocens ${cityName}`,
-        paragraphs: [
-          `At our IVF Centre in ${cityName}, we believe in making the process as smooth as possible. Here is what the journey looks like:`,
-        ],
-        listItems: [
-          'Consultation and Testing: Our expert IVF specialist conducts a detailed medical review and performs essential fertility tests for both partners.',
-          'Creating a Treatment Plan: Based on test results, a personalised treatment plan is made for you. We clearly explain the approach and what to expect at each stage.',
-          'Ovarian Stimulation and Egg Retrieval: Medications are given to stimulate the ovaries. Once the eggs mature, they are collected safely from the ovaries.',
-          'Fertilisation and Embryo Monitoring: In our advanced lab, the eggs are fertilised with sperm. We closely monitor embryo development and also perform genetic testing if required.',
-          'Embryo Transfer: Healthy embryos are carefully placed in the uterus. This is a simple procedure, but highly important.',
-          'Pregnancy Test and Continued Support: Two weeks later, a blood test confirms pregnancy. If positive, we will continue to monitor and support you until a healthy delivery.',
-        ],
-      },
-      {
-        heading: `Trusted IVF Clinic in ${cityName}`,
-        paragraphs: [
-          `We are proud to be known as the best IVF clinic in ${cityName} due to our:`,
-        ],
-        listItems: [
-          'High success rates',
-          'Individualised treatment plans',
-          'Ethical and transparent practices',
-          'Experienced team of doctors and embryologists',
-          'Warm and compassionate patient care',
-        ],
-      },
-      {
-        heading: 'Your Reliable Partner',
-        paragraphs: [
-          `Whether you're looking for a well-known IVF centre near me or planning your fertility journey in ${cityName}, Seeds of Innocens is your reliable partner.`,
-        ],
-      },
-      {
-        heading: `Special Services Offered at Our ${cityName} Centre`,
-        paragraphs: [
-          `In addition to regular IVF services, we also offer:`,
-        ],
-        listItems: [
-          'Egg Freezing: Preserve your eggs today for a future pregnancy. Ideal for career planning, medical conditions, or personal reasons.',
-          'Genetic Testing (PGT-A/PGT-M): Ensure healthy pregnancies and lower risk of inherited conditions.',
-          'Donor Programs: We offer egg, sperm, and embryo donor support to suit your needs.',
-          'Fertility Counselling: A licensed counsellor is always available to support your emotional well-being during treatment.',
-        ],
-      },
-      {
-        heading: 'Easy to Reach, Easy to Trust',
-        paragraphs: [
-          `Our IVF centre in ${cityName} is located at a convenient spot, making it accessible for patients from ${cityName} and nearby regions. With Seeds of Innocens, your search for an expert IVF centre near me ends here.`,
-        ],
-      },
-      {
-        heading: `Affordable IVF Treatment in ${cityName}`,
-        paragraphs: [
-          'Infertility treatment should be accessible to everyone. That\'s why we offer fair and transparent pricing. Our packages for IVF treatment are designed to suit various needs without compromising on quality or care.',
-        ],
-      },
-      {
-        heading: 'Words from Our Happy Parents',
-        paragraphs: [
-          'We are honoured to have helped thousands of couples bring their babies into the world. Many have shared their inspiring stories of success after receiving treatment from our IVF hospital.',
-        ],
-      },
-      {
-        heading: 'Let Us Help You Begin Your Journey',
-        paragraphs: [
-          `Seeds of Innocens is more than just a fertility centre in ${cityName}. It is a place where science meets hope. If you are dreaming of becoming a parent, we are here to make that dream come true with care, commitment, and compassion.`,
-        ],
-      },
-    ],
-  };
-
-  const locationContentData = {
-    sections: [
-      {
-        heading: `Seeds of Innocens - Best IVF Centre in ${cityName}`,
-        paragraphs: [
-          `Open Days: All Days (Monday to Sunday)`,
-          `Timings: ${center.timing || '9:00 AM to 6:00 PM'}`,
-          `Email: ${center.email}`,
-          `Phone: ${center.phone}`,
-          `Address: ${center.location}`,
-        ],
-        sideImage: mapUrl,
-        isMapEmbed: true,
-      },
-    ],
-  };
-
-  return (
-    <div>
-      <Section
-        className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
-      >
-        <PageHeading data={headingData} />
-      </Section>
-
-      {/* Main Content Section */}
-      <Section
-        topSpaceLg="50"
-        topSpaceMd="60"
-        bottomSpaceLg="50"
-        bottomSpaceMd="60"
-      >
-        <div className="container">
-          {/* Content Section - Centered and Full Width */}
-          <div className="row">
-            <div className="col-12">
-              <IVFContentSection data={centerContentData} benefitImages={serviceData.benefitImages} />
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* Doctor Information Section */}
-      {centerDoctors.length > 0 && (
-        <Section
-          topSpaceLg="0"
-          topSpaceMd="0"
-          bottomSpaceLg="50"
-          bottomSpaceMd="60"
-        >
-          <div className="container">
-            <h2 className="cs_ivf_content_heading" style={{marginBottom: '30px' }}>
-              Available Doctors at {center.name}
-            </h2>
-            <div className="cs_doctors_grid cs_style_1">
-              {centerDoctors.map((doctor, index) => (
-                <div className="cs_team cs_style_1 cs_blue_bg" key={index}>
-                  <div className="cs_team_shape cs_accent_bg" />
-                  {(() => {
-                    const doctorData = doctorsData.find(d => d.slug === doctor.slug);
-                    const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
-                    return doctorLink ? (
-                      <Link href={doctorLink} className="cs_team_thumbnail">
-                        <Image 
-                          src={getAssetPath(doctor.image)} 
-                          alt={`${doctor.name} Thumbnail`} 
-                          width={302} 
-                          height={423}
-                          loading="eager"
-                        />
-                      </Link>
-                    ) : (
-                      <div className="cs_team_thumbnail">
-                        <Image 
-                          src={getAssetPath(doctor.image)} 
-                          alt={`${doctor.name} Thumbnail`} 
-                          width={302} 
-                          height={423}
-                          loading="eager"
-                        />
-                      </div>
-                    );
-                  })()}
-                  <div className="cs_team_bio">
-                    <h3 className="cs_team_title cs_extra_bold mb-0">
-                      {(() => {
-                        const doctorData = doctorsData.find(d => d.slug === doctor.slug);
-                        const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
-                        return doctorLink ? (
-                          <Link href={doctorLink}>{doctor.name}</Link>
-                        ) : (
-                          <span>{doctor.name}</span>
-                        );
-                      })()}
-                    </h3>
-                    <p className="cs_team_subtitle">{doctor.subtitle}</p>
-                    {doctor.experience && (
-                      <p className="cs_team_experience" style={{ color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                        <FaSuitcase style={{ fontSize: '14px' }} />
-                        <span>{doctor.experience} Experience</span>
-                      </p>
-                    )}
-                    {doctor.location && (
-                      <p style={{ color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0' }}>
-                        <FaLocationDot style={{ fontSize: '14px' }} />
-                        <span>{doctor.location}</span>
-                      </p>
-                    )}
-                  </div>
+            <Section topSpaceLg="50" topSpaceMd="60" bottomSpaceLg="50" bottomSpaceMd="60">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <IVFContentSection data={stateContentData} />
+                        </div>
+                    </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      )}
+            </Section>
 
-      {/* Location Section */}
-      <Section
-        topSpaceLg="0"
-        topSpaceMd="0"
-        bottomSpaceLg="70"
-        bottomSpaceMd="120"
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <IVFContentSection data={locationContentData} />
-            </div>
-          </div>
-        </div>
-      </Section>
-    </div>
-  );
+            <Section topSpaceLg="30" topSpaceMd="30" bottomSpaceLg="80" bottomSpaceMd="50">
+                <div className="container">
+                    <h2 className="cs_section_heading cs_style_1 text-center mb-5">Our Centres in {stateName}</h2>
+                    <div className="row cs_gap_y_40">
+                        {filteredCentres.map((centre, index) => (
+                            <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
+                                <div className="cs_centre_card_premium cs_white_bg cs_radius_15 overflow-hidden position-relative h-100 d-flex flex-column"
+                                    style={{
+                                        boxShadow: '0px 10px 30px 0px rgba(0, 0, 0, 0.08)',
+                                        border: '1px solid var(--border-color)',
+                                        borderRadius: '15px'
+                                    }}>
+                                    <Link href={getCenterLink(centre)} className="cs_centre_thumbnail position-relative overflow-hidden" style={{ height: '260px', display: 'block' }}>
+                                        <Image
+                                            src={getAssetPath(centre.image || '/assets/img/recent_post2.jpg')}
+                                            alt={centre.name}
+                                            width={500}
+                                            height={350}
+                                            className="w-100 h-100"
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                        <div className="cs_centre_badge position-absolute" style={{ top: '20px', left: '20px', backgroundColor: 'var(--accent-color)', color: '#fff', padding: '6px 16px', borderRadius: '50px', fontSize: '13px', fontWeight: 'bold', letterSpacing: '0.5px', textTransform: 'uppercase', zIndex: '2' }}>
+                                            {centre.state}
+                                        </div>
+                                    </Link>
+                                    <div className="cs_centre_content p-4 d-flex flex-column flex-grow-1">
+                                        <h3 className="cs_centre_title mb-3" style={{ fontSize: '24px', fontWeight: '700', fontFamily: 'var(--heading-font)', color: 'var(--heading-color)', lineHeight: '1.3' }}>
+                                            <Link href={getCenterLink(centre)} style={{ color: 'inherit', textDecoration: 'none' }}>
+                                                {centre.name}
+                                            </Link>
+                                        </h3>
+                                        <div className="cs_centre_location_box mb-4 flex-grow-1 d-flex align-items-start gap-2">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0, marginTop: '3px', color: 'var(--accent-color)', width: '20px', height: '20px' }}>
+                                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor" />
+                                            </svg>
+                                            <p className="mb-0" style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                                                {centre.location}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </Section>
+
+            {faqContentData && (
+                <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="80" bottomSpaceMd="50">
+                    <div className="container">
+                        <div className="cs_section_heading cs_style_1 text-center mb-5">
+                            <h2 className="cs_section_title">Frequently Asked Questions</h2>
+                        </div>
+                        <div className="row">
+                            <div className="col-12">
+                                <IVFContentSection data={faqContentData} />
+                            </div>
+                        </div>
+                    </div>
+                </Section>
+            )}
+        </>
+    );
 };
 
-export default page;
-
+export default DynamicPage;

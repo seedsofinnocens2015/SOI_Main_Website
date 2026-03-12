@@ -127,7 +127,7 @@
     color: #000000;
     margin: 0;
     letter-spacing: 0.5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.742);
+    // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.742);
 
     @media (max-width: 991px) {
       font-size: clamp(20px, 3.5vw, 32px);
@@ -209,7 +209,7 @@
       width: 100px;
       height: 100px;
       display: block;
-      background-color: var(--cta-icon-color, #CB3148);
+      background-color: var(--cta-icon-color, #df3655);
       -webkit-mask-image: var(--cta-icon-url);
       mask-image: var(--cta-icon-url);
       -webkit-mask-repeat: no-repeat;
@@ -277,7 +277,7 @@
   }
 
   .cs_cta_card:hover .cs_cta_card_link {
-    color: #A1B057;
+    color: #de3554;
   }
 
   .cs_cta_shape {

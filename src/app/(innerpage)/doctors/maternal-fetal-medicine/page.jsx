@@ -50,7 +50,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -83,7 +83,7 @@ const page = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12" style={{ textAlign: 'center', marginBottom: '40px' }}>
-              <h2 style={{ 
+              <h2 style={{
                 fontSize: '42px',
                 fontWeight: '700',
                 color: '#0A2A43',

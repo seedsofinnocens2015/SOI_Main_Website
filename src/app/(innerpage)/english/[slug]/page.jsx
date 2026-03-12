@@ -31,7 +31,7 @@ const getCategoryRoute = (category) => {
     'Doctor Insights': 'doctor-insights',
     'News & Press': 'news-press',
   };
-  
+
   return categoryRouteMap[category] || category.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '');
 };
 
@@ -47,7 +47,7 @@ const BlogDetailPage = async ({ params }) => {
       <div>
         <Section
           className={'cs_page_heading cs_bg_filed cs_center'}
-          backgroundImage="/assets/img/Top-Header.jpg"
+          backgroundImage="/assets/img/Top-Header.png"
         >
           <PageHeading data={{ title: 'Blog Not Found' }} />
         </Section>
@@ -86,7 +86,7 @@ const BlogDetailPage = async ({ params }) => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -97,7 +97,7 @@ const BlogDetailPage = async ({ params }) => {
           <div className="row">
             {/* Back Button */}
             <div className="col-lg-12" style={{ marginBottom: '30px' }}>
-              <Link 
+              <Link
                 href={`/resources/blogs/${getCategoryRoute(blog.category)}`}
                 style={{
                   display: 'inline-flex',
@@ -204,7 +204,7 @@ const BlogDetailPage = async ({ params }) => {
                   </div>
 
                   {/* Blog Content */}
-                  <div 
+                  <div
                     className="blog-content"
                     style={{
                       fontSize: '16px',
@@ -221,7 +221,7 @@ const BlogDetailPage = async ({ params }) => {
             {/* Sidebar */}
             <div className="col-lg-4">
               <div style={{ position: 'sticky', top: '20px' }}>
-               
+
 
                 {/* CTA Section */}
                 <div style={{
@@ -267,14 +267,14 @@ const BlogDetailPage = async ({ params }) => {
                   </Link>
                 </div>
 
-                 {/* Related Blogs */}
-                 {relatedBlogs.length > 0 && (
+                {/* Related Blogs */}
+                {relatedBlogs.length > 0 && (
                   <div style={{
                     backgroundColor: '#fff',
                     borderRadius: '12px',
                     padding: '30px',
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
-                    
+
                   }}>
                     <h3 style={{
                       fontSize: '22px',

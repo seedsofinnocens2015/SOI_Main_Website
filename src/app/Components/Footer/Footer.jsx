@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAssetPathClient } from '../../utils/assetPath';
 
-const SOCIAL_COLORS = ['#CB3148', '#53A7A7', '#E1B41A', '#38425B'];
+const SOCIAL_COLORS = ['#df3655', '#53A7A7', '#E1B41A', '#38425B'];
 
 const Footer = () => {
   const data = {

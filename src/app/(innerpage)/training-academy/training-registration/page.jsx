@@ -47,7 +47,7 @@ const Page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -78,9 +78,9 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#ffffff', 
+              <div style={{
+                padding: '40px',
+                backgroundColor: '#ffffff',
                 borderRadius: '12px',
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8',
@@ -89,7 +89,7 @@ const Page = () => {
                 <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
                   Registration Form
                 </h2>
-                
+
                 <form className="cs_contact_form">
                   <div className="row cs_gap_y_30">
                     <div className="col-md-12">
@@ -182,8 +182,8 @@ const Page = () => {
                       />
                     </div>
                     <div className="col-md-12">
-                      <label style={{ 
-                        display: 'flex', 
+                      <label style={{
+                        display: 'flex',
                         alignItems: 'flex-start',
                         cursor: 'pointer',
                         gap: '10px'
@@ -212,9 +212,9 @@ const Page = () => {
                 </form>
               </div>
 
-              <div style={{ 
-                padding: '30px', 
-                backgroundColor: '#f8f9fa', 
+              <div style={{
+                padding: '30px',
+                backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
                 borderLeft: '4px solid #E45352'
               }}>

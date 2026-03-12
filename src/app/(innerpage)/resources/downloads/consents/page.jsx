@@ -126,7 +126,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -142,11 +142,11 @@ const page = () => {
           {/* First Content Section Only */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection 
+              <IVFContentSection
                 data={{
                   sections: [consentsContentData.sections[0]]
-                }} 
-                benefitImages={serviceData.benefitImages} 
+                }}
+                benefitImages={serviceData.benefitImages}
               />
             </div>
           </div>
@@ -165,8 +165,8 @@ const page = () => {
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
             {consents.map((consent, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <div className="cs_iconbox cs_style_2 cs_radius_15" style={{ 
-                  height: '100%', 
+                <div className="cs_iconbox cs_style_2 cs_radius_15" style={{
+                  height: '100%',
                   padding: '30px',
                   display: 'flex',
                   flexDirection: 'column',
@@ -177,20 +177,20 @@ const page = () => {
                   boxShadow: consent.important ? '0px 4px 15px rgba(255, 152, 0, 0.15)' : '0px 2px 10px rgba(0, 0, 0, 0.05)',
                   overflow: 'hidden'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = consent.important ? '0px 8px 25px rgba(255, 152, 0, 0.25)' : '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                  if (!consent.important) {
-                    e.currentTarget.style.borderColor = 'var(--accent-color)';
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = consent.important ? '0px 4px 15px rgba(255, 152, 0, 0.15)' : '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                  if (!consent.important) {
-                    e.currentTarget.style.borderColor = '#e8e8e8';
-                  }
-                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-5px)';
+                    e.currentTarget.style.boxShadow = consent.important ? '0px 8px 25px rgba(255, 152, 0, 0.25)' : '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                    if (!consent.important) {
+                      e.currentTarget.style.borderColor = 'var(--accent-color)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = consent.important ? '0px 4px 15px rgba(255, 152, 0, 0.15)' : '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                    if (!consent.important) {
+                      e.currentTarget.style.borderColor = '#e8e8e8';
+                    }
+                  }}
                 >
                   {consent.important && (
                     <div style={{
@@ -222,16 +222,16 @@ const page = () => {
                       justifyContent: 'center',
                       transition: 'all 0.3s ease'
                     }}>
-                      <Image 
-                        src={consent.icon} 
-                        alt={consent.name} 
-                        width={40} 
+                      <Image
+                        src={consent.icon}
+                        alt={consent.name}
+                        width={40}
                         height={40}
                         style={{ objectFit: 'contain' }}
                       />
                     </div>
-                    <h3 className="cs_iconbox_title" style={{ 
-                      fontSize: '20px', 
+                    <h3 className="cs_iconbox_title" style={{
+                      fontSize: '20px',
                       marginBottom: '12px',
                       fontWeight: '600',
                       color: '#1a1a1a',
@@ -240,28 +240,28 @@ const page = () => {
                     }}>
                       {consent.name}
                     </h3>
-                    <p className="cs_iconbox_subtitle" style={{ 
-                      fontSize: '13px', 
+                    <p className="cs_iconbox_subtitle" style={{
+                      fontSize: '13px',
                       color: '#666',
                       marginBottom: '15px',
                       fontWeight: '500'
                     }}>
                       {consent.size}
                     </p>
-                    <p className="cs_iconbox_subtitle" style={{ 
-                      fontSize: '14px', 
-                      lineHeight: '1.7', 
+                    <p className="cs_iconbox_subtitle" style={{
+                      fontSize: '14px',
+                      lineHeight: '1.7',
                       marginBottom: '20px',
                       color: '#555'
                     }}>
                       {consent.description}
                     </p>
                   </div>
-                  <a 
+                  <a
                     href={consent.downloadUrl}
                     className="cs_btn cs_style_1 cs_color_1"
-                    style={{ 
-                      width: '100%', 
+                    style={{
+                      width: '100%',
                       textAlign: 'center',
                       textDecoration: 'none',
                       display: 'block',
@@ -291,11 +291,11 @@ const page = () => {
           {/* Remaining Content Sections */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection 
+              <IVFContentSection
                 data={{
                   sections: consentsContentData.sections.slice(1)
-                }} 
-                benefitImages={serviceData.benefitImages} 
+                }}
+                benefitImages={serviceData.benefitImages}
               />
             </div>
           </div>
@@ -305,9 +305,9 @@ const page = () => {
           {/* Important Information */}
           <div className="row">
             <div className="col-lg-10 mx-auto">
-              <div className="cs_ivf_content_section" style={{ 
-                padding: '30px', 
-                backgroundColor: '#fff3cd', 
+              <div className="cs_ivf_content_section" style={{
+                padding: '30px',
+                backgroundColor: '#fff3cd',
                 borderRadius: '10px',
                 borderLeft: '4px solid #ffc107'
               }}>

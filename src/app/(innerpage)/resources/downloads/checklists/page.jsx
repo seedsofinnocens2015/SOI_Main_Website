@@ -148,7 +148,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -164,11 +164,11 @@ const page = () => {
           {/* First Content Section Only */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection 
+              <IVFContentSection
                 data={{
                   sections: [checklistsContentData.sections[0]]
-                }} 
-                benefitImages={serviceData.benefitImages} 
+                }}
+                benefitImages={serviceData.benefitImages}
               />
             </div>
           </div>
@@ -187,8 +187,8 @@ const page = () => {
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
             {checklists.map((checklist, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <div className="cs_iconbox cs_style_2 cs_radius_15" style={{ 
-                  height: '100%', 
+                <div className="cs_iconbox cs_style_2 cs_radius_15" style={{
+                  height: '100%',
                   padding: '30px',
                   display: 'flex',
                   flexDirection: 'column',
@@ -199,16 +199,16 @@ const page = () => {
                   position: 'relative',
                   overflow: 'hidden'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                  e.currentTarget.style.borderColor = 'var(--accent-color)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                  e.currentTarget.style.borderColor = '#e8e8e8';
-                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-5px)';
+                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                    e.currentTarget.style.borderColor = 'var(--accent-color)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                    e.currentTarget.style.borderColor = '#e8e8e8';
+                  }}
                 >
                   <div className="cs_iconbox_header mb-3" style={{ flex: 1 }}>
                     <div className="cs_iconbox_icon cs_center mb-3" style={{
@@ -222,16 +222,16 @@ const page = () => {
                       justifyContent: 'center',
                       transition: 'all 0.3s ease'
                     }}>
-                      <Image 
-                        src={checklist.icon} 
-                        alt={checklist.name} 
-                        width={40} 
+                      <Image
+                        src={checklist.icon}
+                        alt={checklist.name}
+                        width={40}
                         height={40}
                         style={{ objectFit: 'contain' }}
                       />
                     </div>
-                    <h3 className="cs_iconbox_title" style={{ 
-                      fontSize: '20px', 
+                    <h3 className="cs_iconbox_title" style={{
+                      fontSize: '20px',
                       marginBottom: '12px',
                       fontWeight: '600',
                       color: '#1a1a1a',
@@ -239,24 +239,24 @@ const page = () => {
                     }}>
                       {checklist.name}
                     </h3>
-                    <p className="cs_iconbox_subtitle" style={{ 
-                      fontSize: '13px', 
+                    <p className="cs_iconbox_subtitle" style={{
+                      fontSize: '13px',
                       color: '#666',
                       marginBottom: '15px',
                       fontWeight: '500'
                     }}>
                       {checklist.size}
                     </p>
-                    <p className="cs_iconbox_subtitle" style={{ 
-                      fontSize: '14px', 
-                      lineHeight: '1.7', 
+                    <p className="cs_iconbox_subtitle" style={{
+                      fontSize: '14px',
+                      lineHeight: '1.7',
                       marginBottom: '15px',
                       color: '#555'
                     }}>
                       {checklist.description}
                     </p>
-                    <ul className="cs_mp_0" style={{ 
-                      listStyle: 'none', 
+                    <ul className="cs_mp_0" style={{
+                      listStyle: 'none',
                       paddingLeft: '0',
                       fontSize: '13px',
                       marginBottom: '15px',
@@ -265,17 +265,17 @@ const page = () => {
                       borderRadius: '8px'
                     }}>
                       {checklist.items.slice(0, 3).map((item, itemIndex) => (
-                        <li key={itemIndex} style={{ 
-                          marginBottom: '8px', 
-                          paddingLeft: '20px', 
+                        <li key={itemIndex} style={{
+                          marginBottom: '8px',
+                          paddingLeft: '20px',
                           position: 'relative',
                           color: '#555',
                           lineHeight: '1.5'
                         }}>
-                          <span style={{ 
-                            position: 'absolute', 
-                            left: '0', 
-                            color: 'var(--accent-color)', 
+                          <span style={{
+                            position: 'absolute',
+                            left: '0',
+                            color: 'var(--accent-color)',
                             fontSize: '16px',
                             fontWeight: 'bold'
                           }}>•</span>
@@ -283,8 +283,8 @@ const page = () => {
                         </li>
                       ))}
                       {checklist.items.length > 3 && (
-                        <li style={{ 
-                          color: '#999', 
+                        <li style={{
+                          color: '#999',
                           fontStyle: 'italic',
                           fontSize: '12px',
                           marginTop: '5px'
@@ -294,11 +294,11 @@ const page = () => {
                       )}
                     </ul>
                   </div>
-                  <a 
+                  <a
                     href={checklist.downloadUrl}
                     className="cs_btn cs_style_1 cs_color_1"
-                    style={{ 
-                      width: '100%', 
+                    style={{
+                      width: '100%',
                       textAlign: 'center',
                       textDecoration: 'none',
                       display: 'block',
@@ -328,11 +328,11 @@ const page = () => {
           {/* Remaining Content Sections */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection 
+              <IVFContentSection
                 data={{
                   sections: checklistsContentData.sections.slice(1)
-                }} 
-                benefitImages={serviceData.benefitImages} 
+                }}
+                benefitImages={serviceData.benefitImages}
               />
             </div>
           </div>
@@ -342,9 +342,9 @@ const page = () => {
           {/* Tips Section */}
           <div className="row">
             <div className="col-lg-10 mx-auto">
-              <div className="cs_ivf_content_section" style={{ 
-                padding: '30px', 
-                backgroundColor: '#e8f5e9', 
+              <div className="cs_ivf_content_section" style={{
+                padding: '30px',
+                backgroundColor: '#e8f5e9',
                 borderRadius: '10px',
                 borderLeft: '4px solid #4caf50'
               }}>

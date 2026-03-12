@@ -75,7 +75,7 @@ const Page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -107,9 +107,9 @@ const Page = () => {
 
           <div className="row cs_gap_y_40">
             <div className="col-lg-8">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#ffffff', 
+              <div style={{
+                padding: '40px',
+                backgroundColor: '#ffffff',
                 borderRadius: '12px',
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8'
@@ -117,7 +117,7 @@ const Page = () => {
                 <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
                   Call Back Request Form
                 </h2>
-                
+
                 {error && (
                   <div style={{
                     padding: '12px 16px',
@@ -230,9 +230,9 @@ const Page = () => {
                 </form>
               </div>
 
-              <div style={{ 
-                padding: '30px', 
-                backgroundColor: '#f8f9fa', 
+              <div style={{
+                padding: '30px',
+                backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
                 marginTop: '30px',
                 borderLeft: '4px solid #E45352'
@@ -250,7 +250,7 @@ const Page = () => {
             </div>
             <div className="col-lg-4">
               <div className="cs_sidebar">
-                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{ 
+                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{
                   padding: '30px',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'
@@ -275,7 +275,7 @@ const Page = () => {
                   </ul>
                 </div>
 
-                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{ 
+                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{
                   padding: '30px',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'
@@ -300,7 +300,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="cs_sidebar_widget cs_gray_bg" style={{ 
+                <div className="cs_sidebar_widget cs_gray_bg" style={{
                   padding: '30px',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'

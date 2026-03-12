@@ -210,7 +210,7 @@ const HeroSection = ({ data }) => {
     fade: false,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     pauseOnFocus: true,
     pauseOnDotsHover: true,

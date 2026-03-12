@@ -19,7 +19,7 @@ const Page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -34,10 +34,10 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#fff', 
-                borderRadius: '8px', 
+              <div style={{
+                padding: '40px',
+                backgroundColor: '#fff',
+                borderRadius: '8px',
                 boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
                 textAlign: 'center'
               }}>
@@ -45,7 +45,7 @@ const Page = () => {
                 <p style={{ marginBottom: '30px', color: '#666', fontSize: '16px' }}>
                   Please click the button below to access the detailed preparation guidelines document.
                 </p>
-                
+
                 <div style={{ marginBottom: '30px' }}>
                   <a
                     href="https://drive.google.com/file/d/1MIsb2lxru4T-MRzob1gQKhR_R33MdLbk/view"
@@ -85,7 +85,7 @@ const Page = () => {
                 </div>
 
                 <div style={{ marginTop: '20px' }}>
-                  <Link 
+                  <Link
                     href="/advanced-fertility-care/semen-analysis-at-home"
                     style={{
                       color: '#007bff',

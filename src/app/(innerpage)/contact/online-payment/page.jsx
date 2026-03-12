@@ -13,7 +13,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -33,11 +33,11 @@ const page = () => {
                 <p style={{ marginBottom: '30px', color: '#666', fontSize: '16px' }}>
                   Scan the QR code below to make your payment securely. You can use any UPI app or payment method to complete your transaction.
                 </p>
-                
+
                 <div style={{ marginBottom: '30px', display: 'flex', justifyContent: 'center' }}>
-                  <div style={{ 
-                    width: '500px', 
-                    height: '500px', 
+                  <div style={{
+                    width: '500px',
+                    height: '500px',
                     padding: '20px',
                     display: 'flex',
                     alignItems: 'center',
@@ -48,8 +48,8 @@ const page = () => {
                       alt="Payment QR Code"
                       width={300}
                       height={300}
-                      style={{ 
-                        maxWidth: '100%', 
+                      style={{
+                        maxWidth: '100%',
                         height: 'auto',
                         objectFit: 'contain'
                       }}

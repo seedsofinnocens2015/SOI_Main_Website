@@ -165,82 +165,82 @@ const Header = ({ isTopBar, variant }) => {
             subItems: [
               {
                 label: 'Delhi',
-                href: '',
+                href: '/best-ivf-center-in-delhi',
                 subItems: [
-                  { label: 'Malviya Nagar, New Delhi', href: '/best-ivf-centre-in-delhi' },
-                  { label: 'Pitampura, New Delhi', href: '/best-ivf-centre-in-pitampura' },
-                  { label: 'Janakpuri, New Delhi', href: '/best-ivf-centre-in-janakpuri' },
+                  { label: 'Malviya Nagar, New Delhi', href: '/delhi/best-ivf-centre-in-malviyanagar/' },
+                  { label: 'Pitampura, New Delhi', href: '/delhi/best-ivf-centre-in-pitampura/' },
+                  { label: 'Janakpuri, New Delhi', href: '/delhi/best-ivf-centre-in-janakpuri/' },
                 ],
               },
               {
                 label: 'Uttar Pradesh',
-                href: '',
+                href: '/best-ivf-center-in-uttar-pradesh',
                 subItems: [
-                  { label: 'Ghaziabad, Uttar Pradesh', href: '/best-ivf-centre-in-ghaziabad' },
-                  { label: 'Lucknow, Uttar Pradesh', href: '/best-ivf-centre-in-lucknow' },
-                  { label: 'Agra, Uttar Pradesh', href: '/best-ivf-centre-in-agra' },
-                  { label: 'Gorakhpur, Uttar Pradesh', href: '/best-ivf-centre-in-gorakhpur' },
-                  { label: 'Kanpur, Uttar Pradesh', href: '/best-ivf-centre-in-kanpur' },
-                  { label: 'Meerut, Uttar Pradesh', href: '/best-ivf-centre-in-meerut' },
+                  { label: 'Ghaziabad, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-ghaziabad/' },
+                  { label: 'Lucknow, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-lucknow/' },
+                  { label: 'Agra, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-agra/' },
+                  { label: 'Gorakhpur, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-gorakhpur/' },
+                  { label: 'Kanpur, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-kanpur/' },
+                  { label: 'Meerut, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-meerut/' },
                 ],
               },
               {
                 label: 'Bihar',
-                href: '',
+                href: '/best-ivf-center-in-bihar',
                 subItems: [
-                  { label: 'Patna, Bihar', href: '/best-ivf-centre-in-patna' },
-                  { label: 'Muzaffarpur, Bihar', href: '/best-ivf-centre-in-muzaffarpur' },
+                  { label: 'Patna, Bihar', href: '/bihar/best-ivf-centre-in-patna/' },
+                  { label: 'Muzaffarpur, Bihar', href: '/bihar/best-ivf-centre-in-muzaffarpur/' },
                 ],
               },
               {
                 label: 'Haryana',
-                href: '',
+                href: '/best-ivf-center-in-haryana',
                 subItems: [
-                  { label: 'Faridabad, Haryana', href: '/best-ivf-centre-in-faridabad' },
-                  { label: 'Gurugram, Haryana', href: '/best-ivf-centre-in-gurugram' },
+                  { label: 'Faridabad, Haryana', href: '/haryana/best-ivf-centre-in-faridabad/' },
+                  { label: 'Gurugram, Haryana', href: '/haryana/best-ivf-centre-in-gurugram/' },
                 ],
               },
               {
                 label: 'Jharkhand',
-                href: '',
+                href: '/best-ivf-center-in-jharkhand',
                 subItems: [
-                  { label: 'Ranchi, Jharkhand', href: '/best-ivf-centre-in-ranchi' },
+                  { label: 'Ranchi, Jharkhand', href: '/jharkhand/best-ivf-centre-in-ranchi/' },
                 ],
               },
               {
                 label: 'Uttarakhand',
-                href: '',
+                href: '/best-ivf-center-in-uttarakhand',
                 subItems: [
-                  { label: 'Haldwani, Uttarakhand', href: '/best-ivf-centre-in-haldwani' },
+                  { label: 'Haldwani, Uttarakhand', href: '/uttarakhand/best-ivf-centre-in-haldwani/' },
                 ],
               },
               {
                 label: 'Assam',
-                href: '',
+                href: '/best-ivf-center-in-assam',
                 subItems: [
-                  { label: 'Guwahati, Assam', href: '/best-ivf-centre-in-guwahati' },
+                  { label: 'Guwahati, Assam', href: '/assam/best-ivf-centre-in-guwahati/' },
                 ],
               },
               {
                 label: 'Kerala',
-                href: '',
+                href: '/best-ivf-center-in-kerala',
                 subItems: [
-                  { label: 'Kasaragod, Kerala', href: '/best-ivf-centre-in-kasaragod' },
-                  { label: 'Kochi, Kerala', href: '/best-ivf-centre-in-kochi' },
+                  { label: 'Kasaragod, Kerala', href: '/kerala/best-ivf-centre-in-kasaragod/' },
+                  { label: 'Kochi, Kerala', href: '/kerala/best-ivf-centre-in-kochi/' },
                 ],
               },
               {
                 label: 'Jammu & Kashmir',
-                href: '',
+                href: '/best-ivf-center-in-jammu-kashmir',
                 subItems: [
-                  { label: 'Srinagar, J&K', href: '/best-ivf-centre-in-srinagar' },
+                  { label: 'Srinagar, J&K', href: '/jammu-kashmir/best-ivf-centre-in-srinagar/' },
                 ],
               },
               {
                 label: 'West Bengal',
-                href: '',
+                href: '/best-ivf-center-in-west-bengal',
                 subItems: [
-                  { label: 'Kolkata', href: '/best-ivf-centre-in-kolkata' },
+                  { label: 'Kolkata', href: '/west-bengal/best-ivf-centre-in-kolkata/' },
                 ],
               },
             ],
@@ -249,9 +249,9 @@ const Header = ({ isTopBar, variant }) => {
             label: 'International',
             href: '/ivf-centres/international',
             subItems: [
-              { label: 'Lusaka, Zambia, Africa', href: '/lusaka-zambia-ivf-centre' },
+              { label: 'Lusaka, Zambia, Africa', href: '/best-ivf-centre-in-lusaka-zambia' },
               { label: 'Kitwe, Zambia, Africa', href: '/best-ivf-centre-in-kitwe-zambia' },
-              { label: 'Mabela, Muscat, Oman', href: '/best-ivf-centre-in-muscat-oman' },
+              { label: 'Mabela, Muscat, Oman', href: '/best-ivf-centre-in-mabela-muscat' },
             ],
           },
         ],
@@ -540,12 +540,12 @@ const Header = ({ isTopBar, variant }) => {
                   </div>
                   <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
                   <div className="cs_top_bar_separator"></div>
-                  <span className="cs_timing_text">India Mon - Sun: 9:00 am - 7:00 pm,</span>
+                  <span className="cs_timing_text">India Mon - Sun: 9:00 am - 6:00 pm</span>
                 </div>
               </div>
               <div className="cs_top_bar_right">
                 <a href="/new/dr-gauri-agarwal-ivf-specialist/" className="cs_location_text">
-                  Dr. Gauri Agarwal, MD
+                  Dr. Gauri Agarwal
                 </a>
                 <a href="tel:+91-9810350512" className="cs_phone_banner">
                   <div className="cs_phone_icon">
@@ -728,7 +728,7 @@ const Header = ({ isTopBar, variant }) => {
             </div>
           </div>
         </div>
-        
+
         <div className="cs_main_header">
           <div className="container">
             <div className="cs_main_header_in cs_compact_gap">
@@ -856,11 +856,11 @@ const Header = ({ isTopBar, variant }) => {
                                                           href={subItem.href}
                                                           prefetch={false}
                                                           onClick={(e) => {
-                                                            if (item.label === 'IVF Centers' && category.label === 'India') {
+                                                            if (item.label === 'IVF Centers' && category.label === 'India' && !subItem.href) {
                                                               e.preventDefault();
                                                             }
                                                             // Close mobile menu on navigation
-                                                            if (isMobileView) {
+                                                            if (isMobileView && subItem.href) {
                                                               setIsShowMobileMenu(false);
                                                             }
                                                           }}
@@ -913,7 +913,7 @@ const Header = ({ isTopBar, variant }) => {
                                                       href={subItem.href}
                                                       prefetch={false}
                                                       onClick={(e) => {
-                                                        if (item.label === 'IVF Centers' && category.label === 'India') {
+                                                        if (item.label === 'IVF Centers' && category.label === 'India' && !subItem.href) {
                                                           e.preventDefault();
                                                         } else {
                                                           // Close mobile menu on navigation
@@ -1065,7 +1065,7 @@ const Header = ({ isTopBar, variant }) => {
                                             href={subItem.href}
                                             prefetch={false}
                                             onClick={(e) => {
-                                              if (item.label === 'IVF Centers' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India') {
+                                              if (item.label === 'IVF Centers' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India' && !subItem.href) {
                                                 e.preventDefault();
                                               }
                                             }}

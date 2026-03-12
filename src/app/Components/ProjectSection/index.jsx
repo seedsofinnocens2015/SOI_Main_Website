@@ -41,12 +41,12 @@ const ProjectSection = ({ data }) => {
       "agra, uttar pradesh",
     ]);
 
-    if (groupCB3148.has(key)) return "#CB3148";
+    if (groupCB3148.has(key)) return "#df3655";
     if (group53A7A7.has(key)) return "#53A7A7";
     if (groupE1B41A.has(key)) return "#E1B41A";
     if (group38425B.has(key)) return "#38425B";
 
-    return "#CB3148";
+    return "#df3655";
   };
   
   // Separate India and International locations

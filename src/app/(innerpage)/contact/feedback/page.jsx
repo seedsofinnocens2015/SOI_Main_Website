@@ -31,7 +31,7 @@ const Page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -63,9 +63,9 @@ const Page = () => {
 
           <div className="row cs_gap_y_40">
             <div className="col-lg-8">
-              <div style={{ 
-                padding: '40px', 
-                backgroundColor: '#ffffff', 
+              <div style={{
+                padding: '40px',
+                backgroundColor: '#ffffff',
                 borderRadius: '12px',
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8',
@@ -74,7 +74,7 @@ const Page = () => {
                 <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
                   Feedback Form
                 </h2>
-                
+
                 <form className="cs_contact_form">
                   <div className="row cs_gap_y_30">
                     <div className="col-md-6">
@@ -143,28 +143,28 @@ const Page = () => {
                       </label>
                       <div style={{ display: 'flex', gap: '10px', marginBottom: '10px', alignItems: 'center' }}>
                         {[1, 2, 3, 4, 5].map((star) => (
-                          <label 
-                            key={star} 
+                          <label
+                            key={star}
                             style={{ cursor: 'pointer' }}
                             onMouseEnter={() => setHoveredRating(star)}
                             onMouseLeave={() => setHoveredRating(0)}
                             onClick={() => setRating(star)}
                           >
-                            <input 
-                              type="radio" 
-                              name="rating" 
-                              value={star} 
-                              required 
+                            <input
+                              type="radio"
+                              name="rating"
+                              value={star}
+                              required
                               style={{ display: 'none' }}
                               checked={rating === star}
                               onChange={() => setRating(star)}
                             />
-                            <FaStar 
-                              style={{ 
+                            <FaStar
+                              style={{
                                 fontSize: '30px',
                                 color: (hoveredRating >= star || rating >= star) ? '#FFD700' : '#ddd',
                                 transition: 'color 0.2s ease'
-                              }} 
+                              }}
                             />
                           </label>
                         ))}
@@ -187,8 +187,8 @@ const Page = () => {
                       />
                     </div>
                     <div className="col-md-12">
-                      <label style={{ 
-                        display: 'flex', 
+                      <label style={{
+                        display: 'flex',
                         alignItems: 'flex-start',
                         cursor: 'pointer',
                         gap: '10px'
@@ -217,9 +217,9 @@ const Page = () => {
                 </form>
               </div>
 
-              <div style={{ 
-                padding: '30px', 
-                backgroundColor: '#f8f9fa', 
+              <div style={{
+                padding: '30px',
+                backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
                 borderLeft: '4px solid #E45352'
               }}>
@@ -236,7 +236,7 @@ const Page = () => {
             </div>
             <div className="col-lg-4">
               <div className="cs_sidebar">
-                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{ 
+                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{
                   padding: '30px',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
@@ -249,7 +249,7 @@ const Page = () => {
                   </p>
                 </div>
 
-                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{ 
+                <div className="cs_sidebar_widget cs_gray_bg mb-4" style={{
                   padding: '30px',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'
@@ -274,7 +274,7 @@ const Page = () => {
                   </ul>
                 </div>
 
-                <div className="cs_sidebar_widget cs_gray_bg" style={{ 
+                <div className="cs_sidebar_widget cs_gray_bg" style={{
                   padding: '30px',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'

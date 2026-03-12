@@ -16,7 +16,7 @@ const headingData = {
 
 // const stories = [];
 // Get blogs from JSON and filter by category
-const stories = blogsData.blogs.filter(blog => 
+const stories = blogsData.blogs.filter(blog =>
   blog.category === 'Success Stories' || blog.category === 'सफलता कहानियां'
 );
 
@@ -65,23 +65,23 @@ const Page = () => {
     if (selectedLanguage === 'all') {
       return stories;
     } else if (selectedLanguage === 'hindi') {
-      return stories.filter(story => 
-        story.category === 'आईवीएफ सफलता' || 
+      return stories.filter(story =>
+        story.category === 'आईवीएफ सफलता' ||
         story.category === 'आईसीएसआई सफलता' ||
         story.category === 'अंडा फ्रीजिंग और आईवीएफ' ||
         story.readTime.includes('मिनट') ||
-        story.date.includes('दिसंबर') || 
+        story.date.includes('दिसंबर') ||
         story.date.includes('नवंबर') ||
         story.title.match(/[\u0900-\u097F]/)
       );
     } else if (selectedLanguage === 'english') {
-      return stories.filter(story => 
-        (story.category === 'IVF Success' || 
-         story.category === 'ICSI Success' ||
-         story.category === 'Egg Freezing & IVF' ||
-         story.category === 'Surrogacy') && 
+      return stories.filter(story =>
+        (story.category === 'IVF Success' ||
+          story.category === 'ICSI Success' ||
+          story.category === 'Egg Freezing & IVF' ||
+          story.category === 'Surrogacy') &&
         !story.readTime.includes('मिनट') &&
-        !story.date.includes('दिसंबर') && 
+        !story.date.includes('दिसंबर') &&
         !story.date.includes('नवंबर') &&
         !story.title.match(/[\u0900-\u097F]/)
       );
@@ -93,7 +93,7 @@ const Page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -143,7 +143,7 @@ const Page = () => {
                       <option value="mens-health">Men&apos;s Health</option>
                       <option value="womens-health">Women&apos;s Health</option>
                       <option value="treatment-guides">Treatment Guides</option>
-                      
+
                     </select>
                   </div>
                   <div style={{ minWidth: '150px' }}>
@@ -183,7 +183,7 @@ const Page = () => {
             {filteredBlogs.map((story, index) => (
               <div key={index} className="col-lg-4 col-md-6">
                 <Link href={story.link} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
-                  <div className="cs_blog_card cs_style_1" style={{ 
+                  <div className="cs_blog_card cs_style_1" style={{
                     height: '100%',
                     transition: 'all 0.3s ease',
                     cursor: 'pointer',
@@ -196,16 +196,16 @@ const Page = () => {
                     flexDirection: 'column',
                     position: 'relative'
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-8px)';
-                    e.currentTarget.style.boxShadow = '0px 12px 30px rgba(0, 0, 0, 0.12)';
-                    e.currentTarget.style.borderColor = 'var(--accent-color)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                    e.currentTarget.style.borderColor = '#e8e8e8';
-                  }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-8px)';
+                      e.currentTarget.style.boxShadow = '0px 12px 30px rgba(0, 0, 0, 0.12)';
+                      e.currentTarget.style.borderColor = 'var(--accent-color)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                      e.currentTarget.style.borderColor = '#e8e8e8';
+                    }}
                   >
                     <div style={{
                       position: 'absolute',
@@ -218,21 +218,21 @@ const Page = () => {
                     }}>
                       <FaQuoteLeft />
                     </div>
-                    <div className="cs_blog_img" style={{ 
-                      overflow: 'hidden', 
+                    <div className="cs_blog_img" style={{
+                      overflow: 'hidden',
                       position: 'relative',
                       height: '250px',
                       width: '100%'
                     }}>
-                      <Image 
-                        src={getAssetPathClient(story.image)} 
-                        alt={story.title} 
-                        width={400} 
+                      <Image
+                        src={getAssetPathClient(story.image)}
+                        alt={story.title}
+                        width={400}
                         height={250}
                         className="w-100"
                         loading="eager"
-                        style={{ 
-                          objectFit: 'cover', 
+                        style={{
+                          objectFit: 'cover',
                           transition: 'transform 0.5s ease',
                           width: '100%',
                           height: '100%'
@@ -260,13 +260,13 @@ const Page = () => {
                         {story.category}
                       </div>
                     </div>
-                    <div className="cs_blog_info" style={{ 
+                    <div className="cs_blog_info" style={{
                       padding: '30px',
                       flex: 1,
                       display: 'flex',
                       flexDirection: 'column'
                     }}>
-                      <div className="cs_blog_meta mb-3" style={{ 
+                      <div className="cs_blog_meta mb-3" style={{
                         display: 'flex',
                         alignItems: 'center',
                         gap: '15px',
@@ -283,9 +283,9 @@ const Page = () => {
                           {story.readTime}
                         </span>
                       </div>
-                      <h3 className="cs_blog_title" style={{ 
-                        fontSize: '22px', 
-                        marginBottom: '15px', 
+                      <h3 className="cs_blog_title" style={{
+                        fontSize: '22px',
+                        marginBottom: '15px',
                         color: '#1a1a1a',
                         fontWeight: '600',
                         lineHeight: '1.4',
@@ -293,9 +293,9 @@ const Page = () => {
                       }}>
                         {story.title}
                       </h3>
-                      <p className="cs_blog_subtitle" style={{ 
-                        lineHeight: '1.8', 
-                        color: '#666', 
+                      <p className="cs_blog_subtitle" style={{
+                        lineHeight: '1.8',
+                        color: '#666',
                         marginBottom: '15px',
                         fontSize: '15px',
                         flex: 1,
@@ -303,13 +303,13 @@ const Page = () => {
                       }}>
                         &quot;{story.excerpt}&quot;
                       </p>
-                      <div style={{ 
+                      <div style={{
                         padding: '12px',
                         backgroundColor: '#f8f9fa',
                         borderRadius: '8px',
                         marginBottom: '15px'
                       }}>
-                        <span style={{ 
+                        <span style={{
                           fontSize: '13px',
                           fontWeight: '600',
                           color: 'var(--accent-color)'
@@ -317,16 +317,16 @@ const Page = () => {
                           Treatment: {story.treatment}
                         </span>
                       </div>
-                      <div style={{ 
-                        display: 'flex', 
-                        justifyContent: 'space-between', 
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
                         alignItems: 'center',
                         paddingTop: '20px',
                         borderTop: '1px solid #f0f0f0',
                         marginTop: 'auto'
                       }}>
-                        <span style={{ 
-                          fontSize: '14px', 
+                        <span style={{
+                          fontSize: '14px',
                           color: '#999',
                           display: 'flex',
                           alignItems: 'center',
@@ -335,8 +335,8 @@ const Page = () => {
                           <FaUser style={{ fontSize: '12px' }} />
                           {story.author}
                         </span>
-                        <span style={{ 
-                          color: 'var(--accent-color)', 
+                        <span style={{
+                          color: 'var(--accent-color)',
                           fontWeight: '600',
                           fontSize: '14px',
                           display: 'flex',
@@ -344,7 +344,7 @@ const Page = () => {
                           gap: '6px',
                           transition: 'gap 0.3s ease'
                         }}
-                        className="read-more-link"
+                          className="read-more-link"
                         >
                           Read Story
                           <FaArrowRight style={{ fontSize: '12px', transition: 'transform 0.3s ease' }} />

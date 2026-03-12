@@ -196,11 +196,11 @@ const Service = ({ data, cardBg }) => {
                   onClick={handlePrev}
                   aria-label="Previous slide"
                 >
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#CB3148">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#df3655">
                     <g strokeWidth="0"></g>
                     <g strokeLinecap="round" strokeLinejoin="round"></g>
                     <g>
-                      <polyline fill="none" stroke="#CB3148" strokeWidth="2" points="7 2 17 12 7 22" transform="matrix(-1 0 0 1 24 0)"></polyline>
+                      <polyline fill="none" stroke="#df3655" strokeWidth="2" points="7 2 17 12 7 22" transform="matrix(-1 0 0 1 24 0)"></polyline>
                     </g>
                   </svg>
                 </button>
@@ -212,7 +212,7 @@ const Service = ({ data, cardBg }) => {
                   onClick={handleNext}
                   aria-label="Next slide"
                 >
-                  <svg fill="#CB3148" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlSpace="preserve">
+                  <svg fill="#df3655" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlSpace="preserve">
                     <g strokeWidth="0"></g>
                     <g strokeLinecap="round" strokeLinejoin="round"></g>
                     <g>
@@ -337,11 +337,11 @@ const Service = ({ data, cardBg }) => {
                   onClick={handleMobilePrev}
                   aria-label="Previous slide"
                 >
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#CB3148">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#df3655">
                     <g strokeWidth="0"></g>
                     <g strokeLinecap="round" strokeLinejoin="round"></g>
                     <g>
-                      <polyline fill="none" stroke="#CB3148" strokeWidth="2" points="7 2 17 12 7 22" transform="matrix(-1 0 0 1 24 0)"></polyline>
+                      <polyline fill="none" stroke="#df3655" strokeWidth="2" points="7 2 17 12 7 22" transform="matrix(-1 0 0 1 24 0)"></polyline>
                     </g>
                   </svg>
                 </button>
@@ -353,7 +353,7 @@ const Service = ({ data, cardBg }) => {
                   onClick={handleMobileNext}
                   aria-label="Next slide"
                 >
-                  <svg fill="#CB3148" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlSpace="preserve">
+                  <svg fill="#df3655" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlSpace="preserve">
                     <g strokeWidth="0"></g>
                     <g strokeLinecap="round" strokeLinejoin="round"></g>
                     <g>

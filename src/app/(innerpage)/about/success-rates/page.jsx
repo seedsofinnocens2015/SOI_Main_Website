@@ -108,7 +108,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -131,20 +131,20 @@ const page = () => {
       </Section>
 
       {/* Counter Section - Card Design */}
-      <Section 
-        topSpaceLg="60" 
-        topSpaceMd="70" 
-        bottomSpaceLg="40" 
-        bottomSpaceMd="50" 
+      <Section
+        topSpaceLg="60"
+        topSpaceMd="70"
+        bottomSpaceLg="40"
+        bottomSpaceMd="50"
       >
         <div className="container">
           <div className="row cs_gap_y_30">
             {countersData.map((counter, index) => {
               const [isHovered, setIsHovered] = useState(false);
-              
+
               return (
                 <div key={index} className="col-lg-3 col-md-6">
-                  <div 
+                  <div
                     style={{
                       backgroundColor: counter.backgroundColor || '#ffffff',
                       borderRadius: '12px',
@@ -176,7 +176,7 @@ const page = () => {
                       // backgroundColor: isHovered ? '#E45352' : 'transparent',
                       transition: 'all 0.3s ease'
                     }} />
-                   
+
                     {/* Number */}
                     <div style={{
                       fontSize: '48px',
@@ -189,7 +189,7 @@ const page = () => {
                     }}>
                       {counter.number}
                     </div>
-                    
+
                     {/* Title */}
                     <div style={{
                       fontSize: '16px',

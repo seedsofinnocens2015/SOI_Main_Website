@@ -79,7 +79,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -106,10 +106,10 @@ const page = () => {
           <div className="row mb-5">
             <div className="col-lg-12">
               <div className="cs_service_details_thumbnail">
-                <Image 
-                  src="/assets/img/recent_post2.jpg" 
-                  alt="Resources" 
-                  width={1200} 
+                <Image
+                  src="/assets/img/recent_post2.jpg"
+                  alt="Resources"
+                  width={1200}
                   height={400}
                   className="w-100"
                   style={{ borderRadius: '10px' }}
@@ -123,8 +123,8 @@ const page = () => {
             {resources.map((resource, index) => (
               <div key={index} className="col-lg-4 col-md-6">
                 <Link href={resource.link} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
-                  <div className="cs_iconbox cs_style_2 cs_radius_15 cs_gray_bg" style={{ 
-                    height: '100%', 
+                  <div className="cs_iconbox cs_style_2 cs_radius_15 cs_gray_bg" style={{
+                    height: '100%',
                     padding: '30px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -134,9 +134,9 @@ const page = () => {
                   }}
                   >
                     <div className="cs_iconbox_header mb-3">
-                      <div className="cs_iconbox_icon cs_center mb-3" style={{ 
-                        width: '80px', 
-                        height: '80px', 
+                      <div className="cs_iconbox_icon cs_center mb-3" style={{
+                        width: '80px',
+                        height: '80px',
                         borderRadius: '50%',
                         backgroundColor: resource.color + '20',
                         display: 'flex',
@@ -144,10 +144,10 @@ const page = () => {
                         justifyContent: 'center',
                         margin: '0 auto'
                       }}>
-                        <Image 
-                          src={resource.icon} 
-                          alt={resource.title} 
-                          width={50} 
+                        <Image
+                          src={resource.icon}
+                          alt={resource.title}
+                          width={50}
                           height={50}
                         />
                       </div>
@@ -159,8 +159,8 @@ const page = () => {
                       </p>
                     </div>
                     <div style={{ marginTop: 'auto', textAlign: 'center' }}>
-                      <span style={{ 
-                        color: resource.color, 
+                      <span style={{
+                        color: resource.color,
                         fontWeight: '600',
                         fontSize: '16px'
                       }}>
@@ -178,10 +178,10 @@ const page = () => {
           {/* Quick Help Section */}
           <div className="row">
             <div className="col-lg-12">
-              <div className="cs_service_details text-center" style={{ 
-                padding: '50px', 
-                backgroundColor: '#f8f9fa', 
-                borderRadius: '10px' 
+              <div className="cs_service_details text-center" style={{
+                padding: '50px',
+                backgroundColor: '#f8f9fa',
+                borderRadius: '10px'
               }}>
                 <h4 className="cs_service_heading mb-3">Need More Help?</h4>
                 <p className="cs_service_subtitle mb-4">

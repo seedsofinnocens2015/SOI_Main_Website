@@ -99,7 +99,7 @@ const FertilityCalculatorPage = () => {
 
     let recommendation = '';
     let urgency = 'normal';
-    
+
     if (ageNum >= 35 || tryingNum >= 12) {
       recommendation = 'We recommend consulting with a fertility specialist soon. Early intervention can improve your chances of success.';
       urgency = 'high';
@@ -122,7 +122,7 @@ const FertilityCalculatorPage = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -138,11 +138,11 @@ const FertilityCalculatorPage = () => {
           {/* First Content Section */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection 
+              <IVFContentSection
                 data={{
                   sections: [calculatorContentData.sections[0]]
-                }} 
-                benefitImages={serviceData.benefitImages} 
+                }}
+                benefitImages={serviceData.benefitImages}
               />
             </div>
           </div>
@@ -153,9 +153,9 @@ const FertilityCalculatorPage = () => {
           <div className="row">
             <div className="col-lg-8">
               <div className="cs_service_details">
-                <div style={{ 
-                  padding: '40px', 
-                  backgroundColor: '#ffffff', 
+                <div style={{
+                  padding: '40px',
+                  backgroundColor: '#ffffff',
                   borderRadius: '10px',
                   border: '1px solid #e8e8e8',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
@@ -194,9 +194,9 @@ const FertilityCalculatorPage = () => {
 
                   <div className="row">
                     <div className="col-md-6 mb-4">
-                      <label style={{ 
-                        display: 'block', 
-                        marginBottom: '12px', 
+                      <label style={{
+                        display: 'block',
+                        marginBottom: '12px',
                         fontWeight: '600',
                         fontSize: '16px',
                         color: '#1a1a1a'
@@ -236,9 +236,9 @@ const FertilityCalculatorPage = () => {
                       </p>
                     </div>
                     <div className="col-md-6 mb-4">
-                      <label style={{ 
-                        display: 'block', 
-                        marginBottom: '12px', 
+                      <label style={{
+                        display: 'block',
+                        marginBottom: '12px',
                         fontWeight: '600',
                         fontSize: '16px',
                         color: '#1a1a1a'
@@ -307,9 +307,9 @@ const FertilityCalculatorPage = () => {
 
                 {/* Results */}
                 {result && (
-                  <div style={{ 
-                    padding: '35px', 
-                    backgroundColor: result.urgency === 'high' ? '#fff3e0' : result.urgency === 'medium' ? '#e3f2fd' : '#e8f5e9', 
+                  <div style={{
+                    padding: '35px',
+                    backgroundColor: result.urgency === 'high' ? '#fff3e0' : result.urgency === 'medium' ? '#e3f2fd' : '#e8f5e9',
                     borderRadius: '10px',
                     borderLeft: `4px solid ${result.urgency === 'high' ? '#ff9800' : result.urgency === 'medium' ? '#2196f3' : '#4caf50'}`,
                     marginBottom: '30px',
@@ -334,8 +334,8 @@ const FertilityCalculatorPage = () => {
                       }}>
                         <FaChartLine />
                       </div>
-                      <h4 style={{ 
-                        margin: 0, 
+                      <h4 style={{
+                        margin: 0,
                         color: result.urgency === 'high' ? '#e65100' : result.urgency === 'medium' ? '#1565c0' : '#2e7d32',
                         fontSize: '24px',
                         fontWeight: '600'
@@ -343,9 +343,9 @@ const FertilityCalculatorPage = () => {
                         Your Estimated Chances
                       </h4>
                     </div>
-                    <div style={{ 
-                      fontSize: '72px', 
-                      fontWeight: '700', 
+                    <div style={{
+                      fontSize: '72px',
+                      fontWeight: '700',
                       color: result.urgency === 'high' ? '#ff9800' : result.urgency === 'medium' ? '#2196f3' : '#4caf50',
                       marginBottom: '20px',
                       textAlign: 'center',
@@ -353,7 +353,7 @@ const FertilityCalculatorPage = () => {
                     }}>
                       {result.chance}%
                     </div>
-                    <div style={{ 
+                    <div style={{
                       padding: '20px',
                       backgroundColor: '#ffffff',
                       borderRadius: '8px',
@@ -364,21 +364,21 @@ const FertilityCalculatorPage = () => {
                         gap: '12px',
                         alignItems: 'flex-start'
                       }}>
-                        <FaInfoCircle style={{ 
+                        <FaInfoCircle style={{
                           color: result.urgency === 'high' ? '#ff9800' : result.urgency === 'medium' ? '#2196f3' : '#4caf50',
                           fontSize: '20px',
                           marginTop: '3px',
                           flexShrink: 0
                         }} />
                         <div>
-                          <p style={{ 
-                            fontSize: '16px', 
+                          <p style={{
+                            fontSize: '16px',
                             lineHeight: '1.8',
                             margin: 0,
                             color: '#333',
                             fontWeight: '500'
                           }}>
-                            <strong style={{ 
+                            <strong style={{
                               color: result.urgency === 'high' ? '#e65100' : result.urgency === 'medium' ? '#1565c0' : '#2e7d32'
                             }}>
                               Recommendation:
@@ -390,9 +390,9 @@ const FertilityCalculatorPage = () => {
                   </div>
                 )}
 
-                <div style={{ 
-                  padding: '30px', 
-                  backgroundColor: '#fff3cd', 
+                <div style={{
+                  padding: '30px',
+                  backgroundColor: '#fff3cd',
                   borderRadius: '10px',
                   borderLeft: '4px solid #ffc107',
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)'
@@ -402,7 +402,7 @@ const FertilityCalculatorPage = () => {
                     gap: '15px',
                     alignItems: 'flex-start'
                   }}>
-                    <FaInfoCircle style={{ 
+                    <FaInfoCircle style={{
                       color: '#856404',
                       fontSize: '24px',
                       marginTop: '3px',
@@ -480,11 +480,11 @@ const FertilityCalculatorPage = () => {
                   <p style={{ marginBottom: '20px', fontSize: '14px', lineHeight: '1.7', color: '#666' }}>
                     Get personalized fertility assessment and treatment recommendations from our expert specialists.
                   </p>
-                  <Link 
-                    href="/contact/book-appointment" 
+                  <Link
+                    href="/contact/book-appointment"
                     className="cs_btn cs_style_1 cs_color_1"
-                    style={{ 
-                      width: '100%', 
+                    style={{
+                      width: '100%',
                       textAlign: 'center',
                       textDecoration: 'none',
                       display: 'block',
@@ -505,11 +505,11 @@ const FertilityCalculatorPage = () => {
           {/* Remaining Content Sections */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection 
+              <IVFContentSection
                 data={{
                   sections: calculatorContentData.sections.slice(1)
-                }} 
-                benefitImages={serviceData.benefitImages} 
+                }}
+                benefitImages={serviceData.benefitImages}
               />
             </div>
           </div>

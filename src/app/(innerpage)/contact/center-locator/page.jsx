@@ -6,57 +6,65 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaSearch } from 'react-icons/fa';
-import indiaCentresData from '../../ivf-centres/india-centres-data.json';
+import centresAllData from '../../ivf-centres/centres-data.json';
+const indiaCentresData = centresAllData.centres;
 
 const headingData = {
   title: 'Center Locator',
 };
 
+function cityNameToSlug(cityName) {
+  return cityName
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '');
+}
+
+function getCenterLink(center) {
+  const isMalviyaDelhi =
+    center.name === 'Malviya Nagar, Delhi' && center.stateSlug === 'delhi';
+
+  let cityParam;
+  if (isMalviyaDelhi) {
+    cityParam = 'delhi';
+  } else {
+    const cityName = center.name.split(',')[0].trim();
+    cityParam = cityNameToSlug(cityName);
+  }
+
+  let slug;
+  if (isMalviyaDelhi) {
+    slug = 'best-ivf-centre-in-malviyanagar';
+  } else {
+    slug = `best-ivf-centre-in-${cityParam}`;
+  }
+
+  return `/${center.stateSlug}/${slug}/`;
+}
+
 // Transform India centres data
-const indiaCentres = indiaCentresData.map(center => ({
+const indiaCentres = indiaCentresData.filter(c => !c.isInternational).map(center => ({
   name: center.name,
   address: center.location,
   phone: center.phone,
   email: center.email,
   timing: center.timing,
-  link: `/ivf-centres/india/${center.stateSlug}/${center.slug}`,
+  link: getCenterLink(center),
   country: 'India',
   state: center.state,
 }));
 
-// International centres
-const internationalCentres = [
-  {
-    name: 'Lusaka, Zambia, Africa',
-    address: 'Lusaka, Zambia',
-    phone: '+260-976832953',
-    email: 'lusaka@seedsofinnocens.com',
-    timing: 'Mon-Sat: 9:00 AM - 6:00 PM',
-    link: '/ivf-centres/lusaka-zambia-africa',
-    country: 'International',
-    state: 'Zambia',
-  },
-  {
-    name: 'Kitwe, Zambia, Africa',
-    address: 'Kitwe, Zambia',
-    phone: '+260-976837261',
-    email: 'kitwe@seedsofinnocens.com',
-    timing: 'Mon-Sat: 9:00 AM - 6:00 PM',
-    link: '/ivf-centres/kitwe-zambia-africa',
-    country: 'International',
-    state: 'Zambia',
-  },
-  {
-    name: 'Mabela, Muscat, Oman',
-    address: 'Mabela, Muscat, Oman',
-    phone: '+968-22717111',
-    email: 'muscat@seedsofinnocens.com',
-    timing: 'Mon-Sat: 9:00 AM - 6:00 PM',
-    link: '/ivf-centres/mabela-muscat-oman',
-    country: 'International',
-    state: 'Oman',
-  },
-];
+// International centres dynamically from centres-data.json
+const internationalCentres = indiaCentresData.filter(c => c.isInternational).map(center => ({
+  name: center.name,
+  address: center.location,
+  phone: center.phone,
+  email: center.email,
+  timing: center.timing,
+  link: `/${center.slug}/`,
+  country: 'International',
+  state: center.state,
+}));
 
 const allCentres = [...indiaCentres, ...internationalCentres];
 
@@ -91,7 +99,7 @@ const Page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -123,18 +131,18 @@ const Page = () => {
           {/* Search Bar */}
           <div className="row mb-5">
             <div className="col-lg-8 mx-auto">
-              <div style={{ 
+              <div style={{
                 position: 'relative',
-                padding: '20px', 
-                backgroundColor: '#ffffff', 
+                padding: '20px',
+                backgroundColor: '#ffffff',
                 borderRadius: '12px',
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8'
               }}>
-                <FaSearch style={{ 
-                  position: 'absolute', 
-                  left: '35px', 
-                  top: '50%', 
+                <FaSearch style={{
+                  position: 'absolute',
+                  left: '35px',
+                  top: '50%',
                   transform: 'translateY(-50%)',
                   color: '#999',
                   fontSize: '18px'
@@ -166,7 +174,7 @@ const Page = () => {
           <div className="row cs_gap_y_30 mb-5" style={{ gap: '30px 0' }}>
             {filteredIndiaCentres.map((center, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <div style={{ 
+                <div style={{
                   backgroundColor: '#ffffff',
                   borderRadius: '12px',
                   overflow: 'hidden',
@@ -178,17 +186,17 @@ const Page = () => {
                   flexDirection: 'column',
                   padding: '30px'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-5px)';
+                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                  }}
                 >
                   <div style={{ marginBottom: '15px' }}>
-                    <span style={{ 
+                    <span style={{
                       display: 'inline-block',
                       padding: '5px 12px',
                       backgroundColor: '#e3f2fd',
@@ -201,16 +209,16 @@ const Page = () => {
                       {center.state}
                     </span>
                   </div>
-                  <h4 style={{ 
-                    fontSize: '20px', 
-                    fontWeight: '600', 
+                  <h4 style={{
+                    fontSize: '20px',
+                    fontWeight: '600',
                     color: '#0A2A43',
                     marginBottom: '20px',
                     lineHeight: '1.4'
                   }}>
                     {center.name}
                   </h4>
-                  
+
                   <div style={{ marginBottom: '20px', flex: 1 }}>
                     <p style={{ marginBottom: '12px', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                       <FaMapMarkerAlt style={{ color: '#E45352', fontSize: '16px', marginTop: '3px', flexShrink: 0 }} />
@@ -241,11 +249,11 @@ const Page = () => {
                   </div>
 
                   <div style={{ marginTop: 'auto' }}>
-                    <Link 
+                    <Link
                       href={center.link}
                       className="cs_btn cs_style_1 cs_color_1"
-                      style={{ 
-                        width: '100%', 
+                      style={{
+                        width: '100%',
                         textAlign: 'center',
                         textDecoration: 'none',
                         display: 'block',
@@ -254,7 +262,7 @@ const Page = () => {
                     >
                       <span>View Details</span>
                     </Link>
-                    <a 
+                    <a
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(center.address)}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -301,7 +309,7 @@ const Page = () => {
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
             {filteredInternationalCentres.map((center, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <div style={{ 
+                <div style={{
                   backgroundColor: '#ffffff',
                   borderRadius: '12px',
                   overflow: 'hidden',
@@ -313,17 +321,17 @@ const Page = () => {
                   flexDirection: 'column',
                   padding: '30px'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-5px)';
+                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
+                  }}
                 >
                   <div style={{ marginBottom: '15px' }}>
-                    <span style={{ 
+                    <span style={{
                       display: 'inline-block',
                       padding: '5px 12px',
                       backgroundColor: '#fff3cd',
@@ -336,16 +344,16 @@ const Page = () => {
                       {center.state}
                     </span>
                   </div>
-                  <h4 style={{ 
-                    fontSize: '20px', 
-                    fontWeight: '600', 
+                  <h4 style={{
+                    fontSize: '20px',
+                    fontWeight: '600',
                     color: '#0A2A43',
                     marginBottom: '20px',
                     lineHeight: '1.4'
                   }}>
                     {center.name}
                   </h4>
-                  
+
                   <div style={{ marginBottom: '20px', flex: 1 }}>
                     <p style={{ marginBottom: '12px', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                       <FaMapMarkerAlt style={{ color: '#E45352', fontSize: '16px', marginTop: '3px', flexShrink: 0 }} />
@@ -376,11 +384,11 @@ const Page = () => {
                   </div>
 
                   <div style={{ marginTop: 'auto' }}>
-                    <Link 
+                    <Link
                       href={center.link}
                       className="cs_btn cs_style_1 cs_color_1"
-                      style={{ 
-                        width: '100%', 
+                      style={{
+                        width: '100%',
                         textAlign: 'center',
                         textDecoration: 'none',
                         display: 'block',
@@ -389,7 +397,7 @@ const Page = () => {
                     >
                       <span>View Details</span>
                     </Link>
-                    <a 
+                    <a
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(center.address)}`}
                       target="_blank"
                       rel="noopener noreferrer"

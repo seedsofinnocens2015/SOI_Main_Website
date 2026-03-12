@@ -14,7 +14,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.jpg"
+        backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
       </Section>
@@ -1063,9 +1063,9 @@ const page = () => {
                 {' '}Story
               </h3>
               <div className="cs_height_30" />
-              <p className="cs_text_style_1" style={{ 
-                marginBottom: '20px', 
-                lineHeight: '2', 
+              <p className="cs_text_style_1" style={{
+                marginBottom: '20px',
+                lineHeight: '2',
                 fontSize: '17px',
                 color: '#333',
                 textAlign: 'justify',
@@ -1326,9 +1326,9 @@ const page = () => {
                 {' '}Commitment
               </h3>
               <div className="cs_height_30" />
-              <p className="cs_text_style_1" style={{ 
-                marginBottom: '25px', 
-                lineHeight: '2', 
+              <p className="cs_text_style_1" style={{
+                marginBottom: '25px',
+                lineHeight: '2',
                 fontSize: '17px',
                 color: '#333',
                 textAlign: 'justify',
@@ -1336,11 +1336,11 @@ const page = () => {
               }}>
                 From the moment you reach out to us to the day you hold your little one in your arms and we commit to stand by you with dignity, respect, and medical excellence. Your hopes become our purpose, and your journey becomes our story.
               </p>
-              <p className="cs_text_style_1" style={{ 
-                marginBottom: '0', 
-                lineHeight: '2', 
-                fontSize: '19px', 
-                fontWeight: '600', 
+              <p className="cs_text_style_1" style={{
+                marginBottom: '0',
+                lineHeight: '2',
+                fontSize: '19px',
+                fontWeight: '600',
                 color: '#E45352',
                 textAlign: 'center'
               }}>
