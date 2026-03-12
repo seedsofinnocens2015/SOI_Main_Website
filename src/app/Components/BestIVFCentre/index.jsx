@@ -115,17 +115,17 @@ const BestIVFCentre = ({
     ];
 
     const services = injectedServices || defaultServices;
-    const centerDoctors = center.doctors || [];
+    const centerDoctors = center?.doctors || [];
 
     // Header Data
     const headingData = {
-        title: center.name,
-        uspTitle: center.uspTitle,
+        title: center?.name,
+        uspTitle: center?.uspTitle,
     };
 
-    const testimonials = center.testimonials || [];
-    const aboutUs = center.aboutUs;
-    const contactInfo = center.contactInfo;
+    const testimonials = center?.testimonials || [];
+    const aboutUs = center?.aboutUs;
+    const contactInfo = center?.contactInfo;
 
     const featuresRow1Ref = useRef(null);
     const featuresRow2Ref = useRef(null);
@@ -136,7 +136,7 @@ const BestIVFCentre = ({
             {/* Header Section */}
             <Section
                 className={'cs_page_heading cs_bg_filed cs_center'}
-                backgroundImage={center.headerImage || "/assets/img/Top-Header.png"}
+                backgroundImage={center?.headerImage || "/assets/img/Top-Header.png"}
             >
                 <PageHeading data={headingData} />
             </Section>

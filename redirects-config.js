@@ -4,17 +4,17 @@
 export const internationalCenterRedirects = [
   {
     source: '/best-ivf-centre-in-lusaka-zambia',
-    destination: '/international/lusaka-zambia',
+    destination: '/best-ivf-centre-in-lusaka-zambia',
     permanent: true,
   },
   {
     source: '/best-ivf-centre-in-kitwe-zambia',
-    destination: '/international/kitwe-zambia',
+    destination: '/best-ivf-centre-in-kitwe-zambia',
     permanent: true,
   },
   {
     source: '/best-ivf-centre-in-mabela-muscat',
-    destination: '/international/mabela-muscat',
+    destination: '/best-ivf-centre-in-mabela-muscat',
     permanent: true,
   },
 ];

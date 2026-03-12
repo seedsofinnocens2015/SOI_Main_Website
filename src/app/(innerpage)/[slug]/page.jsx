@@ -10,6 +10,8 @@ import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import BestIVFCentre from '@/app/Components/BestIVFCentre';
+import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 
 function cityNameToSlug(cityName) {
     return cityName
@@ -43,7 +45,7 @@ function getCenterLink(center) {
 export async function generateMetadata({ params }) {
     const { slug } = await params;
 
-    // Check if it's a doctor page
+    // 1. Check if it's a doctor page
     const doctor = doctorsData.find(d => 
         (d.newSlug === slug) || 
         (slug === d.slug + '-ivf-specialist')
@@ -56,7 +58,16 @@ export async function generateMetadata({ params }) {
         };
     }
 
-    // Otherwise treat as state page
+    // 2. Check if it's an international center slug
+    const internationalCenter = centresData.find(c => c.isInternational && c.slug === slug);
+    if (internationalCenter) {
+        return {
+            title: internationalCenter.name + ' | Seeds of Innocens',
+            description: internationalCenter.description ? internationalCenter.description[0] : `Best IVF Centre in ${internationalCenter.name}.`,
+        };
+    }
+
+    // 3. Otherwise treat as state page
     if (!slug.startsWith('best-ivf-center-in-')) {
         return { title: 'Not Found' };
     }
@@ -90,7 +101,14 @@ export async function generateStaticParams() {
             slug: d.newSlug || d.slug + '-ivf-specialist'
         }));
 
-        return [...stateParams, ...doctorParams];
+        // International center params (SEO slugs)
+        const internationalParams = centresData
+            .filter(c => c.isInternational && c.slug)
+            .map(c => ({
+                slug: c.slug
+            }));
+
+        return [...stateParams, ...doctorParams, ...internationalParams];
     } catch (error) {
         console.error('Error in generateStaticParams:', error);
         return [];
@@ -137,7 +155,47 @@ const DynamicPage = async ({ params }) => {
         );
     }
 
-    // 2. Otherwise handle as State Page
+    // 2. Check if it's an International Center Slug
+    const center = centresData.find(c => c.isInternational && c.slug === slug);
+    if (center) {
+        const cityName = center.name.split(',')[0].trim();
+        const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2.jpg');
+        
+        // Fetch Content and Services with Icons
+        const centerContentConfig = centresAllData.centerContent;
+        const rawCenterContent = centerContentConfig[center.slug] || centerContentConfig.default;
+        const servicesWithIcons = rawCenterContent.servicesWithIcons || centerContentConfig.default.servicesWithIcons;
+
+        const replaceCityName = (text) =>
+            typeof text === 'string' ? text.replace(/{{cityName}}/g, cityName) : text;
+
+        // FAQ Content Data
+        const rawFaqs = (centerContentConfig[center.slug] && centerContentConfig[center.slug].faqs) || centerContentConfig.default.faqs || [];
+        const faqContentData = rawFaqs.length > 0 ? {
+            sections: [
+                {
+                    heading: `Frequently Asked Questions`,
+                    steps: rawFaqs.map((faq) => ({
+                        title: replaceCityName(faq.question),
+                        description: replaceCityName(faq.answer),
+                    })),
+                },
+            ],
+        } : null;
+
+        return (
+            <BestIVFCentre 
+                center={center}
+                cityName={cityName} 
+                description={Array.isArray(center.description) ? center.description.join(' ') : center.description} 
+                services={servicesWithIcons}
+                doctorsData={doctorsData}
+                faqContentData={faqContentData}
+            />
+        );
+    }
+
+    // 3. Otherwise handle as State Page
     if (!slug.startsWith('best-ivf-center-in-')) {
         notFound();
     }

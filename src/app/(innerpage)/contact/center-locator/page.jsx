@@ -54,39 +54,17 @@ const indiaCentres = indiaCentresData.filter(c => !c.isInternational).map(center
   state: center.state,
 }));
 
-// International centres
-const internationalCentres = [
-  {
-    name: 'Lusaka, Zambia, Africa',
-    address: 'Lusaka, Zambia',
-    phone: '+260-976832953',
-    email: 'lusaka@seedsofinnocens.com',
-    timing: 'Mon-Sat: 9:00 AM - 6:00 PM',
-    link: '/lusaka-zambia-ivf-centre/',
-    country: 'International',
-    state: 'Zambia',
-  },
-  {
-    name: 'Kitwe, Zambia, Africa',
-    address: 'Kitwe, Zambia',
-    phone: '+260-976837261',
-    email: 'kitwe@seedsofinnocens.com',
-    timing: 'Mon-Sat: 9:00 AM - 6:00 PM',
-    link: '/best-ivf-centre-in-kitwe-zambia/',
-    country: 'International',
-    state: 'Zambia',
-  },
-  {
-    name: 'Mabela, Muscat, Oman',
-    address: 'Mabela, Muscat, Oman',
-    phone: '+968-22717111',
-    email: 'muscat@seedsofinnocens.com',
-    timing: 'Mon-Sat: 9:00 AM - 6:00 PM',
-    link: '/best-ivf-centre-in-muscat-oman/',
-    country: 'International',
-    state: 'Oman',
-  },
-];
+// International centres dynamically from centres-data.json
+const internationalCentres = indiaCentresData.filter(c => c.isInternational).map(center => ({
+  name: center.name,
+  address: center.location,
+  phone: center.phone,
+  email: center.email,
+  timing: center.timing,
+  link: `/${center.slug}/`,
+  country: 'International',
+  state: center.state,
+}));
 
 const allCentres = [...indiaCentres, ...internationalCentres];
 
