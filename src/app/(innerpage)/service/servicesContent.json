@@ -2812,6 +2812,2182 @@
         }
       ]
     }
+  },
+  "semen-analysis": {
+    "title": "Semen Analysis",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Semen Analysis",
+          "paragraphs": [
+            "Semen analysis is a key diagnostic test to evaluate male fertility. It examines the number, movement, and shape of sperm in a semen sample to help identify potential issues that may impact a couple's ability to conceive."
+          ]
+        }
+      ]
+    }
+  },
+  "semen-analysis-at-home": {
+    "title": "Semen Analysis at Home",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Semen Analysis at Home",
+          "paragraphs": [
+            "Semen analysis at home allows men to provide a semen sample in a comfortable and private environment. The sample is then evaluated in a laboratory to check sperm count, motility, and morphology, helping to assess male fertility without the need to visit a clinic immediately."
+          ]
+        }
+      ]
+    }
+  },
+  "microtese": {
+    "title": "MicroTESE",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "MicroTESE",
+          "paragraphs": [
+            "MicroTESE (Microsurgical Testicular Sperm Extraction) is an advanced surgical procedure used to retrieve sperm directly from the testicles in men with severe male factor infertility, especially non-obstructive azoospermia. Under high magnification, the surgeon identifies and extracts tiny areas of the testis that are more likely to contain sperm, which can then be used for ICSI."
+          ]
+        }
+      ]
+    }
+  },
+  "tesa": {
+    "title": "TESA / PESA",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/TESA-PESA.jpg",
+      "/assets/img/TESA-PESA.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "TESA / PESA: Advanced Fertility Treatment for Male Infertility",
+          "paragraphs": [
+            "TESA (Testicular Sperm Aspiration) and PESA (Percutaneous Epididymal Sperm Aspiration) are minor surgical procedures used to retrieve sperm directly from the testicles or epididymis in men with obstructive or certain types of non-obstructive azoospermia.",
+            "These techniques are especially useful when sperm is not present in the ejaculate but can still be collected from the reproductive tract and used for ICSI (Intracytoplasmic Sperm Injection) as part of an IVF cycle."
+          ]
+        }
+      ]
+    }
+  },
+  "high-risk-pregnancy": {
+    "title": "High-Risk Pregnancy",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is a high-risk pregnancy?",
+          "paragraphs": [
+            "All pregnancies carry risks. The definition of a high-risk pregnancy is any pregnancy that carries increased health risks for you, the fetus or both. People with high-risk pregnancies may need extra medical care before, during and after they give birth. This helps to reduce the possibility and severity of complications.",
+            "But having a pregnancy that's considered high risk doesn't mean you or the fetus will have health problems. Many people experience healthy pregnancies and normal labor and delivery despite having special health needs leading up to the birth.",
+            "It can be easy to panic and worry when you hear your pregnancy care provider say your pregnancy is at a higher risk. You're not alone. It doesn't mean your pregnancy will automatically be difficult. It may just mean your pregnancy care team watches you more closely. Trust your healthcare team's recommendations and ask them for help managing your feelings. Many people have high-risk pregnancies, and most end in healthy babies. Routine prenatal care can help ensure your pregnancy is safe, even if it's high risk."
+          ],
+          "sideImage": "/assets/img/High-Risk Pregnancy1.jpeg"
+        },
+        {
+          "heading": "How common is high-risk pregnancy?",
+          "paragraphs": [
+            "Approximately 30,000 to 50,000 pregnant women (between 6% and 8%) in the U.S. have high-risk pregnancies per year."
+          ]
+        },
+        {
+          "heading": "What qualifies a pregnancy as high risk?",
+          "paragraphs": [
+            "A high-risk pregnancy means you have a higher-than-average risk of experiencing a pregnancy complication. Some pregnancies begin as high risk, while others become high risk at some point during the pregnancy.",
+            "Factors that make a pregnancy high risk include:"
+          ],
+          "listItems": [
+            "Preexisting health conditions. These are health conditions you have before pregnancy.",
+            "Pregnancy-related health conditions. These are conditions you develop once pregnancy begins.",
+            "Lifestyle factors (including smoking, substance use disorder, alcohol use disorder and exposure to certain toxins)."
+          ]
+        },
+        {
+          "heading": "What factors make a pregnancy high risk?",
+          "paragraphs": [
+            "People with preexisting conditions have increased health risks during pregnancy. Some of these conditions include:"
+          ],
+          "listItems": [
+            "Autoimmune diseases, such as lupus or multiple sclerosis (MS).",
+            "Diabetes.",
+            "High blood pressure.",
+            "Fibroids.",
+            "HIV/AIDS.",
+            "Kidney disease.",
+            "Obesity.",
+            "Mental health disorders, such as depression.",
+            "Polycystic ovary syndrome (PCOS).",
+            "Thyroid disease.",
+            "Blood clotting disorders."
+          ]
+        },
+        {
+          "heading": "Pregnancy-Related Health Conditions",
+          "paragraphs": [
+            "Pregnancy-related health conditions that can cause potential complications include:"
+          ],
+          "listItems": [
+            "Gestational diabetes.",
+            "Low birth weight.",
+            "Multiple gestation (pregnancy with more than one fetus, such as twins or triplets).",
+            "Gestational hypertension, preeclampsia, and eclampsia.",
+            "Placental conditions like placenta previa or a placental abruption.",
+            "Previous preterm birth, or other complications with previous pregnancies.",
+            "Too much or too little amniotic fluid."
+          ],
+          "sideImage": "/assets/img/High-Risk Pregnancy2.jpg"
+        },
+        {
+          "heading": "Understanding High-Risk Pregnancy Labels",
+          "paragraphs": [
+            "These factors are only some of the conditions or factors that may result in your provider calling your pregnancy \"high risk.\" The label isn't meant to scare you. Rather, it's a way for your provider to recognize and identify potential complications to keep you and the fetus safe through pregnancy and delivery."
+          ]
+        },
+        {
+          "heading": "What are the signs and symptoms of high-risk pregnancy?",
+          "paragraphs": [
+            "Talk to your pregnancy care provider right away if you experience any of the following symptoms during pregnancy, regardless of if your pregnancy is high risk or low risk:"
+          ],
+          "listItems": [
+            "Abdominal pain that doesn't go away.",
+            "Chest pain.",
+            "Dizziness or fainting.",
+            "Extreme fatigue.",
+            "The fetus's movement stopping or slowing.",
+            "Heart palpitations.",
+            "Nausea and vomiting that's worse than typical morning sickness.",
+            "Severe headache that won't go away or gets worse.",
+            "Swelling, redness or pain in your face or limbs.",
+            "Thoughts about harming yourself.",
+            "Trouble breathing.",
+            "Vaginal bleeding or increased discharge."
+          ]
+        },
+        {
+          "heading": "At what age is a pregnancy considered high risk?",
+          "paragraphs": [
+            "Age alone isn't a determining factor in a high-risk pregnancy. Your pregnancy care provider determines if your pregnancy is likely to have complications based on several other factors."
+          ]
+        },
+        {
+          "heading": "What are the complications of high-risk pregnancies?",
+          "paragraphs": [
+            "A high-risk pregnancy can be life-threatening for you or the fetus. Some of the most common complications can include:"
+          ],
+          "listItems": [
+            "Preeclampsia-spectrum disorders, including gestational hypertension, preeclampsia and eclampsia.",
+            "Preterm delivery.",
+            "Cesarean delivery.",
+            "Excessive bleeding during labor and delivery, or after birth (postpartum hemorrhage).",
+            "Low birth weight.",
+            "Birth defects (problems with the development of a baby's organs such as the heart or brain, also called congenital conditions).",
+            "Neonatal intensive care unit (NICU) admission for your baby.",
+            "Intensive care unit (ICU) admission for you.",
+            "Miscarriage.",
+            "Stillbirth."
+          ]
+        },
+        {
+          "heading": "Managing Complications in High-Risk Pregnancies",
+          "paragraphs": [
+            "It's important to talk to your pregnancy care provider about your risks for these complications. Ask them any questions you have. With proper monitoring and care, you and your providers may be able to reduce your risk of having these or other complications."
+          ]
+        },
+        {
+          "heading": "How is high-risk pregnancy diagnosed and monitored?",
+          "paragraphs": [
+            "Getting early and thorough prenatal care as soon as you know you're pregnant is critical. It's the best way to detect and manage a high-risk pregnancy. Be sure to tell your healthcare provider about your health history and any past pregnancies. If you do have a high-risk pregnancy, you may need special monitoring throughout your pregnancy.",
+            "Tests to monitor your health and the health of the fetus during pregnancy may include:"
+          ],
+          "listItems": [
+            "Blood and urine testing to check your health and the fetus's risk for genetic conditions.",
+            "Ultrasound, which uses sound waves to create images of the fetus to ensure the fetus is developing appropriately. People with high-risk pregnancies usually have more frequent ultrasounds.",
+            "Other ultrasound and fetal heart rate monitoring tests that check on the overall health of the fetus and placenta, called a biophysical profile and nonstress test."
+          ]
+        },
+        {
+          "heading": "What is the treatment for a high-risk pregnancy?",
+          "paragraphs": [
+            "Management for a high-risk pregnancy will depend on your specific risk profile. Your care plan may include:"
+          ],
+          "listItems": [
+            "Closer monitoring from your obstetrician.",
+            "Consultation with a maternal-fetal medicine specialist.",
+            "Consultation with other medical specialists.",
+            "More ultrasounds and closer fetal evaluation.",
+            "Home blood pressure monitoring.",
+            "Careful monitoring of medications used to manage preexisting conditions."
+          ]
+        }
+      ]
+    }
+  },
+  "fetal-reduction": {
+    "title": "Fetal Reduction",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is fetal or embryo reduction?",
+          "paragraphs": [
+            "Fetal Reduction is a procedure used to reduce the number of fetuses in a multiple pregnancy, usually to two to decrease the health risks to the mother & decrease the risk of complications to the remaining fetuses. The goal of fetal reduction is to increase the chance of a successful, healthy pregnancy."
+          ],
+          "sideImage": "/assets/img/Fetal Reduction1.png"
+        },
+        {
+          "heading": "What are the risks associated with multiple pregnancy?",
+          "paragraphs": [
+            "If a pregnancy involves 3 or more fetuses, the risks of miscarriage, stillbirth premature rupture of membrane, early delivery, structural malformation & early neonatal death increase with each additional fetus.",
+            "Premature delivery affects babies' lungs, heart, stomach, and brain. It can cause long term health issues in babies like cerebral palsy, intellectual disability, and vision & hearing loss, obesity chronic hypertension & diabetes",
+            "Maternal risk like anaemia, gestational hypertension, preeclampsia, gestational diabetes, antepartum & postpartum hemorrhage also increases with multiple pregnancies. It further causes economic & mental challenges to family. Parents of multiples pregnancies are at an increased risk of severe stress and depression"
+          ]
+        },
+        {
+          "heading": "What are the benefits of embryo reduction?",
+          "paragraphs": [
+            "Multifetal pregnancy reduction may maximize the woman's health and the health of her surviving neonates. It substantially increases the duration of pregnancy, reduces the incidence of premature delivery which in turn has the benefit of increasing the baby's birth weight and reducing neonatal morbidity & mortality along with shortening the neonatal intensive care stay. The benefits are even more pronounced with quadruplets and other higher order multiple pregnancies."
+          ]
+        },
+        {
+          "heading": "Is mutifetal reduction & Selective Reduction same?",
+          "paragraphs": [
+            "In Selective reduction, one of the fetuses who have a grave and incurable disease is electively reduced, to allow pregnancy to continue for the sake of the healthy fetus or fetuses. However, in multifetal pregnancy reduction, fetus is reduced in cases of high-order multiple pregnancies (more than three fetuses) to reduce the obstetrical and perinatal risks inherent in this kind of pregnancy."
+          ]
+        },
+        {
+          "heading": "Role of fetal reduction in an IVF conceived pregnancy?",
+          "paragraphs": [
+            "IVF is associated with increased incidence of multiple pregnancies. However, it may seem paradoxical in an IVF pregnancy as so much effort is involved to get pregnant; embryo reduction is advised with aim to not just conceive, but to give the mother a healthy baby at the end of pregnancy."
+          ]
+        },
+        {
+          "heading": "Is there any role of fetal reduction in twin pregnancy?",
+          "paragraphs": [
+            "Certain medical (heart disease) or obstetric considerations (eg- uterine anomaly, history of cervical insufficiency, or preeclampsia) can significantly increase the risks of carrying even a twin pregnancy compared with a singleton pregnancy. A fetal reduction to a singleton may be an appropriate for these conditions and also for nonmedical reasons, such as financial, social, or emotional concerns."
+          ]
+        },
+        {
+          "heading": "When is the procedure of embryo reduction typically done?",
+          "paragraphs": [
+            "If a couple or individual has decided for fetal reduction, a thorough ultrasound is usually done between 11-13 weeks. We at our center, prefer to do it at around 12 weeks when we can do the first trimester screening and also rule out any structural abnormality in the babies. The results of such tests may assist patients in making their decisions about intervention.",
+            "In addition, about 8 to 20% multiple pregnancies may reduce by themselves by the end of first trimester. The 'vanishing' twin does not have any adverse effect on the surviving fetus."
+          ]
+        },
+        {
+          "heading": "How is the procedure performed?",
+          "paragraphs": [
+            "The fetus which displays signs of any abnormality is usually selected for reduction. In case all the fetuses appear normal during the scan, then the fetus that is easily approachable is targeted for reduction. It must be noted that fetuses are not selected based on gender. This is strictly prohibited under PCPNDT law and the sex of the fetuses is not revealed and is also not studied.",
+            "The most common method of fetal reduction is Trans abdominal (through the abdomen). For this procedure, the doctor uses ultrasound as a guide and inserts a needle through the mother's abdomen and into the uterus to the selected & then injects the fetus with a potassium chloride/ lignocaine solution, which stops the fetal heart. Because the fetus is very small during the first trimester, the reduced fetus is usually absorbed by the mother's body. This may include some vaginal bleeding.",
+            "Sometimes, we use a different technique called radiofrequency ablation instead in case of monochorionic pregnancy. A small needle device uses electric currents to cut off the blood flow from your umbilical cord to one or more fetuses."
+          ],
+          "bottomImage": "/assets/img/Fetal Reduction2.png"
+        },
+        {
+          "heading": "What are the risks associated with the procedure?",
+          "paragraphs": [
+            "After fetal reduction, there is a 5- 7 % chance that the woman will lose the entire pregnancy prior to 20 weeks' gestation. The original number of fetuses, the route of the needle as well as the number terminated may influence the likelihood and the rate of pregnancy loss.",
+            "In small number of cases, women have a chance of going into labor too early. Other side effects include fever, vaginal bleeding, leaking or contractions. Infections from fetal reduction are rare.",
+            "The procedure usually does not have any adverse effect on the surviving fetus. In cases where a multi-fetal pregnancy of three or more fetuses is reduced to two fetuses, the remaining fetuses develop as they would if they had been conceived as twins. The benefits of fetal reduction far outweigh the risks associated with the procedure."
+          ]
+        },
+        {
+          "heading": "What should I expect after the procedure?",
+          "paragraphs": [
+            "You will be asked to rest and the baby's heart beat will be checked after half an hour of the procedure. You may have slight bruising at the site of needle entry. You may also have some spotting or mild cramping for a couple of hours for which you may take oral paracetamol. There is no restriction to your daily activities though the doctor may advice you to stay home for 3 days to minimize chances of infection.",
+            "If you have fever, vaginal bleeding or leaking or contractions, you must report to the hospital."
+          ]
+        }
+      ]
+    }
+  },
+  "pregnancy-and-coronavirus": {
+    "title": "Pregnancy and Coronavirus",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Pregnancy and Coronavirus",
+          "paragraphs": [
+            "Pregnancy is a beautiful phase in the life of a woman with some challenges and lots of happy moments. However, during the pandemic, stress and anxiety can quickly multiply, impacting the lives of the mother and the family.",
+            "We understand that the time is crucial, and with daily hose of news about coronavirus, you must be having many questions in your mind. A growing number of families are facing difficult questions like \"Do newborn babies need to be separated from mothers infected with the new coronavirus?\" every now and then.",
+            "Although not much is known about the disease, health care providers and doctors across the world have managed to estimate the risk posed by the virus and come up with some strategies to reduce the impact on the mother and the child.",
+            "In light of all this, we discussed the area of concerns with our experts to get detailed insights. So, let's have a look!"
+          ],
+          "sideImage": "/assets/img/genetic.jpg"
+        },
+        {
+          "heading": "Pregnant Women and Risk of Getting Infected With Coronavirus",
+          "paragraphs": [
+            "Almost 98% of the pregnant women have asked: \"Am I more at risk if I'm pregnant?\" The answer is that there is no indication that pregnant women are at a greater risk. However, this doesn't mean that they can't get affected.",
+            "In fact, during the 2003 outbreak of SARS, the fatality rate of pregnant women was considerably higher. So, it is important to take proper cautions."
+          ]
+        },
+        {
+          "heading": "Pregnant Women with Coronavirus: Things to Consider",
+          "paragraphs": [
+            "Studies suggest that pregnancy alters the immune system of the woman so the complications may increase if she catches coronavirus. However, the risk varies from person to person as a study conducted with 43 pregnant women in New York revealed that a majority don't experience any severity. Nevertheless, some portion of the women were at risk. The risk further aggravates if the woman has any underlying health condition like lupus, diabetes, or respiratory diseases."
+          ]
+        },
+        {
+          "heading": "Can the virus be transmitted to the uterus or to the child during breastfeeding?",
+          "paragraphs": [
+            "Some viruses like Zika, cytomegalovirus, rubella, can be passed from mother to fetus in the uterus. However, respiratory viruses are less likely to be transmitted to the uterus.",
+            "Considering transmitting the virus to the child, there was a study conducted in Wuhan on 33 women, which showed that three of the babies contracted the disease despite measures to prevent the spread. This implies that the chances of transmitting the virus is low, but the child can get the virus."
+          ]
+        },
+        {
+          "heading": "Home Birth Amid Coronavirus",
+          "paragraphs": [
+            "At this point, women should not change their delivery plans. Hospitals in India are taking precautions to ensure that pregnant women are not exposed to ill patients. Homebirth requires moths of education, training, and preparation; therefore, you should refrain from doing it.",
+            "In addition, if you are pregnant with IVF or any other fertility procedure, then you should strictly avoid preparing yourself for a home birth. Government has allowed each mother to have a support person in the delivery room so that the process of delivery remains risk-free. However, the person must be tested for coronavirus before assisting the woman.",
+            "Further, the woman is discharged earlier than usual to minimise the risk of getting an infection or transmitting it."
+          ]
+        },
+        {
+          "heading": "Breastfeeding and Coronavirus",
+          "paragraphs": [
+            "There is no data that support whether breastfeeding is dangerous or not if the woman is infected with the virus. However, WHO suggests that the baby can be provided with breast milk using a breast pump.",
+            "In addition, direct breastfeeding is also possible if the mother wears a mask and take proper sanitisation measures before touching the baby. However, doctors still suggest that the mother and baby be separated if the mother is infected until she recovers and advice using a breast pump for feeding the child."
+          ]
+        },
+        {
+          "heading": "Additional Steps to Protect Yourself and Your Child From Coronavirus",
+          "paragraphs": [
+            "You need to take proper precaution and must change the structure of prenatal care. This includes limiting exposure to other relatives, medical staff and the woman should practice social distancing as much as possible. If required, ob-gyne and others can be contacted using software applications."
+          ]
+        },
+        {
+          "heading": "Some Do's and Don'ts",
+          "paragraphs": [
+            "To protect yourself and your baby during the pandemic, follow these important guidelines:"
+          ],
+          "listItems": [
+            "Avoid contact with anyone with cold or flu symptoms",
+            "Use alcohol-based hand sanitizers",
+            "Wash your hands frequently with soap and water",
+            "Avoid places with large numbers of people"
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "paragraphs": [
+            "More and more research is conducted with numbers skyrocketing globally. In the meantime, the best thing you can do is to limit your exposure and follow strict hygiene measures. By limiting your exposure, you limit your risk."
+          ]
+        }
+      ]
+    }
+  },
+  "laparoscopy-and-hysteroscopy": {
+    "title": "Laparoscopy and Hysteroscopy",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Laparoscopy and Hysteroscopy: Minimally Invasive Fertility Surgery",
+          "paragraphs": [
+            "Laparoscopy and hysteroscopy are minimally invasive surgical procedures used to diagnose and treat various fertility-related conditions. These advanced techniques allow our surgeons to examine and treat issues within the reproductive organs with minimal scarring and faster recovery times.",
+            "At Seeds of Innocence, we specialize in both procedures, offering comprehensive diagnostic and therapeutic options for fertility issues."
+          ],
+          "sideImage": "/assets/img/recent_post2.jpg"
+        },
+        {
+          "heading": "What is Laparoscopy?",
+          "paragraphs": [
+            "Laparoscopy is a surgical procedure that uses a thin, lighted tube (laparoscope) inserted through small incisions in the abdomen to examine and treat conditions affecting the pelvic organs:"
+          ],
+          "listItems": [
+            "Diagnosis of endometriosis",
+            "Removal of ovarian cysts",
+            "Treatment of blocked fallopian tubes",
+            "Removal of fibroids",
+            "Treatment of pelvic adhesions",
+            "Ovarian drilling for PCOS"
+          ]
+        },
+        {
+          "heading": "What is Hysteroscopy?",
+          "paragraphs": [
+            "Hysteroscopy is a procedure that uses a thin, lighted tube (hysteroscope) inserted through the cervix to examine and treat conditions within the uterus:"
+          ],
+          "listItems": [
+            "Removal of uterine polyps",
+            "Removal of fibroids",
+            "Treatment of uterine adhesions (Asherman's syndrome)",
+            "Correction of uterine septum",
+            "Removal of retained products of conception",
+            "Diagnosis of abnormal uterine bleeding"
+          ]
+        },
+        {
+          "heading": "Benefits of Minimally Invasive Surgery",
+          "paragraphs": [
+            "Both laparoscopy and hysteroscopy offer several advantages:"
+          ],
+          "listItems": [
+            "Smaller incisions and minimal scarring",
+            "Faster recovery time",
+            "Reduced pain and discomfort",
+            "Lower risk of infection",
+            "Shorter hospital stay",
+            "Better cosmetic outcomes"
+          ]
+        },
+        {
+          "heading": "When Are These Procedures Recommended?",
+          "paragraphs": [
+            "These procedures may be recommended for:"
+          ],
+          "listItems": [
+            "Unexplained infertility",
+            "Recurrent miscarriages",
+            "Abnormal uterine bleeding",
+            "Suspected endometriosis or fibroids",
+            "Blocked fallopian tubes",
+            "Uterine abnormalities"
+          ],
+          "bottomImage": "/assets/img/recent_post2.jpg"
+        }
+      ]
+    }
+  },
+  "laparoscopy": {
+    "title": "Laparoscopy",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Understanding Laparoscopy: A Guide for You",
+          "paragraphs": [
+            "Laparoscopy is a modern surgical technique that allows doctors to view the inside of the abdomen and pelvis without making large incisions. It's often referred to as minimally invasive surgery because it uses small incisions, leading to quicker recovery, less pain, and fewer complications compared to traditional surgery. This procedure helps diagnose and treat various conditions in both men and women, including those related to fertility, the digestive system, and reproductive organs.",
+            "In this guide, we'll explain what laparoscopy is, how it's performed, its benefits, and its role in women's health, particularly regarding fertility. We will also provide answers to some frequently asked questions to give you a clear understanding."
+          ],
+          "sideImage": "/assets/img/Laparoscopy1.jpg"
+        },
+        {
+          "heading": "What is Laparoscopy?",
+          "paragraphs": [
+            "Laparoscopy is a procedure that involves inserting a laparoscope a thin, lighted tube with a camera attached to it — through small incisions made in the abdomen. This allows the surgeon to see the inside of the abdomen or pelvic area on a monitor in real-time. It can be used for both diagnostic and therapeutic purposes.",
+            "Laparoscopy is commonly used to:"
+          ],
+          "listItems": [
+            "Diagnose conditions such as endometriosis, ovarian cysts, fibroids, and pelvic infections.",
+            "Treat conditions like ectopic pregnancies, remove cysts or fibroids, and perform sterilization or other fertility-related surgeries."
+          ]
+        },
+        {
+          "heading": "How is Laparoscopy Performed?",
+          "paragraphs": [
+            "Laparoscopy is usually done under general anaesthesia, meaning you will be asleep during the procedure. Here's what to expect:"
+          ],
+          "listItems": [
+            "Preparation: Before the surgery, the doctor will discuss the procedure, answer any questions, and ask you to follow specific instructions, such as fasting the night before. You will be given anaesthesia to ensure you don't feel any pain.",
+            "Making Small Incisions: The surgeon will make small incisions (usually 1-2 cm) in your abdomen. One incision is used to insert the laparoscope, and other incisions may be made to introduce additional instruments needed for surgery if necessary.",
+            "Inserting the Laparoscope: The laparoscope is inserted through one of the incisions. It has a light and camera at the tip that transmits images to a monitor, so the surgeon can clearly see inside your abdomen or pelvis.",
+            "Examination or Treatment: The surgeon can use the laparoscope to examine organs like the ovaries, fallopian tubes, uterus, liver, or other parts of the abdomen. If a problem is found, the surgeon can treat it during the same procedure using small instruments inserted through the other incisions.",
+            "Recovery: After the procedure, you will be moved to a recovery room. Most people can go home the same day, although some may stay overnight if more complex surgery is performed."
+          ]
+        },
+        {
+          "heading": "Why is Laparoscopy Important?",
+          "paragraphs": [
+            "Laparoscopy is a crucial tool in modern medicine, particularly in the field of gynaecology and fertility. Here's why:"
+          ],
+          "listItems": [
+            "Accurate Diagnosis: Laparoscopy allows doctors to see inside the body and obtain a direct view of the organs. This is especially important when diagnosing conditions like endometriosis, fibroids, ovarian cysts, or pelvic inflammatory disease, which can be difficult to diagnose through imaging alone.",
+            "Less Invasive: Unlike traditional surgery, which involves large incisions, laparoscopy requires only small cuts, which means less pain, smaller scars, and quicker recovery times. Most people can return to their normal activities within a few days.",
+            "Treatment of Fertility Issues: Many women who struggle with infertility find laparoscopy to be an essential part of their diagnosis and treatment. Conditions such as blocked fallopian tubes, endometriosis, or fibroids can be treated through laparoscopy, improving the chances of pregnancy.",
+            "Faster Recovery: Because the incisions are smaller, the healing process is faster. You may experience some discomfort after the procedure, but it's typically much less than traditional surgery."
+          ]
+        },
+        {
+          "heading": "Benefits of Laparoscopy",
+          "paragraphs": [
+            "Laparoscopy offers several key benefits:"
+          ],
+          "listItems": [
+            "Minimally invasive: The small incisions reduce the risk of complications, bleeding, and infection.",
+            "Faster recovery: With smaller cuts, recovery time is shorter, allowing you to return to daily activities sooner.",
+            "Reduced pain: Less trauma to the body means less pain after the procedure.",
+            "Accurate diagnosis: Laparoscopy gives the doctor a clear view of the area in question, making it easier to diagnose and treat conditions."
+          ]
+        },
+        {
+          "heading": "Who Should Consider Laparoscopy?",
+          "paragraphs": [
+            "Laparoscopy can be recommended for women who experience any of the following:"
+          ],
+          "listItems": [
+            "Pelvic pain or discomfort that cannot be explained.",
+            "Infertility or difficulty getting pregnant.",
+            "Chronic pelvic infections or conditions like endometriosis.",
+            "Ovarian cysts or fibroids that may need removal.",
+            "Ectopic pregnancy, where the pregnancy occurs outside the uterus and needs surgical intervention."
+          ],
+          "sideImage": "/assets/img/Laparoscopy2.jpg"
+        },
+        {
+          "heading": "When to Consider Laparoscopy",
+          "paragraphs": [
+            "If you are facing any of these issues, laparoscopy could be a valuable tool to identify the cause and potentially resolve the problem."
+          ]
+        },
+        {
+          "heading": "Risks and Considerations",
+          "paragraphs": [
+            "Like all surgeries, laparoscopy has some risks, although they are relatively rare. These can include:"
+          ],
+          "listItems": [
+            "Infection at the incision site.",
+            "Injury to nearby organs, such as the bladder or intestines.",
+            "Blood clots or reactions to anaesthesia."
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "paragraphs": [
+            "Laparoscopy is a powerful and minimally invasive procedure that helps doctors diagnose and treat various conditions, particularly those related to fertility and reproductive health. It offers many benefits, including quicker recovery times, less pain, and the ability to treat problems like ovarian cysts, fibroids, and endometriosis.",
+            "At Seeds of Innocens, we are committed to supporting women's health and fertility through knowledge, compassion, and the latest medical treatments. If you have any questions or need guidance regarding laparoscopy or fertility treatment options, we are here to help you every step of the way."
+          ]
+        }
+      ]
+    }
+  },
+  "open-surgery": {
+    "title": "Open Surgery",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Open Surgery in IVF and Pregnancy",
+          "paragraphs": [
+            "Developments in medical science have enabled the addressing of fertility problems and pregnancy complications using different procedures. Although minimally invasive methods are the first choice, open surgery is an important option in specific situations. Open surgery during IVF or pregnancy is done if there are complex reproductive problems and direct access to the reproductive system is needed.",
+            "Open surgery may be recommended in cases where other treatments, such as medications or laparoscopic procedures, are not effective."
+          ],
+          "sideImage": "/assets/img/Open Surgery1.jpg"
+        },
+        {
+          "heading": "Open Surgery in IVF",
+          "paragraphs": [
+            "Open surgery may be necessary for various IVF-related conditions:"
+          ],
+          "listItems": [
+            "Fibroid Removal (Myomectomy): Large or multiple fibroids in the uterus can interfere with implantation and pregnancy. A myomectomy through open surgery helps in removing fibroids while preserving the uterus.",
+            "Endometriosis Treatment: Severe endometriosis can cause adhesions and blockages in the reproductive tract, requiring surgical removal for improved fertility.",
+            "Ovarian Cyst Removal: Large cysts can impact egg quality and ovulation. Open surgery may be needed if the cyst is too large for laparoscopic removal.",
+            "Uterine Abnormalities: Congenital abnormalities like a uterine septum or scar tissue may require surgical correction to improve pregnancy chances."
+          ]
+        },
+        {
+          "heading": "Open Surgery in Pregnancy",
+          "paragraphs": [
+            "Open surgery during pregnancy may be required for:"
+          ],
+          "listItems": [
+            "C-Section (Cesarean Section): When vaginal delivery is not possible due to medical reasons like fetal distress, placenta previa, or multiple pregnancies, a C-section is performed.",
+            "Ectopic Pregnancy Removal: If a fertilized egg implants outside the uterus, usually in the fallopian tube, open surgery is required to remove the embryo and prevent complications.",
+            "Uterine Rupture Repair: A rare but serious condition where the uterus tears during pregnancy or labour, requiring immediate open surgery to save the mother and baby."
+          ]
+        },
+        {
+          "heading": "Procedure and Recovery",
+          "paragraphs": [
+            "Understanding the procedure and recovery process is important."
+          ]
+        },
+        {
+          "heading": "Before Surgery",
+          "paragraphs": [
+            "Pre-surgery preparation includes:"
+          ],
+          "listItems": [
+            "A thorough diagnosis, including ultrasound and blood tests, helps determine the need for surgery.",
+            "Patients are advised to follow specific instructions regarding food, medications, and lifestyle changes before surgery."
+          ]
+        },
+        {
+          "heading": "During Surgery",
+          "paragraphs": [
+            "The surgical procedure involves:"
+          ],
+          "listItems": [
+            "The procedure is performed under general anaesthesia.",
+            "The surgeon makes an incision in the lower abdomen to access the reproductive organs and perform the necessary corrections.",
+            "The duration varies based on the complexity of the condition."
+          ]
+        },
+        {
+          "heading": "After Surgery",
+          "paragraphs": [
+            "Post-surgery recovery includes:"
+          ],
+          "listItems": [
+            "Recovery may take a few weeks, depending on the type of surgery.",
+            "Patients are advised to take rest, follow a healthy diet, and avoid strenuous activities.",
+            "Follow-up appointments ensure proper healing and monitor reproductive health."
+          ]
+        },
+        {
+          "heading": "Benefits and Risks of Open Surgery",
+          "paragraphs": [
+            "Understanding the benefits and risks helps in making informed decisions."
+          ],
+          "sideImage": "/assets/img/Open Surgery2.jpg"
+        },
+        {
+          "heading": "Benefits",
+          "paragraphs": [
+            "Open surgery offers several benefits:"
+          ],
+          "listItems": [
+            "Effective treatment for complex reproductive conditions.",
+            "Increases chances of successful pregnancy in IVF.",
+            "Can resolve long-standing fertility issues that were not treatable with other methods."
+          ]
+        },
+        {
+          "heading": "Risks",
+          "paragraphs": [
+            "Like any surgical procedure, open surgery has some risks:"
+          ],
+          "listItems": [
+            "Longer recovery time compared to minimally invasive procedures.",
+            "Risk of infection or excessive bleeding.",
+            "Possibility of scar tissue formation, which may impact future pregnancies."
+          ]
+        },
+        {
+          "heading": "Why Choose Seeds of Innocens for Open Surgery?",
+          "paragraphs": [
+            "Seeds of Innocens is a trusted name in fertility and pregnancy care, offering expert surgical interventions when needed. Our skilled team of specialists ensures:",
+            "Advanced medical techniques for safe and effective treatment.",
+            "Personalized care to support your fertility journey.",
+            "High success rates in managing complex reproductive conditions.",
+            "At Seeds of Innocens, we are committed to providing the best fertility care with advanced treatment options, including open surgery when necessary. If you are facing fertility challenges, consult our experts for the right guidance."
+          ]
+        }
+      ]
+    }
+  },
+  "pcos-polycystic-ovarian-syndrome": {
+    "title": "PCOS (Polycystic Ovarian Syndrome)",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "PCOS Symptoms, Treatment, Cost and Side Effects",
+          "paragraphs": [
+            "PCOS is an imbalance in the hormones of a female that cause irregular menstrual cycles in a female. Some common PCOS side effects are infertility, cardiovascular diseases, and altered physical appearances. There are different types of PCOS and it can be managed with a PCOS diet at an early PCOS stage. The term Polycystic Ovarian Syndrome describes the appearance of the ovaries when viewed under ultrasound. They appear to have cysts growing around them.",
+            "In PCOS, there may be anywhere from 12 to more cysts on the ovaries, that range in size from 2 mm to 9 mm. What this does is that the condition hinders ovulation, making it irregular or non existent. Naturally, an absent ovulation cycle means that the lady will have issues in conceiving naturally."
+          ]
+        },
+        {
+          "heading": "Cause of PCOS",
+          "paragraphs": [
+            "The exact cause of PCOS in women is unknown as of yet. However, it may have a genetic basis as it is seen to run in families. If a female in your family has had history of PCOS, there are chances that even you may be at a higher risk of developing the condition yourself."
+          ]
+        },
+        {
+          "heading": "Symptoms of PCOS",
+          "listItems": [
+            "Irregular Menstrual Cycle",
+            "Difficulty in Natural conception",
+            "Rapid increase in weight",
+            "Increase in facial and body hair",
+            "Thick and dark brown patches on skin",
+            "Skin tags or excess skin patches in neck folds and armpits",
+            "Hair loss",
+            "Oily skin and acne",
+            "Mood swings",
+            "Pelvic pain",
+            "Sleep apnea or interrupted breathing while sleeping"
+          ]
+        },
+        {
+          "heading": "Effects of PCOS on fertility",
+          "paragraphs": [
+            "Absence of Ovulation (Anovulation)",
+            "One of the major effects of PCOS on the female reproductive system is anovulation. Because of this, the chances of getting pregnant get very slim for a women.",
+            "Weight Gain",
+            "An excessive weight gain will only further decrease the chances of getting pregnant as it already a known factor of infertility. Furthermore, increased weight also is a known cause of the body resisting any ovulation inducing drugs as well."
+          ]
+        },
+        {
+          "heading": "Q. How Do I Know If I Have PCOS?",
+          "paragraphs": [
+            "There are set symptoms for PCOS that tell you about the condition. The most obvious is the abnormal irregularity of your menstrual cycle. Aside from this, excessive weight gain, facial hair growth, oily skin and acne are major telltale signs."
+          ]
+        },
+        {
+          "heading": "Q. What is the main cause of PCOS?",
+          "paragraphs": [
+            "An exact cause of PCOS is not known. However, it is true that it has a genetic factor to it as it is commonly observed to run in families. If you think you have family history of the disease, you can get checked by one of our experts at Seeds of Innocence. Book an appointment today."
+          ]
+        },
+        {
+          "heading": "Q. How does PCOS affect fertility?",
+          "paragraphs": [
+            "PCOS causes anovulation and brings excessive weight gain. Both of these are huge factors of infertility."
+          ]
+        },
+        {
+          "heading": "Q. Does PCOS make you smell?",
+          "paragraphs": [
+            "Yes. Another common symptom of PCOS is that it causes excessive body odour problems in females."
+          ]
+        }
+      ]
+    }
+  },
+  "irregular-menstrual-cycle": {
+    "title": "Irregular Menstrual Cycle",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Understanding Irregular Menstrual Cycles",
+          "paragraphs": [
+            "An irregular menstrual cycle is one that doesn't follow a regular pattern. While a normal cycle typically ranges from 21 to 35 days, irregular cycles can vary significantly in length, timing, or flow.",
+            "Irregular menstrual cycles can affect fertility by making it difficult to predict ovulation, which is crucial for conception. At Seeds of Innocence, we help diagnose and treat irregular menstrual cycles to improve fertility outcomes."
+          ],
+          "sideImage": "/assets/img/recent_post2.jpg"
+        },
+        {
+          "heading": "Causes of Irregular Menstrual Cycles",
+          "paragraphs": [
+            "Several factors can cause irregular menstrual cycles:"
+          ],
+          "listItems": [
+            "Polycystic Ovary Syndrome (PCOS)",
+            "Thyroid disorders",
+            "Hormonal imbalances",
+            "Stress and lifestyle factors",
+            "Excessive exercise",
+            "Weight fluctuations",
+            "Perimenopause",
+            "Certain medications",
+            "Medical conditions affecting the reproductive system"
+          ]
+        },
+        {
+          "heading": "Impact on Fertility",
+          "paragraphs": [
+            "Irregular menstrual cycles can affect fertility in several ways:"
+          ],
+          "listItems": [
+            "Difficulty predicting ovulation",
+            "Reduced frequency of ovulation",
+            "Anovulatory cycles (cycles without ovulation)",
+            "Hormonal imbalances affecting egg quality",
+            "Reduced chances of natural conception"
+          ]
+        },
+        {
+          "heading": "Diagnosis and Treatment",
+          "paragraphs": [
+            "At Seeds of Innocence, we offer comprehensive evaluation and treatment:"
+          ],
+          "listItems": [
+            "Detailed medical history and physical examination",
+            "Hormonal testing",
+            "Ultrasound evaluation",
+            "Ovulation induction medications",
+            "Lifestyle modifications",
+            "Hormone therapy",
+            "Fertility treatments (IUI, IVF)"
+          ]
+        },
+        {
+          "heading": "When to Seek Help",
+          "paragraphs": [
+            "You should consult a fertility specialist if you experience:"
+          ],
+          "listItems": [
+            "Cycles shorter than 21 days or longer than 35 days",
+            "Missed periods for 3+ months",
+            "Heavy or prolonged bleeding",
+            "Severe menstrual cramps",
+            "Difficulty conceiving for 6+ months"
+          ],
+          "bottomImage": "/assets/img/recent_post2.jpg"
+        }
+      ]
+    }
+  },
+  "diabetes-thyroid-and-obesity": {
+    "title": "Diabetes, Thyroid and Obesity",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Diabetes, Thyroid Disorders, and Obesity: Impact on Fertility",
+          "paragraphs": [
+            "Diabetes, thyroid disorders, and obesity are common health conditions that can significantly impact fertility in both men and women. Understanding how these conditions affect reproductive health is crucial for successful fertility treatment.",
+            "At Seeds of Innocence, we provide comprehensive care for patients with these conditions, offering specialized treatment plans to optimize fertility outcomes."
+          ],
+          "sideImage": "/assets/img/recent_post2.jpg"
+        },
+        {
+          "heading": "Diabetes and Fertility",
+          "paragraphs": [
+            "Diabetes can affect fertility in several ways:"
+          ],
+          "listItems": [
+            "Irregular menstrual cycles in women",
+            "Reduced sperm quality and quantity in men",
+            "Increased risk of miscarriage",
+            "Higher risk of birth defects",
+            "Complications during pregnancy",
+            "Delayed conception"
+          ]
+        },
+        {
+          "heading": "Thyroid Disorders and Fertility",
+          "paragraphs": [
+            "Thyroid hormones play a crucial role in reproductive health. Both hypothyroidism (underactive thyroid) and hyperthyroidism (overactive thyroid) can affect fertility:"
+          ],
+          "listItems": [
+            "Irregular ovulation",
+            "Menstrual cycle abnormalities",
+            "Increased risk of miscarriage",
+            "Reduced libido",
+            "Hormonal imbalances",
+            "Impact on fetal development"
+          ]
+        },
+        {
+          "heading": "Obesity and Fertility",
+          "paragraphs": [
+            "Obesity is a significant factor affecting fertility in both men and women:"
+          ],
+          "listItems": [
+            "Irregular menstrual cycles",
+            "Reduced ovulation",
+            "Lower success rates with IVF",
+            "Increased risk of miscarriage",
+            "Reduced sperm quality in men",
+            "Hormonal imbalances",
+            "Complications during pregnancy"
+          ]
+        },
+        {
+          "heading": "Treatment Approach",
+          "paragraphs": [
+            "At Seeds of Innocence, we take a comprehensive approach to treating fertility issues related to diabetes, thyroid disorders, and obesity:"
+          ],
+          "listItems": [
+            "Comprehensive medical evaluation",
+            "Collaboration with endocrinologists",
+            "Lifestyle modification programs",
+            "Weight management support",
+            "Optimized fertility treatment protocols",
+            "Close monitoring during treatment"
+          ],
+          "bottomImage": "/assets/img/recent_post2.jpg"
+        }
+      ]
+    }
+  },
+  "endometrial-and-ovarian": {
+    "title": "Endometrial and Ovarian Health",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Understanding the Endometrium's Role in Pregnancy",
+          "paragraphs": [
+            "The endometrium is the inner lining of the uterus where an embryo will implant and grow in pregnancy. A healthy receptive endometrium is crucial to natural conception as well as IVF success. During any IVF cycle, the thickness of the endometrium is kept under meticulous surveillance since it directly impacts implantation."
+          ],
+          "listItems": [
+            "Optimal Thickness for Implantation: An endometrial thickness of 7–10 mm is ideal for embryo transfer during IVF.",
+            "Hormonal Influence: Estrogen and progesterone play important roles in preparing the endometrium. Any imbalance of these hormones will lead to a thinner lining or poor receptivity, affecting the chances of pregnancy."
+          ],
+          "sideImage": "/assets/img/Endometrial and Ovarian Health.webp"
+        },
+        {
+          "heading": "Expert Care at Seeds of Innocens",
+          "paragraphs": [
+            "At Seeds of Innocens, we employ advanced monitoring and hormone therapies to ensure that the endometrial lining is at its healthiest, increasing the likelihood of successful implantation."
+          ]
+        },
+        {
+          "heading": "Ovarian Health and Its Impact on IVF",
+          "paragraphs": [
+            "Ovarian health determines the number and quality of eggs produced. Ovarian function is vital in any fertility treatment because it directly influences the retrieval of eggs and embryo development during IVF."
+          ],
+          "listItems": [
+            "Ovarian Reserve: This is the number of eggs remaining in a woman's ovaries. The better the ovarian reserve, the higher the chances of quality eggs in an IVF cycle.",
+            "Ovarian Stimulation: In IVF, drugs are used to stimulate the ovaries to produce several eggs. Appropriate stimulation a better quantity of mature eggs, thus increasing the chances of fertilization and subsequent embryo development.",
+            "Age and Ovarian Health: Age is a critical factor in ovarian health. With age, the number and quality of eggs decline in a woman. Early intervention and individualized IVF protocols are crucial for improving outcomes."
+          ]
+        },
+        {
+          "heading": "Personalized Treatment at Seeds of Innocens",
+          "paragraphs": [
+            "At Seeds of Innocens, we personalize every IVF cycle based on your ovarian health. Our specialists use advanced diagnostics to assess ovarian reserve and design a stimulation protocol tailored to your needs."
+          ]
+        },
+        {
+          "heading": "Challenges Related to Endometrial and Ovarian Health",
+          "paragraphs": [
+            "A few conditions may affect the ovaries and endometrium, hence difficult conception. The most common problems include:"
+          ],
+          "listItems": [
+            "Endometriosis: A condition where tissue similar to the endometrium develops outside the uterus, causing pain and problems with fertility.",
+            "Polycystic Ovary Syndrome (PCOS): This is a very common condition that impairs normal ovarian function leading to abnormal ovulation, and hormonal imbalances.",
+            "Thin Endometrium: At times, even with proper hormonal treatment, the endometrial lining is thin, thus reducing the chances of implantation.",
+            "Poor Ovarian Reserve: Women with diminished ovarian reserve may require specialised protocols or egg donation to conceive."
+          ]
+        },
+        {
+          "heading": "Specialized Treatment at Seeds of Innocens",
+          "paragraphs": [
+            "Our experienced team at Seeds of Innocens offers specialized treatments for conditions like endometriosis and PCOS, ensuring that you receive the best care possible."
+          ]
+        },
+        {
+          "heading": "How Seeds of Innocens Supports Your Fertility Journey",
+          "paragraphs": [
+            "Here, at Seeds of Innocens, we believe in a tailored approach to success. Our fertility experts work with you to understand your unique medical history and tailor your treatment plan according to the same. From improving endometrial receptivity to optimizing ovarian stimulation, our services are high-tech with compassion.",
+            "Here's what sets us apart:"
+          ],
+          "listItems": [
+            "Advanced Monitoring: Our team uses high-precision ultrasound and hormone tests to monitor endometrial and ovarian health throughout the IVF cycle.",
+            "Customized Protocols: Every IVF cycle is tailored based on your specific needs to maximize the chances of success.",
+            "Comprehensive Support: From fertility counselling to post-treatment care, we're with you at every step of your journey."
+          ]
+        },
+        {
+          "heading": "Take the First Step with Seeds of Innocens",
+          "paragraphs": [
+            "Your dream of becoming a parent deserves the best care and support. Whether you're facing challenges related to endometrial health, ovarian function, or other fertility concerns, Seeds of Innocens is here to help. Our team of experts is dedicated to offering you the highest level of care, backed by advanced technology and a patient-first approach.",
+            "If you're ready to take the next step in your fertility journey, visit us at the website and schedule a consultation. Together, let's turn your dreams of parenthood into reality."
+          ]
+        }
+      ]
+    }
+  },
+  "endometriosis": {
+    "title": "Endometriosis",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Understanding Endometriosis: What You Need to Know",
+          "paragraphs": [
+            "Living with constant pain, heavy periods, or unexplained fatigue? It might not just be \"normal period pain\". It could be endometriosis a common but often misunderstood condition that affects millions of women around the world.",
+            "At its core, endometriosis happens when the tissue that normally lines the inside of the uterus (called the endometrium) starts growing outside the uterus. These growths can appear on the ovaries, fallopian tubes, and even the bladder or intestines. And because this tissue behaves like the lining of the uterus thickening, breaking down, and bleeding with each menstrual cycle it can cause pain, swelling, and other healh problems."
+          ],
+          "sideImage": "/assets/img/Endometriosis.webp"
+        },
+        {
+          "heading": "Common Symptoms of Endometriosis",
+          "paragraphs": [
+            "Endometriosis can show up in different ways, and not everyone experiences the same symptoms. Some of the most common signs include:"
+          ],
+          "listItems": [
+            "Painful periods (also known as dysmenorrhea)",
+            "Pelvic pain that may start before and last several days after your period",
+            "Pain during or after sex",
+            "Pain while urinating or having a bowel movement, especially during periods",
+            "Heavy bleeding during or between periods",
+            "Fertility problems",
+            "Fatigue, bloating, or nausea"
+          ]
+        },
+        {
+          "heading": "Silent Endometriosis",
+          "paragraphs": [
+            "Some women may not experience any noticeable symptoms at all, and the condition might only be discovered during investigations for infertility."
+          ]
+        },
+        {
+          "heading": "What Causes Endometriosis?",
+          "paragraphs": [
+            "While the exact cause isn't fully known, several theories exist. One common explanation is retrograde menstruation when menstrual blood flows backward through the fallopian tubes into the pelvic cavity. Other possible causes include:"
+          ],
+          "listItems": [
+            "Genetic factors",
+            "Immune system issues",
+            "Surgical scars that cause cells to stick and grow in unwanted places"
+          ]
+        },
+        {
+          "heading": "How is Endometriosis Diagnosed?",
+          "paragraphs": [
+            "Diagnosing endometriosis can be tricky. Many women suffer for years before getting a proper diagnosis. Doctors usually beign with a detailed medical history and physical exam. You might also need:"
+          ],
+          "listItems": [
+            "Ultrasound",
+            "MRI",
+            "Laparoscopy – a minor surgical procedure that allows doctors to see inside the pelvis and confirm the presence of endometrial tissue."
+          ]
+        },
+        {
+          "heading": "Treatment Options for Endometriosis",
+          "paragraphs": [
+            "While there's currently no cure for endometriosis, the good news is it can be managed. Treatment depends on the severity of your symptoms and whether you're trying to get pregnant. Options include:"
+          ]
+        },
+        {
+          "heading": "Medications",
+          "paragraphs": [
+            "Medication-based treatments can help manage symptoms:"
+          ],
+          "listItems": [
+            "Pain relievers, like NSAIDs (ibuprofen), to ease discomfort.",
+            "Hormonal therapies (like birth control pills, hormonal IUDs, or GnRH agonists) to reduce or stop menstruation and slow the growth of endometrial tissue."
+          ]
+        },
+        {
+          "heading": "Surgery",
+          "paragraphs": [
+            "If medication isn't effective, laparoscopic surgery may help remove or destroy the patches of endometriosis. This can relieve pain and improve fertility."
+          ]
+        },
+        {
+          "heading": "Lifestyle Support",
+          "paragraphs": [
+            "Lifestyle changes can make a real difference in managing endometriosis:"
+          ],
+          "listItems": [
+            "Eating a healthy diet",
+            "Regular exercise",
+            "Stress management",
+            "Getting enough rest"
+          ]
+        },
+        {
+          "heading": "Additional Support Options",
+          "paragraphs": [
+            "Some women also find relief through acupuncture or physical therapy."
+          ]
+        },
+        {
+          "heading": "Living with Endometriosis",
+          "paragraphs": [
+            "Endometriosis can affect many areas of life physical health, emotional wellbeing, relationships, and fertility. But you're not alone. Talking openly with your doctor, exploring treatment options, and finding a support system can make this journey easier. You deserve to be heard, understood, and cared for."
+          ]
+        }
+      ]
+    }
+  },
+  "fibroids-polyps-and-adenomyosis": {
+    "title": "Fibroids, Uterine Polyps and Adenomyosis Treatments",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Understanding Fibroids, Polyps, and Adenomyosis",
+          "paragraphs": [
+            "Fibroids, Polyps, and Adenomyosis are the names of the various kinds of growths and developments that may grow on different organs of the reproductive system of a female. These have a great tremendous negative impact on the fertility of a woman. Here is all that you need to know about these three conditions:"
+          ],
+          "sideImage": "/assets/img/Endometriosis.webp"
+        },
+        {
+          "heading": "What are Fibroids?",
+          "paragraphs": [
+            "These are non-cancerous tumours that grow in and around the ovaries, fallopian tubes, and uterus. These may vary in size."
+          ]
+        },
+        {
+          "heading": "Symptoms of Fibroids",
+          "paragraphs": [
+            "Symptoms may include:"
+          ],
+          "listItems": [
+            "Irregular menstrual cycle",
+            "Pelvis pain",
+            "Frequent urge to urinate",
+            "Difficulty in emptying the bladder",
+            "Constipation",
+            "Painful intercourse",
+            "Backache or leg pain"
+          ]
+        },
+        {
+          "heading": "Asymptomatic Fibroids",
+          "paragraphs": [
+            "Sometimes fibroids even go unnoticed because they may be asymptomatic."
+          ]
+        },
+        {
+          "heading": "What is Uterine Polyps?",
+          "paragraphs": [
+            "These are small and non-cancerous growths found on the uterus lining, cervix and vagina."
+          ]
+        },
+        {
+          "heading": "Symptoms of Polyps",
+          "paragraphs": [
+            "Symptoms of Polyps may include:"
+          ],
+          "listItems": [
+            "Spotting in between periods",
+            "Irregular menstrual cycle",
+            "Heavy periods",
+            "Spotting after intercourse"
+          ]
+        },
+        {
+          "heading": "What is Adenomyosis?",
+          "paragraphs": [
+            "When the endometrial tissue that makes up the uterus lining begins to grow on the muscular layer of the uterus, also known as the myometrium. Specialists do not yet know the exact cause of this disease, but it is most often found in women beyond the age of 40, or the ones who have had 3, 4 or more children."
+          ]
+        },
+        {
+          "heading": "Symptoms of Adenomyosis",
+          "paragraphs": [
+            "Mostly, Adenomyosis is accompanied by no symptoms. However, there are some symptoms that may be telltale signs of the condition, like:"
+          ],
+          "listItems": [
+            "Heavy or prolonged periods",
+            "Sharp pain and cramps during periods",
+            "Painful intercourse",
+            "Spotting and passing blood clots between periods",
+            "Tender or enlarged abdomen"
+          ]
+        },
+        {
+          "heading": "SOI Expertise",
+          "paragraphs": [
+            "At SOI, we have an extensive experience in helping women with these conditions understand their situation, and assist them in achieving their dream of parenthood. SOI also provides an extensive service in treating these conditions shall there be a need for it."
+          ]
+        },
+        {
+          "heading": "Q. Can you have both polyps and fibroids?",
+          "paragraphs": [
+            "Yes, you can have a certain type of polyps and fibroids coexisting. However, the chances of that happening to women under the age of 45 are really less. If you wish to know more about your health in relation to these conditions, book an appointment with our experts today."
+          ]
+        },
+        {
+          "heading": "Q. Can polyps affect pregnancy?",
+          "paragraphs": [
+            "Yes. Polyps are a known factor of infertility, and there are research studies that have concluded the removal of polyps increases the likelihood of pregnancy in women."
+          ]
+        },
+        {
+          "heading": "Q. Can a polyp cause a miscarriage?",
+          "paragraphs": [
+            "A normal uterus and uteral lining are important factors to maintain pregnancy, and to keep the baby healthy. That is why polyps, especially uterine polyps are known to increase the likelihood of a miscarriage."
+          ]
+        },
+        {
+          "heading": "Q. Can a polyp be removed while pregnant?",
+          "paragraphs": [
+            "Polyps are growths that occur in the uterus, cervix, and vagina of a women. Needless to say, these locations cannot be operated for the removal of polyps during pregnancy as this may pose the threat of a miscarriage or preterm delivery due to the surgery. If you are pregnant and may have polyps, talk to our experts to know about your next step."
+          ]
+        }
+      ]
+    }
+  },
+  "tuberculosis": {
+    "title": "Female Genital Tuberculosis",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Female Genital Tuberculosis",
+          "paragraphs": [
+            "Female Genital Tuberculosis, or FGTB is a bacterial infection of the female reproductive system that is often associated with infertility in women. A highly asymptomatic condition in its early stages of development, the most common cause of genital tuberculosis is the spread of the mycobacterium from the lungs to the reproductive tract of the female.",
+            "The tuberculosis in uterus first arrives into the fallopian tubes of the female reproductive system, from where it can either block the tubes, or spread to the uterus and/or to the ovaries. On rarer occasions, the disease also spreads to the cervix, vagina, and the vulva as well. Genital Tuberculosis is known to be a major cause of infertility in India, where the disease can stay up to 10 to 20 years without any major uterus tuberculosis symptoms showing up. It is only upon investigation for infertility do doctors arrive on the conclusion.",
+            "If you want to know more about what is genital tuberculosis, book an appointment at Seeds of Innocence."
+          ],
+          "sideImage": "/assets/img/Genital Tuberculosis.jpg"
+        },
+        {
+          "heading": "Common Symptoms of Genital Tuberculosis",
+          "paragraphs": [
+            "Symptoms of Genital Tuberculosis may include:"
+          ],
+          "listItems": [
+            "Pelvic Pain, painful menstrual cycles, pain during intercourse",
+            "Pain in lower abdomen, discomfort, and back pain",
+            "Rarely, but local tuberculous lesions appear on external parts of genitalia, cervix, or vagina."
+          ]
+        },
+        {
+          "heading": "SOI Expertise in Genital Tuberculosis",
+          "paragraphs": [
+            "The team at SOI is well trained in looking for and eradicating the condition of Tuberculosis by focusing on the main problem; the infection. It must be understood that in a situation like this, it is highly unlikely to get pregnant through natural conception. This is why the doctors at SOI often direct the couples with this proble to try their luck with IVF as it bypasses the prime focus of the condition, the blocked or damaged fallopian tubes."
+          ]
+        },
+        {
+          "heading": "Q. Can tuberculosis cause miscarriage?",
+          "paragraphs": [
+            "Although it is highly unlikely, one of the severe obstetric complication of Tuberculosis does include spontaneous miscarriage."
+          ]
+        },
+        {
+          "heading": "Q. Can latent TB affect pregnancy?",
+          "paragraphs": [
+            "The answer to this question is not straightforward. A latent tuberculosis is just an underlying condition that is waiting to be woken up. It might or might not \"wake up\" during the pregnancy. If you wish to know more about the effects and consequences of latent tuberculosis with pregnancy, book an appointment with one of our experts right now."
+          ]
+        },
+        {
+          "heading": "Q. What happens if you are pregnant and exposed to TB?",
+          "paragraphs": [
+            "First of all, if you have a hunch that you have been exposed to TB while you are pregnant, get yourself checked. An untreated TB can result in low birth weight and the child may even get TB at birth. For the mother, the stress can even kill her. It is better to understand the actual condition before treating, as treatment is possible. The time of treatment depends on whether it is latent or active TB."
+          ]
+        },
+        {
+          "heading": "Q. Is TB testing safe during pregnancy?",
+          "paragraphs": [
+            "Yes. A skin test for TB is completely safe for Expecting Mothers."
+          ]
+        }
+      ]
+    }
+  },
+  "recurrent-miscarriages": {
+    "title": "Recurrent Miscarriages",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Recurrent Pregnancy Loss",
+          "paragraphs": [
+            "Clinically, recurrent miscarriages are defined as losing 3 or more pregnancies in a row, irrespective of the cause behind it. However, be it 3 pregnancies or just 1, a miscarriage is a huge blow to the mother's mental state and structure. Therefore, it has always been in our interests to help mothers, whether they are facing clinical recurrent miscarriages or not, to help prevent another miscarriage and give them the happiness of being a parent."
+          ],
+          "sideImage": "/assets/img/genetic.jpg"
+        },
+        {
+          "heading": "What can cause a Recurrent Miscarriage?",
+          "paragraphs": [
+            "About 20-30% of all pregnancies end in an unfortunate miscarriage. Heavy bleeding can be an early pregnancy miscarriage symptom. In most of these cases of fetal loss, about 50-60% miscarriages in the first trimester happen due to chromosomal abnormalities. These are diseases that are caused due to the errors that may happen as the embryo divided and grew in its initial stages. The incidence and likelihood of these errors occurring increases with the age of the mother as it affects the health of the egg."
+          ]
+        },
+        {
+          "heading": "Prevention of Miscarriage",
+          "paragraphs": [
+            "Owing to the fact that most miscarriages are caused by chromosomal abnormalities, the most effective way of solving this problem would be to opt for genetic testing through Comprehensive Chromosomal Screening (CCS). It is a test of the embryo to check for abnormalities in the set of chromosomes. The presence of an extra or the absence of an important chromosome is what results in an chromosomal abnormality, which then either causes birth defects or miscarriages in a pregnancy."
+          ]
+        },
+        {
+          "heading": "Knowing the Cause of Miscarriage",
+          "paragraphs": [
+            "How do we know that a miscarriage was caused by a chromosomal abnormality? Through tests like Products of Conception, the exact cause of a miscarriage can be known. SOI specialises in all these tests, and is one of the leading fertility centers in India with high-end technology at the helm. It helps in not only getting the results that our patients want, but it also helps us in converging our efforts to provide more specific results."
+          ]
+        }
+      ]
+    }
+  },
+  "reasons-for-delayed-periods-but-not-pregnant": {
+    "title": "Reasons For Delayed Periods But Not Pregnant",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Reasons For Delayed Periods But Not Pregnant",
+          "paragraphs": [
+            "Some of the biggest questions that come into the mind of every female are, Is it normal to have delayed periods for a month? Is periods delaying a serious issue? Why is my period getting later every month? So let's find out the answers to these questions.",
+            "The menstrual cycle of every woman is unique as she is. However, it is a natural curiosity when this cycle deviates from its regular pattern. The medical term that is used for delayed menstruation is Oligomenorrhea. One of the common signs of period coming late is pregnancy but not always. If you are not pregnant then we should count on some other reasons for delayed periods except pregnancy."
+          ],
+          "sideImage": "/assets/img/genetic.jpg"
+        },
+        {
+          "heading": "What are the reasons for delayed periods?",
+          "paragraphs": [
+            "There are several factors that can cause delayed periods when you're not pregnant:"
+          ]
+        },
+        {
+          "heading": "Emotional Weakness and Stress",
+          "paragraphs": [
+            "One of the common reasons for delayed periods every month is stress or if you are emotionally weak. When you are under stress then at the time hormone cortisol can disturb the regularity of your menstrual cycle. You should do physical exercise, use relaxation techniques, and continue meditation. This will encourage the regularity of periods and maintain hormonal balance."
+          ]
+        },
+        {
+          "heading": "Weight Fluctuations",
+          "paragraphs": [
+            "The fast increase or decrease of weight may impact the regularity of the menstrual cycle. Women who do an intense workout and have low body fat can face the issue of delayed periods. You should maintain a balance in exercise and healthy weight through a balanced diet. It will help to affirm the stability of your menstrual cycle."
+          ]
+        },
+        {
+          "heading": "Polycystic Ovary Syndrome (PCOS)",
+          "paragraphs": [
+            "A typical hormonal condition that affects women in their reproductive age. It is the development of small cysts on the ovaries that may prevent ovulation from occurring normally. It can be one of the reasons for delayed periods for 2 months or every month. It is important to visit the doctor and get a medical diagnosis done. There might be some medications and dietary adjustments that your doctor will suggest to reverse PCOS."
+          ]
+        },
+        {
+          "heading": "Thyroid Disorders",
+          "paragraphs": [
+            "Hypothyroidism and Hyperthyroidism are the two conditions due to which the menstrual cycle can be disturbed. If there is an imbalance of thyroid hormone then periods can be delayed. The abnormalities of the thyroid hormone can be checked through blood testing and medicines can treat this condition as well."
+          ]
+        },
+        {
+          "heading": "Medical Conditions",
+          "paragraphs": [
+            "There are some chronic medical conditions such as diabetes and autoimmune diseases due to which periods can be delayed. The intake of medicines like antidepressants, antipsychotics, and chemotherapy treatments can also be the reasons for delayed periods except pregnancy. In this situation, always consult with a healthcare professional for more evaluation and advice."
+          ]
+        },
+        {
+          "heading": "Birth Control Pills",
+          "paragraphs": [
+            "One of the signs of period coming late but not pregnant can be taking birth control pills on a regular basis. For example – hormonal functioning can be disturbed by contraceptive pills and this will impact the menstrual cycle."
+          ]
+        },
+        {
+          "heading": "Abnormal Ovulation",
+          "paragraphs": [
+            "When the brain master gland named the pituitary gland underactive the signals then the process of ovulation becomes abnormal. The two hormones that are released by the pituitary gland are Follicle Stimulating Hormone (FSH) and Luteinizing Hormone (LH). The production of these hormones gets disturbed and because of this either this will result in delayed periods or no periods. It can further become the reason for infertility in females."
+          ]
+        },
+        {
+          "heading": "How much delay in periods is normal?",
+          "paragraphs": [
+            "The usual menstrual cycle is about 28 days and goes up to 38 days. The periods are considered late when your expected due date is passed by 7 days. If this will extend till 6 weeks then it will be considered as a missed period. The delay of a day or two is normal.",
+            "If you don't have any medication conditions or known issues that can disturb your menstrual cycle, then you should consult a doctor for delays in periods."
+          ]
+        },
+        {
+          "heading": "What to do when periods are late but not pregnant?",
+          "paragraphs": [
+            "The first step is to check out what can be the reasons for delayed periods. There might be one reason why your menstrual cycle gets disturbed. However, if you don't have any known condition then always consult with a healthcare professional. They will evaluate and check whether your reproductive system is functioning properly or not."
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "paragraphs": [
+            "Delay in periods can indeed be disturbing but it is very important to understand that there are some causes of irregular periods in 20s that can be controllable and treatable. You need to understand the signs that your body is giving to you. This will help in maintaining the menstrual cycle and good health. If you are dealing with any of the chronic medical conditions or alarming changes then take the guidance from a healthcare provider."
+          ]
+        }
+      ]
+    }
+  },
+  "what-is-ovarian-hyperstimulation": {
+    "title": "What is Ovarian Hyperstimulation?",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is OHSS?",
+          "paragraphs": [
+            "Ovarian hyperstimulation syndrome is one of the most dreaded and potentially serious complication that might occur during the fertility treatment, especially in vitro fertilisation (IVF)."
+          ]
+        },
+        {
+          "heading": "What causes Ovarian hyperstimulation syndrome?",
+          "paragraphs": [
+            "IVF requires ovarian stimulation. Gonadotropins are the hormones used to achieve ovarian stimulation and multifollicular development (to help more eggs grow). Sometimes during the stimulation, there is an excessive and exaggerated response to these gonadotropin drugs, leading to OHSS.",
+            "Overs stimulated / Hyperstimulated ovaries enlarge in size and release chemicals into the bloodstream. Due to sudden increase of VEGF/HCG levels, fluid from the blood vessels starts leaking into your abdomen and in severe cases into the space around the heart and lungs. Due to excessive fluid accumulation in abdomen, the functioning of the vital organs of body like kidney is hampered. In very severe cases OHSS can affect the kidneys, liver and lungs. If severe OHSS is left untreated, mortality might occur."
+          ]
+        },
+        {
+          "heading": "Which patients are at risk of getting OHSS?",
+          "paragraphs": [
+            "Mild OHSS is common in women undergoing IVF treatment; it affects as many as 30 to 35% of women. Severe OHSS is rare and can occur in 1% of patients undergoing treatment.",
+            "The risk of developing OHSS is higher in women who:"
+          ],
+          "listItems": [
+            "have PCOS (polycystic ovarian syndrome)",
+            "young women who are under 30 years",
+            "high AMH",
+            "history of OHSS",
+            "Multiple pregnancy"
+          ]
+        },
+        {
+          "heading": "What are the symptoms of OHSS?",
+          "paragraphs": [
+            "Symptoms of OHSS depends upon the severity of the disease. It can vary from nausea, vomiting to shock and breathlessness. OHSS can present with a plethora of symptoms.",
+            "Mild abdominal pain is normal post ovum pick up, and does not necessarily means OHSS.",
+            "OHSS can range from mild to severe:"
+          ],
+          "listItems": [
+            "Mild OHSS – It is a very common condition and can present as mild abdominal swelling, nausea, vomiting and discomfort",
+            "Moderate OHSS – patient may experience abdominal distension, bloating sensation, discomfort, pain, exaggerated nausea and vomiting",
+            "Severe OHSS – patient may experience breathlessness, decreased urine output, blood clots"
+          ]
+        },
+        {
+          "heading": "What should I do if I get diagnosed mild OHSS?",
+          "paragraphs": [
+            "Patients with mild OHSS can be easily managed at home, with few out patient visits at clinic. As a patient, you must drink adequate amount of liquids at regular intervals guided by your thirst. In case you have pain, you can use hot water bags and the pain killers advised by your doctor. You should not remained confined to bed, as it increases the risk of blood clots, therefore, it is advisable to remain active."
+          ]
+        },
+        {
+          "heading": "When will I need to get admitted in hospital?",
+          "paragraphs": [
+            "Majority of women can be managed as outpatients but few may require admission. You will require hospital admission if:"
+          ],
+          "listItems": [
+            "your pain is not getting relieved by medications",
+            "you are experiencing severe nausea and vomiting",
+            "your condition is not improving",
+            "You are feeling breathless",
+            "Your urine output is decreasing"
+          ]
+        },
+        {
+          "heading": "What should I do if I get diagnosed with moderate to severe OHSS?",
+          "paragraphs": [
+            "Patients with moderate to severe OHSS require hospitalisation and management by critical case team. Significant proportion of the patients improve with adequate hydration and treatment."
+          ]
+        },
+        {
+          "heading": "What is the treatment?",
+          "paragraphs": [
+            "OHSS usually gets better with time. There is so specific treatment. Prevention and supportive care is the main stay. Treatment is directed to help symptoms and to timely prevent complications.",
+            "This includes:"
+          ],
+          "listItems": [
+            "pain relief such as paracetamol. use of anti inflammatory drugs is not advisable",
+            "anti-emetic drugs to help reduce vomiting",
+            "an intravenous drip to replace fluids lost",
+            "Support compression stockings to prevent thrombosis. Low molecular weight heparin injections are also started in a selected few patients",
+            "In very few cases, a procedure known as a paracentesis is done to reduce and drain the excessive fluid that is accumulated in the abdominal cavity. In this procedure a thin needle or tube is inserted under ultrasound guidance into the patients abdomen to drain fluid"
+          ]
+        },
+        {
+          "heading": "OHSS FREE CLINIC",
+          "paragraphs": [
+            "Seeds of Innocence is a OHSS free clinic, where patient safety is our top priority. We have a group of highly trained specialised doctors.",
+            "Risk of OHSS can be drastically reduced by usage of individualised ovarian stimulation protocol (antagonist protocol) and freezing technology."
+          ]
+        }
+      ]
+    }
+  },
+  "hysteroscopy": {
+    "title": "Hysteroscopy",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Understanding Hysteroscopy: A Simple Guide for You",
+          "paragraphs": [
+            "Hysteroscopy is a medical procedure that allows doctors to look inside the uterus to diagnose or treat conditions affecting the uterus. This procedure is often performed when a woman has symptoms like abnormal bleeding, infertility, or pelvic pain that can't be explained through other tests. With advancements in medical technology, hysteroscopy is now a relatively simple and safe procedure, making it a valuable tool for gynaecologists and fertility specialists.",
+            "In this guide, we will break down the hysteroscopy procedure, its uses, and how it can help women with various health concerns, all simply and clearly."
+          ],
+          "sideImage": "/assets/img/Hysteroscopy1.webp"
+        },
+        {
+          "heading": "What is Hysteroscopy?",
+          "paragraphs": [
+            "Hysteroscopy is a procedure that uses a thin, lighted tube called a hysteroscope to look inside the uterus. This tube is inserted through the vagina and cervix, offering a clear view of the uterus, fallopian tubes, and ovaries. The scope is about the size of a pencil, so the procedure is minimally invasive, with only small incisions needed.",
+            "There are two main types of hysteroscopy:"
+          ],
+          "listItems": [
+            "Diagnostic hysteroscopy: This is done to examine the inside of the uterus for any abnormalities. It helps doctors diagnose problems like uterine fibroids, polyps, adhesions, or other conditions that may affect fertility.",
+            "Operative hysteroscopy: This is a more advanced procedure where the doctor not only examines the uterus but also uses instruments to treat conditions. For example, they can remove fibroids, polyps, or adhesions that might be causing discomfort or fertility issues."
+          ]
+        },
+        {
+          "heading": "How is Hysteroscopy Performed?",
+          "paragraphs": [
+            "The procedure is typically done in a doctor's office, outpatient clinic, or hospital. Here's a step-by-step explanation of how it works:"
+          ],
+          "listItems": [
+            "Preparation: Before the procedure, the doctor may give you medication to relax your cervix and open it up slightly. You may be given local anesthesia, or in some cases, general anesthesia if the procedure requires it.",
+            "Insertion of the Hysteroscope: The doctor inserts the hysteroscope through the vagina and cervix into the uterus. The light on the scope helps the doctor get a clear view of the uterine cavity.",
+            "Examination: The doctor looks for any abnormalities, such as fibroids, polyps, or signs of infection. The procedure typically lasts between 15 to 30 minutes.",
+            "Treatment (if necessary): If any issues are found, the doctor may choose to treat them right away. For instance, they can remove small fibroids or polyps using special surgical instruments passed through the hysteroscope.",
+            "Recovery: Recovery from hysteroscopy is usually quick, with most women going home the same day. It's common to have mild cramping or spotting for a few days afterwards."
+          ]
+        },
+        {
+          "heading": "Why is Hysteroscopy Important?",
+          "paragraphs": [
+            "Hysteroscopy plays an essential role in women's health because it allows doctors to detect and treat issues that could affect fertility or cause discomfort. It is especially beneficial for women who have been struggling with infertility or recurrent miscarriages. By using hysteroscopy, doctors can identify potential problems, such as uterine fibroids or polyps, and provide treatments to improve the chances of a successful pregnancy.",
+            "The procedure is also valuable for diagnosing abnormal bleeding, chronic pelvic pain, or other gynaecological conditions that can be difficult to understand with imaging tests alone."
+          ]
+        },
+        {
+          "heading": "Benefits of Hysteroscopy",
+          "paragraphs": [
+            "Hysteroscopy offers several key benefits:"
+          ],
+          "listItems": [
+            "Minimally invasive: The procedure requires only small incisions, making it less painful and leading to quicker recovery.",
+            "Accurate diagnosis: It allows doctors to see directly inside the uterus, which provides more detailed and accurate information than other diagnostic methods.",
+            "Treatment options: In addition to diagnosis, hysteroscopy can be used to treat various conditions like fibroids or polyps without the need for major surgery.",
+            "Quick recovery: Most women can return to their normal activities within a few days after the procedure."
+          ]
+        },
+        {
+          "heading": "Who Should Consider Hysteroscopy?",
+          "paragraphs": [
+            "Women who experience any of the following conditions might be recommended for hysteroscopy:"
+          ],
+          "listItems": [
+            "Heavy or abnormal menstrual bleeding.",
+            "Painful periods.",
+            "Recurrent miscarriages.",
+            "Difficulty getting pregnant.",
+            "Chronic pelvic pain."
+          ],
+          "sideImage": "/assets/img/Hysteroscopy2.jpg"
+        },
+        {
+          "heading": "Risks and Considerations",
+          "paragraphs": [
+            "While hysteroscopy is generally safe, like any medical procedure, there are some risks, including:"
+          ],
+          "listItems": [
+            "Infection.",
+            "Injury to the uterus or cervix.",
+            "Scarring or adhesions (though this is rare)."
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "paragraphs": [
+            "Hysteroscopy is an invaluable tool in women's healthcare, offering both diagnostic and treatment benefits with minimal discomfort and recovery time. If you are experiencing symptoms that affect your reproductive health, talking to a trusted healthcare provider about hysteroscopy could be a positive step toward better health and fertility.",
+            "At Seeds of Innocens, we understand the importance of knowledge when it comes to women's health. Whether you are looking for information on hysteroscopy or exploring options to enhance your fertility, we are here to support you on your journey. Always feel free to reach out for guidance and advice tailored to your unique needs."
+          ]
+        }
+      ]
+    }
+  },
+  "blocked-fallopian-tubes": {
+    "title": "Blocked Fallopian Tubes",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Understanding Blocked Fallopian Tubes",
+          "paragraphs": [
+            "Blocked fallopian tubes are one of the most common causes of female infertility. The fallopian tubes play a crucial role in conception, as they are the pathway through which the egg travels from the ovary to the uterus, and where fertilization typically occurs.",
+            "When one or both fallopian tubes are blocked, the egg cannot meet the sperm, making natural conception difficult or impossible. At Seeds of Innocence, we specialize in diagnosing and treating blocked fallopian tubes to help women achieve their dream of motherhood."
+          ],
+          "sideImage": "/assets/img/recent_post2.jpg"
+        },
+        {
+          "heading": "What are Fallopian Tubes?",
+          "paragraphs": [
+            "The fallopian tubes are two thin tubes, one on each side of the uterus, that connect the ovaries to the uterus. They have several important functions:"
+          ],
+          "listItems": [
+            "Transport the egg from the ovary to the uterus",
+            "Provide the site where fertilization occurs",
+            "Help move the fertilized egg (embryo) to the uterus",
+            "Nourish the egg and early embryo"
+          ]
+        },
+        {
+          "heading": "Causes of Blocked Fallopian Tubes",
+          "paragraphs": [
+            "Several conditions can lead to blocked fallopian tubes:"
+          ],
+          "listItems": [
+            "Pelvic Inflammatory Disease (PID) - infections that cause scarring",
+            "Endometriosis - tissue growth outside the uterus",
+            "Previous ectopic pregnancy",
+            "Previous abdominal or pelvic surgery",
+            "Fibroids - especially those near the fallopian tubes",
+            "Sexually transmitted infections (STIs) like chlamydia or gonorrhea",
+            "Tuberculosis affecting the reproductive organs",
+            "Congenital abnormalities"
+          ]
+        },
+        {
+          "heading": "Symptoms of Blocked Fallopian Tubes",
+          "paragraphs": [
+            "Many women with blocked fallopian tubes may not experience any symptoms. However, some may notice:"
+          ],
+          "listItems": [
+            "Difficulty getting pregnant",
+            "Pelvic or abdominal pain",
+            "Painful periods",
+            "Pain during intercourse",
+            "Unusual vaginal discharge"
+          ]
+        },
+        {
+          "heading": "Diagnosis of Blocked Fallopian Tubes",
+          "paragraphs": [
+            "At Seeds of Innocence, we use advanced diagnostic techniques:"
+          ],
+          "listItems": [
+            "Hysterosalpingography (HSG) - X-ray with contrast dye to visualize the tubes",
+            "Laparoscopy - minimally invasive surgery to directly view the tubes",
+            "Sonohysterography - ultrasound with saline to check tube patency",
+            "Blood tests to check for infections"
+          ]
+        },
+        {
+          "heading": "Treatment Options",
+          "paragraphs": [
+            "Treatment depends on the location and extent of the blockage:"
+          ]
+        },
+        {
+          "heading": "Laparoscopic Surgery",
+          "paragraphs": [
+            "Minimally invasive surgery can remove blockages and scar tissue, restoring tube function."
+          ]
+        },
+        {
+          "heading": "In Vitro Fertilization (IVF)",
+          "paragraphs": [
+            "IVF bypasses the fallopian tubes entirely by fertilizing eggs in the laboratory and transferring embryos directly to the uterus. This is often the most effective treatment for blocked tubes."
+          ]
+        },
+        {
+          "heading": "Tubal Surgery",
+          "paragraphs": [
+            "In some cases, surgical repair of the tubes may be possible, though success rates vary."
+          ]
+        },
+        {
+          "heading": "Why Choose Seeds of Innocence?",
+          "paragraphs": [
+            "Our experienced team offers:"
+          ],
+          "listItems": [
+            "Advanced diagnostic facilities",
+            "Expert laparoscopic surgeons",
+            "High success rates with IVF treatment",
+            "Comprehensive care and support",
+            "Personalized treatment plans"
+          ],
+          "bottomImage": "/assets/img/recent_post2.jpg"
+        }
+      ]
+    }
+  },
+  "mfm-scans-and-diagnostics": {
+    "title": "MFM Scans & Diagnostics",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Who is Maternal-Fetal Medicine specialist (MFM)?",
+          "paragraphs": [
+            "Maternal-fetal medicine specialists Or perinatologists, are obstetricians who specialize in the diagnosis, treatment, and ongoing care of expectant mothers and unborn babies who may be at risk of developing specific health problems.",
+            "While most pregnancy do good with good maternal & fetal outcome, about 10 % of pregnancy are associated with different complication & around 3-4% of babies may have some structural or genetic abnormalities that may result in mental or physical handicap.",
+            "MFM specialists look after pregnant women who have complicated pregnancy histories, medical condition (hypertension, diabetes, seizure disorders, autoimmune diseases, and blood clotting disorders, heart disease or infections) and high risk for pregnancy complication, such as, high blood pressure, a short cervix or early labour, IVF or multiple pregnancies. They look after your babies to diagnose different congenital abnormalities, chromosomal & genetic defect, fetal infection or anaemia, or risk to be very small."
+          ],
+          "sideImage": "/assets/img/MFM Scans & Diagnostics1.png"
+        },
+        {
+          "heading": "Department of Maternal and Fetal Medicine Seeds of innocence",
+          "paragraphs": [
+            "At our center we conduct a detailed clinical & genetic evaluation including family tree, individualized risk assessment for each patients to arrive at a precise diagnosis. Our aim is to offer personalized care, counseling and management strategies to provide our patients proper support and education that they need to deliver a healthy baby.",
+            "The center is equipped with best equipment & all scans are done as per international fetal medicine foundation (FMF, UK) & ISUOG guidelines including extended cardiac screening."
+          ]
+        },
+        {
+          "heading": "Who should schedule a visit to Maternal-fetal medicine specialist?",
+          "paragraphs": [
+            "If the expectant mother & unborn baby is at risk for complications during pregnancy because of her pre-existing medical & surgical condition or previous pregnancy complication like:"
+          ],
+          "listItems": [
+            "Advanced maternal age",
+            "Obesity",
+            "Pre-existing medical disorder",
+            "Previous pregnancy complication",
+            "Growth restricted babies",
+            "Prematurity",
+            "Multiple pregnancy",
+            "Congenital malformation",
+            "history of recurrent pregnancy losses,",
+            "Prenatal screening for chromosomal & genetic condition"
+          ]
+        },
+        {
+          "heading": "What is the role of Maternal-fetal medicine in proving care to high risk pregnancies?",
+          "paragraphs": [
+            "Maternal-fetal medicine experts will make plan of care for women with high risk pregnancy, will monitor for different maternal and fetal condition, do different prenatal ultrasound examinations, and will provide you genetic counseling, prenatal diagnostic test & fetal intervention when indicated."
+          ]
+        },
+        {
+          "heading": "Services Provided Under This Department",
+          "paragraphs": [
+            "Our department offers comprehensive services including:"
+          ]
+        },
+        {
+          "heading": "Premarital counseling",
+          "paragraphs": [
+            "We provide premarital counseling to help couples understand potential genetic risks and plan for a healthy pregnancy."
+          ]
+        },
+        {
+          "heading": "Preconceptional & Prenatal Consultation",
+          "paragraphs": [
+            "We offer specialized consultation for:"
+          ],
+          "listItems": [
+            "Prior pregnancy complications",
+            "Prior pregnancy loss: stillbirth & recurrent pregnancy loss",
+            "Twins or other multiple gestations",
+            "Medical disorders- diabetes, hypertension, or other complex medical conditions",
+            "Genetic problems"
+          ]
+        },
+        {
+          "heading": "Prenatal Screening",
+          "paragraphs": [
+            "Our comprehensive prenatal screening services include:"
+          ],
+          "listItems": [
+            "Down's syndrome screening",
+            "Pre-eclampsia screening",
+            "Fetal growth restriction",
+            "Preterm labour screening",
+            "Prenatal screening & diagnosis of Beta thalassemia & other genetic condition"
+          ],
+          "sideImage": "/assets/img/MFM Scans & Diagnostics2.png"
+        },
+        {
+          "heading": "Non–Invasive (USG)",
+          "paragraphs": [
+            "Non-invasive ultrasound services we provide:"
+          ],
+          "listItems": [
+            "Early pregnancy scans",
+            "First trimester NT/ NB scans",
+            "First trimester combined screening",
+            "Non-invasive prenatal screening (NIPS)",
+            "Anomaly scans (Level II)",
+            "Cervical screening with uterine artery Doppler",
+            "Fetal wellbeing scans",
+            "Fetal growth & Doppler's",
+            "Fetal 3D/ 4D scan",
+            "Multiple pregnancy scans"
+          ]
+        },
+        {
+          "heading": "Genetic Counseling",
+          "paragraphs": [
+            "We provide comprehensive genetic counseling to help families understand genetic risks, testing options, and make informed decisions about their pregnancy."
+          ]
+        },
+        {
+          "heading": "Invasive Prenatal Diagnostic and Therapeutic Procedures",
+          "paragraphs": [
+            "Invasive procedures we perform include:"
+          ],
+          "listItems": [
+            "CVS (Chorionic Villous Sampling)",
+            "Amniocentesis.",
+            "Fetal blood sampling",
+            "Fetal reduction",
+            "Amnioreduction",
+            "Intrauterine transfusion",
+            "Shunt procedures"
+          ]
+        },
+        {
+          "heading": "Management of Multiple Pregnancy",
+          "paragraphs": [
+            "Our specialized management services for multiple pregnancies include:"
+          ],
+          "listItems": [
+            "Management of monochorionic/dichorionic twins",
+            "Screening for chromosomal abnormalities in twins",
+            "Management of growth problems/fetal growth restriction",
+            "Management of twin to twin transfusion syndrome (TTTS)",
+            "Management of twin anaemia polycythemia sequence (TAPS)",
+            "Management of twin reverse arterial perfusion (TRAP)"
+          ]
+        }
+      ]
+    }
+  },
+  "yoga-and-fertility-heres-how-yoga-can-support-fertility": {
+    "title": "Yoga and Fertility - How Yoga Can Support Fertility",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Yoga for Fertility: Supporting Your Journey to Parenthood",
+          "paragraphs": [
+            "How Yoga Can Support Fertility and Enhance Your Chances of Conception",
+            "When a couple is trying to have a baby, every day can be filled with lots of challenges and surprises. Unfortunately, not every woman get to experience it. Many couples struggle with fertility issues due to modern-day stressful lifestyle, certain medical conditions, and other factors.",
+            "It is true that infertility can take a toll on a couple's mental health, body, and relationships. However, yoga can play a role in helping couples manage their ups and downs.",
+            "That is why it is not only important to get rid of all the toxins in your body before attempting pregnancy but it is also necessary to eat food that may boost your fertility factors to get the best results. Here are some fertility boosting food tips, based on their colours.",
+            "Now many of you must be thinking that yoga is just a form of exercises and posture designed for young people to remain in great shape. But yoga is much more than that. It is a scientific system that helps in altering the brain and body chemistry, creating a holistic positive effect on the body.",
+            "Yoga can help a couple along the way to pregnancy by supporting fertility and increasing the possibility of getting pregnant. So, in this blog, we talk about how yoga can help in supporting fertility."
+          ]
+        },
+        {
+          "heading": "Yoga Creates a Rebound Effect and Synchronisation",
+          "paragraphs": [
+            "Conception occurs when the woman is in a state of receptivity, stress-free, and relaxed. When the body is under prolonged stress and anxiety, the health gets deteriorated. Both men and women can get into the best possible health for conception through yoga. Yoga basically helps in bringing the practitioner into a relaxed state. It reduces stress and increases the ability of the individual to handle daily challenges effectively. In essence, it helps in creating synchronisation and rebound effect on the mind and the body."
+          ]
+        },
+        {
+          "heading": "Yoga Helps in Core Alignment",
+          "paragraphs": [
+            "Yoga helps in aligning core, which means that a person feels his or her essence and a centre of calmness, despite the challenges such as infertility. The future can get bright with possibilities when their depression is not long-lasting or deep. It can help open those energy channels that are essential for fertility."
+          ]
+        },
+        {
+          "heading": "Fertility Yoga Aids in Increasing Blood Flow and Circulation",
+          "paragraphs": [
+            "Improving blood and energy flow to our reproductive organs is essential for fertility. Yoga helps in increasing that blood flow to the pelvic region and reproductive organs, providing them with fresh blood and all the essential nutrients."
+          ]
+        },
+        {
+          "heading": "Yoga Balances Hormones",
+          "paragraphs": [
+            "The endocrine system in our body produces different hormones, including sex hormones. When one or a few hormones are imbalanced due to any reason, it can lead to creating a domino effect, meaning more hormonal imbalance.",
+            "Yoga can help in creating a calming effect, resulting in a balanced hormonal level. Your chakras can line up, ultimately helping to balance and regulate hormones.",
+            "The practice of yoga is not just for staying in shape; it is beneficial for everyone. It can grow the emotional, physical and spiritual possibilities within your bodies. Simple postures of yoga can have deep and lasting effects on your fertility.",
+            "From maintaining a sense of calm to tuning up your hormones, yoga assists in supporting fertility in numerous ways. So, ask your doctors about the poses you can do."
+          ]
+        }
+      ]
+    }
+  },
+  "how-to-boost-up-fertility-with-the-colours-of-food": {
+    "title": "How To Boost Up Fertility With The Colours Of Food",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "How to Boost Up Fertility With The Colours Of Food",
+          "paragraphs": [
+            "Fertility in women is a direct reflection of the overall health of their bodies. If everything is correct and running in perfect condition, there is usually nothing that they need to be worried about. However, as fertility is connected to the overall health, the instant coffee and fast food lifestyle is bound to take a toll on both them in the current world.",
+            "While lifestyle changes are not the only way of keeping factors of infertility at bay, they are certainly an important step taken towards creating a healthier body. The body from which the baby will also take shape, completing the family. If you feed the body a lot of junk, it will indirectly feed all that unhealthy food to your baby as well, irrespective of whether you are pregnant or not. This is true in the sense that an unhealthy will never respond positively to any thing, even if it is an attempt to get pregnant successfully.",
+            "That is why it is not only important to get rid of all the toxins in your body before attempting pregnancy but it is also necessary to eat food that may boost your fertility factors to get the best results. Here are some fertility boosting food tips, based on their colours."
+          ],
+          "sideImage": "/assets/img/fertility-foods.jpg"
+        },
+        {
+          "heading": "How to Improve Fertility?",
+          "paragraphs": [
+            "Eating a colorful, nutrient-rich diet can significantly improve fertility. Here are fertility-boosting foods organized by color:"
+          ]
+        },
+        {
+          "heading": "Yellow - Bananas",
+          "paragraphs": [
+            "Yellow is for Bananas, a rich source of phosphorus and Vitamin B6, both of which improve the quality of both, sperms and the eggs. Not only will this keep you both healthy, but will also improve the likelihood of getting pregnant. Bananas have no fat and also improve the body's metabolism."
+          ]
+        },
+        {
+          "heading": "Brown - Whole Grains",
+          "paragraphs": [
+            "Brown is for whole grains, a perfect source of antioxidants. These antioxidants remove all toxins from the body, while helping in the production of healthy sperms and eggs. Consider whole wheat, pulses, and beans in your diet."
+          ]
+        },
+        {
+          "heading": "Green - Green Vegetables",
+          "paragraphs": [
+            "Green is for all the green vegetables. They are not only great for your overall health, but green vegetables also contain a lot of folate and iron that are both important in increasing the fertility in both men and women. Folate, especially increases ovulation. So introducing more of cabbage, broccoli, spinach, peas, beans, and capsicum will be especially beneficial."
+          ]
+        },
+        {
+          "heading": "Red - Fatty Fish and Meat",
+          "paragraphs": [
+            "Red is for all the fatty fish and meat rich in omega-3 fatty acids. Omega-3 is considered good for the body to produce estrogen, which in turn increases your likelihood of successful pregnancy. Apart from this, fishes like mackerel and salmon are also good sources of Vitamin D."
+          ]
+        },
+        {
+          "heading": "White - Eggs",
+          "paragraphs": [
+            "White is for the eggs, which are themselves known to be a fertility boosting food. It has proteins, vitamin D, and is a great source of energy. Eggs also improve the quality of the eggs and sperms, both."
+          ]
+        },
+        {
+          "heading": "Orange - Citrus Foods",
+          "paragraphs": [
+            "Orange is for the citrussy foods, which are always highly recommended for improving fertility. Lime, oranges, and tangerines are rich in antioxidants and vitamin C. The overall effect is that of regulating menstrual cycles, aiding ovulation, and improving sperm health."
+          ]
+        },
+        {
+          "heading": "The Power of Healthy Eating",
+          "paragraphs": [
+            "What you eat defines what you become. Eating healthy is the first step towards becoming healthy, something that will go a long way in staying fertile. If you are looking for any assistance in conceiving, visit the best fertility center in Delhi, Seeds of Innocence, today. With a wide variety treatments and counseling services for couples, Seeds of Innocence has a presence in 7 states, and has successfully served 12,000+ couples. Join the family to complete your family today."
+          ]
+        }
+      ]
+    }
+  },
+  "pregnancy-and-coronavirus-insights-from-experts": {
+    "title": "Pregnancy and Coronavirus",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Pregnancy and Coronavirus",
+          "paragraphs": [
+            "Pregnancy is a beautiful phase in the life of a woman with some challenges and lots of happy moments. However, during the pandemic, stress and anxiety can quickly multiply, impacting the lives of the mother and the family.",
+            "We understand that the time is crucial, and with daily hose of news about coronavirus, you must be having many questions in your mind. A growing number of families are facing difficult questions like \"Do newborn babies need to be separated from mothers infected with the new coronavirus?\" every now and then.",
+            "Although not much is known about the disease, health care providers and doctors across the world have managed to estimate the risk posed by the virus and come up with some strategies to reduce the impact on the mother and the child.",
+            "In light of all this, we discussed the area of concerns with our experts to get detailed insights. So, let's have a look!"
+          ],
+          "sideImage": "/assets/img/genetic.jpg"
+        },
+        {
+          "heading": "Pregnant Women and Risk of Getting Infected With Coronavirus",
+          "paragraphs": [
+            "Almost 98% of the pregnant women have asked: \"Am I more at risk if I'm pregnant?\" The answer is that there is no indication that pregnant women are at a greater risk. However, this doesn't mean that they can't get affected.",
+            "In fact, during the 2003 outbreak of SARS, the fatality rate of pregnant women was considerably higher. So, it is important to take proper cautions."
+          ]
+        },
+        {
+          "heading": "Pregnant Women with Coronavirus: Things to Consider",
+          "paragraphs": [
+            "Studies suggest that pregnancy alters the immune system of the woman so the complications may increase if she catches coronavirus. However, the risk varies from person to person as a study conducted with 43 pregnant women in New York revealed that a majority don't experience any severity. Nevertheless, some portion of the women were at risk. The risk further aggravates if the woman has any underlying health condition like lupus, diabetes, or respiratory diseases."
+          ]
+        },
+        {
+          "heading": "Can the virus be transmitted to the uterus or to the child during breastfeeding?",
+          "paragraphs": [
+            "Some viruses like Zika, cytomegalovirus, rubella, can be passed from mother to fetus in the uterus. However, respiratory viruses are less likely to be transmitted to the uterus.",
+            "Considering transmitting the virus to the child, there was a study conducted in Wuhan on 33 women, which showed that three of the babies contracted the disease despite measures to prevent the spread. This implies that the chances of transmitting the virus is low, but the child can get the virus."
+          ]
+        },
+        {
+          "heading": "Home Birth Amid Coronavirus",
+          "paragraphs": [
+            "At this point, women should not change their delivery plans. Hospitals in India are taking precautions to ensure that pregnant women are not exposed to ill patients. Homebirth requires moths of education, training, and preparation; therefore, you should refrain from doing it.",
+            "In addition, if you are pregnant with IVF or any other fertility procedure, then you should strictly avoid preparing yourself for a home birth. Government has allowed each mother to have a support person in the delivery room so that the process of delivery remains risk-free. However, the person must be tested for coronavirus before assisting the woman.",
+            "Further, the woman is discharged earlier than usual to minimise the risk of getting an infection or transmitting it."
+          ]
+        },
+        {
+          "heading": "Breastfeeding and Coronavirus",
+          "paragraphs": [
+            "There is no data that support whether breastfeeding is dangerous or not if the woman is infected with the virus. However, WHO suggests that the baby can be provided with breast milk using a breast pump.",
+            "In addition, direct breastfeeding is also possible if the mother wears a mask and take proper sanitisation measures before touching the baby. However, doctors still suggest that the mother and baby be separated if the mother is infected until she recovers and advice using a breast pump for feeding the child."
+          ]
+        },
+        {
+          "heading": "Additional Steps to Protect Yourself and Your Child From Coronavirus",
+          "paragraphs": [
+            "You need to take proper precaution and must change the structure of prenatal care. This includes limiting exposure to other relatives, medical staff and the woman should practice social distancing as much as possible. If required, ob-gyne and others can be contacted using software applications."
+          ]
+        },
+        {
+          "heading": "Some Do's and Don'ts",
+          "paragraphs": [
+            "To protect yourself and your baby during the pandemic, follow these important guidelines:"
+          ],
+          "listItems": [
+            "Avoid contact with anyone with cold or flu symptoms",
+            "Use alcohol-based hand sanitizers",
+            "Wash your hands frequently with soap and water",
+            "Avoid places with large numbers of people"
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "paragraphs": [
+            "More and more research is conducted with numbers skyrocketing globally. In the meantime, the best thing you can do is to limit your exposure and follow strict hygiene measures. By limiting your exposure, you limit your risk."
+          ]
+        }
+      ]
+    }
+  },
+  "success-stories": {
+    "title": "Success Stories",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Inspiring Success Stories",
+          "paragraphs": [
+            "Real stories from real couples who achieved their dream of parenthood with Seeds of Innocens. These testimonials reflect the hope, dedication, and joy that define our patients' journeys.",
+            "Each story represents a unique journey filled with challenges, determination, and ultimately, success. Our patients come from diverse backgrounds and face different fertility challenges, but they all share one common goal: the dream of becoming parents."
+          ],
+          "sideImage": "/assets/img/recent_post2.jpg"
+        },
+        {
+          "heading": "Priya & Rahul from Delhi - IVF Success",
+          "paragraphs": [
+            "After 5 years of trying to conceive, Priya and Rahul found hope at Seeds of Innocens. The entire team was incredibly supportive throughout their journey. Dr. Gauri Agarwal's expertise and personalized care made all the difference. They are now proud parents of a beautiful baby girl.",
+            "\"Seeds of Innocens gave us the gift of parenthood. We are forever grateful! The team's support and expertise made our dream come true.\""
+          ]
+        },
+        {
+          "heading": "Anjali & Mohan from Mumbai - ICSI Treatment Success",
+          "paragraphs": [
+            "Anjali and Mohan had almost given up hope after multiple failed attempts elsewhere. Then they came to Seeds of Innocens. The ICSI treatment was successful on their first attempt! The doctors explained everything clearly, and the staff was always available to answer questions. Their twin boys are their greatest blessing.",
+            "\"The best decision we ever made was choosing Seeds of Innocens. The ICSI treatment worked perfectly, and we now have two beautiful boys.\""
+          ]
+        },
+        {
+          "heading": "Sneha & Vikram from Bangalore - Egg Freezing & IVF Success",
+          "paragraphs": [
+            "As a career-focused couple, Sneha and Vikram decided to freeze eggs early. When they were ready, Seeds of Innocens helped them with the IVF process using their frozen eggs. The entire process was smooth, and the team guided them through every step. They now have a healthy baby girl and couldn't be happier!",
+            "\"Professional care, excellent results, and a wonderful experience. Egg freezing gave us flexibility, and IVF gave us our baby girl.\""
+          ]
+        },
+        {
+          "heading": "Meera & Arjun from Pune - IVF with PGT Success",
+          "paragraphs": [
+            "Due to genetic concerns in their family, Meera and Arjun opted for IVF with Preimplantation Genetic Testing. The team at Seeds of Innocens was thorough and reassuring. The PGT testing gave them peace of mind, and they now have a healthy baby boy. The genetic counseling was particularly helpful.",
+            "\"Advanced technology and compassionate care - the perfect combination. PGT testing was exactly what we needed, and we now have a healthy son.\""
+          ]
+        },
+        {
+          "heading": "Kavita & Ramesh from Hyderabad - IUI Treatment Success",
+          "paragraphs": [
+            "Kavita and Ramesh started with IUI treatment at Seeds of Innocens, and it was successful on their second attempt! The treatment was less invasive than they expected, and the team made them feel comfortable throughout. Their journey to parenthood was smooth and stress-free.",
+            "\"Simple, effective, and successful - exactly what we needed. IUI worked for us, and we couldn't be happier with our experience.\""
+          ]
+        },
+        {
+          "heading": "Divya & Sanjay from Chennai - IVF Treatment Success",
+          "paragraphs": [
+            "After years of struggling with infertility, Divya and Sanjay found hope at Seeds of Innocens. The personalized treatment plan, regular monitoring, and constant support made their IVF journey manageable. They are now parents to a beautiful baby, and words cannot express their gratitude.",
+            "\"From hopeless to hopeful - Seeds of Innocens changed our lives. The personalized care and support made all the difference.\""
+          ]
+        },
+        {
+          "heading": "Why Patients Choose Seeds of Innocens",
+          "paragraphs": [
+            "Common themes from our success stories:"
+          ],
+          "listItems": [
+            "Experienced and compassionate medical professionals",
+            "Advanced technology and state-of-the-art facilities",
+            "Personalized treatment plans tailored to individual needs",
+            "Comprehensive support throughout the journey",
+            "High success rates with various treatment options",
+            "Transparent communication and clear expectations",
+            "Emotional support and counseling services"
+          ]
+        },
+        {
+          "heading": "Share Your Success Story",
+          "paragraphs": [
+            "If you have a success story to share, we would love to hear from you. Your journey can inspire and give hope to others who are on their fertility journey. Contact us to share your story and help others realize their dream of parenthood."
+          ]
+        }
+      ]
+    }
   }
 }
+
 
