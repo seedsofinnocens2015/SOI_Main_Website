@@ -1,0 +1,2817 @@
+{
+  "ivf": {
+    "title": "IVF (In-Vitro Fertilization)",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/IVF-ICSI.jpg",
+      "/assets/img/IVF-ICSI2.webp"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "In-Vitro Fertilization (IVF) Overview",
+          "paragraphs": [
+            "In-Vitro Fertilization (IVF) is a method that helps couples with fertility related problems and in conceiving a child. During the IVF treatment, the mature eggs are retrieved from the ovaries of women and sperms from the partner which are further fertilized in the laboratory to make embryos. After a few days, these embryos are transferred into the uterus of the woman."
+          ]
+        },
+        {
+          "heading": "Why is IVF Done?",
+          "paragraphs": [
+            "The couples who face challenges in having a baby can opt for IVF treatment. However, there are a wide range of infertility conditions because of which IVF treatment in India is suggested by the IVF specialist in India to the patients. Below mentioned are the following conditions in which IVF is suggested by the specialists:"
+          ],
+          "listItems": [
+            "Blocked or damaged fallopian tubes",
+            "Endometriosis",
+            "Ovulation disorders",
+            "Low sperm count or motility",
+            "Unexplained infertility"
+          ]
+        },
+        {
+          "heading": "What are the steps in IVF Procedure?",
+          "steps": [
+            {
+              "title": "Ovarian Hyperstimulation",
+              "description": "The IVF procedure starts with the stimulation of ovaries. During a normal menstrual cycle, only one egg is released per month so ovarian stimulation helps to increase the number of eggs available for fertilization."
+            },
+            {
+              "title": "Oocyte or Egg Retrieval",
+              "description": "After a few days when doctors find that the eggs are mature then they go ahead with the retrieval of eggs by using a minor surgical procedure known as transvaginal ultrasound aspiration."
+            },
+            {
+              "title": "Sperm Collection",
+              "description": "The semen sample is collected from the male partner which is processed in the lab to isolate healthy and motile sperm. However, in some cases, if any problem occurs with the sperm quality or quantity then a surgical procedure called TESA (Testicular Sperm Aspiration) may be done to retrieve sperm from testicles or epididymis."
+            },
+            {
+              "title": "Fertilization",
+              "description": "This process can be done through two methods. First, the retrieved eggs and sperm are put in the laboratory dish and left overnight for natural fertilization. Second, the fertilization is done through the ICSI (intracytoplasmic sperm injection) process where a single sperm is injected into every egg directly to achieve fertilization."
+            },
+            {
+              "title": "Embryo Culture",
+              "description": "In this step, the embryologist will monitor the development of embryos to see whether they are properly growing and diving or not. The best quality embryos are selected after complete evaluation for the transferring process."
+            },
+            {
+              "title": "Embryo Transfer",
+              "description": "Once the embryos are ready and grown into a blastocysts then they are transferred into the uterus of a woman by using a thin catheter. This is one of the important steps of the IVF process."
+            },
+            {
+              "title": "Pregnancy Test",
+              "description": "This is the last stage of the IVF process in which after 2 weeks of embryo transfer, the patient has to do a pregnancy test."
+            }
+          ]
+        },
+        {
+          "heading": "Benefits of IVF Treatment in India",
+          "paragraphs": [
+            "IVF treatment offers several advantages for couples struggling with infertility:"
+          ],
+          "listItems": [
+            "Chances of Pregnancy Increased: If the couple is not able to conceive and fertility treatments are not successful then IVF is the best option. In the IVF treatment in India, the eggs and sperm are combined in a controlled environment that increases the chances of fertilization and pregnancy.",
+            "Solution of Various Infertility Causes: There are various fertility issues such as low sperm count in men, blocked fallopian tubes in women, failed IUI cycles, endometriosis, ovulation disorders, and more. These can be fixed through an IVF treatment and couples can consider this as a promising solution for completing their dream of parenthood.",
+            "Preimplantation Genetic Testing (PGT): During the IVF process, the genetic testing of embryos can be done before implantation. This can help to decrease the chances of passing genetic conditions to the baby.",
+            "Control Over Pregnancy Time: The couples who have busy schedules or currently don't want to plan their family, they can freeze their eggs or sperm and can use them in future. So in this way, you can choose the ideal time to get pregnant through the IVF process."
+          ]
+        },
+        {
+          "heading": "IVF Risks and Complications",
+          "paragraphs": [
+            "There are some risks and potential complications that come hand in hand with the IVF treatment:"
+          ],
+          "listItems": [
+            "The chances of multiple pregnancies increase such as twins, triplets, or higher-order multiples.",
+            "During the IVF process, the women may experience an ectopic pregnancy where embryo implants outside the uterus, often in a fallopian tube. The chances of pregnancy are reduced because the embryo cannot survive outside the uterus.",
+            "It is mostly seen that the chances of premature delivery is more in the pregnancies done through IVF process. There might be some chances that the baby weight will be less due to premature delivery.",
+            "IVF cannot eliminate the risk of miscarriage. It is similar to natural pregnancy."
+          ]
+        },
+        {
+          "heading": "How much does IVF cost?",
+          "paragraphs": [
+            "The total cost of IVF treatment in India varies on different factors such as selected fertility treatment option, medications needed, location of the clinic, genetic testing, and others. It is suggested to properly discuss the IVF cost with your healthcare provider and available treatment options."
+          ]
+        }
+      ]
+    }
+  },
+  "icsi": {
+    "title": "ICSI (Intracytoplasmic Sperm Injection)",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/IVF-ICSI.jpg",
+      "/assets/img/IVF-ICSI2.webp"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is ICSI?",
+          "paragraphs": [
+            "A specialized method that is used in Assisted Reproductive Technology (ART) to treat infertility is known as Intracytoplasmic Sperm Injection (ICSI). It is a part of the IVF process which involves the direct injection of a single sperm into the egg for fertilization. The ICSI process is done by highly skilled embryologists using a micromanipulation technique. The specialists mainly advise the ICSI process for couples with male infertility factors such as low sperm count, poor sperm motility, or abnormal sperm morphology."
+          ]
+        },
+        {
+          "heading": "About ICSI Treatment",
+          "paragraphs": [
+            "ICSI is an advanced fertility treatment technique that has revolutionized the treatment of male infertility. By directly injecting a single, carefully selected sperm into an egg, ICSI bypasses many of the natural barriers to fertilization, making it possible for couples with severe male factor infertility to achieve pregnancy."
+          ]
+        },
+        {
+          "heading": "Who Needs ICSI?",
+          "paragraphs": [
+            "The ICSI process is mainly recommended for couples who are undergoing IVF and have certain male infertility factors:"
+          ],
+          "listItems": [
+            "Low sperm count: If the sperm count of a male is low then through the ICSI process, selected sperm can directly inject into an egg and increase the chances of fertilization.",
+            "Poor sperm motility: The natural conception is hampered by low sperm motility. If the sperm have trouble in moving or swimming then it becomes difficult for them to reach the egg and fertilization will not happen. In this case, ICSI can help by directly injecting a single sperm into the egg.",
+            "Abnormal sperm morphology: If the shape of the sperm is abnormal then it is not able to penetrate the outer layer of the egg. However, through ICSI, a single sperm with a normal shape can be directly injected into the egg.",
+            "Previous IVF failure: ICSI is a major advantage for couples who have experienced failed IVF because it increases the chances of successful fertilization.",
+            "Obstructive azoospermia: In this condition, there is a blockage in the male testis from where sperm cannot ejaculate so through the ICSI process, it can be directly retrieved from the testicle or epididymis and injected into the egg for fertilization.",
+            "Unexplained infertility: In cases of unexplained infertility, the ICSI technique is advised by the doctor as it improves the chances of ICSI fertilization."
+          ]
+        },
+        {
+          "heading": "ICSI Treatment Step-By-Step",
+          "paragraphs": [
+            "Several key steps are involved in the ICSI treatment from consultation to embryo transfer:"
+          ],
+          "steps": [
+            {
+              "title": "Initial Consultation",
+              "description": "The first step is to consult with the fertility specialist to review medical history, perform required tests, and discuss the treatment."
+            },
+            {
+              "title": "Ovarian Stimulation",
+              "description": "The female undergoes ovarian stimulation before egg retrieval to encourage the ovaries to produce multiple eggs."
+            },
+            {
+              "title": "Egg Retrieval",
+              "description": "The egg retrieval procedure starts when the follicle reaches an appropriate size. It is a small surgical procedure done under anesthesia where a thin needle is inserted into each follicle to retrieve eggs."
+            },
+            {
+              "title": "Sperm Collection",
+              "description": "The sperm is collected from the male partner on the day of egg retrieval. If the quality or quantity of the sperm is not proper then it can be retrieved through other methods such as TESA or TESE."
+            },
+            {
+              "title": "ICSI Procedure",
+              "description": "During the ICSI process, a single sperm is selected by using a specialized microscope and micromanipulation and directly injected into each mature egg. This procedure is done by highly skilled and trained embryologists."
+            },
+            {
+              "title": "Fertilization Check",
+              "description": "To confirm the fertilization, the eggs are observed in the laboratory and allowed the embryos to develop for several days."
+            },
+            {
+              "title": "Embryo Transfer",
+              "description": "At the time of embryo transfer, one or more healthy embryos are transferred into the woman's uterus by using a small catheter. It is usually done after 3-5 days of fertilization."
+            },
+            {
+              "title": "Progesterone Supplementation",
+              "description": "To support the uterine lining, the woman may be prescribed progesterone supplements once the embryo is transferred. This will help to improve the chances of embryo implantation."
+            },
+            {
+              "title": "Pregnancy Test",
+              "description": "A pregnancy test is done after 10-14 days of embryo transfer to determine whether the treatment was successful or not."
+            }
+          ]
+        },
+        {
+          "heading": "ICSI Treatment Success Rate",
+          "paragraphs": [
+            "The success rate of ICSI treatment is around 60-70% as it varies on several factors such as a woman's age, sperm & egg quality, infertility cause, and clinic reputation. Additionally, the ICSI attempts, advanced technology, and others also vary the success rate of the ICSI treatment."
+          ]
+        },
+        {
+          "heading": "Risks Associated with ICSI",
+          "paragraphs": [
+            "There are several potential complications and risks associated with the ICSI procedure:"
+          ],
+          "listItems": [
+            "Failed Fertilization – Even after a proper ICSI procedure, there is still a possibility of failed fertilization because sometimes injected sperm fails to fertilize the egg.",
+            "Embryo Quality – The quality of the resulting embryos is not guaranteed by the ICSI. There are chances that some embryos may not develop properly or have chromosomal abnormalities and this will impact the successful pregnancy chances.",
+            "Birth Defects – As per some studies, it is suggested that the risk of certain birth defects in babies is higher who are conceived through procedures like ICSI."
+          ]
+        },
+        {
+          "heading": "How Much Does ICSI Treatment Cost?",
+          "paragraphs": [
+            "The ICSI treatment price is widely dependent on several factors such as fertility clinic location, the expertise of the medical team, medications required, or additional services. It is suggested to consult with a specialist first and get a detailed breakdown of the ICSI treatment cost."
+          ]
+        }
+      ]
+    }
+  },
+  "iui": {
+    "title": "IUI Treatment",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/IUI.jpg",
+      "/assets/img/icons/IUI, IVF & ICSI.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "IUI Treatment & Success Rate",
+          "paragraphs": [
+            "IUI, or Intra Uterine Insemination, is the simplest technique in the field of artificial insemination. In an IUI cycle, the sperm from the male is directly placed inside the uterus of the female to increase the chances of conception.",
+            "In a case where both the male and female are not diagnosed with infertility and yet are not able to conceive, chances are that there are other factors that need to be addressed, before going for IUI pregnancy. In order to provide a small push to healthy couples who are not able to conceive naturally, our fertility specialists often recommend the IUI treatment procedure. IUI test is a simple, affordable, and effective treatment for couples who are unable to conceive naturally. Book an appointment with Seeds of Innocens to know what is IUI treatment, IUI treatment cost in India, IUI success rates, and more."
+          ]
+        },
+        {
+          "heading": "When is IUI Treatment Recommended?",
+          "paragraphs": [
+            "IUI treatment is recommended in the following conditions:"
+          ],
+          "listItems": [
+            "Physical or medical conditions hindering the ability to produce healthy sperm",
+            "Low sperm count",
+            "Impotence",
+            "Irregular or absent ovulation cycle in female",
+            "Cervix related condition or disorder",
+            "Unknown causes"
+          ],
+          "sideImage": "/assets/img/IUI Treatment.jpg"
+        },
+        {
+          "heading": "Steps and Duration of IUI Cycle",
+          "paragraphs": [
+            "The sperm sample that is collected for an IUI cycle needs to be concentrated before use. It is placed in the uterus right before the beginning of ovulation in women. Apart from this, some medication may also be provided to stimulate the ovaries into ovulation. Here is a short timeline for a successful IUI Cycle."
+          ],
+          "steps": [
+            {
+              "title": "Day 3 of Menstrual Cycle",
+              "description": "Through an ultrasound assessment and blood test, the process will begin. The doctors may prescribe medication to stimulate the growth of extra follicles which will then develop into eggs."
+            },
+            {
+              "title": "Day 8,9, or 10",
+              "description": "Another ultrasound will be performed to judge the follicle size and endometrial lining, which helps in determining the date of the next visit."
+            },
+            {
+              "title": "Day 11,12, or 13",
+              "description": "The doctor may then give an hCG \"trigger\" shot, which matures the egg as per a decided timeframe, so the IUI Cycle can be timed accordingly."
+            },
+            {
+              "title": "IUI",
+              "description": "About 36 to 40 hours after the shot, IUI is scheduled. At this appointment, the semen is placed in the uterus with the help of a precise catheter."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "monitoring-in-an-iui-cycle-steps": {
+    "title": "Monitoring in an IUI Cycle",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Monitoring in an IUI Cycle",
+          "paragraphs": [
+            "Ultrasound: can tell us not only about the ovarian reserve but also helps to adequately monitor the process of follicular and endometrial development and timely administration of human chorionic hormone (HCG).",
+            "Monitoring LH, E2, and progesterone during ovulation induction can determine follicular growth and competency, predict poor and hyper-response, and diagnose premature LH surge, premature luteinization. However, these tests are not recommended routinely."
+          ],
+          "sideImage": "/assets/img/Monitoring in an IUI Cycle.webp"
+        },
+        {
+          "heading": "Follicle Development",
+          "paragraphs": [
+            "A follicle that is>10 mm in diameter grows at a rate of 2 to 3 mm per day, has no internal echogenicity, and has thin (pencil line like) walls is not only more likely to become the leading follicle but will also give mature oocyte. The mean follicular growth rate is ~1.4 mm/day in the spontaneous menstrual cycle and 1.7 mm during ovarian stimulation cycles.",
+            "A mature follicle that contains a mature oocyte typically measures~18-24mm, and this is the time when the trigger should be decided. Such follicles may have some internal echoes arising from the shearing of clusters of granulosa cells from the follicular wall."
+          ]
+        },
+        {
+          "heading": "Endometrium Assessment",
+          "paragraphs": [
+            "Endometrium: hypoechogenic texture with a well-defined central line in the proliferative phase, becoming hyperechogenic with no visualization of the central echogenic line in the secretory phase. Triple-line multilayer appearance at the time of ovulation is because of luminal stromal density."
+          ]
+        },
+        {
+          "heading": "Signs of Ovulation",
+          "paragraphs": [
+            "The follicular wall becomes irregular as the follicle becomes \"deflated.\" The fresh corpus luteum usually appears as a hypoechoic structure with an irregular internal wall and may contain some internal free-floating or fixed echoes that correspond to hemorrhage. TVS shows the neovascularity within the wall that is associated with the formation of the corpus luteum.",
+            "TVS can also depict the presence of intraperitoneal fluid. Normally approximately 1–3 mL of intraperitoneal fluid is present in the cul-de-sac throughout the cycle. When ovulation occurs, there typically is between 4 and 5 mL within the cul-de-sac. The intraperitoneal fluid resulting from ovulation may be located outside of the posterior cul-de-sac, surrounding bowel loops in the lower abdomen and upper pelvis, or in the anterior cul-de-sac superior to the uterine fundus."
+          ]
+        },
+        {
+          "heading": "Optimal IUI Cycle Parameters",
+          "paragraphs": [
+            "Hence, to conclude, optimal stimulation in the IUI cycle shall have the presence of <4 follicles of size 18-19mm, endometrial thickness ~8-10mm, and trilaminar. We may consider cycle cancellation if more than six follicles or E2 levels are more than 1500pg/ml."
+          ]
+        },
+        {
+          "heading": "Expert Care at Seeds of Innocens",
+          "paragraphs": [
+            "Seeds of Innocens is a leading chain of fertility clinics with several branches across India. Armed with a team of experienced and highly qualified IVF specialists, we are a one-stop solution to all your woes and concerns regarding infertility."
+          ]
+        }
+      ]
+    }
+  },
+  "secondary-infertility": {
+    "title": "Secondary Infertility Causes & Treatment",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Secondary Infertility Causes & Treatment",
+          "paragraphs": [
+            "While it is a common belief that once a couple has had a child, it means that they are fertile enough to have a second one. In fact, a number of couples who face infertility do so when they plan their second or third child.",
+            "When a couple fails to conceive another child naturally, the condition is called secondary infertility. For couples unable to conceive their first child, it is easy to seek treatment. However, for couples with child/children conceived naturally before remain in the misconception that they can do it again, naturally. It is not true that once a couple becomes fertile, they remain fertile. On the contrary, the truth is that in between these 2 pregnancies, a lot of things. can change. This can be attributed to secondary infertility in male or female partner. Our experienced fertility specialists at Seeds of Innocens will tell you more about what is secondary infertility, secondary infertility causes, secondary infertility symptoms, secondary infertility treatment, and more. With the right secondary infertility investigations, we help in ensuring high secondary infertility success rates."
+          ],
+          "sideImage": "/assets/img/genetic.jpg"
+        },
+        {
+          "heading": "Causes of Secondary Infertility",
+          "paragraphs": [
+            "The causes of secondary infertility may remain the same as primary infertility. In the time between the two attempts, there are chances that the husband or wife may have gained weight, had a condition develop, or developed an unhealthy lifestyle. Furthermore, in the time that passed by, the health of the eggs or the sperms may have decreased. For men, the main cause of secondary infertility is often abnormalities in sperm and ejaculate. For women, however, the major causes of secondary infertility are as follows:"
+          ],
+          "listItems": [
+            "Irregular menstrual cycles",
+            "Endometriosis",
+            "Pelvic Adhesions",
+            "Fibroids and Polyps",
+            "Dimished Ovarian Reserve"
+          ]
+        },
+        {
+          "heading": "Secondary infertility: Struggle inconceivable Vs Conceivable",
+          "paragraphs": [
+            "A woman empowered to give birth to her own child embarks the journey of life smoothly and happily is a well-known fact. The stigma and agony of being infertile may not be experienced by some women as they naturally conceived and gave birth to a healthy baby in the first go. It is also possible that some couples may not believe that they are having problem in conceiving for the second time as they experienced their first pregnancy without any medical help."
+          ]
+        },
+        {
+          "heading": "What is secondary infertility?",
+          "paragraphs": [
+            "Inability to conceive or to carry the baby to term for the second time is referred to as secondary infertility. The female must have had at least one conception, successful or unsuccessful in the past. The pain, anxiety and sheer despair is not less than primary infertility and approximately 11% couples suffer from secondary infertility.",
+            "The main causes of secondary infertility may be same as of primary infertility."
+          ]
+        },
+        {
+          "heading": "Key Factors Contributing to Secondary Infertility",
+          "paragraphs": [
+            "Several factors can contribute to secondary infertility:"
+          ],
+          "listItems": [
+            "Age: Fertility declines with advancing age. It is very much likely that if you had conceived earlier in your early 30's and now trying in late 30's you face the problem of secondary infertility. Ovarian reserve declines rapidly in females with advancing age, sperm quality is also affected with age.",
+            "Primary infertility cause: It is possible that if a woman has conceived to full term through IVF in the previous attempt then she might face the same problem for the second time as the reason of primary infertility might have not been cured yet.",
+            "Fertility issues: Fertility issues such as PCOS, endometriosis, poor ovarian reserve, fallopian tube factors play a significant role in secondary infertility. Problems with the uterus, fibroids or endometrial polyps, previous miscarriages also diminish the chances of pregnancy. Sperm quality also declines by age, the use of narcotics, infection, some drugs and excessive smoking or abuse of alcohol may lead to secondary infertility."
+          ]
+        },
+        {
+          "heading": "How is secondary infertility diagnosed?",
+          "paragraphs": [
+            "The diagnosis of secondary infertility is same as of primary infertility. Blood tests for hormones, ultrasounds, CT scan, hysteroscopy and laparoscopy may be performed to rule out the cause. For males, semen analysis and blood tests may serve the purpose."
+          ]
+        },
+        {
+          "heading": "What is the treatment of secondary infertility?",
+          "paragraphs": [
+            "Fertility drugs to boost up the hormones, IUI, IVF, ICSI or donor (egg or sperm) may be the treatment options. If age is too advanced or the case is of uterine dysfunction or hysterectomy."
+          ]
+        },
+        {
+          "heading": "Expert Care at Seeds of Innocens",
+          "paragraphs": [
+            "Secondary infertility sufferers often don't seek advice early, till the time they had convinced themselves that they are not able to produce their offspring now on their own. At Seeds of Innocens we encourage such couples to open up and advise them not to keep themselves in isolation for long. It is not incurable and it is too exhilarating to have the bundle of joy again."
+          ]
+        }
+      ]
+    }
+  },
+  "egg-freezing": {
+    "title": "Egg Freezing",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/egg.jpg",
+      "/assets/img/egg.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is Egg Freezing?",
+          "paragraphs": [
+            "Egg freezing, which is also known as oocyte cryopreservation, is a process in which eggs are retrieved from the women's ovaries, frozen, and then stored for future use. This procedure is often opted by women who wish to delay childbearing or other medical issues. In the egg freezing process, ovary stimulation is required to produce multiple eggs then through a minor surgical procedure, those eggs are retrieved and frozen by using a process called vitrification.",
+            "The eggs are frozen under liquid nitrogen at a specialized facility and remain viable for many years. When the woman is ready to get pregnant then through IVF procedure, a healthy egg is fertilized with sperm and implanted in the uterus to achieve pregnancy."
+          ],
+          "sideImage": "/assets/img/Egg-Freezing1.jpg"
+        },
+        {
+          "heading": "Why is Egg Freezing Done?",
+          "paragraphs": [
+            "Several reasons because of why egg freezing is done such as:"
+          ],
+          "listItems": [
+            "Delaying Childbearing: Women who want to get pregnant at a particular age or don't want a child until they become independent can choose egg freezing. It is the best option to have your own biological baby even after their 30s.",
+            "Medical Reasons: There might be some medical conditions or treatments such as cancer that can affect a woman's fertility. Women should freeze their eggs before undergoing such treatments so that in the future they can have their own biological children.",
+            "Preserving Fertility: Women who are not ready to get pregnant or have children but are concerned about their future fertility, may opt for egg freezing as a proactive measure.",
+            "Genetic Reasons: If a woman carries a genetic problem or condition because of which her fertility may affect then preserving eggs is the best option to use them for future use."
+          ]
+        },
+        {
+          "heading": "The Egg Freezing Procedure",
+          "paragraphs": [
+            "There are several steps involved in egg freezing process:"
+          ],
+          "steps": [
+            {
+              "title": "Initial Consultation",
+              "description": "The first step is to consult with a fertility specialist. During this appointment, the doctor will check the medical history of the woman, perform a physical examination, and share the details of egg freezing. In this step, an evaluation of ovarian reserve will also be done to measure the supply of eggs."
+            },
+            {
+              "title": "Ovarian Stimulation",
+              "description": "If a woman decides to go for egg freezing then the ovarian stimulation process starts with a course of medications (hormone injections) to produce multiple eggs. This process typically lasts for 10-14 days."
+            },
+            {
+              "title": "Monitoring",
+              "description": "During the ovarian stimulation phase, a woman has to visit a doctor regularly for the monitoring of hormone levels and ultrasound examinations to record the growth and development of follicles (fluid-filled sacs in the ovaries that contain eggs)."
+            },
+            {
+              "title": "Egg Retrieval",
+              "description": "Once the follicles have matured and reached the optimal size, the woman will undergo egg retrieval. It is a minimal surgical process that is performed under sedation. Typically, a thin needle is inserted into each follicle through the vaginal wall to aspirate the fluid and retrieve the eggs. This procedure takes about 20-30 minutes."
+            },
+            {
+              "title": "Egg Freezing",
+              "description": "The retrieved eggs are then evaluated and healthy or suitable eggs are frozen immediately by using a process called vitrification. The eggs are frozen under a very low temperature i.e., -196°C."
+            }
+          ]
+        },
+        {
+          "heading": "Why do Women Opt for Egg Freezing?",
+          "paragraphs": [
+            "Egg freezing is a great method to preserve the eggs for the future and have your own biological child. Those women who are at the start of their careers and want to become independent can freeze their eggs. Also, it is a part of family planning and if a woman doesn't have a desire to have children right now then she can freeze her eggs.",
+            "So, a woman can choose to become a mother at their own preference by using egg freezing."
+          ],
+          "sideImage": "/assets/img/Egg-Freezing2.jpg"
+        },
+        {
+          "heading": "Cost of Egg Freezing",
+          "paragraphs": [
+            "The egg freezing cost depends on various factors such as fertility clinic location, medical conditions, specific procedures, and additional services. We can suggest to you the exact cost of egg freezing. Once you consult the fertility specialist then you will get the breakdown of egg freezing price in detail."
+          ]
+        },
+        {
+          "heading": "Risk with Egg Freezing",
+          "paragraphs": [
+            "The egg freezing technique is generally safe but just like any other medical procedure, this also carries some risks."
+          ],
+          "listItems": [
+            "Complications during egg retrieval such as bleeding, surrounding organ damage, or infection.",
+            "A challenging process and can impact one emotionally and psychologically.",
+            "Does not give any guarantee for future pregnancy."
+          ]
+        }
+      ]
+    }
+  },
+  "embryo-freezing": {
+    "title": "Embryo Freezing",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is Embryo Freezing?",
+          "paragraphs": [
+            "Embryo freezing, also known as embryo cryopreservation, is a process where embryos created through in vitro fertilization (IVF) are frozen and stored for future use. This technique allows couples to preserve their embryos for later transfer, increasing the chances of pregnancy from a single IVF cycle.",
+            "At Seeds of Innocence, we use advanced vitrification techniques to ensure high survival rates and successful embryo transfers."
+          ],
+          "sideImage": "/assets/img/recent_post2.jpg"
+        },
+        {
+          "heading": "Why Freeze Embryos?",
+          "paragraphs": [
+            "There are several reasons why couples choose to freeze their embryos:"
+          ],
+          "listItems": [
+            "Preserve excess embryos from an IVF cycle",
+            "Avoid repeated ovarian stimulation",
+            "Plan for future pregnancies",
+            "Medical reasons (cancer treatment, health conditions)",
+            "Increase cumulative pregnancy rates",
+            "Reduce costs of multiple IVF cycles"
+          ]
+        },
+        {
+          "heading": "The Embryo Freezing Process",
+          "paragraphs": [
+            "Our embryo freezing process involves several steps:"
+          ],
+          "listItems": [
+            "Embryo development and assessment",
+            "Selection of high-quality embryos",
+            "Vitrification (rapid freezing) process",
+            "Storage in liquid nitrogen at -196°C",
+            "Long-term monitoring and maintenance",
+            "Thawing when ready for transfer"
+          ]
+        },
+        {
+          "heading": "Success Rates",
+          "paragraphs": [
+            "Embryo freezing has shown excellent success rates:"
+          ],
+          "listItems": [
+            "High survival rates after thawing (95%+)",
+            "Similar pregnancy rates to fresh embryo transfers",
+            "Reduced risk of ovarian hyperstimulation syndrome (OHSS)",
+            "Better endometrial receptivity in frozen cycles"
+          ]
+        },
+        {
+          "heading": "Storage Duration",
+          "paragraphs": [
+            "Embryos can be stored for extended periods:"
+          ],
+          "listItems": [
+            "No known time limit for storage",
+            "Regular monitoring and maintenance",
+            "Flexible storage options",
+            "Comprehensive documentation"
+          ],
+          "bottomImage": "/assets/img/recent_post2.jpg"
+        }
+      ]
+    }
+  },
+  "prp": {
+    "title": "PRP & Ovarian Rejuvenation",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/icons/PRP & Ovarian Rejuvenation.jpg",
+      "/assets/img/icons/PRP & Ovarian Rejuvenation.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "PRP for DOR",
+          "paragraphs": [
+            "Decline in egg reserve is a phenomenon that all women experience as their age advances, taking them gradually towards menopause as they enter their 40s. However, it comes as a shock to some in their early 20s or 30s when they are unable to conceive and their USG (AFC count) or blood report (AMH) reveals a reduction in their egg count. This is known as premature ovarian failure (POF) and it may affect as many as 10% of patients suffering from infertility. Until now there was little or no hope for this set of patients if conventional/mini IVF protocols did not work. They could only go for donor oocytes (using eggs recovered from someone else).",
+            "But today, a new kid on the block – 'ovarian rejuvenation therapy' or 'ovarian PRP treatment', is offering some hope to women unwilling for donor egg treatment. PRP in IVF has emerged to be a highly effective option for infertile couples. Come to Seeds of Innocens to get the best PRP treatment. Book an appointment today to know more about PRP fertility treatment."
+          ],
+          "listItems": [
+            "Physical or medical conditions hindering the ability to produce healthy sperm",
+            "Low sperm count",
+            "Impotence",
+            "Irregular or absent ovulation cycle in female",
+            "Cervix related condition or disorder",
+            "Unknown causes"
+          ],
+          "sideImage": "/assets/img/PRP1.png"
+        },
+        {
+          "heading": "Who may benefit?",
+          "paragraphs": [
+            "Encouraging PRP results in experimental trials has opened a potential window for treating a variety of problems in women. Women with following conditions can give it a try:"
+          ],
+          "listItems": [
+            "Primary ovarian insufficiency.",
+            "Advanced maternal age.",
+            "Poor ovarian reserve.",
+            "Loss of ovarian function due to chemotherapy.",
+            "Ovarian dysfunction."
+          ]
+        },
+        {
+          "heading": "How is it done?",
+          "paragraphs": [
+            "The procedure takes place in two steps:",
+            "First, several tubes of blood are extracted from your body using injection. The blood sample in then processed to separate the platelet-rich plasma component from the white blood cells and red blood cells.",
+            "The second step involves injection of this PRP into the ovaries in a procedure quite similar to egg pick-up. The PRP therapy is minimally invasive. Local anesthesia is provided in order to ensure that you don't feel any pain during the procedure. The whole process takes 2-3 hours.",
+            "Just after the periods finish and before the follicles start to grow, the patient is called empty stomach to the clinic. Blood is taken and the PRP prepared. Under light sedation (same as used for IVF egg collection) and ultrasound guidance, the prepared sample is injected into both ovaries. The process takes roughly 20-30 minutes and the patient can go home in an hour or so. This process is repeated once every month for a total of three times."
+          ],
+          "sideImage": "/assets/img/PRP1.webp"
+        },
+        {
+          "heading": "How does it work?",
+          "paragraphs": [
+            "This procedure involves separation and concentration of platelet rich plasma from your blood using a special centrifugation and aspiration technique. This contains several platelet-derived growth factors, transforming growth factor-beta, vascular endothelial growth factor, endothelial and fibroblast growth factor, etc. Upon injection into ovaries these cytokines may help stimulate the ovarian stem cells to produce new follicles.",
+            "After repeating this procedure for 2-3 cycles, an improvement in the follicle count and blood parameters may be seen. Several studies have shown not only a resumption in menses, but also positive pregnancies with IVF.",
+            "Although this procedure is still under trial, but given its safety and promising initial results, it holds potential for women with reduced egg counts unwilling to give up on their own eggs."
+          ]
+        }
+      ]
+    }
+  },
+  "cryopreservation": {
+    "title": "Cryopreservation",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is Cryopreservation?",
+          "paragraphs": [
+            "Cryopreservation is a process that involves freezing and storing biological materials at very low temperatures (typically -196°C using liquid nitrogen) to preserve them for future use. In fertility treatment, cryopreservation is used to store eggs, sperm, embryos, and ovarian tissue.",
+            "This advanced technique allows individuals and couples to preserve their fertility for various reasons, including medical treatments, career planning, or personal choice."
+          ],
+          "sideImage": "/assets/img/recent_post2.jpg"
+        },
+        {
+          "heading": "Types of Cryopreservation",
+          "paragraphs": [
+            "At Seeds of Innocence, we offer various types of cryopreservation services:"
+          ],
+          "listItems": [
+            "Egg Freezing (Oocyte Cryopreservation)",
+            "Sperm Freezing (Sperm Cryopreservation)",
+            "Embryo Freezing (Embryo Cryopreservation)",
+            "Ovarian Tissue Freezing",
+            "Testicular Tissue Freezing"
+          ]
+        },
+        {
+          "heading": "Benefits of Cryopreservation",
+          "paragraphs": [
+            "Cryopreservation offers numerous benefits:"
+          ],
+          "listItems": [
+            "Preserves fertility for cancer patients before treatment",
+            "Allows family planning flexibility",
+            "Enables multiple IVF cycles from one egg retrieval",
+            "Reduces the need for repeated ovarian stimulation",
+            "Provides backup options for fertility treatment",
+            "Helps preserve fertility for medical or personal reasons"
+          ]
+        },
+        {
+          "heading": "The Cryopreservation Process",
+          "paragraphs": [
+            "The cryopreservation process involves several steps:"
+          ],
+          "listItems": [
+            "Initial consultation and fertility assessment",
+            "Hormonal stimulation (for egg freezing)",
+            "Collection of eggs, sperm, or embryos",
+            "Laboratory processing and preparation",
+            "Freezing using vitrification technique",
+            "Storage in liquid nitrogen tanks",
+            "Long-term monitoring and maintenance"
+          ]
+        },
+        {
+          "heading": "Storage and Safety",
+          "paragraphs": [
+            "At Seeds of Innocence, we maintain the highest standards for cryopreservation storage:"
+          ],
+          "listItems": [
+            "State-of-the-art cryogenic storage facilities",
+            "24/7 monitoring systems",
+            "Backup storage systems",
+            "Comprehensive documentation and tracking",
+            "Regular quality checks and maintenance"
+          ],
+          "bottomImage": "/assets/img/recent_post2.jpg"
+        }
+      ]
+    }
+  },
+  "ovulation-induction": {
+    "title": "Ovulation Induction",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/ovarian.jpg",
+      "/assets/img/icons/PRP & Ovarian Rejuvenation.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is ovulation induction?",
+          "paragraphs": [
+            "Ovulation induction is the process of using medications to stimulate ovulation in women who have irregular or absent ovulation (anovulation). According to the National Institutes of Health, 25 to 30 percent of women with infertility have problems with ovulation.",
+            "Normal ovulation occurs when the ovary releases a mature egg in preparation for that egg to be fertilized. Normal ovulation occurs roughly once every 28 days during a woman's menstrual cycle. Intervals of 21 to 35 days are considered acceptable and reflective of normal ovulation. If fertilization does not occur, the mature egg and any supplementary tissues are broken down and cleared from the uterus naturally.",
+            "When ovulation happens less than once every 35 days or is unpredictable, it is considered to be irregular. When ovulation is completely unpredictable – in interval or duration – it is considered oligoovulation. If it doesn't occur at all, it is called anovulation. Ovulatory problems impact fertility by taking away the predictability of ovulation and potentially the availability of an egg to be fertilized.",
+            "The goal of ovulation induction is to increase a woman's chances of conceiving a child, either through sexual intercourse or by using intrauterine insemination (IUI) or another fertility treatment. However, when the absence of ovulation is a symptom of another fertility issue, treating the underlying problem can also restore normal ovulation and fertility."
+          ],
+          "sideImage": "/assets/img/Ovulation.jpg"
+        },
+        {
+          "heading": "Ovulation induction at a glance",
+          "paragraphs": [
+            "Ovulation induction is a treatment for anovulation (irregular ovulation), an infertility condition in which follicles in a woman's ovary do not mature and release eggs (ovulate)."
+          ],
+          "listItems": [
+            "Anovulation can be caused by certain reproductive disorders such as polycystic ovary syndrome (PCOS), nutritional problems or excessive exercise.",
+            "Ovulation induction is typically achieved with a variety of medications that stimulate the ovary to produce and release eggs.",
+            "If the treatment is successful, the woman will ovulate and can become pregnant naturally using intrauterine insemination (IUI) or other fertility treatments.",
+            "Approximately 25 percent of female infertility cases stem from problems with ovulation, so ovulation induction can be a beneficial and cost-effective first treatment."
+          ]
+        },
+        {
+          "heading": "Medications used for ovulation induction",
+          "paragraphs": [
+            "Ovulation induction uses a variety of hormone-based medications to regulate a woman's reproductive hormones and increase the chances of ovulation. Some of the commonly used medications are:",
+            "In some cases, treating another condition, such as obesity or hypothyroidism, can jump-start ovulation naturally."
+          ],
+          "listItems": [
+            "Clomiphen citrate: Stimulates ovulation in women who have normal pituitary (a gland in the brain) hormones but in whom the normal monthly changes in these hormones are not occurring. Most patients know this medication by its brand name Clomid.",
+            "Aromatase inhibitors: With similar indications as for clomiphene citrate, this type of medication is very effective in patients with PCOS. Most patients know this medication as letrozole or by the brand name Femara.",
+            "Insulin-sensitizing agents: These are used in some PCOS patients who have evidence of diabetes or prediabetes. Most patients know this medication as metformin.",
+            "Gonadotropins: Consist of two injectable hormones, luteinizing hormone (LH) and follicle-stimulating hormone (FSH), that encourage egg development and are normally produced by the pituitary gland. Because of how powerfully gonadotropins stimulate egg development, they require more frequent monitoring than clomiphene citrate and letrozole. Risks include multiple pregnancy and ovarian hyperstimulation syndrome (OHSS), in which the ovaries become overstimulated and swollen."
+          ]
+        },
+        {
+          "heading": "Who could benefit from ovulation induction",
+          "paragraphs": [
+            "Ovulation induction is a common treatment for women with absent or infrequent ovulation. Women with ovulation-interrupting disorders such as PCOS can also benefit from ovulation induction.",
+            "Ovulation induction also works in conjunction with in vitro fertilization (IVF) by stimulating multiple mature eggs to release for collection and use in lab fertilization. This is typically called controlled ovarian hyperstimulation.",
+            "When determining whether or not to use ovulation induction, physicians usually look at:"
+          ],
+          "listItems": [
+            "Disorders that can directly inhibit normal ovulation such as PCOS.",
+            "A woman's hormone levels, specifically the presence of FSH, AMH and LH.",
+            "Disorders than can indirectly affect ovulation, such as thyroid disorders, eating disorders and obesity.",
+            "The amount of exercise a woman does."
+          ]
+        },
+        {
+          "heading": "Superovulation",
+          "paragraphs": [
+            "For women who continue to experience abnormal ovulation after ovulation induction treatment, physicians can also try superovulation. Superovulation uses the human chorionic gonadotropin hormone to induce the release of potential mature eggs in the follicle."
+          ]
+        },
+        {
+          "heading": "Risks and side effects of ovulation induction",
+          "paragraphs": [
+            "Ovulation induction medications can sometimes cause OHSS (Ovarian Hyperstimulation Syndrome). The side effects of OHSS range from mild to severe, and usually fade after a few weeks without treatment. They can include:"
+          ],
+          "listItems": [
+            "Bloating.",
+            "Nausea.",
+            "Headaches.",
+            "Loss of breath.",
+            "Hot flashes.",
+            "Weight gain.",
+            "Tenderness in the pelvic region.",
+            "Blurry vision.",
+            "The ovarian superovulation treatment can cause multiple eggs to release, increasing the chance of multiple fertilized eggs (embryos) and a high-risk pregnancy."
+          ],
+          "sideImage": "/assets/img/Induction.jpg"
+        },
+        {
+          "heading": "Benefits of Ovulation Induction",
+          "paragraphs": [
+            "Ovulation induction is usually one of the first treatments used for infertility because it is noninvasive and relatively low cost compared with other fertility treatments, such as IVF that includes costs of tests, medications, minor procedures and lab work.",
+            "For more severe cases of anovulation or other causes of infertility, ovulation induction can also be an effective treatment in conjunction with IVF, intrauterine insemination (IUI) and other holistic treatments."
+          ]
+        }
+      ]
+    }
+  },
+  "follicular-monitoring": {
+    "title": "Follicular Monitoring",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/ovarian.jpg",
+      "/assets/img/icons/PRP & Ovarian Rejuvenation.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is a Follicular Study?",
+          "paragraphs": [
+            "Follicular study or follicular monitoring is the process through which the doctor watches the growth of this follicle from the beginning of the menstrual cycle to the time it is ready to release an egg.",
+            "It is an important part of IVF assessment and timing. It uses a simple technique for assessing ovarian follicles at regular intervals and studies the pathway to ovulation. Medical experts study the follicle development in the ovaries and calculate when the next egg will be released. If a couple plans to have intercourse during that time, the chances of pregnancy are much higher."
+          ],
+          "sideImage": "/assets/img/Follicular.jpg"
+        },
+        {
+          "heading": "Why is follicular Monitoring Done?",
+          "paragraphs": [
+            "Follicular studies form a major part of fertility treatments. They are essential in checking whether the woman's body is responding to the treatment or not. If somebody has opted for the IVF (in-vitro fertilization) method of fertilization, then the follicle scans are very important.",
+            "It determines the condition and the number of eggs produced in a single case of ovulation and checks the hormones involved. If the levels of hormones are incorrect, then with the alteration of medicine dosage there are higher chances of conception.",
+            "Follicular monitoring can help pinpoint the exact time in the cycle when one will ovulate. It helps in planning intercourse during that time so that the chances of pregnancy are much higher. It also helps in diagnosing problems related to ovulation. Some of these problems could be hindering your pregnancy as well.",
+            "However, it doesn't ensure fertilization of the egg by the sperm or implanting the fertilized egg on the uterine wall. Some problems don't let you conceive post-ovulation. These scans do not take care of them, as well."
+          ]
+        },
+        {
+          "heading": "When is follicular monitoring necessary?",
+          "paragraphs": [
+            "A follicle scan is a painless procedure that lets the doctor see the follicle's development inside the ovary. With the insertion of small plastic probes inside the vagina, sonographers understand the egg's development inside the follicle. Here are some of the reasons why you should consider doing follicular monitoring:",
+            "The sonographer or the doctor will suggest you have these scans, usually on days 6 or 7 of your cycle. It is, however, based on the assumption that you have a 28-day cycle. She will continue to inform you every two to three days to come for the scans."
+          ],
+          "listItems": [
+            "Suppose you are less than 35 years of age and have been actively trying to get pregnant for around one year. It is the first step where you can rule out ovulation-related problems.",
+            "In case you are above 35 years of age and haven't been able to get pregnant in the last six months.",
+            "If you have PCOD, you might have an irregular cycle and irregular ovulation. You might also have a cycle where you do not ovulate.",
+            "If fertility drugs for ovulation or for producing multiple follicles through fertility procedures like IUI or IVF."
+          ]
+        },
+        {
+          "heading": "How does follicle tracking work?",
+          "paragraphs": [
+            "Follicle tracking is a series of ultrasound scans of the vagina which take between 5-10 minutes to perform. The follicles start developing from the 9th day of the cycle. The scans continue until the follicles have disappeared, and ovulation has started. Couples are then suggested to have intercourse. It helps in assisting conception as it optimizes the timing of the sperm and egg to meet.",
+            "The doctor looks for the size of the follicles. He also checks the thickness of the endometrium, which is the wall of the uterus. The doctor might also use a Doppler scan to check the blood flow to the follicle and the endometrium. Usually, a mature follicle measures between 18-25mm, and an endometrium of more than 10mm is considered normal for a successful pregnancy."
+          ],
+          "bottomImage": "/assets/img/Follicular2.png"
+        },
+        {
+          "heading": "Who needs follicle tracking?",
+          "paragraphs": [
+            "It is usually suggested that women who do not know when they are ovulating or who have had miscarriages, or those who take Clomid or FSH."
+          ],
+          "listItems": [
+            "If women do not know when she is ovulating despite using prediction kits might need follicle tracking.",
+            "Women who have had unfortunate miscarriages in the early stages of pregnancy can use these scans to understand why it occurred.",
+            "Women who have been taking medication to induce the ovulation process in them or drugs to counter other conception-related problems."
+          ]
+        },
+        {
+          "heading": "Success rate of follicular study",
+          "paragraphs": [
+            "People often have unrealistic expectations from follicular studies. One needs to know that the success rate is only 10%. Sometimes these scans can be extremely stressful for the couple.",
+            "Doctors are often too casual while suggesting these scans as they tend to forget the strain it causes in a marital relationship. It is advisable to have only one cycle of ovulation tracking. It is helpful enough as it teaches you to correlate the scan with your body signals such as cervical mucus and ovulation pain.",
+            "You can track ovulation discreetly at home which increases the chances of pregnancy rather than getting overburdened with the pressure of scans."
+          ]
+        },
+        {
+          "heading": "Side effects of follicular ultrasound scan",
+          "paragraphs": [
+            "There are no physical side effects of this scan. But it can be quite a taxing deal for any couple. Most couples who are prescribed this process have probably been trying for a baby for quite some time.",
+            "When the doctors go through these scans, they tell you the exact time of ovulation and when are your chances of getting pregnant higher. This may result in the woman wanting to have sex only during that stipulated time, which may impact the libido of the partner."
+          ]
+        },
+        {
+          "heading": "What are the advantages of folliculometry?",
+          "paragraphs": [
+            "A follicle scan is done several times during a woman's menstrual cycle, usually between days 9-20. The scan detects when does a follicle rupture and release the egg. Follicle scans have several other uses listed below are some of them:"
+          ],
+          "listItems": [
+            "Follicles which do not grow till the time of rupture can be diagnosed.",
+            "Some follicles do not grow at all. The scans help in detecting them.",
+            "Some dominant follicles do not rupture.",
+            "The endometrial lining might not be good enough in either thickness or quality.",
+            "Scans can help to predict the time of ovulation for assisted pregnancy.",
+            "They help to guide treatments with ovulation-inducing drugs or injections.",
+            "To detect complications like OHSS and others.",
+            "Lastly, follicular scans help in detecting luteal phase deficiency."
+          ]
+        },
+        {
+          "heading": "How much time does take to undergo a follicle scan?",
+          "paragraphs": [
+            "The total time for follicular scans is around fifteen to twenty minutes, but the preparations need to start a few hours before the scan.",
+            "It can even take only ten minutes for the entire procedure if you cooperate with the doctor and follow the instructions of the sonographer. Usually, four to six scans take place in one in one cycle to accurately predict the time of ovulation.",
+            "The initial scan is called the baseline scan. It helps the doctor understand the initial stage of the follicle. From here, the doctor schedules scans at the appropriate times to follow the development of uterine follicles. The inner lining of the uterus and the growth of the follicle are checked during each scan, and finally, the doctor gets a clear idea of when the woman will ovulate."
+          ]
+        }
+      ]
+    }
+  },
+  "blastocyst-transfer": {
+    "title": "Blastocyst Transfer",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/blastocyst.jpg",
+      "/assets/img/icons/Blastocyst Transfer.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Blastocyst Implantation Transfer",
+          "paragraphs": [
+            "IVF proves to be a great option for couples who cannot conceive naturally. However, there is a small portion of couples who face difficulties in conceiving through a 3rd day embryo transfer through IVF. Some of these couples do not see results until they go through multiple cycles of IVF, while some do not see results at all. For these couples, a great alternative is to opt for a blastocyst IVF transfer on day 5 instead of fertilization instead."
+          ],
+          "sideImage": "/assets/img/Blastocyst1.jpg"
+        },
+        {
+          "heading": "What is a blastocyst?",
+          "paragraphs": [
+            "A blastocyst is an embryo transfer which involves transferring one or more embryos that are at blastocyst formation stage of development which advanced stage of an embryo that usually happens on the 4th or 5th day of fertilization. This is then transferred to the uterus of the expecting female. To understand it better, it is important to understand the basic differences between a 3rd, 4th, and 5th-day transfer of an embryo."
+          ]
+        },
+        {
+          "heading": "3rd-Day Transfer",
+          "paragraphs": [
+            "An embryo starts off as a single cell that divides every 12-24 hours. By the third day of fertilisation, the embryo has divided into 4 or 8 cells and is called a multicellular embryo. This is the stage where most natural IVF Cycles are performed. A 3rd Day embryo transfer is the most commonly used practice in IVF and usually has a high success rate if all the conditions are in the favour of the patient."
+          ]
+        },
+        {
+          "heading": "4th-Day Transfer",
+          "paragraphs": [
+            "Around the time of the 4 day, the embryo has divided into 16 cells and has arrived at the stage of what is medically known as Morula. Transfering the morula as part of an IVF Cycle is an unconventional method, though not totally unheard of. There is little scientific evidence that suggests that 4th day Morula transfers are in any way more or less successful than embryo transfer on the 3rd day."
+          ]
+        },
+        {
+          "heading": "5th-Day Transfer",
+          "paragraphs": [
+            "A blastocyst is an advanced stage of the embryo where the cell has differentiated into 2 different cell types, with more than 70-100 cells between them. The first one is the inner cell mass which will then turn into the tissues of the baby as it develops, while the other is the trophoblast or trophoectoderm, which forms part of the placenta. This cell division is the major reason why blastocyst transfer on the 5th-6th day are more successful than embryo transfer on the 3rd day. This is especially true and helpful for couples who have been through IVF cycles to no avail or have other reasons behind their inability to conceive naturally."
+          ],
+          "bottomImage": "/assets/img/Blastocyst2.jpg"
+        }
+      ]
+    }
+  },
+  "surrogacy": {
+    "title": "Surrogacy: A Journey to Parenthood",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Surrogacy: A Journey to Parenthood",
+          "paragraphs": [
+            "At Seeds of Innocence, we understand the dreams of parenthood and the challenges some couples face in achieving them. Surrogacy is an advanced and legally approved method that allows individuals to experience the joy of having their child. As a trusted name in fertility care, we aim to guide you through this remarkable journey with compassion and expertise."
+          ]
+        },
+        {
+          "heading": "What Is Surrogacy?",
+          "paragraphs": [
+            "Surrogacy is an arrangement where a woman, known as a surrogate, carries and delivers a child for another individual or couple. The process involves in-vitro fertilization (IVF), where an embryo is created from the intended parent's or donor's eggs and sperm is implanted into the surrogate womb. The surrogate nurtures the baby during pregnancy and delivers the child to the intended parents."
+          ]
+        },
+        {
+          "heading": "Types of Surrogacy",
+          "paragraphs": [
+            "Gestational Surrogacy: This is the most common type of surrogacy, where the surrogate has no genetic link to the child. The embryo is created using the genetic material of the intended parents or donors.",
+            "Traditional Surrogacy: In this less common approach, the surrogate's eggs are used, making her the biological mother of the child. However, this method is not allowed under Indian surrogacy laws."
+          ]
+        },
+        {
+          "heading": "Surrogacy Laws",
+          "paragraphs": [
+            "In India, surrogacy is governed by strict laws to ensure ethical practices and protect the rights of all parties involved. Key points include:"
+          ],
+          "listItems": [
+            "Eligibility: Only Indian couples who have been married for at least five years and are unable to conceive naturally are eligible for surrogacy. They must also provide proof of medical infertility.",
+            "Age Limit: The intended mother must be between 23 and 50 years old, and the intended father between 26 and 55 years old.",
+            "Altruistic Surrogacy: Commercial surrogacy is prohibited in India. Only altruistic surrogacy is allowed, where the surrogate is a close relative and is compensated only for medical expenses and insurance.",
+            "Prohibition of Single and Foreign Couples: Surrogacy is restricted to Indian heterosexual married couples, and foreign nationals are not permitted surrogacy in India."
+          ]
+        },
+        {
+          "heading": "Why Choose Seeds of Innocence for Surrogacy?",
+          "paragraphs": [
+            "At Seeds of Innocence, we combine medical excellence with a deep sense of empathy to support you at every step of your surrogacy journey. Here's why we're a trusted partner for many:"
+          ],
+          "listItems": [
+            "Expert Team: Our fertility specialists, embryologists, and counsellors have extensive experience in surrogacy and fertility treatments. They work tirelessly to ensure a smooth and successful process.",
+            "Advanced Technology: We use state-of-the-art technology for IVF and embryo transfer to maximize success rates.",
+            "Legal and Ethical Guidance: Surrogacy involves legal procedures, and we ensure full compliance with Indian laws. Our team provides comprehensive support to simplify the legal aspects for you.",
+            "Personalized Care: We understand that every couple's journey is unique. Our approach is tailored to meet your specific needs and address your concerns.",
+            "Comprehensive Facilities: From advanced IVF labs to counseling and psychological support, we provide holistic care under one roof."
+          ]
+        },
+        {
+          "heading": "The Surrogacy Process at Seeds of Innocence",
+          "listItems": [
+            "Initial Consultation: We begin with an in-depth discussion to understand your medical history and surrogacy requirements.",
+            "Medical and Legal Screening: Both the intended parents and the surrogate undergo detailed medical and legal evaluations.",
+            "IVF and Embryo Transfer: Eggs and sperm are collected, and an embryo is created in our advanced labs. The embryo is then implanted into the surrogate's womb.",
+            "Pregnancy Care: The surrogate receives regular medical check-ups and care throughout the pregnancy to ensure the health of the baby.",
+            "Birth and Legal Handover: Once the baby is born, all legal formalities are completed, and the child is handed over to the intended parents."
+          ]
+        },
+        {
+          "heading": "Building Families, Creating Happiness",
+          "paragraphs": [
+            "Surrogacy is more than just a medical procedure, it is a life-changing journey for everyone involved. At Seeds of Innocence, we are proud to be a part of your story, helping you overcome challenges and embrace the joys of parenthood.",
+            "We invite you to visit our centers or contact us to learn more about surrogacy and how we can assist you. Together, let's take a step closer to fulfilling your dream of becoming a parent."
+          ]
+        }
+      ]
+    }
+  },
+  "varicocele": {
+    "title": "Varicocele Symptoms & Treatment",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Varicocele Symptoms & Treatment",
+          "paragraphs": [
+            "Varicoceles are the enlarged veins in the scrotum, a loose bag of skin in males that holds the testicles. It is a malfunction of the valves of the testicular vein that cause the blood to pool or collect in an area and enlarge the vein. This pooling of blood which is the main varicocele symptom, causes circulation problems in the testes, leading to temperature and environmental variations in the testicles.",
+            "This has an adverse effect on the motility, count, and morphology of the sperm, thus, having an indirect effect on the fertility of a male. Statistics from around the world show that about 15% of the male population suffers from Varicoceles. A Varicocele Treatment or simply Varicocelectomy, is a procedure that ties the swollen veins in the scrotum, while preserving the normal blood vessels.",
+            "At Seeds of Innocence our team of fertility specialists will help you with the right varicocele diagnosis and also identify the right varicocele causes."
+          ]
+        },
+        {
+          "heading": "Symptoms of Varicoceles",
+          "paragraphs": [
+            "The most daunting part about varicoceles is that they remain asymptomatic for a rather long time, often going unnoticed. In a majority of cases, men only find out about their varicoceles when they get checked for fertility issues. In the rare cases that varicoceles cause pain, the pain occurs due to long periods of sitting, and even then, it is just mild to moderate. The only viable symptom that they have is that they cause infertility in men."
+          ]
+        },
+        {
+          "heading": "Benefits of Varicocelectomy",
+          "paragraphs": [
+            "A Varicocelectomy is the most common operation or procedure that is performed to solve issues of male infertility. It is the best chance of repairing a Varicocele, with the goal of relieving pain, if any, and increasing the chances of pregnancy in couples that are facing infertility due to male factors. The stats with Varicocelectomy are astonishing, as close to half of the patients are able to conceive through natural way after the procedure, with almost 80% men seeing significant improvement in their health.",
+            "Aside from this, Varicocelectomy is a great factor in preventing any hormonal damage and improves Leydig cell function in a vast majority of men."
+          ]
+        },
+        {
+          "heading": "Treatment",
+          "paragraphs": [
+            "At SOI, you can get one of the most common treatments of varicoceles and the most effective one as well; Microscopic Varicocelectomy. In this, the swollen veins are tied off while preserving the blood flow into the testicles. The result of this procedure is a dramatic improvement in reproductive health of men."
+          ]
+        },
+        {
+          "heading": "Q. Do varicoceles go away?",
+          "paragraphs": [
+            "No, varicoceles do not go away on their own."
+          ]
+        },
+        {
+          "heading": "Q. What happens if varicocele is left untreated?",
+          "paragraphs": [
+            "For most people, the blood around the testicle is bound to cause some pressure, resulting in the shrinkage of the testes. However, varicocele may have a strong possibility of causing infertility in men especially if left untreated for a long time."
+          ]
+        },
+        {
+          "heading": "Q. Can heavy lifting cause varicocele?",
+          "paragraphs": [
+            "Heavy lifting is the cause of varicocele in a significant number of men. Aside from this, heavy lifting is also known to worsen the symptoms in a number of cases as well."
+          ]
+        },
+        {
+          "heading": "Q. Can I exercise with varicocele?",
+          "paragraphs": [
+            "Exercising with Varicocele is a possibility if you know what possess danger to your health. It is important to identify what exercises are good for your health and what are not. Following specific precautions is important of you wish to exercise with a varicocele. For more information talk to one of our experts by booking an appointment."
+          ]
+        },
+        {
+          "heading": "Q. How long does Varicocelectomy pain last?",
+          "paragraphs": [
+            "After the treatment, it will take about 2 days to return to normal non-strenous activities. For strenuous activities, it may take up to 2 weeks to be prepared, which is also based on how comfortable you are. Pain is generally mild and may last for about a few days to a few weeks depending on your condition."
+          ]
+        },
+        {
+          "heading": "Q. What causes pain in varicocele?",
+          "paragraphs": [
+            "The pressure of the pooling blood on the testicles causes pain in a varicocele."
+          ]
+        }
+      ]
+    }
+  },
+  "vasectomy-reversal": {
+    "title": "Vasectomy Reversal",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Vasectomy Reversal: Restoring Fertility for Couples Looking to Conceive",
+          "paragraphs": [
+            "Vasectomy is the procedure of cutting up the tubes (vas deferens) of the male reproductive system in order to prevent conception. For couples who did not want children early in their relationships, vasectomy is a common procedure. However, after a certain time, when the couple decides of conceiving, vasectomy can be reversed.",
+            "However, it is noteworthy that the success of Vasectomy Reversal has a direct correlation with the amount of time that has passed since the vasectomy was performed.",
+            "What the procedure does is that it reconnects each of the tubes that carries the sperm into the semen. This reversal then helps couples in conceiving through natural means as the sperms are back into the semen and can fertilise the female egg again."
+          ]
+        },
+        {
+          "heading": "Q. Is vasectomy reversal possible?",
+          "paragraphs": [
+            "Yes. It is basically tying the tubes back that were cut during Vasectomy."
+          ]
+        },
+        {
+          "heading": "Q. How long does a vasectomy reversal take?",
+          "paragraphs": [
+            "Mostly performed as an outpatient procedure under local or general anaesthesia, the procedure usually takes 3 to 4 hours of time. Recovery from the surgery is a variable factor and may be anywhere between 5 to 14 days."
+          ]
+        },
+        {
+          "heading": "Q. What is the cost to reverse a vasectomy?",
+          "paragraphs": [
+            "Since every body is different than the other, the cost of the procedure is a subjective matter. For more information on what the reversal will cost for you, feel free to visit us anytime. Book your appointment today."
+          ]
+        },
+        {
+          "heading": "Q. How difficult is it to reverse a vasectomy?",
+          "paragraphs": [
+            "It can be quite a difficult process. Normally, it is more difficult than performing a vasectomy, which is why it performed as a microsurgery. It requires special skill, expertise, and experience."
+          ]
+        },
+        {
+          "heading": "Q. Can vasectomy reversal cause birth defects?",
+          "paragraphs": [
+            "Problems like birth defects and other complications remain at the same level as the general population as compared to the people who have had a vasectomy reversal."
+          ]
+        },
+        {
+          "heading": "Q. Does sperm count increase after vasectomy reversal?",
+          "paragraphs": [
+            "No. As a procedure, vasectomy reversal has no effect whatsoever on the sperm count of a male."
+          ]
+        },
+        {
+          "heading": "Q. Risks involved in vasectomy reversal?",
+          "paragraphs": [
+            "Risks involved in the process of vasectomy reversal includes the following:"
+          ],
+          "listItems": [
+            "Bleeding in the scrotum",
+            "Infection on the surgery site",
+            "Pain around the surgery site"
+          ]
+        }
+      ]
+    }
+  },
+  "azoospermia": {
+    "title": "Azoospermia",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/male.jpg",
+      "/assets/img/male.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Azoospermia: Understanding the Condition & Finding Hope",
+          "paragraphs": [
+            "Azoospermia is a medical condition in men where there is no sperm present in the semen. This can make natural conception difficult or impossible. But the good news is that having azoospermia doesn't mean giving up on the dream of fatherhood. At Seeds of Innocens, we specialise in diagnosing and treating male infertility conditions like azoospermia with care, compassion and advanced medical expertise."
+          ],
+          "sideImage": "/assets/img/male.jpg"
+        },
+        {
+          "heading": "What Is Azoospermia?",
+          "paragraphs": [
+            "In simple words, azoospermia means zero sperm count in the ejaculate. This condition affects around 1 in 100 men and up to 10% of men with infertility issues. Often, azoospermia doesn't cause obvious symptoms, so many men only find out about it when trying to conceive."
+          ]
+        },
+        {
+          "heading": "Types of Azoospermia",
+          "paragraphs": [
+            "There are two main types:"
+          ],
+          "listItems": [
+            "Obstructive Azoospermia: In this type, the body produces sperm, but a blockage prevents the sperm from getting into the semen. Common causes include: Prior surgeries, Infections, Vasectomy, Congenital absence of the vas deferens (a condition some men are born with)",
+            "Non-Obstructive Azoospermia: Here, the problem lies in poor or no sperm production by the testicles. This can be due to: Genetic disorders, Hormonal imbalances, Undescended testicles, Exposure to radiation or chemotherapy, Certain medical conditions or medications"
+          ]
+        },
+        {
+          "heading": "Symptoms of Azoospermia",
+          "paragraphs": [
+            "Azoospermia typically does not have clear physical symptoms. However, some signs may include:"
+          ],
+          "listItems": [
+            "Trouble conceiving a child",
+            "Low sex drive",
+            "Erectile dysfunction",
+            "Swelling or discomfort in the testicles"
+          ]
+        },
+        {
+          "heading": "Detection and Diagnosis",
+          "paragraphs": [
+            "Because symptoms are often hidden, a semen analysis is the best way to detect it."
+          ]
+        },
+        {
+          "heading": "Diagnosis at Seeds of Innocens",
+          "paragraphs": [
+            "At Seeds of Innocens, we take a thorough and compassionate approach to diagnosis. Our team uses advanced tests to understand the root cause of azoospermia. This may include:"
+          ],
+          "listItems": [
+            "Semen Analysis: The first step to check if sperm is present.",
+            "Hormonal Tests: To check levels of FSH, LH, and testosterone.",
+            "Scrotal Ultrasound: To detect blockages or abnormalities.",
+            "Genetic Testing: For detecting inherited conditions.",
+            "Testicular Biopsy: In some cases, a sample of testicular tissue is examined to look for sperm."
+          ]
+        },
+        {
+          "heading": "Treatments for Azoospermia",
+          "paragraphs": [
+            "The treatment depends on whether the azoospermia is obstructive or non-obstructive:"
+          ]
+        },
+        {
+          "heading": "1. Surgical Treatments (for Obstructive Azoospermia)",
+          "paragraphs": [
+            "If a blockage is found, it can sometimes be corrected with minor surgery. Procedures like Vasoepididymostomy or Vasovasostomy can help restore the flow of sperm."
+          ]
+        },
+        {
+          "heading": "2. Sperm Retrieval Techniques",
+          "paragraphs": [
+            "In many cases, especially with non-obstructive azoospermia, sperm can be retrieved directly from the testicles using methods like:"
+          ],
+          "listItems": [
+            "TESA (Testicular Sperm Aspiration)",
+            "TESE (Testicular Sperm Extraction)",
+            "Micro-TESE (Microsurgical TESE)"
+          ]
+        },
+        {
+          "heading": "Using Retrieved Sperm with IVF/ICSI",
+          "paragraphs": [
+            "Retrieved sperm can be used with IVF (In Vitro Fertilisation) and ICSI (Intracytoplasmic Sperm Injection) to achieve pregnancy."
+          ]
+        },
+        {
+          "heading": "3. Hormonal Therapy",
+          "paragraphs": [
+            "For hormone-related issues, medication may help balance levels and improve sperm production."
+          ]
+        },
+        {
+          "heading": "Personalized Treatment Plans",
+          "paragraphs": [
+            "At Seeds of Innocens, our fertility experts craft personalised treatment plans tailored to each couple's unique journey."
+          ]
+        },
+        {
+          "heading": "Why Choose Seeds of Innocens?",
+          "paragraphs": [
+            "We understand the emotional toll infertility can take on couples. That's why we combine clinical excellence with empathetic care. With advanced diagnostics, state-of-the-art labs, and experienced specialists, Seeds of Innocens is one of India's trusted names in fertility treatment. Our goal is simple: to help you build your dream family."
+          ]
+        }
+      ]
+    }
+  },
+  "non-obstructive-azoospermia": {
+    "title": "Non-Obstructive Azoospermia",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/male.jpg",
+      "/assets/img/male.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Non-Obstructive Azoospermia",
+          "paragraphs": [
+            "Non-obstructive Azoospermia (NOA) is the most severe form of male infertility in which no sperms are found in the ejaculate due to the failure of spermatogenesis. In simple words, sperm production is impaired."
+          ],
+          "sideImage": "/assets/img/Non-Obstructive Azoospermia.jpg"
+        },
+        {
+          "heading": "Causes of Non-Obstructive Azoospermia",
+          "paragraphs": [
+            "The main causes of failure of spermatogenesis are inadequate gonadotropin production or intrinsic testicular impairment. This failure which leads to NOA, is caused due to numerous factors, including:"
+          ],
+          "listItems": [
+            "Genetics (like Y chromosome deletion)",
+            "Medication",
+            "Hormonal imbalance",
+            "Radiations and toxins",
+            "Maturation arrest",
+            "Infections",
+            "Karyotype abnormality"
+          ]
+        },
+        {
+          "heading": "Treatment for Non-Obstructive Azoospermia",
+          "paragraphs": [
+            "Thanks to the advancement in techniques and medical procedures, men with NOA may experience the return of sperms in their semen. For some men, pockets of sperm production can be identified in their testicles."
+          ]
+        },
+        {
+          "heading": "Seeds of Innocens Expertise",
+          "paragraphs": [
+            "A physical exam is a key component of diagnosing NOA. SOI has expertise and tools to diagnose NOA and to tailor your treatment accordingly. The team of SOI has been helping men with NOA achieve biologic fatherhood."
+          ]
+        }
+      ]
+    }
+  },
+  "obstructive-azoospermia": {
+    "title": "Obstructive Azoospermia",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/male.jpg",
+      "/assets/img/male.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Obstructive Azoospermia",
+          "paragraphs": [
+            "It is a condition where there is a blockage of the male reproductive tract, leading to a complete absence of sperm in the ejaculate. In obstructive azoospermia, optimal quality of sperms are present in the proximal epididymis but in very poor quality in the distal segments. It is not a very common condition as it is found in less than 1% of all men but in 10-15% of infertile men.",
+            "At seeds of Innocens, we examine the various causes of obstructive azoospermia, and the suitable treatment is then decided."
+          ],
+          "sideImage": "/assets/img/Obstructive Azoospermia.png"
+        },
+        {
+          "heading": "Causes of Obstructive Azoospermia",
+          "paragraphs": [
+            "Obstructive azoospermia may result from epididymal (the coiled tube on the back of each testicle), vasal (the tube that transport sperms), or ejaculatory duct (the tube from which sperm exit in the urethra) pathology. The causes may include:"
+          ],
+          "listItems": [
+            "Blockages due to trauma or infection",
+            "Sexually transmitted diseases (STD)",
+            "Hernia Surgery",
+            "Scar Tissue",
+            "Cystic fibrosis",
+            "Dysfunction in the process of ejaculation"
+          ]
+        },
+        {
+          "heading": "Treatment for Obstructive Azoospermia",
+          "paragraphs": [
+            "The management of obstructive azoospermia depends on its cause, and it also takes account of any existing female infertility factors. Generally, males with this type of infertility can be treated with surgical correction of the obstruction or by retrieving sperms directly from epididymis or testis, which is then followed by IVF-ICSI."
+          ]
+        },
+        {
+          "heading": "How Seeds of Innocens can Help",
+          "paragraphs": [
+            "At Seeds of Innocens, we examine the various causes of obstructive azoospermia, and the suitable treatment is then decided. At our center, we provide both microsurgical vasal reconstruction and sperm retrieval, paired with IVF to males facing infertility issues."
+          ]
+        }
+      ]
+    }
+  },
+  "oligospermia": {
+    "title": "Oligospermia",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/male.jpg",
+      "/assets/img/male.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Oligospermia",
+          "paragraphs": [
+            "Oligospermia is a condition in which a male produces anything under 15 million sperms. In the absence of this condition, a fertile man produces anywhere from 15 million to over 200 million sperm per millilitre of semen. The low sperm count reduces the possibility of conceiving of your partner.",
+            "There can be a number of oligospermia causes, but you'll be relieved to know that Seeds of Innocens promises high-quality oligospermia treatment. Our team of fertility specialists will also give you detailed information about what is oligospermia, relation between oligospermia and azoospermia, risks centred around severe oligospermia, etc."
+          ],
+          "sideImage": "/assets/img/Oligospermia.jpg"
+        },
+        {
+          "heading": "Causes of Oligospermia",
+          "paragraphs": [
+            "A number of causes have been found to be associated with oligospermia. These causes can range from medical to lifestyle. Some of the common cause of oligospermia are:"
+          ],
+          "listItems": [
+            "Chronic or long-term emotional stress",
+            "Recreational drugs",
+            "Anabolic steroid use",
+            "Genetic condition or inherited disorder",
+            "Hormone imbalance",
+            "Undescended testicles",
+            "Infections that interfere with sperm production",
+            "Radiations",
+            "Poor general health",
+            "Testicular factors",
+            "Immunology problems",
+            "Medical issues like multiple sclerosis, diabetes, etc."
+          ]
+        },
+        {
+          "heading": "Treatment of Oligospermia",
+          "paragraphs": [
+            "Oligospermia can be a result of various factors, and assisted reproductive treatment is often employed to improve fertility. Treatment may range from lifestyle changes to hormonal (antioxidant/ medication) and surgical methods (varicocele, microsurgery, etc.)."
+          ]
+        },
+        {
+          "heading": "Seeds of Innocens Expertise",
+          "paragraphs": [
+            "Based on the cause of oligospermia, Seeds of Innocens determine the course of treatment suitable for the individual suffering from this medical condition. You can book an appointment with us to discuss the problem and know the best suitable treatment."
+          ]
+        }
+      ]
+    }
+  },
+  "blocked-seminiferous-tubules": {
+    "title": "Blocked Seminiferous Tubules",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/male.jpg",
+      "/assets/img/male.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Blocked Seminiferous Tubules",
+          "paragraphs": [
+            "Blocked Seminiferous Tubules, also known as Vas deferens, produces, maintains, and stores the sperms. They are long and muscular in structure and travel from the epididymis into the pelvic cavity. These tubules consist of columnar Sertoli cells surrounded by spermatogenic cells.",
+            "Located within the testes, these Sertoli cells act as the nutrient bank for the immature sperm cells. They support and nourish the sperm cells until they are mature and prepared for ejaculation."
+          ],
+          "sideImage": "/assets/img/Blocked Seminiferous Tubules.jpg"
+        },
+        {
+          "heading": "Blocked Seminiferous Tubules Causes",
+          "paragraphs": [
+            "The reason for blocked seminiferous tubules include:"
+          ],
+          "listItems": [
+            "Infections: Seminiferous Tubules are prone to infections. The infections can be sexually transmitted or occur naturally due to bacteria. If the infection is left untreated, it can lead to permanent blockage of the tubules.",
+            "Tumor: Tumor of the vas deferens or other adjacent organs can compress the seminiferous tubules causing blockage of sperms. In other cases, trauma or injury from surgery can also result in fewer sperms.",
+            "Inflammation: Inflammation is another reason for blocked seminiferous tubules. Inflammation may be caused by a variety of pathogenic bacteria causing severe obstruction of the seminiferous tubules.",
+            "Rare Genetic Conditions: Genetic conditions can also block seminiferous tubules. Congenital abnormalities can lead to functional and structural anomalies in the seminiferous tubules or vas deferens, resulting in less semen and azoospermia or infertility."
+          ]
+        },
+        {
+          "heading": "SOI Expertise",
+          "paragraphs": [
+            "There are a lot of indications for blocked ejaculatory ducts and blocked seminiferous tubules. A semen analysis can help identify them better than any other exam. Blocked Seminiferous Tubules does not mean infertility is untreatable.",
+            "With the right diagnosis and treatment, it is possible to correct the problem. Contact SOI today for more information on treatment options or schedule an appointment to consult with our experts."
+          ]
+        }
+      ]
+    }
+  },
+  "endocrinological-disorder-in-men": {
+    "title": "Endocrinological Disorder in Men",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/male.jpg",
+      "/assets/img/male.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Endocrinological Disorder in Men",
+          "paragraphs": [
+            "The endocrine system consists of glands that regulate our growth, metabolism, and sexual development. In men, the endocrine glands release the sex hormones estrogen and testosterone.",
+            "And sexual dysfunction is an indication of serious Endocrinological Disorder. Low sexual desire and reduction in ejaculate volume are associated with less than normal testosterone levels in men.",
+            "Book an appointment at Seeds of Innocence to discover crucial facts about what is testosterone hormone, how to increase testosterone, impact of low testosterone in men, and so on. Get tested for low testosterone levels in men and also for other endocrinological disorders."
+          ],
+          "sideImage": "/assets/img/Endocrinological Disorder.jpg"
+        },
+        {
+          "heading": "Endocrinological Disorder Causes",
+          "paragraphs": [
+            "The endocrine system in our body has a natural feedback system that helps maintain hormonal balance. However, in cases where the feedback system fails to alert the specific glands, the body's bloodstream doesn't get the desired level of hormones, which leads to Endocrinological disorders.",
+            "In other cases, endocrinological disorders may be caused by:"
+          ],
+          "listItems": [
+            "Disease",
+            "Genetic disorder such as multiple endocrine neoplasias (MEN)",
+            "Infection, injury, or tumor",
+            "Failure of one gland to stimulate another gland for hormone production."
+          ]
+        },
+        {
+          "heading": "Types of Endocrinological Disorders",
+          "paragraphs": [
+            "Endocrinological disorders can be categorized into two groups:"
+          ],
+          "listItems": [
+            "Endocrinological disorders from hormonal imbalance.",
+            "Endocrinological disorders development of lesions such as tumors, nodules, etc."
+          ]
+        },
+        {
+          "heading": "Testosterone Imbalance And Sexual Health",
+          "paragraphs": [
+            "Testosterones is a major sex hormone, and its imbalance can cause multiple complications including:"
+          ],
+          "listItems": [
+            "Weak development of penis and testes",
+            "Poor muscle size and strength",
+            "Low sex drive",
+            "Low sperm production",
+            "Slow or abnormal puberty in boys"
+          ]
+        },
+        {
+          "heading": "SOI Expertise",
+          "paragraphs": [
+            "At SOI, we offer comprehensive treatment for correcting hormonal imbalances and endocrine disorders. Get in touch with our experts at SOI to learn more about treatment plans that restore your testosterone levels at your best levels again."
+          ]
+        }
+      ]
+    }
+  },
+  "retrograde-ejaculation": {
+    "title": "Retrograde Ejaculation",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/male.jpg",
+      "/assets/img/male.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is Retrograde Ejaculation?",
+          "paragraphs": [
+            "Retrograde ejaculation is the condition where the semen travels backwards into the bladder. In normal cases, ejaculation sends semen forward towards the tip of the penis. However, when the muscle that shut the bladder does not function normally, it gives rise to this condition. It is a relatively uncommon cause of infertility; nonetheless it is treatable.",
+            "Our team of specialists will assess your health and symptoms to analyse, where the problem lies. Once the condition is evaluated properly, the course of treatment is decided."
+          ],
+          "sideImage": "/assets/img/male.jpg"
+        },
+        {
+          "heading": "Causes of Retrograde Ejaculation",
+          "paragraphs": [
+            "The causes of retrograde ejaculation are generally related to the medical condition and health of an individual. Some of the common causes include:"
+          ],
+          "listItems": [
+            "Medication: Certain medications can affect the normal functioning of the bladder neck muscle, leading to retrograde ejaculation.",
+            "Congenital condition: Some men are born with conditions that affect the bladder neck muscle, making retrograde ejaculation more likely.",
+            "Injury: Trauma or injury to the nerves that control ejaculation can cause this condition.",
+            "Surgery: Surgical procedures, especially those involving the prostate, bladder, or surrounding areas, can sometimes result in retrograde ejaculation."
+          ]
+        },
+        {
+          "heading": "Treatment of Retrograde Ejaculation",
+          "paragraphs": [
+            "The treatment of retrograde ejaculation depends on the underlying causes. Sometimes, medication may allow the man to ejaculate enough semen. However, if the medication doesn't work then in most of the cases, assisted reproductive technology is used to get the partner pregnant. In some cases, more advanced assisted reproductive technology may be required."
+          ]
+        },
+        {
+          "heading": "Seeds of Innocens Expertise",
+          "paragraphs": [
+            "Our team of specialists will assess your health and symptoms to analyse, where the problem lies. Once the condition is evaluated properly, the course of treatment is decided. Generally, our specialists treat the condition with IUI or IVF. However, more advanced reproductive techniques are also used in complex cases of retrograde ejaculation."
+          ]
+        }
+      ]
+    }
+  },
+  "genetic-testing": {
+    "title": "Genetic Testing",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Genetic Testing in Fertility Treatment",
+          "paragraphs": [
+            "Genetic testing plays a crucial role in modern fertility treatment, helping to identify genetic abnormalities that may affect embryo development, pregnancy outcomes, and the health of future children.",
+            "At Seeds of Innocence, we offer comprehensive genetic testing services to help couples make informed decisions about their fertility journey."
+          ],
+          "sideImage": "/assets/img/recent_post2.jpg"
+        },
+        {
+          "heading": "Types of Genetic Testing",
+          "paragraphs": [
+            "We offer various types of genetic testing:"
+          ],
+          "listItems": [
+            "Preimplantation Genetic Testing for Aneuploidy (PGT-A)",
+            "Preimplantation Genetic Testing for Monogenic Disorders (PGT-M)",
+            "Preimplantation Genetic Testing for Structural Rearrangements (PGT-SR)",
+            "Carrier Screening",
+            "Karyotyping",
+            "Microarray Analysis",
+            "HLA Matching"
+          ]
+        },
+        {
+          "heading": "Who Should Consider Genetic Testing?",
+          "paragraphs": [
+            "Genetic testing may be recommended for:"
+          ],
+          "listItems": [
+            "Couples with a history of genetic disorders",
+            "Women over 35 years of age",
+            "Couples with recurrent miscarriages",
+            "Couples with failed IVF cycles",
+            "Individuals with chromosomal abnormalities",
+            "Couples with a family history of genetic conditions"
+          ]
+        },
+        {
+          "heading": "Benefits of Genetic Testing",
+          "paragraphs": [
+            "Genetic testing offers several advantages:"
+          ],
+          "listItems": [
+            "Reduces the risk of passing genetic disorders to children",
+            "Increases IVF success rates",
+            "Reduces miscarriage rates",
+            "Helps in selecting healthy embryos",
+            "Provides peace of mind",
+            "Enables informed decision-making"
+          ]
+        },
+        {
+          "heading": "Our Genetic Testing Services",
+          "paragraphs": [
+            "At Seeds of Innocence, we provide:"
+          ],
+          "listItems": [
+            "State-of-the-art genetic testing laboratory",
+            "Experienced genetic counselors",
+            "Comprehensive pre-test counseling",
+            "Accurate and reliable results",
+            "Post-test counseling and support",
+            "Integration with IVF treatment"
+          ],
+          "bottomImage": "/assets/img/recent_post2.jpg"
+        }
+      ]
+    }
+  },
+  "genetic-factors": {
+    "title": "Genetic Factors in Infertility",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Genetic Factors",
+          "paragraphs": [
+            "There are several factors of infertility that do not relate to diseases that a female developed in her life due to infections, exposures, or other underlying conditions. In a few cases, infertility is caused due to a mix of genetic factors. These factors may be an inherited chromosome abnormality or can be a single gene defect/disorder passed from one generation to the next.",
+            "Aside from this, if there is any history of early menopause, endometriosis, or any other infertility factors in the women of your family, this also puts you at a higher risk of getting these diseases as well."
+          ]
+        },
+        {
+          "heading": "Chromosomal Abnormalities",
+          "paragraphs": [
+            "One of the most common causes of low implantation rate, embryos with chromosomal abnormalities often also have a high chance of causing a miscarriage. Even with a successful pregnancy and birth, there are chances that the child born will have a chromosomal defect like down syndrome, or infertility."
+          ]
+        },
+        {
+          "heading": "Inherited Genetic Diseases",
+          "paragraphs": [
+            "In many other cases, infertility factors are inherited genetic diseases, that may have been transferred due to abnormal or mutated genes. There are diseases that cause changes in the DNA sequence of a gene, causing lack of function or the probability of dysfunction of the gene. Most commonly, single gene disorders like cystic fibrosis and Tay Sachs, even though rare, cause a devastating effect on the family."
+          ]
+        },
+        {
+          "heading": "Getting Ahead of Genetic Factors",
+          "paragraphs": [
+            "Pre-implantation genetic diagnosis (PGD) is a simple testing of the genes of both the parents in order to identify these genetic disorders, chromosomal abnormalities, and inherited genetic diseases. This is an important step in preventing a number of things, including identification of genetic disorders, single gene mutations, and chances of miscarriages caused by chromosomal abnormalities. The genetic testing facility at SOI has the latest technology to not only detect problems like these, but also to tackle the consequences. With our technology, couples have been realizing their dream of parenthood even with all the factors that prevented them before."
+          ]
+        },
+        {
+          "heading": "Q. What genetic disorders can be detected during pregnancy?",
+          "paragraphs": [
+            "There are a number of conditions that can be detected during pregnancy."
+          ],
+          "listItems": [
+            "Down Syndrome",
+            "Trisomy 18",
+            "Trisomy 13",
+            "Spina bifida"
+          ]
+        },
+        {
+          "heading": "Q. Who has stronger genes mother or father?",
+          "paragraphs": [
+            "Several research studies have pointed out that the genes obtained from the father are often more dominant than the ones received from the mother."
+          ]
+        },
+        {
+          "heading": "Q. What genetic disorders cause miscarriage?",
+          "paragraphs": [
+            "Chromosomal abnormalities are the major cause of miscarriages in women."
+          ]
+        },
+        {
+          "heading": "Q. Is genetic testing safe during pregnancy?",
+          "paragraphs": [
+            "Yes. Not only is it safe during pregnancy, it is also an important part of making sure that the baby growing inside a mother is safe and healthy."
+          ]
+        },
+        {
+          "heading": "Q. Should I get genetic testing during pregnancy?",
+          "paragraphs": [
+            "Yes. Genetic testing is an important part of ensuring a healthy baby is delivered to a couple expecting their child. For more information on these tests, simply visit one of our centers. Book an appointment."
+          ]
+        }
+      ]
+    }
+  },
+  "pgt-a": {
+    "title": "PGT-A",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Understanding PGT-A: Preimplantation Genetic Screening for IVF Success",
+          "paragraphs": [
+            "In the IVF journey, one of the most significant steps for a successful pregnancy is choosing healthy embryos to be implanted. This is where PGT-A, or Preimplantation Genetic Testing for Aneuploidy, comes in. The PGT-A test is one of the most powerful screenings for checking chromosomal abnormalities before an embryo is implanted into the uterus. This article delves further into what PGT-A is, how it is conducted, the PGTA testing process, and its significance in IVF procedures, particularly regarding the PGTA IVF success rate.",
+            "PGTA stands for Preimplantation Genetic Testing for Aneuploidy. This screening test is usually done on embryos produced with the help of IVF to check for chromosomal abnormalities, such as an extra or missing chromosome associated with Down syndrome or some genetic disease. Using PGTA testing, doctors can identify embryos that are chromosomally normal for a healthy pregnancy."
+          ],
+          "sideImage": "/assets/img/PGT-A1.jpg"
+        },
+        {
+          "heading": "Why Should You Consider PGT-A?",
+          "paragraphs": [
+            "There are several reasons why couples should consider PGT-A testing during IVF:"
+          ],
+          "listItems": [
+            "Increased IVF Success Rate: PGT-A helps in selecting the healthiest embryos for implantation, improving the chances of a successful pregnancy.",
+            "Reduces Miscarriage Risk: By screening embryos for chromosomal abnormalities, PGT-A reduces the risk of miscarriage, which is more common when embryos have chromosomal issues.",
+            "Helps Older Women: Women over 35 have a higher risk of chromosomal abnormalities in their eggs. PGT-A offers a solution to this issue by screening embryos before implantation.",
+            "Increased Chances of a Healthy Baby: By using PGTA testing, you can significantly increase the chances of having a healthy baby, as only embryos with a normal chromosomal structure are chosen."
+          ]
+        },
+        {
+          "heading": "PGTA IVF and Its Role in Improving IVF Success Rates",
+          "paragraphs": [
+            "PGT-A is one of the factors that greatly enhance the PGTA IVF success rate. It allows doctors to screen embryos before implantation, thereby selecting the most viable ones, thus increasing the chances of successful pregnancy. This is particularly useful for women of advanced maternal age, who are likely to produce embryos with chromosomal abnormalities.",
+            "One of the most important advantages of PGTA IVF is that it reduces the risk of miscarriage. In traditional IVF, even when embryos are healthy, some do not implant because of chromosomal issues. However, with PGT-A screening, the embryos chosen for implantation are genetically healthy, which increases the chances of success."
+          ]
+        },
+        {
+          "heading": "What is the PGTA Test Cost?",
+          "paragraphs": [
+            "The PGTA test cost varies, as this may depend on the clinic or the number of embryos. In general, the PGT-A testing could range from about 25000-50000 above the general costs of the IVF procedure. Even though this seems like a very high cost, it must be realized that PGT-A can eventually save more money in the long term by avoiding repeated IVF cycles or miscarriages, which are emotional and expensive."
+          ]
+        },
+        {
+          "heading": "How Does PGTA Work in IVF?",
+          "paragraphs": [
+            "During IVF, embryos are created in a laboratory setting, where eggs and sperm are combined. Once the embryos develop to a certain stage, usually day 5 or 6, a small number of cells are removed from each embryo. These cells are then tested for chromosomal abnormalities. This process is known as PGTA testing. The best candidates for implantation are those embryos that have survived the screening and are chromosomally normal. Those having abnormal chromosomes are discarded to minimize miscarriages or failed implantations."
+          ],
+          "sideImage": "/assets/img/PGT-A2.jpg"
+        },
+        {
+          "heading": "PGTA IVF Success Rate: Is It Worth?",
+          "paragraphs": [
+            "One of the main factors in determining whether to undergo PGTA testing is the PGTA IVF success rate. Research has shown that PGT-A can raise the chance of pregnancy by up to 70% in certain instances. In women over 35 years of age, the PGTA IVF success rate can be higher, as the test is able to identify genetically normal embryos, thus reducing chromosomal abnormalities.",
+            "This could be a lifesaver for families who have been through many failed IVF cycles, PGT-A would mean that only the healthiest embryos are transferred, thereby increasing the chances of success in any IVF cycle."
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "paragraphs": [
+            "PGT-A testing can improve your IVF success rate by examining embryos for chromosomal anomalies. PGTA testing assists in selecting the best embryos to be implanted, thus bringing about a higher success rate along with a reduced risk of miscarriage. Although the PGTA test cost test may become an added expense, the benefits are worth the investment as couples would want to have a healthy and successful pregnancy."
+          ]
+        }
+      ]
+    }
+  },
+  "donor-program": {
+    "title": "Donor Program – Egg, Sperm & Embryo Donation",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2.jpg",
+      "/assets/img/recent_post2.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Donor Program: Third Party Reproduction",
+          "paragraphs": [
+            "The DONATION also known as third party reproduction is a ray of hope for childless couples who are unable to have their biological child. The donor program may vary depending on the health problems of the infertile couple, from egg donation, and sperm donation to embryo donation. Depending on the patient's need, egg, sperm or embryo may be donated. Seeds of Innocence is a trusted sperm donation centre where several infertile couples come for consultation. If you want to get a thorough understanding of the sperm donation process, egg donation procedure, egg donation risks, etc., book an appointment with us today!"
+          ]
+        },
+        {
+          "heading": "Egg Donation",
+          "paragraphs": [
+            "Indication For Oocyte Donation"
+          ],
+          "listItems": [
+            "Patients who have had multiple IVF or ICSI cycles and still have failed to conceive",
+            "Women after 40 years tend to have a poor ovarian reserve and low quality eggs",
+            "Older or menopausal women",
+            "Patients suffering from severe endometriosis and tuberculosis produce poor quality eggs",
+            "Women suffering from PCOS and ovarian cysts may benefit from egg donation with egg donation",
+            "Premature ovarian failure",
+            "An inherited genetic disorder"
+          ]
+        },
+        {
+          "heading": "Sperm Donation",
+          "paragraphs": [
+            "Sperm donation is an option for a couple with severe male infertility.",
+            "The donor should be over 40 years old and have his own children.",
+            "Indications For Sperm Donation"
+          ],
+          "listItems": [
+            "Obstructive Azoospermia: Congenital absence of vas deferens or vasectomy",
+            "Non-obstructive Azoospermia: primary testicular failure or secondary testicular failure due to radiation therapy or chemotherapy",
+            "Ejaculation dysfunction or if the man is carrying a genetic disorder",
+            "Severe oligospermia or abnormal seminal fluid"
+          ]
+        },
+        {
+          "heading": "Embryo Donation",
+          "paragraphs": [
+            "Embryo donation is the process by which an embryo created by the IVF procedure of a conceived patient is transferred to the uterus of a infertile woman.",
+            "Indications For Embryo Donation"
+          ],
+          "listItems": [
+            "Couples who have trouble getting pregnant with their own eggs and semen",
+            "Adverse medical-genetic prognosis",
+            "If poor quality embryos are repeatedly produced and their transfer does not lead to pregnancy"
+          ]
+        },
+        {
+          "heading": "Q. Can you donate sperm if you smoke?",
+          "paragraphs": [
+            "While there is no abstinence from smoking and drinking alcohol while donating sperm, it is a well known fact that these do affect the overall health of your sperm. If that is the case, the result of this will be quite apparent in the sperm analysis result. For more information on this, feel free to talk to one of our experts. Book your consultation today."
+          ]
+        },
+        {
+          "heading": "Q. How do I choose a sperm donor?",
+          "paragraphs": [
+            "For everything that you will need during this process, SOI will be ready to help you every step of the way. Be it choosing the donor profile or choosing your preference, feel free to get in touch with one of our experts today. Book an appointment now."
+          ]
+        },
+        {
+          "heading": "Q. How much does sperm injection cost?",
+          "paragraphs": [
+            "Every patient is different in their own way as they require a different set of procedures. For information on how much will the procedure cost you, you can get in touch with us for a consultation on your current condition."
+          ]
+        },
+        {
+          "heading": "Q. Is egg donation legal in India?",
+          "paragraphs": [
+            "As per the Indian Council of Medical Research (ICMR), egg donation is legal in India. However, the egg donor has to sign certifications of anonymity and confidentiality, giving her consent to the clinic and forsaking any rights on the donated egg."
+          ]
+        },
+        {
+          "heading": "Q. What are the side effects of donating your eggs?",
+          "paragraphs": [
+            "The side effects of egg donation may include discomfort, redness, bruising, breast tenderness, fluid retention, feeling of being full, and a temporary weight gain. However, some women show mild symptoms while for others, it may be a little difficult."
+          ]
+        },
+        {
+          "heading": "Q. What happens when you donate sperm?",
+          "paragraphs": [
+            "While donating sperm, the male is directed to deposit their specimen into a sterile container, which is then frozen cryogenically using liquid nitrogen. The sperm will then only be thawed when they will be used."
+          ]
+        },
+        {
+          "heading": "Q. How does embryo donation work?",
+          "paragraphs": [
+            "Often times in IVF cycles, it so happens that after conceiving, the couples have embryos (eggs fertillised by sperm) that are left unused. In such a case, the embryo is donated to a couple in need, thus spreading happiness in families that require it dearly."
+          ]
+        }
+      ]
+    }
+  },
+  "male-infertility-treatment-in-india": {
+    "title": "Male Infertility",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/male.jpg",
+      "/assets/img/male.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is male infertility?",
+          "paragraphs": [
+            "Infertility can concern both male and female individuals. Specifically, male infertility is a condition that affects men. It interferes with the ability of their reproductive system to impregnate a female.",
+            "If you have male infertility, it means you have repeated unprotected sexual intercourse for over a year but your female partner doesn't get pregnant.",
+            "Infertility affects 186 million people worldwide, and the male partner is the cause in about half of the cases. Some studies show that male infertility affects about 10% to 15% of males in the United States who are trying to conceive."
+          ],
+          "sideImage": "/assets/img/Male Infertility1.jpg"
+        },
+        {
+          "heading": "Is it easy to conceive?",
+          "paragraphs": [
+            "No, it isn't easy to conceive. The human species is considered a species with low reproductive capacity. A fertile and young couple, for every month of free intercourse, has only a 20-25% chance of conceiving.",
+            "Conception is a complicated process that depends on many factors in the male and female reproductive systems, including:",
+            "For the pregnancy to continue to full term (39 to 40 weeks and six days), the embryo must be healthy, and the female's hormonal environment must be adequate enough for the embryo to develop. Infertility can happen if something affects just one of these factors."
+          ],
+          "listItems": [
+            "Producing healthy male reproductive cells (sperm) and a healthy female reproductive cell (egg).",
+            "Unblocked fallopian tubes that allow sperm to reach the egg.",
+            "The sperm's ability to fertilize the egg when they meet.",
+            "The ability of the fertilized egg (embryo) to implant in the uterus."
+          ]
+        },
+        {
+          "heading": "Symptoms and Causes",
+          "paragraphs": [
+            "The primary symptom of male infertility is being unable to have a biological child. But male infertility can also lead to many psychological and emotional symptoms, including feelings of:",
+            "If you or your partner experiences any of these feelings, it's a good idea to talk to a therapist or psychiatrist.",
+            "Sometimes, male infertility can be associated with a low production of testosterone from the testicles. In this case, symptoms such as tiredness, impotence, depression, weight gain and apathy may occur. If you or your partner experiences these symptoms, talking to a urologist who specializes in male infertility or a reproductive endocrinologist can help."
+          ],
+          "listItems": [
+            "Depression.",
+            "Loss.",
+            "Grief.",
+            "Inadequacy.",
+            "Failure."
+          ]
+        },
+        {
+          "heading": "What causes male infertility?",
+          "paragraphs": [
+            "Many biological and environmental factors can cause male infertility. These include:"
+          ],
+          "listItems": [
+            "Sperm problems, including malformed sperm, low sperm count (oligospermia) and the absence of sperm in your semen (azoospermia).",
+            "Genetic disorders, including Klinefelter syndrome and myotonic dystrophy.",
+            "Some medical conditions, including diabetes, certain autoimmune diseases that attack your sperm and cystic fibrosis.",
+            "Infections, including epididymitis, orchitis and sexually transmitted infections (STIs), including gonorrhea or HIV.",
+            "Swollen veins in your testicles (varicoceles).",
+            "Cancer treatments, including chemotherapy, radiation therapy or surgical removal of your testicles (orchiectomy).",
+            "Testicular trauma.",
+            "Hormonal disorders that affect your hypothalamus or pituitary glands."
+          ]
+        },
+        {
+          "heading": "Who does male infertility affect?",
+          "paragraphs": [
+            "Any male may have infertility. But your chances of having male infertility may be higher if you:"
+          ],
+          "listItems": [
+            "Have a body mass index (BMI) greater than 25 (overweight/obesity).",
+            "Are 40 or older.",
+            "Have been exposed to radiation.",
+            "Have been exposed to environmental toxins, including lead, calcium, pesticides or mercury.",
+            "Use tobacco, marijuana or alcohol.",
+            "Take certain medications, including flutamide, spironolactone and bicalutamide.",
+            "Spend a lot of time around heat that raises the temperature of your testicles, including saunas or hot tubs. Using a wheelchair can also increase the temperature of your testicles.",
+            "Have a history of undescended testicles.",
+            "Have a history of varicoceles.",
+            "Take testosterone to treat low testosterone.",
+            "Take anabolic-androgenic steroids (AAS) or supplements containing traces of hormones to increase muscle mass."
+          ]
+        },
+        {
+          "heading": "Is healthy sperm thick or runny?",
+          "paragraphs": [
+            "Semen is the whitish-gray liquid that releases from a penis upon orgasm (ejaculation). Semen contains sperm, as well as fluids that help deposit sperm toward the back of the vagina, and proteins, vitamins and minerals that help nourish the sperm.",
+            "Typically, semen is thick and sticky. Runny or watery semen may indicate a low sperm count, which may cause male infertility."
+          ],
+          "bottomImage": "/assets/img/Male Infertility2.jpg"
+        },
+        {
+          "heading": "Diagnosis and Tests",
+          "paragraphs": [
+            "A primary care physician (PCP) can diagnose male infertility. Or they may refer you to a urologist who specializes in male infertility or a reproductive endocrinologist.",
+            "A PCP will perform a complete physical examination to help determine your overall health and identify any physical problems that may affect your fertility. They may also ask you and your partner questions about your sexual habits and health history, including:",
+            "The provider may order tests if the physical exam and review of your health history don't indicate any apparent cause for male infertility."
+          ],
+          "listItems": [
+            "How long have you been trying to get your partner pregnant?",
+            "Have you gotten a partner pregnant in the past?",
+            "Have you ever tested positive for an STI? If so, which STI and when?",
+            "Have you ever received treatment for an STI?",
+            "Have you used birth control (contraceptives)? If so, which one(s) and when?",
+            "Has a provider diagnosed any of your biological family members with male infertility?",
+            "Do you smoke, drink alcohol or use recreational/nonprescription drugs?",
+            "Which medications do you take?"
+          ]
+        },
+        {
+          "heading": "What tests will be done to diagnose male infertility?",
+          "paragraphs": [
+            "A semen analysis is one of the primary tests healthcare providers use to help diagnose male infertility. It's a lab test of a semen sample that examines the volume and quality of your sperm.",
+            "Other tests that a provider may order to help identify or rule out the cause of male infertility may include:"
+          ],
+          "listItems": [
+            "Imaging tests. These may include noninvasive tests, such as an ultrasound or magnetic resonance imaging (MRI), or invasive tests such as a venogram.",
+            "Blood tests. Blood tests can measure your hormone levels and look for abnormalities with your genes or chromosomes.",
+            "Urinalysis (urine test). A urine (pee) test can help diagnose STIs and diabetes.",
+            "Testicular biopsy. A provider will remove a small amount of testicular tissue to determine how well your testicles produce sperm."
+          ]
+        },
+        {
+          "heading": "Management and Treatment",
+          "paragraphs": [
+            "Yes, many different treatment options can reverse male infertility. Depending on the cause, your treatment may include:"
+          ]
+        },
+        {
+          "heading": "Lifestyle changes",
+          "paragraphs": [
+            "You may be able to increase the production of healthy sperm by making certain lifestyle changes, including:"
+          ],
+          "listItems": [
+            "Maintaining a healthy weight for you.",
+            "Eating more fruits and vegetables.",
+            "Engaging in regular physical activity, including walking, jogging, bicycling, dancing or lifting weights.",
+            "Managing stress.",
+            "Stopping smoking, drinking and using recreational/nonprescription drugs.",
+            "Avoiding the use of sexual lubricants (lube) during sexual intercourse."
+          ]
+        },
+        {
+          "heading": "Medications",
+          "paragraphs": [
+            "Hormone therapy can regulate hormone levels that are too high or low and affect your sperm quality. You may also need to stop using, or find alternatives to, certain medications, including:"
+          ],
+          "listItems": [
+            "Tricyclic antidepressants.",
+            "Calcium channel blockers.",
+            "Anti-androgens."
+          ]
+        },
+        {
+          "heading": "Surgery",
+          "paragraphs": [
+            "Surgical treatments may include:"
+          ],
+          "listItems": [
+            "Vasectomy reversal. If you had a vasectomy to prevent sperm from entering your semen, a vasectomy reversal reconnects your vas deferens to make pregnancy possible again.",
+            "Vasoepididymostomy. This surgery removes a blockage in your epididymis (the coiled tube that lies against your testicle where sperm mature) that prevents sperm from entering your semen.",
+            "Sperm retrieval. A healthcare provider will perform a biopsy to retrieve sperm from your testicles or epididymis.",
+            "Varicocelectomy. Varicocele is a condition in which there's pooling of blood in the testicles due to varicose veins in the scrotum. It may have a negative effect on sperm quality. Surgery removes varicose veins, and this can increase the chance of pregnancy, in some cases."
+          ]
+        },
+        {
+          "heading": "Assisted reproductive technology",
+          "paragraphs": [
+            "Assisted reproductive technology (ART) procedures involve removing an egg from your partner's ovaries and combining it with your sperm in a lab."
+          ],
+          "listItems": [
+            "Intracytoplasmic sperm injection (ICSI). During ICSI, a provider physically injects a single sperm cell into an egg.",
+            "In vitro fertilization (IVF). During the IVF process, a provider will inject your partner with fertility medications that cause multiple eggs to mature in your partner's ovaries. A provider will collect the eggs when they're ready and expose them to sperm in a lab. After a sperm cell fertilizes the egg, a provider will place the fertilized egg (embryo) inside a uterus."
+          ]
+        }
+      ]
+    }
+  },
+  "chorionic-villus-sampling-cvs": {
+    "title": "Chorionic Villus Sampling (CVS)",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Chorionic Villus Sampling (CVS): A Vital Prenatal Test",
+          "paragraphs": [
+            "When expecting a baby, ensuring the health and well-being of the child is a top priority for parents. One of the most advanced prenatal tests available today is Chorionic Villus Sampling (CVS), which helps detect genetic disorders early in pregnancy. This procedure provides crucial information about the baby's genetic makeup, enabling parents and doctors to make informed decisions about pregnancy management."
+          ],
+          "sideImage": "/assets/img/Chorionic Villus Sampling (CVS).webp"
+        },
+        {
+          "heading": "What is Chorionic Villus Sampling (CVS)?",
+          "paragraphs": [
+            "Chorionic Villus Sampling (CVS) is a prenatal test performed during the first trimester to diagnose genetic conditions in a developing baby. It involves taking a small tissue sample from the placenta, which contains the same genetic material as the fetus. The test helps identify chromosomal abnormalities like Down syndrome, cystic fibrosis, and other inherited disorders."
+          ]
+        },
+        {
+          "heading": "Why is CVS Done?",
+          "paragraphs": [
+            "CVS is recommended in the following situations:"
+          ],
+          "listItems": [
+            "The mother is 35 years or older, increasing the risk of chromosomal disorders.",
+            "There is a family history of genetic diseases.",
+            "Abnormal results are found in initial pregnancy screenings.",
+            "Either parent is a known carrier of a genetic condition."
+          ]
+        },
+        {
+          "heading": "When is CVS Performed?",
+          "paragraphs": [
+            "CVS is usually done between 10 to 13 weeks of pregnancy, earlier than other prenatal tests like amniocentesis. This early detection allows parents to explore medical options sooner if any abnormalities are detected."
+          ]
+        },
+        {
+          "heading": "Types of CVS Procedures",
+          "paragraphs": [
+            "There are two main types of CVS procedures:"
+          ],
+          "listItems": [
+            "Transcervical CVS – A thin tube is inserted through the cervix to collect a sample of chorionic villi from the placenta.",
+            "Transabdominal CVS – A thin needle is inserted through the abdomen to retrieve a sample from the placenta."
+          ]
+        },
+        {
+          "heading": "Choosing the Right Procedure",
+          "paragraphs": [
+            "The choice of procedure depends on factors like the placenta's position and the mother's health."
+          ]
+        },
+        {
+          "heading": "How is the CVS Test Performed?",
+          "paragraphs": [
+            "The CVS procedure involves several steps:"
+          ],
+          "listItems": [
+            "Preparation: The doctor may perform an ultrasound to locate the placenta and guide the procedure.",
+            "Sample Collection: Depending on the type of CVS, a small tissue sample is extracted from the placenta.",
+            "Laboratory Testing: The sample is analyzed for genetic and chromosomal abnormalities.",
+            "Results & Consultation: Results are typically available within one to two weeks. A genetic counsellor will explain the findings and discuss the next steps."
+          ]
+        },
+        {
+          "heading": "Risks & Considerations",
+          "paragraphs": [
+            "While CVS is generally safe, there are some considerations:"
+          ],
+          "listItems": [
+            "Slight risk of miscarriage (less than 1%).",
+            "Infection, though very rare.",
+            "Cramping or mild discomfort after the procedure."
+          ]
+        },
+        {
+          "heading": "Safety and Expertise",
+          "paragraphs": [
+            "However, with experienced doctors and advanced techniques, CVS is generally safe and provides valuable insights into the baby's health."
+          ]
+        },
+        {
+          "heading": "CVS vs. Amniocentesis",
+          "paragraphs": [
+            "Many parents wonder how Chorionic Villus Sampling (CVS) compares to amniocentesis. While both tests check for genetic disorders, key differences include:"
+          ],
+          "listItems": [
+            "Timing: CVS is done between 10-13 weeks, while amniocentesis is performed after 15 weeks.",
+            "Sample Source: CVS takes placental tissue, while amniocentesis uses amniotic fluid.",
+            "Risk Level: Both carry a small risk of miscarriage, but CVS allows for earlier detection and decision-making."
+          ]
+        },
+        {
+          "heading": "Couple Career Screening and CVS",
+          "paragraphs": [
+            "In some cases, couples may undergo Couple Career Screening before pregnancy to determine if they carry genes for inherited disorders. If both partners are carriers of a genetic condition, a Chorionic Villus Sampling (CVS) test can confirm whether the baby has inherited the condition. This combined approach provides comprehensive genetic information, helping parents make informed reproductive choices."
+          ]
+        }
+      ]
+    }
+  },
+  "couple-carrier-screening": {
+    "title": "Couple Carrier Screening",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Couple Carrier Screening: Ensuring a Healthy Future",
+          "paragraphs": [
+            "Planning a family is very exciting but does not come easy. One of the most critical steps that the couple can make before conception is Carrier Screening, which is also known as a genetic test, identifying whether or not prospective parents carry genes that can cause conditions inherited in them and affect the health of the child. Given the advancements in reproductive genetics, screening has become an important part of family planning; this makes it possible for couples to make informed decisions and reduce the risk of genetic disorders to their offspring."
+          ],
+          "sideImage": "/assets/img/Couple Carrier Screening.webp"
+        },
+        {
+          "heading": "What is Couple Carrier Screening?",
+          "paragraphs": [
+            "Carrier screening is the genetic test developed to detect mutations in genes causing inherited disorders. Though many people are the carriers of genetic conditions without showing any symptoms, it occurs that they would carry a mutation within the same gene when both partners of a couple are the carriers.",
+            "This screening helps in identifying conditions such as:"
+          ],
+          "listItems": [
+            "Cystic fibrosis",
+            "Sickle cell anemia",
+            "Tay-Sachs disease",
+            "Thalassemia",
+            "Spinal muscular atrophy"
+          ]
+        },
+        {
+          "heading": "Benefits of Screening",
+          "paragraphs": [
+            "By undergoing this test, couples can determine their risk of having a child affected by a genetic disorder and explore reproductive options to ensure a healthy pregnancy."
+          ]
+        },
+        {
+          "heading": "Who Should Consider Couple Carrier Screening?",
+          "paragraphs": [
+            "While Couple Carrier Screening is beneficial for all couples, it is especially recommended for:"
+          ],
+          "listItems": [
+            "Couples with a family history of genetic disorders.",
+            "Couples undergoing assisted reproductive technologies like IVF",
+            "Those who have repeated miscarriages."
+          ]
+        },
+        {
+          "heading": "Early Screening Benefits",
+          "paragraphs": [
+            "Early screening helps couples to be proactive towards a successful and healthy pregnancy."
+          ]
+        },
+        {
+          "heading": "How is Couple Carrier Screening Done?",
+          "paragraphs": [
+            "The screening process is simple and involves:"
+          ],
+          "listItems": [
+            "Sample Collection: A blood or saliva sample is drawn from both partners.",
+            "Genetic Testing: The test sample is forwarded to the laboratory to identify any gene mutations through genetic testing.",
+            "Results & Counselling – A genetic counsellor interprets results and discusses risk and reproductive choices."
+          ]
+        },
+        {
+          "heading": "Reproductive Options",
+          "paragraphs": [
+            "If the couple is both carriers of the same genetic disorder, they may consider preimplantation genetic diagnosis during IVF, a donor egg or sperm, or other assisted reproductive techniques to prevent passing the disorder to their child."
+          ]
+        },
+        {
+          "heading": "Couple Carrier Screening Test Cost",
+          "paragraphs": [
+            "The Couple Carrier Screening test cost varies based on the number of conditions screened, the types of tests, and the clinic or laboratory performing the analysis. In India, it usually lies in the range from ₹10,000 to ₹50,000. Complete panels can involve more than one condition and hence may be more expensive but offer a very detailed risk assessment.",
+            "Seeds of Innocens provides the latest Couple Carrier Screening at competitive prices. This ensures that couples get the most accurate and reliable results for planning their family."
+          ]
+        },
+        {
+          "heading": "Finding a Carrier Screening Test Near Me",
+          "paragraphs": [
+            "If you seek to obtain a Carrier Screening test near me, it is true to look for a reliable fertility clinic or genetic testing centre. Seeds of Innocens offers professional genetic screening services with expert consultancy. Our advanced facilities for genetic testing along with skilled counsellors ensure you get the best advice at each step on your way through reproductive life."
+          ]
+        },
+        {
+          "heading": "Benefits of Couple Carrier Screening",
+          "paragraphs": [
+            "Couple Carrier Screening offers numerous advantages:"
+          ],
+          "listItems": [
+            "Informed Decision-Making – Knowing your genetic status helps you make informed choices about pregnancy.",
+            "Reduced Risk of Genetic Disorders – Couples can take preventive measures if they are at risk.",
+            "Personalized Reproductive Options – Offers alternatives like PGD, donor eggs, or sperm.",
+            "Peace of Mind – Reduces uncertainty and enhances confidence in pregnancy planning."
+          ]
+        }
+      ]
+    }
+  },
+  "pgt-m": {
+    "title": "PGT-M",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Understanding PGT-M: Preimplantation Genetic Testing at Seeds of Innocens",
+          "paragraphs": [
+            "Genetic health plays a significant role in preparation for a healthy pregnancy. One of the advanced ways of doing this is PGT-M, (Preimplantation Genetic Testing for Monogenic Disorders). This test will enable the identification of embryos that carry certain genetic disorders before they are implanted in an IVF cycle. Therefore, to make an informed decision, it is necessary to understand what PGT-M testing involves, how it is conducted, and its benefits. This will also include relevant information about the success rate of PGT-M, the cost of testing for PGT-M, and how it differs from PGT-A."
+          ],
+          "sideImage": "/assets/img/PGT-M1.webp"
+        },
+        {
+          "heading": "What is PGT-M Testing?",
+          "paragraphs": [
+            "Preimplantation genetic testing for monogenic disorders is a terminology referred to as PGT-M, which means the screening process involving genetics to detect single-gene disorders among embryos. Such conditions include cystic fibrosis, sickle cell anemia, Huntington's disease, and others. This technique allows embryos that are carrying genetic defects to be identified through testing, and only those not suffering from the defect can be transferred with the process of IVF.",
+            "This testing particularly benefits the couples that come with a family history of genetic disorders. This would reduce their anxiety level since it reduces the chance of inherited disorders being transmitted to the child, providing peace of mind to the couple."
+          ]
+        },
+        {
+          "heading": "Comparing PGT-A vs. PGT-M",
+          "paragraphs": [
+            "Many couples wonder about the difference between PGT-A vs. PGT-M and which test is more suitable for their needs:"
+          ],
+          "listItems": [
+            "PGT-A screens for chromosomal abnormalities, while PGT-M screens for specific genetic mutations.",
+            "PGT-A focuses on overall embryo health, while PGT-M focuses on preventing genetic disorders.",
+            "PGT-A is recommended for older women or recurrent miscarriages, while PGT-M is recommended for couples with known genetic disorders."
+          ]
+        },
+        {
+          "heading": "PGT-M Testing Process at Seeds of Innocens",
+          "paragraphs": [
+            "For couples searching for a \"PGT-M test near me,\" At Seeds of Innocens, our advanced testing processes ensure accuracy and care at every step, helping families achieve their dream of healthy parenthood."
+          ]
+        },
+        {
+          "heading": "Why Consider PGT-M?",
+          "paragraphs": [
+            "PGT-M offers several benefits:"
+          ],
+          "listItems": [
+            "Prevention of Genetic Disorders: By identifying and avoiding embryos with genetic mutations, PGT-M reduces the risk of inherited conditions.",
+            "Increased IVF Success: Although primarily used for genetic screening, PGT-M indirectly boosts the chances of successful pregnancy by focusing on healthy embryos.",
+            "Peace of Mind: For families with genetic conditions, PGT-M ensures a healthy start for their child."
+          ]
+        },
+        {
+          "heading": "Where Can I Find PGT-M Testing Near Me?",
+          "paragraphs": [
+            "If you are looking for a trustworthy PGT-M test near me, Seeds of Innocens is here to assist. State-of-the-art laboratories and experienced genetic counselors guide you through this journey personally. With an exceptional reputation for excellence and care, Seeds of Innocence is the name in fertility treatments."
+          ]
+        },
+        {
+          "heading": "PGT-M Success Rate and How It Helps",
+          "paragraphs": [
+            "The PGT-M success rate depends on several factors such as the couple's genetic background, the quality of their embryos, and the effectiveness of the IVF overall. On average, by selecting embryos free from monogenic disorders, PGT-M significantly increases the likelihood of a successful and healthy pregnancy.",
+            "We have seen countless success stories where PGT-M helped families overcome genetic challenges and welcomed healthy babies into their lives at Seeds of Innocens."
+          ]
+        },
+        {
+          "heading": "How Does PGT-M Work?",
+          "paragraphs": [
+            "The PGT-M test involves a detailed process:"
+          ],
+          "listItems": [
+            "IVF Cycle: Embryos are created in a lab through IVF, combining the egg and sperm.",
+            "Embryo Biopsy: A small sample of cells is taken from each embryo once they reach the blastocyst stage (day 5 or 6 of development).",
+            "Genetic Analysis: These cells are tested for specific gene mutations linked to monogenic disorders.",
+            "Embryo Selection: Embryos free of the targeted genetic mutations are selected for implantation."
+          ],
+          "sideImage": "/assets/img/PGT-M2.jpg"
+        },
+        {
+          "heading": "Choosing Between PGT-A and PGT-M",
+          "paragraphs": [
+            "Both tests play a key role in IVF, but they serve different purposes. Discuss with a genetic counselor at Seeds of Innocence to know which is appropriate for your family."
+          ]
+        },
+        {
+          "heading": "PGT-M Testing Cost in India",
+          "paragraphs": [
+            "One of the most frequently asked questions we hear is, \"What is the PGT-M testing cost in India?\" The cost is different based on the number of embryos that are tested and the complexity of the genetic disorder that needs to be screened. On average, the cost ranges between ₹50,000 and ₹1,50,000.",
+            "We ensure at Seeds of Innocence that the pricing, as well as financing options, are so transparent that this essential service can reach more families. For this reason, investing in PGT-M is an investment in your child's future health and happiness."
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "paragraphs": [
+            "PGT-M is an essential tool for families wanting to avoid genetic disorders and ensure the health of their children. It increases the success rate of IVF and gives hope to parents with the screening of embryos from monogenic conditions.",
+            "We have pledged to provide the best and most innovative fertility solutions, like PGT-M, with care and counseling in Seeds of Innocence. If you are interested in doing a PGT-M test, we are here for you. Contact us today, and let's begin to welcome that healthy and happy family you've always wanted."
+          ]
+        }
+      ]
+    }
+  },
+  "difference-between-pgt-a-and-pgt-m": {
+    "title": "Difference between PGT A & PGT-M/SR",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Pre-implantation Genetic Testing & PGT A, PGT-M",
+          "paragraphs": [
+            "Pre-implantation genetic testing is detection of genetic information in an embryo made by examining a few cells which are representative of the whole embryo, at the pre-implantation stage of development. Previously it was called as PGS (pre-implantation genetic screening) & PGD (pre-implantation genetic diagnosis), which are now replaced by the terms PGT-A (PGT for aneuploidies) & PGT-M & PGT-SR (PGT for monogenic disorders & structural rearrangement) respectively."
+          ],
+          "sideImage": "/assets/img/PGT A & PGT-MSR.jpg"
+        },
+        {
+          "heading": "Difference between PGT A & PGT-M/SR",
+          "paragraphs": [
+            "Understanding the key differences between PGT-A and PGT-M/SR helps couples make informed decisions about their fertility treatment options."
+          ]
+        },
+        {
+          "heading": "PGT-A (Pre-implantation Genetic Testing for Aneuploidies)",
+          "paragraphs": [
+            "This is indicated when genetic parents are presumed or known to be normal chromosomally.",
+            "The embryos are screened for most of the aneuploidies for which genetic probes are available. These aneuploidies can arise de novo as both the parents are at high risk, like old age parents."
+          ],
+          "listItems": [
+            "This is done in infertile couples with recurrent implantation failure, recurrent pregnancy loss patient, old females, males more than 50 years of age or severe male factor infertility.",
+            "No preliminary work up like collection of parents' blood/ saliva is required which is required to identify the flanking markers/ genetic probes linked with mutation.",
+            "It decreases the need of invasive antenatal testing as well."
+          ]
+        },
+        {
+          "heading": "PGT-M/SR (Pre-implantation Genetic Testing for Monogenic Disorders & Structural Rearrangement)",
+          "paragraphs": [
+            "This is indicated when one or both genetic parents carry a genetic mutation or chromosomal rearrangement.",
+            "Also, whenever the disease we are looking for is known, like hereditary cancers or we are doing HLA matching.",
+            "Genetic testing is done to determine if the same genetic mutation or unbalanced chromosomal anomalies have been transmitted to the formed embryos, & therefore to decide which embryos can be transferred intra-uterine & which can't be.",
+            "The couple are usually able to conceive normally in these patients but to confirm the absence of similar disease in their child, they opt for PGT-M/SR."
+          ],
+          "listItems": [
+            "These tests require preliminary work up like collection of parents' blood / saliva, required to identify the flanking markers/ genetic probes linked with mutation."
+          ]
+        },
+        {
+          "heading": "Key Differences Summary",
+          "paragraphs": [
+            "In short, both PGT-A & PGT-M / SR differ basically in the indication for which they are done & the work up required for them also differs slightly. The genetic testing is done on the cells removed from the embryos which we get after IVF & reach day 5 stage. The best embryos which are normal chromosomally are transferred in to the patient once the endometrial lining is ready. This gives the best chance to the patient to have a successful & healthy pregnancy, decreased chance of miscarriages/ aneuploid conception and a live & healthy baby."
+          ]
+        }
+      ]
+    }
+  },
+  "amniocentesis": {
+    "title": "Amniocentesis",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is Amniocentesis?",
+          "paragraphs": [
+            "A prenatal test called amniocentesis is carried out in the second trimester, usually between weeks 15 and 20 of pregnancy. Using a fine needle, a tiny amount of amniotic fluid is extracted from the womb. Fetal cells and proteins found in this fluid offer crucial details regarding the genetic well-being of the unborn child."
+          ],
+          "sideImage": "/assets/img/genetic.jpg"
+        },
+        {
+          "heading": "Why is Amniocentesis Done?",
+          "paragraphs": [
+            "This test is advised in some circumstances for the following:"
+          ],
+          "listItems": [
+            "To test chromosomal anomalies such as Down syndrome, Edwards syndrome, and Patau syndrome.",
+            "To test genetic disorder conditions like sickle cell anaemia, cystic fibrosis, or Tay-Sachs disease.",
+            "To assess neuro-tube anomalies, such as spina bifida.",
+            "This test can be used to assess fetal lung maturity in high-risk conditions.",
+            "Confirming infection or Rh incompatibility problems."
+          ]
+        },
+        {
+          "heading": "Expert Care at Seeds of Innocens",
+          "paragraphs": [
+            "At Seeds of Innocens, our fetal medicine specialists will make the pregnancy test as safe and comfortable as possible, with precision."
+          ]
+        },
+        {
+          "heading": "How is Amniocentesis Performed?",
+          "paragraphs": [
+            "The procedure is simple and takes about 15 to 20 minutes."
+          ],
+          "listItems": [
+            "The ultrasound identifies the baby and the safest point for withdrawing fluid.",
+            "A thin, sterile needle is inserted gently through the abdomen into the amniotic sac.",
+            "A small sample of amniotic fluid was withdrawn for laboratory analysis.",
+            "The mother can rest during the day and return to regular activities the following day with only mild restrictions."
+          ]
+        },
+        {
+          "heading": "State-of-the-Art Laboratory",
+          "paragraphs": [
+            "Our state-of-the-art genetic testing laboratory at Seeds of Innocens ensures accurate and timely results, enabling early intervention when necessary."
+          ]
+        },
+        {
+          "heading": "Is Amniocentesis Safe?",
+          "paragraphs": [
+            "Amniocentesis is a widely performed and safe procedure when conducted by experienced professionals. While there is a small risk of complications (such as cramping or mild fluid leakage), our specialized team at Seeds of Innocens takes every precaution to minimize risks and provide comprehensive post-procedure care."
+          ]
+        },
+        {
+          "heading": "Why Choose Seeds of Innocens for Amniocentesis?",
+          "paragraphs": [
+            "At Seeds of Innocens, we are committed to providing advanced genetic testing with unmatched expertise and care. Our key advantages include:"
+          ],
+          "listItems": [
+            "Highly experienced fetal medicine specialists ensuring precision and safety.",
+            "Cutting-edge genetic testing lab for fast and accurate results.",
+            "Compassionate counselling and support throughout the process.",
+            "Personalized care plans for high-risk pregnancies based on results."
+          ]
+        },
+        {
+          "heading": "Empowering Parents with Knowledge",
+          "paragraphs": [
+            "We believe in empowering parents with knowledge and helping them make informed decisions about their pregnancy."
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "paragraphs": [
+            "At Seeds of Innocens, we are here to guide you through every step of your pregnancy. If you have concerns about your baby's health, book a consultation with our experts today. Your peace of mind starts with knowledge!",
+            "With years of experience in reproductive health and fetal medicine, Seeds of Innocens offers a comprehensive range of genetic screening tests to help parents make informed choices. Our commitment to cutting-edge technology and personalized care ensures you receive the best prenatal healthcare possible.",
+            "Our highly skilled specialists understand that each pregnancy is different. This is why we provide personalized consultation for expecting parents to know and make informed choices regarding the various options and the right testing methods available. Amniocentesis is one of many advanced diagnostic tools that we have for clarity and confidence on the part of parents.",
+            "Above all these, Seeds of Innocens offer appropriate fertility services in the form of IVF, egg donation, and surrogacy among others making us the most sought-after name in reproductive health, which has a prime quality department with the latest laboratories and the best experts to ensure that everyone gets the best results for their family.",
+            "Contact Us if you or a loved one are contemplating Amniocentesis or any other prenatal genetic test. Our professionals are ready to provide you with professional advice, compassionate care, and leading-edge medical support. We are committed to delivering world-class prenatal care and the best interest of your baby's health."
+          ]
+        }
+      ]
+    }
+  },
+  "karyotyping": {
+    "title": "Karyotyping",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Karyotyping: A Key Genetic Test for Understanding Chromosomal Health",
+          "paragraphs": [
+            "Genetic testing in diagnosing possible chromosomal aberrations that have an impact on health, fertility, and the pregnancy process should be done with utmost importance. One of them is Karyotyping, wherein a detailed picture of an individual's chromosomes is analyzed to observe genetic disorders, which is even more valuable during recurrent miscarriage, infertility, or unexplained medical conditions."
+          ],
+          "sideImage": "/assets/img/Karyotyping.jpg"
+        },
+        {
+          "heading": "What is Karyotyping?",
+          "paragraphs": [
+            "Karyotyping is a laboratory test to view a person's chromosomes. The arrangement and size as well as the shape of chromosomes are analyzed. There are 46 chromosomes in the normal human cell, occurring in 23 pairs. Such abnormal conditions either structurally or in number result in genetic diseases, infertility, and developmental defects."
+          ]
+        },
+        {
+          "heading": "Why is Karyotyping Done?",
+          "paragraphs": [
+            "Doctors advise doing a Karyotype Genetic Test for the following reasons:"
+          ],
+          "listItems": [
+            "Genetic Disorders Diagnosis: Down syndrome, Turner syndrome, and Klinefelter syndrome are some conditions that can be identified through karyotyping.",
+            "Investigating Infertility: Investigations on Infertility Karyotyping Assists to Diagnose Causes of Inability to Conceive Infertility.",
+            "Recurrent Miscarriages: A Karyotyping test for miscarriages helps identify if chromosomal issues contribute to pregnancy loss.",
+            "Unexplained developmental issues: Children with intellectual disabilities or birth defects may undergo karyotyping for a genetic diagnosis."
+          ]
+        },
+        {
+          "heading": "Karyotyping Procedure: How is the Test Performed?",
+          "paragraphs": [
+            "The process of Karyotyping Procedure would involve the following steps to analyze chromosomes effectively:"
+          ],
+          "listItems": [
+            "Sample Collection: The test requires a sample of blood, bone marrow, amniotic fluid, or placental tissue.",
+            "Cell Culture: The collected cells are grown in a special medium to induce the replication of chromosomes.",
+            "Chromosome Staining: Chromosomes are made visible under a microscope by applying a dye to them",
+            "Microscopic Analysis: A genetic specialist arranges and checks the chromosomes for abnormalities.",
+            "Report Generation: The test results are summarized into a karyotype chart that reflects any chromosomal changes."
+          ]
+        },
+        {
+          "heading": "Types of Karyotyping Tests",
+          "paragraphs": [
+            "There are different types of karyotyping tests available:"
+          ],
+          "listItems": [
+            "Conventional Karyotyping: Standard microscopic examination of chromosomes.",
+            "Fluorescence In Situ Hybridization (FISH): Uses fluorescent probes to detect specific chromosomal abnormalities.",
+            "Comparative Genomic Hybridization (CGH): Helps identify minute chromosomal imbalances."
+          ]
+        },
+        {
+          "heading": "Karyotyping Test for Miscarriages",
+          "paragraphs": [
+            "Recurrent pregnancy loss is a distressing experience for couples. A Karyotyping test for miscarriages helps determine if chromosomal abnormalities are responsible for pregnancy failures. Common findings include:"
+          ],
+          "listItems": [
+            "Aneuploidy: Presence of extra or missing chromosomes (e.g., Trisomy 21 in Down syndrome).",
+            "Structural Abnormalities: Deletions, duplications, or translocations of chromosomal material.",
+            "Parental Chromosomal Issues: Balanced translocations in parents can lead to repeated miscarriages."
+          ]
+        },
+        {
+          "heading": "Treatment and Intervention",
+          "paragraphs": [
+            "Doctors can recommend suitable interventions for future pregnancies by identifying such genetic issues."
+          ]
+        },
+        {
+          "heading": "Who Should Consider a Karyotyping Test?",
+          "paragraphs": [
+            "Karyotyping is recommended for:"
+          ],
+          "listItems": [
+            "Couples who experienced multiple recurrent miscarriages.",
+            "People suspected of having genetic syndromes.",
+            "Couples struggling with infertility.",
+            "Parents of children with developmental disorders.",
+            "Pregnant women undergoing prenatal screening."
+          ]
+        },
+        {
+          "heading": "Understanding Karyotyping Test Results",
+          "paragraphs": [
+            "Karyotyping results can show different outcomes:"
+          ],
+          "listItems": [
+            "Normal Karyotype: Shows the number of chromosomes as expected, this includes 46, XX in females and 46, XY in males.",
+            "Abnormal Karyotype: Indicates chromosomal abnormalities, which may include deletions, duplications, translocations, or aneuploidy.",
+            "Mosaicism: Some cells have different chromosomal compositions, leading to varied genetic effects."
+          ]
+        },
+        {
+          "heading": "Karyotyping Test Cost and Availability",
+          "paragraphs": [
+            "The Karyotype Genetic Test can be undertaken at specialized genetic testing centres and fertility clinics. The test ranges in price according to the type of sample collected and complexity analysis, though both the Karyotyping cost is different in country and laboratory. The test generally remains a worthy investment in diagnosing genetic disorders as well as planning future medical care."
+          ]
+        },
+        {
+          "heading": "Limitations of Karyotyping",
+          "paragraphs": [
+            "While karyotyping is a valuable diagnostic tool, it has some limitations:"
+          ],
+          "listItems": [
+            "It detects large chromosomal abnormalities but may not identify small genetic mutations.",
+            "Some conditions require additional genetic testing, such as whole genome sequencing.",
+            "The test may take 1-3 weeks to produce results due to the cell culture process."
+          ]
+        }
+      ]
+    }
+  },
+  "microarray": {
+    "title": "Microarray",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "Microarray: A Revolutionary Genetic Testing Tool",
+          "paragraphs": [
+            "Advances in genetic testing have paved the way for better diagnostics and personalised healthcare. Among these powerful tools is Microarray, a sophisticated genetic test that helps detect genetic variations linked to developmental disorders, chromosomal abnormalities, and prenatal screening. It is very valuable in pregnancy-related diagnostics and provides critical insights for expecting parents."
+          ],
+          "sideImage": "/assets/img/Microarray.jpg"
+        },
+        {
+          "heading": "What is Microarray?",
+          "paragraphs": [
+            "Microarray is a highly sensitive genetic test that simultaneously assesses thousands of DNA sequences with high resolution. It detects tiny deletions and duplications or imbalances not detected by routine tests such as karyotyping. Microarray is widely applied in prenatal diagnosis, postnatal diagnosis, and screening for genetic disorders."
+          ]
+        },
+        {
+          "heading": "Why is Microarray Testing Important?",
+          "paragraphs": [
+            "Microarray testing is recommended for various clinical scenarios, such as:"
+          ],
+          "listItems": [
+            "Prenatal Screening: Detects fetal genetic abnormalities, providing parents with vital information about their baby's health.",
+            "Unexplained Miscarriages: Helps identify chromosomal imbalances that may contribute to pregnancy loss.",
+            "Developmental disorders: They diagnose genetic disorders causing problems with growth and neurological development.",
+            "Infertility Investigations: Aids in identifying genetic factors affecting reproductive health."
+          ]
+        },
+        {
+          "heading": "Microarray Testing in Pregnancy",
+          "paragraphs": [
+            "Microarray testing has revolutionised prenatal screening by providing detailed genetic information. It is usually done when:"
+          ],
+          "listItems": [
+            "There is an abnormal ultrasound finding suggestive of possible genetic problems.",
+            "The expecting mother has had recurrent pregnancy losses or a family history of genetic disorders.",
+            "Conventional karyotyping results are inconclusive."
+          ]
+        },
+        {
+          "heading": "Microarray Test Cost",
+          "paragraphs": [
+            "The Microarray test pregnancy cost is usually determined by the laboratory and type of analysis needed. However, the test provides very valuable information that helps doctors and parents in making appropriate decisions about pregnancy management."
+          ]
+        },
+        {
+          "heading": "Microarray Testing Procedure",
+          "paragraphs": [
+            "The Microarray test is undertaken in the following steps:"
+          ],
+          "listItems": [
+            "DNA Isolation: Genomic material extracted for further testing.",
+            "Hybridization: Labelled fluorescent dye is attached with DNA and plated on a chip of microarray containing thousands of DNA probes.",
+            "Scanning and Analysis: This chip is detected for variations deletions, or duplications in the sequences of the genomic.",
+            "Generation of reports: Detailed report to the concerned doctor highlighting notable genetic findings in a case report."
+          ]
+        },
+        {
+          "heading": "Types of Microarray Testing",
+          "paragraphs": [
+            "Microarray tests are classified based on their genetic analysis approach:"
+          ],
+          "listItems": [
+            "Comparative Genomic Hybridization (CGH) Microarray: Detects copy number variations (CNVs) like deletions and duplications.",
+            "Single Nucleotide Polymorphism (SNP) Microarray: Identifies single base-pair changes that may be linked to genetic diseases.",
+            "Expression Microarray: Analyzes gene expression patterns in various conditions."
+          ]
+        },
+        {
+          "heading": "Who Should Consider a Microarray Test?",
+          "paragraphs": [
+            "Microarray testing is recommended for:"
+          ],
+          "listItems": [
+            "Pregnant women with abnormal prenatal screening results.",
+            "Couples with recurrent pregnancy losses.",
+            "Parents of children with unexplained developmental delays or birth defects.",
+            "Individuals with a family history of genetic disorders."
+          ]
+        },
+        {
+          "heading": "Microarray vs. Karyotyping: Which One is Better?",
+          "paragraphs": [
+            "Both Microarray and Karyotyping are valuable genetic tests, but they serve different purposes:"
+          ]
+        },
+        {
+          "heading": "Key Differences",
+          "paragraphs": [
+            "Resolution: Microarray has higher resolution and detects small genetic changes, while Karyotyping has lower resolution and detects only large abnormalities.",
+            "Detection: Microarray finds deletions, duplications, and CNVs, while Karyotyping identifies numerical and structural chromosomal abnormalities.",
+            "Application: Microarray is ideal for prenatal and postnatal screening, while Karyotyping is a traditional method for chromosomal analysis."
+          ]
+        },
+        {
+          "heading": "Limitations of Microarray Testing",
+          "paragraphs": [
+            "While Microarray is a powerful diagnostic tool, it has some limitations:"
+          ],
+          "listItems": [
+            "Does not detect balanced chromosomal translocations.",
+            "Cannot identify single-gene mutations (e.g., cystic fibrosis, sickle cell anaemia).",
+            "Requires expert genetic counselling to interpret results accurately."
+          ]
+        }
+      ]
+    }
+  },
+  "hla-matching": {
+    "title": "HLA Matching in IVF",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "HLA Matching in IVF: Ensuring a Healthy Pregnancy",
+          "paragraphs": [
+            "Matching is essential when it comes to HLA and when you're going through IVF for a successful pregnancy. It's a genetic test, indicating whether there will be proper compatibility between the parents or embryos in terms of better implantation success, as well as lower chances of complications. When planning IVF, it makes all the difference knowing about the importance of HLA matching this journey."
+          ],
+          "sideImage": "/assets/img/IVF-ICSI.jpg"
+        },
+        {
+          "heading": "What is HLA Matching?",
+          "paragraphs": [
+            "This is a test that identifies genetic markers residing in the immune system. Such markers will enable the body to recognize its cells and differentiate between those are its cells and those that are foreign. From an IVF context, HLA matching serves as a method to assess compatibility between the mother, father, and embryo and can be used to predict the success of implantation and pregnancy."
+          ]
+        },
+        {
+          "heading": "Why is HLA Matching Important in IVF?",
+          "paragraphs": [
+            "HLA matching is especially important in IVF because:"
+          ],
+          "listItems": [
+            "It reduces the risk of implantation failure.",
+            "It prevents the immune system from rejecting the embryo.",
+            "It increases the success and healthy possibility of a pregnancy.",
+            "This has minimized complications of recurrent miscarriages or pregnancy loss"
+          ]
+        },
+        {
+          "heading": "Who Should Consider HLA Matching?",
+          "paragraphs": [
+            "Although it is not a must for every case of IVF, HLA matching is highly recommended for couples who:"
+          ],
+          "listItems": [
+            "Have had several failures of IVF.",
+            "She has a history of recurrent miscarriages.",
+            "Are considering embryo donation or surrogacy?",
+            "A known genetic disorder that might affect the chances of a successful pregnancy."
+          ]
+        },
+        {
+          "heading": "HLA Matching Test Cost in India",
+          "paragraphs": [
+            "The HLA matching test cost in India varies based on the type of test, the clinic, and additional medical requirements. On average, the cost ranges from ₹10,000 to ₹30,000. At Seeds of Innocens, we provide advanced genetic testing, including HLA matching, to improve your chances of a successful pregnancy."
+          ]
+        },
+        {
+          "heading": "The Process of HLA Matching in IVF",
+          "paragraphs": [
+            "The HLA matching process involves several steps:"
+          ],
+          "listItems": [
+            "Sample Collection: Blood or cheek swab samples are collected from both parents.",
+            "Laboratory Test: Samples are tested to determine the presence of HLA markers.",
+            "Matching Report: An in-depth matching report is conducted to evaluate embryo implantation ability.",
+            "Personalized Treatment Plan: Based on the results, doctors design a treatment plan to enhance pregnancy success."
+          ]
+        },
+        {
+          "heading": "Why Choose Seeds of Innocens for HLA Matching?",
+          "paragraphs": [
+            "At Seeds of Innocens, we are bringing cutting-edge genetic testing with expert fertility care to integrate state-of-the-art HLA matching – the best possible treatment options for our parents to ensure a smooth pregnancy. With our team of very experienced fertility specialists and the best technology available, we strive to ensure that your IVF journey is a success."
+          ]
+        }
+      ]
+    }
+  }
+}
+
