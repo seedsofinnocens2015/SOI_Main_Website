@@ -13,13 +13,16 @@ const ServicePage = ({ serviceKey }) => {
 
   const headingData = {
     title: config.title,
+    ...(config.uspTitle != null && config.uspTitle !== '' && { uspTitle: config.uspTitle }),
   };
+
+  const bannerImage = config.headerImage ?? config.heroBackground ?? '/assets/img/Top-Header.png';
 
   return (
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage={config.heroBackground || '/assets/img/Top-Header.png'}
+        backgroundImage={bannerImage}
       >
         <PageHeading data={headingData} />
       </Section>
@@ -32,11 +35,23 @@ const ServicePage = ({ serviceKey }) => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 cs_service_page_content">
               {config.layoutType === 'ivfContent' && config.ivfContentData && (
                 <IVFContentSection
                   data={config.ivfContentData}
                   benefitImages={config.benefitImages}
+                  accentHeadingStyle
+                  serviceName={config.title}
+                  faq={config.faq}
+                  keyHighlights={config.keyHighlights}
+                  serviceKey={serviceKey}
+                  treatmentContent={config.treatmentContent}
+                  maleInfertilityContent={config.maleInfertilityContent}
+                  diagnosticContent={config.diagnosticContent}
+                  surgeryContent={config.surgeryContent}
+                  womenHealthContent={config.womenHealthContent}
+                  lifestyleBlogContent={config.lifestyleBlogContent}
+                  servicesContent={servicesContent}
                 />
               )}
             </div>

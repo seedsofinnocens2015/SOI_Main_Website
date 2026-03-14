@@ -2,7 +2,8 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
-import React, { useState } from 'react';
+import FAQAccordion from '@/app/Components/FAQAccordion';
+import React from 'react';
 
 const headingData = {
   title: 'FAQs',
@@ -13,101 +14,6 @@ const serviceData = {
     '/assets/img/recent_post2.jpg',
     '/assets/img/recent_post2.jpg'
   ],
-};
-
-// FAQ Accordion Component
-const FAQAccordion = ({ faqs }) => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  return (
-    <div className="faq-accordion" style={{ marginTop: '30px' }}>
-      {faqs.map((faq, index) => (
-        <div
-          key={index}
-          style={{
-            marginBottom: '15px',
-            border: '1px solid #e8e8e8',
-            borderRadius: '8px',
-            overflow: 'hidden',
-            transition: 'all 0.3s ease'
-          }}
-        >
-          <div
-            onClick={() => toggleFAQ(index)}
-            style={{
-              cursor: 'pointer',
-              padding: '20px',
-              backgroundColor: openIndex === index ? '#f8f9fa' : '#ffffff',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              transition: 'all 0.3s ease'
-            }}
-          >
-            <h4 style={{
-              margin: 0,
-              fontSize: '18px',
-              fontWeight: '600',
-              color: '#0A2A43',
-              flex: 1,
-              paddingRight: '20px'
-            }}>
-              {faq.question}
-            </h4>
-            <span style={{
-              fontSize: '24px',
-              color: '#E45352',
-              fontWeight: 'bold',
-              minWidth: '30px',
-              textAlign: 'center',
-              transition: 'transform 0.3s ease'
-            }}>
-              {openIndex === index ? '−' : '+'}
-            </span>
-          </div>
-          {openIndex === index && (
-            <div style={{
-              padding: '0 20px 20px 20px',
-              backgroundColor: '#f8f9fa',
-              lineHeight: '1.8',
-              color: '#666'
-            }}>
-              {faq.answer && (
-                <div style={{ marginBottom: '15px' }}>
-                  {faq.answer.map((para, pIndex) => (
-                    <p key={pIndex} style={{ marginBottom: '10px', fontSize: '15px' }}>
-                      {para}
-                    </p>
-                  ))}
-                </div>
-              )}
-              {faq.listItems && (
-                <ul style={{
-                  marginTop: '10px',
-                  paddingLeft: '20px',
-                  listStyle: 'disc'
-                }}>
-                  {faq.listItems.map((item, itemIndex) => (
-                    <li key={itemIndex} style={{
-                      marginBottom: '8px',
-                      fontSize: '15px',
-                      lineHeight: '1.8'
-                    }}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
 };
 
 const faqsContentData = {

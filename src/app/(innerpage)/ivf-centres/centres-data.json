@@ -2419,6 +2419,7 @@
       "headerImage": "/assets/img/Headers/state-default.png"
     },
     "delhi": {
+      "headerImage": "/assets/img/State-Headers/Delhi.png",
       "uspTitle": "WHERE HOPE MEETS SCIENCE <br /> <span class=\"cs_accent_color\">YOUR PARENTHOOD BEGINS</span>",
       "sections": [ 
         {
@@ -2438,8 +2439,29 @@
           "question": "What is the cost of IVF in Delhi?",
           "answer": "The cost of IVF in Delhi varies depending on the treatment complexity. At Seeds of Innocens, we provide affordable and transparent pricing for all our fertility treatments."
         }
+      ]
+    },
+    "uttar-pradesh": {
+      "headerImage": "/assets/img/State-Headers/Uttar-Pradesh.png",
+      "sections": [
+        {
+          "heading": "Best IVF Centres in Uttar Pradesh",
+          "paragraphs": [
+            "Uttar Pradesh is home to our flagship centres, offering the highest standards of fertility care in the state. At Seeds of Innocens Uttar Pradesh, we combine medical expertise with cutting-edge technology to provide successful outcomes for couples facing infertility.",
+            "With locations in Ghaziabad, Lucknow, Agra, Gorakhpur, Kanpur, and Meerut, we ensure that world-class fertility treatment is always within your reach in the state."
+          ]
+        }
       ],
-      "headerImage": "/assets/img/Headers/state-delhi.png"
+      "faqs": [
+        {
+          "question": "Which is the best IVF centre in Uttar Pradesh?",
+          "answer": "Seeds of Innocens is widely regarded as one of the best IVF centres in Uttar Pradesh, with flagship centres in Ghaziabad, Lucknow, Agra, Gorakhpur, Kanpur, and Meerut offering advanced fertility solutions."
+        },
+        {
+          "question": "What is the cost of IVF in Uttar Pradesh?",
+          "answer": "The cost of IVF in Uttar Pradesh varies depending on the treatment complexity. At Seeds of Innocens, we provide affordable and transparent pricing for all our fertility treatments."
+        }
+      ]
     }
   }
 }

@@ -109,8 +109,8 @@ const page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <IVFContentSection data={surrogacyContentData} benefitImages={serviceData.benefitImages} />
+            <div className="col-12 cs_service_page_content">
+              <IVFContentSection data={surrogacyContentData} benefitImages={serviceData.benefitImages} accentHeadingStyle />
             </div>
           </div>
         </div>

@@ -1,6 +1,11 @@
 {
   "ivf": {
-    "title": "IVF (In-Vitro Fertilization)",
+    "headerImage": "/assets/img/Services/IVF.png",
+    "uspTitle": "IVF <span class=\"cs_accent_color\">(In-Vitro Fertilization)</span>",
+    "title": "IVF",
+    "slug": "ivf",
+    "category": "treatment",
+    "description": "IVF (In-Vitro Fertilization) helps couples conceive by fertilizing eggs with sperm in the lab and transferring embryos to the uterus. Expert IVF treatment at Seeds of Innocence.",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
     "benefitImages": [
@@ -92,10 +97,103 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "The couples who face challenges in having a baby can opt for IVF treatment. However, there are a wide range of infertility conditions because of which IVF treatment in India is suggested by the IVF specialist to the patients."
+        ],
+        "listItems": [
+          "Blocked or damaged fallopian tubes",
+          "Endometriosis",
+          "Ovulation disorders",
+          "Low sperm count or motility",
+          "Unexplained infertility"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "IVF involves retrieving eggs from the ovaries, fertilizing them with sperm in the laboratory, and transferring the resulting embryos into the uterus. The process is carried out in clearly defined steps under expert supervision."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "The IVF procedure follows these key steps from ovarian stimulation to pregnancy testing:"
+        ],
+        "steps": [
+          {
+            "title": "Ovarian Hyperstimulation",
+            "description": "The IVF procedure starts with the stimulation of ovaries. During a normal menstrual cycle, only one egg is released per month so ovarian stimulation helps to increase the number of eggs available for fertilization."
+          },
+          {
+            "title": "Oocyte or Egg Retrieval",
+            "description": "After a few days when doctors find that the eggs are mature then they go ahead with the retrieval of eggs by using a minor surgical procedure known as transvaginal ultrasound aspiration."
+          },
+          {
+            "title": "Sperm Collection",
+            "description": "The semen sample is collected from the male partner which is processed in the lab to isolate healthy and motile sperm. However, in some cases, if any problem occurs with the sperm quality or quantity then a surgical procedure called TESA (Testicular Sperm Aspiration) may be done to retrieve sperm from testicles or epididymis."
+          },
+          {
+            "title": "Fertilization",
+            "description": "This process can be done through two methods. First, the retrieved eggs and sperm are put in the laboratory dish and left overnight for natural fertilization. Second, the fertilization is done through the ICSI (intracytoplasmic sperm injection) process where a single sperm is injected into every egg directly to achieve fertilization."
+          },
+          {
+            "title": "Embryo Culture",
+            "description": "In this step, the embryologist will monitor the development of embryos to see whether they are properly growing and dividing or not. The best quality embryos are selected after complete evaluation for the transferring process."
+          },
+          {
+            "title": "Embryo Transfer",
+            "description": "Once the embryos are ready and grown into blastocysts then they are transferred into the uterus of a woman by using a thin catheter. This is one of the important steps of the IVF process."
+          },
+          {
+            "title": "Pregnancy Test",
+            "description": "This is the last stage of the IVF process in which after 2 weeks of embryo transfer, the patient has to do a pregnancy test."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Improves chances of pregnancy",
+          "Solution for various infertility causes",
+          "Preimplantation genetic testing (PGT) option",
+          "Control over pregnancy timing with cryopreservation"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "IVF success rates vary based on age, cause of infertility, and clinic expertise. Our centres maintain high success rates with advanced technology and personalized protocols. Discuss your individual prognosis with our fertility specialists."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "There are some risks and potential complications that come with IVF treatment:"
+        ],
+        "listItems": [
+          "The chances of multiple pregnancies increase such as twins, triplets, or higher-order multiples.",
+          "Women may experience an ectopic pregnancy where the embryo implants outside the uterus, often in a fallopian tube.",
+          "Chances of premature delivery may be higher in some IVF pregnancies; baby weight may be lower in such cases.",
+          "IVF cannot eliminate the risk of miscarriage; it is similar to natural pregnancy."
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "After embryo transfer, you can usually resume light activities the same day. Avoid strenuous exercise and follow your doctor's advice on progesterone support. A pregnancy test is typically done about two weeks after transfer. Our team will guide you through the waiting period and next steps."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "The total cost of IVF treatment in India varies on different factors such as selected fertility treatment option, medications needed, location of the clinic, genetic testing, and others. It is suggested to properly discuss the IVF cost with your healthcare provider and available treatment options."
+        ]
+      }
     }
   },
   "icsi": {
-    "title": "ICSI (Intracytoplasmic Sperm Injection)",
+    "headerImage": "/assets/img/Services/ICSI.png",
+    "uspTitle": "ICSI <span class=\"cs_accent_color\">(Intracytoplasmic Sperm Injection)</span>",
+    "title": "ICSI",
+    "slug": "icsi",
+    "category": "treatment",
+    "description": "ICSI (Intracytoplasmic Sperm Injection) injects a single sperm directly into the egg for fertilization. Advanced male infertility treatment at Seeds of Innocence.",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
     "benefitImages": [
@@ -198,9 +296,106 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "The ICSI process is mainly recommended for couples who are undergoing IVF and have certain male infertility factors:"
+        ],
+        "listItems": [
+          "Low sperm count",
+          "Poor sperm motility",
+          "Abnormal sperm morphology",
+          "Previous IVF failure",
+          "Obstructive azoospermia",
+          "Unexplained infertility"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "ICSI is an advanced fertility treatment that involves directly injecting a single, carefully selected sperm into an egg using micromanipulation. This bypasses many natural barriers to fertilization, making pregnancy possible for couples with severe male factor infertility."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "Several key steps are involved in the ICSI treatment from consultation to embryo transfer:"
+        ],
+        "steps": [
+          {
+            "title": "Initial Consultation",
+            "description": "The first step is to consult with the fertility specialist to review medical history, perform required tests, and discuss the treatment."
+          },
+          {
+            "title": "Ovarian Stimulation",
+            "description": "The female undergoes ovarian stimulation before egg retrieval to encourage the ovaries to produce multiple eggs."
+          },
+          {
+            "title": "Egg Retrieval",
+            "description": "The egg retrieval procedure starts when the follicle reaches an appropriate size. It is a small surgical procedure done under anesthesia where a thin needle is inserted into each follicle to retrieve eggs."
+          },
+          {
+            "title": "Sperm Collection",
+            "description": "The sperm is collected from the male partner on the day of egg retrieval. If the quality or quantity of the sperm is not proper then it can be retrieved through other methods such as TESA or TESE."
+          },
+          {
+            "title": "ICSI Procedure",
+            "description": "During the ICSI process, a single sperm is selected by using a specialized microscope and micromanipulation and directly injected into each mature egg. This procedure is done by highly skilled and trained embryologists."
+          },
+          {
+            "title": "Fertilization Check",
+            "description": "To confirm the fertilization, the eggs are observed in the laboratory and allowed the embryos to develop for several days."
+          },
+          {
+            "title": "Embryo Transfer",
+            "description": "At the time of embryo transfer, one or more healthy embryos are transferred into the woman's uterus by using a small catheter. It is usually done after 3-5 days of fertilization."
+          },
+          {
+            "title": "Progesterone Supplementation",
+            "description": "To support the uterine lining, the woman may be prescribed progesterone supplements once the embryo is transferred. This will help to improve the chances of embryo implantation."
+          },
+          {
+            "title": "Pregnancy Test",
+            "description": "A pregnancy test is done after 10-14 days of embryo transfer to determine whether the treatment was successful or not."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Improves chances of pregnancy in male factor infertility",
+          "Advanced micromanipulation technology",
+          "Personalized sperm selection",
+          "Safe and clinically proven method"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "The success rate of ICSI treatment is around 60-70% as it varies on several factors such as a woman's age, sperm & egg quality, infertility cause, and clinic reputation. Additionally, the ICSI attempts, advanced technology, and others also vary the success rate of the ICSI treatment."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "There are several potential complications and risks associated with the ICSI procedure:"
+        ],
+        "listItems": [
+          "Failed Fertilization – Even after a proper ICSI procedure, there is still a possibility of failed fertilization because sometimes injected sperm fails to fertilize the egg.",
+          "Embryo Quality – The quality of the resulting embryos is not guaranteed by the ICSI. There are chances that some embryos may not develop properly or have chromosomal abnormalities.",
+          "Birth Defects – As per some studies, the risk of certain birth defects in babies conceived through procedures like ICSI may be slightly higher."
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery after ICSI follows the same path as IVF. After embryo transfer, rest as advised and continue progesterone if prescribed. Avoid strenuous activity and follow your doctor's instructions until the pregnancy test and beyond."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "The ICSI treatment price is widely dependent on several factors such as fertility clinic location, the expertise of the medical team, medications required, or additional services. It is suggested to consult with a specialist first and get a detailed breakdown of the ICSI treatment cost."
+        ]
+      }
     }
   },
   "iui": {
+    "uspTitle": "IUI <span class=\"cs_accent_color\">(Intra Uterine Insemination)</span>",
     "title": "IUI Treatment",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -257,9 +452,86 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "IUI treatment is recommended in the following conditions:"
+        ],
+        "listItems": [
+          "Physical or medical conditions hindering the ability to produce healthy sperm",
+          "Low sperm count",
+          "Impotence",
+          "Irregular or absent ovulation cycle in female",
+          "Cervix related condition or disorder",
+          "Unknown causes"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "IUI, or Intra Uterine Insemination, places concentrated sperm directly inside the uterus around the time of ovulation. Medication may be used to stimulate the ovaries. The procedure is simple, minimally invasive, and timed using ultrasound and sometimes hormone triggers."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "The sperm sample is concentrated before use and placed in the uterus right before ovulation. Here is a short timeline for a successful IUI cycle:"
+        ],
+        "steps": [
+          {
+            "title": "Day 3 of Menstrual Cycle",
+            "description": "Through an ultrasound assessment and blood test, the process will begin. The doctors may prescribe medication to stimulate the growth of extra follicles which will then develop into eggs."
+          },
+          {
+            "title": "Day 8, 9, or 10",
+            "description": "Another ultrasound will be performed to judge the follicle size and endometrial lining, which helps in determining the date of the next visit."
+          },
+          {
+            "title": "Day 11, 12, or 13",
+            "description": "The doctor may then give an hCG \"trigger\" shot, which matures the egg as per a decided timeframe, so the IUI cycle can be timed accordingly."
+          },
+          {
+            "title": "IUI",
+            "description": "About 36 to 40 hours after the shot, IUI is scheduled. At this appointment, the semen is placed in the uterus with the help of a precise catheter."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Improves chances of pregnancy for suitable couples",
+          "Simple and minimally invasive",
+          "Personalized timing with monitoring",
+          "Safe and clinically proven method"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "IUI success rates depend on age, cause of infertility, and number of cycles. Our specialists optimize timing and protocol for each couple. Book an appointment to discuss IUI success rates and whether IUI is right for you."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "IUI is generally low risk. Possible risks include:"
+        ],
+        "listItems": [
+          "Mild discomfort during the procedure",
+          "Slight risk of infection",
+          "Multiple pregnancy if ovulation induction is used"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "There is minimal recovery needed after IUI. You can resume normal activities the same day. Avoid strenuous exercise for a short period if advised. A pregnancy test is typically done about two weeks after the procedure."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "IUI is typically more affordable than IVF. The cost depends on medications, monitoring, and number of cycles. Discuss IUI treatment cost in India and financing options with our team."
+        ]
+      }
     }
   },
   "monitoring-in-an-iui-cycle-steps": {
+    "uspTitle": "Monitoring in an <span class=\"cs_accent_color\">IUI Cycle</span>",
     "title": "Monitoring in an IUI Cycle",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -310,9 +582,83 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "Monitoring in an IUI cycle is used for couples undergoing IUI or ovulation induction. It helps time insemination and optimize the chance of conception."
+        ],
+        "listItems": [
+          "Couples undergoing IUI treatment",
+          "Women on ovulation induction",
+          "Those requiring precise ovulation timing",
+          "Cases where follicle and endometrial assessment are needed"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "Ultrasound monitoring tracks follicular and endometrial development and guides timely administration of human chorionic hormone (HCG). Monitoring LH, E2, and progesterone during ovulation induction can determine follicular growth and competency, predict poor and hyper-response, and diagnose premature LH surge."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "Key aspects of monitoring in an IUI cycle:"
+        ],
+        "steps": [
+          {
+            "title": "Baseline and follicular tracking",
+            "description": "Ultrasound assesses ovarian reserve and monitors follicular and endometrial development."
+          },
+          {
+            "title": "Follicle development assessment",
+            "description": "A follicle >10 mm in diameter typically grows at 2–3 mm per day. A mature follicle with a mature oocyte usually measures 18–24 mm, when trigger timing is decided."
+          },
+          {
+            "title": "Endometrium assessment",
+            "description": "Endometrial texture and thickness are evaluated; triple-line multilayer appearance at ovulation is optimal."
+          },
+          {
+            "title": "Trigger and timing",
+            "description": "HCG or other trigger is given when follicles and lining are optimal. IUI or timed intercourse is scheduled accordingly."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Improves timing of IUI or intercourse",
+          "Reduces cycle cancellation",
+          "Personalized protocol",
+          "Safe and standard practice"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Optimal stimulation in the IUI cycle typically aims for fewer than 4 follicles of size 18–19 mm, endometrial thickness around 8–10 mm, and trilaminar pattern. Cycle cancellation may be considered if more than six follicles or E2 levels exceed 1500 pg/ml."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Monitoring itself is low risk. Possible considerations:"
+        ],
+        "listItems": [
+          "Multiple pregnancy risk if many follicles develop",
+          "Cycle cancellation in hyper-response"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "No specific recovery is needed after monitoring visits. You can continue normal activities between scans."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost depends on the number of scans and hormone tests. Our team will provide a clear breakdown during your consultation."
+        ]
+      }
     }
   },
   "secondary-infertility": {
+    "uspTitle": "Secondary Infertility  <span class=\"cs_accent_color\">Causes & Treatment</span>",
     "title": "Secondary Infertility Causes & Treatment",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -386,9 +732,76 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Inability to conceive or carry a pregnancy to term after having had at least one prior conception (successful or not)."
+        ],
+        "listItems": [
+          "Difficulty conceiving again after a previous pregnancy",
+          "Irregular menstrual cycles",
+          "Recurrent pregnancy loss",
+          "No obvious cause despite trying"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Causes can be the same as primary infertility. Health, age, and lifestyle may have changed since the first pregnancy."
+        ],
+        "listItems": [
+          "Irregular menstrual cycles",
+          "Endometriosis",
+          "Pelvic adhesions",
+          "Fibroids and polyps",
+          "Diminished ovarian reserve",
+          "Sperm or ejaculate abnormalities in the male partner",
+          "Weight gain or unhealthy lifestyle"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "A full fertility workup is needed for both partners."
+        ],
+        "listItems": [
+          "Medical history and physical examination",
+          "Hormonal evaluation and ovarian reserve testing",
+          "Ultrasound and imaging",
+          "Semen analysis",
+          "HSG or other tubal assessment when indicated"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on the cause."
+        ],
+        "listItems": [
+          "Fertility drugs to boost hormones",
+          "IUI",
+          "IVF or ICSI",
+          "Donor egg or sperm when indicated",
+          "Surgery for fibroids, endometriosis, or tubal issues"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Secondary infertility affects the ability to have another child. Many couples conceive again with the right diagnosis and treatment. Seeking advice early improves success rates."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Seek specialist advice as soon as you notice difficulty conceiving again. Avoid isolation; secondary infertility is treatable and many couples go on to have another healthy baby with appropriate care."
+        ],
+        "listItems": [
+          "Early consultation with a fertility specialist",
+          "Complete workup for both partners",
+          "Healthy lifestyle and weight management"
+        ]
+      }
     }
   },
   "egg-freezing": {
+    "uspTitle": "Egg  <span class=\"cs_accent_color\">Freezing</span>",
     "title": "Egg Freezing",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -472,9 +885,88 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "Egg freezing is recommended for women who wish to preserve fertility for medical or personal reasons."
+        ],
+        "listItems": [
+          "Delaying childbearing (career or personal choice)",
+          "Medical reasons (e.g. before cancer treatment)",
+          "Preserving fertility when not ready to conceive",
+          "Genetic or family history concerns affecting fertility"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "Eggs are retrieved from the ovaries after stimulation, then frozen using vitrification and stored in liquid nitrogen. When ready, eggs can be thawed, fertilized with sperm, and transferred as embryos."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "There are several steps involved in the egg freezing process:"
+        ],
+        "steps": [
+          {
+            "title": "Initial Consultation",
+            "description": "Consult with a fertility specialist; medical history and ovarian reserve are evaluated."
+          },
+          {
+            "title": "Ovarian Stimulation",
+            "description": "A course of hormone injections over about 10–14 days to produce multiple eggs."
+          },
+          {
+            "title": "Monitoring",
+            "description": "Regular monitoring of hormone levels and ultrasound to track follicle growth."
+          },
+          {
+            "title": "Egg Retrieval",
+            "description": "Minimal surgical procedure under sedation; a thin needle retrieves eggs from the follicles (about 20–30 minutes)."
+          },
+          {
+            "title": "Egg Freezing",
+            "description": "Suitable eggs are frozen immediately by vitrification and stored at -196°C."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Improves chances of future pregnancy",
+          "Preserves fertility for medical or personal reasons",
+          "Personalized protocol",
+          "Safe and clinically proven method"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Success depends on age at freezing, number of eggs stored, and quality. Our specialists will discuss survival rates and expected outcomes based on your profile."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "The egg freezing technique is generally safe but carries some risks:"
+        ],
+        "listItems": [
+          "Complications during egg retrieval (bleeding, infection, or surrounding organ damage)",
+          "Emotional and psychological impact",
+          "No guarantee of future pregnancy"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Most women resume normal activities within a day or two after retrieval. Avoid strenuous exercise for a short period. Our team will guide you on aftercare."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Egg freezing cost depends on clinic location, medications, and storage. Consult our team for a detailed breakdown of the egg freezing price."
+        ]
+      }
     }
   },
   "embryo-freezing": {
+    "uspTitle": "Embryo  <span class=\"cs_accent_color\">Freezing</span>",
     "title": "Embryo Freezing",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -546,9 +1038,89 @@
           "bottomImage": "/assets/img/recent_post2.jpg"
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "There are several reasons why couples choose to freeze their embryos:"
+        ],
+        "listItems": [
+          "Preserve excess embryos from an IVF cycle",
+          "Avoid repeated ovarian stimulation",
+          "Plan for future pregnancies",
+          "Medical reasons (cancer treatment, health conditions)",
+          "Increase cumulative pregnancy rates",
+          "Reduce costs of multiple IVF cycles"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "Embryos created through IVF are assessed, selected, and frozen using vitrification. They are stored in liquid nitrogen at -196°C and can be thawed for transfer in a later cycle."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "Our embryo freezing process involves several steps:"
+        ],
+        "steps": [
+          {
+            "title": "Embryo development and assessment",
+            "description": "Embryos are cultured and evaluated for quality."
+          },
+          {
+            "title": "Selection of high-quality embryos",
+            "description": "The best embryos are chosen for freezing."
+          },
+          {
+            "title": "Vitrification (rapid freezing)",
+            "description": "Embryos are frozen rapidly to minimize ice crystal formation."
+          },
+          {
+            "title": "Storage",
+            "description": "Storage in liquid nitrogen at -196°C with long-term monitoring."
+          },
+          {
+            "title": "Thawing and transfer",
+            "description": "When ready, embryos are thawed and transferred in a suitable cycle."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "High survival rates after thawing (95%+)",
+          "Similar pregnancy rates to fresh transfers",
+          "Reduced risk of OHSS",
+          "Better endometrial receptivity in frozen cycles"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Embryo freezing has shown excellent success rates: high survival after thawing (95%+), similar pregnancy rates to fresh embryo transfers, and reduced risk of ovarian hyperstimulation syndrome (OHSS)."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Risks are generally low and similar to IVF. Discuss any concerns with your specialist."
+        ],
+        "listItems": [
+          "Not all embryos survive thawing",
+          "Storage and handling are critical"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "No recovery is needed for the freezing process itself. Recovery after a subsequent frozen embryo transfer is similar to fresh IVF transfer."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost includes freezing, storage (annual or long-term), and thawing/transfer when you are ready. Our team will provide a clear cost breakdown."
+        ]
+      }
     }
   },
   "prp": {
+    "uspTitle": "PRP & Ovarian <span class=\"cs_accent_color\">Rejuvenation</span>",
     "title": "PRP & Ovarian Rejuvenation",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -606,9 +1178,76 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "Encouraging PRP results in experimental trials have opened a potential window for treating a variety of problems in women. Women with the following conditions may benefit:"
+        ],
+        "listItems": [
+          "Primary ovarian insufficiency",
+          "Advanced maternal age",
+          "Poor ovarian reserve",
+          "Loss of ovarian function due to chemotherapy",
+          "Ovarian dysfunction"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "PRP is separated from your blood and concentrated. It contains platelet-derived growth factors and cytokines. When injected into the ovaries under ultrasound guidance, these may help stimulate ovarian stem cells and support follicle development. The procedure is repeated once a month for a total of three times."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "The procedure takes place in two main steps:"
+        ],
+        "steps": [
+          {
+            "title": "Blood draw and PRP preparation",
+            "description": "Blood is taken and processed to separate platelet-rich plasma from other components using centrifugation."
+          },
+          {
+            "title": "Injection into ovaries",
+            "description": "Under light sedation and ultrasound guidance, the prepared PRP is injected into both ovaries. The process takes about 20–30 minutes; the patient can go home within an hour. This is repeated once every month for three times."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Potential improvement in follicle count and parameters",
+          "Minimally invasive",
+          "Uses your own blood",
+          "Option for women unwilling to use donor eggs"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "PRP for ovarian rejuvenation is still under trial. Some studies have shown resumption of menses and positive pregnancies with IVF. Results vary; our specialists can discuss whether PRP is suitable for you."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "PRP is generally considered safe. Risks are similar to egg retrieval:"
+        ],
+        "listItems": [
+          "Minimal risk of bleeding or infection at injection site",
+          "Procedure is still under investigation"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery is quick. You can typically go home within an hour. Avoid strenuous activity for a short period as advised."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost depends on the number of sessions and clinic. Book an appointment for a detailed PRP treatment cost breakdown."
+        ]
+      }
     }
   },
   "cryopreservation": {
+    "uspTitle": "Cryopreservation <span class=\"cs_accent_color\">(Egg, Sperm & Embryos)</span>",
     "title": "Cryopreservation",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -683,9 +1322,84 @@
           "bottomImage": "/assets/img/recent_post2.jpg"
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "Cryopreservation is used by individuals and couples who need to preserve fertility or store genetic material for future use."
+        ],
+        "listItems": [
+          "Cancer patients before treatment",
+          "Couples with excess embryos from IVF",
+          "Women delaying childbearing (egg freezing)",
+          "Men storing sperm before treatment or deployment",
+          "Those pursuing ovarian or testicular tissue preservation"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "Biological material (eggs, sperm, embryos, or tissue) is processed in the lab and frozen using vitrification or other proven techniques. It is stored in liquid nitrogen at -196°C and can be thawed when needed for treatment."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "The cryopreservation process involves:"
+        ],
+        "steps": [
+          {
+            "title": "Initial consultation and fertility assessment",
+            "description": "Evaluation and planning based on what is being frozen (eggs, sperm, embryos, or tissue)."
+          },
+          {
+            "title": "Stimulation or collection",
+            "description": "For eggs: hormonal stimulation and retrieval. For sperm or tissue: collection as per protocol."
+          },
+          {
+            "title": "Laboratory processing",
+            "description": "Samples are prepared and frozen using vitrification or appropriate technique."
+          },
+          {
+            "title": "Storage",
+            "description": "Storage in liquid nitrogen with long-term monitoring and maintenance."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Preserves fertility for cancer patients",
+          "Family planning flexibility",
+          "Backup options for IVF",
+          "Safe, monitored storage"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Survival and success rates after thawing depend on the type of material and technique. Our team maintains high standards and will discuss expected outcomes with you."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Risks depend on the type of cryopreservation (e.g. egg retrieval risks for egg freezing). Storage is highly regulated and monitored."
+        ],
+        "listItems": [
+          "Not all samples survive thawing",
+          "Long-term storage costs"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery is similar to the underlying procedure (e.g. egg retrieval if freezing eggs). No ongoing recovery for storage itself."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost includes processing, freezing, and annual or long-term storage. Ask for a detailed breakdown at your consultation."
+        ]
+      }
     }
   },
   "ovulation-induction": {
+    "uspTitle": "Ovulation  <span class=\"cs_accent_color\">Induction</span>",
     "title": "Ovulation Induction",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -776,9 +1490,80 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "Ovulation induction is a common treatment for women with absent or infrequent ovulation. It also works with IVF to stimulate multiple eggs for collection."
+        ],
+        "listItems": [
+          "Disorders that directly inhibit ovulation (e.g. PCOS)",
+          "Abnormal hormone levels (FSH, AMH, LH)",
+          "Indirect factors (thyroid disorders, eating disorders, obesity)",
+          "Women undergoing IUI or IVF"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "Medications (e.g. clomiphene, letrozole, gonadotropins) stimulate the ovary to produce and release eggs. Monitoring ensures correct timing for intercourse, IUI, or egg retrieval."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "Ovulation induction typically follows these steps:"
+        ],
+        "steps": [
+          {
+            "title": "Initial fertility evaluation",
+            "description": "Assessment of hormones and cause of anovulation."
+          },
+          {
+            "title": "Medication and monitoring",
+            "description": "You start medication; ultrasound and sometimes blood tests monitor follicle growth."
+          },
+          {
+            "title": "Trigger and timing",
+            "description": "When follicles are ready, a trigger shot may be used. Timed intercourse, IUI, or egg retrieval is scheduled accordingly."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Improves chances of pregnancy in anovulation",
+          "Noninvasive and relatively low cost",
+          "Can be used with IUI or IVF",
+          "Effective first-line treatment for many"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Success depends on the cause of anovulation, age, and whether it is combined with IUI or IVF. Approximately 25% of female infertility stems from ovulation problems; ovulation induction is often beneficial and cost-effective."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Ovulation induction medications can sometimes cause OHSS (Ovarian Hyperstimulation Syndrome). Side effects may include:"
+        ],
+        "listItems": [
+          "Bloating, nausea, headaches, hot flashes",
+          "Weight gain, tenderness in the pelvic region",
+          "Multiple pregnancy if multiple eggs release"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "No significant recovery is needed from the medications. If you proceed to IUI or egg retrieval, recovery follows that procedure."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Ovulation induction is usually lower cost than IVF. Cost includes medications and monitoring. Our team will provide a clear estimate."
+        ]
+      }
     }
   },
   "follicular-monitoring": {
+    "uspTitle": "Follicular  <span class=\"cs_accent_color\">Monitoring</span>",
     "title": "Follicular Monitoring",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -877,9 +1662,83 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "Follicular monitoring is recommended when timing of ovulation is important for conception or treatment."
+        ],
+        "listItems": [
+          "Women under 35 trying to conceive for about a year (to rule out ovulation problems)",
+          "Women over 35 trying for six months without success",
+          "Women with PCOD or irregular ovulation",
+          "Those on fertility drugs, IUI, or IVF"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "A series of vaginal ultrasound scans track follicle growth and endometrial thickness. Scans typically start around day 6–7 and continue every 2–3 days until ovulation. A mature follicle is usually 18–25 mm; endometrium over 8–10 mm is often considered suitable."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "Follicle tracking typically involves:"
+        ],
+        "steps": [
+          {
+            "title": "Baseline scan",
+            "description": "Initial scan to assess follicle stage and plan the cycle."
+          },
+          {
+            "title": "Serial scans",
+            "description": "Scans every 2–3 days to monitor follicle size and endometrial lining."
+          },
+          {
+            "title": "Assessment of maturity",
+            "description": "When follicles reach 18–25 mm and lining is adequate, ovulation timing is predicted."
+          },
+          {
+            "title": "Timing intercourse or treatment",
+            "description": "Couples are advised when to have intercourse or when to schedule IUI/trigger."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Pinpoints ovulation timing",
+          "Improves timing for natural or assisted conception",
+          "Guides medication dosage",
+          "Helps diagnose ovulation problems"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Follicular studies alone do not guarantee pregnancy; they optimize timing. Success depends on overall fertility. One cycle of tracking can help you correlate scans with body signals. Our team will set realistic expectations."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "There are no significant physical side effects of the scan. Some couples find the process stressful; we recommend limiting tracking cycles and combining with home methods (e.g. cervical mucus) where appropriate."
+        ],
+        "listItems": [
+          "Emotional strain from timed intercourse",
+          "No physical risks from ultrasound"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "No recovery is needed. Each scan takes about 5–10 minutes. You can resume normal activities immediately."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost depends on the number of scans per cycle (typically 4–6). Our team will provide a clear estimate for follicular monitoring."
+        ]
+      }
     }
   },
   "blastocyst-transfer": {
+    "uspTitle": "Blastocyst  <span class=\"cs_accent_color\">Transfer</span>",
     "title": "Blastocyst Transfer",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -922,9 +1781,83 @@
           "bottomImage": "/assets/img/Blastocyst2.jpg"
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "Blastocyst transfer is recommended for couples who have not had success with day-3 embryo transfer or who want to improve selection and implantation potential."
+        ],
+        "listItems": [
+          "Previous failed or suboptimal day-3 IVF cycles",
+          "Multiple embryos available for selection",
+          "Prefer single embryo transfer with higher success per transfer",
+          "Couples seeking better embryo-uterine synchrony"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "Embryos are cultured to day 5 (or 6) when they reach the blastocyst stage—with an inner cell mass (becoming the baby) and trophoblast (becoming the placenta). Transferring at this stage can improve selection and alignment with the uterus."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "Blastocyst transfer is part of your IVF cycle:"
+        ],
+        "steps": [
+          {
+            "title": "Ovarian stimulation and egg retrieval",
+            "description": "Same as standard IVF; eggs are fertilized in the lab."
+          },
+          {
+            "title": "Extended culture to day 5–6",
+            "description": "Embryos are cultured until they reach blastocyst stage; only viable ones typically develop."
+          },
+          {
+            "title": "Selection and transfer",
+            "description": "One or more blastocysts are selected and transferred into the uterus via catheter."
+          },
+          {
+            "title": "Pregnancy test",
+            "description": "A pregnancy test is done about two weeks after transfer."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Improves embryo selection (only developing embryos reach blastocyst)",
+          "Better synchrony with uterine lining",
+          "Option for single embryo transfer with good success",
+          "Clinically proven for selected patients"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Blastocyst transfer on day 5–6 can be more successful than day-3 transfer for many couples, especially those with multiple embryos, as it allows better selection and uterine alignment. Success depends on age, embryo quality, and clinic expertise."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Risks are similar to standard IVF. Not all embryos reach blastocyst stage, so some cycles may have no transfer if all arrest earlier."
+        ],
+        "listItems": [
+          "Risk of no transfer if no blastocysts develop",
+          "Multiple pregnancy if more than one blastocyst is transferred"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery is the same as after any embryo transfer: light activity, avoid strenuous exercise, and follow progesterone and medication instructions until the pregnancy test."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Blastocyst transfer is part of IVF cost; extended culture may have a marginal additional cost. Discuss the full cost with our team."
+        ]
+      }
     }
   },
   "surrogacy": {
+    "uspTitle": "Surrogacy: A Journey to <span class=\"cs_accent_color\">Parenthood</span>",
     "title": "Surrogacy: A Journey to Parenthood",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -996,9 +1929,88 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "Surrogacy is an option for individuals and couples who cannot carry a pregnancy to term or for whom pregnancy poses significant health risks."
+        ],
+        "listItems": [
+          "Women without a uterus or with uterine conditions",
+          "Recurrent pregnancy loss or implantation failure",
+          "Medical conditions that make pregnancy unsafe",
+          "Same-sex male couples and single intended parents"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "Surrogacy involves a surrogate carrying a pregnancy for intended parents. Embryos are created using the intended parents' or donors' eggs and sperm (via IVF) and transferred to the surrogate's uterus. Legal and medical screening is completed for all parties."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "The surrogacy process at Seeds of Innocence includes:"
+        ],
+        "steps": [
+          {
+            "title": "Medical and legal screening",
+            "description": "Both intended parents and surrogate undergo detailed medical and legal evaluations."
+          },
+          {
+            "title": "IVF and embryo creation",
+            "description": "Eggs and sperm are collected; embryos are created in our labs."
+          },
+          {
+            "title": "Embryo transfer",
+            "description": "The embryo is transferred into the surrogate's uterus."
+          },
+          {
+            "title": "Pregnancy care",
+            "description": "The surrogate receives regular medical care throughout the pregnancy."
+          },
+          {
+            "title": "Birth and legal handover",
+            "description": "After birth, legal formalities are completed and the child is handed over to the intended parents."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Path to parenthood when pregnancy is not possible",
+          "Legally supported framework",
+          "Comprehensive medical and emotional care",
+          "Experienced team at every step"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Success depends on embryo quality, surrogate health, and legal completion. Our team will guide you through expectations and outcomes."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Risks include those of IVF and pregnancy, plus legal and emotional considerations. We provide counseling and legal support."
+        ],
+        "listItems": [
+          "Medical risks of pregnancy for the surrogate",
+          "Legal and regulatory requirements",
+          "Emotional and financial commitment"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Intended parents do not undergo a physical recovery; the surrogate follows standard post-delivery care. Our team supports all parties through the process."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Surrogacy cost includes medical, legal, and surrogate compensation. It varies by arrangement and location. Contact us for a detailed breakdown and financing options."
+        ]
+      }
     }
   },
   "varicocele": {
+    "uspTitle": "Varicocele  <span class=\"cs_accent_color\">Symptoms & Treatment</span>",
     "title": "Varicocele Symptoms & Treatment",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1072,9 +2084,73 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "Varicoceles are classified by size and location. They typically occur on the left side but can be bilateral."
+        ],
+        "listItems": [
+          "Grade 1: Small, only palpable with Valsalva maneuver",
+          "Grade 2: Palpable without Valsalva",
+          "Grade 3: Visible through the scrotal skin"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Varicoceles are caused by malfunction of the valves in the testicular vein, leading to pooling of blood and enlarged veins. Contributing factors may include:"
+        ],
+        "listItems": [
+          "Faulty valves in the spermatic vein",
+          "Heavy lifting (can cause or worsen varicoceles)",
+          "Anatomical factors (more common on the left side)"
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "Varicoceles often have no obvious symptoms and are discovered during fertility evaluation. When present, symptoms include:"
+        ],
+        "listItems": [
+          "Difficulty conceiving (male factor infertility)",
+          "Mild to moderate pain, especially after long sitting",
+          "Scrotal swelling or a \"bag of worms\" appearance",
+          "Testicular shrinkage in some cases"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Diagnosis is usually made through physical examination and sometimes imaging:"
+        ],
+        "listItems": [
+          "Physical examination of the scrotum (standing and Valsalva)",
+          "Scrotal ultrasound to confirm and grade",
+          "Semen analysis to assess impact on fertility"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment aims to relieve symptoms and improve fertility. At SOI we offer Microscopic Varicocelectomy:"
+        ],
+        "listItems": [
+          "Microscopic Varicocelectomy: ties off swollen veins while preserving blood flow to the testicles",
+          "Close to half of patients conceive naturally after the procedure",
+          "About 80% of men see significant improvement in sperm parameters"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Many men with varicocele can have children. Repair often improves sperm count, motility, and morphology. After varicocelectomy, a significant proportion of couples conceive naturally; others may benefit from IVF/ICSI if needed."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "See a fertility specialist or urologist if you have been trying to conceive for a year without success, have scrotal pain or swelling, or notice a change in testicular size. Early diagnosis and treatment can prevent long-term impact on fertility."
+        ]
+      }
     }
   },
   "vasectomy-reversal": {
+    "uspTitle": "Vasectomy  <span class=\"cs_accent_color\">Reversal</span>",
     "title": "Vasectomy Reversal",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1140,9 +2216,56 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "Vasectomy reversal itself is one procedure; success and approach may vary by type of original vasectomy and time since the procedure."
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "The need for vasectomy reversal arises when a couple who previously chose vasectomy later decides they want to conceive. The cause of infertility in this context is the prior vasectomy that blocks sperm from entering the semen."
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "The main \"symptom\" is inability to conceive after a prior vasectomy. There are typically no other physical symptoms."
+        ],
+        "listItems": [
+          "Inability to conceive with a partner after vasectomy",
+          "No sperm in ejaculate (expected after vasectomy)"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Diagnosis is straightforward: history of vasectomy and desire to restore fertility. Semen analysis will show no sperm. A urologist can assess whether reversal is feasible and which technique is best."
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Vasectomy reversal reconnects the vas deferens so sperm can again reach the semen. The procedure is typically done under local or general anesthesia and takes about 3–4 hours. Recovery is usually 5–14 days."
+        ],
+        "listItems": [
+          "Microsurgical vasectomy reversal (vasovasostomy or vasoepididymostomy)",
+          "Outpatient procedure",
+          "Success correlates with time since vasectomy"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Many men can father children after a successful vasectomy reversal. Success depends on how long ago the vasectomy was performed and surgical technique. If reversal does not restore sufficient sperm, IVF with sperm retrieval is an option."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "See a urologist or fertility specialist when you and your partner have decided to conceive after a vasectomy. Earlier reversal generally has better success rates, but evaluation is valuable regardless of timing."
+        ]
+      }
     }
   },
   "azoospermia": {
+    "uspTitle": "Azoospermia  <span class=\"cs_accent_color\">Understanding the Condition & Finding Hope</span>",
     "title": "Azoospermia",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1254,9 +2377,77 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "There are two main types of azoospermia:"
+        ],
+        "listItems": [
+          "Obstructive Azoospermia: The body produces sperm, but a blockage prevents sperm from reaching the semen (e.g. prior surgery, infection, vasectomy, congenital absence of vas deferens).",
+          "Non-Obstructive Azoospermia: Poor or no sperm production by the testicles (e.g. genetic, hormonal, radiation/chemotherapy, medications)."
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Causes depend on type. Obstructive: blockages from surgery, infection, vasectomy, or congenital absence of vas deferens. Non-obstructive: genetic disorders, hormonal imbalances, undescended testicles, radiation or chemotherapy, certain medications or medical conditions."
+        ],
+        "listItems": [
+          "Prior surgeries or infections",
+          "Vasectomy",
+          "Genetic or chromosomal conditions",
+          "Hormonal imbalances",
+          "Radiation or chemotherapy",
+          "Congenital absence of vas deferens"
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "Azoospermia often has no clear physical symptoms. Some signs may include:"
+        ],
+        "listItems": [
+          "Trouble conceiving a child",
+          "Low sex drive",
+          "Erectile dysfunction",
+          "Swelling or discomfort in the testicles"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Semen analysis is the first step. At Seeds of Innocens we use advanced tests to find the cause:"
+        ],
+        "listItems": [
+          "Semen analysis",
+          "Hormonal tests (FSH, LH, testosterone)",
+          "Scrotal ultrasound",
+          "Genetic testing",
+          "Testicular biopsy when needed"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on whether azoospermia is obstructive or non-obstructive:"
+        ],
+        "listItems": [
+          "Surgery for obstructive: vasoepididymostomy, vasovasostomy",
+          "Sperm retrieval: TESA, TESE, Micro-TESE for use with IVF/ICSI",
+          "Hormonal therapy when appropriate"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Many men with azoospermia can have biological children. Sperm can often be retrieved and used with IVF/ICSI. Obstructive cases may be corrected by surgery; non-obstructive cases may still yield sperm for ICSI. Our team will outline options based on your diagnosis."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "Consult a fertility specialist or urologist if you have been trying to conceive for a year without success or if a semen analysis shows no sperm. Early evaluation helps identify cause and the best treatment or ART option."
+        ]
+      }
     }
   },
   "non-obstructive-azoospermia": {
+    "uspTitle": "Non-Obstructive  <span class=\"cs_accent_color\">Azoospermia</span>",
     "title": "Non-Obstructive Azoospermia",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1301,9 +2492,67 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "Non-obstructive azoospermia (NOA) means no sperm in the ejaculate due to impaired or absent sperm production in the testicles, rather than a blockage."
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Main causes include inadequate gonadotropin production or intrinsic testicular impairment:"
+        ],
+        "listItems": [
+          "Genetics (e.g. Y chromosome deletion)",
+          "Medication",
+          "Hormonal imbalance",
+          "Radiation and toxins",
+          "Maturation arrest",
+          "Infections",
+          "Karyotype abnormality"
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "Often there are no obvious physical symptoms. The main presentation is inability to conceive and no sperm on semen analysis."
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Physical exam, semen analysis, hormone tests, and sometimes genetic testing or testicular biopsy help confirm NOA and guide treatment."
+        ],
+        "listItems": [
+          "Semen analysis (repeated to confirm azoospermia)",
+          "Hormone levels (FSH, LH, testosterone)",
+          "Genetic testing",
+          "Testicular biopsy or sperm retrieval attempt"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Men with NOA may have pockets of sperm production. Sperm retrieval (e.g. Micro-TESE) can often recover sperm for use with IVF/ICSI. Hormonal therapy may help in selected cases."
+        ],
+        "listItems": [
+          "Sperm retrieval: TESA, TESE, Micro-TESE",
+          "IVF/ICSI using retrieved sperm",
+          "Hormonal therapy when indicated"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Many men with NOA can have biological children. Sperm retrieval (especially Micro-TESE) can find sperm in a significant proportion of men; that sperm is then used for ICSI. Our team will discuss your individual chances based on cause and evaluation."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "See a urologist or fertility specialist if semen analysis shows no sperm. Determining whether the cause is obstructive or non-obstructive is essential to plan sperm retrieval or other treatment."
+        ]
+      }
     }
   },
   "obstructive-azoospermia": {
+    "uspTitle": "Obstructive  <span class=\"cs_accent_color\">Azoospermia</span>",
     "title": "Obstructive Azoospermia",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1348,9 +2597,67 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "Obstructive azoospermia is one of two main types of azoospermia (the other being non-obstructive). Here, sperm are produced but cannot reach the ejaculate due to a blockage in the reproductive tract."
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Blockages may result from epididymal, vasal, or ejaculatory duct pathology. Causes include:"
+        ],
+        "listItems": [
+          "Blockages due to trauma or infection",
+          "Sexually transmitted diseases",
+          "Hernia surgery",
+          "Scar tissue",
+          "Cystic fibrosis",
+          "Congenital absence of vas deferens",
+          "Dysfunction in the process of ejaculation"
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "Typically no obvious physical symptoms. The main sign is inability to conceive and zero sperm count on semen analysis."
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Semen analysis confirms azoospermia. Hormone levels are often normal. Ultrasound or other imaging and sometimes genetic testing help identify the site and cause of blockage."
+        ],
+        "listItems": [
+          "Semen analysis",
+          "Hormonal tests",
+          "Scrotal ultrasound",
+          "Genetic testing (e.g. for cystic fibrosis) when indicated"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on cause and female factors. Options include surgical correction of the obstruction or sperm retrieval followed by IVF-ICSI."
+        ],
+        "listItems": [
+          "Microsurgical vasal reconstruction (vasovasostomy, vasoepididymostomy)",
+          "Sperm retrieval (TESA, PESA) with IVF/ICSI",
+          "At SOI we offer both reconstruction and sperm retrieval paired with IVF"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Men with obstructive azoospermia often have good-quality sperm that can be retrieved and used with ICSI. Surgery may restore natural fertility in some cases. Our team will recommend the best option for you."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "Consult a fertility specialist or urologist if you have been trying to conceive without success or if a semen analysis shows no sperm. Identifying obstruction allows planning of reconstruction or sperm retrieval."
+        ]
+      }
     }
   },
   "oligospermia": {
+    "uspTitle": "Oligospermia  <span class=\"cs_accent_color\">Finding Hope</span>",
     "title": "Oligospermia",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1401,9 +2708,75 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "Oligospermia is defined by sperm count below the reference range (e.g. under 15 million per milliliter). Severity can be mild, moderate, or severe based on how low the count is."
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Causes range from medical to lifestyle. Common causes include:"
+        ],
+        "listItems": [
+          "Chronic emotional stress",
+          "Recreational drugs and anabolic steroid use",
+          "Genetic or inherited disorders",
+          "Hormone imbalance",
+          "Undescended testicles",
+          "Infections affecting sperm production",
+          "Radiation",
+          "Varicocele",
+          "Poor general health",
+          "Medical conditions (e.g. diabetes, multiple sclerosis)"
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "The main symptom is difficulty conceiving. There are often no other obvious physical signs; oligospermia is typically detected by semen analysis."
+        ],
+        "listItems": [
+          "Difficulty conceiving",
+          "Possibly low libido or other symptoms if hormonal cause"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Semen analysis is the key test. Further tests (hormones, ultrasound, genetic) may be done to find the cause."
+        ],
+        "listItems": [
+          "Semen analysis (count, motility, morphology)",
+          "Hormonal tests",
+          "Scrotal ultrasound",
+          "Other tests as indicated"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on cause and may include lifestyle changes, medication or hormonal therapy, and sometimes surgery (e.g. varicocele repair) or assisted reproduction."
+        ],
+        "listItems": [
+          "Lifestyle changes",
+          "Antioxidants/medication or hormonal therapy",
+          "Surgery (e.g. varicocelectomy, microsurgery)",
+          "Assisted reproductive technology (IUI, IVF/ICSI)"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Many men with oligospermia can have children. Treatment of the cause or use of IUI/IVF/ICSI often makes pregnancy possible. Our specialists will recommend a plan based on your count and cause."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "Consult a fertility specialist if you have been trying to conceive for a year without success (or six months if your partner is 35 or older). Semen analysis can confirm oligospermia and guide next steps."
+        ]
+      }
     }
   },
   "blocked-seminiferous-tubules": {
+    "uspTitle": "Blocked   <span class=\"cs_accent_color\">Seminiferous Tubulese</span>",
     "title": "Blocked Seminiferous Tubules",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1441,9 +2814,69 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "Blocked seminiferous tubules (or vas deferens) refer to obstruction in the tubes that produce, maintain, and transport sperm from the epididymis. Blockage can be partial or complete and may affect one or both sides."
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Reasons for blocked seminiferous tubules include:"
+        ],
+        "listItems": [
+          "Infections (sexually transmitted or other) that lead to scarring or blockage",
+          "Tumors compressing the vas deferens or adjacent structures",
+          "Trauma or injury from surgery",
+          "Inflammation from pathogenic bacteria",
+          "Rare genetic or congenital conditions (e.g. structural anomalies, absent vas deferens)"
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "Often no obvious symptoms. Men may present with infertility or low semen volume; azoospermia may be found on semen analysis."
+        ],
+        "listItems": [
+          "Difficulty conceiving",
+          "Reduced semen volume or azoospermia"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Semen analysis is a key tool. Further tests help confirm blockage and rule out other causes."
+        ],
+        "listItems": [
+          "Semen analysis",
+          "Physical examination",
+          "Imaging (e.g. ultrasound) when indicated",
+          "Hormonal and genetic tests as needed"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "With the right diagnosis, treatment can often correct or work around the problem. Options may include surgery to repair obstruction or sperm retrieval with IVF/ICSI."
+        ],
+        "listItems": [
+          "Surgical correction when feasible",
+          "Sperm retrieval (e.g. from epididymis or testicle) with IVF/ICSI",
+          "SOI offers expert diagnosis and tailored treatment"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Blocked seminiferous tubules do not mean infertility is untreatable. Sperm can often be retrieved and used with ICSI, or obstruction may be corrected. Our team will outline the best option for your situation."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "See a fertility specialist or urologist if you have been trying to conceive without success or if semen analysis shows very low or no sperm. Semen analysis and evaluation can distinguish blockage from other causes."
+        ]
+      }
     }
   },
   "endocrinological-disorder-in-men": {
+    "uspTitle": "Endocrinological   <span class=\"cs_accent_color\">Disorder in Men</span>",
     "title": "Endocrinological Disorder in Men",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1505,9 +2938,78 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "Endocrinological disorders in men can be broadly categorized as:"
+        ],
+        "listItems": [
+          "Disorders due to hormonal imbalance (e.g. low or high testosterone, pituitary or thyroid dysfunction)",
+          "Disorders due to lesions such as tumors or nodules affecting hormone-producing glands"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Causes include pituitary or hypothalamic dysfunction, testicular failure, thyroid disease, obesity, certain medications, tumors, or other conditions affecting hormone production or regulation."
+        ],
+        "listItems": [
+          "Hormonal imbalance",
+          "Pituitary or testicular disorders",
+          "Thyroid disease",
+          "Tumors or nodules",
+          "Medications",
+          "Obesity or chronic disease"
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "Low testosterone and other endocrine disorders can cause:"
+        ],
+        "listItems": [
+          "Low sexual desire",
+          "Reduced ejaculate volume",
+          "Low sperm production",
+          "Weak development of penis and testes",
+          "Poor muscle size and strength",
+          "Slow or abnormal puberty in boys"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Diagnosis involves blood tests for hormones (e.g. testosterone, FSH, LH, prolactin, thyroid) and sometimes imaging or other tests to find the cause."
+        ],
+        "listItems": [
+          "Blood tests (testosterone, FSH, LH, prolactin, thyroid)",
+          "Physical examination",
+          "Imaging when indicated (e.g. pituitary MRI)"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment aims to correct hormonal imbalance and improve fertility. Options may include hormone therapy, treatment of underlying disease, or assisted reproduction."
+        ],
+        "listItems": [
+          "Hormone therapy or medication",
+          "Treatment of thyroid or pituitary conditions",
+          "Lifestyle changes",
+          "Assisted reproductive technology when needed"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Many men with endocrinological disorders can have children once hormones are corrected or with assisted reproduction. SOI offers treatment plans to restore testosterone and optimize fertility."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "Consult a fertility specialist or endocrinologist if you have low libido, reduced ejaculate volume, delayed puberty, or difficulty conceiving. Testing testosterone and other hormones can identify treatable disorders."
+        ]
+      }
     }
   },
   "retrograde-ejaculation": {
+    "uspTitle": "Retrograde  <span class=\"cs_accent_color\">Ejaculation</span>",
     "title": "Retrograde Ejaculation",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1550,9 +3052,68 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "Retrograde ejaculation is a specific condition in which semen travels backward into the bladder instead of forward out of the penis. It is a distinct cause of male infertility but is often treatable or workable with ART."
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Causes are generally related to the bladder neck or nerves that control ejaculation:"
+        ],
+        "listItems": [
+          "Medications that affect the bladder neck muscle",
+          "Congenital conditions affecting the bladder neck",
+          "Injury or trauma to nerves controlling ejaculation",
+          "Surgery involving the prostate, bladder, or surrounding areas"
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "The main symptom is dry orgasm (little or no semen from the penis) or cloudy urine after orgasm (semen in the bladder). Infertility is the main concern for couples."
+        ],
+        "listItems": [
+          "Little or no ejaculate with orgasm",
+          "Cloudy urine after orgasm (semen in bladder)",
+          "Difficulty conceiving"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Diagnosis is based on history (dry orgasm, cloudy post-orgasm urine) and examination of post-ejaculation urine for sperm. Our team will assess cause and suitability for medication or ART."
+        ],
+        "listItems": [
+          "Medical history and symptom review",
+          "Post-ejaculation urinalysis (to detect sperm in urine)",
+          "Assessment of medications and surgical history"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on cause. Medication may restore antegrade ejaculation in some men. If not, sperm can often be recovered from urine or used with IUI/IVF; in other cases, sperm retrieval or more advanced ART may be used."
+        ],
+        "listItems": [
+          "Medication to restore normal ejaculation when possible",
+          "IUI or IVF using processed sperm (e.g. from urine or retrieval)",
+          "More advanced ART in complex cases"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Men with retrograde ejaculation can often have biological children. Either medication restores ejaculation or sperm are obtained for IUI/IVF. Our specialists will recommend the best approach after evaluation."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "Consult a fertility specialist or urologist if you notice little or no ejaculate with orgasm, cloudy urine after orgasm, or have difficulty conceiving. Retrograde ejaculation is a treatable cause of male infertility."
+        ]
+      }
     }
   },
   "genetic-testing": {
+    "uspTitle": "Genetic  <span class=\"cs_accent_color\">Testing</span>",
     "title": "Genetic Testing",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1629,9 +3190,59 @@
           "bottomImage": "/assets/img/recent_post2.jpg"
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "Genetic testing is done to identify genetic or chromosomal abnormalities that may affect fertility, pregnancy outcomes, or the health of future children."
+        ],
+        "listItems": [
+          "Identify genetic causes of infertility",
+          "Screen embryos for chromosomal abnormalities (PGT)",
+          "Carrier screening for inherited conditions",
+          "Inform treatment and family planning"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "Depending on the test, genetic testing may check:"
+        ],
+        "listItems": [
+          "Chromosomal abnormalities (aneuploidy, structural)",
+          "Single-gene mutations",
+          "Carrier status for inherited disorders",
+          "Embryo genetic health (PGT-A, PGT-M, PGT-SR)"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "Methods vary by test type: blood/saliva for carrier or karyotype testing; embryo biopsy for PGT; amniotic fluid or CVS for prenatal testing. Our team will explain the specific steps for your test."
+        ],
+        "listItems": [
+          "Sample collection (blood, saliva, or embryo cells)",
+          "Laboratory processing and analysis",
+          "Report generation and counseling"
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Preparation depends on the test. For blood or saliva tests, minimal preparation. For PGT, embryos are created via IVF and biopsied. For prenatal tests, timing and consent are discussed with your doctor."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Results are explained during genetic counseling. Normal results may rule out certain conditions; abnormal results help guide treatment, embryo selection, or pregnancy decisions. Our genetic counselors support you in understanding and next steps."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost varies by test type and number of samples or embryos. Contact us for a detailed quote and to book an appointment."
+        ]
+      }
     }
   },
   "genetic-factors": {
+    "uspTitle": "Genetic  <span class=\"cs_accent_color\">Factors in Infertility</span>",
     "title": "Genetic Factors in Infertility",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1703,9 +3314,52 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "Understanding genetic factors helps identify inherited or chromosomal causes of infertility and guides testing and treatment."
+        ],
+        "listItems": [
+          "Identify chromosomal or single-gene causes of infertility",
+          "Assess risk of passing genetic conditions to offspring",
+          "Guide PGD/PGT and prenatal testing"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "Evaluation may include:"
+        ],
+        "listItems": [
+          "Chromosomal abnormalities",
+          "Inherited genetic diseases (e.g. cystic fibrosis, Tay Sachs)",
+          "Family history and carrier status"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "Assessment includes family history, and may include blood tests, karyotyping, or carrier screening. Pre-implantation genetic diagnosis (PGD) tests embryos during IVF."
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Bring family history information. For blood tests or carrier screening, follow your doctor's instructions. For PGD, you will be in an IVF cycle with embryo biopsy."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Results help identify genetic causes of infertility or risk to offspring. Our team provides counseling and explains options such as PGT, donor gametes, or prenatal testing."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost depends on the tests performed. Contact our center for pricing and to book an appointment."
+        ]
+      }
     }
   },
   "pgt-a": {
+    "uspTitle": "PGT-A  <span class=\"cs_accent_color\">Testing</span>",
     "title": "PGT-A",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1769,9 +3423,71 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "PGT-A is done to screen embryos for chromosomal abnormalities (aneuploidy) before transfer, to improve IVF success and reduce miscarriage risk."
+        ],
+        "listItems": [
+          "Select chromosomally normal embryos for transfer",
+          "Reduce risk of miscarriage and failed implantation",
+          "Reduce risk of conditions like Down syndrome",
+          "Improve IVF success rates in selected patients"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "PGT-A checks embryos for:"
+        ],
+        "listItems": [
+          "Whole-chromosome gains or losses (aneuploidy)",
+          "Extra or missing chromosomes (e.g. trisomy 21)",
+          "Chromosomal normality of the embryo"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "PGT-A is performed during an IVF cycle:"
+        ],
+        "steps": [
+          {
+            "title": "IVF and embryo culture",
+            "description": "Eggs are fertilized and embryos are cultured to day 5 (blastocyst)."
+          },
+          {
+            "title": "Embryo biopsy",
+            "description": "A few cells are removed from each embryo for testing."
+          },
+          {
+            "title": "Laboratory analysis",
+            "description": "Cells are analyzed for chromosomal number (e.g. NGS or array)."
+          },
+          {
+            "title": "Report and transfer",
+            "description": "Results identify euploid embryos; one or more are transferred in a fresh or frozen cycle."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "You will be in an IVF cycle. No special preparation beyond standard IVF protocols. Your doctor will confirm timing for biopsy and transfer."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Results indicate which embryos are euploid (chromosomally normal) and suitable for transfer. Euploid embryos have higher implantation and live birth rates and lower miscarriage risk. Your doctor will explain which embryos can be transferred."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "PGT-A cost depends on the number of embryos tested and the laboratory. Contact us for current PGT-A test cost and to book an appointment."
+        ]
+      }
     }
   },
   "donor-program": {
+    "uspTitle": "Donor Program – <span class=\"cs_accent_color\">Egg, Sperm & Embryo Donation</span>",
     "title": "Donor Program – Egg, Sperm & Embryo Donation",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1871,9 +3587,83 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "The donor program (egg, sperm, or embryo donation) is for couples or individuals who need donor gametes or embryos to build their family."
+        ],
+        "listItems": [
+          "Women with diminished ovarian reserve or premature ovarian failure",
+          "Men with no sperm or severe male factor",
+          "Couples with genetic concerns",
+          "Single parents and same-sex couples"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "Donated eggs, sperm, or embryos are matched with recipients. Eggs or sperm are used in IVF/ICSI; donor embryos are thawed and transferred. All donors are screened; programs are confidential and legally supported."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "Steps typically include:"
+        ],
+        "steps": [
+          {
+            "title": "Consultation and matching",
+            "description": "Assessment of your needs and matching with a suitable donor (egg/sperm/embryo)."
+          },
+          {
+            "title": "Donor screening",
+            "description": "Donors undergo medical, genetic, and infectious disease screening."
+          },
+          {
+            "title": "IVF or embryo transfer",
+            "description": "Donor eggs or sperm are used in IVF/ICSI; or donor embryos are prepared for transfer."
+          },
+          {
+            "title": "Transfer and pregnancy test",
+            "description": "Embryo transfer is performed; pregnancy test is done about two weeks later."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Option when own gametes are not viable",
+          "Screened, quality-assured donors",
+          "Confidential and supportive process",
+          "Legally compliant programs"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Success rates depend on donor and recipient factors and embryo quality. Our team will discuss expected outcomes for your situation."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Risks are similar to IVF. Donor programs carry additional ethical and legal considerations; we provide counseling and clear agreements."
+        ],
+        "listItems": [
+          "Standard IVF and pregnancy risks",
+          "Emotional and legal aspects of third-party reproduction"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery is the same as for IVF (e.g. after embryo transfer). No recovery is needed for the donor matching process itself."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost includes donor compensation (where applicable), screening, IVF/ICSI, and transfer. Ask for a detailed donor program cost breakdown at your consultation."
+        ]
+      }
     }
   },
   "male-infertility-treatment-in-india": {
+    "uspTitle": "Male Infertility  <span class=\"cs_accent_color\">Treatment in India</span>",
     "title": "Male Infertility",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2049,9 +3839,83 @@
           ]
         }
       ]
+    },
+    "maleInfertilityContent": {
+      "types": {
+        "paragraphs": [
+          "Male infertility can be broadly categorized by cause: sperm production problems, blockages or transport issues, or hormonal and genetic factors. Understanding the type helps guide diagnosis and treatment."
+        ],
+        "listItems": [
+          "Sperm production disorders (e.g. low count, poor motility, abnormal morphology)",
+          "Obstructive causes (blockage preventing sperm from reaching the ejaculate)",
+          "Hormonal or endocrine disorders",
+          "Genetic or chromosomal conditions"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Many biological and environmental factors can cause male infertility. These include:"
+        ],
+        "listItems": [
+          "Sperm problems: malformed sperm, low sperm count (oligospermia), absence of sperm (azoospermia)",
+          "Genetic disorders: Klinefelter syndrome, myotonic dystrophy",
+          "Medical conditions: diabetes, autoimmune diseases, cystic fibrosis",
+          "Infections: epididymitis, orchitis, STIs",
+          "Varicoceles (swollen veins in the testicles)",
+          "Cancer treatments: chemotherapy, radiation, orchiectomy",
+          "Testicular trauma",
+          "Hormonal disorders affecting the hypothalamus or pituitary glands",
+          "Lifestyle: tobacco, alcohol, drugs, obesity, heat exposure, certain medications"
+        ]
+      },
+      "symptoms": {
+        "paragraphs": [
+          "The primary symptom is inability to conceive after repeated unprotected intercourse. Male infertility can also cause psychological and emotional symptoms, and sometimes physical signs:"
+        ],
+        "listItems": [
+          "Difficulty conceiving a child with a partner",
+          "Depression, grief, inadequacy, or failure",
+          "Low sex drive or erectile dysfunction",
+          "Swelling or discomfort in the testicles",
+          "Tiredness, impotence, depression, weight gain (if low testosterone)"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "A primary care physician or urologist can diagnose male infertility. They will perform a physical examination and review health and sexual history. Key tests include:"
+        ],
+        "listItems": [
+          "Semen analysis (volume and quality of sperm)",
+          "Blood tests (hormones, genetics/chromosomes)",
+          "Urinalysis (STIs, diabetes)",
+          "Testicular biopsy (to assess sperm production)"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Many treatment options can reverse or work around male infertility. Depending on the cause, treatment may include:"
+        ],
+        "listItems": [
+          "Lifestyle changes: healthy weight, diet, exercise, stress management, avoiding tobacco and alcohol",
+          "Medications: hormone therapy or changing medications that affect sperm",
+          "Surgery: vasectomy reversal, varicocelectomy, sperm retrieval, vasoepididymostomy",
+          "Assisted reproductive technology: ICSI, IVF"
+        ]
+      },
+      "fertilityOutlook": {
+        "paragraphs": [
+          "Yes. Many men with male infertility can have biological children. Success depends on the cause. Lifestyle changes, medication, surgery, or ART (e.g. IVF/ICSI) can often achieve pregnancy. Our specialists will discuss your individual outlook and the best options for you."
+        ]
+      },
+      "whenToSeeDoctor": {
+        "paragraphs": [
+          "Consult a fertility specialist or urologist if you and your partner have been trying to conceive for a year (or six months if the female partner is 35 or older) without success. Also see a doctor if you have known risk factors, symptoms such as pain or swelling in the testicles, or a history of sexual or reproductive health issues."
+        ]
+      }
     }
   },
   "chorionic-villus-sampling-cvs": {
+    "uspTitle": "Chorionic Villus Sampling  <span class=\"cs_accent_color\">(CVS)</span>",
     "title": "Chorionic Villus Sampling (CVS)",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2155,9 +4019,70 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "CVS is done to obtain genetic information about the baby early in pregnancy, typically to detect chromosomal or genetic disorders."
+        ],
+        "listItems": [
+          "Detect chromosomal abnormalities (e.g. Down syndrome)",
+          "Diagnose certain genetic disorders",
+          "Allow earlier results than amniocentesis (10–13 weeks)"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "CVS checks fetal chromosomes and can detect:"
+        ],
+        "listItems": [
+          "Chromosomal abnormalities (aneuploidy, structural)",
+          "Certain single-gene disorders when indicated",
+          "Genetic makeup of the developing baby"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "CVS is performed between 10 and 13 weeks of pregnancy:"
+        ],
+        "steps": [
+          {
+            "title": "Ultrasound guidance",
+            "description": "Ultrasound locates the placenta and safest approach (transabdominal or transcervical)."
+          },
+          {
+            "title": "Sample collection",
+            "description": "A thin needle or catheter is used to collect a small sample of chorionic villi (placental tissue)."
+          },
+          {
+            "title": "Laboratory analysis",
+            "description": "The sample is sent to the lab for chromosomal/genetic analysis."
+          },
+          {
+            "title": "Results and counseling",
+            "description": "Results are discussed with you; genetic counseling is provided."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Bladder may need to be full or empty depending on approach; your doctor will advise. No fasting usually required. Consent and counseling are done before the procedure."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Normal results suggest no chromosomal abnormality in the tested cells. Abnormal results indicate a genetic condition; our team will explain implications and options, including further testing or pregnancy management."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost of CVS varies by center and type of analysis. Contact us for pricing and to book an appointment."
+        ]
+      }
     }
   },
   "couple-carrier-screening": {
+    "uspTitle": "Couple   <span class=\"cs_accent_color\">Carrier Screening</span>",
     "title": "Couple Carrier Screening",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2254,9 +4179,69 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "Couple carrier screening is done to find out if both partners carry gene changes for the same inherited condition, which could affect their children."
+        ],
+        "listItems": [
+          "Identify carrier status for inherited disorders",
+          "Assess risk of having a child with a genetic condition",
+          "Support informed family planning and reproductive options"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "Screening typically checks for carrier status for conditions such as:"
+        ],
+        "listItems": [
+          "Cystic fibrosis",
+          "Sickle cell anemia",
+          "Tay-Sachs disease",
+          "Thalassemia",
+          "Spinal muscular atrophy",
+          "Other panel-specific conditions"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "The process is straightforward:"
+        ],
+        "steps": [
+          {
+            "title": "Sample collection",
+            "description": "Blood or saliva is collected from both partners."
+          },
+          {
+            "title": "Genetic testing",
+            "description": "Samples are analyzed in the lab for gene mutations linked to inherited disorders."
+          },
+          {
+            "title": "Results and counseling",
+            "description": "A genetic counselor interprets results and discusses risk and options (e.g. PGD, prenatal testing)."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Usually no special preparation. For blood draw, follow any instructions from the lab. Both partners need to be tested for meaningful couple screening."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "If only one or neither partner is a carrier for a condition, the risk to offspring is low. If both are carriers of the same condition, there is increased risk; our counselors explain options such as PGD during IVF, prenatal testing, or donor gametes."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Couple Carrier Screening test cost varies with the number of conditions screened and the panel. In India it often ranges from ₹10,000 to ₹50,000. Contact us for a quote and to book an appointment."
+        ]
+      }
     }
   },
   "pgt-m": {
+    "uspTitle": "PGT-M  <span class=\"cs_accent_color\">Testing</span>",
     "title": "PGT-M",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2355,9 +4340,191 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "PGT-M is done to screen embryos for specific single-gene (monogenic) disorders before transfer, so couples at risk can have unaffected children."
+        ],
+        "listItems": [
+          "Prevent passing known genetic disorders to children",
+          "Select embryos free of the tested mutation",
+          "Support couples with family history of monogenic conditions"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "PGT-M checks embryos for:"
+        ],
+        "listItems": [
+          "Specific gene mutations (e.g. cystic fibrosis, sickle cell, Huntington's)",
+          "Inherited single-gene disorders for which the family is at risk",
+          "Whether the embryo has inherited the mutation from carrier parents"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "PGT-M is performed during an IVF cycle:"
+        ],
+        "steps": [
+          {
+            "title": "Preliminary work-up",
+            "description": "Parents' blood/saliva is used to identify the mutation and linked markers (probes)."
+          },
+          {
+            "title": "IVF and embryo culture",
+            "description": "Embryos are created and grown to blastocyst stage (day 5–6)."
+          },
+          {
+            "title": "Embryo biopsy",
+            "description": "A few cells are removed from each embryo for genetic testing."
+          },
+          {
+            "title": "Genetic analysis and selection",
+            "description": "Cells are tested for the specific mutation; unaffected embryos are identified for transfer."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Pre-test work-up (parent samples and probe design) is required. You will then undergo an IVF cycle. Your doctor and genetic counselor will guide you through timing and consent."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Results show which embryos carry the mutation and which do not. Only embryos free of the tested disorder are recommended for transfer. PGT-M success rate depends on embryo quality and IVF outcome; our team will explain your results and next steps."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "PGT-M testing cost in India typically ranges from ₹50,000 to ₹1,50,000 depending on complexity and number of embryos. Contact us for current pricing and to book an appointment."
+        ]
+      }
+    }
+  },
+  "pgt-sr": {
+    "uspTitle": "PGT-SR  <span class=\"cs_accent_color\">Testing</span>",
+    "title": "PGT-SR (Preimplantation Genetic Testing for Structural Rearrangements)",
+    "slug": "pgt-sr",
+    "category": "diagnostic",
+    "description": "PGT-SR screens embryos for chromosomal structural rearrangements (translocations, inversions) before IVF transfer. Expert PGT-SR testing at Seeds of Innocence for couples with balanced rearrangements.",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/genetic.jpg",
+      "/assets/img/genetic.jpg"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is PGT-SR?",
+          "paragraphs": [
+            "PGT-SR (Preimplantation Genetic Testing for Structural Rearrangements) is a genetic test used during IVF to identify embryos that have inherited an unbalanced chromosomal rearrangement from a parent who carries a balanced translocation or inversion. Couples in which one partner carries a balanced structural rearrangement have an increased risk of recurrent miscarriage or having a child with birth defects or developmental delay. PGT-SR allows selection of embryos that are either balanced (like the carrier parent) or have a normal chromosome set, so that only those embryos are transferred.",
+            "At Seeds of Innocence, we offer PGT-SR as part of our comprehensive genetic testing services to help such couples achieve a healthy pregnancy and reduce the risk of passing on unbalanced chromosomes."
+          ]
+        },
+        {
+          "heading": "Why is PGT-SR Done?",
+          "paragraphs": [
+            "PGT-SR is recommended when one or both partners carry a balanced chromosomal rearrangement, such as:"
+          ],
+          "listItems": [
+            "Reciprocal or Robertsonian translocations",
+            "Inversions (paracentric or pericentric)",
+            "Other balanced structural rearrangements detected on karyotype",
+            "History of recurrent pregnancy loss or multiple failed IVF cycles where a parental rearrangement is known",
+            "Previous pregnancy or child with an unbalanced chromosomal abnormality"
+          ]
+        },
+        {
+          "heading": "How Does PGT-SR Work?",
+          "paragraphs": [
+            "The PGT-SR process is similar to PGT-M and PGT-A in that it is performed during an IVF cycle:"
+          ],
+          "listItems": [
+            "IVF is performed to create embryos; embryos are cultured to the blastocyst stage (day 5 or 6).",
+            "A few cells are removed from each embryo (embryo biopsy) and sent for genetic analysis.",
+            "The laboratory tests the cells for the specific structural rearrangement using probes or sequencing to detect balanced vs unbalanced chromosome copy.",
+            "Embryos that are balanced or chromosomally normal are identified; one or more of these can be transferred in a fresh or frozen cycle."
+          ]
+        },
+        {
+          "heading": "PGT-SR vs PGT-A and PGT-M",
+          "paragraphs": [
+            "PGT-A screens for whole-chromosome gains or losses (aneuploidy). PGT-M screens for single-gene (monogenic) disorders. PGT-SR is specifically for structural rearrangements (translocations, inversions). All three require an IVF cycle and embryo biopsy; PGT-SR, like PGT-M, typically requires a preliminary work-up to design probes for the specific rearrangement in the family."
+          ]
+        },
+        {
+          "heading": "PGT-SR Success and Cost",
+          "paragraphs": [
+            "PGT-SR can significantly improve the chance of a healthy pregnancy for carriers of structural rearrangements by avoiding transfer of embryos with unbalanced chromosomes. Success depends on embryo quality, the type of rearrangement, and the IVF cycle. The cost of PGT-SR in India varies with the complexity of the rearrangement and the number of embryos tested. Contact Seeds of Innocence for current PGT-SR pricing and to book a consultation with our genetic and IVF team."
+          ]
+        }
+      ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "PGT-SR is done to screen embryos for unbalanced chromosomal structural rearrangements (e.g. from a parent with a translocation or inversion) before transfer, to reduce the risk of miscarriage and of having a child with an unbalanced chromosome abnormality."
+        ],
+        "listItems": [
+          "Identify embryos that are balanced or chromosomally normal",
+          "Avoid transfer of embryos with unbalanced rearrangements",
+          "Support couples with known structural rearrangements to achieve a healthy pregnancy"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "PGT-SR checks embryos for:"
+        ],
+        "listItems": [
+          "The specific structural rearrangement (translocation or inversion) in the family",
+          "Whether the embryo has inherited a balanced or unbalanced form",
+          "Chromosome balance so that only suitable embryos are selected for transfer"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "PGT-SR is performed during an IVF cycle after embryo biopsy. A preliminary work-up (parent blood/karyotype and probe design) is required. The biopsy cells are analyzed in the lab for the rearrangement; results indicate which embryos are suitable for transfer."
+        ],
+        "steps": [
+          {
+            "title": "Preliminary work-up",
+            "description": "Parent karyotype and probe design for the specific rearrangement."
+          },
+          {
+            "title": "IVF and embryo culture",
+            "description": "Embryos are created and grown to blastocyst stage (day 5–6)."
+          },
+          {
+            "title": "Embryo biopsy",
+            "description": "A few cells are removed from each embryo for genetic testing."
+          },
+          {
+            "title": "Analysis and selection",
+            "description": "Cells are tested for the rearrangement; balanced or normal embryos are identified for transfer."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "You will need a karyotype and genetic counseling to confirm the rearrangement and plan the test. Then you will undergo an IVF cycle. Your doctor and genetic counselor will guide you through timing and consent."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Results show which embryos carry an unbalanced rearrangement and which are balanced or normal. Only embryos suitable for transfer are recommended. Your genetic counselor and doctor will explain the results and next steps."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "PGT-SR cost in India depends on the type of rearrangement and number of embryos tested. Contact us for current pricing and to book an appointment."
+        ]
+      }
     }
   },
   "difference-between-pgt-a-and-pgt-m": {
+    "uspTitle": "Difference between <span class=\"cs_accent_color\">PGT A & PGT-M/SR</span>",
     "title": "Difference between PGT A & PGT-M/SR",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2411,9 +4578,47 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "Understanding the difference between PGT-A and PGT-M helps couples and doctors choose the right test: PGT-A for chromosomal screening, PGT-M/SR for known genetic mutations or structural rearrangements."
+        ],
+        "listItems": [
+          "Clarify when PGT-A vs PGT-M/SR is indicated",
+          "Understand work-up and process differences",
+          "Support informed consent and treatment planning"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "PGT-A checks embryo chromosomes (aneuploidy). PGT-M checks for specific single-gene mutations. PGT-SR checks for structural chromosomal rearrangements. This page explains what each test checks and when each is used."
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "All involve IVF, blastocyst culture, and embryo biopsy. PGT-A usually needs no prior parent work-up. PGT-M and PGT-SR require parent samples and probe/marker work-up before the cycle. Your genetic counselor will explain the exact steps for your case."
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "For PGT-A: standard IVF preparation. For PGT-M/SR: preliminary blood/saliva collection and probe design, then IVF. Your clinic will guide you."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "PGT-A results indicate euploid vs aneuploid embryos. PGT-M/SR results indicate which embryos are free of the tested mutation or rearrangement. Your doctor will recommend which embryos are suitable for transfer."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost varies by test type and number of embryos. PGT-M/SR often costs more due to probe development. Contact us for a detailed quote and to book an appointment."
+        ]
+      }
     }
   },
   "amniocentesis": {
+    "uspTitle": "Amniocentesis  <span class=\"cs_accent_color\">Testing</span>",
     "title": "Amniocentesis",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2502,9 +4707,71 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "Amniocentesis is done to obtain amniotic fluid for genetic or other testing, usually to detect chromosomal or genetic conditions in the baby."
+        ],
+        "listItems": [
+          "Detect chromosomal abnormalities (e.g. Down, Edwards, Patau syndromes)",
+          "Test for certain genetic disorders (e.g. cystic fibrosis, Tay-Sachs)",
+          "Assess neural tube defects (e.g. spina bifida) or fetal lung maturity when indicated"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "Amniocentesis can check:"
+        ],
+        "listItems": [
+          "Chromosomal anomalies",
+          "Single-gene disorders when indicated",
+          "Neural tube defects (AFP)",
+          "Fetal lung maturity in high-risk pregnancies when needed"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "The procedure usually takes about 15–20 minutes:"
+        ],
+        "steps": [
+          {
+            "title": "Ultrasound",
+            "description": "Ultrasound locates the baby and the safest site for needle insertion."
+          },
+          {
+            "title": "Needle insertion",
+            "description": "A thin, sterile needle is passed through the abdomen into the amniotic sac."
+          },
+          {
+            "title": "Fluid withdrawal",
+            "description": "A small amount of amniotic fluid is withdrawn and sent for analysis."
+          },
+          {
+            "title": "Recovery and results",
+            "description": "You may rest briefly; results are discussed with you after the lab completes testing."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Usually performed after 15 weeks. Your doctor may advise a full or empty bladder. No routine fasting. Consent and counseling are done before the procedure."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Normal results suggest no chromosomal or tested genetic abnormality. Abnormal results indicate a condition; our team will explain implications, options, and follow-up. Amniocentesis is generally safe when performed by experienced specialists; our team minimizes risks and provides post-procedure care."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost of amniocentesis varies by center and tests performed. Contact us for pricing and to book an appointment."
+        ]
+      }
     }
   },
   "karyotyping": {
+    "uspTitle": "Karyotyping  <span class=\"cs_accent_color\">Testing</span>",
     "title": "Karyotyping",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2622,9 +4889,72 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "Karyotyping is done to examine the number and structure of chromosomes to diagnose genetic disorders, investigate infertility, or understand recurrent miscarriages."
+        ],
+        "listItems": [
+          "Diagnose chromosomal disorders (e.g. Down, Turner, Klinefelter syndromes)",
+          "Investigate infertility or recurrent miscarriages",
+          "Evaluate developmental delays or birth defects",
+          "Prenatal screening when indicated"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "Karyotyping checks:"
+        ],
+        "listItems": [
+          "Number of chromosomes (e.g. 46 in normal cells)",
+          "Structure of chromosomes (deletions, duplications, translocations)",
+          "Sex chromosomes (XX/XY)",
+          "Aneuploidy and structural rearrangements"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "The karyotyping procedure typically involves:"
+        ],
+        "steps": [
+          {
+            "title": "Sample collection",
+            "description": "Blood, bone marrow, amniotic fluid, or placental tissue is collected."
+          },
+          {
+            "title": "Cell culture",
+            "description": "Cells are grown in culture to obtain dividing cells for chromosome analysis."
+          },
+          {
+            "title": "Chromosome staining and imaging",
+            "description": "Chromosomes are stained and viewed under a microscope."
+          },
+          {
+            "title": "Analysis and report",
+            "description": "A genetic specialist arranges chromosomes into a karyotype; a report is generated (results may take 1–3 weeks)."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "For blood karyotyping, usually no fasting. For prenatal karyotyping, the sample is obtained via amniocentesis or CVS; follow the preparation for that procedure. Your doctor will give specific instructions."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Normal karyotype: 46, XX (female) or 46, XY (male) with no structural abnormality. Abnormal results may show aneuploidy, translocations, or other changes; our team will explain what they mean for fertility, pregnancy, or your child's health."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Karyotyping test cost varies by sample type and laboratory. Contact us for pricing and to book an appointment."
+        ]
+      }
     }
   },
   "microarray": {
+    "uspTitle": "Microarray  <span class=\"cs_accent_color\">Testing</span>",
     "title": "Microarray",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2737,9 +5067,71 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "Microarray testing is done to detect small chromosomal gains and losses (copy number variations) that may not be seen on routine karyotyping, in prenatal, postnatal, or miscarriage evaluation."
+        ],
+        "listItems": [
+          "Prenatal screening for fetal genetic imbalances",
+          "Unexplained developmental delay or birth defects",
+          "Recurrent miscarriages",
+          "Infertility or genetic work-up when indicated"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "Microarray checks for:"
+        ],
+        "listItems": [
+          "Copy number variations (deletions, duplications)",
+          "Small chromosomal imbalances not visible on karyotype",
+          "Genome-wide gains/losses (CGH or SNP microarray)"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "The microarray test procedure typically involves:"
+        ],
+        "steps": [
+          {
+            "title": "DNA isolation",
+            "description": "DNA is extracted from the sample (blood, amniotic fluid, CVS, or tissue)."
+          },
+          {
+            "title": "Hybridization",
+            "description": "DNA is labelled and hybridized to a chip containing thousands of probes."
+          },
+          {
+            "title": "Scanning and analysis",
+            "description": "The chip is scanned; software identifies copy number changes."
+          },
+          {
+            "title": "Report",
+            "description": "A genetic report is generated; results are explained with genetic counseling."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Depends on sample type. For blood, minimal preparation. For prenatal microarray, the sample is obtained via amniocentesis or CVS; follow that procedure's preparation."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Normal results suggest no significant copy number changes. Abnormal results may show deletions or duplications linked to developmental or other conditions; our genetic counselors explain implications and next steps. Microarray does not detect balanced translocations or single-gene mutations."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Microarray test pregnancy cost and postnatal cost vary by lab and analysis type. Contact us for pricing and to book an appointment."
+        ]
+      }
     }
   },
   "hla-matching": {
+    "uspTitle": "HLA   <span class=\"cs_accent_color\">Matching in IVF</span>",
     "title": "HLA Matching in IVF",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2811,9 +5203,70 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "HLA matching is done to assess immune compatibility between parents and/or embryos in IVF, and to select embryos for saviour sibling or HLA-matched transplant when needed."
+        ],
+        "listItems": [
+          "Assess compatibility for implantation and pregnancy success",
+          "Reduce risk of immune-mediated implantation failure or loss",
+          "HLA-matched embryo selection when a sibling needs stem cell transplant (saviour sibling)"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "HLA matching checks:"
+        ],
+        "listItems": [
+          "HLA (human leukocyte antigen) markers in parents and/or embryos",
+          "Compatibility between mother, father, and embryo",
+          "HLA type of embryos when matching for a sick sibling is required"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "The HLA matching process typically involves:"
+        ],
+        "steps": [
+          {
+            "title": "Sample collection",
+            "description": "Blood or cheek swab samples are collected from both parents (and sometimes from the child needing transplant)."
+          },
+          {
+            "title": "Laboratory testing",
+            "description": "Samples are tested to determine HLA markers."
+          },
+          {
+            "title": "Matching and reporting",
+            "description": "A matching report evaluates compatibility or identifies HLA-matched embryos (e.g. with PGT and HLA typing)."
+          },
+          {
+            "title": "Treatment plan",
+            "description": "Based on results, a personalized IVF/treatment plan is designed."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Usually no special preparation for blood or cheek swab. If combined with IVF/PGT, follow standard IVF and PGT-M/HLA work-up as advised by your doctor."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Results indicate HLA compatibility or which embryos are HLA-matched. Our team will explain how this affects your IVF plan, implantation success, or saviour sibling options."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "HLA matching test cost in India typically ranges from ₹10,000 to ₹30,000 depending on test type and clinic. Contact us for pricing and to book an appointment."
+        ]
+      }
     }
   },
   "semen-analysis": {
+    "uspTitle": "Semen   <span class=\"cs_accent_color\">Analysis</span>",
     "title": "Semen Analysis",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2830,9 +5283,79 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "Semen analysis is done to evaluate male fertility and identify factors that may affect a couple's ability to conceive."
+        ],
+        "listItems": [
+          "Diagnose male fertility problems",
+          "Evaluate sperm count, motility, and morphology",
+          "Guide treatment or assisted reproduction options",
+          "Follow-up after vasectomy or treatment"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "The test analyzes key parameters of the semen sample:"
+        ],
+        "listItems": [
+          "Sperm count (concentration)",
+          "Sperm motility (movement)",
+          "Sperm morphology (shape)",
+          "Volume and liquefaction",
+          "pH and other parameters"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "The test is performed in a few steps:"
+        ],
+        "steps": [
+          {
+            "title": "Patient preparation",
+            "description": "Abstinence from ejaculation for 2–5 days as advised by your doctor."
+          },
+          {
+            "title": "Sample collection",
+            "description": "Semen is collected by masturbation into a sterile container, usually at the clinic or at home with specific instructions."
+          },
+          {
+            "title": "Laboratory analysis",
+            "description": "The sample is analyzed under a microscope and with other methods to measure count, motility, morphology, and other parameters."
+          },
+          {
+            "title": "Report generation",
+            "description": "Results are compiled into a report and explained by your doctor."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Follow your doctor's instructions for accurate results:"
+        ],
+        "listItems": [
+          "Abstain from ejaculation for 2–5 days (typically 2–3 days)",
+          "Avoid alcohol and certain medications if advised",
+          "Collect the full sample in the provided container",
+          "Keep the sample at body temperature and deliver to the lab within the recommended time"
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Results are compared to WHO reference values. Normal results suggest adequate sperm parameters; abnormal results may indicate low count, poor motility, or abnormal morphology. Your doctor will explain what your results mean and recommend next steps, which may include repeat testing, further tests, or treatment."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost of semen analysis varies by clinic and location. Contact our team for current pricing and to book an appointment."
+        ]
+      }
     }
   },
   "semen-analysis-at-home": {
+    "uspTitle": "Semen Analysis  <span class=\"cs_accent_color\"> at Home</span>",
     "title": "Semen Analysis at Home",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2849,9 +5372,76 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "Semen analysis at home is done to assess male fertility in a private, convenient setting while still using laboratory evaluation."
+        ],
+        "listItems": [
+          "Assess male fertility from home",
+          "Check sperm count, motility, and morphology",
+          "Convenient first step before a clinic visit"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "The test checks the same parameters as a clinic-based semen analysis:"
+        ],
+        "listItems": [
+          "Sperm count",
+          "Sperm motility",
+          "Sperm morphology",
+          "Sample volume and quality"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "Steps typically include:"
+        ],
+        "steps": [
+          {
+            "title": "Order kit / instructions",
+            "description": "You receive a collection kit and instructions for abstinence and collection."
+          },
+          {
+            "title": "Sample collection at home",
+            "description": "You provide the semen sample at home in the provided container, following the instructions carefully."
+          },
+          {
+            "title": "Delivery to lab",
+            "description": "The sample is delivered or sent to the laboratory within the required timeframe."
+          },
+          {
+            "title": "Laboratory analysis and report",
+            "description": "The lab analyzes the sample and generates a report; results are shared with you or your doctor."
+          }
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "Preparation is similar to clinic-based semen analysis:"
+        ],
+        "listItems": [
+          "Abstain from ejaculation for 2–5 days as instructed",
+          "Follow kit instructions for collection and handling",
+          "Deliver or ship the sample within the time limit specified"
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Results are interpreted like a standard semen analysis. Your doctor or the service will explain what the results mean and whether a follow-up clinic visit or further tests are recommended."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost depends on the provider and whether it includes lab evaluation and reporting. Contact us for pricing and booking."
+        ]
+      }
     }
   },
   "microtese": {
+    "uspTitle": "MicroTESE  <span class=\"cs_accent_color\">Testing</span>",
     "title": "MicroTESE",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2868,9 +5458,84 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "MicroTESE is recommended for men with non-obstructive azoospermia (NOA) when no sperm appear in the ejaculate due to impaired production."
+        ],
+        "listItems": [
+          "Non-obstructive azoospermia",
+          "Failed or insufficient sperm from TESA/TESE",
+          "Genetic or hormonal causes of no sperm production",
+          "Men seeking sperm for ICSI"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "Under an operating microscope, the surgeon examines the testicular tissue and extracts small areas more likely to contain sperm. The sample is processed in the lab; sperm found can be used immediately for ICSI or frozen."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "MicroTESE is performed under anesthesia:"
+        ],
+        "steps": [
+          {
+            "title": "Evaluation",
+            "description": "Review of history, hormones, and prior tests to confirm NOA and suitability for MicroTESE."
+          },
+          {
+            "title": "Surgery",
+            "description": "Small incision in the scrotum; testicular tissue is examined under the microscope and sperm-containing areas are extracted."
+          },
+          {
+            "title": "Lab processing",
+            "description": "Tissue is processed; sperm are isolated for fresh ICSI or cryopreservation."
+          },
+          {
+            "title": "ICSI",
+            "description": "Retrieved sperm are used to fertilize eggs in an IVF-ICSI cycle."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Higher sperm retrieval rates than conventional TESE in NOA",
+          "Minimal tissue removal",
+          "Option for biological fatherhood in severe male factor",
+          "Retrieved sperm can be used or frozen"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Sperm retrieval rates with MicroTESE in NOA vary by cause (e.g. genetics, hormones). Our urologists will discuss your individual chances based on diagnosis."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Risks are those of a minor testicular procedure:"
+        ],
+        "listItems": [
+          "Bleeding, infection, or pain at the site",
+          "Rarely, reduced testosterone production",
+          "No guarantee that sperm will be found"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery is usually a few days to a week. Avoid heavy exercise and wear supportive underwear as advised. You can go home the same day in most cases."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost includes surgery, anesthesia, and lab processing. It is often part of an IVF-ICSI package. Get a detailed MicroTESE cost estimate at your consultation."
+        ]
+      }
     }
   },
   "tesa": {
+    "uspTitle": "TESA / PESA  <span class=\"cs_accent_color\">Sperm Retrieval</span>",
     "title": "TESA / PESA",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -2888,9 +5553,84 @@
           ]
         }
       ]
+    },
+    "treatmentContent": {
+      "whoNeeds": {
+        "paragraphs": [
+          "TESA and PESA are recommended when no sperm are present in the ejaculate but may be retrieved from the testicles (TESA) or epididymis (PESA)."
+        ],
+        "listItems": [
+          "Obstructive azoospermia (blockage in the reproductive tract)",
+          "Failed vasectomy reversal or other obstruction",
+          "Congenital absence of the vas deferens",
+          "Certain cases of non-obstructive azoospermia"
+        ]
+      },
+      "howItWorks": {
+        "paragraphs": [
+          "TESA uses a needle to aspirate sperm from the testicle; PESA aspirates fluid and sperm from the epididymis. Both are done under local or light anesthesia. Retrieved sperm are used for ICSI in an IVF cycle."
+        ]
+      },
+      "procedure": {
+        "paragraphs": [
+          "Sperm retrieval is typically done on the day of or before egg retrieval:"
+        ],
+        "steps": [
+          {
+            "title": "Evaluation",
+            "description": "Confirm azoospermia and decide between TESA, PESA, or MicroTESE based on cause."
+          },
+          {
+            "title": "TESA or PESA",
+            "description": "Under local anesthesia, a needle is used to aspirate sperm from the testicle (TESA) or epididymis (PESA)."
+          },
+          {
+            "title": "Lab processing",
+            "description": "Sample is processed; sperm are isolated for ICSI (fresh or frozen)."
+          },
+          {
+            "title": "ICSI",
+            "description": "Retrieved sperm are used to fertilize eggs in an IVF-ICSI cycle."
+          }
+        ]
+      },
+      "benefits": {
+        "items": [
+          "Minimally invasive sperm retrieval",
+          "Same-day or short procedure",
+          "Enables ICSI when ejaculate has no sperm",
+          "Proven in obstructive azoospermia"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Sperm retrieval success is high in obstructive azoospermia. In non-obstructive azoospermia, success varies; MicroTESE may be recommended if TESA/PESA fail."
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Risks are generally low:"
+        ],
+        "listItems": [
+          "Bruising, bleeding, or discomfort at the site",
+          "Small risk of infection",
+          "Possibility that no sperm are found (especially in NOA)"
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery is quick; most men resume normal activities within a few days. Avoid strenuous exercise as advised. Supportive underwear may be recommended."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost includes the procedure and lab processing; it is often part of your IVF-ICSI package. Get a detailed TESA/PESA cost estimate at your consultation."
+        ]
+      }
     }
   },
   "high-risk-pregnancy": {
+    "uspTitle": "High-Risk   <span class=\"cs_accent_color\">Pregnancy</span>",
     "title": "High-Risk Pregnancy",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3045,9 +5785,76 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Signs and symptoms depend on the underlying condition. Your provider may label the pregnancy high risk based on medical history, not always on current symptoms."
+        ],
+        "listItems": [
+          "High blood pressure or swelling",
+          "Vaginal bleeding or leaking",
+          "Severe nausea or abdominal pain",
+          "Decreased fetal movement",
+          "Preterm labour signs"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "A pregnancy is high risk when the mother, fetus, or both have a higher-than-average chance of complications."
+        ],
+        "listItems": [
+          "Preexisting conditions (diabetes, hypertension, thyroid, obesity, PCOS)",
+          "Pregnancy-related conditions (gestational diabetes, preeclampsia, placental issues)",
+          "Lifestyle factors",
+          "Multiple gestation",
+          "Advanced maternal age"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Your provider will assess risk at the first visit and throughout pregnancy."
+        ],
+        "listItems": [
+          "Medical history and physical examination",
+          "Blood tests and glucose screening",
+          "Ultrasound and fetal monitoring",
+          "Blood pressure and urine checks",
+          "Consultation with specialists when needed"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Care is tailored to the specific risk factors."
+        ],
+        "listItems": [
+          "More frequent prenatal visits and monitoring",
+          "Medication to manage blood pressure, diabetes, or other conditions",
+          "Lifestyle and diet guidance",
+          "Early delivery planning when indicated",
+          "Consultation with maternal-fetal medicine (MFM) specialists"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "High-risk pregnancy does not mean you or the baby will have problems. With appropriate care, many high-risk pregnancies result in healthy babies. The label helps your team monitor you more closely and reduce complications."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Follow your care plan and attend all appointments. Report any new symptoms promptly."
+        ],
+        "listItems": [
+          "Regular prenatal care and specialist follow-up",
+          "Healthy diet and weight management",
+          "Blood pressure and glucose monitoring as advised",
+          "Avoid smoking, alcohol, and unnecessary medications"
+        ]
+      }
     }
   },
   "fetal-reduction": {
+    "uspTitle": "Fetal   <span class=\"cs_accent_color\">Reduction</span>",
     "title": "Fetal Reduction",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3128,9 +5935,66 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Fetal reduction is a procedure, not a condition. Before the procedure, you may have a multiple pregnancy (twins, triplets, or more) detected on ultrasound."
+        ],
+        "listItems": [
+          "Multiple gestation on ultrasound",
+          "Symptoms of early pregnancy (nausea, fatigue) as with any pregnancy"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Multiple pregnancy (often from IVF or ovulation induction) is the reason fetal reduction may be considered. High-order multiples increase risks to mother and babies."
+        ],
+        "listItems": [
+          "IVF or fertility treatment leading to multiple embryos implanting",
+          "Natural multiple conception",
+          "Desire to reduce obstetric and neonatal risks"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Multiple pregnancy is confirmed by ultrasound. A detailed scan around 11–13 weeks helps assess fetuses and guide decisions."
+        ],
+        "listItems": [
+          "First-trimester ultrasound",
+          "First-trimester screening when indicated",
+          "Assessment of fetal number and chorionicity"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Fetal reduction is one option when carrying multiple fetuses. The procedure reduces the number of fetuses to lower risks. Alternatives include continuing the multiple pregnancy with close monitoring."
+        ],
+        "listItems": [
+          "Multifetal pregnancy reduction (transabdominal or other techniques)",
+          "Selective reduction when one fetus has a serious abnormality",
+          "Continuing with multiple pregnancy and enhanced monitoring"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Fetal reduction aims to improve the chance of a healthy pregnancy and live birth by reducing the risks of prematurity and complications associated with high-order multiples. It does not affect future fertility."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "After the procedure, rest as advised and report fever, bleeding, leaking, or contractions. Follow-up scans monitor the remaining fetus(es)."
+        ],
+        "listItems": [
+          "Rest and avoid strenuous activity for a few days",
+          "Follow-up ultrasound to confirm well-being of remaining fetus(es)",
+          "Routine prenatal care for the ongoing pregnancy"
+        ]
+      }
     }
   },
   "pregnancy-and-coronavirus": {
+    "uspTitle": "Pregnancy and   <span class=\"cs_accent_color\">Coronavirus</span>",
     "title": "Pregnancy and Coronavirus",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3210,9 +6074,69 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Pregnant women with coronavirus may have the same symptoms as non-pregnant individuals, or no symptoms. Pregnancy does not appear to make infection more likely, but severe illness can occur in some, especially with underlying health conditions."
+        ],
+        "listItems": [
+          "Fever, cough, breathlessness",
+          "Loss of taste or smell",
+          "Fatigue",
+          "Asymptomatic in many cases"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Infection is caused by the SARS-CoV-2 virus. Pregnancy alters the immune system and may increase the risk of severe illness in some women, particularly those with diabetes, hypertension, or respiratory conditions."
+        ],
+        "listItems": [
+          "Exposure to the virus",
+          "Underlying health conditions (diabetes, lupus, respiratory disease) may increase complication risk"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Diagnosis is by viral testing (e.g. RT-PCR or rapid test). Prenatal care continues with appropriate precautions."
+        ],
+        "listItems": [
+          "COVID-19 testing when indicated",
+          "Routine prenatal visits (may be modified to limit exposure)",
+          "Ultrasound and fetal monitoring as usual"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Care focuses on managing infection and continuing prenatal care. Hospital delivery with precautions is recommended; home birth is not advised for IVF or high-risk pregnancies."
+        ],
+        "listItems": [
+          "Symptomatic treatment and isolation if infected",
+          "Prenatal care with social distancing and hygiene",
+          "Delivery in hospital with support person tested as per policy",
+          "Breastfeeding with mask and hand hygiene or pumped milk if mother is infected"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Coronavirus infection during pregnancy does not typically affect long-term fertility. Most pregnancies progress well with appropriate care. Vaccination and precautions help protect mother and baby."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Limit exposure, practice hand hygiene and social distancing, and follow current guidelines for vaccination and prenatal visits."
+        ],
+        "listItems": [
+          "Hand washing and alcohol-based sanitizer",
+          "Avoid contact with anyone with cold or flu symptoms",
+          "Avoid crowded places",
+          "Follow local vaccination and prenatal care guidelines"
+        ]
+      }
     }
   },
   "laparoscopy-and-hysteroscopy": {
+    "uspTitle": "Laparoscopy and   <span class=\"cs_accent_color\">Hysteroscopy</span>",
     "title": "Laparoscopy and Hysteroscopy",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3291,6 +6215,7 @@
     }
   },
   "laparoscopy": {
+    "uspTitle": "Laparoscopy  <span class=\"cs_accent_color\">Procedure</span>",
     "title": "Laparoscopy",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3395,9 +6320,93 @@
           ]
         }
       ]
+    },
+    "surgeryContent": {
+      "whyDone": {
+        "paragraphs": [
+          "Laparoscopy is performed to diagnose and treat conditions inside the abdomen and pelvis that can affect fertility and reproductive health."
+        ],
+        "listItems": [
+          "Diagnose fertility issues (endometriosis, ovarian cysts, fibroids, pelvic infections)",
+          "Treat reproductive abnormalities and remove blockages or growths",
+          "Evaluate ectopic pregnancy and perform fertility-related surgeries"
+        ]
+      },
+      "conditionsTreated": {
+        "paragraphs": [
+          "Laparoscopy can treat a range of conditions:"
+        ],
+        "listItems": [
+          "Endometriosis",
+          "Ovarian cysts",
+          "Uterine fibroids",
+          "Blocked or damaged fallopian tubes",
+          "Ectopic pregnancy",
+          "Pelvic inflammatory disease",
+          "Adhesions and scar tissue"
+        ]
+      },
+      "procedureOverview": {
+        "paragraphs": [
+          "Laparoscopy is usually done under general anaesthesia. Small incisions are made in the abdomen so the surgeon can insert the laparoscope and instruments."
+        ],
+        "steps": [
+          {
+            "title": "Pre-surgery preparation",
+            "description": "Fasting as advised; discussion of the procedure and anaesthesia. You will be given general anaesthesia so you are asleep during the procedure."
+          },
+          {
+            "title": "Small incisions",
+            "description": "The surgeon makes small incisions (typically 1–2 cm) in the abdomen. One is for the laparoscope (camera and light); others may be used for surgical instruments."
+          },
+          {
+            "title": "Examination and treatment",
+            "description": "The surgeon views the pelvic and abdominal organs on a monitor and can examine or treat conditions (e.g. remove cysts, treat endometriosis, repair tubes) during the same procedure."
+          },
+          {
+            "title": "Completion and recovery",
+            "description": "Instruments are removed and incisions are closed. You are moved to recovery; many patients go home the same day or after a short stay."
+          }
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery from laparoscopy is generally quicker than from open surgery."
+        ],
+        "listItems": [
+          "Most patients can go home the same day or after an overnight stay",
+          "Mild discomfort at incision sites for a few days; pain relief as advised",
+          "Return to normal activities usually within a few days to a week",
+          "Follow-up consultation to check healing and discuss results",
+          "Avoid heavy lifting and strenuous activity for the period advised by your doctor"
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "As with any surgery, laparoscopy carries some risks:"
+        ],
+        "listItems": [
+          "Infection at the incision site",
+          "Bleeding",
+          "Injury to nearby organs (e.g. bladder, bowel)",
+          "Reaction to anaesthesia",
+          "Blood clots (rare)"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Laparoscopy often improves fertility when it treats conditions such as endometriosis, ovarian cysts, or tubal disease. Success depends on the condition treated, severity, and overall fertility factors. Our team will discuss expected outcomes and next steps (e.g. natural conception or IVF) based on your case."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost of laparoscopy varies with the type of procedure (diagnostic vs therapeutic) and facility. Contact us for an estimated cost and to book an appointment."
+        ]
+      }
     }
   },
   "open-surgery": {
+    "uspTitle": "Open   <span class=\"cs_accent_color\">Surgery</span>",
     "title": "Open Surgery",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3516,9 +6525,93 @@
           ]
         }
       ]
+    },
+    "surgeryContent": {
+      "whyDone": {
+        "paragraphs": [
+          "Open surgery is performed when complex reproductive or pregnancy-related conditions require direct access to the abdomen or reproductive organs, and when minimally invasive options are not suitable or have not been effective."
+        ],
+        "listItems": [
+          "Treat complex fertility problems (large fibroids, severe endometriosis)",
+          "Address pregnancy complications (e.g. ectopic pregnancy, uterine rupture)",
+          "Perform procedures that need full exposure (e.g. myomectomy, ovarian cyst removal)"
+        ]
+      },
+      "conditionsTreated": {
+        "paragraphs": [
+          "Open surgery may be used for:"
+        ],
+        "listItems": [
+          "Large or multiple uterine fibroids (myomectomy)",
+          "Severe endometriosis with adhesions",
+          "Large ovarian cysts not suitable for laparoscopy",
+          "Uterine abnormalities (septum, scar tissue)",
+          "Ectopic pregnancy",
+          "Cesarean section when vaginal delivery is not possible",
+          "Uterine rupture repair"
+        ]
+      },
+      "procedureOverview": {
+        "paragraphs": [
+          "Open surgery is performed under general anaesthesia. The surgeon makes an incision in the abdomen to access the reproductive organs and perform the required procedure."
+        ],
+        "steps": [
+          {
+            "title": "Pre-surgery preparation",
+            "description": "Diagnosis (ultrasound, blood tests) and pre-operative instructions (fasting, medications). Anaesthesia and consent are discussed."
+          },
+          {
+            "title": "Anaesthesia",
+            "description": "General anaesthesia is administered so you are asleep during the procedure."
+          },
+          {
+            "title": "Surgical procedure",
+            "description": "An incision is made in the lower abdomen to access the uterus, ovaries, or other organs. The specific surgery (e.g. myomectomy, cyst removal) is performed. Duration depends on complexity."
+          },
+          {
+            "title": "Closing and monitoring",
+            "description": "The incision is closed and you are monitored in recovery. Hospital stay may be several days depending on the procedure."
+          }
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery after open surgery takes longer than minimally invasive surgery."
+        ],
+        "listItems": [
+          "Hospital stay of a few days depending on the procedure",
+          "Rest at home; avoid heavy lifting and strenuous activity for weeks as advised",
+          "Follow-up appointments to monitor healing and reproductive health",
+          "Pain relief and medication as prescribed",
+          "Healthy diet and gradual return to normal activities"
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Risks of open surgery can include:"
+        ],
+        "listItems": [
+          "Infection",
+          "Bleeding",
+          "Reaction to anaesthesia",
+          "Formation of scar tissue (adhesions) that may affect future fertility",
+          "Longer recovery time compared to laparoscopic surgery"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Open surgery can effectively treat complex conditions and improve the chances of pregnancy when fibroids, severe endometriosis, or other structural issues are addressed. Success depends on the condition, extent of disease, and overall fertility factors. Our specialists will discuss expected outcomes and further fertility options (e.g. IVF) based on your case."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost of open surgery varies with the type of procedure and hospital stay. Contact us for an estimate and to book an appointment."
+        ]
+      }
     }
   },
   "pcos-polycystic-ovarian-syndrome": {
+    "uspTitle": "PCOS   <span class=\"cs_accent_color\">Polycystic Ovarian Syndrome</span>",
     "title": "PCOS (Polycystic Ovarian Syndrome)",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3591,9 +6684,74 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "listItems": [
+          "Irregular menstrual cycle",
+          "Difficulty conceiving",
+          "Weight gain",
+          "Excess facial and body hair",
+          "Dark patches on skin, skin tags",
+          "Hair loss, oily skin, acne",
+          "Mood swings",
+          "Pelvic pain",
+          "Sleep apnea"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "The exact cause is unknown; genetics and family history play a role. Hormonal imbalance (e.g. high androgens, insulin resistance) is central."
+        ],
+        "listItems": [
+          "Genetic factors",
+          "Hormonal imbalance",
+          "Insulin resistance",
+          "Lifestyle and weight"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Diagnosis is based on symptoms, blood tests, and ultrasound."
+        ],
+        "listItems": [
+          "Medical history and physical examination",
+          "Hormonal blood tests (androgens, LH/FSH, insulin)",
+          "Ultrasound (polycystic ovarian appearance)",
+          "Rule out thyroid and other conditions"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment aims to manage symptoms and improve fertility."
+        ],
+        "listItems": [
+          "Lifestyle changes and PCOS diet",
+          "Weight management",
+          "Ovulation-inducing drugs (e.g. clomiphene)",
+          "Metformin for insulin resistance",
+          "IVF when needed"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "PCOS causes irregular or absent ovulation (anovulation), which reduces the chance of natural conception. Weight gain can further reduce fertility and response to fertility treatment. With treatment, many women with PCOS conceive."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Early diagnosis and lifestyle changes help. Maintain a healthy weight, follow a balanced diet, and have regular checkups."
+        ],
+        "listItems": [
+          "Healthy diet and weight management",
+          "Regular exercise",
+          "Medical follow-up for hormones and metabolic health"
+        ]
+      }
     }
   },
   "irregular-menstrual-cycle": {
+    "uspTitle": "Irregular   <span class=\"cs_accent_color\">Menstrual Cycle</span>",
     "title": "Irregular Menstrual Cycle",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3671,9 +6829,73 @@
           "bottomImage": "/assets/img/recent_post2.jpg"
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Irregular menstrual cycle means cycles that are too short, too long, or unpredictable."
+        ],
+        "listItems": [
+          "Cycles shorter than 21 days or longer than 35 days",
+          "Missed or absent periods",
+          "Heavy or prolonged bleeding",
+          "Severe cramps",
+          "Difficulty conceiving"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Many factors can disrupt the menstrual cycle."
+        ],
+        "listItems": [
+          "Hormonal imbalance (PCOS, thyroid)",
+          "Stress",
+          "Weight changes",
+          "Excessive exercise",
+          "Medical conditions affecting the reproductive system"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Evaluation includes history, examination, and tests."
+        ],
+        "listItems": [
+          "Medical history and physical examination",
+          "Hormonal testing",
+          "Ultrasound evaluation",
+          "Ovulation tracking"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on the cause."
+        ],
+        "listItems": [
+          "Lifestyle modifications",
+          "Hormone therapy",
+          "Ovulation induction",
+          "IUI or IVF when needed"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Irregular cycles can mean irregular or absent ovulation, making it harder to conceive. Predicting ovulation is difficult. Treatment can restore ovulation and improve pregnancy chances."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Seek help if cycles are consistently irregular or you have difficulty conceiving."
+        ],
+        "listItems": [
+          "Regular medical checkups",
+          "Healthy weight and lifestyle",
+          "Fertility specialist consultation when trying to conceive"
+        ]
+      }
     }
   },
   "diabetes-thyroid-and-obesity": {
+    "uspTitle": "Diabetes, Thyroid and   <span class=\"cs_accent_color\">Obesity</span>",
     "title": "Diabetes, Thyroid and Obesity",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3750,9 +6972,73 @@
           "bottomImage": "/assets/img/recent_post2.jpg"
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Symptoms depend on whether the condition is diabetes, thyroid disorder, or obesity."
+        ],
+        "listItems": [
+          "Irregular menstrual cycles",
+          "Weight gain or difficulty losing weight",
+          "Fatigue",
+          "Increased thirst or urination (diabetes)",
+          "Heat or cold intolerance (thyroid)",
+          "Difficulty conceiving"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Each condition has different causes; they often overlap (e.g. obesity with insulin resistance, thyroid with hormonal imbalance)."
+        ],
+        "listItems": [
+          "Genetic and lifestyle factors",
+          "Insulin resistance",
+          "Thyroid dysfunction",
+          "Obesity and metabolic syndrome"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Blood tests and clinical assessment are used."
+        ],
+        "listItems": [
+          "Blood glucose and HbA1c",
+          "Thyroid function tests (TSH, T3, T4)",
+          "Hormonal evaluation",
+          "BMI and metabolic workup"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment involves controlling the condition and optimizing fertility."
+        ],
+        "listItems": [
+          "Diabetes: diet, exercise, medication/insulin",
+          "Thyroid: thyroid hormone replacement or antithyroid drugs",
+          "Obesity: lifestyle changes, weight loss",
+          "Fertility treatment (ovulation induction, IVF) when indicated"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Diabetes, thyroid disorders, and obesity can cause irregular ovulation, reduced sperm quality, higher miscarriage risk, and lower IVF success. Good control improves fertility outcomes."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Work with your doctor and, if needed, an endocrinologist. Aim for good glucose and thyroid control and a healthy weight before conception."
+        ],
+        "listItems": [
+          "Regular medical and fertility follow-up",
+          "Lifestyle modification and weight management",
+          "Medication adherence"
+        ]
+      }
     }
   },
   "endometrial-and-ovarian": {
+    "uspTitle": "Endometrial and   <span class=\"cs_accent_color\">Ovarian Health</span>",
     "title": "Endometrial and Ovarian Health",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3834,9 +7120,72 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Symptoms depend on whether the issue is endometrial (lining) or ovarian."
+        ],
+        "listItems": [
+          "Thin or unreceptive endometrium (may have no symptoms)",
+          "Irregular or absent ovulation",
+          "Difficulty conceiving",
+          "Heavy or light periods",
+          "Pain (if endometriosis or cysts)"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Endometrial and ovarian health can be affected by hormones, age, and other conditions."
+        ],
+        "listItems": [
+          "Hormonal imbalance (estrogen, progesterone)",
+          "Endometriosis",
+          "PCOS",
+          "Age-related decline in ovarian reserve",
+          "Previous surgery or infection"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Assessment includes ultrasound and hormone tests."
+        ],
+        "listItems": [
+          "Ultrasound (endometrial thickness, ovarian reserve)",
+          "Hormone tests (FSH, AMH, estradiol)",
+          "Monitoring during IVF cycles"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment is tailored to improve endometrial receptivity and ovarian response."
+        ],
+        "listItems": [
+          "Hormone therapy for endometrial lining",
+          "Ovulation induction or IVF",
+          "Specialized protocols for low reserve or thin lining",
+          "Donor eggs when appropriate"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "A healthy endometrium and good ovarian reserve are essential for implantation and pregnancy. Addressing endometrial and ovarian issues improves IVF and natural conception success."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Regular monitoring and individualized protocols help optimize outcomes."
+        ],
+        "listItems": [
+          "Follow fertility specialist recommendations",
+          "Healthy lifestyle",
+          "Early intervention for age-related decline"
+        ]
+      }
     }
   },
   "endometriosis": {
+    "uspTitle": "Endometriosis  <span class=\"cs_accent_color\">Understanding the Condition & Finding Hope</span>",
     "title": "Endometriosis",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -3944,9 +7293,73 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Symptoms vary; some women have no symptoms and are diagnosed during fertility workup."
+        ],
+        "listItems": [
+          "Painful or heavy periods",
+          "Pelvic pain",
+          "Pain during or after sex",
+          "Pain with bowel or bladder during periods",
+          "Difficulty conceiving",
+          "Fatigue, bloating"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "The exact cause is not fully known. Retrograde menstruation, genetics, and immune factors may play a role."
+        ],
+        "listItems": [
+          "Retrograde menstruation",
+          "Genetic factors",
+          "Immune system issues",
+          "Surgical scar implantation"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Diagnosis can be delayed. History, imaging, and sometimes surgery are used."
+        ],
+        "listItems": [
+          "Medical history and physical examination",
+          "Ultrasound",
+          "MRI",
+          "Laparoscopy (definitive diagnosis)"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "There is no cure; treatment focuses on symptoms and fertility."
+        ],
+        "listItems": [
+          "Pain relief (e.g. NSAIDs)",
+          "Hormonal therapy (pill, IUD, GnRH agonists)",
+          "Laparoscopic surgery to remove or destroy lesions",
+          "IVF when needed for fertility"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Endometriosis can cause adhesions, tubal damage, and inflammation that affect fertility. Surgery and IVF can help many women conceive."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Lifestyle measures and medical treatment help manage symptoms. Regular follow-up with a gynaecologist or fertility specialist is important."
+        ],
+        "listItems": [
+          "Healthy diet and exercise",
+          "Stress management",
+          "Medical and surgical options as needed"
+        ]
+      }
     }
   },
   "fibroids-polyps-and-adenomyosis": {
+    "uspTitle": "Fibroids, Uterine Polyps and   <span class=\"cs_accent_color\">Adenomyosis Treatments</span>",
     "title": "Fibroids, Uterine Polyps and Adenomyosis Treatments",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4058,9 +7471,73 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Symptoms depend on whether the condition is fibroids, polyps, or adenomyosis; some women have no symptoms."
+        ],
+        "listItems": [
+          "Irregular or heavy periods",
+          "Pelvic pain",
+          "Painful intercourse",
+          "Spotting between periods",
+          "Frequent urination",
+          "Difficulty conceiving"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Fibroids and polyps are growths; adenomyosis is endometrial tissue within the uterine muscle. Exact causes are not fully known."
+        ],
+        "listItems": [
+          "Hormonal factors",
+          "Genetic predisposition",
+          "Age (adenomyosis more common after 40)",
+          "Prior pregnancy or surgery"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Imaging and sometimes hysteroscopy or biopsy are used."
+        ],
+        "listItems": [
+          "Ultrasound",
+          "MRI",
+          "Hysteroscopy",
+          "Physical examination"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on size, location, symptoms, and fertility goals."
+        ],
+        "listItems": [
+          "Medication for symptoms",
+          "Hysteroscopic removal of polyps",
+          "Myomectomy (fibroid removal)",
+          "IVF when needed; surgery may be done before or after"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Fibroids, polyps, and adenomyosis can affect implantation, cause miscarriage, or distort the uterine cavity. Removal of polyps and selected fibroids can improve pregnancy rates."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Regular gynaecological care and timely treatment help preserve fertility and manage symptoms."
+        ],
+        "listItems": [
+          "Regular checkups",
+          "Treatment of symptomatic growths",
+          "Fertility specialist consultation when planning pregnancy"
+        ]
+      }
     }
   },
   "tuberculosis": {
+    "uspTitle": "Female Genital   <span class=\"cs_accent_color\">Tuberculosis</span>",
     "title": "Female Genital Tuberculosis",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4121,9 +7598,69 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Female genital tuberculosis is often asymptomatic for years; it may be found during infertility workup."
+        ],
+        "listItems": [
+          "Pelvic pain",
+          "Painful periods or intercourse",
+          "Lower abdominal discomfort",
+          "Rarely: lesions on cervix or vagina"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Genital TB is usually caused by spread of Mycobacterium tuberculosis from the lungs to the reproductive tract."
+        ],
+        "listItems": [
+          "Spread from pulmonary TB",
+          "Can block fallopian tubes and damage uterus",
+          "Common cause of infertility in endemic regions"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Diagnosis may include imaging, culture, PCR, or histology."
+        ],
+        "listItems": [
+          "History of TB or exposure",
+          "HSG (tubal damage)",
+          "Endometrial biopsy or culture",
+          "PCR or other TB tests"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Antibiotic treatment for TB is required. IVF is often recommended as tubes may remain damaged."
+        ],
+        "listItems": [
+          "Anti-tuberculosis medication",
+          "IVF to bypass damaged tubes",
+          "Surgery in selected cases"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Genital TB often damages fallopian tubes and endometrium, making natural conception unlikely. IVF bypasses the tubes and offers many women a chance at pregnancy after TB treatment."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Complete TB treatment as advised. Seek fertility care; IVF is often the preferred option after treatment."
+        ],
+        "listItems": [
+          "Full course of anti-TB drugs",
+          "Fertility evaluation after treatment",
+          "IVF when tubes are damaged"
+        ]
+      }
     }
   },
   "recurrent-miscarriages": {
+    "uspTitle": "Recurrent   <span class=\"cs_accent_color\">Miscarriages</span>",
     "title": "Recurrent Miscarriages",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4159,9 +7696,73 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Recurrent miscarriage is defined as 3 or more consecutive pregnancy losses. Symptoms are those of pregnancy loss (e.g. bleeding, cramping)."
+        ],
+        "listItems": [
+          "Repeated pregnancy loss",
+          "Vaginal bleeding and cramping with each loss",
+          "Emotional distress"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "About 50–60% of first-trimester miscarriages are due to chromosomal abnormalities in the embryo. Other causes include uterine, hormonal, and immune factors."
+        ],
+        "listItems": [
+          "Chromosomal abnormalities in the embryo",
+          "Uterine abnormalities (septum, fibroids)",
+          "Hormonal or thyroid disorders",
+          "Thrombophilia",
+          "Immunological factors",
+          "Infections"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Workup aims to find treatable causes."
+        ],
+        "listItems": [
+          "Products of conception (POC) testing",
+          "Parental karyotype",
+          "Ultrasound or hysteroscopy (uterine anatomy)",
+          "Thyroid and hormonal tests",
+          "Thrombophilia screening when indicated"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on the cause. PGT (CCS) can select euploid embryos and reduce loss from chromosomal errors."
+        ],
+        "listItems": [
+          "IVF with PGT-A (comprehensive chromosomal screening)",
+          "Surgery for uterine abnormalities",
+          "Thyroid or hormonal correction",
+          "Anticoagulation when indicated"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Recurrent miscarriage does not mean you cannot have a healthy pregnancy. Identifying and treating the cause (e.g. chromosomal, uterine, hormonal) improves the chance of a successful birth."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Seek a specialist evaluation after 2 or more losses. Emotional support and a clear plan help many couples achieve a healthy pregnancy."
+        ],
+        "listItems": [
+          "Fertility specialist and recurrent loss workup",
+          "Genetic counseling",
+          "Support and follow-up care"
+        ]
+      }
     }
   },
   "reasons-for-delayed-periods-but-not-pregnant": {
+    "uspTitle": "Reasons For   <span class=\"cs_accent_color\">Delayed Periods But Not Pregnant</span>",
     "title": "Reasons For Delayed Periods But Not Pregnant",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4247,9 +7848,73 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "The main sign is delayed or missed periods when you are not pregnant. A delay of 7 days or more, or a missed period (6+ weeks), may need evaluation."
+        ],
+        "listItems": [
+          "Late or missed periods",
+          "Irregular cycles",
+          "Sometimes no other symptoms"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Many factors can delay periods."
+        ],
+        "listItems": [
+          "Stress and emotional factors",
+          "Weight fluctuations",
+          "PCOS",
+          "Thyroid disorders",
+          "Chronic illness or medications",
+          "Birth control",
+          "Abnormal ovulation (e.g. pituitary dysfunction)"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Your doctor will take a history and may order tests to find the cause."
+        ],
+        "listItems": [
+          "Pregnancy test",
+          "Medical history and examination",
+          "Blood tests (thyroid, hormones)",
+          "Evaluation of reproductive health"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on the cause."
+        ],
+        "listItems": [
+          "Lifestyle changes (stress, weight, exercise)",
+          "Thyroid or hormonal treatment",
+          "PCOS management",
+          "Fertility treatment (ovulation induction, IUI, IVF) when trying to conceive"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Delayed or irregular periods often mean irregular ovulation, which can make conception harder. Treating the underlying cause (e.g. thyroid, PCOS) can restore regular cycles and improve fertility."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Pay attention to your cycle and seek care if periods are consistently late or you have other concerning symptoms."
+        ],
+        "listItems": [
+          "Healthy lifestyle and stress management",
+          "Regular medical checkups",
+          "Consult a healthcare provider for persistent delays"
+        ]
+      }
     }
   },
   "what-is-ovarian-hyperstimulation": {
+    "uspTitle": "What is   <span class=\"cs_accent_color\">Ovarian Hyperstimulation?</span>",
     "title": "What is Ovarian Hyperstimulation?",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4346,9 +8011,70 @@
           ]
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "OHSS (Ovarian Hyperstimulation Syndrome) symptoms vary from mild to severe."
+        ],
+        "listItems": [
+          "Mild: abdominal swelling, nausea, vomiting, discomfort",
+          "Moderate: abdominal distension, bloating, pain, nausea and vomiting",
+          "Severe: breathlessness, decreased urine output, blood clots"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "OHSS is caused by an excessive response to fertility drugs (gonadotropins) used in IVF. Enlarged ovaries release substances that cause fluid to leak into the abdomen and sometimes the chest."
+        ],
+        "listItems": [
+          "Ovarian stimulation with gonadotropins",
+          "High VEGF/HCG levels",
+          "Fluid shift into abdomen",
+          "Risk higher with PCOS, young age, high AMH, previous OHSS"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Diagnosis is based on symptoms, examination, and often ultrasound during or after IVF stimulation."
+        ],
+        "listItems": [
+          "Clinical assessment (weight, abdominal girth, fluid)",
+          "Ultrasound (ovarian size, fluid)",
+          "Blood tests (electrolytes, kidney function when indicated)"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Prevention is key. If OHSS occurs, treatment is mainly supportive."
+        ],
+        "listItems": [
+          "Individualised stimulation (antagonist protocol, freezing embryos to avoid fresh transfer)",
+          "Mild: fluids, pain relief, outpatient follow-up",
+          "Moderate to severe: hospitalisation, IV fluids, paracentesis if needed",
+          "Thrombosis prevention (compression stockings, heparin in selected cases)"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "OHSS is a complication of fertility treatment, not a cause of infertility. It usually resolves with time. Embryo freezing and later transfer avoid pregnancy-related worsening and allow recovery before transfer."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Choose a clinic that minimises OHSS risk. If you develop symptoms, follow your doctor's advice and seek care if symptoms worsen."
+        ],
+        "listItems": [
+          "Adequate fluids",
+          "Avoid bed rest (increases clot risk); stay active as advised",
+          "Report worsening pain, breathlessness, or low urine output",
+          "Attend follow-up visits"
+        ]
+      }
     }
   },
   "hysteroscopy": {
+    "uspTitle": "Hysteroscopy  <span class=\"cs_accent_color\">Understanding the Procedure & Benefits</span>",
     "title": "Hysteroscopy",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4442,9 +8168,92 @@
           ]
         }
       ]
+    },
+    "surgeryContent": {
+      "whyDone": {
+        "paragraphs": [
+          "Hysteroscopy is performed to diagnose and treat conditions inside the uterus that can cause abnormal bleeding, infertility, or recurrent miscarriage."
+        ],
+        "listItems": [
+          "Diagnose fertility issues (fibroids, polyps, adhesions, uterine shape)",
+          "Treat reproductive abnormalities (remove polyps, fibroids, or scar tissue)",
+          "Evaluate abnormal uterine bleeding or pelvic pain"
+        ]
+      },
+      "conditionsTreated": {
+        "paragraphs": [
+          "Hysteroscopy can treat:"
+        ],
+        "listItems": [
+          "Uterine fibroids",
+          "Uterine polyps",
+          "Intrauterine adhesions (Asherman's syndrome)",
+          "Uterine septum and other congenital abnormalities",
+          "Abnormal menstrual bleeding",
+          "Removal of retained tissue or foreign body"
+        ]
+      },
+      "procedureOverview": {
+        "paragraphs": [
+          "Hysteroscopy uses a thin, lighted tube (hysteroscope) passed through the vagina and cervix into the uterus. It is often done in an outpatient setting with local or general anaesthesia as needed."
+        ],
+        "steps": [
+          {
+            "title": "Pre-surgery preparation",
+            "description": "Medication may be given to relax the cervix. Local or general anaesthesia is administered depending on whether the procedure is diagnostic or operative."
+          },
+          {
+            "title": "Insertion of hysteroscope",
+            "description": "The hysteroscope is inserted through the vagina and cervix into the uterine cavity. The camera provides a clear view of the uterus on a monitor."
+          },
+          {
+            "title": "Examination and treatment",
+            "description": "The doctor examines the uterine cavity for abnormalities. If operative hysteroscopy is planned, small instruments can be passed through the scope to remove polyps, fibroids, or adhesions. The procedure typically lasts 15–30 minutes."
+          },
+          {
+            "title": "Completion and recovery",
+            "description": "The scope is removed. Most women go home the same day with instructions for mild cramping or spotting for a few days."
+          }
+        ]
+      },
+      "recovery": {
+        "paragraphs": [
+          "Recovery from hysteroscopy is usually quick."
+        ],
+        "listItems": [
+          "Most women go home the same day",
+          "Mild cramping or spotting for a few days; pain relief as advised",
+          "Return to normal activities within a few days",
+          "Follow-up consultation to discuss findings and next steps",
+          "Avoid tampons and intercourse for the period recommended by your doctor"
+        ]
+      },
+      "risks": {
+        "paragraphs": [
+          "Risks of hysteroscopy are generally low but can include:"
+        ],
+        "listItems": [
+          "Infection",
+          "Bleeding",
+          "Injury to the uterus or cervix",
+          "Reaction to anaesthesia",
+          "Rarely: scarring or adhesions"
+        ]
+      },
+      "successRate": {
+        "paragraphs": [
+          "Hysteroscopy can improve fertility and pregnancy outcomes when it corrects conditions such as polyps, fibroids, or adhesions that affect implantation. Success depends on the condition treated and other fertility factors. Our team will discuss how results may impact your treatment plan and chances of conception."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost of hysteroscopy varies with diagnostic vs operative procedure and facility. Contact us for an estimate and to book an appointment."
+        ]
+      }
     }
   },
   "blocked-fallopian-tubes": {
+    "uspTitle": "Blocked   <span class=\"cs_accent_color\">Fallopian Tubes</span>",
     "title": "Blocked Fallopian Tubes",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4554,9 +8363,75 @@
           "bottomImage": "/assets/img/recent_post2.jpg"
         }
       ]
+    },
+    "womenHealthContent": {
+      "symptoms": {
+        "paragraphs": [
+          "Many women with blocked tubes have no symptoms; infertility is often the first sign."
+        ],
+        "listItems": [
+          "Difficulty getting pregnant",
+          "Pelvic or abdominal pain",
+          "Painful periods",
+          "Pain during intercourse",
+          "Unusual vaginal discharge"
+        ]
+      },
+      "causes": {
+        "paragraphs": [
+          "Blockage is usually due to scarring or damage from infection or disease."
+        ],
+        "listItems": [
+          "Pelvic inflammatory disease (PID)",
+          "Endometriosis",
+          "Previous ectopic pregnancy",
+          "Previous pelvic or abdominal surgery",
+          "STIs (chlamydia, gonorrhea)",
+          "Tuberculosis",
+          "Fibroids",
+          "Congenital abnormalities"
+        ]
+      },
+      "diagnosis": {
+        "paragraphs": [
+          "Tubal patency and structure are assessed with imaging or surgery."
+        ],
+        "listItems": [
+          "Hysterosalpingography (HSG)",
+          "Laparoscopy",
+          "Sonohysterography",
+          "Blood tests for infection"
+        ]
+      },
+      "treatmentOptions": {
+        "paragraphs": [
+          "Treatment depends on the extent of blockage. IVF often offers the best chance when tubes are severely damaged."
+        ],
+        "listItems": [
+          "Laparoscopic surgery to remove blockages or scar tissue",
+          "IVF (bypasses tubes)",
+          "Tubal surgery in selected cases"
+        ]
+      },
+      "impactOnFertility": {
+        "paragraphs": [
+          "Blocked tubes prevent the egg and sperm from meeting, so natural conception is difficult or impossible. IVF bypasses the tubes and is highly effective for many couples."
+        ]
+      },
+      "management": {
+        "paragraphs": [
+          "Seek a fertility evaluation if you have difficulty conceiving or risk factors for tubal disease. Early diagnosis helps plan the best treatment."
+        ],
+        "listItems": [
+          "Prompt treatment of pelvic infections",
+          "Regular checkups",
+          "Fertility specialist consultation"
+        ]
+      }
     }
   },
   "mfm-scans-and-diagnostics": {
+    "uspTitle": "MFM   <span class=\"cs_accent_color\">Scans & Diagnostics</span>",
     "title": "MFM Scans & Diagnostics",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4699,9 +8574,136 @@
           ]
         }
       ]
+    },
+    "diagnosticContent": {
+      "purpose": {
+        "paragraphs": [
+          "MFM scans and diagnostics are done to monitor high-risk pregnancies, screen for fetal anomalies, and provide prenatal diagnosis and care for mother and baby."
+        ],
+        "listItems": [
+          "Monitor high-risk pregnancies (medical conditions, multiples, prior complications)",
+          "Screen for chromosomal and structural fetal abnormalities",
+          "Guide prenatal testing and fetal interventions when needed"
+        ]
+      },
+      "whatItChecks": {
+        "paragraphs": [
+          "MFM scans and diagnostics can include:"
+        ],
+        "listItems": [
+          "First trimester NT/NB and combined screening",
+          "Anomaly (Level II) and cardiac screening",
+          "Fetal growth, Doppler, and wellbeing",
+          "NIPS, CVS, amniocentesis when indicated",
+          "Pre-eclampsia and preterm labour screening"
+        ]
+      },
+      "howPerformed": {
+        "paragraphs": [
+          "Services include non-invasive ultrasound (early pregnancy, NT, anomaly, growth, Doppler, 3D/4D) and, when indicated, invasive procedures (CVS, amniocentesis, fetal blood sampling). Scans follow FMF and ISUOG guidelines. Your MFM specialist will explain which scans or tests are recommended for you."
+        ]
+      },
+      "preparation": {
+        "paragraphs": [
+          "For ultrasound scans, a moderately full bladder may be needed for early scans; your center will advise. For invasive procedures, preparation is as for CVS or amniocentesis. Bring prior reports and a list of medications."
+        ]
+      },
+      "understandingResults": {
+        "paragraphs": [
+          "Results are explained during your visit. Normal results provide reassurance; abnormal or high-risk results are discussed with options for further testing, genetic counseling, or management. Our MFM team supports you through decision-making and care planning."
+        ]
+      },
+      "cost": {
+        "paragraphs": [
+          "Cost of MFM scans and diagnostics varies by type of scan or procedure and number of visits. Contact us for pricing and to book an appointment."
+        ]
+      }
     }
   },
+  "maternal-and-fetal-medicine": {
+    "uspTitle": "Maternal and   <span class=\"cs_accent_color\">Fetal Medicine</span>",
+    "title": "Maternal and Fetal Medicine",
+    "slug": "maternal-and-fetal-medicine",
+    "category": "diagnostic-test",
+    "description": "Maternal and Fetal Medicine (MFM) at Seeds of Innocence provides expert care for high-risk pregnancies, prenatal diagnosis, and fetal therapy. Comprehensive MFM services for mother and baby.",
+    "heroBackground": "/assets/img/Top-Header.png",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/MFM Scans & Diagnostics1.png",
+      "/assets/img/MFM Scans & Diagnostics2.png"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "What is Maternal and Fetal Medicine?",
+          "paragraphs": [
+            "Maternal and Fetal Medicine (MFM), also known as perinatology, is a specialty of obstetrics that focuses on the care of expectant mothers and their unborn babies when there is an increased risk of complications during pregnancy. MFM specialists work closely with your obstetrician to provide expert diagnosis, monitoring, and treatment for high-risk pregnancies.",
+            "At Seeds of Innocence, our Department of Maternal and Fetal Medicine offers comprehensive care for women with medical conditions, multiple pregnancies, previous pregnancy complications, or those who need advanced prenatal screening and fetal diagnostics. Our aim is to support you through pregnancy and help you deliver a healthy baby."
+          ],
+          "sideImage": "/assets/img/MFM Scans & Diagnostics1.png"
+        },
+        {
+          "heading": "Who Should See an MFM Specialist?",
+          "paragraphs": [
+            "You may be referred to an MFM specialist if you or your baby are at higher risk due to:"
+          ],
+          "listItems": [
+            "Advanced maternal age (35 and above)",
+            "Pre-existing medical conditions (diabetes, hypertension, thyroid, autoimmune or heart disease)",
+            "Multiple pregnancy (twins, triplets)",
+            "Previous pregnancy complications (recurrent miscarriage, preterm birth, preeclampsia)",
+            "Fetal growth restriction or congenital anomaly suspected on scan",
+            "Family or personal history of genetic conditions",
+            "Need for prenatal screening or invasive prenatal diagnosis (CVS, amniocentesis)"
+          ]
+        },
+        {
+          "heading": "What Does Our MFM Department Offer?",
+          "paragraphs": [
+            "Our Maternal and Fetal Medicine department at Seeds of Innocence provides:"
+          ],
+          "listItems": [
+            "Preconception and prenatal consultation for high-risk pregnancies",
+            "Detailed ultrasound scans as per FMF (Fetal Medicine Foundation, UK) and ISUOG guidelines",
+            "First trimester NT/NB and combined screening for Down syndrome and other conditions",
+            "Anomaly (Level II) and fetal cardiac screening",
+            "Genetic counseling and prenatal diagnostic procedures (CVS, amniocentesis) when indicated",
+            "Management of multiple pregnancies including TTTS (twin-to-twin transfusion syndrome)",
+            "Fetal therapy and invasive procedures when required",
+            "Close coordination with your obstetrician for delivery planning"
+          ]
+        },
+        {
+          "heading": "Why Choose Seeds of Innocence for MFM Care?",
+          "paragraphs": [
+            "Our MFM team includes specialists trained in high-risk pregnancy care, fetal ultrasound, and prenatal genetics. We use modern equipment and follow international guidelines to give you and your baby the best possible care. Whether you need a one-time consultation, ongoing monitoring, or prenatal diagnosis, we are here to support you through your pregnancy journey."
+          ]
+        },
+        {
+          "heading": "Book an MFM Consultation",
+          "paragraphs": [
+            "If you have been referred for maternal-fetal medicine or have concerns about your pregnancy, contact Seeds of Innocence to book an appointment. Our team will guide you through the right scans, tests, and care plan for you and your baby."
+          ]
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "What is the difference between an MFM specialist and my regular obstetrician?",
+        "answer": "Your obstetrician manages your overall pregnancy and delivery. An MFM specialist is consulted when there is a higher risk of complications—for example, due to medical conditions, multiples, or need for advanced prenatal testing. They work together to plan your care."
+      },
+      {
+        "question": "When should I see an MFM specialist?",
+        "answer": "You may be referred before conception (preconception) or during pregnancy if you have a medical condition, multiple pregnancy, previous complications, or if screening suggests further evaluation. Your doctor can refer you based on your history and risk factors."
+      },
+      {
+        "question": "Does seeing an MFM mean my pregnancy is in danger?",
+        "answer": "Not necessarily. Many women see an MFM for monitoring or screening even when the pregnancy is low risk. It means extra expertise is being used to keep you and your baby as safe as possible."
+      }
+    ]
+  },
   "yoga-and-fertility-heres-how-yoga-can-support-fertility": {
+    "uspTitle": "Yoga and   <span class=\"cs_accent_color\">Fertility</span>",
     "title": "Yoga and Fertility - How Yoga Can Support Fertility",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4750,9 +8752,70 @@
           ]
         }
       ]
+    },
+    "lifestyleBlogContent": {
+      "whyItMatters": {
+        "paragraphs": [
+          "Yoga supports reproductive health by reducing stress, improving blood flow to the pelvic region, and helping to balance hormones. Stress and hormonal imbalance are known to affect fertility; yoga offers a natural way to support the body and mind during the fertility journey."
+        ],
+        "listItems": [
+          "Stress reduction and its positive impact on reproductive health",
+          "Hormonal balance through calming the nervous system",
+          "Lifestyle influence on ovulation and conception"
+        ]
+      },
+      "benefits": {
+        "paragraphs": [
+          "Regular yoga practice can benefit fertility in several ways:"
+        ],
+        "listItems": [
+          "Improves blood flow to reproductive organs",
+          "Enhances hormonal balance",
+          "Reduces stress and anxiety",
+          "Supports emotional wellbeing",
+          "May improve egg and sperm quality indirectly through better circulation and stress management",
+          "Creates a state of receptivity and calm that supports conception"
+        ]
+      },
+      "practicalTips": {
+        "paragraphs": [
+          "Incorporate fertility-friendly yoga into your routine with these approaches:"
+        ],
+        "listItems": [
+          "Gentle poses that open the hips and pelvis (e.g. butterfly, cat-cow)",
+          "Restorative and relaxation poses to reduce stress",
+          "Breathing exercises (pranayama) for calm and focus",
+          "Avoid intense or heated yoga if advised by your doctor",
+          "Ask your fertility specialist which poses are safe for you"
+        ]
+      },
+      "expertAdvice": {
+        "paragraphs": [
+          "Fertility specialists often recommend yoga as a complementary practice. It is important to maintain a healthy lifestyle alongside medical treatment. Stress management, adequate sleep, and moderate exercise like yoga can support your overall fertility journey. Always inform your doctor about your exercise routine, especially during treatment."
+        ],
+        "listItems": [
+          "Importance of stress management for fertility",
+          "Combining yoga with medical care when needed",
+          "Maintaining a balanced, healthy lifestyle"
+        ]
+      },
+      "lifestyleRecommendations": {
+        "paragraphs": [
+          "Alongside yoga, focus on these healthy habits for fertility:"
+        ],
+        "listItems": [
+          "Balanced diet rich in nutrients",
+          "Regular, moderate exercise (e.g. yoga, walking)",
+          "Stress reduction and relaxation",
+          "Adequate sleep",
+          "Avoid smoking and limit alcohol",
+          "Stay hydrated and maintain a healthy weight"
+        ]
+      }
     }
   },
   "how-to-boost-up-fertility-with-the-colours-of-food": {
+    "uspTitle": "How To Boost Up   <span class=\"cs_accent_color\">Fertility With The Colours Of Food</span>",
     "title": "How To Boost Up Fertility With The Colours Of Food",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4820,9 +8883,71 @@
           ]
         }
       ]
+    },
+    "lifestyleBlogContent": {
+      "whyItMatters": {
+        "paragraphs": [
+          "Nutrition directly affects reproductive health. A colourful, nutrient-rich diet supports hormonal balance, egg and sperm quality, and overall fertility. Reducing toxins and eating fertility-friendly foods can improve your body's response to conception and pregnancy."
+        ],
+        "listItems": [
+          "Nutritional impact on fertility and hormone production",
+          "Hormonal balance through vitamins and minerals (e.g. folate, iron, vitamin D)",
+          "Lifestyle and diet influence on egg and sperm quality"
+        ]
+      },
+      "benefits": {
+        "paragraphs": [
+          "Eating a variety of colourful, whole foods can benefit fertility in many ways:"
+        ],
+        "listItems": [
+          "Improves reproductive health and ovulation",
+          "Enhances hormonal balance (e.g. folate, omega-3)",
+          "Supports egg and sperm quality",
+          "Provides antioxidants that protect cells",
+          "Helps maintain a healthy weight and metabolism",
+          "Supports menstrual cycle regularity"
+        ]
+      },
+      "practicalTips": {
+        "paragraphs": [
+          "Use the colours of food to guide your fertility diet:"
+        ],
+        "listItems": [
+          "Yellow: Bananas (vitamin B6, phosphorus) for egg and sperm quality",
+          "Green: Leafy vegetables (folate, iron) for ovulation and health",
+          "Red: Fatty fish and lean meat (omega-3, vitamin D) for hormone support",
+          "White: Eggs (protein, vitamin D) for energy and quality",
+          "Orange: Citrus (vitamin C, antioxidants) for cycle regulation and sperm health",
+          "Brown: Whole grains, pulses, beans (antioxidants, fibre)"
+        ]
+      },
+      "expertAdvice": {
+        "paragraphs": [
+          "Fertility specialists emphasise the importance of balanced nutrition before and during treatment. A healthy diet can improve response to fertility treatments and support a healthy pregnancy. Avoid excessive junk food and caffeine; focus on whole, colourful foods and stay hydrated."
+        ],
+        "listItems": [
+          "Importance of balanced nutrition for fertility",
+          "Reducing toxins and processed foods",
+          "Maintaining a healthy lifestyle alongside medical care"
+        ]
+      },
+      "lifestyleRecommendations": {
+        "paragraphs": [
+          "Combine a colourful diet with these healthy lifestyle habits:"
+        ],
+        "listItems": [
+          "Balanced diet with a variety of fruits, vegetables, whole grains, and lean protein",
+          "Regular exercise",
+          "Stress reduction and adequate sleep",
+          "Limit alcohol and avoid smoking",
+          "Maintain a healthy weight",
+          "Consult a fertility specialist for personalised advice"
+        ]
+      }
     }
   },
   "pregnancy-and-coronavirus-insights-from-experts": {
+    "uspTitle": "Pregnancy and   <span class=\"cs_accent_color\">Coronavirus</span>",
     "title": "Pregnancy and Coronavirus",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4905,6 +9030,7 @@
     }
   },
   "success-stories": {
+    "uspTitle": "Success   <span class=\"cs_accent_color\">Stories</span>",
     "title": "Success Stories",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -4989,5 +9115,3 @@
     }
   }
 }
-
-

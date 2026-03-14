@@ -267,21 +267,13 @@ const DynamicPage = async ({ params }) => {
         uspTitle: rawStateContent.uspTitle,
     };
 
-    const faqs = rawStateContent.faqs || stateContentConfig.default.faqs || [];
-
-    const faqContentData =
-        faqs.length > 0
-            ? {
-                sections: [
-                    {
-                        steps: faqs.map((faq) => ({
-                            title: replaceStateName(faq.question),
-                            description: replaceStateName(faq.answer),
-                        })),
-                    },
-                ],
-            }
-            : null;
+    const rawFaqs = rawStateContent.faqs || stateContentConfig.default.faqs || [];
+    const stateFaqs = rawFaqs.map((faq) => ({
+        question: replaceStateName(faq.question),
+        answer: replaceStateName(faq.answer),
+        ...(faq.listItems && { listItems: (faq.listItems || []).map(replaceStateName) }),
+    }));
+    const hasStateFaqs = stateFaqs.length > 0;
 
     return (
         <div className="cs_center_page_template">
@@ -583,7 +575,7 @@ const DynamicPage = async ({ params }) => {
                 </div>
             </section>
 
-            {faqContentData && (
+            {hasStateFaqs && (
                 <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="80" bottomSpaceMd="50">
                     <div className="container">
                         <div className="cs_service_title_section mb-10 text-center">
@@ -596,7 +588,7 @@ const DynamicPage = async ({ params }) => {
                         </div>
                         <div className="row">
                             <div className="col-12">
-                                <IVFContentSection data={faqContentData} />
+                                <IVFContentSection data={{ sections: [] }} faq={stateFaqs} />
                             </div>
                         </div>
                     </div>

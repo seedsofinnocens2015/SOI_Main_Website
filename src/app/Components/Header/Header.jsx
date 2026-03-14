@@ -273,10 +273,10 @@ const Header = ({ isTopBar, variant }) => {
             label: 'International Pricing',
             href: '/international-patients/international-pricing',
           },
-          {
-            label: 'Patient Stories',
-            href: '/international-patients/patient-stories',
-          },
+          // {
+          //   label: 'Patient Stories',
+          //   href: '/international-patients/patient-stories',
+          // },
           {
             label: 'Contact Team',
             href: '/international-patients/contact-team',

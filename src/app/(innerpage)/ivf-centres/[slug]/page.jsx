@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import centresAllData from '../centres-data.json';
 const centresData = centresAllData.centres;
+const centerContentConfig = centresAllData.centerContent || {};
 import doctorsData from '../../doctors/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
@@ -199,6 +200,15 @@ const page = async ({ params }) => {
 
   const firstSection = rawCenterContent.sections[0];
 
+  // FAQs: centre-specific or default, with {{cityName}} replaced
+  const rawFaqs = (centerContentConfig[center.slug]?.faqs) ?? centerContentConfig.default?.faqs ?? [];
+  const replaceCityName = (text) => (typeof text === 'string' ? text.replace(/\{\{cityName\}\}/g, cityName) : text);
+  const centerFaqs = rawFaqs.map((faq) => ({
+    question: replaceCityName(faq.question),
+    answer: replaceCityName(faq.answer),
+    ...(faq.listItems && { listItems: faq.listItems.map(replaceCityName) }),
+  }));
+
   const locationContentData = {
     sections: [
       {
@@ -315,7 +325,7 @@ const page = async ({ params }) => {
           {/* Content Section - Centered and Full Width */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={centerContentData} benefitImages={serviceData.benefitImages} />
+              <IVFContentSection data={centerContentData} benefitImages={serviceData.benefitImages} faq={centerFaqs} />
             </div>
           </div>
         </div>
