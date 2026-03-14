@@ -42,6 +42,43 @@ function getCenterLink(center) {
     return `/${center.stateSlug}/${slug}/`;
 }
 
+const servicesList = [
+    {
+        title: "IUI, IVF & ICSI",
+        icon: "/assets/img/icons/IUI, IVF & ICSI.svg"
+    },
+    {
+        title: "Blastocyst Transfer",
+        icon: "/assets/img/icons/Blastocyst Transfer.svg"
+    },
+    {
+        title: "Cryopreservation",
+        subtitle: "(Egg, Sperm & Embryos)",
+        icon: "/assets/img/icons/Cryopreservation.svg"
+    },
+    {
+        title: "PRP & Ovarian Rejuvenation",
+        icon: "/assets/img/icons/PRP & Ovarian Rejuvenation.svg"
+    },
+    {
+        title: "Genetic Testing",
+        subtitle: "(PGT-A & PGT-M)",
+        icon: "/assets/img/icons/Genetic Testing.svg"
+    },
+    {
+        title: "Genetic Counseling",
+        icon: "/assets/img/icons/Genetic Counselling.svg"
+    },
+    {
+        title: "TESA/PESA",
+        icon: "/assets/img/icons/TESA-PESA.svg"
+    },
+    {
+        title: "Laparoscopy & Hysteroscopy",
+        icon: "/assets/img/icons/Laparoscopy & Hysteroscopy.svg"
+    },
+];
+
 export async function generateMetadata({ params }) {
     const { slug } = await params;
 
@@ -247,7 +284,7 @@ const DynamicPage = async ({ params }) => {
             : null;
 
     return (
-        <>
+        <div className="cs_center_page_template">
             <Section
                 className={'cs_page_heading cs_bg_filed cs_center'}
                 backgroundImage={rawStateContent.headerImage || "/assets/img/Top-Header.png"}
@@ -255,19 +292,101 @@ const DynamicPage = async ({ params }) => {
                 <PageHeading data={headingData} />
             </Section>
 
-            <Section topSpaceLg="50" topSpaceMd="60" bottomSpaceLg="50" bottomSpaceMd="60">
+            {/* Intro Section */}
+            <section className="cs_best_ivf_section">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <IVFContentSection data={stateContentData} />
+                    <div className="cs_best_ivf_content">
+                        {/* Main Heading from JSON with Partial Coloring */}
+                        <h2 className="cs_best_ivf_title">
+                            Best IVF Centres in <span className='cs_best_ivf_title_span'>{stateContentData.sections[0]?.heading.replace(/Best IVF Centres in/i, '').trim()}</span>
+                        </h2>
+
+                        {/* Description Paragraph from JSON */}
+                        <div className="cs_best_ivf_description">
+                            {stateContentData.sections[0]?.paragraphs?.map((paragraph, index) => (
+                                <p key={index}>{paragraph}</p>
+                            ))}
+                        </div>
+
+                        {/* Service Cards - Mobile 2 Rows */}
+                        <div className="cs_best_ivf_services_mobile">
+                            <div className="cs_service_row">
+                                {servicesList.slice(0, 4).map((service, idx) => (
+                                    <div key={idx} className="cs_service_card_mobile">
+                                        <div className="cs_service_icon_box">
+                                            <Image
+                                                src={getAssetPath(service.icon)}
+                                                alt={service.title}
+                                                width={48}
+                                                height={48}
+                                                className="w-12 h-12 object-contain"
+                                            />
+                                        </div>
+                                        <h3 className="cs_service_title_mobile">{service.title}</h3>
+                                        {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="cs_service_row">
+                                {servicesList.slice(4, 8).map((service, idx) => (
+                                    <div key={idx} className="cs_service_card_mobile">
+                                        <div className="cs_service_icon_box">
+                                            <Image
+                                                src={getAssetPath(service.icon)}
+                                                alt={service.title}
+                                                width={48}
+                                                height={48}
+                                                className="w-12 h-12 object-contain"
+                                            />
+                                        </div>
+                                        <h3 className="cs_service_title_mobile">{service.title}</h3>
+                                        {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Service Cards Grid - Tablet/Desktop */}
+                        <div className="cs_best_ivf_services_desktop">
+                            {servicesList.map((service, idx) => (
+                                <div key={idx} className="cs_service_card_desktop">
+                                    <div className="cs_service_icon_box">
+                                        <Image
+                                            src={getAssetPath(service.icon)}
+                                            alt={service.title}
+                                            width={80}
+                                            height={80}
+                                            className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <h3 className="cs_service_title_desktop">{service.title}</h3>
+                                    {service.subtitle && <p className="cs_service_subtitle_desktop">{service.subtitle}</p>}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Call to Action Button */}
+                        <div className="cs_best_ivf_cta">
+                            <a href="/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
+                                Get Free Consultation
+                            </a>
                         </div>
                     </div>
                 </div>
-            </Section>
+            </section>
 
+            {/* Centres List Section */}
             <Section topSpaceLg="30" topSpaceMd="30" bottomSpaceLg="80" bottomSpaceMd="50">
                 <div className="container">
-                    <h2 className="cs_section_heading cs_style_1 text-center mb-5">Our Centres in {stateName}</h2>
+                    <div className="cs_service_title_section mb-10 text-center">
+                        <h2 className="cs_service_main_title">
+                            <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                OUR CENTRES
+                            </span>{' '}
+                            <span style={{ color: '#000000' }}>IN {stateName.toUpperCase()}</span>
+                        </h2>
+                    </div>
                     <div className="row cs_gap_y_40">
                         {filteredCentres.map((centre, index) => (
                             <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
@@ -312,11 +431,168 @@ const DynamicPage = async ({ params }) => {
                 </div>
             </Section>
 
+            {/* Why Choose Us Component - Replicating from BestIVFCentre */}
+            <section className="w-full py-8 sm:py-12 lg:py-16">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    {/* Section Heading matching NewsMediaSection style */}
+                    <div className="cs_service_title_section mb-10">
+                        <h2 className="cs_service_main_title text-center">
+                            <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                WHY CHOOSE
+                            </span>{' '}
+                            <span style={{ color: '#000000' }}>SEEDS OF INNOCENS IVF</span>
+                        </h2>
+                    </div>
+                    {/* Feature Grid - Mobile 2 Rows */}
+                    <div className="d-block d-sm-none mt-4">
+                        {/* Row 1 - First 4 features */}
+                        <div className="flex gap-3 overflow-x-auto pb-2 mb-3 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                            {[
+                                {
+                                    title: '35+ IVF Centres',
+                                    desc: "With over 35 IVF centres across the National and International, Seeds of Innocens brings fertility care closer to you.",
+                                    icon: "/assets/img/icons/IVF Centres.svg",
+                                },
+                                {
+                                    title: '20,000+ Healthy Babies',
+                                    desc: 'At Seeds of Innocens, we are proud to have helped over 20,000 families welcome healthy babies into the world.',
+                                    icon: "/assets/img/icons/Healthy Babies.svg",
+                                },
+                                {
+                                    title: 'Upto 78% Success Rate',
+                                    desc: 'We maintain an impressive IVF success rate of 78%, higher than the average.',
+                                    icon: "/assets/img/icons/Success Rate.svg",
+                                },
+                                {
+                                    title: '30+ Certified Trained Clinicians',
+                                    desc: 'Our team includes over 30 certified and highly trained fertility specialists and embryologists.',
+                                    icon: "/assets/img/icons/Dedicated Fertility.svg",
+                                },
+                            ].map((f, idx) => (
+                                <div
+                                    key={idx}
+                                    className="border border-gray-200 p-4 text-center flex flex-col items-center flex-shrink-0 w-[180px] group rounded-lg bg-white"
+                                >
+                                    <div style={{ width: '45px', height: '45px' }} className="flex items-center justify-center">
+                                        <Image src={getAssetPath(f.icon)} alt={f.title} width={45} height={45} style={{ objectFit: 'contain' }} />
+                                    </div>
+                                    <h3 className="mt-2 font-semibold text-red-600 leading-tight" style={{ fontSize: '11px' }}>
+                                        {f.title}
+                                    </h3>
+                                </div>
+                            ))}
+                        </div>
+                        {/* Row 2 - Next 4 features */}
+                        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                            {[
+                                {
+                                    title: 'Affordable IVF Care',
+                                    desc: 'We provide affordable IVF treatment and offer quality services to patients, with customised packages.',
+                                    icon: "/assets/img/icons/IUI, IVF & ICSI.svg",
+                                },
+                                {
+                                    title: 'Fetal Medicine',
+                                    desc: 'We offer fetal medicine services including ultrasound scans, fetal echocardiography, and diagnostic procedures.',
+                                    icon: "/assets/img/icons/Blastocyst Transfer.svg",
+                                },
+                                {
+                                    title: 'Expert Fertility Counsellor',
+                                    desc: 'Genetic counselors evaluate family histories and identify potential genetic risks.',
+                                    icon: "/assets/img/icons/Genetic Counselling.svg",
+                                },
+                                {
+                                    title: 'In-House Genetic Lab',
+                                    desc: 'We are the first IVF centre in India to establish an in-house genetic lab.',
+                                    icon: "/assets/img/icons/Genetic Testing.svg",
+                                },
+                            ].map((f, idx) => (
+                                <div
+                                    key={idx}
+                                    className="border border-gray-200 p-4 text-center flex flex-col items-center flex-shrink-0 w-[180px] group rounded-lg bg-white"
+                                >
+                                    <div style={{ width: '45px', height: '45px' }} className="flex items-center justify-center">
+                                        <Image src={getAssetPath(f.icon)} alt={f.title} width={45} height={45} style={{ objectFit: 'contain' }} />
+                                    </div>
+                                    <h3 className="mt-2 font-semibold text-red-600 leading-tight" style={{ fontSize: '11px' }}>
+                                        {f.title}
+                                    </h3>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Feature Grid - Tablet/Desktop */}
+                    <div className="d-none d-sm-grid grid-cols-1 mt-15 sm:grid-cols-2 lg:grid-cols-4 gap-0 rounded-md overflow-hidden bg-white shadow-sm" style={{ border: '1px solid #eee' }}>
+                        {[
+                            {
+                                title: '35+ IVF Centres',
+                                desc: "With over 35 IVF centres across the National and International, Seeds of Innocens brings fertility care closer to you.",
+                                icon: "/assets/img/icons/IVF Centres.svg",
+                            },
+                            {
+                                title: '20,000+ Healthy Babies',
+                                desc: 'At Seeds of Innocens, we are proud to have helped over 20,000 families welcome healthy babies into the world.',
+                                icon: "/assets/img/icons/Healthy Babies.svg",
+                            },
+                            {
+                                title: 'Upto 78% Success Rate',
+                                desc: 'We maintain an impressive IVF success rate of 78%, higher than the average.',
+                                icon: "/assets/img/icons/Success Rate.svg",
+                            },
+                            {
+                                title: '30+ Certified Trained Clinicians',
+                                desc: 'Our team includes over 30 certified and highly trained fertility specialists and embryologists.',
+                                icon: "/assets/img/icons/Dedicated Fertility.svg",
+                            },
+                            {
+                                title: 'Affordable IVF Care',
+                                desc: 'We provide affordable IVF treatment and offer quality services to patients, with customised packages.',
+                                icon: "/assets/img/icons/IUI, IVF & ICSI.svg",
+                            },
+                            {
+                                title: 'Fetal Medicine',
+                                desc: 'We offer fetal medicine services including ultrasound scans, fetal echocardiography, and diagnostic procedures.',
+                                icon: "/assets/img/icons/Blastocyst Transfer.svg",
+                            },
+                            {
+                                title: 'Expert Fertility Counsellor',
+                                desc: 'Genetic counselors evaluate family histories and identify potential genetic risks.',
+                                icon: "/assets/img/icons/Genetic Counselling.svg",
+                            },
+                            {
+                                title: 'In-House Genetic Lab',
+                                desc: 'We are the first IVF centre in India to establish an in-house genetic lab.',
+                                icon: "/assets/img/icons/Genetic Testing.svg",
+                            },
+                        ].map((f, idx) => (
+                            <div
+                                key={idx}
+                                className="border border-gray-200 text-center flex flex-col items-center group" style={{ padding: '20px' }}
+                            >
+                                <div style={{ width: '60px', height: '60px' }} className="flex items-center justify-center">
+                                    <Image src={getAssetPath(f.icon)} alt={f.title} width={60} height={60} style={{ objectFit: 'contain' }} />
+                                </div>
+                                <h3 className="mt-3 font-semibold text-red-600 animated-underline transition-all duration-200" style={{ fontSize: '14px' }}>
+                                    {f.title}
+                                </h3>
+                                <p className="mt-2 text-sm text-gray-700 leading-6 hidden sm:block">{f.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                </div>
+            </section>
+
             {faqContentData && (
                 <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="80" bottomSpaceMd="50">
                     <div className="container">
-                        <div className="cs_section_heading cs_style_1 text-center mb-5">
-                            <h2 className="cs_section_title">Frequently Asked Questions</h2>
+                        <div className="cs_service_title_section mb-10 text-center">
+                            <h2 className="cs_service_main_title">
+                                <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                    FREQUENTLY ASKED
+                                </span>{' '}
+                                <span style={{ color: '#000000' }}>QUESTIONS</span>
+                            </h2>
                         </div>
                         <div className="row">
                             <div className="col-12">
@@ -326,8 +602,9 @@ const DynamicPage = async ({ params }) => {
                     </div>
                 </Section>
             )}
-        </>
+        </div>
     );
+
 };
 
 export default DynamicPage;
