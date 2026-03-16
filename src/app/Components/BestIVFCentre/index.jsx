@@ -242,7 +242,7 @@ const BestIVFCentre = ({
                             {centerDoctors.map((doctor, index) => {
                                 const matchedDoctorData = doctorsData.find((d) => d.slug === doctor.slug);
                                 const doctorLink = matchedDoctorData
-                                    ? `/${matchedDoctorData.newSlug || matchedDoctorData.slug + '-ivf-specialist'}`
+                                    ? `/doctors/${matchedDoctorData.newSlug || matchedDoctorData.slug + '-ivf-specialist'}`
                                     : null;
 
                                 return (

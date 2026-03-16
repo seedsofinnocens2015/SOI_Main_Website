@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '../Section';
 import PageHeading from '../PageHeading';
 import IVFContentSection from '../IVFContentSection';
-import servicesContent from '@/app/(innerpage)/service/servicesContent.json';
+import servicesContent from '@/app/data/servicesContent.json';
 
 const ServicePage = ({ serviceKey }) => {
   const config = servicesContent[serviceKey];

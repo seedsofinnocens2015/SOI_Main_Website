@@ -258,7 +258,7 @@ const page = async ({ params }) => {
                   <div className="cs_team_shape cs_accent_bg" />
                   {(() => {
                     const doctorData = doctorsData.find(d => d.slug === doctor.slug);
-                    const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
+                    const doctorLink = doctorData ? `/doctors/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
                     return doctorLink ? (
                       <Link href={doctorLink} className="cs_team_thumbnail">
                         <Image
@@ -285,7 +285,7 @@ const page = async ({ params }) => {
                     <h3 className="cs_team_title cs_extra_bold mb-0">
                       {(() => {
                         const doctorData = doctorsData.find(d => d.slug === doctor.slug);
-                        const doctorLink = doctorData ? `/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
+                        const doctorLink = doctorData ? `/doctors/${doctorData.newSlug || doctorData.slug + '-ivf-specialist'}` : null;
                         return doctorLink ? (
                           <Link href={doctorLink}>{doctor.name}</Link>
                         ) : (

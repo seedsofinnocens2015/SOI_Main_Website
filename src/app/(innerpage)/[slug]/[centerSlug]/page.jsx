@@ -8,7 +8,7 @@ import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import centresAllData from '../../ivf-centres/centres-data.json';
 const indiaCentresData = centresAllData.centres;
 const centerContentConfig = centresAllData.centerContent;
-import doctorsData from '../../doctors/doctors-data.json';
+import doctorsData from '@/app/data/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 

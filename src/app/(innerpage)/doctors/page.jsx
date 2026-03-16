@@ -3,7 +3,7 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
-import doctorsData from './doctors-data.json';
+import doctorsData from '@/app/data/doctors-data.json';
 
 const page = () => {
   const headingData = {
@@ -26,7 +26,7 @@ const page = () => {
     name: doctor.name,
     specialty: doctor.subtitle,
     imageUrl: doctor.image,
-    profileLink: `/${doctor.newSlug || doctor.slug + '-ivf-specialist'}`,
+    profileLink: `/doctors/${doctor.newSlug || doctor.slug + '-ivf-specialist'}`,
     experience: doctor.experience,
     state: getStateFromLocation(doctor.location),
   }));

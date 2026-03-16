@@ -19,22 +19,22 @@ const CtaSection = ({ data = {} }) => {
     {
       imageUrl: "/assets/img/icons/ffc.svg",
       title: "Female fertility care",
-      link:  "/ivf",
+      link:  "/fertility-treatments/ivf",
     },
     {
       imageUrl: "/assets/img/icons/mfc.svg",
       title: "Male fertility care",
-      link:  "/male-infertility-treatment-in-india",
+      link:  "/male-infertility-treatments/male-infertility-treatment-in-india",
     },
     {
       imageUrl:  "/assets/img/icons/cgt.svg",
       title: "Couples genetic testing",
-      link:  "/couple-carrier-screening",
+      link:  "/genetic-testing-screening/couple-carrier-screening",
     },
     {
       imageUrl:"/assets/img/icons/fa.svg",
       title: "Fertility Academy",
-      link:  "/gynecologic-surgical-training-program",
+      link:  "/training-academy/gynecologic-surgical-training-program",
     },
   ];
 

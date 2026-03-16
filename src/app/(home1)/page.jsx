@@ -187,7 +187,7 @@ const heroData = {
         subHeading: 'In-Vitro Fertilization (IVF) Overview',
         subtitle: '<strong>In-Vitro Fertilization (IVF)</strong> is a method that helps couples with fertility related problems and in conceiving a child. During the IVF treatment, the mature eggs are retrieved from the ovaries of women and sperms from the partner which are further fertilized in the laboratory to make embryos. After a few days, these embryos are transferred into the uterus of the woman.',
         imageUrl: '/assets/img/IVF-ICSI.jpg',
-        link: '/ivf/',
+        link: '/fertility-treatments/ivf/',
       },
       {
         iconUrl: '/assets/img/icons/Genetic Testing.svg',
@@ -196,7 +196,7 @@ const heroData = {
         subHeading: 'Understanding PGT-SR',
         subtitle: '<strong>PGT-SR</strong> is a specialized test that looks at embryos for possible chromosomal abnormalities produced by structural rearrangements in translocations, deletions, and duplications. Advanced testing aids in identifying embryos with higher probabilities of implantation and subsequent development. At Seeds of Innocens, we provide cutting-edge PGT-SR testing as part of our all-inclusive IVF services, guiding couples toward fulfilling their dreams of parenthood.',
         imageUrl: '/assets/img/PGT-A.webp',
-        link: '/genetic-testing-pgt/pgt-a/',
+        link: '/genetic-testing-screening/pgt-a/',
       },
       {
         iconUrl: '/assets/img/icons/Blastocyst Transfer.svg',
@@ -232,7 +232,7 @@ const heroData = {
         subHeading: 'TESA/PESA: Advanced Fertility Treatment for Male Infertility',
         subtitle: '<strong>TESA/PESA</strong> is a specialized surgical procedure that helps in resolving the fertility issues such as TESA/PESA, Semen analysis, PESA, and the treatment for the low sperm count. This technique involves collecting sperm from the testicles or epididymis, allowing for analysis and treatment of male infertility.',
         imageUrl: '/assets/img/TESA-PESA.jpg',
-        link: '/advanced-fertility-care/tesa-pesa/',
+        link: '/male-infertility-treatments/tesa/',
       },
       {
         iconUrl: '/assets/img/icons/Donor Program.svg',
@@ -578,7 +578,7 @@ const heroData = {
         author: blog.author,
         thumbnail: blog.image,
         btnText: 'Read More',
-        postLink: `/resources/blogs/${blog.slug}`,
+        postLink: `/blogs/${blog.slug}`,
         authorIcon: '/assets/img/icons/post_user_icon.png',
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       })),
