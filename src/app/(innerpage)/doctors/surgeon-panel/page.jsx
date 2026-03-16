@@ -2,6 +2,7 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import TeamSection from '@/app/Components/TeamSection';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
 import doctorsData from '../doctors-data.json';
 
@@ -67,8 +68,8 @@ const page = () => {
         <div className="container">
           {/* Content Section - Centered and Full Width */}
           <div className="row">
-            <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+            <div className="col-12 cs_service_page_content">
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -84,30 +85,8 @@ const page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-12" style={{ textAlign: 'center', marginBottom: '40px' }}>
-              <h2 style={{
-                fontSize: '42px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Our
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Surgeon Panel
-              </h2>
+            <div className="col-lg-12 cs_service_page_content" style={{ marginBottom: '40px' }}>
+              <AccentHeading style={{ fontSize: '42px', marginBottom: '30px' }}>Our Surgeon Panel</AccentHeading>
             </div>
           </div>
         </div>

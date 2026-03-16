@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getAssetPath } from "@/app/utils/assetPath";
+import AccentHeading from '@/app/Components/AccentHeading';
 import {
   FaLocationDot,
   FaSuitcase,
@@ -37,7 +38,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
                 </div>
                 <div className="col-md-8">
                   <div className="cs_doctor_info_header">
-                    <h2 className="cs_doctor_title">{data.name}</h2>
+                    <AccentHeading level={2} className="cs_doctor_title">{data.name}</AccentHeading>
                     <p className="cs_doctor_subtitle">{data.subtitle}</p>
                   </div>
                   
@@ -86,7 +87,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
 
             {/* About Section */}
             <div className="cs_about_section">
-              <h3 className="cs_section_title_small">About</h3>
+              <AccentHeading level={3} className="cs_section_title_small">About</AccentHeading>
               {data.description && data.description.map((desc, index) => (
                 <p key={index} className="cs_text_style_1">
                   {desc}
@@ -97,7 +98,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
             {/* Performance Statistics */}
             {data.progressBars && data.progressBars.length > 0 && (
               <div className="cs_performance_stats">
-                <h3 className="cs_section_title_small">Performance Statistics</h3>
+                <AccentHeading level={3} className="cs_section_title_small">Performance Statistics</AccentHeading>
                 <div className="cs_progress_bar_wrapper">
                   {data.progressBars.map((progress, index) => (
                     <div className="cs_progress_item" key={index}>
@@ -121,7 +122,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
             {data.workExperience && (
               <div className="cs_work_experience">
                 <div className="cs_section_header">
-                  <h3 className="cs_section_title_small">Work Experience</h3>
+                  <AccentHeading level={3} className="cs_section_title_small">Work Experience</AccentHeading>
                 </div>
                 {Array.isArray(data.workExperience) ? (
                   <ul className="cs_education_list">
@@ -142,7 +143,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
             {data.education && data.education.length > 0 && (
               <div className="cs_education">
                 <div className="cs_section_header">
-                  <h3 className="cs_section_title_small">Education & Training</h3>
+                  <AccentHeading level={3} className="cs_section_title_small">Education & Training</AccentHeading>
                 </div>
                 <ul className="cs_education_list">
                   {data.education.map((edu, index) => (
@@ -159,7 +160,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
             {data.awards && data.awards.length > 0 && (
               <div className="cs_awards">
                 <div className="cs_section_header">
-                  <h3 className="cs_section_title_small">Awards</h3>
+                  <AccentHeading level={3} className="cs_section_title_small">Awards</AccentHeading>
                 </div>
                 <ul className="cs_education_list">
                   {data.awards.map((award, index) => (
@@ -178,7 +179,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
             <div className="cs_sidebar_sticky_wrapper">
               {/* Book Appointment Card */}
               <div className="cs_appointment_card">
-                <h3>Book an Appointment</h3>
+                <AccentHeading level={3}>Book an Appointment</AccentHeading>
                 <p>
                   Schedule a consultation with <span className="cs_doctor_name">{data.name.split(' ').slice(1).join(' ')}</span> to discuss your fertility journey.
                 </p>
@@ -193,7 +194,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
               {/* Other Doctors Section */}
               {otherDoctors && otherDoctors.length > 0 && (
                 <div className="cs_other_doctors">
-                  <h3 className="cs_sidebar_title">Other Doctors</h3>
+                  <AccentHeading level={3} className="cs_sidebar_title">Other Doctors</AccentHeading>
                   <div className="cs_other_doctors_list">
                     {otherDoctors.map((doctor, index) => (
                       <Link 

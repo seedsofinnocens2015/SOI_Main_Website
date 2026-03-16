@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import React from 'react';
 
@@ -121,12 +122,13 @@ const page = () => {
         <div className="container">
           {/* First Content Section Only */}
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 cs_service_page_content">
               <IVFContentSection
                 data={{
                   sections: [formsContentData.sections[0]]
                 }}
                 benefitImages={serviceData.benefitImages}
+                accentHeadingStyle
               />
             </div>
           </div>
@@ -134,11 +136,9 @@ const page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Forms Grid */}
-          <div className="row">
+          <div className="row cs_service_page_content">
             <div className="col-12">
-              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                Download Forms
-              </h2>
+              <AccentHeading style={{ marginBottom: '40px' }}>Download Forms</AccentHeading>
             </div>
           </div>
 
@@ -247,12 +247,13 @@ const page = () => {
 
           {/* Remaining Content Sections */}
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 cs_service_page_content">
               <IVFContentSection
                 data={{
                   sections: formsContentData.sections.slice(1)
                 }}
                 benefitImages={serviceData.benefitImages}
+                accentHeadingStyle
               />
             </div>
           </div>
@@ -268,9 +269,7 @@ const page = () => {
                 borderRadius: '10px',
                 borderLeft: '4px solid #2196f3'
               }}>
-                <h3 className="cs_ivf_content_heading mb-3" style={{ color: '#1565c0', fontSize: '24px' }}>
-                  Instructions for Completing Forms
-                </h3>
+                <AccentHeading level={3} forcePlain className="mb-3" style={{ color: '#1565c0', fontSize: '24px' }}>Instructions for Completing Forms</AccentHeading>
                 <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
                   <li style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative' }}>
                     <span style={{ position: 'absolute', left: '0', color: '#2196f3', fontSize: '18px' }}>1.</span>

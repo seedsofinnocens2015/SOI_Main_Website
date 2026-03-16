@@ -1,5 +1,6 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -64,9 +65,9 @@ const page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 cs_service_page_content">
               <div className="cs_service_details text-center mb-5">
-                <h3 className="cs_service_heading">Download Forms, Consents & Checklists</h3>
+                <AccentHeading level={3} className="cs_service_heading">Download Forms, Consents & Checklists</AccentHeading>
                 <p className="cs_service_subtitle">
                   Access all necessary forms, consent documents, and helpful checklists for your fertility treatment journey. Download, print, and fill them out before your appointment to save time.
                 </p>
@@ -166,9 +167,7 @@ const page = () => {
                 borderRadius: '10px',
                 borderLeft: '4px solid #ffc107'
               }}>
-                <h4 className="cs_service_heading mb-3" style={{ color: '#856404' }}>
-                  Important Notes
-                </h4>
+                <AccentHeading level={3} forcePlain className="cs_service_heading mb-3" style={{ color: '#856404', fontSize: '22px' }}>Important Notes</AccentHeading>
                 <ul className="cs_mp_0" style={{ listStyle: 'none', paddingLeft: '0' }}>
                   <li style={{ marginBottom: '10px', paddingLeft: '25px', position: 'relative' }}>
                     <span style={{ position: 'absolute', left: '0', color: '#856404', fontSize: '18px' }}>✓</span>

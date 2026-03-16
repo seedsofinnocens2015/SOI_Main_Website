@@ -1,6 +1,7 @@
 "use client";
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
 import Image from 'next/image';
 import { getAssetPathClient } from '@/app/utils/assetPath';
@@ -52,29 +53,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <h2 className="cs_section_title cs_fs_42" style={{
-                fontSize: '42px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Our
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Journey
-              </h2>
+              <AccentHeading style={{ fontSize: '42px', fontWeight: '700', marginBottom: '30px', lineHeight: '1.2' }}>Our Journey</AccentHeading>
               <div className="cs_height_20" />
               <p className="cs_text_style_1" style={{ marginBottom: '5px', lineHeight: '1.8' }}>
                 We at Seeds of Innocens believes that the journey of parenthood deserves dignity, joy and the premium standard of care.</p>
@@ -97,29 +76,7 @@ const page = () => {
 
           <div className="row cs_gap_y_40">
             <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36" style={{
-                fontSize: '36px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Our
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Milestones
-              </h3>
+              <AccentHeading level={3} style={{ fontSize: '36px', fontWeight: '700', marginBottom: '30px', lineHeight: '1.2' }}>Our Milestones</AccentHeading>
               <div className="cs_height_30" />
               <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
                 {/* Ghaziabad Centre */}
@@ -595,29 +552,7 @@ const page = () => {
           <div className="cs_height_80" />
           <div className="row">
             <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36" style={{
-                fontSize: '36px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Our
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Promise
-              </h3>
+              <AccentHeading level={3} style={{ fontSize: '36px', fontWeight: '700', marginBottom: '30px', lineHeight: '1.2' }}>Our Promise</AccentHeading>
               <div className="cs_height_30" />
               <div className="row cs_gap_y_30">
                 <div className="col-lg-6 col-md-6">
@@ -817,29 +752,7 @@ const page = () => {
           <div className="cs_height_80" />
           <div className="row">
             <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36" style={{
-                fontSize: '36px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Why
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Choose Us
-              </h3>
+              <AccentHeading level={3} style={{ fontSize: '36px', fontWeight: '700', marginBottom: '30px', lineHeight: '1.2' }}>Why Choose Us</AccentHeading>
               <div className="cs_height_30" />
               <div className="row cs_gap_y_30">
                 <div className="col-lg-6 col-md-6">
@@ -1039,29 +952,7 @@ const page = () => {
           <div className="cs_height_80" />
           <div className="row">
             <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36" style={{
-                fontSize: '36px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Our
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Story
-              </h3>
+              <AccentHeading level={3} style={{ fontSize: '36px', fontWeight: '700', marginBottom: '30px', lineHeight: '1.2' }}>Our Story</AccentHeading>
               <div className="cs_height_30" />
               <p className="cs_text_style_1" style={{
                 marginBottom: '20px',
@@ -1080,29 +971,7 @@ const page = () => {
           <div className="cs_height_80" />
           <div className="row">
             <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36" style={{
-                fontSize: '36px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  What We
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Believe In
-              </h3>
+              <AccentHeading level={3} style={{ fontSize: '36px', fontWeight: '700', marginBottom: '30px', lineHeight: '1.2' }}>What We Believe In</AccentHeading>
               <div className="cs_height_30" />
               <div className="row cs_gap_y_30">
                 <div className="col-lg-6 col-md-6">
@@ -1302,29 +1171,7 @@ const page = () => {
           <div className="cs_height_80" />
           <div className="row">
             <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36" style={{
-                fontSize: '36px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Our
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Commitment
-              </h3>
+              <AccentHeading level={3} style={{ fontSize: '36px', fontWeight: '700', marginBottom: '30px', lineHeight: '1.2' }}>Our Commitment</AccentHeading>
               <div className="cs_height_30" />
               <p className="cs_text_style_1" style={{
                 marginBottom: '25px',

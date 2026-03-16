@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaShieldAlt, FaCreditCard, FaHandshake, FaPhoneAlt, FaEnvelope, FaCheckCircle, FaInfoCircle } from 'react-icons/fa';
@@ -165,12 +166,13 @@ const page = () => {
         <div className="container">
           {/* First Content Section */}
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 cs_service_page_content">
               <IVFContentSection
                 data={{
                   sections: [insuranceContentData.sections[0]]
                 }}
                 benefitImages={serviceData.benefitImages}
+                accentHeadingStyle
               />
             </div>
           </div>
@@ -178,11 +180,9 @@ const page = () => {
           <div className="cs_height_50 cs_height_lg_50" />
 
           {/* Insurance Plans Grid */}
-          <div className="row">
+          <div className="row cs_service_page_content">
             <div className="col-12">
-              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                Insurance Coverage Options
-              </h2>
+              <AccentHeading style={{ marginBottom: '40px' }}>Insurance Coverage Options</AccentHeading>
             </div>
           </div>
 
@@ -282,9 +282,7 @@ const page = () => {
           {/* Financing Options Grid */}
           <div className="row">
             <div className="col-12">
-              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                Financing Options
-              </h2>
+              <AccentHeading style={{ marginBottom: '40px' }}>Financing Options</AccentHeading>
             </div>
           </div>
 
@@ -383,12 +381,13 @@ const page = () => {
 
           {/* Remaining Content Sections */}
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 cs_service_page_content">
               <IVFContentSection
                 data={{
                   sections: insuranceContentData.sections.slice(1)
                 }}
                 benefitImages={serviceData.benefitImages}
+                accentHeadingStyle
               />
             </div>
           </div>
@@ -412,9 +411,7 @@ const page = () => {
                   marginBottom: '25px'
                 }}>
                   <FaHandshake style={{ fontSize: '32px', color: '#1565c0' }} />
-                  <h3 className="cs_ivf_content_heading" style={{ color: '#1565c0', fontSize: '24px', margin: 0 }}>
-                    Financial Counseling Services
-                  </h3>
+                  <AccentHeading level={3} forcePlain style={{ color: '#1565c0', fontSize: '24px', margin: 0 }}>Financial Counseling Services</AccentHeading>
                 </div>
                 <p className="cs_ivf_content_paragraph" style={{
                   fontSize: '16px',

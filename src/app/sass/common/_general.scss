@@ -2364,28 +2364,38 @@ label {
 }
 
 .cs_ivf_content_heading {
-  font-size: 26px;
-  font-weight: 700;
-  color: #0A2A43;
-  margin-bottom: 18px;
-  line-height: 1.3;
+  font-size: 32px;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 24px;
+  line-height: 1.2;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   text-align: center;
+  font-family: var(--heading-font);
+
+  .cs_heading_accent_start {
+    color: #df3655;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
 
   @media (max-width: 767px) {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 18px;
   }
 
   @media (max-width: 575px) {
-    font-size: 20px;
-    margin-bottom: 12px;
+    font-size: 22px;
+    margin-bottom: 16px;
   }
 }
 
-/* Service pages: headings red + black (first part #df3655, rest black), body text center-aligned */
+/* Service pages: same heading style (accent already global above), body text center-aligned */
 .cs_service_page_content .cs_ivf_content_heading {
   font-size: 32px;
   font-weight: 800;
@@ -2439,7 +2449,7 @@ label {
 .cs_service_page_content .cs_ivf_content_step_plain .cs_ivf_step_plain_title {
   font-size: 20px;
   font-weight: 700;
-  color: #0A2A43;
+  color: #000000;
   margin-bottom: 8px;
   text-align: center;
 }
@@ -2513,44 +2523,73 @@ label {
   }
 }
 
-/* List items as small boxes in row (compact, space-saving) */
+/* List items as small boxes in row (compact, space-saving) – SOI theme */
 .cs_list_boxes {
-  margin-top: 12px;
-  margin-bottom: 8px;
+  margin-top: 16px;
+  margin-bottom: 12px;
   &.row {
-    gap: 24px 0;
-    row-gap: 24px;
+    gap: 20px 16px;
+    row-gap: 20px;
+    column-gap: 16px;
+    justify-content: center;
   }
 }
 .cs_list_box {
-  background: #f9f9f9;
-  border: 1px solid #e8e8e8;
-  border-radius: 10px;
-  padding: 12px 14px;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 14px 16px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
   height: 100%;
-  min-height: 48px;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  min-height: 52px;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   &:hover {
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-    border-color: #de3554;
+    box-shadow: 0 4px 14px rgba(223, 54, 85, 0.12);
+    border-left-color: var(--accent-color);
+    border-color: rgba(223, 54, 85, 0.2);
+  }
+  .cs_list_box_text a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--accent-color);
+    }
   }
 }
 .cs_list_box_icon {
   flex-shrink: 0;
-  color: #de3554;
-  font-size: 16px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 50%;
+  background: rgba(223, 54, 85, 0.1);
+  color: var(--accent-color);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, color 0.25s ease;
+  .cs_list_box:hover & {
+    background: var(--accent-color);
+    color: var(--white);
+  }
 }
 .cs_list_box_text {
-  font-size: 13px;
-  line-height: 1.4;
-  color: #0A2A43;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--body-color);
   font-weight: 500;
-  text-align: center;
+  text-align: left;
   @media (max-width: 575px) {
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 1.45;
   }
 }
 
@@ -2754,7 +2793,7 @@ label {
 .cs_service_highlight_title {
   font-size: 16px;
   font-weight: 600;
-  color: #0A2A43;
+  color: #000000;
   margin: 0;
   line-height: 1.4;
   @media (max-width: 575px) {
@@ -2797,7 +2836,7 @@ label {
   text-align: left;
   font-size: 17px;
   font-weight: 600;
-  color: #0A2A43;
+  color: #000000;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -2967,7 +3006,7 @@ label {
   color: #fff;
   &:hover {
     background: #fff;
-    color: #0A2A43;
+    color: #000000;
   }
 }
 
@@ -3157,7 +3196,7 @@ label {
 .cs_treatment_benefit_title {
   font-size: 15px;
   font-weight: 600;
-  color: #0A2A43;
+  color: #000000;
   margin: 0;
   line-height: 1.4;
   @media (max-width: 575px) {
@@ -3200,7 +3239,7 @@ label {
   .cs_treatment_procedure_title {
     font-size: 16px;
     font-weight: 600;
-    color: #0A2A43;
+    color: #000000;
     margin: 0 0 8px 0;
     line-height: 1.4;
     text-align: center;

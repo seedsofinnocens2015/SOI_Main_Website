@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -92,9 +93,9 @@ const page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 cs_service_page_content">
               <div className="cs_service_details text-center mb-5">
-                <h3 className="cs_service_heading">Comprehensive Resources for Your Fertility Journey</h3>
+                <AccentHeading level={3} className="cs_service_heading">Comprehensive Resources for Your Fertility Journey</AccentHeading>
                 <p className="cs_service_subtitle">
                   Access a wealth of information, guides, tools, and support materials to help you navigate your fertility treatment journey with confidence. Everything you need is right here.
                 </p>
@@ -183,7 +184,7 @@ const page = () => {
                 backgroundColor: '#f8f9fa',
                 borderRadius: '10px'
               }}>
-                <h4 className="cs_service_heading mb-3">Need More Help?</h4>
+                <AccentHeading level={3} className="cs_service_heading mb-3" style={{ fontSize: '22px' }}>Need More Help?</AccentHeading>
                 <p className="cs_service_subtitle mb-4">
                   Our team is here to support you every step of the way. If you can't find what you're looking for, don't hesitate to reach out.
                 </p>

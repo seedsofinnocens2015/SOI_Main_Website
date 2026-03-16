@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaWhatsapp, FaClock, FaLightbulb, FaCalendarAlt, FaFileMedical, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
@@ -42,7 +43,7 @@ const page = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -177,9 +178,7 @@ const page = () => {
                 borderRadius: '12px',
                 borderLeft: '4px solid #E45352'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
-                  What You Can Do on WhatsApp
-                </h3>
+                <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What You Can Do on WhatsApp</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li>Get information about IVF treatments and procedures</li>
                   <li>Inquire about treatment costs and package details</li>

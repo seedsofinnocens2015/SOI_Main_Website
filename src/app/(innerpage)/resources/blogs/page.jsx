@@ -1,5 +1,6 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getAssetPath } from '@/app/utils/assetPath';
@@ -83,9 +84,9 @@ const page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 cs_service_page_content">
               <div className="cs_service_details text-center mb-5">
-                <h3 className="cs_service_heading">Fertility & IVF Blogs</h3>
+                <AccentHeading level={3} className="cs_service_heading">Fertility & IVF Blogs</AccentHeading>
                 <p className="cs_service_subtitle">
                   Explore our comprehensive collection of blogs covering fertility, IVF, pregnancy, health, and more. Stay informed with expert insights, treatment guides, and inspiring stories.
                 </p>
@@ -157,7 +158,7 @@ const page = () => {
                 backgroundColor: '#f8f9fa',
                 borderRadius: '10px'
               }}>
-                <h4 className="cs_service_heading mb-3">Stay Updated</h4>
+                <AccentHeading level={3} className="cs_service_heading mb-3" style={{ fontSize: '22px' }}>Stay Updated</AccentHeading>
                 <p className="cs_service_subtitle mb-4">
                   Subscribe to our newsletter to receive the latest blog posts, fertility tips, and updates directly in your inbox.
                 </p>

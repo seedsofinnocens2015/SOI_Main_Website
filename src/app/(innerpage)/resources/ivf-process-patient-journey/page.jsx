@@ -164,8 +164,8 @@ const page = () => {
         <div className="container">
           {/* Content Section - Centered and Full Width */}
           <div className="row">
-            <div className="col-12">
-              <IVFContentSection data={journeyContentData} benefitImages={serviceData.benefitImages} />
+            <div className="col-12 cs_service_page_content">
+              <IVFContentSection data={journeyContentData} benefitImages={serviceData.benefitImages} accentHeadingStyle />
             </div>
           </div>
         </div>

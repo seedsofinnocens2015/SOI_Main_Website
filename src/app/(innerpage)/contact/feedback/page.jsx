@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -46,7 +47,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -71,9 +72,7 @@ const Page = () => {
                 border: '1px solid #e8e8e8',
                 marginBottom: '30px'
               }}>
-                <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
-                  Feedback Form
-                </h2>
+                <AccentHeading style={{ marginBottom: '30px' }}>Feedback Form</AccentHeading>
 
                 <form className="cs_contact_form">
                   <div className="row cs_gap_y_30">
@@ -223,9 +222,7 @@ const Page = () => {
                 borderRadius: '12px',
                 borderLeft: '4px solid #E45352'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
-                  How We Use Your Feedback
-                </h3>
+                <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>How We Use Your Feedback</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li>Improve our services and patient care quality</li>
                   <li>Train our staff based on your valuable insights</li>

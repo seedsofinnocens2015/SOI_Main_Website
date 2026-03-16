@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Link from 'next/link';
 import { FaCheckCircle, FaPhoneAlt, FaEnvelope, FaHome, FaCalendarAlt, FaPhone } from 'react-icons/fa';
 
@@ -164,9 +165,7 @@ const ThankYouContent = () => {
                       marginBottom: '20px'
                     }}
                   />
-                  <h2 className="cs_ivf_content_heading" style={{ marginBottom: '15px', color: '#28a745' }}>
-                    {config.title}
-                  </h2>
+                  <AccentHeading forcePlain style={{ marginBottom: '15px', color: '#28a745' }}>{config.title}</AccentHeading>
                   <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8' }}>
                     {config.description}
                   </p>
@@ -255,9 +254,7 @@ const ThankYouContent = () => {
                   marginTop: '30px',
                   borderLeft: '4px solid #E45352'
                 }}>
-                  <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
-                    Important Information
-                  </h3>
+                  <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>Important Information</AccentHeading>
                   <ul className="cs_list cs_list_style_1">
                     {config.importantInfo.map((info, index) => (
                       <li key={index}>

@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -114,7 +115,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -165,9 +166,7 @@ const Page = () => {
           {/* India Centres Section */}
           <div className="row mb-4">
             <div className="col-lg-12">
-              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                India Centres ({filteredIndiaCentres.length})
-              </h2>
+              <AccentHeading style={{ marginBottom: '40px' }}>India Centres ({filteredIndiaCentres.length})</AccentHeading>
             </div>
           </div>
 
@@ -300,9 +299,7 @@ const Page = () => {
           {/* International Centres Section */}
           <div className="row mb-4">
             <div className="col-lg-12">
-              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                International Centres ({filteredInternationalCentres.length})
-              </h2>
+              <AccentHeading style={{ marginBottom: '40px' }}>International Centres ({filteredInternationalCentres.length})</AccentHeading>
             </div>
           </div>
 

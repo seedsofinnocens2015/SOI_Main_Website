@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import ServiceCard from '@/app/Components/ServiceCard';
+import AccentHeading from '@/app/Components/AccentHeading';
 import { getRelatedSlugs, getCategory } from '@/app/utils/serviceSeo';
 
 const SECTION_HEADINGS = {
@@ -33,17 +34,9 @@ const RelatedServices = ({
   const category = serviceMeta[currentSlug]?.category || getCategory(currentSlug);
   const displayHeading = heading || SECTION_HEADINGS[category] || 'Related Services';
 
-  const words = String(displayHeading).trim().split(/\s+/);
-  const mid = Math.ceil(words.length / 2);
-  const firstPart = words.slice(0, mid).join(' ');
-  const restPart = words.slice(mid).join(' ');
-
   return (
     <div className="cs_ivf_content_section cs_related_services_section">
-      <h2 className="cs_ivf_content_heading cs_related_services_heading">
-        <span className="cs_related_services_heading_accent">{firstPart}</span>
-        {restPart ? <span> {restPart}</span> : null}
-      </h2>
+      <AccentHeading className="cs_related_services_heading">{displayHeading}</AccentHeading>
       <div className="row cs_gap_y_30 cs_related_services_grid">
         {slugs.map((slug) => {
           const config = servicesContent[slug];

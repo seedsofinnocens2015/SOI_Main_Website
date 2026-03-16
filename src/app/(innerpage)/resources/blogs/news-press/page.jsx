@@ -1,6 +1,7 @@
 "use client"
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
@@ -106,9 +107,7 @@ const Page = () => {
             <div className="col-lg-12">
               <div className="mb-5" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '20px' }}>
                 <div style={{ flex: 1, minWidth: '300px' }}>
-                  <h2 className="cs_ivf_content_heading" style={{ marginBottom: '20px' }}>
-                    Latest News & Press Releases
-                  </h2>
+                  <AccentHeading style={{ marginBottom: '20px' }}>Latest News & Press Releases</AccentHeading>
                   <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8' }}>
                     Stay updated with the latest news, achievements, and press releases from Seeds of Innocens. We share our milestones, new center openings, awards, and important announcements.
                   </p>
@@ -329,9 +328,7 @@ const Page = () => {
                 borderRadius: '12px',
                 border: '1px solid #e8e8e8'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ marginBottom: '15px', fontSize: '24px' }}>
-                  Media Inquiries
-                </h3>
+                <AccentHeading level={3} style={{ marginBottom: '15px', fontSize: '24px' }}>Media Inquiries</AccentHeading>
                 <p style={{ fontSize: '16px', color: '#666', lineHeight: '1.8', marginBottom: '20px' }}>
                   For media inquiries, press releases, or interview requests, please contact our media relations team.
                 </p>

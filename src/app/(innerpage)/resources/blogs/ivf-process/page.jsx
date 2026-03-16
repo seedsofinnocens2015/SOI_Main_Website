@@ -1,6 +1,7 @@
 "use client"
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useMemo } from 'react';
@@ -106,9 +107,7 @@ const Page = () => {
             <div className="col-lg-12">
               <div className="mb-5" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '20px' }}>
                 <div style={{ flex: 1, minWidth: '300px' }}>
-                  <h2 className="cs_ivf_content_heading" style={{ marginBottom: '20px' }}>
-                    IVF Process Blogs
-                  </h2>
+                  <AccentHeading style={{ marginBottom: '20px' }}>IVF Process Blogs</AccentHeading>
                   <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8' }}>
                     Detailed guides and articles about the IVF treatment process, procedures, and what to expect at each stage of your journey.
                   </p>

@@ -124,7 +124,7 @@ const page = () => {
           {/* Content Section - Centered and Full Width */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={firstSectionData} />
+              <IVFContentSection data={firstSectionData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -219,7 +219,7 @@ const page = () => {
           {/* Content Section - Centered and Full Width */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={remainingSectionsData} />
+              <IVFContentSection data={remainingSectionsData} accentHeadingStyle />
             </div>
           </div>
         </div>

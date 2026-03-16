@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaClock, FaCheckCircle, FaGlobe } from 'react-icons/fa';
@@ -122,7 +123,7 @@ const Page = () => {
       >
         <div className="container">
           <div className="row cs_gap_y_40">
-            <div className="col-lg-8">
+            <div className="col-lg-8 cs_service_page_content">
               <div style={{
                 padding: '40px',
                 backgroundColor: '#ffffff',
@@ -130,9 +131,7 @@ const Page = () => {
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8'
               }}>
-                <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
-                  Request a Call Back
-                </h2>
+                <AccentHeading style={{ marginBottom: '30px' }}>Request a Call Back</AccentHeading>
 
                 <div style={{ marginBottom: '30px' }}>
                   <label className="cs_form_label" style={{ marginBottom: '15px', display: 'block' }}>
@@ -338,9 +337,7 @@ const Page = () => {
                 marginTop: '30px',
                 borderLeft: '4px solid #E45352'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
-                  What Happens Next?
-                </h3>
+                <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What Happens Next?</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Submit Form:</strong> Fill out the form above with your details</li>
                   <li><strong>Confirmation:</strong> You&apos;ll receive a confirmation message within minutes</li>

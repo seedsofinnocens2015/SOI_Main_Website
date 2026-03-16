@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaTrophy, FaUsers, FaBriefcase, FaMapMarkerAlt, FaClock, FaUserTie } from 'react-icons/fa';
@@ -93,7 +94,7 @@ const page = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -109,9 +110,7 @@ const page = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                Why Join Seeds of Innocens?
-              </h2>
+              <AccentHeading style={{ marginBottom: '40px' }}>Why Join Seeds of Innocens?</AccentHeading>
             </div>
           </div>
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
@@ -212,9 +211,7 @@ const page = () => {
           {/* Job Openings */}
           <div className="row mb-4">
             <div className="col-lg-12">
-              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                Current Openings
-              </h2>
+              <AccentHeading style={{ marginBottom: '40px' }}>Current Openings</AccentHeading>
             </div>
           </div>
 

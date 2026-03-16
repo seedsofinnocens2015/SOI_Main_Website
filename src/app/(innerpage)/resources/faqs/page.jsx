@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import FAQAccordion from '@/app/Components/FAQAccordion';
 import React from 'react';
 
@@ -167,8 +168,8 @@ const page = () => {
         <div className="container">
           {/* First Section - Introduction */}
           <div className="row">
-            <div className="col-12">
-              <IVFContentSection data={faqsContentData} benefitImages={serviceData.benefitImages} />
+            <div className="col-12 cs_service_page_content">
+              <IVFContentSection data={faqsContentData} benefitImages={serviceData.benefitImages} accentHeadingStyle />
             </div>
           </div>
 
@@ -180,31 +181,9 @@ const page = () => {
           </div>
 
           {/* Questions about Seeds of Innocens Section */}
-          <div className="row" style={{ marginTop: '60px' }}>
+          <div className="row cs_service_page_content" style={{ marginTop: '60px' }}>
             <div className="col-12">
-              <h3 className="cs_section_title cs_fs_36" style={{
-                fontSize: '26px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Questions about
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Seeds of Innocens
-              </h3>
+              <AccentHeading level={3} style={{ fontSize: '26px', marginBottom: '30px' }}>Questions about Seeds of Innocens</AccentHeading>
               <FAQAccordion faqs={seedsOfInnocensFAQs} />
             </div>
           </div>

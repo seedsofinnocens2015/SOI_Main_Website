@@ -254,7 +254,7 @@ const page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 cs_service_page_content">
               <p className="cs_text_style_1 text-center" style={{ maxWidth: '800px', margin: '0 auto 50px' }}>
                 Our team of experienced IVF specialists brings together years of expertise in reproductive medicine. Each specialist is dedicated to providing personalized, compassionate care to help couples achieve their dream of parenthood through advanced IVF techniques and treatments.
               </p>
