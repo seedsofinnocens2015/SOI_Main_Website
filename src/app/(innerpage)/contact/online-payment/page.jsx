@@ -1,5 +1,6 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import React from 'react';
 import { getAssetPathClient } from '@/app/utils/assetPath';
@@ -29,7 +30,7 @@ const page = () => {
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
               <div style={{ textAlign: 'center', padding: '40px', backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-                <h2 style={{ marginBottom: '30px', color: '#333' }}>Make Online Payment</h2>
+                <AccentHeading style={{ marginBottom: '30px' }}>Make Online Payment</AccentHeading>
                 <p style={{ marginBottom: '30px', color: '#666', fontSize: '16px' }}>
                   Scan the QR code below to make your payment securely. You can use any UPI app or payment method to complete your transaction.
                 </p>
@@ -58,7 +59,7 @@ const page = () => {
                 </div>
 
                 <div style={{ marginTop: '30px', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
-                  <h3 style={{ marginBottom: '15px', color: '#333', fontSize: '18px' }}>Payment Instructions:</h3>
+                  <AccentHeading level={3} style={{ marginBottom: '15px', fontSize: '18px' }}>Payment Instructions:</AccentHeading>
                   <ul style={{ textAlign: 'left', color: '#666', lineHeight: '1.8', paddingLeft: '20px' }}>
                     <li>Open your UPI app (Google Pay, PhonePe, Paytm, etc.)</li>
                     <li>Scan the QR code displayed above</li>

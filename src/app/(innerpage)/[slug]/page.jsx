@@ -2,11 +2,10 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import Image from 'next/image';
 import Link from 'next/link';
-import centresAllData from '../ivf-centres/centres-data.json';
+import centresAllData from '@/app/data/centres-data.json';
 const centresData = centresAllData.centres;
 const stateContentConfig = centresAllData.stateContent;
-import doctorsData from '../doctors/doctors-data.json';
-import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
+import doctorsData from '@/app/data/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 import IVFContentSection from '@/app/Components/IVFContentSection';
@@ -82,20 +81,7 @@ const servicesList = [
 export async function generateMetadata({ params }) {
     const { slug } = await params;
 
-    // 1. Check if it's a doctor page
-    const doctor = doctorsData.find(d => 
-        (d.newSlug === slug) || 
-        (slug === d.slug + '-ivf-specialist')
-    );
-
-    if (doctor) {
-        return {
-            title: `${doctor.name} | ${doctor.subtitle} | Seeds of Innocens`,
-            description: doctor.description ? doctor.description[0] : `Meet ${doctor.name}, ${doctor.subtitle} at Seeds of Innocens IVF Centre.`,
-        };
-    }
-
-    // 2. Check if it's an international center slug
+    // 1. Check if it's an international center slug
     const internationalCenter = centresData.find(c => c.isInternational && c.slug === slug);
     if (internationalCenter) {
         return {
@@ -104,7 +90,7 @@ export async function generateMetadata({ params }) {
         };
     }
 
-    // 3. Otherwise treat as state page
+    // 2. Otherwise treat as state page
     if (!slug.startsWith('best-ivf-center-in-')) {
         return { title: 'Not Found' };
     }
@@ -133,11 +119,6 @@ export async function generateStaticParams() {
             slug: `best-ivf-center-in-${stateSlug}`
         }));
 
-        // Doctor params
-        const doctorParams = doctorsData.map(d => ({
-            slug: d.newSlug || d.slug + '-ivf-specialist'
-        }));
-
         // International center params (SEO slugs)
         const internationalParams = centresData
             .filter(c => c.isInternational && c.slug)
@@ -145,7 +126,7 @@ export async function generateStaticParams() {
                 slug: c.slug
             }));
 
-        return [...stateParams, ...doctorParams, ...internationalParams];
+        return [...stateParams, ...internationalParams];
     } catch (error) {
         console.error('Error in generateStaticParams:', error);
         return [];
@@ -159,40 +140,7 @@ const DynamicPage = async ({ params }) => {
         notFound();
     }
 
-    // 1. Check if it's a doctor slug
-    const doctor = doctorsData.find(d => 
-        (d.newSlug === slug) || 
-        (slug === d.slug + '-ivf-specialist')
-    );
-
-    if (doctor) {
-        const otherDoctors = doctorsData
-            .filter(d => d.slug !== doctor.slug)
-            .slice(0, 5)
-            .map(d => ({
-                name: d.name,
-                imageUrl: d.image,
-                profession: d.subtitle,
-                experience: d.experience,
-                link: `/${d.newSlug || d.slug + '-ivf-specialist'}`
-            }));
-
-        return (
-            <div className="cs_doctor_details_page">
-                <Section
-                    className={'cs_page_heading cs_bg_filed cs_center'}
-                    backgroundImage="/assets/img/Top-Header.png"
-                >
-                    <PageHeading data={{ title: doctor.name }} />
-                </Section>
-                <Section topSpaceLg="80" topSpaceMd="110" bottomSpaceLg="80" bottomSpaceMd="120">
-                    <DoctorDetailsSection data={doctor} otherDoctors={otherDoctors} />
-                </Section>
-            </div>
-        );
-    }
-
-    // 2. Check if it's an International Center Slug
+    // 1. Check if it's an International Center Slug
     const center = centresData.find(c => c.isInternational && c.slug === slug);
     if (center) {
         const cityName = center.name.split(',')[0].trim();
@@ -232,7 +180,7 @@ const DynamicPage = async ({ params }) => {
         );
     }
 
-    // 3. Otherwise handle as State Page
+    // 2. Otherwise handle as State Page
     if (!slug.startsWith('best-ivf-center-in-')) {
         notFound();
     }
@@ -267,21 +215,13 @@ const DynamicPage = async ({ params }) => {
         uspTitle: rawStateContent.uspTitle,
     };
 
-    const faqs = rawStateContent.faqs || stateContentConfig.default.faqs || [];
-
-    const faqContentData =
-        faqs.length > 0
-            ? {
-                sections: [
-                    {
-                        steps: faqs.map((faq) => ({
-                            title: replaceStateName(faq.question),
-                            description: replaceStateName(faq.answer),
-                        })),
-                    },
-                ],
-            }
-            : null;
+    const rawFaqs = rawStateContent.faqs || stateContentConfig.default.faqs || [];
+    const stateFaqs = rawFaqs.map((faq) => ({
+        question: replaceStateName(faq.question),
+        answer: replaceStateName(faq.answer),
+        ...(faq.listItems && { listItems: (faq.listItems || []).map(replaceStateName) }),
+    }));
+    const hasStateFaqs = stateFaqs.length > 0;
 
     return (
         <div className="cs_center_page_template">
@@ -583,7 +523,7 @@ const DynamicPage = async ({ params }) => {
                 </div>
             </section>
 
-            {faqContentData && (
+            {hasStateFaqs && (
                 <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="80" bottomSpaceMd="50">
                     <div className="container">
                         <div className="cs_service_title_section mb-10 text-center">
@@ -596,7 +536,7 @@ const DynamicPage = async ({ params }) => {
                         </div>
                         <div className="row">
                             <div className="col-12">
-                                <IVFContentSection data={faqContentData} />
+                                <IVFContentSection data={{ sections: [] }} faq={stateFaqs} />
                             </div>
                         </div>
                     </div>

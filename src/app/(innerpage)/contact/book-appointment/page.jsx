@@ -4,10 +4,11 @@ import { useRouter } from 'next/navigation';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
-import centresAllData from '@/app/(innerpage)/ivf-centres/centres-data.json';
+import centresAllData from '@/app/data/centres-data.json';
 const centresData = centresAllData.centres;
 
 const headingData = {
@@ -92,7 +93,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -116,9 +117,7 @@ const Page = () => {
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8'
               }}>
-                <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
-                  Appointment Booking Form
-                </h2>
+                <AccentHeading style={{ marginBottom: '30px' }}>Appointment Booking Form</AccentHeading>
 
                 {error && (
                   <div style={{
@@ -257,9 +256,7 @@ const Page = () => {
                 marginTop: '30px',
                 borderLeft: '4px solid #E45352'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
-                  What to Expect
-                </h3>
+                <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What to Expect</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li>Comprehensive consultation with our fertility specialist</li>
                   <li>Review of medical history and previous treatments</li>

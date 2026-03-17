@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
 
 const headingData = {
@@ -86,9 +87,7 @@ const Page = () => {
                 border: '1px solid #e8e8e8',
                 marginBottom: '30px'
               }}>
-                <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
-                  Registration Form
-                </h2>
+                <AccentHeading style={{ marginBottom: '30px' }}>Registration Form</AccentHeading>
 
                 <form className="cs_contact_form">
                   <div className="row cs_gap_y_30">
@@ -218,9 +217,7 @@ const Page = () => {
                 borderRadius: '12px',
                 borderLeft: '4px solid #E45352'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
-                  What Happens Next?
-                </h3>
+                <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What Happens Next?</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Registration Review:</strong> Our training team will review your registration within 2-3 business days</li>
                   <li><strong>Confirmation:</strong> If selected, you&apos;ll receive a confirmation call or email with training details</li>

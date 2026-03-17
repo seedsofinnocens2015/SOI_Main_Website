@@ -5,10 +5,10 @@ import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import centresAllData from '../../ivf-centres/centres-data.json';
+import centresAllData from '@/app/data/centres-data.json';
 const indiaCentresData = centresAllData.centres;
 const centerContentConfig = centresAllData.centerContent;
-import doctorsData from '../../doctors/doctors-data.json';
+import doctorsData from '@/app/data/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 
@@ -148,19 +148,14 @@ const page = async ({ params }) => {
         _benefitImages: [processedCenterImage, processedCenterImage]
     };
 
-    // FAQ Content Data
-    const rawFaqs = (centerContentConfig[center.slug] && centerContentConfig[center.slug].faqs) || centerContentConfig.default.faqs || [];
-    const faqContentData = rawFaqs.length > 0 ? {
-        sections: [
-            {
-                heading: `Frequently Asked Questions`,
-                steps: rawFaqs.map((faq) => ({
-                    title: replaceCityName(faq.question),
-                    description: replaceCityName(faq.answer),
-                })),
-            },
-        ],
-    } : null;
+    // FAQ: centre-specific or default, with {{cityName}} replaced (for FAQ accordion)
+    const rawFaqs = (centerContentConfig[center.slug] && centerContentConfig[center.slug].faqs) || centerContentConfig.default?.faqs || [];
+    const centerFaqs = rawFaqs.map((faq) => ({
+        question: replaceCityName(faq.question),
+        answer: replaceCityName(faq.answer),
+        ...(faq.listItems && { listItems: faq.listItems.map(replaceCityName) }),
+    }));
+    const faqContentData = rawFaqs.length > 0 ? { sections: [] } : null;
 
     return (
         <BestIVFCentre
@@ -170,6 +165,7 @@ const page = async ({ params }) => {
             services={servicesWithIcons}
             doctorsData={doctorsData}
             faqContentData={faqContentData}
+            faq={centerFaqs}
         />
     );
 };

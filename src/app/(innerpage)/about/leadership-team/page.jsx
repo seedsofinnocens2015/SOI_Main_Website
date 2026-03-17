@@ -1,6 +1,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -82,7 +83,7 @@ const Page = () => {
           {/* Content Section - Centered and Full Width */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
 
@@ -90,9 +91,7 @@ const Page = () => {
           <div className="cs_height_60" />
           <div className="row">
             <div className="col-lg-12">
-              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                Our Leadership Team
-              </h2>
+              <AccentHeading style={{ marginBottom: '40px' }}>Our Leadership Team</AccentHeading>
             </div>
           </div>
           <div className="cs_doctors_grid cs_style_1">

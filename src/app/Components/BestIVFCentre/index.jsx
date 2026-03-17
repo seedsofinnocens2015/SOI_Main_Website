@@ -19,7 +19,8 @@ const BestIVFCentre = ({
     topCenterContentData,
     bottomCenterContentData,
     locationContentData,
-    faqContentData
+    faqContentData,
+    faq: faqItems = [],
 }) => {
     const serviceRow1Ref = useRef(null);
     const serviceRow2Ref = useRef(null);
@@ -241,7 +242,7 @@ const BestIVFCentre = ({
                             {centerDoctors.map((doctor, index) => {
                                 const matchedDoctorData = doctorsData.find((d) => d.slug === doctor.slug);
                                 const doctorLink = matchedDoctorData
-                                    ? `/${matchedDoctorData.newSlug || matchedDoctorData.slug + '-ivf-specialist'}`
+                                    ? `/doctors/${matchedDoctorData.newSlug || matchedDoctorData.slug + '-ivf-specialist'}`
                                     : null;
 
                                 return (
@@ -646,7 +647,7 @@ const BestIVFCentre = ({
                 </section>
             )}
             {/* FAQ Section */}
-            {faqContentData && (
+            {(faqContentData || faqItems?.length > 0) && (
                 <Section
                     topSpaceLg="0"
                     topSpaceMd="0"
@@ -654,7 +655,6 @@ const BestIVFCentre = ({
                     bottomSpaceMd="120"
                 >
                     <div className="container">
-                        {/* Section Heading matching NewsMediaSection style */}
                         <div className="cs_service_title_section mb-10">
                             <h2 className="cs_service_main_title">
                                 <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
@@ -665,11 +665,9 @@ const BestIVFCentre = ({
                         </div>
                         <div className="row">
                             <div className="col-12">
-                                <IVFContentSection 
-                                    data={{
-                                        ...faqContentData, 
-                                        sections: faqContentData.sections.map(s => ({...s, heading: ''}))
-                                    }} 
+                                <IVFContentSection
+                                    data={{ sections: faqContentData?.sections || [] }}
+                                    faq={faqItems}
                                 />
                             </div>
                         </div>

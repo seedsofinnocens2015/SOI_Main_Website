@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaClock, FaCheckCircle } from 'react-icons/fa';
@@ -90,7 +91,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -114,9 +115,7 @@ const Page = () => {
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e8e8e8'
               }}>
-                <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
-                  Call Back Request Form
-                </h2>
+                <AccentHeading style={{ marginBottom: '30px' }}>Call Back Request Form</AccentHeading>
 
                 {error && (
                   <div style={{
@@ -237,9 +236,7 @@ const Page = () => {
                 marginTop: '30px',
                 borderLeft: '4px solid #E45352'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
-                  What Happens Next?
-                </h3>
+                <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What Happens Next?</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Submit Form:</strong> Fill out the form above with your details</li>
                   <li><strong>Confirmation:</strong> You&apos;ll receive a confirmation message within minutes</li>

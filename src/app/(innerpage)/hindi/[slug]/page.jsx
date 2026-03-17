@@ -4,8 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowLeft } from 'react-icons/fa';
+import AccentHeading from '@/app/Components/AccentHeading';
 import blogsData from '@/app/data/blogs.json';
 import { getAssetPath } from '@/app/utils/assetPath';
+import { accentHeadingsInHtml } from '@/app/utils/accentHeadingsInHtml';
 
 // Generate static params for static export
 export async function generateStaticParams() {
@@ -20,10 +22,6 @@ export async function generateStaticParams() {
     slug: blog.slug,
   }));
 }
-
-const headingData = {
-  title: 'Blog Details',
-};
 
 // Map category names to their route slugs (including Hindi categories)
 const getCategoryRoute = (category) => {
@@ -97,7 +95,7 @@ const BlogDetailPage = async ({ params }) => {
         className={'cs_page_heading cs_bg_filed cs_center'}
         backgroundImage="/assets/img/Top-Header.png"
       >
-        <PageHeading data={headingData} />
+        <PageHeading data={{ title: blog.title }} />
       </Section>
 
       {/* Blog Detail Section */}
@@ -105,12 +103,12 @@ const BlogDetailPage = async ({ params }) => {
         <div className="container">
           <div className="row">
             {/* Back Button */}
-            <div className="col-lg-12" style={{ marginBottom: '30px' }}>
+            <div className="col-lg-12" style={{ marginBottom: '30px', textAlign: 'left' }}>
               <Link
-                href={`/resources/blogs/${getCategoryRoute(blog.category)}`}
+                href={`/blogs/${getCategoryRoute(blog.category)}`}
                 style={{
                   display: 'inline-flex',
-                  alignItems: 'center',
+                  alignItems: 'left',
                   gap: '8px',
                   color: '#E45352',
                   textDecoration: 'none',
@@ -124,14 +122,10 @@ const BlogDetailPage = async ({ params }) => {
               </Link>
             </div>
 
-            {/* Main Content */}
+            {/* Main Content - title & content centered like doctor page */}
             <div className="col-lg-8">
-              <article style={{
-                backgroundColor: '#fff',
-                borderRadius: '12px',
+              <article className="cs_blog_detail_article" style={{
                 overflow: 'hidden',
-                boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
-                marginBottom: '40px'
               }}>
                 {/* Blog Image */}
                 <div style={{ position: 'relative', width: '100%', height: '400px', overflow: 'hidden' }}>
@@ -144,13 +138,13 @@ const BlogDetailPage = async ({ params }) => {
                   />
                 </div>
 
-                {/* Blog Content */}
-                <div style={{ padding: '40px' }}>
+                {/* Blog Content - centered */}
+                <div className="cs_blog_detail_content" style={{ padding: '40px', textAlign: 'center' }}>
                   {/* Category Badge */}
                   <div style={{
                     display: 'inline-block',
                     padding: '6px 16px',
-                    backgroundColor: '#E45352',
+                    backgroundColor: '#df3655',
                     color: '#fff',
                     borderRadius: '20px',
                     fontSize: '13px',
@@ -160,25 +154,20 @@ const BlogDetailPage = async ({ params }) => {
                     {blog.category}
                   </div>
 
-                  {/* Blog Title */}
-                  <h1 style={{
-                    fontSize: '32px',
-                    fontWeight: '700',
-                    color: '#0A2A43',
-                    marginBottom: '20px',
-                    lineHeight: '1.3'
-                  }}>
+                  {/* Blog Title - half #df3655, half black, centered (same as doctor page) */}
+                  <AccentHeading level={2} className="cs_ivf_content_heading cs_blog_title" style={{ marginBottom: '20px' }}>
                     {blog.title}
-                  </h1>
+                  </AccentHeading>
 
-                  {/* Meta Information */}
+                  {/* Meta Information - centered */}
                   <div style={{
                     display: 'flex',
                     flexWrap: 'wrap',
                     gap: '20px',
                     marginBottom: '30px',
                     paddingBottom: '20px',
-                    borderBottom: '1px solid #e8e8e8'
+                    borderBottom: '1px solid #e8e8e8',
+                    justifyContent: 'center'
                   }}>
                     <span style={{
                       display: 'flex',
@@ -212,63 +201,35 @@ const BlogDetailPage = async ({ params }) => {
                     </span>
                   </div>
 
-                  {/* Blog Content */}
+                  {/* Blog Content - centered */}
                   <div
-                    className="blog-content"
+                    className="blog-content cs_blog_body"
                     style={{
                       fontSize: '16px',
                       lineHeight: '1.8',
                       color: '#333',
-                      marginBottom: '30px'
+                      marginBottom: '30px',
+                      textAlign: 'center',
+                      maxWidth: '100%'
                     }}
-                    dangerouslySetInnerHTML={{ __html: blog.content }}
+                    dangerouslySetInnerHTML={{ __html: accentHeadingsInHtml(blog.content) }}
                   />
                 </div>
               </article>
             </div>
 
-            {/* Sidebar */}
+            {/* Sidebar - same structure as doctor page */}
             <div className="col-lg-4">
-              <div style={{ position: 'sticky', top: '20px' }}>
-                {/* CTA Section */}
-                <div style={{
-                  backgroundColor: '#E45352',
-                  borderRadius: '12px',
-                  padding: '30px',
-                  color: '#fff',
-                  textAlign: 'center',
-                  marginBottom: '30px'
-                }}>
-                  <h3 style={{
-                    fontSize: '22px',
-                    fontWeight: '700',
-                    marginBottom: '15px',
-                    color: '#fff'
-                  }}>
-                    Need Help?
-                  </h3>
-                  <p style={{
-                    fontSize: '14px',
-                    marginBottom: '20px',
-                    lineHeight: '1.6',
-                    opacity: 0.9,
-                    color: '#fff'
-                  }}>
+              <div className="cs_sidebar_sticky_wrapper">
+                {/* Need Help? Card - same as doctor page Book Appointment card */}
+                <div className="cs_appointment_card" style={{ marginBottom: '30px' }}>
+                  <AccentHeading level={3} className="cs_sidebar_heading">Need Help?</AccentHeading>
+                  <p>
                     Our fertility specialists are here to help you on your journey to parenthood.
                   </p>
                   <Link
                     href="/contact/book-appointment"
-                    style={{
-                      display: 'inline-block',
-                      padding: '12px 24px',
-                      backgroundColor: '#fff',
-                      color: '#E45352',
-                      textDecoration: 'none',
-                      borderRadius: '5px',
-                      fontWeight: '600',
-                      fontSize: '14px',
-                      transition: 'all 0.3s ease'
-                    }}
+                    className="cs_btn cs_style_1 cs_appointment_btn"
                   >
                     Book Appointment
                   </Link>
@@ -282,16 +243,15 @@ const BlogDetailPage = async ({ params }) => {
                     padding: '30px',
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                   }}>
-                    <h3 style={{
+                    <AccentHeading level={3} className="cs_sidebar_heading" style={{
                       fontSize: '22px',
                       fontWeight: '700',
-                      color: '#0A2A43',
                       marginBottom: '20px',
                       paddingBottom: '15px',
-                      borderBottom: '2px solid #E45352'
+                      borderBottom: '2px solid #df3655'
                     }}>
                       Related Blogs
-                    </h3>
+                    </AccentHeading>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                       {relatedBlogs.map((relatedBlog) => {
                         // Determine if related blog is Hindi or English
@@ -335,7 +295,7 @@ const BlogDetailPage = async ({ params }) => {
                                 <h4 style={{
                                   fontSize: '15px',
                                   fontWeight: '600',
-                                  color: '#0A2A43',
+                                  color: '#000000',
                                   marginBottom: '8px',
                                   lineHeight: '1.4',
                                   display: '-webkit-box',

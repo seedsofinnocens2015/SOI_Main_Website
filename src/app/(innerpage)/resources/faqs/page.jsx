@@ -2,7 +2,9 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
-import React, { useState } from 'react';
+import AccentHeading from '@/app/Components/AccentHeading';
+import FAQAccordion from '@/app/Components/FAQAccordion';
+import React from 'react';
 
 const headingData = {
   title: 'FAQs',
@@ -13,101 +15,6 @@ const serviceData = {
     '/assets/img/recent_post2.jpg',
     '/assets/img/recent_post2.jpg'
   ],
-};
-
-// FAQ Accordion Component
-const FAQAccordion = ({ faqs }) => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  return (
-    <div className="faq-accordion" style={{ marginTop: '30px' }}>
-      {faqs.map((faq, index) => (
-        <div
-          key={index}
-          style={{
-            marginBottom: '15px',
-            border: '1px solid #e8e8e8',
-            borderRadius: '8px',
-            overflow: 'hidden',
-            transition: 'all 0.3s ease'
-          }}
-        >
-          <div
-            onClick={() => toggleFAQ(index)}
-            style={{
-              cursor: 'pointer',
-              padding: '20px',
-              backgroundColor: openIndex === index ? '#f8f9fa' : '#ffffff',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              transition: 'all 0.3s ease'
-            }}
-          >
-            <h4 style={{
-              margin: 0,
-              fontSize: '18px',
-              fontWeight: '600',
-              color: '#0A2A43',
-              flex: 1,
-              paddingRight: '20px'
-            }}>
-              {faq.question}
-            </h4>
-            <span style={{
-              fontSize: '24px',
-              color: '#E45352',
-              fontWeight: 'bold',
-              minWidth: '30px',
-              textAlign: 'center',
-              transition: 'transform 0.3s ease'
-            }}>
-              {openIndex === index ? '−' : '+'}
-            </span>
-          </div>
-          {openIndex === index && (
-            <div style={{
-              padding: '0 20px 20px 20px',
-              backgroundColor: '#f8f9fa',
-              lineHeight: '1.8',
-              color: '#666'
-            }}>
-              {faq.answer && (
-                <div style={{ marginBottom: '15px' }}>
-                  {faq.answer.map((para, pIndex) => (
-                    <p key={pIndex} style={{ marginBottom: '10px', fontSize: '15px' }}>
-                      {para}
-                    </p>
-                  ))}
-                </div>
-              )}
-              {faq.listItems && (
-                <ul style={{
-                  marginTop: '10px',
-                  paddingLeft: '20px',
-                  listStyle: 'disc'
-                }}>
-                  {faq.listItems.map((item, itemIndex) => (
-                    <li key={itemIndex} style={{
-                      marginBottom: '8px',
-                      fontSize: '15px',
-                      lineHeight: '1.8'
-                    }}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
 };
 
 const faqsContentData = {
@@ -261,8 +168,8 @@ const page = () => {
         <div className="container">
           {/* First Section - Introduction */}
           <div className="row">
-            <div className="col-12">
-              <IVFContentSection data={faqsContentData} benefitImages={serviceData.benefitImages} />
+            <div className="col-12 cs_service_page_content">
+              <IVFContentSection data={faqsContentData} benefitImages={serviceData.benefitImages} accentHeadingStyle />
             </div>
           </div>
 
@@ -274,31 +181,9 @@ const page = () => {
           </div>
 
           {/* Questions about Seeds of Innocens Section */}
-          <div className="row" style={{ marginTop: '60px' }}>
+          <div className="row cs_service_page_content" style={{ marginTop: '60px' }}>
             <div className="col-12">
-              <h3 className="cs_section_title cs_fs_36" style={{
-                fontSize: '26px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                marginBottom: '30px',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Questions about
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Seeds of Innocens
-              </h3>
+              <AccentHeading level={3} style={{ fontSize: '26px', marginBottom: '30px' }}>Questions about Seeds of Innocens</AccentHeading>
               <FAQAccordion faqs={seedsOfInnocensFAQs} />
             </div>
           </div>

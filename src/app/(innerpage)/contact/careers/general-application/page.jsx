@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -41,7 +42,7 @@ const page = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -65,9 +66,7 @@ const page = () => {
                 border: '1px solid #e8e8e8',
                 marginBottom: '30px'
               }}>
-                <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
-                  General Application Form
-                </h2>
+                <AccentHeading style={{ marginBottom: '30px' }}>General Application Form</AccentHeading>
 
                 <form className="cs_contact_form">
                   <div className="row cs_gap_y_30">
@@ -267,9 +266,7 @@ const page = () => {
                 borderLeft: '4px solid #E45352',
                 marginBottom: '30px'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
-                  How General Applications Work
-                </h3>
+                <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>How General Applications Work</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Database Storage:</strong> Your application will be stored in our talent database</li>
                   <li><strong>Active Review:</strong> Our HR team reviews general applications regularly</li>
@@ -284,9 +281,7 @@ const page = () => {
                 borderRadius: '12px',
                 borderLeft: '4px solid #ffc107'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '15px', color: '#856404' }}>
-                  Note
-                </h3>
+                <AccentHeading level={3} forcePlain style={{ fontSize: '24px', marginBottom: '15px', color: '#856404' }}>Note</AccentHeading>
                 <p style={{ margin: 0, color: '#856404', lineHeight: '1.8' }}>
                   While we review all general applications, we encourage you to also check our current openings page regularly. If you see a position that matches your profile, you can apply directly to that specific role for faster processing.
                 </p>

@@ -83,7 +83,7 @@ const page = () => {
           {/* Content Section - Centered and Full Width */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>

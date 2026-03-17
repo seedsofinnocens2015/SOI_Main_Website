@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -64,9 +65,9 @@ const page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 cs_service_page_content">
               <div className="cs_service_details text-center mb-5">
-                <h3 className="cs_service_heading">Welcome International Patients</h3>
+                <AccentHeading level={3} className="cs_service_heading">Welcome International Patients</AccentHeading>
                 <p className="cs_service_subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
                   Seeds of Innocens welcomes patients from around the world. We provide world-class fertility treatments with comprehensive support services to make your journey to parenthood smooth and successful, no matter where you're from.
                 </p>
@@ -148,13 +149,13 @@ const page = () => {
 
           {/* Why Choose Us Section */}
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 cs_service_page_content">
               <div style={{
                 padding: '50px',
                 backgroundColor: '#f8f9fa',
                 borderRadius: '10px'
               }}>
-                <h4 className="cs_service_heading mb-4 text-center">Why International Patients Choose Seeds of Innocens</h4>
+                <AccentHeading level={3} className="cs_service_heading mb-4 text-center" style={{ fontSize: '22px' }}>Why International Patients Choose Seeds of Innocens</AccentHeading>
                 <div className="row">
                   <div className="col-md-4 mb-4">
                     <div style={{ textAlign: 'center', padding: '20px' }}>

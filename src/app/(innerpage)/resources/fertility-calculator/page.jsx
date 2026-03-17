@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
@@ -137,12 +138,13 @@ const FertilityCalculatorPage = () => {
         <div className="container">
           {/* First Content Section */}
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 cs_service_page_content">
               <IVFContentSection
                 data={{
                   sections: [calculatorContentData.sections[0]]
                 }}
                 benefitImages={serviceData.benefitImages}
+                accentHeadingStyle
               />
             </div>
           </div>
@@ -183,9 +185,7 @@ const FertilityCalculatorPage = () => {
                       <FaCalculator />
                     </div>
                     <div>
-                      <h3 className="cs_ivf_content_heading" style={{ margin: 0, fontSize: '28px' }}>
-                        Calculate Your Fertility Chances
-                      </h3>
+                      <AccentHeading level={3} style={{ margin: 0, fontSize: '28px' }}>Calculate Your Fertility Chances</AccentHeading>
                       <p style={{ margin: '5px 0 0 0', color: '#666', fontSize: '14px' }}>
                         Enter your information below to get an estimate
                       </p>
@@ -504,12 +504,13 @@ const FertilityCalculatorPage = () => {
 
           {/* Remaining Content Sections */}
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 cs_service_page_content">
               <IVFContentSection
                 data={{
                   sections: calculatorContentData.sections.slice(1)
                 }}
                 benefitImages={serviceData.benefitImages}
+                accentHeadingStyle
               />
             </div>
           </div>

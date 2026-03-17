@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import React, { useState } from 'react';
 import Image from 'next/image';
 
@@ -174,7 +175,7 @@ const Page = () => {
           {/* Content Section - Centered and Full Width */}
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -190,9 +191,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2 className="cs_ivf_content_heading" style={{ marginBottom: '40px' }}>
-                Our YouTube Videos
-              </h2>
+              <AccentHeading style={{ marginBottom: '40px' }}>Our YouTube Videos</AccentHeading>
             </div>
           </div>
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>

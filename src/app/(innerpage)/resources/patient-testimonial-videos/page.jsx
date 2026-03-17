@@ -1,6 +1,7 @@
 "use client";
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
+import AccentHeading from '@/app/Components/AccentHeading';
 import React, { useState } from 'react';
 
 const headingData = {
@@ -161,36 +162,14 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
-              <h3 className="cs_section_title cs_fs_36" style={{
-                fontSize: '26px',
-                fontWeight: '700',
-                color: '#0A2A43',
-                position: 'relative',
-                display: 'inline-block',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ position: 'relative', display: 'inline-block' }}>
-                  Patient
-                  <span style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '0',
-                    width: '60px',
-                    height: '4px',
-                    backgroundColor: '#E45352',
-                    borderRadius: '2px'
-                  }}></span>
-                </span>
-                {' '}Testimonial Videos
-              </h3>
+            <div className="col-lg-12 cs_service_page_content">
+              <AccentHeading level={3} style={{ fontSize: '26px', marginBottom: '20px' }}>Patient Testimonial Videos</AccentHeading>
               <div className="cs_height_30" />
               <p className="cs_text_style_1" style={{
                 marginBottom: '20px',
                 lineHeight: '2',
                 fontSize: '17px',
                 color: '#333',
-                textAlign: 'justify',
                 maxWidth: '100%'
               }}>
                 Watch real stories from our patients as they share their IVF journey, experiences, and success stories. These video testimonials provide genuine insights into what you can expect at Seeds of Innocens. Hearing directly from our patients about their experiences, challenges, and successes can provide comfort, hope, and valuable information for those considering fertility treatment. .

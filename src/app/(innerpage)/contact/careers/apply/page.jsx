@@ -2,6 +2,7 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
+import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -92,7 +93,7 @@ const page = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <IVFContentSection data={ivfContentData} />
+              <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
@@ -116,9 +117,7 @@ const page = () => {
                 border: '1px solid #e8e8e8',
                 marginBottom: '30px'
               }}>
-                <h2 className="cs_ivf_content_heading" style={{ marginBottom: '30px' }}>
-                  Application Form
-                </h2>
+                <AccentHeading style={{ marginBottom: '30px' }}>Application Form</AccentHeading>
 
                 <form className="cs_contact_form">
                   <div className="row cs_gap_y_30">
@@ -306,9 +305,7 @@ const page = () => {
                 borderRadius: '12px',
                 borderLeft: '4px solid #E45352'
               }}>
-                <h3 className="cs_ivf_content_heading" style={{ fontSize: '24px', marginBottom: '20px' }}>
-                  What Happens Next?
-                </h3>
+                <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What Happens Next?</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Application Review:</strong> Our HR team will review your application within 3-5 business days</li>
                   <li><strong>Shortlisting:</strong> If shortlisted, you&apos;ll receive a call or email for the next steps</li>

@@ -22,14 +22,15 @@ const Footer = () => {
       {
         title: 'Fertility Treatment',
         links: [
-          { href: '/fertility-treatments/ivf-icsi/', text: 'IVF-ICSI' },
+          { href: '/fertility-treatments/ivf/', text: 'IVF' },
+          { href: '/fertility-treatments/icsi/', text: 'ICSI' },
           { href: '/fertility-treatments/iui/', text: 'IUI' },
-          { href: '/advanced-fertility-care/male-infertility/', text: 'Male Infertility' },
-          { href: '/advanced-fertility-care/egg-freezing/', text: 'Egg Freezing' },
+          { href: '/male-infertility-treatments/male-infertility-treatment-in-india/', text: 'Male Infertility' },
+          { href: '/ivf-procedures-preservation/egg-freezing/', text: 'Egg Freezing' },
           { href: '/fertility-treatments/blastocyst-transfer/', text: 'Blastocyst Transfer' },
           { href: '/fertility-treatments/ovulation-induction/', text: 'Ovulation Induction' },
           { href: '/fertility-treatments/follicular-monitoring/', text: 'Follicular Monitoring' },
-          { href: '/fertility-treatments/tesa-pesa/', text: 'TESA/PESA' },
+          { href: '/male-infertility-treatments/tesa/', text: 'TESA/PESA' },
         ],
       },
       {
@@ -44,10 +45,10 @@ const Footer = () => {
       },
     ],
     trainingAcademyLinks: [
-      { href: '/embryo-biopsy-training-program', text: 'Embryo Biopsy' },
-      { href: '/embryologist-training-program', text: 'Embryologist' },
+      { href: '/training-academy/embryo-biopsy-training-program', text: 'Embryo Biopsy' },
+      { href: '/training-academy/embryologist-training-program', text: 'Embryologist' },
       { href: '/training-academy/andrology-technician-training-program', text: 'Andrology Technician' },
-      { href: '/gynecologic-surgical-training-program', text: 'Gynecologic Surgical' },
+      { href: '/training-academy/gynecologic-surgical-training-program', text: 'Gynecologic Surgical' },
       { href: '/training-academy/training-registration', text: 'Training Registration' },
     ],
     copyrightText: 'Copyright © 2026 Felicity. All rights reserved.',
