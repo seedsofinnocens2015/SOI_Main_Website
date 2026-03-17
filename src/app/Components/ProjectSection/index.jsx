@@ -3,6 +3,7 @@ import { useMemo } from "react";
 import Spacing from "../Spacing";
 import LocationsMap from "../LocationsMap";
 import Image from "next/image";
+import Link from "next/link";
 import { getAssetPathClient } from "../../utils/assetPath";
 
 const ProjectSection = ({ data }) => {
@@ -102,9 +103,15 @@ const ProjectSection = ({ data }) => {
                         className="cs_centre_card"
                         style={{ "--centre-border-color": getCentreBorderColor(item.title) }}
                       >
-                        <div className="cs_centre_content">
-                          <h3 className="cs_centre_title">{item.title}</h3>
-                        </div>
+                        {item.link ? (
+                          <Link href={item.link} className="cs_centre_content">
+                            <h3 className="cs_centre_title">{item.title}</h3>
+                          </Link>
+                        ) : (
+                          <div className="cs_centre_content">
+                            <h3 className="cs_centre_title">{item.title}</h3>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -123,11 +130,17 @@ const ProjectSection = ({ data }) => {
                           className="cs_centre_card"
                           style={{ "--centre-border-color": getCentreBorderColor(item.title) }}
                         >
-                  <div className="cs_centre_content">
-                    <h3 className="cs_centre_title">{item.title}</h3>
-                  </div>
-                </div>
-              ))}
+                          {item.link ? (
+                            <Link href={item.link} className="cs_centre_content">
+                              <h3 className="cs_centre_title">{item.title}</h3>
+                            </Link>
+                          ) : (
+                            <div className="cs_centre_content">
+                              <h3 className="cs_centre_title">{item.title}</h3>
+                            </div>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>

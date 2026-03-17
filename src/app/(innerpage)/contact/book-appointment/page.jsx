@@ -8,7 +8,7 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
-import centresAllData from '@/app/(innerpage)/ivf-centres/centres-data.json';
+import centresAllData from '@/app/data/centres-data.json';
 const centresData = centresAllData.centres;
 
 const headingData = {

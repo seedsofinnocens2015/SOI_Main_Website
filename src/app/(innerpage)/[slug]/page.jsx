@@ -2,7 +2,7 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import Image from 'next/image';
 import Link from 'next/link';
-import centresAllData from '../ivf-centres/centres-data.json';
+import centresAllData from '@/app/data/centres-data.json';
 const centresData = centresAllData.centres;
 const stateContentConfig = centresAllData.stateContent;
 import doctorsData from '@/app/data/doctors-data.json';

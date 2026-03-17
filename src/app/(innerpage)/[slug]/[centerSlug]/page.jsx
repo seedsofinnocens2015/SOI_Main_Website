@@ -5,7 +5,7 @@ import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import centresAllData from '../../ivf-centres/centres-data.json';
+import centresAllData from '@/app/data/centres-data.json';
 const indiaCentresData = centresAllData.centres;
 const centerContentConfig = centresAllData.centerContent;
 import doctorsData from '@/app/data/doctors-data.json';

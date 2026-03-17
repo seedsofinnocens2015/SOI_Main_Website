@@ -327,6 +327,7 @@ const heroData = {
               'Seeds of Innocens IVF, 3, opposite Aurbindo College, MMTC Road, Malviya Nagar, New Delhi-110017',
             index: 1,
             coordinates: [28.5355, 77.2167], // Delhi coordinates
+            link: '/delhi/best-ivf-centre-in-malviyanagar',
           },
           {
             imgUrl: '/assets/img/Centres/ghaziabad.jpg',
@@ -335,6 +336,7 @@ const heroData = {
               'Seeds of Innocens IVF, Yashoda Hospital Opp. Nehru Stadium, Nehru Nagar, Ghaziabad, U.P.-201001',
             index: 2,
             coordinates: [28.6692, 77.4538], // Ghaziabad coordinates
+            link: '/uttar-pradesh/best-ivf-centre-in-ghaziabad',
           },
           {
             imgUrl: '/assets/img/Centres/gurgaon.jpg',
@@ -343,6 +345,7 @@ const heroData = {
               'Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar, Nigam Office Gurugram, Haryana-122001',
             index: 3,
             coordinates: [28.4089, 77.0378], // Gurgaon coordinates
+            link: '/haryana/best-ivf-centre-in-gurgaon',
           },
           {
             imgUrl: '/assets/img/Centres/faridabad.jpg',
@@ -351,14 +354,16 @@ const heroData = {
               'Seeds of Innocens IVF, A-6/A Neelam Bata Road, Above ICICI Bank, NIT Faridabad, Haryana-121001',
             index: 4,
             coordinates: [28.4089, 77.3167], // Faridabad coordinates
+            link: '/haryana/best-ivf-centre-in-faridabad',
           },
           {
             imgUrl: '/assets/img/Centres/jankpuri.jpg',
-            title: 'Jankpuri, Delhi',
+            title: 'Janakpuri, Delhi',
             subtitle:
               'Seeds of Innocens IVF, C1A/50A, Pankha Road, Janakpuri, New Delhi-110058',
             index: 5,
             coordinates: [28.6219, 77.0882], // Janakpuri coordinates
+            link: '/delhi/best-ivf-centre-in-janakpuri',
           },
           {
             imgUrl: '/assets/img/Centres/pitampura.jpg',
@@ -367,6 +372,7 @@ const heroData = {
               'Seeds of Innocens IVF, Plot no 1, First floor, Shiva Enclave, Near Harsh Vihar Chowk, Pitampura, Delhi-110034',
             index: 6,
             coordinates: [28.6989, 77.1398], // Pitampura coordinates
+            link: '/delhi/best-ivf-centre-in-pitampura',
           },
         ],
       },
@@ -380,6 +386,7 @@ const heroData = {
               '2nd Floor, 1076, Kamlesh Shopping Arcade, near Kalimandir, Golghar, Gorakhpur, U.P.-273001',
             index: 1,
             coordinates: [26.7588, 83.3697], // Gorakhpur coordinates
+            link: '/uttar-pradesh/best-ivf-centre-in-gorakhpur',
           },
           {
             imgUrl: '/assets/img/Centres/lucknow.jpg',
@@ -388,6 +395,7 @@ const heroData = {
               'Drosia Tower, 5/5, Park Rd, Raj Bhavan Colony, Hazratganj, Lucknow, Uttar Pradesh 226001',
             index: 2,
             coordinates: [26.8467, 80.9462], // Lucknow coordinates
+            link: '/uttar-pradesh/best-ivf-centre-in-lucknow',
           },
           {
             imgUrl: '/assets/img/Centres/kanpur.jpg',
@@ -396,6 +404,7 @@ const heroData = {
               '7/153, Kumhar Wali gali, Kanpur Vidya Mandir, Khalasi Line, Swaroop Nagar, Kanpur, Uttar Pradesh 208002',
             index: 3,
             coordinates: [26.4499, 80.3319], // Kanpur coordinates
+            link: '/uttar-pradesh/best-ivf-centre-in-kanpur',
           },
           {
             imgUrl: '/assets/img/Centres/meerut.jpg',
@@ -404,6 +413,7 @@ const heroData = {
               'building 303/305, 2nd floor, Mangal Pandey Nagar, Ramgarhi, Meerut, Uttar Pradesh 250004',
             index: 4,
             coordinates: [28.9845, 77.7064], // Meerut coordinates
+            link: '/uttar-pradesh/best-ivf-centre-in-meerut',
           },
           {
             imgUrl: '/assets/img/Centres/agra.jpg',
@@ -412,6 +422,7 @@ const heroData = {
               '1st Floor, Shankar Point, Block No.9/4, Sanjay Palace, Sanjay Place, Civil Lines, Agra, Uttar Pradesh 282002',
             index: 5,
             coordinates: [27.1767, 78.0081], // Agra coordinates
+            link: '/uttar-pradesh/best-ivf-centre-in-agra',
           },
         ],
       },
@@ -426,6 +437,7 @@ const heroData = {
               'Opp Royal drive showroom, Kannadikadu, Upasana Rd, Kundannoor, Maradu, Kochi, Kerala 682304',
             index: 1,
             coordinates: [9.9312, 76.2673], // Kochi coordinates
+            link: '/kerala/best-ivf-centre-in-kochi',
           },                           
           {
             imgUrl: '/assets/img/Centres/kasaragod.jpg',
@@ -434,6 +446,7 @@ const heroData = {
               'Seeds of Innocens IVF, Wintouch Multi Speciality Hospital, Bank Road, Kasaragod, Kerala, 671121',
             index: 2,
             coordinates: [12.4984, 74.9894], // Kasaragod coordinates
+            link: '/kerala/best-ivf-centre-in-kasaragod',
           },
         ],
       },
@@ -447,6 +460,7 @@ const heroData = {
               'GS Rd, SATSANG VIHAR, Bhangagarh, Guwahati, Assam 781005',
             index: 1,
             coordinates: [26.1445, 91.7362], // Guwahati coordinates
+            link: '/assam/best-ivf-centre-in-guwahati',
           },
           {
             imgUrl: '/assets/img/Centres/haldwani.jpg',
@@ -455,6 +469,7 @@ const heroData = {
               '2nd Floor, Laxmi Mohan Towers, Chauraha, Bamori Talli, Ganesh Vihar, Heera Nagar, Mukhani, Haldwani, Uttarakhand 263139',
             index: 2,
             coordinates: [29.2227, 79.5156], // Haldwani coordinates
+            link: '/uttarakhand/best-ivf-centre-in-haldwani',
           },
           {
             imgUrl: '/assets/img/Centres/ranchi.jpg',
@@ -463,6 +478,7 @@ const heroData = {
               '4th Floor, Maru Tower, Kanke Rd, Ranchi, Jharkhand 834008',
             index: 3,
             coordinates: [23.3441, 85.3096], // Ranchi coordinates
+            link: '/jharkhand/best-ivf-centre-in-ranchi',
           },
 
           // {
@@ -485,6 +501,7 @@ const heroData = {
               '2nd Floor, Hansa Complex, Maripur Main Rd, Musahri, Muzaffarpur, Bihar 842001',
             index: 2,
             coordinates: [26.1210, 85.3655], // Muzaffarpur coordinates
+            link: '/bihar/best-ivf-centre-in-muzaffarpur',
           },
           {
             imgUrl: '/assets/img/Centres/patna.jpg',
@@ -493,6 +510,7 @@ const heroData = {
               'Pillar no: 38, Jagmano Shree Complex, Bailey Rd, Samanpura, Khajpura, Patna, Bihar 800014',
             index: 1,
             coordinates: [25.5941, 85.1376], // Patna coordinates
+            link: '/bihar/best-ivf-centre-in-patna',
           },
         ],
       },
@@ -506,6 +524,7 @@ const heroData = {
               'Seeds of Innocens IVF, Lusaka, Zambia, Africa',
             index: 1,
             coordinates: [-15.3875, 28.3228], // Lusaka coordinates
+            link: '/best-ivf-centre-in-lusaka-zambia',
           },
           {
             imgUrl: '/assets/img/Centres/kitwe.jpg',
@@ -514,6 +533,7 @@ const heroData = {
               'Seeds of Innocens IVF, Kitwe, Zambia, Africa',
             index: 2,
             coordinates: [-12.8147, 28.2136], // Kitwe coordinates
+            link: '/best-ivf-centre-in-kitwe-zambia',
           },
           {
             imgUrl: '/assets/img/Centres/muscat.jpg',
@@ -522,6 +542,7 @@ const heroData = {
               'Seeds of Innocens IVF, Mabela, Muscat, Oman',
             index: 3,
             coordinates: [23.5880, 58.3829], // Muscat coordinates
+            link: '/best-ivf-centre-in-mabela-muscat',
           },
         ],
       },
