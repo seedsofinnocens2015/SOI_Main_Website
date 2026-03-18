@@ -196,7 +196,7 @@ const heroData = {
         subHeading: 'Understanding PGT-SR',
         subtitle: '<strong>PGT-SR</strong> is a specialized test that looks at embryos for possible chromosomal abnormalities produced by structural rearrangements in translocations, deletions, and duplications. Advanced testing aids in identifying embryos with higher probabilities of implantation and subsequent development. At Seeds of Innocens, we provide cutting-edge PGT-SR testing as part of our all-inclusive IVF services, guiding couples toward fulfilling their dreams of parenthood.',
         imageUrl: '/assets/img/PGT-A.webp',
-        link: '/genetic-testing-screening/pgt-a/',
+        link: '/genetic-testing-screening/pgt-sr/',
       },
       {
         iconUrl: '/assets/img/icons/Blastocyst Transfer.svg',
@@ -214,7 +214,7 @@ const heroData = {
         subHeading: 'Cryopreservation',
         subtitle: '<strong>Cryopreservation</strong> is a process where fertility-related cells, such as eggs, sperm, and embryos, are frozen and stored for future use. This technique allows couples to preserve their fertility and access it when needed, making it an invaluable option for those facing fertility challenges.',
         imageUrl: '/assets/img/Cryopreservation.jpg',
-        link: '/',
+        link: '/ivf-procedures-preservation/cryopreservation/',
       },
       {
         iconUrl: '/assets/img/icons/PRP & Ovarian Rejuvenation.svg',
@@ -223,7 +223,7 @@ const heroData = {
         subHeading: 'PRP & Ovarian Rejuvenation',
         subtitle: '<strong>PRP & Ovarian Rejuvenation</strong> is an advanced, non-surgical procedure that uses the body’s own healing power to rejuvenate ovarian function. This innovative approach involves injecting Platelet-Rich Plasma (PRP) into the ovaries to stimulate growth, improve blood flow, and enhance overall ovarian health, making it a promising option for couples facing fertility challenges.',
         imageUrl: '/assets/img/PRP-Ovarian-Rejuvenation.jpg',
-        link: '/advanced-fertility-care/prp-ovarian-rejuvenation/',
+        link: '/ivf-procedures-preservation/prp/',
       },
       {
         iconUrl: '/assets/img/icons/TESA-PESA.svg',
@@ -241,7 +241,7 @@ const heroData = {
         subHeading: 'Donor Program: Third Party Reproduction',
         subtitle: '<strong>Donor Program</strong> is a third-party reproduction option that allows couples to achieve pregnancy through the use of donor sperm, donor eggs, or donor embryos. This approach provides a solution for couples who are unable to conceive naturally, offering hope and a pathway to parenthood.',
         imageUrl: '/assets/img/Donor-Program.jpg',
-        link: '/',
+        link: '/ivf-procedures-preservation/donor-program/',
       },
       {
         iconUrl: '/assets/img/icons/Surrogacy.svg',
@@ -250,7 +250,7 @@ const heroData = {
         subHeading: 'Surrogacy: Ethical, Medically Guided Assistance with Complete End-to-End Care',
         subtitle: '<strong>Surrogacy</strong> is an ethical, medically guided process that provides assistance with complete end-to-end care. This approach allows couples to achieve pregnancy through the use of a surrogate mother, offering hope and a pathway to parenthood.',
         imageUrl: '/assets/img/Surrogacy1.jpg',
-        link: '/',
+        link: '/ivf-procedures-preservation/surrogacy/',
       },
       
       {
@@ -260,7 +260,7 @@ const heroData = {
         subHeading: 'Genetic Counselling: Understanding and Managing Genetic Risks in Family Planning',
         subtitle: '<strong>Genetic Counselling</strong> is a process that helps couples understand and manage genetic risks in family planning, assessing family history for inherited conditions guiding them through options. This approach allows couples to make informed decisions about their fertility and family planning.',
         imageUrl: '/assets/img/Genetic-Counselling.jpg',
-        link: '/',
+        link: '/genetic-testing-screening/genetic-testing/',
       },
       {
         iconUrl: '/assets/img/icons/Laparoscopy & Hysteroscopy.svg',

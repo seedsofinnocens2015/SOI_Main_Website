@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useEffect, useState, useCallback, useMemo } from 'react';
 import {
   FaEnvelope,
@@ -13,8 +13,80 @@ import { FaAnglesRight } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
 import { getAssetPathClient } from '@/app/utils/assetPath';
 
+// Collect all hrefs under a nav item (for active state matching)
+const getNavItemHrefs = (item) => {
+  const hrefs = [];
+  if (item.href) hrefs.push(item.href);
+  if (item.megaMenuCategories) {
+    item.megaMenuCategories.forEach(cat => {
+      if (cat.href) hrefs.push(cat.href);
+      if (cat.subItems) {
+        cat.subItems.forEach(sub => {
+          if (sub.href) hrefs.push(sub.href);
+          if (sub.subItems) {
+            sub.subItems.forEach(nested => {
+              if (nested.href) hrefs.push(nested.href);
+            });
+          }
+        });
+      }
+    });
+  }
+  if (item.subItems) {
+    item.subItems.forEach(sub => {
+      if (sub.href) hrefs.push(sub.href);
+    });
+  }
+  return hrefs;
+};
+
+// Check if current path matches this nav item (exact or under this section)
+const isNavItemActive = (pathname, item) => {
+  const hrefs = getNavItemHrefs(item);
+  if (!pathname) return false;
+  const path = pathname.replace(/\/$/, '') || '/';
+  return hrefs.some(href => {
+    const base = (href || '').replace(/\/$/, '') || '/';
+    return path === base || (base !== '/' && path.startsWith(base + '/'));
+  });
+};
+
+// Check if a single link href is active (for sub-headings)
+const isLinkActive = (pathname, href) => {
+  if (!pathname || !href) return false;
+  const path = pathname.replace(/\/$/, '') || '/';
+  const base = (href || '').replace(/\/$/, '') || '/';
+  return path === base || (base !== '/' && path.startsWith(base + '/'));
+};
+
+// Collect hrefs for any node with nested subItems (category/subItem)
+const getNodeHrefs = (node) => {
+  const hrefs = [];
+  if (!node) return hrefs;
+  if (node.href) hrefs.push(node.href);
+  if (node.subItems && Array.isArray(node.subItems)) {
+    node.subItems.forEach(child => {
+      hrefs.push(...getNodeHrefs(child));
+    });
+  }
+  return hrefs;
+};
+
+// Active check for category/subItem nodes (works even when href is empty but children match)
+const isNodeActive = (pathname, node) => {
+  if (!pathname || !node) return false;
+  const hrefs = getNodeHrefs(node);
+  if (!hrefs.length) return false;
+  const path = pathname.replace(/\/$/, '') || '/';
+  return hrefs.some(href => {
+    const base = (href || '').replace(/\/$/, '') || '/';
+    return path === base || (base !== '/' && path.startsWith(base + '/'));
+  });
+};
+
 const Header = ({ isTopBar, variant }) => {
   const router = useRouter();
+  const pathname = usePathname();
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
   const [openMobileSubmenuIndex, setOpenMobileSubmenuIndex] = useState([]);
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -747,11 +819,12 @@ const Header = ({ isTopBar, variant }) => {
                     {menu.navItems.map((item, index) => (
                       <li
                         className={
-                          item.isMegaMenu
+                          (item.isMegaMenu
                             ? 'menu-item-has-children cs_mega_menu'
                             : item.subItems
                               ? 'menu-item-has-children'
-                              : ''
+                              : '') +
+                          (isNavItemActive(pathname, item) ? ' cs_nav_item_active' : '')
                         }
                         key={index}
                       >
@@ -796,7 +869,7 @@ const Header = ({ isTopBar, variant }) => {
                                     );
                                   return (
                                     <li
-                                      className="cs_mobile_mega_category"
+                                      className={`cs_mobile_mega_category${isNodeActive(pathname, category) ? ' cs_sub_item_active' : ''}`}
                                       key={catIndex}
                                     >
                                       <div className="cs_mobile_category_header">
@@ -846,7 +919,7 @@ const Header = ({ isTopBar, variant }) => {
                                               const nestedKey = `${index}-${catIndex}-${subIndex}`;
                                               const isNestedOpen = openMegaCategories[nestedKey]?.includes(0);
                                               return (
-                                                <li key={subIndex} className={hasNestedSubItems ? 'cs_mobile_mega_category' : ''}>
+                                                <li key={subIndex} className={`${hasNestedSubItems ? 'cs_mobile_mega_category' : ''}${isNodeActive(pathname, subItem) ? ' cs_sub_item_active' : ''}`}>
                                                   {hasNestedSubItems ? (
                                                     <>
                                                       <div className="cs_mobile_category_header">
@@ -889,7 +962,7 @@ const Header = ({ isTopBar, variant }) => {
                                                       >
                                                         {subItem.subItems.map(
                                                           (nestedItem, nestedIndex) => (
-                                                            <li key={nestedIndex}>
+                                                            <li key={nestedIndex} className={isLinkActive(pathname, nestedItem.href) ? 'cs_sub_item_active' : ''}>
                                                               <Link
                                                                 href={nestedItem.href}
                                                                 prefetch={false}
@@ -910,6 +983,7 @@ const Header = ({ isTopBar, variant }) => {
                                                     <Link
                                                       href={subItem.href}
                                                       prefetch={false}
+                                                      className={isNodeActive(pathname, subItem) ? 'cs_sub_item_active' : ''}
                                                       onClick={(e) => {
                                                         if (item.label === 'IVF Centers' && category.label === 'India' && !subItem.href) {
                                                           e.preventDefault();
@@ -990,7 +1064,7 @@ const Header = ({ isTopBar, variant }) => {
                                               setHoveredStateIndex(null);
                                             }
                                           }}
-                                          className={`${hoveredCategoryIndex === catIndex ? 'cs_active_category' : ''} ${hasSubItems ? 'cs_has_subitems' : ''}`}
+                                          className={`${hoveredCategoryIndex === catIndex ? 'cs_active_category' : ''} ${hasSubItems ? 'cs_has_subitems' : ''}${isNodeActive(pathname, category) ? ' cs_sub_item_active' : ''}`}
                                         >
                                           <Link
                                             href={category.href}
@@ -1054,9 +1128,10 @@ const Header = ({ isTopBar, variant }) => {
                                             // This prevents blinking
                                           }}
                                           className={
-                                            hoveredStateIndex === subIndex
+                                            (hoveredStateIndex === subIndex
                                               ? 'cs_active_subcategory'
-                                              : ''
+                                              : '') +
+                                            (isNodeActive(pathname, subItem) ? ' cs_sub_item_active' : '')
                                           }
                                         >
                                           <Link
@@ -1112,7 +1187,7 @@ const Header = ({ isTopBar, variant }) => {
                                       hoveredCategoryIndex
                                     ].subItems[hoveredStateIndex].subItems.map(
                                       (nestedItem, nestedIndex) => (
-                                        <li key={nestedIndex}>
+                                        <li key={nestedIndex} className={isLinkActive(pathname, nestedItem.href) ? 'cs_sub_item_active' : ''}>
                                           <Link
                                             href={nestedItem.href}
                                             prefetch={false}
@@ -1140,7 +1215,7 @@ const Header = ({ isTopBar, variant }) => {
                             }}
                           >
                             {item.subItems.map((subItem, subIndex) => (
-                              <li key={subIndex}>
+                              <li key={subIndex} className={isLinkActive(pathname, subItem.href) ? 'cs_sub_item_active' : ''}>
                                 <Link
                                   href={subItem.href}
                                   prefetch={false}

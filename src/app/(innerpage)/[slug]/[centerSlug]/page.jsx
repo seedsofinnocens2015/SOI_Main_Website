@@ -157,6 +157,14 @@ const page = async ({ params }) => {
     }));
     const faqContentData = rawFaqs.length > 0 ? { sections: [] } : null;
 
+    // About Us: centre-specific or default, with {{cityName}} replaced
+    const rawAboutUs = (centerContentConfig[center.slug] && centerContentConfig[center.slug].aboutUs) || centerContentConfig.default?.aboutUs;
+    const aboutUs = rawAboutUs ? {
+        title: replaceCityName(rawAboutUs.title),
+        image: rawAboutUs.image,
+        paragraphs: (rawAboutUs.paragraphs || []).map(replaceCityName),
+    } : undefined;
+
     return (
         <BestIVFCentre
             center={center}
@@ -166,6 +174,7 @@ const page = async ({ params }) => {
             doctorsData={doctorsData}
             faqContentData={faqContentData}
             faq={centerFaqs}
+            aboutUs={aboutUs}
         />
     );
 };

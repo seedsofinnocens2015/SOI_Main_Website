@@ -2915,7 +2915,7 @@ label {
   padding: 18px 20px;
   text-align: left;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
   color: #000000;
   background: transparent;
   border: none;
@@ -2946,6 +2946,9 @@ label {
 .cs_service_faq_answer {
   display: none;
   padding: 0 20px 18px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
   @media (max-width: 575px) {
     padding: 0 16px 14px;
   }
@@ -2954,6 +2957,8 @@ label {
     font-size: 16px;
     line-height: 1.7;
     color: var(--body-color);
+    text-align: left;
+    max-width: none;
   }
 }
 
@@ -2982,7 +2987,7 @@ label {
 }
 .faq_accordion_question_text {
   text-align: left;
-  font-weight: 500;
+  font-weight: 900;
   color: #111827;
   padding-right: 1rem;
 }
@@ -3015,10 +3020,15 @@ label {
   line-height: 1.625;
   padding: 0 1.25rem 1.25rem;
   padding-top: 0;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
 }
 .faq_accordion_answer_inner p {
   margin: 0 0 0.5rem;
   font-size: 1rem;
+  text-align: left;
+  max-width: none;
 }
 .faq_accordion_answer_inner p:last-child,
 .faq_accordion_answer_inner ul:last-child {
@@ -3028,6 +3038,7 @@ label {
   list-style: disc;
   padding-left: 1.25rem;
   margin-top: 0.5rem;
+  text-align: left;
 }
 .faq_accordion_answer_inner li {
   margin-bottom: 0.25rem;

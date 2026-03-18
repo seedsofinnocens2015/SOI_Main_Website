@@ -16,6 +16,7 @@ const BestIVFCentre = ({
     description,
     services: injectedServices,
     doctorsData = [],
+    aboutUs: injectedAboutUs,
     topCenterContentData,
     bottomCenterContentData,
     locationContentData,
@@ -125,7 +126,7 @@ const BestIVFCentre = ({
     };
 
     const testimonials = center?.testimonials || [];
-    const aboutUs = center?.aboutUs;
+    const aboutUs = injectedAboutUs ?? center?.aboutUs;
     const contactInfo = center?.contactInfo;
 
     const featuresRow1Ref = useRef(null);
@@ -161,59 +162,77 @@ const BestIVFCentre = ({
                         {/* Service Cards - Mobile 2 Rows */}
                         <div className="cs_best_ivf_services_mobile">
                             <div ref={serviceRow1Ref} className="cs_service_row">
-                                {services.slice(0, 4).map((service, idx) => (
-                                    <div key={idx} className="cs_service_card_mobile">
-                                        <div className="cs_service_icon_box">
-                                            <Image
-                                                src={getAssetPathClient(service.icon)}
-                                                alt={service.title}
-                                                width={48}
-                                                height={48}
-                                                className="w-12 h-12 object-contain"
-                                            />
-                                        </div>
-                                        <h3 className="cs_service_title_mobile">{service.title}</h3>
-                                        {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
-                                    </div>
-                                ))}
+                                {services.slice(0, 4).map((service, idx) => {
+                                    const Wrapper = service.link ? Link : 'div';
+                                    const wrapperProps = service.link ? { href: service.link, className: 'cs_service_card_mobile_link' } : { className: 'cs_service_card_mobile_link' };
+                                    return (
+                                        <Wrapper key={idx} {...wrapperProps}>
+                                            <div className="cs_service_card_mobile">
+                                                <div className="cs_service_icon_box">
+                                                    <Image
+                                                        src={getAssetPathClient(service.icon)}
+                                                        alt={service.title}
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-12 h-12 object-contain"
+                                                    />
+                                                </div>
+                                                <h3 className="cs_service_title_mobile">{service.title}</h3>
+                                                {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
+                                            </div>
+                                        </Wrapper>
+                                    );
+                                })}
                             </div>
                             <div ref={serviceRow2Ref} className="cs_service_row">
-                                {services.slice(4, 8).map((service, idx) => (
-                                    <div key={idx} className="cs_service_card_mobile">
-                                        <div className="cs_service_icon_box">
-                                            <Image
-                                                src={getAssetPathClient(service.icon)}
-                                                alt={service.title}
-                                                width={48}
-                                                height={48}
-                                                className="w-12 h-12 object-contain"
-                                            />
-                                        </div>
-                                        <h3 className="cs_service_title_mobile">{service.title}</h3>
-                                        {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
-                                    </div>
-                                ))}
+                                {services.slice(4, 8).map((service, idx) => {
+                                    const Wrapper = service.link ? Link : 'div';
+                                    const wrapperProps = service.link ? { href: service.link, className: 'cs_service_card_mobile_link' } : { className: 'cs_service_card_mobile_link' };
+                                    return (
+                                        <Wrapper key={idx} {...wrapperProps}>
+                                            <div className="cs_service_card_mobile">
+                                                <div className="cs_service_icon_box">
+                                                    <Image
+                                                        src={getAssetPathClient(service.icon)}
+                                                        alt={service.title}
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-12 h-12 object-contain"
+                                                    />
+                                                </div>
+                                                <h3 className="cs_service_title_mobile">{service.title}</h3>
+                                                {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
+                                            </div>
+                                        </Wrapper>
+                                    );
+                                })}
                             </div>
                         </div>
 
                         {/* Service Cards Grid - Tablet/Desktop */}
                         <div className="cs_best_ivf_services_desktop">
-                            {services.map((service, idx) => (
-                                <div key={idx} className="cs_service_card_desktop">
-                                    <div className="cs_service_icon_box">
-                                        <Image
-                                            src={getAssetPathClient(service.icon)}
-                                            alt={service.title}
-                                            width={80}
-                                            height={80}
-                                            className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
-                                            loading="lazy"
-                                        />
-                                    </div>
-                                    <h3 className="cs_service_title_desktop">{service.title}</h3>
-                                    {service.subtitle && <p className="cs_service_subtitle_desktop">{service.subtitle}</p>}
-                                </div>
-                            ))}
+                            {services.map((service, idx) => {
+                                const Wrapper = service.link ? Link : 'div';
+                                const wrapperProps = service.link ? { href: service.link, className: 'cs_service_card_desktop_link' } : { className: 'cs_service_card_desktop_link' };
+                                return (
+                                    <Wrapper key={idx} {...wrapperProps}>
+                                        <div className="cs_service_card_desktop">
+                                            <div className="cs_service_icon_box">
+                                                <Image
+                                                    src={getAssetPathClient(service.icon)}
+                                                    alt={service.title}
+                                                    width={80}
+                                                    height={80}
+                                                    className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                            <h3 className="cs_service_title_desktop">{service.title}</h3>
+                                            {service.subtitle && <p className="cs_service_subtitle_desktop">{service.subtitle}</p>}
+                                        </div>
+                                    </Wrapper>
+                                );
+                            })}
                         </div>
 
                         {/* Call to Action Button */}
@@ -413,22 +432,22 @@ const BestIVFCentre = ({
                             {[
                                 {
                                     title: '35+ IVF Centres',
-                                    desc: "With over 35 IVF centres across the National and International, Seeds of Innocens brings fertility care closer to you.",
+                                    desc: "Seeds of Innocens IVF brings you the best fertility care across India and International too. With over 35+ IVF centre, your journey to parenthood is become more closer to you. Whether you're in a metro or a smaller city, expert help is never far away.",
                                     icon: <img src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: '20,000+ Healthy Babies',
-                                    desc: 'At Seeds of Innocens, we are proud to have helped over 20,000 families welcome healthy babies into the world.',
+                                    desc: 'At Seeds of Innocens IVF we have helped and fulfilled the dream of many couples who were struggling with infertility. Our commitment to quality fertility care and personalised treatment.',
                                     icon: <img src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'Upto 78% Success Rate',
-                                    desc: 'We maintain an impressive IVF success rate of 78%, higher than the average.',
+                                    desc: 'At Seeds of Innocens IVF, the success rate of IVF is reported above 78%+ which is well above the global average. Moreover, it is crucial to note that success rates vary depending on factors such as the age of the patient, the specific fertility problems, and the treatment protocol.',
                                     icon: <img src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Upto 78% Success Rate" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: '30+ Certified Trained Clinicians',
-                                    desc: 'Our team includes over 30 certified and highly trained fertility specialists and embryologists.',
+                                    desc: 'We have skilled fertility experts with an experience of over 20+ years. Seeds of Innocens IVF is dedicated to giving everyone access to great medical care while lowering the costs of IVF and other reproductive procedures. ',
                                     icon: <img src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="30+ Certified Trained Clinicians" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                             ].map((f, idx) => (
@@ -449,24 +468,24 @@ const BestIVFCentre = ({
                         <div ref={featuresRow2Ref} className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                             {[
                                 {
-                                    title: 'Affordable IVF Care',
-                                    desc: 'We provide affordable IVF treatment and offer quality services to patients, with customised packages.',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/IUI, IVF & ICSI.svg")} alt="Affordable IVF Care" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    title: 'Reliability',
+                                    desc: 'Seeds of Innocens IVF has an industry-leading success rate of about 78%, and it is well known for its high patient satisfaction rates.',
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/Reliability.svg")} alt="Reliability" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
-                                    title: 'Fetal Medicine',
-                                    desc: 'We offer fetal medicine services including ultrasound scans, fetal echocardiography, and diagnostic procedures.',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/Blastocyst Transfer.svg")} alt="Fetal Medicine" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    title: 'Latest Technologies',
+                                    desc: 'We use the latest technologies for diagnosing and treating cases with unconventional methods.',
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="Fetal Medicine" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
-                                    title: 'Expert Fertility Counsellor',
-                                    desc: 'Genetic counselors evaluate family histories and identify potential genetic risks.',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Counselling.svg")} alt="Expert Fertility Counsellor" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    title: 'Customized Care',
+                                    desc: 'Seeds of Innocens IVF offers quality treatment to every patient as per the individual requirement to make sure about the customized care.',
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/Customized Care.svg")} alt="Customized Care" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'In-House Genetic Lab',
-                                    desc: 'We are the first IVF centre in India to establish an in-house genetic lab.',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="In-House Genetic Lab" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    desc: 'We are proud to be recognize as the first IVF centre to have its own in-house genetic lab',
+                                    icon: <img src={getAssetPathClient("/assets/img/icons/In-House Genetic.svg")} alt="In-House Genetic Lab" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                             ].map((f, idx) => (
                                 <div
@@ -489,43 +508,43 @@ const BestIVFCentre = ({
                         {[
                             {
                                 title: '35+ IVF Centres',
-                                desc: "With over 35 IVF centres across the National and International, Seeds of Innocens brings fertility care closer to you. Whether you're in a metro or a smaller city, expert help is never far away.",
+                                desc: "Seeds of Innocens IVF brings you the best fertility care across India and International too. With over 35+ IVF centre, your journey to parenthood is become more closer to you. Whether you're in a metro or a smaller city, expert help is never far away. Whether you're in a metro or a smaller city, expert help is never far away.",
                                 icon: <img src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: '20,000+ Healthy Babies',
-                                desc: 'At Seeds of Innocens, we are proud to have helped over 20,000 families welcome healthy babies into the world. Our commitment to quality fertility care and personalised treatment.',
+                                desc: 'At Seeds of Innocens IVF we have helped and fulfilled the dream of many couples who were struggling with infertility.  Our commitment to quality fertility care and personalised treatment.',
                                 icon: <img src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Upto 78% Success Rate',
-                                desc: 'We maintain an impressive IVF success rate of 78%, higher than the average. Our advanced lab technology and individualised treatment plans make this possible.',
+                                desc: 'At Seeds of Innocens IVF, the success rate of IVF is reported above 78%+ which is well above the global average. Moreover, it is crucial to note that success rates vary depending on factors such as the age of the patient, the specific fertility problems, and the treatment protocol. ',
                                 icon: <img src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Upto 78% Success Rate" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: '30+ Certified Trained Clinicians',
-                                desc: 'Our team includes over 30 certified and highly trained fertility specialists and embryologists. With years of experience and global expertise.',
+                                desc: 'We have skilled fertility experts with an experience of over 20+ years. Seeds of Innocens IVF is dedicated to giving everyone access to great medical care while lowering the costs of IVF and other reproductive procedures. ',
                                 icon: <img src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="30+ Certified Trained Clinicians" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
-                                title: 'Affordable IVF Care',
-                                desc: 'We provide affordable IVF treatment and offer quality services to patients, with customised packages and financing options to make your journey easier.',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/IUI, IVF & ICSI.svg")} alt="Affordable IVF Care" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                title: 'Reliability',
+                                desc: '. Seeds of Innocens IVF has an industry-leading success rate of about 78%, and it is well known for its high patient satisfaction rates. and financing options to make your journey easier.',
+                                icon: <img src={getAssetPathClient("/assets/img/icons/Reliability.svg")} alt="Reliability" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
-                                title: 'Fetal Medicine',
-                                desc: 'We offer fetal medicine services including ultrasound scans, fetal echocardiography, and diagnostic procedures like amniocentesis and CVS.',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/Blastocyst Transfer.svg")} alt="Fetal Medicine" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                title: 'Latest Technologies',
+                                desc: 'We use the latest technologies for diagnosing and treating cases with unconventional methods.',
+                                icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="Fetal Medicine" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
-                                title: 'Expert Fertility Counsellor',
-                                desc: 'Genetic counselors evaluate family histories and identify potential genetic risks that could affect reproductive outcomes.',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Counselling.svg")} alt="Expert Fertility Counsellor" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                title: 'Customized Care',
+                                desc: 'Seeds of Innocens IVF offers quality treatment to every patient as per the individual requirement to make sure about the customized care.',
+                                icon: <img src={getAssetPathClient("/assets/img/icons/Customized Care.svg")} alt="Customized Care" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'In-House Genetic Lab',
                                 desc: 'We are the first IVF centre in India to establish an in-house genetic lab with testing services including PGT-A.',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="In-House Genetic Lab" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <img src={getAssetPathClient("/assets/img/icons/In-House Genetic.svg")} alt="In-House Genetic Lab" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                         ].map((f, idx) => (
                             <div
