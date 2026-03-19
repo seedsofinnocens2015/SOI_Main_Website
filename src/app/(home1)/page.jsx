@@ -582,7 +582,13 @@ const heroData = {
       },
     ],
   };
-  
+
+  // Same Hindi detection as (innerpage)/hindi/[slug]/page.jsx — links use /hindi/ or /english/
+  const isHindiBlog = (blog) =>
+    blog.category === 'प्रजनन क्षमता' ||
+    /[\u0900-\u097F]/.test(blog.title || '') ||
+    /[\u0900-\u097F]/.test(blog.content || '');
+
   const blogsData = {
     sectionTitle: 'LATEST BLOGS',
     sectionSubtitle: '',
@@ -599,7 +605,9 @@ const heroData = {
         author: blog.author,
         thumbnail: blog.image,
         btnText: 'Read More',
-        postLink: `/blogs/${blog.slug}`,
+        postLink: isHindiBlog(blog)
+          ? `/hindi/${blog.slug}`
+          : `/english/${blog.slug}`,
         authorIcon: '/assets/img/icons/post_user_icon.png',
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       })),
@@ -622,7 +630,7 @@ const heroData = {
         rating: 5,
         subtitle:
           'Seeds of Innocens gave us the gift of parenthood. The doctors were compassionate, the staff was supportive, and the treatment was excellent. We are forever grateful for our beautiful baby.',
-        avatar: '/assets/img/new.svg',
+        avatar: '/assets/img/1.png',
         name: 'Couple from Sydney, Australia',
         position: 'Successful Parents',
         videoUrl: 'https://www.youtube.com/watch?v=0XD9OrkunWI', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_1')
@@ -631,7 +639,7 @@ const heroData = {
         rating: 5,
         subtitle:
           'The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream of becoming parents. Highly recommended!',
-        avatar: '/assets/img/new.svg',
+        avatar: '/assets/img/2.png',
         name: 'Parents from Jharkhand, India',
         position: 'Happy Parents',
         videoUrl: 'https://www.youtube.com/watch?v=wmZZrZFaGB8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
@@ -640,7 +648,7 @@ const heroData = {
         rating: 5,
         subtitle:
           'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
-        avatar: '/assets/img/new.svg',
+        avatar: '/assets/img/3.png',
         name: 'Family from New Delhi, India',
         position: 'Grateful Parents',
         videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
@@ -649,7 +657,7 @@ const heroData = {
         rating: 5,
         subtitle:
           'Seeds of Innocens gave us the gift of parenthood. The doctors were compassionate, the staff was supportive, and the treatment was excellent. We are forever grateful for our beautiful baby.',
-        avatar: '/assets/img/new.svg',
+        avatar: '/assets/img/4.png',
         name: 'Couple from Sydney, Australia',
         position: 'Successful Parents',
         videoUrl: 'https://www.youtube.com/watch?v=0XD9OrkunWI', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_1')
@@ -658,7 +666,7 @@ const heroData = {
         rating: 5,
         subtitle:
           'The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream of becoming parents. Highly recommended!',
-        avatar: '/assets/img/new.svg',
+        avatar: '/assets/img/5.png',
         name: 'Parents from Jharkhand, India',
         position: 'Happy Parents',
         videoUrl: 'https://www.youtube.com/watch?v=wmZZrZFaGB8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')
@@ -667,7 +675,7 @@ const heroData = {
         rating: 5,
         subtitle:
           'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
-        avatar: '/assets/img/new.svg',
+        avatar: '/assets/img/6.png',
         name: 'Family from New Delhi, India',
         position: 'Grateful Parents',
         videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')
@@ -676,7 +684,7 @@ const heroData = {
         rating: 5,
         subtitle:
           'After years of trying, we found hope at Seeds of Innocens. The personalized care and advanced treatment options made all the difference. Thank you for making our family complete.',
-        avatar: '/assets/img/new.svg',
+        avatar: '/assets/img/7.png',
         name: 'Family from New Delhi, India',
         position: 'Grateful Parents',
         videoUrl: 'https://www.youtube.com/watch?v=GzfaoO4W_D8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_3')

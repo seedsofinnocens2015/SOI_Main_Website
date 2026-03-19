@@ -12,6 +12,7 @@ import { IoCall } from "react-icons/io5";
 import { FaAnglesRight } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
 import { getAssetPathClient } from '@/app/utils/assetPath';
+import FertilityCalculatorFab from '@/app/Components/FertilityCalculatorFab';
 
 // Collect all hrefs under a nav item (for active state matching)
 const getNavItemHrefs = (item) => {
@@ -631,7 +632,7 @@ const Header = ({ isTopBar, variant }) => {
                 <div className="cs_social_icons">
                   <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                     <Image
-                      src={getAssetPathClient('/assets/img/icons/you.png')}
+                      src={getAssetPathClient('/assets/img/icons/youtube.svg')}
                       alt="YouTube"
                       width={20}
                       height={20}
@@ -639,7 +640,7 @@ const Header = ({ isTopBar, variant }) => {
                   </Link>
                   <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                     <Image
-                      src={getAssetPathClient('/assets/img/icons/029-instagram.png')}
+                      src={getAssetPathClient('/assets/img/icons/instagram.svg')}
                       alt="Instagram"
                       width={20}
                       height={20}
@@ -647,7 +648,7 @@ const Header = ({ isTopBar, variant }) => {
                   </Link>
                   <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                     <Image
-                      src={getAssetPathClient('/assets/img/icons/036-facebook.png')}
+                      src={getAssetPathClient('/assets/img/icons/facebook.svg')}
                       alt="Facebook"
                       width={20}
                       height={20}
@@ -655,7 +656,7 @@ const Header = ({ isTopBar, variant }) => {
                   </Link>
                   <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                     <Image
-                      src={getAssetPathClient('/assets/img/icons/027-linkedin.png')}
+                      src={getAssetPathClient('/assets/img/icons/linkedin.svg')}
                       alt="LinkedIn"
                       width={20}
                       height={20}
@@ -1310,6 +1311,7 @@ const Header = ({ isTopBar, variant }) => {
           </div>
         )}
       </header>
+      <FertilityCalculatorFab />
       {isTopBar && <div className="cs_site_header_spacing_150" />}
     </>
   );

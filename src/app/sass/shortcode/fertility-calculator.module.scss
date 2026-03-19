@@ -1,0 +1,315 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 640px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+}
+
+/* AccentHeading (half red / half black) — calculator area left-aligned */
+.accentCalcTitle {
+  text-align: left;
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+.accentCalcResults {
+  text-align: left;
+  margin: 0 0 14px 0;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.desc {
+  color: #666;
+  line-height: 1.85;
+  margin: 0 0 18px 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 18px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+}
+
+.cardPad {
+  padding: 22px;
+}
+
+@media (min-width: 640px) {
+  .cardPad {
+    padding: 28px;
+  }
+}
+
+.card :global(.cs_form_field) {
+  height: 48px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px 14px;
+  box-shadow: none;
+}
+
+.card :global(.cs_form_field:focus) {
+  border-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.06);
+  outline: none;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (min-width: 768px) {
+  .formGrid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+.required {
+  color: var(--accent-color);
+  margin-left: 2px;
+}
+
+.hint {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin: 2px 0 0 0;
+  line-height: 1.6;
+}
+
+.actions {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.primaryBtn {
+  width: 100%;
+  border-radius: 12px;
+  padding: 12px 22px;
+  font-weight: 800;
+  border: 1px solid #df3655;
+  background: #df3655;
+  color: #fff;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+@media (min-width: 640px) {
+  .primaryBtn {
+    width: auto;
+  }
+}
+
+.secondaryBtn {
+  width: 100%;
+  border-radius: 12px;
+  padding: 12px 22px;
+  font-weight: 800;
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+@media (min-width: 640px) {
+  .secondaryBtn {
+    width: auto;
+  }
+}
+
+.secondaryBtn:hover {
+  background: #f8f8f8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.resultsWrap {
+  margin-top: 18px;
+}
+
+.resultsTitle {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 14px 0;
+}
+
+.resultGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .resultGrid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .resultGrid3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.resultTile {
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 14px;
+  background: #f8f9fa;
+}
+
+.tileLabel {
+  font-size: 12px;
+  color: #666;
+}
+
+.tileValue {
+  margin-top: 6px;
+  font-weight: 800;
+  color: #222;
+}
+
+.tileValueBig {
+  font-size: 22px;
+}
+
+.alert {
+  border-radius: 12px;
+  border: 1px solid #ffe0e0;
+  background: #fff5f5;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #8a1f1f;
+}
+
+.mediaCard {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Intro block styles (was fertility-calculator-intro.module.scss) */
+.introWrap {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.introCol {
+  text-align: center;
+}
+
+.introCard {
+  text-align: center !important;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.introText {
+  color: #666;
+  line-height: 1.85;
+  font-size: 16px;
+  margin: 0 0 14px 0;
+  text-align: center !important;
+}
+
+.introTextLast {
+  margin-bottom: 0;
+}
+
+.strongAccent {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Tabs styles (was fertility-calculator-tabs.module.scss) */
+.tabsWrap {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.tabsScroller {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(228, 83, 82, 0.35);
+    border-radius: 999px;
+  }
+}
+
+.tabBtn {
+  border: 1px solid rgba(228, 83, 82, 0.25);
+  background: #fff;
+  color: #333;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+    border-color: rgba(228, 83, 82, 0.45);
+  }
+}
+
+.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(228, 83, 82, 0.25);
+}
+

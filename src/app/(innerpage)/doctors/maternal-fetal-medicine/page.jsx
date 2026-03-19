@@ -4,7 +4,7 @@ import TeamSection from '@/app/Components/TeamSection';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
-import doctorsData from '../doctors-data.json';
+import doctorsData from '@/app/data/doctors-data.json';
 
 const page = () => {
   const headingData = {

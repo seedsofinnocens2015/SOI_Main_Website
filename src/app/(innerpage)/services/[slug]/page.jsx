@@ -1,7 +1,7 @@
 import React from 'react';
 import ServicePage from '@/app/Components/ServicePage';
 import ServiceSchema from '@/app/Components/ServiceSchema';
-import servicesContent from '@/app/(innerpage)/service/servicesContent.json';
+import servicesContent from '@/app/data/servicesContent.json';
 import { getDefaultDescription, getSchemaType } from '@/app/utils/serviceSeo';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.seedsofinnocence.com';
