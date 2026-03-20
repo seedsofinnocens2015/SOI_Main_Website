@@ -8,93 +8,211 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaSearch } from 'react-icons/fa';
 import centresAllData from '@/app/data/centres-data.json';
-const indiaCentresData = centresAllData.centres;
+import { getAssetPathClient } from '@/app/utils/assetPath';
+const allCentresRaw = centresAllData.centres;
 
-const headingData = {
-  title: 'Center Locator',
-};
+const headingData = { title: 'Center Locator' };
 
 function cityNameToSlug(cityName) {
-  return cityName
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9-]/g, '');
+  return cityName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 }
 
 function getCenterLink(center) {
-  const isMalviyaDelhi =
-    center.name === 'Malviya Nagar, Delhi' && center.stateSlug === 'delhi';
-
-  let cityParam;
-  if (isMalviyaDelhi) {
-    cityParam = 'delhi';
-  } else {
-    const cityName = center.name.split(',')[0].trim();
-    cityParam = cityNameToSlug(cityName);
-  }
-
-  let slug;
-  if (isMalviyaDelhi) {
-    slug = 'best-ivf-centre-in-malviyanagar';
-  } else {
-    slug = `best-ivf-centre-in-${cityParam}`;
-  }
-
+  const isMalviyaDelhi = center.name === 'Malviya Nagar, Delhi' && center.stateSlug === 'delhi';
+  const cityParam = isMalviyaDelhi ? 'delhi' : cityNameToSlug(center.name.split(',')[0].trim());
+  const slug = isMalviyaDelhi ? 'best-ivf-centre-in-malviyanagar' : `best-ivf-centre-in-${cityParam}`;
   return `/${center.stateSlug}/${slug}/`;
 }
 
-// Transform India centres data
-const indiaCentres = indiaCentresData.filter(c => !c.isInternational).map(center => ({
-  name: center.name,
-  address: center.location,
-  phone: center.phone,
-  email: center.email,
-  timing: center.timing,
-  link: getCenterLink(center),
-  country: 'India',
-  state: center.state,
+const indiaCentres = allCentresRaw.filter(c => !c.isInternational).map(c => ({
+  name: c.name,
+  address: c.location,
+  phone: c.phone,
+  email: c.email,
+  timing: c.timing,
+  image: c.image || '/assets/img/recent_post2.jpg',
+  link: getCenterLink(c),
+  state: c.state,
+  isInternational: false,
 }));
 
-// International centres dynamically from centres-data.json
-const internationalCentres = indiaCentresData.filter(c => c.isInternational).map(center => ({
-  name: center.name,
-  address: center.location,
-  phone: center.phone,
-  email: center.email,
-  timing: center.timing,
-  link: `/${center.slug}/`,
-  country: 'International',
-  state: center.state,
+const internationalCentres = allCentresRaw.filter(c => c.isInternational).map(c => ({
+  name: c.name,
+  address: c.location,
+  phone: c.phone,
+  email: c.email,
+  timing: c.timing,
+  image: c.image || '/assets/img/recent_post2.jpg',
+  link: `/${c.slug}/`,
+  state: c.state,
+  isInternational: true,
 }));
-
-const allCentres = [...indiaCentres, ...internationalCentres];
 
 const ivfContentData = {
-  sections: [
-    {
-      heading: 'Find Your Nearest Center',
-      paragraphs: [
-        'Locate the nearest Seeds of Innocens center to you. We have multiple locations across India and internationally to serve you better. Find contact details, directions, and book appointments at your preferred center.',
-      ],
-      // sideImage: '/assets/img/recent_post2.jpg',
-    },
-  ],
+  sections: [{
+    heading: 'Find Your Nearest Center',
+    paragraphs: [
+      'Locate the nearest Seeds of Innocens center to you. We have multiple locations across India and internationally to serve you better. Find contact details, directions, and book appointments at your preferred center.',
+    ],
+  }],
 };
+
+const CenterCard = ({ center }) => (
+  <div style={{
+    backgroundColor: '#fff',
+    borderRadius: '16px',
+    overflow: 'hidden',
+    boxShadow: '0 4px 20px rgba(0,0,0,0.07)',
+    border: '1px solid #ebedf0',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  }}
+    onMouseEnter={e => {
+      e.currentTarget.style.transform = 'translateY(-6px)';
+      e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.12)';
+    }}
+    onMouseLeave={e => {
+      e.currentTarget.style.transform = 'translateY(0)';
+      e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.07)';
+    }}
+  >
+    {/* Center Image */}
+    <div style={{ position: 'relative', width: '100%', height: '200px', overflow: 'hidden' }}>
+      <Image
+        src={getAssetPathClient(center.image)}
+        alt={center.name}
+        fill
+        style={{ objectFit: 'cover' }}
+        sizes="(max-width: 768px) 100vw, 33vw"
+      />
+      {/* State badge overlay */}
+      <div style={{
+        position: 'absolute',
+        top: '14px',
+        left: '14px',
+        padding: '5px 12px',
+        backgroundColor: center.isInternational ? 'rgba(133,100,4,0.9)' : 'rgba(21,101,192,0.9)',
+        color: '#fff',
+        borderRadius: '20px',
+        fontSize: '12px',
+        fontWeight: '600',
+        backdropFilter: 'blur(4px)',
+      }}>
+        {center.state}
+      </div>
+    </div>
+
+    {/* Card Body */}
+    <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <h4 style={{
+        fontSize: '18px',
+        fontWeight: '700',
+        color: 'var(--body-color)',
+        marginBottom: '16px',
+        lineHeight: '1.4',
+      }}>
+        {center.name}
+      </h4>
+
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px' }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '13px', color: '#555' }}>
+          <FaMapMarkerAlt style={{ color: '#de3554', fontSize: '15px', marginTop: '2px', flexShrink: 0 }} />
+          <span style={{ lineHeight: '1.5' }}>{center.address}</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px', color: '#555' }}>
+          <FaPhoneAlt style={{ color: '#de3554', fontSize: '14px', flexShrink: 0 }} />
+          <a href={`tel:${center.phone}`} style={{ color: '#de3554', textDecoration: 'none', fontWeight: '500' }}>
+            {center.phone}
+          </a>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px', color: '#555' }}>
+          <FaEnvelope style={{ color: '#de3554', fontSize: '14px', flexShrink: 0 }} />
+          <a href={`mailto:${center.email}`} style={{ color: '#555', textDecoration: 'none' }}>
+            {center.email}
+          </a>
+        </div>
+        {center.timing && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px', color: '#555' }}>
+            <FaClock style={{ color: '#de3554', fontSize: '14px', flexShrink: 0 }} />
+            <span>{center.timing}</span>
+          </div>
+        )}
+      </div>
+
+      {/* Action Buttons */}
+      <div style={{ display: 'flex', gap: '10px', marginTop: 'auto' }}>
+        <Link
+          href={center.link}
+          style={{
+            flex: 1,
+            textAlign: 'center',
+            padding: '11px 10px',
+            backgroundColor: '#de3554',
+            color: '#fff',
+            borderRadius: '8px',
+            textDecoration: 'none',
+            fontSize: '13px',
+            fontWeight: '600',
+            transition: 'background-color 0.2s',
+          }}
+          onMouseEnter={e => e.currentTarget.style.backgroundColor = '#c73b3a'}
+          onMouseLeave={e => e.currentTarget.style.backgroundColor = '#de3554'}
+        >
+          View Details
+        </Link>
+        <a
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(center.address)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            flex: 1,
+            textAlign: 'center',
+            padding: '11px 10px',
+            border: '1.5px solid #de3554',
+            color: '#de3554',
+            borderRadius: '8px',
+            textDecoration: 'none',
+            fontSize: '13px',
+            fontWeight: '600',
+            transition: 'all 0.2s',
+            backgroundColor: 'transparent',
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.backgroundColor = '#de3554';
+            e.currentTarget.style.color = '#fff';
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.color = '#de3554';
+          }}
+        >
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </div>
+);
 
 const Page = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredIndiaCentres = indiaCentres.filter(center =>
-    center.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    center.state.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    center.address.toLowerCase().includes(searchQuery.toLowerCase())
+  const q = searchQuery.toLowerCase();
+
+  const filteredIndia = indiaCentres.filter(c =>
+    c.name.toLowerCase().includes(q) ||
+    c.state.toLowerCase().includes(q) ||
+    c.address.toLowerCase().includes(q)
   );
 
-  const filteredInternationalCentres = internationalCentres.filter(center =>
-    center.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    center.state.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    center.address.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredInternational = internationalCentres.filter(c =>
+    c.name.toLowerCase().includes(q) ||
+    c.state.toLowerCase().includes(q) ||
+    c.address.toLowerCase().includes(q)
   );
+
+  const noResults = filteredIndia.length === 0 && filteredInternational.length === 0;
 
   return (
     <div>
@@ -105,13 +223,7 @@ const Page = () => {
         <PageHeading data={headingData} />
       </Section>
 
-      {/* Content Section */}
-      <Section
-        topSpaceLg="50"
-        topSpaceMd="60"
-        bottomSpaceLg="50"
-        bottomSpaceMd="60"
-      >
+      <Section topSpaceLg="50" topSpaceMd="60" bottomSpaceLg="50" bottomSpaceMd="60">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -121,311 +233,142 @@ const Page = () => {
         </div>
       </Section>
 
-      {/* Centres Section */}
-      <Section
-        topSpaceLg="0"
-        topSpaceMd="0"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-      >
+      <Section topSpaceLg="0" topSpaceMd="0" bottomSpaceLg="80" bottomSpaceMd="120">
         <div className="container">
+
           {/* Search Bar */}
           <div className="row mb-5">
-            <div className="col-lg-8 mx-auto">
+            <div className="col-lg-7 mx-auto">
               <div style={{
                 position: 'relative',
-                padding: '20px',
-                backgroundColor: '#ffffff',
-                borderRadius: '12px',
-                boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
-                border: '1px solid #e8e8e8'
+                backgroundColor: '#fff',
+                borderRadius: '50px',
+                boxShadow: '0 8px 30px rgba(0,0,0,0.08)',
+                border: '1.5px solid #ebedf0',
+                display: 'flex',
+                alignItems: 'center',
+                padding: '6px 20px 6px 50px',
               }}>
                 <FaSearch style={{
                   position: 'absolute',
-                  left: '35px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  color: '#999',
-                  fontSize: '18px'
+                  left: '20px',
+                  color: '#de3554',
+                  fontSize: '17px',
                 }} />
                 <input
                   type="text"
-                  placeholder="Search by city, state, or center name..."
+                  placeholder="Search by city, state or center name..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="cs_form_field"
+                  onChange={e => setSearchQuery(e.target.value)}
                   style={{
-                    paddingLeft: '45px',
-                    width: '100%'
+                    width: '100%',
+                    border: 'none',
+                    outline: 'none',
+                    fontSize: '15px',
+                    padding: '10px 0',
+                    background: 'transparent',
+                    color: '#1f2b3a',
                   }}
                 />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
+                      color: '#aaa',
+                      fontSize: '18px',
+                      lineHeight: 1,
+                      padding: '0 4px',
+                      flexShrink: 0,
+                    }}
+                    aria-label="Clear search"
+                  >
+                    ×
+                  </button>
+                )}
               </div>
             </div>
           </div>
 
-          {/* India Centres Section */}
-          <div className="row mb-4">
-            <div className="col-lg-12">
-              <AccentHeading style={{ marginBottom: '40px' }}>India Centres ({filteredIndiaCentres.length})</AccentHeading>
-            </div>
-          </div>
-
-          <div className="row cs_gap_y_30 mb-5" style={{ gap: '30px 0' }}>
-            {filteredIndiaCentres.map((center, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
-                <div style={{
-                  backgroundColor: '#ffffff',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
-                  border: '1px solid #e8e8e8',
-                  transition: 'all 0.3s ease',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  padding: '30px'
-                }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                  }}
-                >
-                  <div style={{ marginBottom: '15px' }}>
-                    <span style={{
-                      display: 'inline-block',
-                      padding: '5px 12px',
-                      backgroundColor: '#e3f2fd',
-                      color: '#1565c0',
-                      borderRadius: '5px',
-                      fontSize: '12px',
-                      fontWeight: '600',
-                      marginBottom: '10px'
-                    }}>
-                      {center.state}
-                    </span>
-                  </div>
-                  <h4 style={{
-                    fontSize: '20px',
-                    fontWeight: '600',
-                    color: '#0A2A43',
-                    marginBottom: '20px',
-                    lineHeight: '1.4'
-                  }}>
-                    {center.name}
-                  </h4>
-
-                  <div style={{ marginBottom: '20px', flex: 1 }}>
-                    <p style={{ marginBottom: '12px', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <FaMapMarkerAlt style={{ color: '#E45352', fontSize: '16px', marginTop: '3px', flexShrink: 0 }} />
-                      <span><strong>Address:</strong> {center.address}</span>
-                    </p>
-                    <p style={{ marginBottom: '12px', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaPhoneAlt style={{ color: '#E45352', fontSize: '16px', flexShrink: 0 }} />
-                      <span>
-                        <strong>Phone:</strong>{' '}
-                        <a href={`tel:${center.phone}`} style={{ color: '#E45352', textDecoration: 'none' }}>
-                          {center.phone}
-                        </a>
-                      </span>
-                    </p>
-                    <p style={{ marginBottom: '12px', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaEnvelope style={{ color: '#E45352', fontSize: '16px', flexShrink: 0 }} />
-                      <span>
-                        <strong>Email:</strong>{' '}
-                        <a href={`mailto:${center.email}`} style={{ color: '#E45352', textDecoration: 'none' }}>
-                          {center.email}
-                        </a>
-                      </span>
-                    </p>
-                    <p style={{ marginBottom: '0', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaClock style={{ color: '#E45352', fontSize: '16px', flexShrink: 0 }} />
-                      <span><strong>Timing:</strong> {center.timing}</span>
-                    </p>
-                  </div>
-
-                  <div style={{ marginTop: 'auto' }}>
-                    <Link
-                      href={center.link}
-                      className="cs_btn cs_style_1 cs_color_1"
-                      style={{
-                        width: '100%',
-                        textAlign: 'center',
-                        textDecoration: 'none',
-                        display: 'block',
-                        marginBottom: '10px'
-                      }}
-                    >
-                      <span>View Details</span>
-                    </Link>
-                    <a
-                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(center.address)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        width: '100%',
-                        textAlign: 'center',
-                        display: 'block',
-                        padding: '10px',
-                        border: '1px solid #E45352',
-                        borderRadius: '5px',
-                        color: '#E45352',
-                        textDecoration: 'none',
-                        fontSize: '14px',
-                        transition: 'all 0.3s ease'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = '#E45352';
-                        e.currentTarget.style.color = '#ffffff';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = 'transparent';
-                        e.currentTarget.style.color = '#E45352';
-                      }}
-                    >
-                      Get Directions
-                    </a>
-                  </div>
-                </div>
+          {/* India Centres */}
+          {filteredIndia.length > 0 && (
+            <>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '28px' }}>
+                <AccentHeading style={{ margin: 0 }}>India Centres</AccentHeading>
+                <span style={{
+                  backgroundColor: '#e3f2fd',
+                  color: '#1565c0',
+                  borderRadius: '20px',
+                  padding: '4px 18px',
+                  fontSize: '13px',
+                  fontWeight: '600',
+                  whiteSpace: 'nowrap',
+                  display: 'inline-block',
+                }}>
+                  {filteredIndia.length} {filteredIndia.length === 1 ? 'Centre' : 'Centres'}
+                </span>
               </div>
-            ))}
-          </div>
-
-          <div className="cs_height_50 cs_height_lg_50" />
-
-          {/* International Centres Section */}
-          <div className="row mb-4">
-            <div className="col-lg-12">
-              <AccentHeading style={{ marginBottom: '40px' }}>International Centres ({filteredInternationalCentres.length})</AccentHeading>
-            </div>
-          </div>
-
-          <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
-            {filteredInternationalCentres.map((center, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
-                <div style={{
-                  backgroundColor: '#ffffff',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
-                  border: '1px solid #e8e8e8',
-                  transition: 'all 0.3s ease',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  padding: '30px'
-                }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                  }}
-                >
-                  <div style={{ marginBottom: '15px' }}>
-                    <span style={{
-                      display: 'inline-block',
-                      padding: '5px 12px',
-                      backgroundColor: '#fff3cd',
-                      color: '#856404',
-                      borderRadius: '5px',
-                      fontSize: '12px',
-                      fontWeight: '600',
-                      marginBottom: '10px'
-                    }}>
-                      {center.state}
-                    </span>
+              <div className="row cs_gap_y_30 mb-5" style={{ gap: '30px 0' }}>
+                {filteredIndia.map((center, i) => (
+                  <div key={i} className="col-lg-4 col-md-6">
+                    <CenterCard center={center} />
                   </div>
-                  <h4 style={{
-                    fontSize: '20px',
-                    fontWeight: '600',
-                    color: '#0A2A43',
-                    marginBottom: '20px',
-                    lineHeight: '1.4'
-                  }}>
-                    {center.name}
-                  </h4>
-
-                  <div style={{ marginBottom: '20px', flex: 1 }}>
-                    <p style={{ marginBottom: '12px', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <FaMapMarkerAlt style={{ color: '#E45352', fontSize: '16px', marginTop: '3px', flexShrink: 0 }} />
-                      <span><strong>Address:</strong> {center.address}</span>
-                    </p>
-                    <p style={{ marginBottom: '12px', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaPhoneAlt style={{ color: '#E45352', fontSize: '16px', flexShrink: 0 }} />
-                      <span>
-                        <strong>Phone:</strong>{' '}
-                        <a href={`tel:${center.phone}`} style={{ color: '#E45352', textDecoration: 'none' }}>
-                          {center.phone}
-                        </a>
-                      </span>
-                    </p>
-                    <p style={{ marginBottom: '12px', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaEnvelope style={{ color: '#E45352', fontSize: '16px', flexShrink: 0 }} />
-                      <span>
-                        <strong>Email:</strong>{' '}
-                        <a href={`mailto:${center.email}`} style={{ color: '#E45352', textDecoration: 'none' }}>
-                          {center.email}
-                        </a>
-                      </span>
-                    </p>
-                    <p style={{ marginBottom: '0', fontSize: '14px', color: '#666', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaClock style={{ color: '#E45352', fontSize: '16px', flexShrink: 0 }} />
-                      <span><strong>Timing:</strong> {center.timing}</span>
-                    </p>
-                  </div>
-
-                  <div style={{ marginTop: 'auto' }}>
-                    <Link
-                      href={center.link}
-                      className="cs_btn cs_style_1 cs_color_1"
-                      style={{
-                        width: '100%',
-                        textAlign: 'center',
-                        textDecoration: 'none',
-                        display: 'block',
-                        marginBottom: '10px'
-                      }}
-                    >
-                      <span>View Details</span>
-                    </Link>
-                    <a
-                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(center.address)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        width: '100%',
-                        textAlign: 'center',
-                        display: 'block',
-                        padding: '10px',
-                        border: '1px solid #E45352',
-                        borderRadius: '5px',
-                        color: '#E45352',
-                        textDecoration: 'none',
-                        fontSize: '14px',
-                        transition: 'all 0.3s ease'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = '#E45352';
-                        e.currentTarget.style.color = '#ffffff';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = 'transparent';
-                        e.currentTarget.style.color = '#E45352';
-                      }}
-                    >
-                      Get Directions
-                    </a>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
+
+          {filteredIndia.length > 0 && filteredInternational.length > 0 && (
+            <div style={{ borderTop: '2px solid #f0f0f0', margin: '10px 0 50px' }} />
+          )}
+
+          {/* International Centres */}
+          {filteredInternational.length > 0 && (
+            <>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '28px' }}>
+                <AccentHeading style={{ margin: 0 }}>International Centres</AccentHeading>
+                <span style={{
+                  backgroundColor: '#fff3cd',
+                  color: '#856404',
+                  borderRadius: '20px',
+                  padding: '4px 18px',
+                  fontSize: '13px',
+                  fontWeight: '600',
+                  whiteSpace: 'nowrap',
+                  display: 'inline-block',
+                }}>
+                  {filteredInternational.length} {filteredInternational.length === 1 ? 'Centre' : 'Centres'}
+                </span>
+              </div>
+              <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
+                {filteredInternational.map((center, i) => (
+                  <div key={i} className="col-lg-4 col-md-6">
+                    <CenterCard center={center} />
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
+          {/* No Results */}
+          {noResults && searchQuery && (
+            <div style={{
+              textAlign: 'center',
+              padding: '70px 20px',
+              color: '#888',
+            }}>
+              <FaSearch style={{ fontSize: '40px', marginBottom: '16px', color: '#ddd' }} />
+              <p style={{ fontSize: '17px', margin: '0 0 6px' }}>
+                No centres found for <strong>&quot;{searchQuery}&quot;</strong>
+              </p>
+              <p style={{ fontSize: '14px', margin: 0 }}>
+                Try searching by city name, state or center name.
+              </p>
+            </div>
+          )}
+
         </div>
       </Section>
     </div>
@@ -433,4 +376,3 @@ const Page = () => {
 };
 
 export default Page;
-

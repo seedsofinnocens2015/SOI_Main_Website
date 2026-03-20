@@ -1,0 +1,171 @@
+{
+  "female": {
+    "pageTitle": "Female FAQs",
+    "heading": "Female Frequently Asked Questions",
+    "description": "Answers related to ovarian reserve, menstrual cycle, egg quality, diagnosis and treatment planning.",
+    "contentHeading": "Understanding Female Fertility",
+    "contentParagraphs": [
+      "Female fertility depends on multiple factors such as ovulation quality, hormonal balance, age and uterine health.",
+      "Early diagnosis helps choose the right treatment pathway and improves outcomes with less stress and better planning."
+    ],
+    "faqs": [
+      {
+        "question": "What tests are done to assess female fertility?",
+        "answer": [
+          "Common tests include AMH, AFC scan, thyroid profile, prolactin and ovulation tracking."
+        ]
+      },
+      {
+        "question": "Can irregular periods affect conception?",
+        "answer": [
+          "Yes, irregular cycles can indicate ovulation issues and may reduce chances of natural conception."
+        ]
+      },
+      {
+        "question": "Does age reduce egg quality?",
+        "answer": [
+          "Egg quality and quantity generally decline with age, especially after 35 years."
+        ]
+      },
+      {
+        "question": "Is PCOS treatable for pregnancy planning?",
+        "answer": [
+          "Yes, with lifestyle changes, medicines and fertility support, many women with PCOS conceive successfully."
+        ]
+      },
+      {
+        "question": "When should I consult a fertility specialist?",
+        "answer": [
+          "If under 35 and trying for 12 months, or over 35 and trying for 6 months, consult a specialist."
+        ]
+      }
+    ]
+  },
+  "male": {
+    "pageTitle": "Male FAQs",
+    "heading": "Male Frequently Asked Questions",
+    "description": "Common questions about sperm health, semen analysis, hormonal factors, and male fertility treatments.",
+    "contentHeading": "Male Fertility and Reproductive Health",
+    "contentParagraphs": [
+      "Male factors contribute to a significant share of infertility cases, and timely evaluation is very important.",
+      "A semen analysis and specialist consultation can quickly identify treatable causes and improve outcomes."
+    ],
+    "faqs": [
+      {
+        "question": "What is semen analysis and why is it important?",
+        "answer": [
+          "It evaluates sperm count, motility and morphology to assess fertility potential."
+        ]
+      },
+      {
+        "question": "Can lifestyle affect sperm quality?",
+        "answer": [
+          "Yes, smoking, alcohol, obesity, stress and poor sleep can negatively impact sperm parameters."
+        ]
+      },
+      {
+        "question": "How long does sperm improvement take?",
+        "answer": [
+          "Sperm production cycle takes about 70-90 days, so improvements are usually seen after 2-3 months."
+        ]
+      },
+      {
+        "question": "Is low sperm count always permanent?",
+        "answer": [
+          "Not always. Many causes are treatable with medicine, lifestyle changes or minor procedures."
+        ]
+      },
+      {
+        "question": "When is advanced treatment like ICSI advised?",
+        "answer": [
+          "ICSI is considered when sperm count/motility is very low or in previous IVF fertilization failure."
+        ]
+      }
+    ]
+  },
+  "genetic": {
+    "pageTitle": "Genetic FAQs",
+    "heading": "Genetic Frequently Asked Questions",
+    "description": "Clarifications about genetic risk, screening options, PGT testing and hereditary condition prevention.",
+    "contentHeading": "Genetics in Fertility Treatment",
+    "contentParagraphs": [
+      "Genetic evaluation supports safer and better-informed fertility decisions, especially in recurrent loss or family history cases.",
+      "Tests such as karyotyping and PGT can help reduce transfer of specific inherited conditions in selected cases."
+    ],
+    "faqs": [
+      {
+        "question": "When is genetic testing recommended in fertility care?",
+        "answer": [
+          "It is often advised in recurrent miscarriage, repeated IVF failure, or known family genetic disorders."
+        ]
+      },
+      {
+        "question": "What is PGT?",
+        "answer": [
+          "PGT (Preimplantation Genetic Testing) checks embryos for selected chromosomal or genetic abnormalities before transfer."
+        ]
+      },
+      {
+        "question": "Can genetic testing guarantee a healthy baby?",
+        "answer": [
+          "No test can provide 100% guarantee, but it can significantly reduce specific known risks."
+        ]
+      },
+      {
+        "question": "Is genetic counseling necessary?",
+        "answer": [
+          "Yes, counseling helps you understand test options, limitations and best decisions for your case."
+        ]
+      },
+      {
+        "question": "Does genetic testing delay treatment?",
+        "answer": [
+          "In many cases, it adds planning time but can improve treatment confidence and selection strategy."
+        ]
+      }
+    ]
+  },
+  "learning": {
+    "pageTitle": "Learning FAQs",
+    "heading": "Learning Frequently Asked Questions",
+    "description": "Basic educational FAQs on fertility treatment steps, timelines, preparation and patient journey.",
+    "contentHeading": "Learn the Fertility Journey Step-by-Step",
+    "contentParagraphs": [
+      "Understanding each step of treatment helps reduce anxiety and improves treatment readiness for couples.",
+      "From first consultation to embryo transfer, informed patients usually feel more confident and involved."
+    ],
+    "faqs": [
+      {
+        "question": "What happens in the first fertility consultation?",
+        "answer": [
+          "Medical history review, baseline tests and a customized treatment discussion are usually done."
+        ]
+      },
+      {
+        "question": "How long does one IVF cycle take?",
+        "answer": [
+          "A full IVF cycle typically takes around 4-6 weeks depending on protocol and response."
+        ]
+      },
+      {
+        "question": "Can I continue work during treatment?",
+        "answer": [
+          "Most patients continue daily activities with minor adjustments based on doctor advice."
+        ]
+      },
+      {
+        "question": "Are fertility treatments always painful?",
+        "answer": [
+          "Most steps are manageable and done with supportive care; major discomfort is usually temporary."
+        ]
+      },
+      {
+        "question": "How should I prepare mentally and physically?",
+        "answer": [
+          "Balanced diet, sleep, stress management and regular follow-ups help significantly."
+        ]
+      }
+    ]
+  }
+}
+
