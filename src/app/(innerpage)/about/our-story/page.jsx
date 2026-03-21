@@ -119,7 +119,7 @@ const page = () => {
                       <h4 style={{
                         fontSize: '18px',
                         fontWeight: '600',
-                        color: '#0A2A43',
+                        color: '#000000',
                         marginBottom: '10px',
                         lineHeight: '1.4'
                       }}>
@@ -177,7 +177,7 @@ const page = () => {
                       <h4 style={{
                         fontSize: '18px',
                         fontWeight: '600',
-                        color: '#0A2A43',
+                        color: '#000000',
                         marginBottom: '10px',
                         lineHeight: '1.4'
                       }}>
@@ -235,7 +235,7 @@ const page = () => {
                       <h4 style={{
                         fontSize: '18px',
                         fontWeight: '600',
-                        color: '#0A2A43',
+                        color: '#000000',
                         marginBottom: '10px',
                         lineHeight: '1.4'
                       }}>
@@ -293,7 +293,7 @@ const page = () => {
                       <h4 style={{
                         fontSize: '18px',
                         fontWeight: '600',
-                        color: '#0A2A43',
+                        color: '#000000',
                         marginBottom: '10px',
                         lineHeight: '1.4'
                       }}>
@@ -351,7 +351,7 @@ const page = () => {
                       <h4 style={{
                         fontSize: '18px',
                         fontWeight: '600',
-                        color: '#0A2A43',
+                        color: '#000000',
                         marginBottom: '10px',
                         lineHeight: '1.4'
                       }}>
@@ -409,7 +409,7 @@ const page = () => {
                       <h4 style={{
                         fontSize: '18px',
                         fontWeight: '600',
-                        color: '#0A2A43',
+                        color: '#000000',
                         marginBottom: '10px',
                         lineHeight: '1.4'
                       }}>
@@ -469,7 +469,7 @@ const page = () => {
                       <h4 style={{
                         fontSize: '18px',
                         fontWeight: '600',
-                        color: '#0A2A43',
+                        color: '#000000',
                         marginBottom: '10px',
                         lineHeight: '1.4'
                       }}>
@@ -527,7 +527,7 @@ const page = () => {
                       <h4 style={{
                         fontSize: '18px',
                         fontWeight: '600',
-                        color: '#0A2A43',
+                        color: '#000000',
                         marginBottom: '10px',
                         lineHeight: '1.4'
                       }}>

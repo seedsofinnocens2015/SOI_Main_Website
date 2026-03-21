@@ -194,7 +194,7 @@ const page = () => {
               <h3 className="cs_section_title cs_fs_36" style={{
                 fontSize: '26px',
                 fontWeight: '700',
-                color: '#0A2A43',
+                color: '#000000',
                 marginBottom: '30px',
                 position: 'relative',
                 display: 'inline-block',

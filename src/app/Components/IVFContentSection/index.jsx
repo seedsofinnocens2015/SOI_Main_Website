@@ -86,7 +86,7 @@ const IVFContentSection = ({
   surgeryContent = null,
   womenHealthContent = null,
   lifestyleBlogContent = null,
-  servicesContent = null,
+  relatedServices = [],
 }) => {
   const [openSteps, setOpenSteps] = useState({});
 
@@ -281,7 +281,7 @@ const IVFContentSection = ({
                   alt={section.heading || 'Image'}
                   width={1227}
                   height={253}
-                  loading="eager"
+                  loading="lazy"
                   style={{ width: '100%', height: 'auto', maxHeight: '400px', borderRadius: '15px', objectFit: 'contain', display: 'block' }}
                 />
               </div>
@@ -314,7 +314,7 @@ const IVFContentSection = ({
                   alt={section.heading || 'Image'}
                   width={500}
                   height={400}
-                  loading="eager"
+                  loading="lazy"
                   style={{ width: '100%', height: 'auto', maxHeight: '370px', borderRadius: '15px', objectFit: 'contain', display: 'block' }}
                 />
               )}
@@ -329,7 +329,7 @@ const IVFContentSection = ({
                 alt={section.heading || 'Image'}
                 width={1227}
                 height={253}
-                loading="eager"
+                loading="lazy"
                 style={{ width: '100%', height: 'auto', maxHeight: '400px', borderRadius: '15px', objectFit: 'contain', display: 'block' }}
               />
             </div>
@@ -765,7 +765,7 @@ const IVFContentSection = ({
                     alt={`What is ${displayName}`}
                     width={500}
                     height={400}
-                    loading="eager"
+                    loading="lazy"
                     style={{ width: '100%', height: 'auto', maxHeight: '370px', borderRadius: '15px', objectFit: 'contain', display: 'block' }}
                   />
                 </div>
@@ -779,7 +779,7 @@ const IVFContentSection = ({
                     alt={`What is ${displayName}`}
                     width={500}
                     height={400}
-                    loading="eager"
+                    loading="lazy"
                     style={{ width: '100%', height: 'auto', maxHeight: '400px', borderRadius: '15px', objectFit: 'contain', display: 'block', margin: '0 auto' }}
                   />
                 </div>
@@ -820,12 +820,12 @@ const IVFContentSection = ({
                   <div className="row cs_gap_y_20">
                     <div className="col-lg-6 col-md-6">
                       <div className="cs_service_details_thumbnail cs_side_image">
-                        <Image src={getAssetPathClient(benefitImages[0])} alt="" width={500} height={300} loading="eager" style={{ width: '100%', height: 'auto', borderRadius: '15px', objectFit: 'cover', display: 'block' }} />
+                        <Image src={getAssetPathClient(benefitImages[0])} alt="" width={500} height={300} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '15px', objectFit: 'cover', display: 'block' }} />
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                       <div className="cs_service_details_thumbnail cs_side_image">
-                        <Image src={getAssetPathClient(benefitImages[1])} alt="" width={500} height={300} loading="eager" style={{ width: '100%', height: 'auto', borderRadius: '15px', objectFit: 'cover', display: 'block' }} />
+                        <Image src={getAssetPathClient(benefitImages[1])} alt="" width={500} height={300} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '15px', objectFit: 'cover', display: 'block' }} />
                       </div>
                     </div>
                   </div>
@@ -839,14 +839,14 @@ const IVFContentSection = ({
                       {section.isMapEmbed ? (
                         <iframe src={section.sideImage} width="100%" height="400" style={{ border: '0', borderRadius: '15px', minHeight: '400px' }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                       ) : (
-                        <Image src={getAssetPathClient(section.sideImage)} alt={section.heading || 'Image'} width={500} height={400} loading="eager" style={{ width: '100%', height: 'auto', maxHeight: '400px', borderRadius: '15px', objectFit: 'contain', display: 'block', margin: '0 auto' }} />
+                        <Image src={getAssetPathClient(section.sideImage)} alt={section.heading || 'Image'} width={500} height={400} loading="lazy" style={{ width: '100%', height: 'auto', maxHeight: '400px', borderRadius: '15px', objectFit: 'contain', display: 'block', margin: '0 auto' }} />
                       )}
                     </div>
                   </div>
                   {section.bottomImage && (
                     <div className="cs_ivf_content_bottom_image_wrapper" style={{ marginTop: '30px' }}>
                       <div className="cs_service_details_thumbnail">
-                        <Image src={getAssetPathClient(section.bottomImage)} alt={section.heading || 'Image'} width={1227} height={253} loading="eager" style={{ width: '100%', height: 'auto', maxHeight: '400px', borderRadius: '15px', objectFit: 'contain', display: 'block' }} />
+                        <Image src={getAssetPathClient(section.bottomImage)} alt={section.heading || 'Image'} width={1227} height={253} loading="lazy" style={{ width: '100%', height: 'auto', maxHeight: '400px', borderRadius: '15px', objectFit: 'contain', display: 'block' }} />
                       </div>
                     </div>
                   )}
@@ -860,12 +860,8 @@ const IVFContentSection = ({
       )}
 
       {/* 4b. RELATED SERVICES (above FAQ) */}
-      {servicesContent && serviceKey && (
-        <RelatedServices
-          currentSlug={serviceKey}
-          servicesContent={servicesContent}
-          limit={6}
-        />
+      {relatedServices && relatedServices.length > 0 && (
+        <RelatedServices relatedServices={relatedServices} />
       )}
 
       {/* 5. FAQ SECTION (accordion) */}

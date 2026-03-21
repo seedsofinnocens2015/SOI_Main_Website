@@ -22,6 +22,13 @@ export const metadata = {
     description: 'Seeds of Innocens: Best IVF Centre & Fertility Hospital in India',
     image: '/openGraphImage.jpg',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: ['/favicon.ico'],
+    apple: ['/favicon.ico'],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -29,7 +36,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="author" content="Themeservices" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         {/* Lemon Milk Font - Load from CDN or local file */}
         <link
           rel="stylesheet"

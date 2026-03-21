@@ -384,7 +384,7 @@ const Page = () => {
                 <h3 className="cs_section_title cs_fs_36" style={{
                   fontSize: '28px',
                   fontWeight: '700',
-                  color: '#0A2A43',
+                  color: '#000000',
                   marginBottom: '20px'
                 }}>
                   Share Your Video Testimonial

@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import Section from '../Section';
 import PageHeading from '../PageHeading';
-import IVFContentSection from '../IVFContentSection';
+import FAQAccordion from '@/app/Components/FAQAccordion';
 import LazyGoogleMap from '../LazyGoogleMap';
 import { getAssetPathClient } from '@/app/utils/assetPath';
 
@@ -15,7 +15,7 @@ const BestIVFCentre = ({
     cityName,
     description,
     services: injectedServices,
-    doctorsData = [],
+    doctorSlugMap = {},
     aboutUs: injectedAboutUs,
     topCenterContentData,
     bottomCenterContentData,
@@ -237,7 +237,7 @@ const BestIVFCentre = ({
 
                         {/* Call to Action Button */}
                         <div className="cs_best_ivf_cta">
-                            <a href="/new/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
+                            <a href="/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
                                 Get Free Consultation
                             </a>
                         </div>
@@ -259,9 +259,9 @@ const BestIVFCentre = ({
                         </div>
                         <div className="cs_doctors_grid cs_style_1">
                             {centerDoctors.map((doctor, index) => {
-                                const matchedDoctorData = doctorsData.find((d) => d.slug === doctor.slug);
-                                const doctorLink = matchedDoctorData
-                                    ? `/doctors/${matchedDoctorData.newSlug || matchedDoctorData.slug + '-ivf-specialist'}`
+                                const resolvedDoctorSlug = doctorSlugMap?.[doctor.slug];
+                                const doctorLink = resolvedDoctorSlug
+                                    ? `/doctors/${resolvedDoctorSlug}`
                                     : null;
 
                                 return (
@@ -597,7 +597,7 @@ const BestIVFCentre = ({
                                     </p>
                                 ))}
                                 <div className="cs_best_ivf_cta">
-                                    <a href="/new/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
+                                    <a href="/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
                                         Get Free Consultation
                                     </a>
                                 </div>
@@ -684,10 +684,7 @@ const BestIVFCentre = ({
                         </div>
                         <div className="row">
                             <div className="col-12">
-                                <IVFContentSection
-                                    data={{ sections: faqContentData?.sections || [] }}
-                                    faq={faqItems}
-                                />
+                                <FAQAccordion faqs={faqItems} />
                             </div>
                         </div>
                     </div>

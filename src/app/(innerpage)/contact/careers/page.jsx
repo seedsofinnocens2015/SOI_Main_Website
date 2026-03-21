@@ -228,7 +228,7 @@ const Page = () => {
                       <Icon style={{ fontSize: '24px', color: item.iconColor }} />
                     </div>
                     <div>
-                      <h5 style={{ fontSize: '17px', fontWeight: '700', color: '#0A2A43', marginBottom: '6px' }}>
+                      <h5 style={{ fontSize: '17px', fontWeight: '700', color: '#000000', marginBottom: '6px' }}>
                         {item.title}
                       </h5>
                       <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0, color: '#666' }}>
@@ -307,7 +307,7 @@ const Page = () => {
                           <Icon style={{ fontSize: '20px', color: job.departmentColor.color }} />
                         </div>
                         <div>
-                          <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#0A2A43', marginBottom: '4px', lineHeight: '1.3' }}>
+                          <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#000000', marginBottom: '4px', lineHeight: '1.3' }}>
                             {job.title}
                           </h4>
                           <span style={{
@@ -405,7 +405,7 @@ const Page = () => {
               }}>
                 <FaBriefcase style={{ fontSize: '28px', color: '#de3554' }} />
               </div>
-              <h3 style={{ fontSize: '26px', fontWeight: '700', color: '#0A2A43', marginBottom: '12px' }}>
+              <h3 style={{ fontSize: '26px', fontWeight: '700', color: '#000000', marginBottom: '12px' }}>
                 Don&apos;t See the Right Role?
               </h3>
               <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#666', maxWidth: '560px', margin: '0 auto 28px' }}>

@@ -2388,8 +2388,20 @@
           "answer": "Our {{stateName}} centre is located near you for access to the best fertility treatment in the city. We also have some of the best IVF doctors who will help you have a seamless fertility experience."
         },
         {
-          "question": "What fertility services are available in {{stateName}} centres?",
-          "answer": "All our centres in {{stateName}} offer a full range of services, including IVF, IUI, ICSI, egg freezing, donor programs, and advanced genetic testing (PGT)."
+          "question": "What is Fertility Preservation, and how is it beneficial?",
+          "answer": "Fertility preservation is a medical procedure that protects or saves eggs, sperm, or embryos to enable future biological parenthood."
+        },
+        {
+          "question": "How Can Azoospermia Be Treated?",
+          "answer": "Azoospermia treatment, which is often referred to as a zero sperm count, is obstructive or non-obstructive. "
+        },
+        {
+          "question": "When Should You Visit a Fertility Clinic?",
+          "answer": "If you are trying to conceive naturally for over a year but are unsuccessful in all attempts, then it is an indication that medical intervention is needed. Moreover, if you are suffering from problems such as PCOS and thyroid issues."
+        },
+        {
+          "question": "How to Ensure the IVF is Successful?",
+          "answer": "Our fertility experts at Seeds of Innocens IVF, {{stateName}} offers customized treatment solutions relying on your medical condition. To know more, book a consultation with a fertility expert today."
         }
       ]
     },
@@ -2400,8 +2412,7 @@
         {
           "heading": "Best IVF Centres in Delhi NCR",
           "paragraphs": [
-            "If you are looking for the best IVF centre in Delhi NCR, then you are at the right place because Seeds of Innocens IVF is your trusted partner. As a leading ivf centre in Delhi NCR, we specialize in advanced fertility treatments (Assisted Reproductive Technology-ART) designed to guide couples to overcome the challenges of infertility and realize their dream of beginning a family.",
-            "As our best IVF clinic in Delhi NCR, we define IVF (In Vitro Fertilization) as a clinical procedure where an egg is fertilized by the sperm outside the body in a specialized laboratory. However, this process is often referred to by patients who are looking for an IVF centre in Delhi NCR, which offers one of the best success rates for couples who are facing various reproductive hurdles. As an advanced fertility centre in Delhi NCR, Seeds of Innocens IVF combines clinical methods with personalized care to ensure you feel supported at each step."
+            "Starting a parenthood journey is a joyful journey, not a silent struggle. However, in Delhi NCR, factors like lifestyle changes, delayed pregnancy, stress, and medical conditions contribute to the rising number of cases of infertility. However, the good news is that with the introduction of reproductive medicines and advancements, achieving parenthood is possible. Seeds of Innocens IVF is known as one of the best IVF centres in Delhi NCR, providing advanced fertility treatments and personalized care with high success rates. We aim to turn your dream of parenthood into reality with expertise, compassion, and cutting-edge technology."
           ]
         }
       ]
@@ -2412,8 +2423,95 @@
         {
           "heading": "Best IVF Centres in Uttar Pradesh",
           "paragraphs": [
-            "Uttar Pradesh is home to our flagship centres, offering the highest standards of fertility care in the state. At Seeds of Innocens Uttar Pradesh, we combine medical expertise with cutting-edge technology to provide successful outcomes for couples facing infertility.",
-            "With locations in Ghaziabad, Lucknow, Agra, Gorakhpur, Kanpur, and Meerut, we ensure that world-class fertility treatment is always within your reach in the state."
+            "Are you looking to start your family but facing infertility issues?",
+            "Seeds of Innocens IVF, which is one of the best IVF centres in Uttar Pradesh, is here to understand your problem and guide you on the journey of pregnancy. Seeds of Innocens IVF stands as the best fertility clinic in Uttar Pradesh.",
+            "This fertility centre has state-of-the-art facilities, leveraging the latest advancements in reproductive technology to provide comprehensive fertility solutions. Seeds of Innocens IVF ensures that patients receive proper diagnosis with accurate treatment, along with compassionate care throughout their IVF journey. For those people seeking fertility solutions in Uttar Pradesh, Seeds of Innocens IVF emerges as a beacon of hope, and with its ethical approach, it redefines the reproductive healthcare landscape."
+          ]
+        }
+      ]
+    },
+    "bihar": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in Bihar",
+          "paragraphs": [
+            "Are you still looking for IVF success rates that will fulfill your parenthood dream?",
+            "At Seeds of Innocens IVF, which is one of the best IVF centres in Bihar, we understand your challenges, and our expert team is here to provide you with an affordable IVF treatment in Bihar with high success rates and medical assistance throughout the process. Regarded as the best IVF clinic in Bihar, we are committed to making the fulfillment and joy of having a family accessible. We believe in fulfilling the parenthood dream of those couples who are facing infertility issues."
+          ]
+        }
+      ]
+    },
+    "haryana": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in Haryana",
+          "paragraphs": [
+            "Begin your parenthood journey with Seeds of Innocens IVF, which is well-known for its dedicated staff and high success rates. By having our patient-centric IVF treatment and infertility solutions, we believe in fulfilling the parenthood dream of couples who want to start their family. At Seeds of Innocens IVF, we boast advanced, evidence-based healthcare approaches to maximize the chances of conception.",
+            "So, if you want to begin your parenthood journey, then look nowhere, start your journey with Seeds of Innocens IVF Haryana, one of the best IVF clinics in Haryana."
+          ]
+        }
+      ]
+    },
+    "jharkhand": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in Jharkhand",
+          "paragraphs": [
+            "Seeds of Innocens IVF is one of the best IVF centre in Jharkhand which provides compassionate care with advanced fertility treatments. Led by highly experienced ivf specialists who understands the emotional journey of aspiring parents and tailor every treatment plan to an individual needs. With the personalized approach and advanced technology, Seeds of Innocens Jharkhand has a high success rate in IVF and other assisted reproductive techniques. If you are looking for the most reliability ivf centre in Jharkhand, Then Seeds of Innocens IVF can be your trusted partner to fulfill your dream."
+          ]
+        }
+      ]
+    },
+    "uttarakhand": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in Uttarakhand",
+          "paragraphs": [
+            "Seeds of Innocens IVF is known as the best IVF centre in Uttarakhand with world-class fertility treatment, which is supported by more than 35+ fertility experts. Our IVF specialists have facilitated the delivery of more than  20,000+ babies. With transparent medical procedures and individualized care, Seeds of Innocens IVF unites compassion and science to provide high success rates. Your journey to parenthood is in trusted hands.",
+            "The IVF unit in Seeds of Innocens IVF offers a detailed range of services designed to support individuals and couples in the parenthood journey. Our dedicated team comprises skilled reproductive experts who are dedicated to offering customized care."
+          ]
+        }
+      ]
+    },
+    "assam": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in Assam",
+          "paragraphs": [
+            "Infertility affects millions of couples across India, which is nearly 10-15% who struggle with the parenthood dream. Seeds of Innocens IVF Assam understands that infertility is more than just a medical problem, and it is an emotional journey, which is why we provide personalized, empathetic, and advanced fertility care that is tailored to every couple’s requirements.",
+            "However, if you are searching for the best IVF clinic in Assam, then look Seeds of Innocens IVF is the best centre through which you can realise your dream of growing a family."
+          ]
+        }
+      ]
+    },
+    "kerala": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in Kerala",
+          "paragraphs": [
+            "Seeds of Innocens IVF is one of the best IVF clinics in Kerala. We provide couples with the best fertility treatments with compassionate care, to help them to realize their parenthood dream.",
+            "Seeds of Innocens Kerala provides a wide range of infertility treatments from free consultation to counselling to the most advanced techniques for procedures such as IVF, IUI, ICSI, and many more. Known as the best infertility hospital in Kerala, Seeds of Innocens IVF extends its trusted fertility care across Kerala, with Kasargod and Kochi, where our dedicated team will help you and guide you to receive the same level of individualized support on your fertility journey."
+          ]
+        }
+      ]
+    },
+    "jammu-kashmir": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in Jammu and Kashmir",
+          "paragraphs": [
+            "Seeds of Innocens IVF is the best IVF clinic, well known for its infertility treatment centre, which is located in Jammu & Kashmir. With 20,000+ healthy babies delivered and 78%+ high success rate, we believe in bringing the ray of light and happiness into every home. Our centre’s atmosphere will make you feel right and comfortable just like you are at home. From IVF to Blastocyst transfer, we offer high-end technology reproductive treatments and help them to progress from “ Planning to Delivering”, which is our main aim as the best fertility clinic in Jammu & Kashmir.",
+            "Our clinical experts personalize treatment protocols for the patients and perform all needed diagnostic tests and IVF procedures. Since the parenthood journey is a partnership that is truly shared between doctors, patients, and the staff by providing compassionate care at each step of the memorable journey."
+          ]
+        }
+      ]
+    },
+    "west-bengal": {
+      "sections": [
+        {
+          "heading": "Best IVF Centres in West Bengal",
+          "paragraphs": [
+            "Embarking on the path to parenthood is deeply emotional and personal journey. For several couples struggling with infertility issues can be heartbreaking. Seeds of Innocens IVF stands as the best ivf centre in West Bengal which is dedicated to turning your dreams into reality through clinical excellence and compassionate care. As the largest chain of ivf clinic in West Bengal, Seeds of Innocens IVF has established a high presence in West Bengal, bringing world-class Assisted Reproductive Technology at your doorstep. We also provide a beacon of hope for those who are looking for the best IVF centre in West Bengal. Our mission is to provide the best IVF centre in West Bengal. Our main aim is to provide you with the high-end fertility treatments making them affordable and successful for each aspiring parent."
           ]
         }
       ]

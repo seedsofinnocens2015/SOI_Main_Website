@@ -1,10 +1,3 @@
-import PageHeading from '@/app/Components/PageHeading';
-import Section from '@/app/Components/Section';
-import IVFContentSection from '@/app/Components/IVFContentSection';
-import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 import centresAllData from '@/app/data/centres-data.json';
 const indiaCentresData = centresAllData.centres;
 const centerContentConfig = centresAllData.centerContent;
@@ -164,6 +157,13 @@ const page = async ({ params }) => {
         image: rawAboutUs.image,
         paragraphs: (rawAboutUs.paragraphs || []).map(replaceCityName),
     } : undefined;
+    const centerDoctorSlugs = new Set((center.doctors || []).map((doctor) => doctor.slug));
+    const doctorSlugMap = doctorsData.reduce((acc, doctor) => {
+        if (centerDoctorSlugs.has(doctor.slug)) {
+            acc[doctor.slug] = doctor.newSlug || `${doctor.slug}-ivf-specialist`;
+        }
+        return acc;
+    }, {});
 
     return (
         <BestIVFCentre
@@ -171,7 +171,7 @@ const page = async ({ params }) => {
             cityName={cityName}
             description={Array.isArray(center.description) ? center.description.join(' ') : (center.description || firstSection?.paragraphs?.join(' '))}
             services={servicesWithIcons}
-            doctorsData={doctorsData}
+            doctorSlugMap={doctorSlugMap}
             faqContentData={faqContentData}
             faq={centerFaqs}
             aboutUs={aboutUs}

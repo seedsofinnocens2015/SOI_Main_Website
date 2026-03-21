@@ -140,6 +140,13 @@ const DynamicPage = async ({ params }) => {
             image: rawAboutUs.image,
             paragraphs: (rawAboutUs.paragraphs || []).map(replaceCityName),
         } : undefined;
+        const centerDoctorSlugs = new Set((center.doctors || []).map((doctor) => doctor.slug));
+        const doctorSlugMap = doctorsData.reduce((acc, doctor) => {
+            if (centerDoctorSlugs.has(doctor.slug)) {
+                acc[doctor.slug] = doctor.newSlug || `${doctor.slug}-ivf-specialist`;
+            }
+            return acc;
+        }, {});
 
         return (
             <BestIVFCentre 
@@ -147,7 +154,7 @@ const DynamicPage = async ({ params }) => {
                 cityName={cityName} 
                 description={Array.isArray(center.description) ? center.description.join(' ') : center.description} 
                 services={servicesWithIcons}
-                doctorsData={doctorsData}
+                doctorSlugMap={doctorSlugMap}
                 faqContentData={faqContentData}
                 aboutUs={aboutUs}
             />

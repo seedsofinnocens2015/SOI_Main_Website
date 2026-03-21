@@ -3,6 +3,7 @@ import Section from '../Section';
 import PageHeading from '../PageHeading';
 import IVFContentSection from '../IVFContentSection';
 import servicesContent from '@/app/data/servicesContent.json';
+import { getRelatedSlugs, getDefaultDescription } from '@/app/utils/serviceSeo';
 
 const ServicePage = ({ serviceKey }) => {
   const config = servicesContent[serviceKey];
@@ -17,6 +18,15 @@ const ServicePage = ({ serviceKey }) => {
   };
 
   const bannerImage = config.headerImage ?? config.heroBackground ?? '/assets/img/Top-Header.png';
+  const relatedServices = getRelatedSlugs(serviceKey, servicesContent, 6).map((slug) => {
+    const relatedConfig = servicesContent[slug];
+    if (!relatedConfig) return null;
+    return {
+      slug,
+      title: relatedConfig.title || slug,
+      description: getDefaultDescription(relatedConfig),
+    };
+  }).filter(Boolean);
 
   return (
     <div>
@@ -51,7 +61,7 @@ const ServicePage = ({ serviceKey }) => {
                   surgeryContent={config.surgeryContent}
                   womenHealthContent={config.womenHealthContent}
                   lifestyleBlogContent={config.lifestyleBlogContent}
-                  servicesContent={servicesContent}
+                  relatedServices={relatedServices}
                 />
               )}
             </div>

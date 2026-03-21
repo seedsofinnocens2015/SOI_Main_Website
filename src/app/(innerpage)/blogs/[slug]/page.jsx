@@ -159,7 +159,7 @@ const BlogDetailPage = ({ params }) => {
                   <h1 style={{
                     fontSize: '32px',
                     fontWeight: '700',
-                    color: '#0A2A43',
+                    color: '#000000',
                     marginBottom: '20px',
                     lineHeight: '1.3'
                   }}>
@@ -237,7 +237,7 @@ const BlogDetailPage = ({ params }) => {
                     <h3 style={{
                       fontSize: '22px',
                       fontWeight: '700',
-                      color: '#0A2A43',
+                      color: '#000000',
                       marginBottom: '20px',
                       paddingBottom: '15px',
                       borderBottom: '2px solid #E45352'
@@ -280,7 +280,7 @@ const BlogDetailPage = ({ params }) => {
                               <h4 style={{
                                 fontSize: '15px',
                                 fontWeight: '600',
-                                color: '#0A2A43',
+                                color: '#000000',
                                 marginBottom: '8px',
                                 lineHeight: '1.4',
                                 display: '-webkit-box',

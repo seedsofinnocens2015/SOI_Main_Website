@@ -1,7 +1,7 @@
 /**
  * Base path for the application (should match next.config.mjs)
  */
-const BASE_PATH = '/new';
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === 'production' ? '/new' : '');
 
 /**
  * Get the correct asset path

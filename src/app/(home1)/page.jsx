@@ -52,7 +52,7 @@ const heroData = {
       },
       {
         bgImageUrl: '/assets/img/banner-2.png',
-        mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
+        mobileBgImageUrl: '/assets/img/banner-2.png', // Add mobile image path here
         title: 'Experience the Bliss of Parenthood.',
         titleClass: 'cs_single_line_title',
         titleStyle: {

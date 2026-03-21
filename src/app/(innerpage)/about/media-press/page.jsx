@@ -286,7 +286,7 @@ const Page = () => {
                     <h4 style={{
                       fontSize: '18px',
                       fontWeight: '600',
-                      color: '#0A2A43',
+                      color: '#000000',
                       marginBottom: '10px',
                       lineHeight: '1.4',
                       cursor: 'pointer'
@@ -296,7 +296,7 @@ const Page = () => {
                         e.currentTarget.style.color = '#E45352';
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.color = '#0A2A43';
+                        e.currentTarget.style.color = '#000000';
                       }}
                     >
                       {video.title}
@@ -457,7 +457,7 @@ const Page = () => {
               <h3 style={{
                 fontSize: '22px',
                 fontWeight: '600',
-                color: '#0A2A43',
+                color: '#000000',
                 marginBottom: '15px',
                 lineHeight: '1.4'
               }}>

@@ -47,7 +47,7 @@ const LocationsMap = ({ locations }) => {
           ">
             <svg width="30" height="40" viewBox="0 0 30 40" style="position: relative; z-index: 2;">
               <path d="M15 0 C6.716 0 0 6.716 0 15 C0 23.284 15 40 15 40 C15 40 30 23.284 30 15 C30 6.716 23.284 0 15 0 Z" 
-                    fill="#0A2A43" 
+                    fill="#000000" 
                     stroke="#B8E8E5" 
                     stroke-width="1"
                     style="filter: drop-shadow(0px 2px 4px rgba(24, 117, 238, 0.5));"/>

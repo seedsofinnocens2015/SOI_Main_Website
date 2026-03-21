@@ -32,7 +32,7 @@ const countersData = [
     iconUrl: '/assets/img/icons/counter_icon_2.png',
     number: '35+',
     title: 'IVF Centres',
-    backgroundColor: '#0A2A43', // Dark Blue/Navy
+    backgroundColor: '#000000', // Dark Blue/Navy
   },
 ];
 
