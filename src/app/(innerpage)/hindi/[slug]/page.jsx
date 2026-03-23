@@ -68,7 +68,7 @@ const BlogDetailPage = async ({ params }) => {
                   display: 'inline-block',
                   marginTop: '20px',
                   padding: '12px 24px',
-                  backgroundColor: '#E45352',
+                  backgroundColor: '#df3655',
                   color: '#fff',
                   textDecoration: 'none',
                   borderRadius: '5px',
@@ -110,7 +110,7 @@ const BlogDetailPage = async ({ params }) => {
                   display: 'inline-flex',
                   alignItems: 'left',
                   gap: '8px',
-                  color: '#E45352',
+                  color: '#df3655',
                   textDecoration: 'none',
                   fontWeight: '600',
                   fontSize: '16px',
@@ -176,7 +176,7 @@ const BlogDetailPage = async ({ params }) => {
                       color: '#666',
                       fontSize: '14px'
                     }}>
-                      <FaCalendarAlt style={{ fontSize: '14px', color: '#E45352' }} />
+                      <FaCalendarAlt style={{ fontSize: '14px', color: '#df3655' }} />
                       {blog.date}
                     </span>
                     <span style={{
@@ -186,7 +186,7 @@ const BlogDetailPage = async ({ params }) => {
                       color: '#666',
                       fontSize: '14px'
                     }}>
-                      <FaUser style={{ fontSize: '14px', color: '#E45352' }} />
+                      <FaUser style={{ fontSize: '14px', color: '#df3655' }} />
                       {blog.author}
                     </span>
                     <span style={{
@@ -196,7 +196,7 @@ const BlogDetailPage = async ({ params }) => {
                       color: '#666',
                       fontSize: '14px'
                     }}>
-                      <FaClock style={{ fontSize: '14px', color: '#E45352' }} />
+                      <FaClock style={{ fontSize: '14px', color: '#df3655' }} />
                       {blog.readTime}
                     </span>
                   </div>

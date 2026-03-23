@@ -182,11 +182,11 @@ const IVFContentSection = ({
 
   const getLabelIcon = (label) => {
     const labelLower = (label || '').toLowerCase().trim();
-    if (labelLower.includes('open days') || labelLower.includes('days')) return <FaCalendarAlt style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
-    if (labelLower.includes('timing')) return <FaClock style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
-    if (labelLower.includes('address') || labelLower.includes('location')) return <FaLocationDot style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
-    if (labelLower.includes('email')) return <FaEnvelope style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
-    if (labelLower.includes('phone')) return <FaPhoneAlt style={{ marginRight: '8px', fontSize: '16px', color: '#E45352' }} />;
+    if (labelLower.includes('open days') || labelLower.includes('days')) return <FaCalendarAlt style={{ marginRight: '8px', fontSize: '16px', color: '#df3655' }} />;
+    if (labelLower.includes('timing')) return <FaClock style={{ marginRight: '8px', fontSize: '16px', color: '#df3655' }} />;
+    if (labelLower.includes('address') || labelLower.includes('location')) return <FaLocationDot style={{ marginRight: '8px', fontSize: '16px', color: '#df3655' }} />;
+    if (labelLower.includes('email')) return <FaEnvelope style={{ marginRight: '8px', fontSize: '16px', color: '#df3655' }} />;
+    if (labelLower.includes('phone')) return <FaPhoneAlt style={{ marginRight: '8px', fontSize: '16px', color: '#df3655' }} />;
     return null;
   };
 
@@ -201,7 +201,7 @@ const IVFContentSection = ({
           <p key={pIndex} className={`cs_ivf_content_paragraph ${extraClass}`} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
             {icon}
             <span>
-              <span style={{ fontWeight: '700', color: '#E45352' }}>{label}:</span> {value}
+              <span style={{ fontWeight: '700', color: '#df3655' }}>{label}:</span> {value}
             </span>
           </p>
         );

@@ -195,7 +195,7 @@ const page = () => {
                   </p>
                   <p style={{
                     fontSize: '14px',
-                    color: '#E45352',
+                    color: '#df3655',
                     fontWeight: '500',
                     margin: 0
                   }}>

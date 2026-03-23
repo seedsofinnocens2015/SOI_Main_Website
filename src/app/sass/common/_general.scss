@@ -829,7 +829,7 @@ label {
   }
 
   .cs_section_subtitle_black {
-    color: #E45352;
+    color: #df3655;
     font-weight: 700;
     font-size: 22px;
     
@@ -839,10 +839,10 @@ label {
     
     .cs_shape_left,
     .cs_shape_right {
-      background-color: #E45352;
+      background-color: #df3655;
       
       &::before {
-        background-color: #E45352;
+        background-color: #df3655;
       }
     }
   }
@@ -937,13 +937,13 @@ label {
       font-weight: 700 !important;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #E45352;
+      color: #df3655;
       margin-bottom: -20px;
     }
     
     .cs_section_subtitle .cs_shape_left,
     .cs_section_subtitle .cs_shape_right {
-      background-color: #E45352;
+      background-color: #df3655;
       height: 2px;
       width: 40px;
       
@@ -2589,7 +2589,7 @@ label {
     position: absolute;
     left: 0;
     top: 0;
-    color: #E45352;
+    color: #df3655;
     font-weight: 700;
     font-size: 18px;
   }

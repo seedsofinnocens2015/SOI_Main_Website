@@ -20,7 +20,7 @@ const countersData = [
     iconUrl: '/assets/img/icons/counter_icon_4.png',
     number: '78%',
     title: 'UPTO Success Rate*',
-    backgroundColor: '#E45352', // Red/Pink
+    backgroundColor: '#df3655', // Red/Pink
   },
   {
     iconUrl: '/assets/img/icons/counter_icon_3.png',
@@ -173,7 +173,7 @@ const page = () => {
                       left: '0',
                       width: '4px',
                       height: '100%',
-                      // backgroundColor: isHovered ? '#E45352' : 'transparent',
+                      // backgroundColor: isHovered ? '#df3655' : 'transparent',
                       transition: 'all 0.3s ease'
                     }} />
 

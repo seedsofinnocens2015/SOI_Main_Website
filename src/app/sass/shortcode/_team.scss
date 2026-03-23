@@ -481,7 +481,7 @@
 .cs_back_link {
   display: inline-block;
   margin-bottom: 30px;
-  color: #E45352;
+  color: #df3655;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -540,7 +540,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-      color: #E45352;
+      color: #df3655;
       transform: translateY(-2px);
     }
 
@@ -598,7 +598,7 @@
   margin-bottom: 20px;
 
   .cs_section_icon {
-    color: #E45352;
+    color: #df3655;
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -625,7 +625,7 @@
       color: var(--heading-color);
 
       &:last-child {
-        color: #E45352;
+        color: #df3655;
         font-size: 16px;
       }
     }
@@ -642,7 +642,7 @@
 
   .cs_progress_in {
     height: 100%;
-    background: linear-gradient(90deg, #E45352 0%, #ff6b6b 100%);
+    background: linear-gradient(90deg, #df3655 0%, #ff6b6b 100%);
     border-radius: 10px;
     transition: width 0.6s ease;
     position: relative;
@@ -685,7 +685,7 @@
     .cs_education_number {
       position: absolute;
       left: 0;
-      color: #E45352;
+      color: #df3655;
       font-weight: 700;
       font-size: 16px;
     }
@@ -817,7 +817,7 @@
   }
 
   &:hover .cs_other_doctor_image {
-    border-color: #E45352;
+    border-color: #df3655;
   }
 }
 
@@ -833,7 +833,7 @@
   }
 
   .cs_other_doctor_item:hover h4 {
-    color: #E45352;
+    color: #df3655;
   }
 
   .cs_other_doctor_profession {

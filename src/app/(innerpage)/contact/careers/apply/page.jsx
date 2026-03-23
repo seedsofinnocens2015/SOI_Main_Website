@@ -123,7 +123,7 @@ const page = () => {
                   <div className="row cs_gap_y_30">
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Position Applied For <span style={{ color: '#E45352' }}>*</span>
+                        Position Applied For <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <select
                         required
@@ -140,7 +140,7 @@ const page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Full Name <span style={{ color: '#E45352' }}>*</span>
+                        Full Name <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -152,7 +152,7 @@ const page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Email Address <span style={{ color: '#E45352' }}>*</span>
+                        Email Address <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="email"
@@ -164,7 +164,7 @@ const page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Phone Number <span style={{ color: '#E45352' }}>*</span>
+                        Phone Number <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="tel"
@@ -176,7 +176,7 @@ const page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Years of Experience <span style={{ color: '#E45352' }}>*</span>
+                        Years of Experience <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="number"
@@ -189,7 +189,7 @@ const page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Current Location <span style={{ color: '#E45352' }}>*</span>
+                        Current Location <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -201,7 +201,7 @@ const page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Notice Period <span style={{ color: '#E45352' }}>*</span>
+                        Notice Period <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <select
                         required
@@ -220,7 +220,7 @@ const page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Educational Qualification <span style={{ color: '#E45352' }}>*</span>
+                        Educational Qualification <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -243,7 +243,7 @@ const page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Resume/CV <span style={{ color: '#E45352' }}>*</span>
+                        Resume/CV <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="file"
@@ -303,7 +303,7 @@ const page = () => {
                 padding: '30px',
                 backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
-                borderLeft: '4px solid #E45352'
+                borderLeft: '4px solid #df3655'
               }}>
                 <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What Happens Next?</AccentHeading>
                 <ul className="cs_list cs_list_style_1">

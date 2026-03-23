@@ -78,7 +78,7 @@ const Page = () => {
                   <div className="row cs_gap_y_30">
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Your Name <span style={{ color: '#E45352' }}>*</span>
+                        Your Name <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -90,7 +90,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Email Address <span style={{ color: '#E45352' }}>*</span>
+                        Email Address <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="email"
@@ -125,7 +125,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Feedback Type <span style={{ color: '#E45352' }}>*</span>
+                        Feedback Type <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <select name="feedbackType" required className="cs_form_field">
                         <option value="">Select feedback type</option>
@@ -138,7 +138,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Overall Rating <span style={{ color: '#E45352' }}>*</span>
+                        Overall Rating <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <div style={{ display: 'flex', gap: '10px', marginBottom: '10px', alignItems: 'center' }}>
                         {[1, 2, 3, 4, 5].map((star) => (
@@ -174,7 +174,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Your Feedback <span style={{ color: '#E45352' }}>*</span>
+                        Your Feedback <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <textarea
                         rows="6"
@@ -220,7 +220,7 @@ const Page = () => {
                 padding: '30px',
                 backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
-                borderLeft: '4px solid #E45352'
+                borderLeft: '4px solid #df3655'
               }}>
                 <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>How We Use Your Feedback</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
@@ -239,7 +239,7 @@ const Page = () => {
                   boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                   textAlign: 'center'
                 }}>
-                  <FaHeart style={{ fontSize: '50px', color: '#E45352', marginBottom: '15px' }} />
+                  <FaHeart style={{ fontSize: '50px', color: '#df3655', marginBottom: '15px' }} />
                   <h3 className="cs_widget_title" style={{ marginBottom: '15px' }}>Thank You!</h3>
                   <p style={{ marginBottom: '0', fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
                     We truly appreciate you taking the time to share your feedback. Your input helps us serve you better and improve our services for all our patients.

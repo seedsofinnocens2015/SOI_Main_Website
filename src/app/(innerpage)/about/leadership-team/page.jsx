@@ -17,7 +17,7 @@ const leadershipTeamData = [
     name: 'Dr. Gauri Agarwal',
     profession: 'Founder & Chief Fertility Specialist',
     imageUrl: getAssetPathClient("/assets/img/Doctors/Dr%20Gauri%20maam.jpg"),
-    profileLink: '/about/dr-gauri-agrawal',
+    profileLink: '/doctors/dr-gauri-agarwal-ivf-specialist/',
     experience: '15+ Years',
     location: 'Delhi/NCR',
   },
@@ -25,7 +25,7 @@ const leadershipTeamData = [
     name: 'Dr. Rajat Arora',
     profession: 'Co-Founder & Director',
     imageUrl: getAssetPathClient("/assets/img/Doctors/rajat.png"),
-    profileLink: '/doctors/doctor-details',
+    profileLink: '/doctors/dr-gauri-agarwal-ivf-specialist/',
     experience: '15+ Years',
     location: 'Delhi/NCR',
   },
@@ -36,27 +36,26 @@ const ivfContentData = {
     {
       heading: 'Meet Our Leadership Team',
       paragraphs: [
-        'Our leadership team consists of experienced and dedicated professionals who bring together decades of combined expertise in fertility medicine, embryology, genetics, and patient care. They are committed to providing the highest quality of care and ensuring the best possible outcomes for our patients.',
+        'Our leadership team includes experienced and dedicated experts who bring together decades of combined expertise in fertility medicine, embryology, genetics, and patient care. Also, they are committed to providing the best quality of care, which ensures the best possible outcomes for the patients.',
       ],
       // sideImage: '/assets/img/recent_post2.jpg',
     },
     {
       heading: 'Our Vision',
       paragraphs: [
-        'At Seeds of Innocens, our leadership team is driven by a shared vision of making advanced fertility treatments accessible to all couples. We believe in combining cutting-edge technology with compassionate care to help families achieve their dreams of parenthood.',
+        'At Seeds of Innocens IVF, our leadership team is driven by a shared vision of making advanced fertility treatments accessible to all couples. Also, we believe in mixing cutting-edge technology with dedicated care to help families in achieving their parenthood dreams.',
       ],
     },
     {
       heading: 'Commitment to Excellence',
       paragraphs: [
-        'Our leaders are committed to maintaining the highest standards of medical excellence, continuous learning, and innovation. They work tirelessly to ensure that every patient receives personalized care tailored to their unique needs.',
+        'Our leaders are dedicated to maintaining the best standards of medical excellence, innovation, and continuous improvement. Also, they work dedicatedly to ensure that every patient receives customized care, which is tailored to unique requirements.',
       ],
       listItems: [
-        'Continuous professional development and training',
-        'Adoption of latest technologies and treatment protocols',
-        'Patient-centric approach to care',
-        'Ethical practices and transparency',
-        'Research and contribution to medical science',
+        'Patient-centric approach',
+        'Transparency and Ethical Practices',
+        'Research and contribution to reproductive science',
+        'Adapting Latest Technologies and Protocols',
       ],
     },
   ],

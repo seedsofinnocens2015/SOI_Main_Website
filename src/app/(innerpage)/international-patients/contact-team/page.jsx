@@ -135,7 +135,7 @@ const Page = () => {
 
                 <div style={{ marginBottom: '30px' }}>
                   <label className="cs_form_label" style={{ marginBottom: '15px', display: 'block' }}>
-                    Patient Type <span style={{ color: '#E45352' }}>*</span>
+                    Patient Type <span style={{ color: '#df3655' }}>*</span>
                   </label>
                   <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
                     <label style={{
@@ -144,7 +144,7 @@ const Page = () => {
                       cursor: 'pointer',
                       padding: '12px 24px',
                       borderRadius: '8px',
-                      border: `2px solid ${patientType === 'india' ? '#E45352' : '#e8e8e8'}`,
+                      border: `2px solid ${patientType === 'india' ? '#df3655' : '#e8e8e8'}`,
                       backgroundColor: patientType === 'india' ? '#fff5f5' : '#ffffff',
                       transition: 'all 0.3s ease'
                     }}>
@@ -164,7 +164,7 @@ const Page = () => {
                       cursor: 'pointer',
                       padding: '12px 24px',
                       borderRadius: '8px',
-                      border: `2px solid ${patientType === 'international' ? '#E45352' : '#e8e8e8'}`,
+                      border: `2px solid ${patientType === 'international' ? '#df3655' : '#e8e8e8'}`,
                       backgroundColor: patientType === 'international' ? '#fff5f5' : '#ffffff',
                       transition: 'all 0.3s ease'
                     }}>
@@ -185,7 +185,7 @@ const Page = () => {
                   <div className="row cs_gap_y_30">
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Your Name <span style={{ color: '#E45352' }}>*</span>
+                        Your Name <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -197,7 +197,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Phone Number <span style={{ color: '#E45352' }}>*</span>
+                        Phone Number <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="tel"
@@ -209,7 +209,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Email Address <span style={{ color: '#E45352' }}>*</span>
+                        Email Address <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="email"
@@ -223,7 +223,7 @@ const Page = () => {
                       <>
                         <div className="col-md-6">
                           <label className="cs_form_label">
-                            Country <span style={{ color: '#E45352' }}>*</span>
+                            Country <span style={{ color: '#df3655' }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -260,7 +260,7 @@ const Page = () => {
                     )}
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Preferred Call Time <span style={{ color: '#E45352' }}>*</span>
+                        Preferred Call Time <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <select name="callTime" required className="cs_form_field">
                         <option value="">Select preferred time</option>
@@ -335,7 +335,7 @@ const Page = () => {
                 backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
                 marginTop: '30px',
-                borderLeft: '4px solid #E45352'
+                borderLeft: '4px solid #df3655'
               }}>
                 <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What Happens Next?</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
@@ -393,20 +393,20 @@ const Page = () => {
                   </p>
                   <div style={{ marginBottom: '15px' }}>
                     <p style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaPhoneAlt style={{ color: '#E45352', fontSize: '18px' }} />
+                      <FaPhoneAlt style={{ color: '#df3655', fontSize: '18px' }} />
                       <a href="tel:+91-9810350512" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
                         +91-9810350512
                       </a>
                     </p>
                     <p style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaEnvelope style={{ color: '#E45352', fontSize: '18px' }} />
+                      <FaEnvelope style={{ color: '#df3655', fontSize: '18px' }} />
                       <a href={patientType === 'international' ? "mailto:international@seedsofinnocens.com" : "mailto:info@seedsofinnocens.com"} style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
                         {patientType === 'international' ? 'international@seedsofinnocens.com' : 'info@seedsofinnocens.com'}
                       </a>
                     </p>
                     {patientType === 'international' && (
                       <p style={{ marginBottom: '0', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <FaGlobe style={{ color: '#E45352', fontSize: '18px' }} />
+                        <FaGlobe style={{ color: '#df3655', fontSize: '18px' }} />
                         <span style={{ fontSize: '14px' }}>24/7 International Support</span>
                       </p>
                     )}

@@ -93,7 +93,7 @@ const Page = () => {
                   <div className="row cs_gap_y_30">
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Training Program <span style={{ color: '#E45352' }}>*</span>
+                        Training Program <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <select
                         required
@@ -110,7 +110,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Name <span style={{ color: '#E45352' }}>*</span>
+                        Name <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -122,7 +122,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Email <span style={{ color: '#E45352' }}>*</span>
+                        Email <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="email"
@@ -134,7 +134,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Mobile Number <span style={{ color: '#E45352' }}>*</span>
+                        Mobile Number <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="tel"
@@ -146,7 +146,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        City <span style={{ color: '#E45352' }}>*</span>
+                        City <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -158,7 +158,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Qualification <span style={{ color: '#E45352' }}>*</span>
+                        Qualification <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -170,7 +170,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Book Your Slot <span style={{ color: '#E45352' }}>*</span>
+                        Book Your Slot <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="date"
@@ -215,7 +215,7 @@ const Page = () => {
                 padding: '30px',
                 backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
-                borderLeft: '4px solid #E45352'
+                borderLeft: '4px solid #df3655'
               }}>
                 <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What Happens Next?</AccentHeading>
                 <ul className="cs_list cs_list_style_1">

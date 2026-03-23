@@ -43,7 +43,7 @@ const BlogDetailPage = ({ params }) => {
                   display: 'inline-block',
                   marginTop: '20px',
                   padding: '12px 24px',
-                  backgroundColor: '#E45352',
+                  backgroundColor: '#df3655',
                   color: '#fff',
                   textDecoration: 'none',
                   borderRadius: '5px',
@@ -107,7 +107,7 @@ const BlogDetailPage = ({ params }) => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '8px',
-                  color: '#E45352',
+                  color: '#df3655',
                   textDecoration: 'none',
                   fontWeight: '600',
                   fontSize: '16px',
@@ -145,7 +145,7 @@ const BlogDetailPage = ({ params }) => {
                   <div style={{
                     display: 'inline-block',
                     padding: '6px 16px',
-                    backgroundColor: '#E45352',
+                    backgroundColor: '#df3655',
                     color: '#fff',
                     borderRadius: '20px',
                     fontSize: '13px',
@@ -182,7 +182,7 @@ const BlogDetailPage = ({ params }) => {
                       color: '#666',
                       fontSize: '14px'
                     }}>
-                      <FaCalendarAlt style={{ fontSize: '14px', color: '#E45352' }} />
+                      <FaCalendarAlt style={{ fontSize: '14px', color: '#df3655' }} />
                       {blog.date}
                     </span>
                     <span style={{
@@ -192,7 +192,7 @@ const BlogDetailPage = ({ params }) => {
                       color: '#666',
                       fontSize: '14px'
                     }}>
-                      <FaUser style={{ fontSize: '14px', color: '#E45352' }} />
+                      <FaUser style={{ fontSize: '14px', color: '#df3655' }} />
                       {blog.author}
                     </span>
                     <span style={{
@@ -202,7 +202,7 @@ const BlogDetailPage = ({ params }) => {
                       color: '#666',
                       fontSize: '14px'
                     }}>
-                      <FaClock style={{ fontSize: '14px', color: '#E45352' }} />
+                      <FaClock style={{ fontSize: '14px', color: '#df3655' }} />
                       {blog.readTime}
                     </span>
                   </div>
@@ -240,7 +240,7 @@ const BlogDetailPage = ({ params }) => {
                       color: '#000000',
                       marginBottom: '20px',
                       paddingBottom: '15px',
-                      borderBottom: '2px solid #E45352'
+                      borderBottom: '2px solid #df3655'
                     }}>
                       Related Blogs
                     </h3>
@@ -307,7 +307,7 @@ const BlogDetailPage = ({ params }) => {
 
                 {/* CTA Section */}
                 <div style={{
-                  backgroundColor: '#E45352',
+                  backgroundColor: '#df3655',
                   borderRadius: '12px',
                   padding: '30px',
                   color: '#fff',
@@ -334,7 +334,7 @@ const BlogDetailPage = ({ params }) => {
                       display: 'inline-block',
                       padding: '12px 24px',
                       backgroundColor: '#fff',
-                      color: '#E45352',
+                      color: '#df3655',
                       textDecoration: 'none',
                       borderRadius: '5px',
                       fontWeight: '600',

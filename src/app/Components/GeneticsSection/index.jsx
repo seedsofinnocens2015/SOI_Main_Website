@@ -16,7 +16,7 @@ const GeneticsSection = ({ data }) => {
                 position: 'relative',
                 borderRadius: '20px',
                 overflow: 'visible',
-                backgroundColor: card.bgColor || '#E45352',
+                backgroundColor: card.bgColor || '#df3655',
                 padding: '30px 40px',
                 paddingTop: card.imageUrl ? '50px' : '30px',
                 minHeight: '400px',

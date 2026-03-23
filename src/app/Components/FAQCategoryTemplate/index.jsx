@@ -54,13 +54,13 @@ export default function FAQCategoryTemplate({ pageTitle, heading, description, c
                   <div className="row cs_gap_y_20">
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Full Name <span style={{ color: '#E45352' }}>*</span>
+                        Full Name <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input type="text" required placeholder="Enter your full name" className="cs_form_field" />
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Phone Number <span style={{ color: '#E45352' }}>*</span>
+                        Phone Number <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input type="tel" required placeholder="Enter your phone number" className="cs_form_field" />
                     </div>

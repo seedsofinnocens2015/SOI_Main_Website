@@ -270,7 +270,7 @@ const Page = () => {
                     }}>
                       <span style={{
                         fontSize: '14px',
-                        color: '#E45352',
+                        color: '#df3655',
                         fontWeight: '500'
                       }}>
                         {video.date}
@@ -293,7 +293,7 @@ const Page = () => {
                     }}
                       onClick={() => window.open(video.youtubeUrl, '_blank')}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.color = '#E45352';
+                        e.currentTarget.style.color = '#df3655';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.color = '#000000';
@@ -321,7 +321,7 @@ const Page = () => {
                         style={{
                           background: 'none',
                           border: 'none',
-                          color: '#E45352',
+                          color: '#df3655',
                           fontSize: '14px',
                           fontWeight: '600',
                           cursor: 'pointer',
@@ -332,7 +332,7 @@ const Page = () => {
                           e.currentTarget.style.color = '#c0392b';
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.color = '#E45352';
+                          e.currentTarget.style.color = '#df3655';
                         }}
                       >
                         View More
@@ -441,7 +441,7 @@ const Page = () => {
               }}>
                 <span style={{
                   fontSize: '14px',
-                  color: '#E45352',
+                  color: '#df3655',
                   fontWeight: '500'
                 }}>
                   {selectedVideo.date}
@@ -479,7 +479,7 @@ const Page = () => {
                   style={{
                     display: 'inline-block',
                     padding: '10px 20px',
-                    backgroundColor: '#E45352',
+                    backgroundColor: '#df3655',
                     color: '#ffffff',
                     textDecoration: 'none',
                     borderRadius: '6px',
@@ -492,7 +492,7 @@ const Page = () => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = '#E45352';
+                    e.currentTarget.style.backgroundColor = '#df3655';
                     e.currentTarget.style.transform = 'translateY(0)';
                   }}
                 >

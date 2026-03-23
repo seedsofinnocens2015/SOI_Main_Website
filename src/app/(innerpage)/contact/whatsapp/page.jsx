@@ -112,7 +112,7 @@ const page = () => {
                     height: '100%',
                     textAlign: 'center'
                   }}>
-                    <FaClock style={{ fontSize: '50px', color: '#E45352', marginBottom: '15px' }} />
+                    <FaClock style={{ fontSize: '50px', color: '#df3655', marginBottom: '15px' }} />
                     <h5 style={{ marginBottom: '10px', fontWeight: '600' }}>24/7 Availability</h5>
                     <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
                       Get instant responses anytime, day or night. Our team is always here to help.
@@ -129,7 +129,7 @@ const page = () => {
                     height: '100%',
                     textAlign: 'center'
                   }}>
-                    <FaLightbulb style={{ fontSize: '50px', color: '#E45352', marginBottom: '15px' }} />
+                    <FaLightbulb style={{ fontSize: '50px', color: '#df3655', marginBottom: '15px' }} />
                     <h5 style={{ marginBottom: '10px', fontWeight: '600' }}>Quick Answers</h5>
                     <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
                       Ask questions about treatments, costs, procedures, and get immediate expert advice.
@@ -146,7 +146,7 @@ const page = () => {
                     height: '100%',
                     textAlign: 'center'
                   }}>
-                    <FaCalendarAlt style={{ fontSize: '50px', color: '#E45352', marginBottom: '15px' }} />
+                    <FaCalendarAlt style={{ fontSize: '50px', color: '#df3655', marginBottom: '15px' }} />
                     <h5 style={{ marginBottom: '10px', fontWeight: '600' }}>Easy Booking</h5>
                     <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
                       Schedule appointments directly through WhatsApp. Quick and convenient.
@@ -163,7 +163,7 @@ const page = () => {
                     height: '100%',
                     textAlign: 'center'
                   }}>
-                    <FaFileMedical style={{ fontSize: '50px', color: '#E45352', marginBottom: '15px' }} />
+                    <FaFileMedical style={{ fontSize: '50px', color: '#df3655', marginBottom: '15px' }} />
                     <h5 style={{ marginBottom: '10px', fontWeight: '600' }}>Share Reports</h5>
                     <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
                       Send your medical reports and test results directly for quick consultation.
@@ -176,7 +176,7 @@ const page = () => {
                 padding: '30px',
                 backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
-                borderLeft: '4px solid #E45352'
+                borderLeft: '4px solid #df3655'
               }}>
                 <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What You Can Do on WhatsApp</AccentHeading>
                 <ul className="cs_list cs_list_style_1">

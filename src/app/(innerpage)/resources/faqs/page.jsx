@@ -208,7 +208,7 @@ const page = () => {
                     left: '0',
                     width: '60px',
                     height: '4px',
-                    backgroundColor: '#E45352',
+                    backgroundColor: '#df3655',
                     borderRadius: '2px'
                   }}></span>
                 </span>

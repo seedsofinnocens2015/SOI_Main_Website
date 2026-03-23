@@ -259,7 +259,7 @@ const Page = () => {
                 disabled={currentPage === 1}
                 style={{
                   padding: '10px 20px',
-                  backgroundColor: currentPage === 1 ? '#e0e0e0' : '#E45352',
+                  backgroundColor: currentPage === 1 ? '#e0e0e0' : '#df3655',
                   color: currentPage === 1 ? '#999' : '#fff',
                   border: 'none',
                   borderRadius: '5px',
@@ -275,7 +275,7 @@ const Page = () => {
                 }}
                 onMouseLeave={(e) => {
                   if (currentPage !== 1) {
-                    e.currentTarget.style.backgroundColor = '#E45352';
+                    e.currentTarget.style.backgroundColor = '#df3655';
                   }
                 }}
               >
@@ -295,7 +295,7 @@ const Page = () => {
                       onClick={() => handlePageChange(page)}
                       style={{
                         padding: '10px 15px',
-                        backgroundColor: currentPage === page ? '#E45352' : '#fff',
+                        backgroundColor: currentPage === page ? '#df3655' : '#fff',
                         color: currentPage === page ? '#fff' : '#333',
                         border: '1px solid #e0e0e0',
                         borderRadius: '5px',
@@ -337,7 +337,7 @@ const Page = () => {
                 disabled={currentPage === totalPages}
                 style={{
                   padding: '10px 20px',
-                  backgroundColor: currentPage === totalPages ? '#e0e0e0' : '#E45352',
+                  backgroundColor: currentPage === totalPages ? '#e0e0e0' : '#df3655',
                   color: currentPage === totalPages ? '#999' : '#fff',
                   border: 'none',
                   borderRadius: '5px',
@@ -353,7 +353,7 @@ const Page = () => {
                 }}
                 onMouseLeave={(e) => {
                   if (currentPage !== totalPages) {
-                    e.currentTarget.style.backgroundColor = '#E45352';
+                    e.currentTarget.style.backgroundColor = '#df3655';
                   }
                 }}
               >

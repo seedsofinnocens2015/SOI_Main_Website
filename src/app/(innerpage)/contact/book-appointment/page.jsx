@@ -142,14 +142,14 @@ const Page = () => {
     flexShrink: 0,
     transition: 'all 0.3s ease',
     ...(state === 'completed' && {
-      backgroundColor: '#E45352',
+      backgroundColor: '#df3655',
       color: '#fff',
-      border: '2px solid #E45352',
+      border: '2px solid #df3655',
     }),
     ...(state === 'active' && {
       backgroundColor: '#fff',
-      color: '#E45352',
-      border: '2px solid #E45352',
+      color: '#df3655',
+      border: '2px solid #df3655',
     }),
     ...(state === 'inactive' && {
       backgroundColor: '#f5f5f5',
@@ -162,7 +162,7 @@ const Page = () => {
     flex: 1,
     height: '3px',
     borderRadius: '2px',
-    backgroundColor: filled ? '#E45352' : '#e0e0e0',
+    backgroundColor: filled ? '#df3655' : '#e0e0e0',
     transition: 'background-color 0.3s ease',
     margin: '0 8px',
     marginBottom: '20px',
@@ -171,7 +171,7 @@ const Page = () => {
   const stepLabelStyle = (state) => ({
     fontSize: '13px',
     fontWeight: state === 'active' ? '700' : '500',
-    color: state === 'inactive' ? '#aaa' : state === 'completed' ? '#E45352' : '#1f2b3a',
+    color: state === 'inactive' ? '#aaa' : state === 'completed' ? '#df3655' : '#1f2b3a',
     textAlign: 'center',
     marginTop: '8px',
     transition: 'color 0.3s ease',
@@ -268,7 +268,7 @@ const Page = () => {
                     <div className="row cs_gap_y_30">
                       <div className="col-md-6">
                         <label className="cs_form_label">
-                          Full Name <span style={{ color: '#E45352' }}>*</span>
+                          Full Name <span style={{ color: '#df3655' }}>*</span>
                         </label>
                         <input
                           type="text"
@@ -281,7 +281,7 @@ const Page = () => {
                       </div>
                       <div className="col-md-6">
                         <label className="cs_form_label">
-                          Phone Number <span style={{ color: '#E45352' }}>*</span>
+                          Phone Number <span style={{ color: '#df3655' }}>*</span>
                         </label>
                         <input
                           type="tel"
@@ -294,7 +294,7 @@ const Page = () => {
                       </div>
                       <div className="col-md-12">
                         <label className="cs_form_label">
-                          Email Address <span style={{ color: '#E45352' }}>*</span>
+                          Email Address <span style={{ color: '#df3655' }}>*</span>
                         </label>
                         <input
                           type="email"
@@ -319,7 +319,7 @@ const Page = () => {
                     <div className="row cs_gap_y_30">
                       <div className="col-md-6">
                         <label className="cs_form_label">
-                          Preferred Date <span style={{ color: '#E45352' }}>*</span>
+                          Preferred Date <span style={{ color: '#df3655' }}>*</span>
                         </label>
                         <input
                           type="date"
@@ -332,7 +332,7 @@ const Page = () => {
                       </div>
                       <div className="col-md-6">
                         <label className="cs_form_label">
-                          Preferred Time <span style={{ color: '#E45352' }}>*</span>
+                          Preferred Time <span style={{ color: '#df3655' }}>*</span>
                         </label>
                         <select
                           name="time"
@@ -390,7 +390,7 @@ const Page = () => {
                       </div>
                       <div className="col-md-12">
                         <label className="cs_form_label">
-                          Reason for Visit <span style={{ color: '#E45352' }}>*</span>
+                          Reason for Visit <span style={{ color: '#df3655' }}>*</span>
                         </label>
                         <textarea
                           rows="4"
@@ -449,9 +449,9 @@ const Page = () => {
                         minHeight: '54px',
                         fontSize: '15px',
                         fontWeight: '600',
-                        border: '2px solid #E45352',
+                        border: '2px solid #df3655',
                         backgroundColor: '#fff',
-                        color: '#E45352',
+                        color: '#df3655',
                         borderRadius: '8px',
                         cursor: 'pointer',
                         transition: 'all 0.2s',
@@ -494,7 +494,7 @@ const Page = () => {
                 backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
                 marginTop: '30px',
-                borderLeft: '4px solid #E45352',
+                borderLeft: '4px solid #df3655',
                 border: '1px solid #ebeef2',
               }}>
                 <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}><AccentHeading style={{ marginBottom: '6px' }}>What to Expect</AccentHeading></h3>

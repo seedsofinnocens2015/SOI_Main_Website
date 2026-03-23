@@ -178,7 +178,7 @@ const ThankYouContent = () => {
                   marginBottom: '30px',
                   textAlign: 'left'
                 }}>
-                  <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#E45352' }}>
+                  <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#df3655' }}>
                     What Happens Next?
                   </h3>
                   <ul className="cs_list cs_list_style_1" style={{ marginBottom: '0' }}>
@@ -194,10 +194,10 @@ const ThankYouContent = () => {
                   padding: '30px',
                   backgroundColor: '#fff',
                   borderRadius: '12px',
-                  border: '2px solid #E45352',
+                  border: '2px solid #df3655',
                   marginBottom: '30px'
                 }}>
-                  <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#E45352', display: 'flex', alignItems: 'center', gap: '10px', justifyContent: 'center' }}>
+                  <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#df3655', display: 'flex', alignItems: 'center', gap: '10px', justifyContent: 'center' }}>
                     <FaPhoneAlt /> Need Immediate Assistance?
                   </h3>
                   <p style={{ marginBottom: '15px', fontSize: '16px' }}>
@@ -205,13 +205,13 @@ const ThankYouContent = () => {
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
                     <p style={{ marginBottom: '0', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaPhoneAlt style={{ color: '#E45352', fontSize: '18px' }} />
+                      <FaPhoneAlt style={{ color: '#df3655', fontSize: '18px' }} />
                       <a href="tel:+91-9810350512" style={{ color: 'var(--body-color)', textDecoration: 'none', fontSize: '16px', fontWeight: '600' }}>
                         +91-9810350512
                       </a>
                     </p>
                     <p style={{ marginBottom: '0', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <FaEnvelope style={{ color: '#E45352', fontSize: '18px' }} />
+                      <FaEnvelope style={{ color: '#df3655', fontSize: '18px' }} />
                       <a href="mailto:info@seedsofinnocens.com" style={{ color: 'var(--body-color)', textDecoration: 'none', fontSize: '16px', fontWeight: '600' }}>
                         info@seedsofinnocens.com
                       </a>
@@ -235,8 +235,8 @@ const ThankYouContent = () => {
                     style={{
                       minWidth: '150px',
                       backgroundColor: 'transparent',
-                      border: '2px solid #E45352',
-                      color: '#E45352'
+                      border: '2px solid #df3655',
+                      color: '#df3655'
                     }}
                   >
                     <span style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
@@ -252,7 +252,7 @@ const ThankYouContent = () => {
                   backgroundColor: '#f8f9fa',
                   borderRadius: '12px',
                   marginTop: '30px',
-                  borderLeft: '4px solid #E45352'
+                  borderLeft: '4px solid #df3655'
                 }}>
                   <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>Important Information</AccentHeading>
                   <ul className="cs_list cs_list_style_1">
