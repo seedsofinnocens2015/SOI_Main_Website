@@ -329,7 +329,7 @@ const Page = () => {
                   <div>
                     <h4 style={{ fontSize: '20px', marginBottom: '4px' }}>Reason &amp; Message</h4>
                     <p style={{ marginBottom: '24px', fontSize: '14px', color: 'var(--body-color)' }}>
-                      Help us prepare for your call by sharing what you'd like to discuss.
+                      Help us prepare for your call by sharing what you&apos;d like to discuss.
                     </p>
                     <div className="row cs_gap_y_30">
                       <div className="col-md-12">
@@ -458,9 +458,9 @@ const Page = () => {
                 <AccentHeading level={3} style={{ fontSize: '24px', marginBottom: '20px' }}>What Happens Next?</AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li><strong>Submit Form:</strong> Fill out the form above with your details</li>
-                  <li><strong>Confirmation:</strong> You'll receive a confirmation message within minutes</li>
+                  <li><strong>Confirmation:</strong> You&apos;ll receive a confirmation message within minutes</li>
                   <li><strong>Our Call:</strong> Our specialist will call you at your preferred time</li>
-                  <li><strong>Discussion:</strong> We'll answer all your questions and provide guidance</li>
+                  <li><strong>Discussion:</strong> We&apos;ll answer all your questions and provide guidance</li>
                 </ul>
               </div>
             </div>

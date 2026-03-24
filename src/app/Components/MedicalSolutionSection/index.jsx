@@ -1,4 +1,6 @@
+"use client";
 import { useState } from "react";
+import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
 import Link from 'next/link';
 import Button from "../Buttons";
@@ -48,9 +50,13 @@ const MedicalSolutionSection = ({ data }) => {
                   </div>
                   <div className="col-md-6">
                     <div className="cs_solution_thumbnail_2">
-                      <img
+                      <Image
                         src={data.images.solutionImage}
                         alt="Solution Image"
+                        width={420}
+                        height={280}
+                        loading="lazy"
+                        style={{ width: '100%', height: 'auto' }}
                       />
                     </div>
                   </div>
@@ -89,7 +95,7 @@ const MedicalSolutionSection = ({ data }) => {
         </div>
       </div>
       <div className="cs_solution_shape position-absolute">
-        <img src={data.shapeImageUrl} alt="Shape" />
+        <Image src={data.shapeImageUrl} alt="Shape" width={120} height={120} loading="lazy" />
       </div>
 
       <VideoModal

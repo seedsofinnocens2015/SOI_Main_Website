@@ -1,4 +1,3 @@
-"use client"
 import Spacing from "../Spacing";
 import { getAssetPathClient } from "../../utils/assetPath";
 

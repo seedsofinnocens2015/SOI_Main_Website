@@ -433,22 +433,22 @@ const BestIVFCentre = ({
                                 {
                                     title: '35+ IVF Centres',
                                     desc: "Seeds of Innocens IVF brings you the best fertility care across India and International too. With over 35+ IVF centre, your journey to parenthood is become more closer to you. Whether you're in a metro or a smaller city, expert help is never far away.",
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    icon: <Image src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: '20,000+ Healthy Babies',
                                     desc: 'At Seeds of Innocens IVF we have helped and fulfilled the dream of many couples who were struggling with infertility. Our commitment to quality fertility care and personalised treatment.',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    icon: <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'Upto 78% Success Rate',
                                     desc: 'At Seeds of Innocens IVF, the success rate of IVF is reported above 78%+ which is well above the global average. Moreover, it is crucial to note that success rates vary depending on factors such as the age of the patient, the specific fertility problems, and the treatment protocol.',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Upto 78% Success Rate" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    icon: <Image src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Upto 78% Success Rate" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: '30+ Certified Trained Clinicians',
                                     desc: 'We have skilled fertility experts with an experience of over 20+ years. Seeds of Innocens IVF is dedicated to giving everyone access to great medical care while lowering the costs of IVF and other reproductive procedures. ',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="30+ Certified Trained Clinicians" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    icon: <Image src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="30+ Certified Trained Clinicians" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                             ].map((f, idx) => (
                                 <div
@@ -470,22 +470,22 @@ const BestIVFCentre = ({
                                 {
                                     title: 'Reliability',
                                     desc: 'Seeds of Innocens IVF has an industry-leading success rate of about 78%, and it is well known for its high patient satisfaction rates.',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/Reliability.svg")} alt="Reliability" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    icon: <Image src={getAssetPathClient("/assets/img/icons/Reliability.svg")} alt="Reliability" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'Latest Technologies',
                                     desc: 'We use the latest technologies for diagnosing and treating cases with unconventional methods.',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="Fetal Medicine" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    icon: <Image src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="Fetal Medicine" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'Customized Care',
                                     desc: 'Seeds of Innocens IVF offers quality treatment to every patient as per the individual requirement to make sure about the customized care.',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/Customized Care.svg")} alt="Customized Care" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    icon: <Image src={getAssetPathClient("/assets/img/icons/Customized Care.svg")} alt="Customized Care" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'In-House Genetic Lab',
                                     desc: 'We are proud to be recognize as the first IVF centre to have its own in-house genetic lab',
-                                    icon: <img src={getAssetPathClient("/assets/img/icons/In-House Genetic.svg")} alt="In-House Genetic Lab" style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    icon: <Image src={getAssetPathClient("/assets/img/icons/In-House Genetic.svg")} alt="In-House Genetic Lab" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                             ].map((f, idx) => (
                                 <div
@@ -509,42 +509,42 @@ const BestIVFCentre = ({
                             {
                                 title: '35+ IVF Centres',
                                 desc: "Seeds of Innocens IVF brings you the best fertility care across India and International too. With over 35+ IVF centre, your journey to parenthood is become more closer to you. Whether you're in a metro or a smaller city, expert help is never far away. Whether you're in a metro or a smaller city, expert help is never far away.",
-                                icon: <img src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <Image src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: '20,000+ Healthy Babies',
                                 desc: 'At Seeds of Innocens IVF we have helped and fulfilled the dream of many couples who were struggling with infertility.  Our commitment to quality fertility care and personalised treatment.',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Upto 78% Success Rate',
                                 desc: 'At Seeds of Innocens IVF, the success rate of IVF is reported above 78%+ which is well above the global average. Moreover, it is crucial to note that success rates vary depending on factors such as the age of the patient, the specific fertility problems, and the treatment protocol. ',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Upto 78% Success Rate" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <Image src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Upto 78% Success Rate" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: '30+ Certified Trained Clinicians',
                                 desc: 'We have skilled fertility experts with an experience of over 20+ years. Seeds of Innocens IVF is dedicated to giving everyone access to great medical care while lowering the costs of IVF and other reproductive procedures. ',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="30+ Certified Trained Clinicians" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <Image src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="30+ Certified Trained Clinicians" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Reliability',
                                 desc: '. Seeds of Innocens IVF has an industry-leading success rate of about 78%, and it is well known for its high patient satisfaction rates. and financing options to make your journey easier.',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/Reliability.svg")} alt="Reliability" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <Image src={getAssetPathClient("/assets/img/icons/Reliability.svg")} alt="Reliability" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Latest Technologies',
                                 desc: 'We use the latest technologies for diagnosing and treating cases with unconventional methods.',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="Fetal Medicine" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <Image src={getAssetPathClient("/assets/img/icons/Genetic Testing.svg")} alt="Fetal Medicine" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Customized Care',
                                 desc: 'Seeds of Innocens IVF offers quality treatment to every patient as per the individual requirement to make sure about the customized care.',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/Customized Care.svg")} alt="Customized Care" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <Image src={getAssetPathClient("/assets/img/icons/Customized Care.svg")} alt="Customized Care" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'In-House Genetic Lab',
                                 desc: 'We are the first IVF centre in India to establish an in-house genetic lab with testing services including PGT-A.',
-                                icon: <img src={getAssetPathClient("/assets/img/icons/In-House Genetic.svg")} alt="In-House Genetic Lab" style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <Image src={getAssetPathClient("/assets/img/icons/In-House Genetic.svg")} alt="In-House Genetic Lab" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                         ].map((f, idx) => (
                             <div
@@ -581,9 +581,11 @@ const BestIVFCentre = ({
                         <div className="cs_about_v2_wrapper">
                             {/* Building image */}
                             <div className="cs_about_v2_img_col">
-                                <img
+                                <Image
                                     src={getAssetPathClient(aboutUs.image || center.image)}
                                     alt={`${aboutUs.title || 'About Seeds of Innocens'}`}
+                                    width={640}
+                                    height={420}
                                     className="cs_about_v2_img"
                                     loading="lazy"
                                 />

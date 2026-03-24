@@ -36,74 +36,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="author" content="Themeservices" />
+        <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+        <link rel="dns-prefetch" href="https://fonts.cdnfonts.com" />
         {/* Lemon Milk Font - Load from CDN or local file */}
         <link
           rel="stylesheet"
           href="https://fonts.cdnfonts.com/css/lemon-milk"
-        />
-        {/* Disable Next.js automatic prefetching for static export */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                if (typeof window === 'undefined') return;
-                
-                // Disable Next.js automatic prefetching
-                if (window.next && window.next.router) {
-                  const originalPrefetch = window.next.router.prefetch;
-                  window.next.router.prefetch = function() { 
-                    return Promise.resolve(); 
-                  };
-                }
-                
-                // Block all .txt file requests
-                const blockTxtRequests = function(url) {
-                  if (typeof url === 'string' && (url.includes('.txt?_rsc=') || url.endsWith('.txt'))) {
-                    return true;
-                  }
-                  return false;
-                };
-                
-                // Override fetch to prevent .txt file requests
-                const originalFetch = window.fetch;
-                window.fetch = function(...args) {
-                  const url = args[0];
-                  if (blockTxtRequests(url)) {
-                    return Promise.reject(new Error('Prefetch disabled'));
-                  }
-                  return originalFetch.apply(this, args);
-                };
-                
-                // Override XMLHttpRequest to prevent .txt file requests
-                const originalXHROpen = XMLHttpRequest.prototype.open;
-                XMLHttpRequest.prototype.open = function(method, url, ...rest) {
-                  if (blockTxtRequests(url)) {
-                    return;
-                  }
-                  return originalXHROpen.call(this, method, url, ...rest);
-                };
-                
-                // Override send to block .txt requests
-                const originalXHRSend = XMLHttpRequest.prototype.send;
-                XMLHttpRequest.prototype.send = function(...args) {
-                  if (this._url && blockTxtRequests(this._url)) {
-                    return;
-                  }
-                  return originalXHRSend.apply(this, args);
-                };
-                
-                // Intercept link prefetching
-                document.addEventListener('DOMContentLoaded', function() {
-                  const links = document.querySelectorAll('link[rel="prefetch"]');
-                  links.forEach(function(link) {
-                    if (link.href && blockTxtRequests(link.href)) {
-                      link.remove();
-                    }
-                  });
-                });
-              })();
-            `,
-          }}
         />
       </head>
       <body className={`${inter.variable}`}>

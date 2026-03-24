@@ -1,5 +1,3 @@
-"use client"
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaClock, FaLocationDot, FaEnvelope } from 'react-icons/fa6';
@@ -88,8 +86,6 @@ const IVFContentSection = ({
   lifestyleBlogContent = null,
   relatedServices = [],
 }) => {
-  const [openSteps, setOpenSteps] = useState({});
-
   const isTreatmentPage = TREATMENT_PAGE_KEYS.includes(serviceKey) && treatmentContent && typeof treatmentContent === 'object';
   const isMaleInfertilityPage = MALE_INFERTILITY_PAGE_KEYS.includes(serviceKey) && maleInfertilityContent && typeof maleInfertilityContent === 'object';
   const isDiagnosticPage = DIAGNOSTIC_PAGE_KEYS.includes(serviceKey) && diagnosticContent && typeof diagnosticContent === 'object';
@@ -118,10 +114,6 @@ const IVFContentSection = ({
         {restPart ? <span> {restPart}</span> : null}
       </h2>
     );
-  };
-
-  const toggleStep = (stepIndex) => {
-    setOpenSteps(prev => ({ ...prev, [stepIndex]: !prev[stepIndex] }));
   };
 
   const renderProcedureStepsBoxes = (steps) => {
@@ -160,20 +152,18 @@ const IVFContentSection = ({
         {steps.map((step, stepIndex) => (
           <div
             key={stepIndex}
-            className={`cs_ivf_content_step ${openSteps[stepIndex] ? 'cs_step_open' : ''}`}
+            className="cs_ivf_content_step cs_step_open"
           >
-            <div className="cs_ivf_step_header" onClick={() => toggleStep(stepIndex)}>
+            <div className="cs_ivf_step_header">
               <span className="cs_ivf_step_number">{stepIndex + 1}</span>
               <h3 className="cs_ivf_step_title">{step.title}</h3>
               <span className="cs_ivf_step_toggle">
                 <span className="cs_ivf_step_toggle_line"></span>
               </span>
             </div>
-            {openSteps[stepIndex] && (
-              <div className="cs_ivf_step_content">
-                <p className="cs_ivf_step_description">{step.description}</p>
-              </div>
-            )}
+            <div className="cs_ivf_step_content">
+              <p className="cs_ivf_step_description">{step.description}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -360,7 +350,7 @@ const IVFContentSection = ({
         {/* 1. Who Needs This Treatment */}
         {(tc.whoNeeds?.paragraphs?.length || tc.whoNeeds?.listItems?.length) && (
           <div className="cs_ivf_content_section cs_treatment_section">
-            {renderHeading(`Who Needs ${displayName}?`)}
+            {renderHeading(`Who requires ${displayName}?`)}
             {renderBlockContent(tc.whoNeeds)}
           </div>
         )}
@@ -753,7 +743,7 @@ const IVFContentSection = ({
         <div className="cs_ivf_content_section cs_service_intro_section">
           <div className={introSection.sideImage && !accentHeadingStyle ? 'row cs_gap_y_30 align-items-center' : ''}>
             <div className={introSection.sideImage && !accentHeadingStyle ? 'col-lg-6' : 'col-12'}>
-              {renderHeading(`What is ${displayName}?`)}
+              {renderHeading(introSection.heading || displayName)}
               {renderParagraphs(introSection)}
               {renderList(introSection)}
             </div>
@@ -762,7 +752,7 @@ const IVFContentSection = ({
                 <div className="cs_service_details_thumbnail cs_side_image">
                   <Image
                     src={getAssetPathClient(introSection.sideImage)}
-                    alt={`What is ${displayName}`}
+                    alt={displayName}
                     width={500}
                     height={400}
                     loading="lazy"
@@ -776,7 +766,7 @@ const IVFContentSection = ({
                 <div className="cs_service_details_thumbnail">
                   <Image
                     src={getAssetPathClient(introSection.sideImage)}
-                    alt={`What is ${displayName}`}
+                    alt={displayName}
                     width={500}
                     height={400}
                     loading="lazy"

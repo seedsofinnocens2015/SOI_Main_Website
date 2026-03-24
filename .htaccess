@@ -2,6 +2,15 @@
   RewriteEngine On
   RewriteBase /
   
+  # Allow only safe HTTP methods
+  RewriteCond %{REQUEST_METHOD} !^(GET|POST|HEAD|OPTIONS)$ [NC]
+  RewriteRule .* - [F,L]
+
+  # Block direct access to sensitive files and directories
+  RewriteRule (^|/)\.(env|git|svn|htaccess) - [F,L,NC]
+  RewriteRule (^|/)(package(-lock)?\.json|yarn\.lock|pnpm-lock\.yaml|composer\.(json|lock)|README\.md|HOSTING_GUIDE\.md|ROUTE_MIGRATION_SUMMARY\.md)$ - [F,L,NC]
+  RewriteRule (^|/)(node_modules|\.next|scripts|\.cursor|\.vscode|vendor)/ - [F,L,NC]
+  
   # Handle Next.js static files
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
@@ -11,6 +20,29 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
+
+# MIME sniffing and file upload abuse protection
+<IfModule mod_mime.c>
+  RemoveType .php .phtml .php3 .php4 .php5 .phps .cgi .pl .py .jsp .asp .aspx .sh
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set Permissions-Policy "accelerometer=(), autoplay=(self), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://fonts.cdnfonts.com; img-src 'self' data: blob: https://img.youtube.com https://i.ytimg.com; font-src 'self' data: https://fonts.cdnfonts.com; connect-src 'self' https://soi.seedsofinnocens.com https://www.youtube.com https://www.youtube-nocookie.com; media-src 'self' blob:; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; upgrade-insecure-requests"
+
+  # Enforce HTTPS transport (active only on HTTPS)
+  Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
 </IfModule>
 
 # Enable compression
@@ -28,4 +60,5 @@
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 5 minutes"
 </IfModule>

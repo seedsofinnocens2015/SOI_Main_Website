@@ -702,7 +702,7 @@ const page = () => {
                       lineHeight: '1.8',
                       margin: 0
                     }}>
-                      We respect diversity in backgrounds, beliefs, and family definitions. We uphold patients' confidentiality and empathy.
+                      We respect diversity in backgrounds, beliefs, and family definitions. We uphold patients&apos; confidentiality and empathy.
                     </p>
                   </div>
                 </div>

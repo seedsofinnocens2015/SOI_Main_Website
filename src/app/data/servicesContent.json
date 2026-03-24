@@ -15,22 +15,22 @@
     "ivfContentData": {
       "sections": [
         {
-          "heading": "In-Vitro Fertilization (IVF) Overview",
+          "heading": "What is IVF?",
           "paragraphs": [
-            "In-Vitro Fertilization (IVF) is a method that helps couples with fertility related problems and in conceiving a child. During the IVF treatment, the mature eggs are retrieved from the ovaries of women and sperms from the partner which are further fertilized in the laboratory to make embryos. After a few days, these embryos are transferred into the uterus of the woman."
+            "In Vitro Fertilization is a method that helps couples with fertility-related issues to conceive a child. In IVF treatment, mature eggs are retrieved from a woman's ovaries and sperm from her partner, and the resulting embryos are then fertilized in a laboratory to develop. After a few days, these embryos are then transferred into the woman's uterus."
           ]
         },
         {
           "heading": "Why is IVF Done?",
           "paragraphs": [
-            "The couples who face challenges in having a baby can opt for IVF treatment. However, there are a wide range of infertility conditions because of which IVF treatment in India is suggested by the IVF specialist in India to the patients. Below mentioned are the following conditions in which IVF is suggested by the specialists:"
+            "Several couples who face challenges in having a baby can choose IVF treatment. Moreover, there is a wide range of infertility conditions for which an IVF specialist in India recommends IVF treatment to the patients. Below are the conditions in which the fertility experts recommend IVF:"
           ],
           "listItems": [
-            "Blocked or damaged fallopian tubes",
             "Endometriosis",
             "Ovulation disorders",
+            "Unexplained infertility",
             "Low sperm count or motility",
-            "Unexplained infertility"
+            "Blocked or damaged fallopian tubes"
           ]
         },
         {
@@ -101,53 +101,46 @@
     "treatmentContent": {
       "whoNeeds": {
         "paragraphs": [
-          "The couples who face challenges in having a baby can opt for IVF treatment. However, there are a wide range of infertility conditions because of which IVF treatment in India is suggested by the IVF specialist to the patients."
-        ],
-        "listItems": [
-          "Blocked or damaged fallopian tubes",
-          "Endometriosis",
-          "Ovulation disorders",
-          "Low sperm count or motility",
-          "Unexplained infertility"
+          "Couples who are facing difficulties in conceiving a baby can opt for an IVF treatment. Moreover, there is a range of infertility conditions for which an IVF treatment in India is recommended by the IVF specialist to the patients."
         ]
       },
       "howItWorks": {
         "paragraphs": [
-          "IVF involves retrieving eggs from the ovaries, fertilizing them with sperm in the laboratory, and transferring the resulting embryos into the uterus. The process is carried out in clearly defined steps under expert supervision."
+          "IVF includes retrieving eggs from the ovaries, fertilizing them with sperm in the laboratory, and then transferring the resulting embryos into the uterus. The process is then carried out in a clearly defined set of steps under the IVF specialist's supervision."
         ]
       },
       "procedure": {
         "paragraphs": [
-          "The IVF procedure follows these key steps from ovarian stimulation to pregnancy testing:"
+          "The IVF procedure should follow these steps from the ovarian stimulation to the pregnancy testing:"
         ],
         "steps": [
           {
             "title": "Ovarian Hyperstimulation",
-            "description": "The IVF procedure starts with the stimulation of ovaries. During a normal menstrual cycle, only one egg is released per month so ovarian stimulation helps to increase the number of eggs available for fertilization."
+            "description": "The IVF Procedure starts with the stimulation of the ovaries. During a normal menstrual cycle, only one egg is released each month. So ovarian stimulation will help to enhance the number of eggs available for fertilization."
           },
           {
             "title": "Oocyte or Egg Retrieval",
-            "description": "After a few days when doctors find that the eggs are mature then they go ahead with the retrieval of eggs by using a minor surgical procedure known as transvaginal ultrasound aspiration."
+            "description": "After some days, when doctors find that the eggs are mature, they go ahead with the retrieval of eggs by using a small procedure, which is known as transvaginal ultrasound aspiration."
           },
           {
             "title": "Sperm Collection",
-            "description": "The semen sample is collected from the male partner which is processed in the lab to isolate healthy and motile sperm. However, in some cases, if any problem occurs with the sperm quality or quantity then a surgical procedure called TESA (Testicular Sperm Aspiration) may be done to retrieve sperm from testicles or epididymis."
+            "description": "The semen sample is then collected from the male partner, which is processed in the lab to isolate healthy and motile sperm. Moreover, if there are any problem that occurs with sperm quality or quantity, then a surgical procedure known as TESA (Testicular Sperm Aspiration) might be done to retrieve sperm from the testicles or epididymis."
           },
           {
             "title": "Fertilization",
-            "description": "This process can be done through two methods. First, the retrieved eggs and sperm are put in the laboratory dish and left overnight for natural fertilization. Second, the fertilization is done through the ICSI (intracytoplasmic sperm injection) process where a single sperm is injected into every egg directly to achieve fertilization."
+            "description": "The process can be done through two methods. The first is retrieving eggs and sperm that are put in a laboratory dish, and it is left overnight for natural fertilization. Second, the fertilization is completed through the ICSI (Intracytoplasmic sperm injection) process, where a single sperm is then injected into each egg directly to achieve fertilization."
           },
           {
             "title": "Embryo Culture",
-            "description": "In this step, the embryologist will monitor the development of embryos to see whether they are properly growing and dividing or not. The best quality embryos are selected after complete evaluation for the transferring process."
+            "description": "After fertilization, in this step, the embryologist will monitor the development of embryos to see whether they are properly growing and dividing or not. The best quality embryos are then chosen after the complete evaluation for the transferring process."
           },
           {
             "title": "Embryo Transfer",
-            "description": "Once the embryos are ready and grown into blastocysts then they are transferred into the uterus of a woman by using a thin catheter. This is one of the important steps of the IVF process."
+            "description": "Once the embryos are ready and well grown into a blastocyst, then they are transferred into the uterus of a women by using a thin catheter. Also, this is one of the crucial steps of the IVF process."
           },
           {
             "title": "Pregnancy Test",
-            "description": "This is the last stage of the IVF process in which after 2 weeks of embryo transfer, the patient has to do a pregnancy test."
+            "description": "It is the last stage of the IVF process in which, after 2 weeks of embryo transfer, the patient has to do a pregnancy test."
           }
         ]
       },
@@ -161,28 +154,25 @@
       },
       "successRate": {
         "paragraphs": [
-          "IVF success rates vary based on age, cause of infertility, and clinic expertise. Our centres maintain high success rates with advanced technology and personalized protocols. Discuss your individual prognosis with our fertility specialists."
+          "IVF success rates depend on age, cause of infertility, and clinic expertise. Our centres maintain high success rates with advanced technology and with customized protocols. You can also discuss your individual prognosis with IVF specialists."
         ]
       },
       "risks": {
         "paragraphs": [
-          "There are some risks and potential complications that come with IVF treatment:"
-        ],
-        "listItems": [
-          "The chances of multiple pregnancies increase such as twins, triplets, or higher-order multiples.",
-          "Women may experience an ectopic pregnancy where the embryo implants outside the uterus, often in a fallopian tube.",
-          "Chances of premature delivery may be higher in some IVF pregnancies; baby weight may be lower in such cases.",
-          "IVF cannot eliminate the risk of miscarriage; it is similar to natural pregnancy."
+            "Some potential complications come with an IVF treatment. However, the chances of multiple pregnancies increase, such as twins, triplets, or even higher-order multiples.",
+            "Some women might also experience an ectopic pregnancy, where an embryo implants outside the uterus, often in the fallopian tube.",
+            "Chances of premature delivery might be higher in some of the IVF pregnancies, and the baby's weight might be lower in some cases.",
+            "Since IVF cannot eliminate the risk of miscarriage, it is similar to a natural pregnancy."
         ]
       },
       "recovery": {
         "paragraphs": [
-          "After embryo transfer, you can usually resume light activities the same day. Avoid strenuous exercise and follow your doctor's advice on progesterone support. A pregnancy test is typically done about two weeks after transfer. Our team will guide you through the waiting period and next steps."
+          "After an embryo transfer, you can resume light activities on the same day. Also, avoid doing heavy exercises and follow your doctor’s advice on progesterone support. Our specialist team will guide you through the waiting period and to the next steps."
         ]
       },
       "cost": {
         "paragraphs": [
-          "The total cost of IVF treatment in India varies on different factors such as selected fertility treatment option, medications needed, location of the clinic, genetic testing, and others. It is suggested to properly discuss the IVF cost with your healthcare provider and available treatment options."
+          "In India, the total cost of an IVF treatment varies based on several factors like the selected fertility treatment option, medications required, location of the clinic, genetic testing, and others. Also, it is recommended to properly discuss the IVF cost with your fertility expert and with available treatment options."
         ]
       }
     }
@@ -1738,6 +1728,7 @@
     }
   },
   "blastocyst-transfer": {
+    "headerImage": "/assets/img/Services/BlastocystTransfer.png",
     "uspTitle": "Blastocyst  <span class=\"cs_accent_color\">Transfer</span>",
     "title": "Blastocyst Transfer",
     "heroBackground": "/assets/img/Top-Header.png",
@@ -3113,6 +3104,7 @@
     }
   },
   "genetic-testing": {
+    "headerImage": "/assets/img/Services/GeneticTesting.png",
     "uspTitle": "Genetic  <span class=\"cs_accent_color\">Testing</span>",
     "title": "Genetic Testing",
     "heroBackground": "/assets/img/Top-Header.png",

@@ -71,14 +71,14 @@ const HeroSection = ({ data }) => {
         try {
           sliderRef1.current.slickPlay();
         } catch (e) {
-          console.log("Slider play error:", e);
+          // no-op
         }
       }
       if (sliderRef2.current && typeof sliderRef2.current.slickPlay === 'function') {
         try {
           sliderRef2.current.slickPlay();
         } catch (e) {
-          console.log("Slider play error:", e);
+          // no-op
         }
       }
 
@@ -90,21 +90,6 @@ const HeroSection = ({ data }) => {
           });
         }
       });
-      
-      // Ensure current slide is visible
-      if (sliderRef1.current) {
-        const sliderElement = sliderRef1.current.innerSlider;
-        if (sliderElement) {
-          const currentSlide = sliderElement.currentSlide || 0;
-          const slides = document.querySelectorAll('.cs_hero_slider_thumb_item');
-          if (slides[currentSlide]) {
-            slides[currentSlide].style.display = 'block';
-            slides[currentSlide].style.opacity = '1';
-            slides[currentSlide].style.visibility = 'visible';
-            slides[currentSlide].style.zIndex = '1';
-          }
-        }
-      }
     };
 
     const handleVisibilityChange = () => {
@@ -127,38 +112,6 @@ const HeroSection = ({ data }) => {
     };
 
     window.addEventListener("focus", handleFocus);
-
-    // Periodic check to ensure slider and videos keep running even when idle
-    // This helps when page becomes idle but visibility API might not trigger properly
-    const checkInterval = setInterval(() => {
-      if (!document.hidden) {
-        // Check if slider is still playing (slick doesn't have a direct "isPlaying" method,
-        // so we'll just try to resume it periodically)
-        resumeSliderAndVideos();
-
-        // Ensure all videos are playing
-        videoRefs.current.forEach((videoEl) => {
-          if (videoEl && videoEl.paused && !document.hidden) {
-            videoEl.play().catch(() => {});
-          }
-        });
-
-        // Force slider to show current slide if it's not visible
-        if (sliderRef1.current) {
-          const sliderElement = sliderRef1.current.innerSlider;
-          if (sliderElement) {
-            const currentSlide = sliderElement.currentSlide || 0;
-            // Ensure current slide is visible
-            const slides = document.querySelectorAll('.cs_hero_slider_thumb_item');
-            if (slides[currentSlide]) {
-              slides[currentSlide].style.display = 'block';
-              slides[currentSlide].style.opacity = '1';
-              slides[currentSlide].style.visibility = 'visible';
-            }
-          }
-        }
-      }
-    }, 2000); // Check every 2 seconds
 
     // IntersectionObserver to detect when hero section comes back into view
     let intersectionObserver = null;
@@ -191,7 +144,6 @@ const HeroSection = ({ data }) => {
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("focus", handleFocus);
-      clearInterval(checkInterval);
       clearTimeout(observerTimer);
       if (intersectionObserver) {
         const heroSection = document.querySelector('.cs_hero_slider_thumb');
@@ -212,25 +164,11 @@ const HeroSection = ({ data }) => {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
-    pauseOnFocus: true,
+    pauseOnFocus: false,
     pauseOnDotsHover: true,
     arrows: true,
     adaptiveHeight: false,
-    lazyLoad: 'ondemand',
-    beforeChange: (current, next) => {
-      // Ensure slides are visible during transition
-      const slides = document.querySelectorAll('.cs_hero_slider_thumb_item');
-      if (slides[current]) {
-        slides[current].style.display = 'block';
-        slides[current].style.opacity = '1';
-        slides[current].style.visibility = 'visible';
-      }
-      if (slides[next]) {
-        slides[next].style.display = 'block';
-        slides[next].style.opacity = '1';
-        slides[next].style.visibility = 'visible';
-      }
-    },
+    lazyLoad: 'progressive',
     afterChange: (currentSlide) => {
       // When slide changes, ensure video on current slide plays
       const videoEl = videoRefs.current[currentSlide];
@@ -241,13 +179,6 @@ const HeroSection = ({ data }) => {
       if (sliderRef1.current && typeof sliderRef1.current.slickPlay === 'function') {
         sliderRef1.current.slickPlay();
       }
-      // Ensure current slide is visible
-      const slides = document.querySelectorAll('.cs_hero_slider_thumb_item');
-      if (slides[currentSlide]) {
-        slides[currentSlide].style.display = 'block';
-        slides[currentSlide].style.opacity = '1';
-        slides[currentSlide].style.visibility = 'visible';
-      }
     },
     onInit: () => {
       // Ensure slider starts playing on init
@@ -256,15 +187,6 @@ const HeroSection = ({ data }) => {
           sliderRef1.current.slickPlay();
         }, 100);
       }
-      // Ensure first slide is visible
-      setTimeout(() => {
-        const slides = document.querySelectorAll('.cs_hero_slider_thumb_item');
-        if (slides[0]) {
-          slides[0].style.display = 'block';
-          slides[0].style.opacity = '1';
-          slides[0].style.visibility = 'visible';
-        }
-      }, 200);
     },
   };
 
@@ -319,17 +241,22 @@ const HeroSection = ({ data }) => {
                     className={`cs_hero cs_style_1 cs_center cs_bg_filed${
                       isVideo ? " cs_has_video_bg" : ""
                     }${items.isCenterLayout && !isVideo ? " cs_has_bg_image" : ""}`}
-                    style={
-                      isVideo
-                        ? undefined
-                        : {
-                            backgroundImage: `url(${bgImagePath})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                          }
-                    }
+                    style={isVideo ? undefined : { position: 'relative' }}
                   >
+                    {!isVideo && (
+                      <Image
+                        src={bgImagePath}
+                        alt={items.title ? String(items.title).replace(/<[^>]*>/g, ' ').trim() : 'Hero background'}
+                        fill
+                        priority={index === 0}
+                        fetchPriority={index === 0 ? 'high' : 'auto'}
+                        sizes="100vw"
+                        style={{
+                          objectFit: 'cover',
+                          objectPosition: 'center',
+                        }}
+                      />
+                    )}
                     {items.isCenterLayout && !isVideo && (
                       <div className="cs_hero_overlay_dark"></div>
                     )}
@@ -384,16 +311,10 @@ const HeroSection = ({ data }) => {
                             }
                           }}
                           onError={(e) => {
-                            console.error("Video load error:", {
-                              error: e.target?.error,
-                              path: bgImagePath,
-                              originalPath: items.bgImageUrl,
-                              currentPath: window.location.pathname
-                            });
+                            // no-op
                           }}
                           onLoadedMetadata={(e) => {
-                            // Video loaded successfully
-                            console.log("Video loaded successfully:", bgImagePath);
+                            // no-op
                           }}
                         >
                           <source src={bgImagePath} type="video/mp4" />

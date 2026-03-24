@@ -5,6 +5,7 @@ const basePath = isProduction ? '/new' : '';
 const nextConfig = {
   // Use /new only on production deployment (Hostinger subpath)
   basePath,
+  poweredByHeader: false,
   // Only use static export for production builds
   ...(isProduction && {
     output: 'export',
@@ -14,9 +15,17 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
+    ],
+  },
+  experimental: {
+    optimizePackageImports: ['react-icons/fa', 'react-icons/fa6'],
   },
   trailingSlash: true,
-  // Disable automatic prefetching for all links
   reactStrictMode: true,
 };
 

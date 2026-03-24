@@ -220,17 +220,17 @@ const Page = () => {
                   <div style={{ position: 'relative', width: '100%', height: '300px', overflow: 'hidden', cursor: 'pointer' }}
                     onClick={() => openModal(video)}
                   >
-                    <img
+                    <Image
                       src={video.thumbnail}
                       alt={video.title}
+                      width={800}
+                      height={450}
                       style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover'
                       }}
-                      onError={(e) => {
-                        e.target.src = '/assets/img/recent_post2.jpg';
-                      }}
+                      unoptimized
                     />
                     <div style={{
                       position: 'absolute',

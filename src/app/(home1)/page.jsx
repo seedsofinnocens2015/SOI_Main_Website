@@ -196,7 +196,7 @@ const heroData = {
         subHeading: 'Understanding PGT-SR',
         subtitle: '<strong>PGT-SR</strong> is a specialized test that looks at embryos for possible chromosomal abnormalities produced by structural rearrangements in translocations, deletions, and duplications. Advanced testing aids in identifying embryos with higher probabilities of implantation and subsequent development. At Seeds of Innocens, we provide cutting-edge PGT-SR testing as part of our all-inclusive IVF services, guiding couples toward fulfilling their dreams of parenthood.',
         imageUrl: '/assets/img/PGT-A.webp',
-        link: '/genetic-testing-screening/pgt-sr/',
+        link: '/genetic-testing-screening/genetic-testing/',
       },
       {
         iconUrl: '/assets/img/icons/Blastocyst Transfer.svg',
@@ -260,7 +260,7 @@ const heroData = {
         subHeading: 'Genetic Counselling: Understanding and Managing Genetic Risks in Family Planning',
         subtitle: '<strong>Genetic Counselling</strong> is a process that helps couples understand and manage genetic risks in family planning, assessing family history for inherited conditions guiding them through options. This approach allows couples to make informed decisions about their fertility and family planning.',
         imageUrl: '/assets/img/Genetic-Counselling.jpg',
-        link: '/genetic-testing-screening/genetic-testing/',
+        link: '/genetic-testing-screening/genetic-factors/',
       },
       {
         iconUrl: '/assets/img/icons/Laparoscopy & Hysteroscopy.svg',
