@@ -37,7 +37,7 @@ const page = () => {
                   position: 'relative'
                 }}>
                   <Image
-                    src={getAssetPathClient("/assets/img/ourstory.JPG")}
+                    src={getAssetPathClient("/assets/img/ourstory.jpg")}
                     alt="Our Journey"
                     width={600}
                     height={400}

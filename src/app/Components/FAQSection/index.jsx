@@ -82,7 +82,7 @@ const FAQSection = ({ data }) => {
                       <p className="cs_faq_card_description">{category.description}</p>
                       {category.link && (
                         <Link href={category.link} className="cs_faq_explore_link">
-                          Explore Now-
+                          Explore Now
                         </Link>
                       )}
                     </div>

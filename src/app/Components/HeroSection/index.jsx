@@ -7,17 +7,11 @@ import Button from "../Buttons";
 import Image from "next/image";
 import { getAssetPathClient } from "../../utils/assetPath";
 const HeroSection = ({ data }) => {
-  const [nav1, setNav1] = useState(null);
-  const [nav2, setNav2] = useState(null);
   const sliderRef1 = useRef(null);
   const sliderRef2 = useRef(null);
   const videoRefs = useRef([]);
   const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    setNav1(sliderRef1.current);
-    setNav2(sliderRef2.current);
-  }, []);
+  const hasSecondarySlider = Array.isArray(data?.secondarySlider) && data.secondarySlider.length > 0;
 
   // Detect mobile view
   useEffect(() => {
@@ -220,12 +214,8 @@ const HeroSection = ({ data }) => {
         <div className="cs_hero_slider_thumb slick-slider">
           <Slider
             {...settings}
-            asNavFor={nav2}
             ref={(slider) => {
               sliderRef1.current = slider;
-              if (slider) {
-                setNav1(slider);
-              }
             }}
           >
             {data?.primarySlider.map((items, index) => {
@@ -373,27 +363,33 @@ const HeroSection = ({ data }) => {
             })}
           </Slider>
         </div>
-        <div className="cs_hero_slider_nav slick-slider">
-          <Slider
-            asNavFor={nav1}
-            ref={(slider) => {
-              sliderRef2.current = slider;
-              if (slider) {
-                setNav2(slider);
-              }
-            }}
-            slidesToShow={3}
-            swipeToSlide={true}
-            focusOnSelect={true}
-            {...settings2}
-          >
-            {data?.secondarySlider?.map((items, index) => (
-              <div className="cs_hero_slider_thumb_mini" key={index}>
-                <Image src={items}  alt="img" width={90} height={92}   />
-              </div>
-            ))}
-          </Slider>
-        </div>
+        {hasSecondarySlider && (
+          <div className="cs_hero_slider_nav slick-slider">
+            <Slider
+              ref={(slider) => {
+                sliderRef2.current = slider;
+              }}
+              slidesToShow={3}
+              swipeToSlide={true}
+              focusOnSelect={true}
+              {...settings2}
+            >
+              {data.secondarySlider.map((items, index) => (
+                <div
+                  className="cs_hero_slider_thumb_mini"
+                  key={index}
+                  onClick={() => {
+                    if (sliderRef1.current && typeof sliderRef1.current.slickGoTo === "function") {
+                      sliderRef1.current.slickGoTo(index);
+                    }
+                  }}
+                >
+                  <Image src={items} alt="img" width={90} height={92} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        )}
       </section>
     </>
   );

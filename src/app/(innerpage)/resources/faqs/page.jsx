@@ -25,7 +25,6 @@ const faqsContentData = {
         'Find comprehensive answers to commonly asked questions about IVF, fertility treatments, and your journey with Seeds of Innocens. If you have additional questions, our team is always available to help.',
         'We have compiled answers to the most frequently asked questions to help you understand the IVF process, treatment options, and what to expect during your journey with us.',
       ],
-      sideImage: '/assets/img/FAQs.png',
     },
   ],
 };
@@ -35,53 +34,43 @@ const ivfFAQs = [
   {
     question: '1. What is IVF?',
     answer: [
-      'IVF (In Vitro Fertilization) therapy is a fertility treatment where a woman\'s eggs are fertilized by the sperm in a laboratory dish, making an embryo which is then transferred to the uterus for the potential pregnancy.'
+      'IVF (In Vitro Fertilization) is a fertility treatment where a woman’s eggs are fertilized by the sperm in a laboratory, which makes an embryo, and then it is transferred into the uterus for a potential pregnancy.'
     ]
   },
   {
     question: '2. What is the process of IVF?',
     answer: [
-      'IVF process is a series of procedures and it includes:'
-    ],
-    listItems: [
-      'Initial Consultation: The first step should be meeting up with an IVF specialist. Once all the information has been discussed, the specialist will suggest the best way to process it further.',
-      'Testing and Ovary Stimulation: On the first day of your cycle, the stimulation process begins. Unlike normal, you will be given medications for the next 8-14 days to encourage the follicles in your ovaries to produce more eggs.',
-      'Egg Retrieval: This process takes about 20-30 minutes while you are asleep. Your specialist will use the latest ultrasound technology to guide a needle into each ovary. However, the average number of eggs collected is 8-15.',
-      'Sperm Retrieval: Sperm Retrieval is done on the similar day as that of egg retrieval if you are a couple planning to use fresh sperm in an IVF treatment procedure. However, in case of donor eggs, the specialists will keep them ready in the lab.',
-      'Fertilization: These scientists will now use powerful microscopes to find the eggs from the fluid so that they can be taken out of it. However, then both sperm and eggs are fertilized in a dish in vitro.',
-      'Embryo Development: Fertilization of the egg and the sperm results in a zygote that further develops into an embryo. Then the embryo is placed in a special incubator.',
-      'Embryo Transfer: Here, the scientist prepares the embryo by placing it in a catheter (small tube). Then he will place the catheter through the cervix into the uterus.',
-      'Final Pregnancy Test: Two weeks post your embryo transfer, your specialist will conduct a blood test to measure your hCG hormone level. However when hCG is detected in your bloodstream, it is a positive sign of pregnancy.'
+      'IVF (In Vitro Fertilization) is a type of fertility treatment where eggs are combined with sperm outside of your body in a lab. Moreover, it is a process used by people who need help achieving pregnancy.'
     ]
   },
   {
     question: '3. Is IVF Painful?',
     answer: [
-      'Each patient is different therefore the process will differ from patient to patient. However, when it comes to IVF injections, they are easy and thin and do not require intervention. However, the egg collection process is done under light sedation which is also not much painful. At the time of embryo transfer, anaesthesia is not given because it is a 3-6 minutes process that hardly can cause pain.'
+      'Every patient is different; the process will differ from patient to patient. When it comes to IVF injections, they are thin and easy and do not need intervention. The reality is that discomfort is part of the experience, but the pain you experience throughout the IVF process is temporary and manageable.'
     ]
   },
   {
     question: '4. Is IVF Safe?',
     answer: [
-      'IVF is safe and not that painful because the injections used for IVF are injected and purified in subcutaneous form. The egg collection process is done under the light sedation that is not painful. However during the time of embryo transfer, anaesthesia is not given as it is a 3-6 minutes process that hardly causes any pain. If it is done under expert care, IVF can turn out to be an easy and safe procedure.'
+      'IVF is safe and not that painful since the injections used for IVF are injected and purified subcutaneously. The egg collection process is done under light sedation, which is not painful. Moreover, during the time of embryo transfer, anaesthesia is not given as it is a 3-6 minute process that hardly causes any pain.  If it is done under expert care, IVF can turn out to be a safe and easy procedure.'
     ]
   },
   {
     question: '5. What is the best time to get IVF treatment done?',
     answer: [
-      'The best time to undergo IVF treatment is when you are in good overall health and under the guidance of fertility specialists. Generally, this treatment is ideal for the women under the age of 35 as success rates are affected with age. Also take a note of any underlying medical conditions before even beginning. Also, you can consult your healthcare provider regarding it.'
+      'The best time to undergo IVF treatment is when you are in overall health and under the guidance of fertility specialists. Generally, this treatment is ideal for women under the age of 35, as the success rates are affected by age. Also, take note of any underlying medical conditions before even beginning. Moreover, you can consult your IVF specialist regarding it. '
     ]
   },
   {
     question: '13. Can older women or couples with infertility issues still get help?',
     answer: [
-      'Yes, with specialise in treating complex cases, advanced maternal age, recurrent failures, endometriosis, PCOS can be treated.'
+      'Yes, with specialisation in treating complex cases, advanced maternal age, recurrent failures, endometriosis, and PCOS can be treated.'
     ]
   },
   {
     question: '6. When should I opt for IVF treatment?',
     answer: [
-      'The IVF procedure can be prescribed in the cases where the other fertility treatments are failed or if the chances of a successful pregnancy are higher with the method than with any other treatment. However if there are no contraindications then the procedure can be carried out simply at the request of the couple by considering the precise time.'
+      'A couple can try IVF as many times as they want while keeping the treatment cost in mind.'
     ]
   },
   {
@@ -93,30 +82,30 @@ const ivfFAQs = [
   {
     question: '8. How do I know which fertility treatment is right for me?',
     answer: [
-      'Your treatment is decided after a detailed consultation, medical history, fertility assessment and diagnostic tests by our fertility specialists.'
+      'Your treatment is decided after a detailed consultation, medical history, fertility assessment, and diagnostic tests by our fertility specialists.'
     ]
   },
   {
     question: '9. How long does an IVF cycle take?',
     answer: [
-      'A complete IVF cycle usually takes 4-6 weeks which includes egg retrieval, fertilization and embryo transfer.'
+      'An IVF cycle usually takes 4-6 weeks, which will include egg retrieval, fertilization, and embryo transfer.'
     ]
   },
   {
     question: '10. What is IUI?',
     answer: [
-      'IUI simply stands for Intrauterine Insemination. It is simply a fertility treatment that can be done with or without the use of fertility drugs. However, the procedure involves the direct transfer of processed semen into the female uterus.'
+      'IUI stands for Intrauterine Insemination. It is a fertility treatment that can be done with or without the use of fertility drugs. Moreover, the procedure includes the direct transfer of processed semen into the female uterus.'
     ]
   },
   {
     question: '11. What is the difference between IVF and IUI?',
     answer: [
-      'Some of the major differences between IVF and IUI are:'
+      'Some of the main differences between IVF and IUI are:'
     ],
     listItems: [
-      'A single cycle of IUI has a success rate of 10-20% only whereas IVF has a success rate of about 65-72%.',
-      'The fertilization process in IVF is done outside the human body in a petri dish.',
-      'In the case of IUI, washed semen is instilled into the woman\'s uterus.'
+      'A single cycle of IUI has a success rate of 10-20% only, whereas IVF has a success rate of about 65-72%.',
+      'The fertilization process in IVF is done in a petri dish.',
+      'Washed semen is instilled into the woman’s uterus in the case of IUI.'
     ]
   }
 ];
@@ -125,25 +114,25 @@ const seedsOfInnocensFAQs = [
   {
     question: '1. What is Seeds of Innocens?',
     answer: [
-      'Seeds of Innocens is a leading IVF and fertility centre that is dedicated in helping couples to achieve parenthood through advanced reproductive technologies, expert doctors and personalised care.'
+      'Seeds of Innocens IVF is one of the best IVF centres that is dedicated to helping couples to achieve parenthood through advanced reproductive technologies, customized care, and expert doctors.'
     ]
   },
   {
     question: '2. What makes Seeds of Innocens different from other IVF centres?',
     answer: [
-      'We stand out for the state of the art labs, high success rates, patient-centric care, transparent processes and expert fertility specialists trained in advanced reproductive technologies.'
+      'We believe in state-of-the-art labs, patient-centric care, high success rates, and expert fertility specialists trained in advanced reproductive technologies.'
     ]
   },
   {
     question: '3. What is the success rate of IVF at Seeds of Innocens?',
     answer: [
-      'Success rates vary based on age, fertility condition and medical profile but Seeds of Innocens is well known for consistently high IVF success rates with evidence based treatments.'
+      'Success rates vary based on age, fertility condition, and medical profile, but Seeds of Innocens IVF is well-known for consistently high IVF success rates with evidence-based treatments.'
     ]
   },
   {
     question: '4. How can I book an appointment at Seeds of Innocens?',
     answer: [
-      'You can book easily through our helpline, website or visit your nearest Seeds of Innocens centre for a consultation.'
+      'You can easily book through our contact number, website, or you can visit your nearest Seeds of Innocens IVF centre for a consultation.'
     ]
   }
 ];

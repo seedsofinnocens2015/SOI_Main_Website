@@ -51,8 +51,8 @@ const heroData = {
         isCenterLayout: true,
       },
       {
-        bgImageUrl: '/assets/img/banner-2.png',
-        mobileBgImageUrl: '/assets/img/banner-2.png', // Add mobile image path here
+        bgImageUrl: '/assets/img/Banner-2.png',
+        mobileBgImageUrl: '/assets/img/Banner-2.png', // Add mobile image path here
         title: 'Experience the Bliss of Parenthood.',
         titleClass: 'cs_single_line_title',
         titleStyle: {

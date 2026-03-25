@@ -71,7 +71,7 @@ const BlogSection = ({ data }) => {
                     <Link href={post.postLink}>{post.title}</Link>
                   </h3>
                   <Link href={post.postLink} className="cs_blog_card_link">
-                    {post.btnText || "Explore Now-"}
+                    {post.btnText || "Explore Now"}
                   </Link>
                 </div>
               </article>
