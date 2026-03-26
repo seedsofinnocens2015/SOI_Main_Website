@@ -10,6 +10,10 @@ const inter = Inter({
   variable: '--body-font',
 });
 
+const isProduction = process.env.NODE_ENV === 'production';
+const basePath = isProduction ? '/new' : '';
+const faviconUrl = `${basePath}/favicon.ico`;
+
 export const metadata = {
   title: {
     absolute: '',
@@ -24,10 +28,10 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: faviconUrl, sizes: 'any' },
     ],
-    shortcut: ['/favicon.ico'],
-    apple: ['/favicon.ico'],
+    shortcut: [faviconUrl],
+    apple: [faviconUrl],
   },
 };
 

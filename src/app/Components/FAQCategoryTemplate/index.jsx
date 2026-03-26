@@ -7,10 +7,10 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
 import FAQAccordion from '@/app/Components/FAQAccordion';
 
-export default function FAQCategoryTemplate({ pageTitle, heading, description, contentHeading, contentParagraphs, faqs }) {
+export default function FAQCategoryTemplate({ pageTitle, heading, description, contentHeading, contentParagraphs, faqs, uspTitle }) {
   const router = useRouter();
 
-  const headingData = { title: pageTitle };
+  const headingData = { title: pageTitle, uspTitle };
 
   const pageContentData = {
     sections: [

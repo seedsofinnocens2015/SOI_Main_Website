@@ -59,7 +59,7 @@ const PageHeading = ({ data }) => {
                 </>
               )}
             </h2>
-            
+            {/* Stats Grid */}
             <div className="cs_header_stats_grid">
               <div className="cs_header_stat_item">               
                 <div className="cs_stat_number cs_stat_1">

@@ -1,51 +1,88 @@
 {
   "female": {
     "pageTitle": "Female FAQs",
-    "heading": "Female Frequently Asked Questions",
+    "heading": "Female Fertility and Reproductive Health",
     "description": "Answers related to ovarian reserve, menstrual cycle, egg quality, diagnosis and treatment planning.",
     "contentHeading": "Understanding Female Fertility",
-    "contentParagraphs": [
-      "Female fertility depends on multiple factors such as ovulation quality, hormonal balance, age and uterine health.",
-      "Early diagnosis helps choose the right treatment pathway and improves outcomes with less stress and better planning."
-    ],
+    "uspTitle": "Commonly Asked Questions <span class=\"cs_accent_color\">About Female Fertility</span>",
+    
     "faqs": [
       {
-        "question": "What tests are done to assess female fertility?",
+        "question": "1. What is Female Infertility?",
         "answer": [
-          "Common tests include AMH, AFC scan, thyroid profile, prolactin and ovulation tracking."
+          "Infertility is a problem which means that you find it difficult to conceive. However, if a woman is over 35 and keeps facing miscarriages or not being able to conceive is also called infertility. Female Infertility can result from physical issues, hormone problems and lifestyle or environmental factors."
         ]
       },
       {
-        "question": "Can irregular periods affect conception?",
+        "question": "2. What are the causes of Female Infertility?",
         "answer": [
-          "Yes, irregular cycles can indicate ovulation issues and may reduce chances of natural conception."
+          "Possibly, there are several causes of infertility. Moreover, it can be difficult to find out the exact problem while some couples faces unexplained infertility and some of the possible reasons for female infertility are:",
+          "Problems with Fallopian Tubes: One of the most common causes of tubal factor infertility is pelvic inflammatory disease which is PID. Endometriosis can also cause scarring of your fallopian tubes.",
+          "Problems with your Uterus: This includes fibroids or adhesions inside the cavity of the uterus.",
+          "Problems with the quality and egg count:  You’ll suffer early menopause or you are born without eggs or even your egg count is low, in addition some of the eggs will also have the wrong number of chromosomes and be unable to grow into a healthy baby."
         ]
       },
       {
-        "question": "Does age reduce egg quality?",
+        "question": "3. What are the symptoms of Female Infertility?",
         "answer": [
-          "Egg quality and quantity generally decline with age, especially after 35 years."
+          "The main symptom of infertility is an inability to get pregnant. However, other symptoms includes:",
+          "Pain during intercourse",
+          "Painful periods or menstrual periods",
+          "Hormonal imbalances that can affect changes in skin, hair or even weight."
         ]
       },
       {
-        "question": "Is PCOS treatable for pregnancy planning?",
+        "question": "4. Can I get pregnant with Low AMH?",
         "answer": [
-          "Yes, with lifestyle changes, medicines and fertility support, many women with PCOS conceive successfully."
+          "Yes, you can get pregnant with low AMH (Anti-Mullerian Hormone). While low AMH indicates a reduced ovarian reserve (fewer eggs) and it can make the conception more harder and it does not mean that you cannot have a child since pregnancy is possible through the natural conception, IVF or IUI with an age of being a main factor in egg quality."
         ]
       },
       {
-        "question": "When should I consult a fertility specialist?",
+        "question": "5. What is the best AMH level for pregnancy?",
         "answer": [
-          "If under 35 and trying for 12 months, or over 35 and trying for 6 months, consult a specialist."
+          "Since there is no ideal number, however, an AMH level for the pregnancy above 1.0 ng/mL is usually considered good. Moreover, many women were also able to conceive with lower levels."
+        ]
+      },
+      {
+        "question": "6. Can female infertility be prevented?",
+        "answer": [
+          "You cannot predict or prevent female infertility. Furthermore, you might be able to control some of the risk factors which will contribute to infertility with a bit of lifestyle changes."
+        ]
+      },
+      {
+        "question": "7. What makes a woman more fertile?",
+        "answer": [
+          "Several factors that affect fertility such as congenital anomalies and medical conditions are beyond your control."
+        ]
+      },
+      {
+        "question": "8. What can I expect if I have infertility?",
+        "answer": [
+          "The outlook for female infertility relies on the individual and the underlying cause of infertility. However, the outcome is positive when the cause of infertility is due to ovulatory problems or structural abnormalities where the treatment is possible."
+        ]
+      },
+      {
+        "question": "9. What are some food items that increase fertility in females?",
+        "answer": [
+          "Food with vitamin C like lemon and oranges will help with iron absorption.",
+          "Iron-rich foods like lentils, beans and whole grains that lower the risk of infertility from ovulatory dysfunction.",
+          "Incorporating more vegetable protein from the chickpeas, lentils, green peas instead of meat-based proteins."
+        ]
+      },
+      {
+        "question": "10. When should you consult your fertility expert?",
+        "answer": [
+          "If you are under 35 and have been trying to pregnant for one year or over 35 and trying for even six months (three months if you are over 40)"
         ]
       }
     ]
   },
   "male": {
     "pageTitle": "Male FAQs",
-    "heading": "Male Frequently Asked Questions",
+    "heading": "Male Fertility and Reproductive Health",
     "description": "Common questions about sperm health, semen analysis, hormonal factors, and male fertility treatments.",
     "contentHeading": "Male Fertility and Reproductive Health",
+    "uspTitle": "Commonly Asked Questions <span class=\"cs_accent_color\">About Male Fertility</span>",
     "contentParagraphs": [
       "Male factors contribute to a significant share of infertility cases, and timely evaluation is very important.",
       "A semen analysis and specialist consultation can quickly identify treatable causes and improve outcomes."
@@ -85,9 +122,10 @@
   },
   "genetic": {
     "pageTitle": "Genetic FAQs",
-    "heading": "Genetic Frequently Asked Questions",
+    "heading": "Genetic in Fertility Treatment",
     "description": "Clarifications about genetic risk, screening options, PGT testing and hereditary condition prevention.",
     "contentHeading": "Genetics in Fertility Treatment",
+    "uspTitle": "Commonly Asked Questions <span class=\"cs_accent_color\">About Genetic in Fertility Treatment</span>",
     "contentParagraphs": [
       "Genetic evaluation supports safer and better-informed fertility decisions, especially in recurrent loss or family history cases.",
       "Tests such as karyotyping and PGT can help reduce transfer of specific inherited conditions in selected cases."
@@ -127,9 +165,10 @@
   },
   "learning": {
     "pageTitle": "Learning FAQs",
-    "heading": "Learning Frequently Asked Questions",
+    "heading": "Learn the Fertility Journey Step-by-Step",
     "description": "Basic educational FAQs on fertility treatment steps, timelines, preparation and patient journey.",
     "contentHeading": "Learn the Fertility Journey Step-by-Step",
+    "uspTitle": "Commonly Asked Questions About the Fertility Journey Step-by-Step",
     "contentParagraphs": [
       "Understanding each step of treatment helps reduce anxiety and improves treatment readiness for couples.",
       "From first consultation to embryo transfer, informed patients usually feel more confident and involved."

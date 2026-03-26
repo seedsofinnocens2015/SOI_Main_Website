@@ -2279,6 +2279,11 @@ label {
   display: block;
 }
 
+/* Service pages: body copy left-aligned; headings keep explicit center via .cs_ivf_content_heading */
+.cs_service_page_content .cs_ivf_content_wrapper {
+  text-align: left;
+}
+
 .cs_ivf_content_image_wrapper {
   margin-bottom: 50px;
   width: 100%;
@@ -2402,7 +2407,8 @@ label {
   text-align: center;
   font-family: var(--heading-font);
   line-height: 1.2;
-  margin-bottom: 24px;
+  margin-top: 30px;
+  margin-bottom: 38px;
 
   .cs_heading_accent_start {
     color: #df3655;
@@ -2422,6 +2428,14 @@ label {
     font-size: 22px;
     margin-bottom: 16px;
   }
+}
+
+.cs_service_page_content .cs_ivf_content_section {
+  margin-bottom: 56px;
+}
+
+.cs_service_page_content .cs_ivf_content_section:last-child {
+  margin-bottom: 0;
 }
 
 /* Blog single page: title half #df3655 / half black, content centered (same as doctor page) */
@@ -2507,7 +2521,25 @@ label {
 .cs_service_page_content .cs_ivf_content_paragraph,
 .cs_service_page_content .cs_ivf_content_list,
 .cs_service_page_content .cs_ivf_content_list_item {
-  text-align: center;
+  text-align: left;
+}
+
+.cs_service_page_content .cs_ivf_content_paragraph {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+
+.cs_service_page_content .cs_ivf_content_paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Service pages: list boxes (ivfContentData listItems) — align row + box content left */
+.cs_service_page_content .cs_list_boxes.row {
+  justify-content: flex-start;
+}
+
+.cs_service_page_content .cs_list_box {
+  justify-content: flex-start;
 }
 
 .cs_service_page_content .cs_ivf_content_list {
@@ -2522,7 +2554,7 @@ label {
 
 .cs_service_page_content .cs_ivf_content_step_plain {
   margin-bottom: 24px;
-  text-align: center;
+  text-align: left;
 }
 
 .cs_service_page_content .cs_ivf_content_step_plain .cs_ivf_step_plain_title {
@@ -2530,7 +2562,7 @@ label {
   font-weight: 700;
   color: #000000;
   margin-bottom: 8px;
-  text-align: center;
+  text-align: left;
 }
 
 .cs_service_page_content .cs_ivf_content_step_plain .cs_ivf_step_plain_description {
@@ -2538,7 +2570,7 @@ label {
   line-height: 1.7;
   color: var(--body-color);
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .cs_ivf_content_paragraph {
@@ -2615,7 +2647,7 @@ label {
 }
 .cs_list_box {
   background: var(--white);
-  border: 1px solid var(--border-color);
+  // border: 1px solid var(--border-color);
   // border-left: 4px solid var(--accent-color);
   border-radius: 12px;
   padding: 14px 16px;
@@ -2626,11 +2658,11 @@ label {
   height: 100%;
   min-height: 52px;
   transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   &:hover {
-    box-shadow: 0 4px 14px rgba(223, 54, 85, 0.12);
-    border-left-color: var(--accent-color);
-    border-color: rgba(223, 54, 85, 0.2);
+    // box-shadow: 0 4px 14px rgba(223, 54, 85, 0.12);
+    // border-left-color: var(--accent-color);
+    // border-color: rgba(223, 54, 85, 0.2);
   }
   .cs_list_box_text a {
     color: inherit;
@@ -2669,6 +2701,59 @@ label {
   @media (max-width: 575px) {
     font-size: 13px;
     line-height: 1.45;
+  }
+}
+
+@media (max-width: 575px) {
+  /* Mobile: list boxes ko left/right space efficiently use karna */
+  .cs_list_boxes {
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  .cs_list_boxes.row {
+    justify-content: flex-start;
+    gap: 14px 10px;
+    row-gap: 14px;
+    column-gap: 10px;
+  }
+
+  .cs_list_box {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 0px;
+    min-height: 48px;
+    gap: 10px;
+    flex-wrap: nowrap;
+    min-width: 400px;
+  }
+
+  .cs_list_box_icon {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    min-height: 22px;
+    font-size: 11px;
+  }
+
+  .cs_list_box_text {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    min-width: 0;
+    font-size: 12px;
+    flex: 1;
+    display: block;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .cs_list_box_text a {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    display: inline;
+    max-width: 100%;
   }
 }
 
@@ -3314,7 +3399,7 @@ label {
     }
   }
   .cs_treatment_procedure_number {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
@@ -3324,7 +3409,7 @@ label {
     border-radius: 50%;
     font-weight: 700;
     font-size: 18px;
-    margin-bottom: 12px;
+    margin: 0 auto 12px;
   }
   .cs_treatment_procedure_title {
     font-size: 16px;
@@ -3352,6 +3437,7 @@ label {
 /* Treatment page: Cost CTA button */
 .cs_treatment_cost_cta {
   margin-top: 24px;
+  text-align: center;
   .cs_btn {
     text-decoration: none;
     display: inline-block;
@@ -3648,7 +3734,7 @@ label {
     padding: 0; // Padding handled by containers
     margin-top: 80px;
     background-size: cover !important;
-    background-position: center top !important;
+    background-position: 45% top !important;
     background-repeat: no-repeat !important;
     width: 100%;
     height: auto;
@@ -3675,12 +3761,13 @@ label {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       width: 100%;
+      padding-top: 0;
     }
 
     @media (max-width: 575px) {
-      min-height: 320px; // Match background image height
+      min-height: 280px; // Keep compact and push content up
       margin-bottom: 20px;
       padding: 20px;
     }
@@ -3703,12 +3790,15 @@ label {
         margin-bottom: 60px;
       }
       @media (max-width: 991px) {
-        font-size: 32px;
-        margin-bottom: 40px;
+        font-size: 28px;
+        margin-top: -8px;
+        margin-bottom: 14px;
       }
       @media (max-width: 575px) {
         font-size: 24px;
-        margin-bottom: 30px;
+        line-height: 1.15;
+        margin-top: -12px;
+        margin-bottom: 12px;
       }
     }
 
@@ -3719,18 +3809,31 @@ label {
       justify-content: start; 
       
       @media (max-width: 991px) {
-        justify-content: center;
-        gap: 20px 40px;
-      }
-
-      @media (max-width: 575px) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
         width: 100%;
-        max-width: 400px;
+        max-width: 100%;
+        justify-content: center;
       }
 
       .cs_header_stat_item {
+        @media (max-width: 991px) {
+          min-width: 0;
+          text-align: center;
+        }
+
+        @media (max-width: 575px) {
+          &:nth-child(2) {
+            margin-left: 30px;
+          }
+          &:nth-child(3) {
+            margin-left: 20px;
+          }
+          &:nth-child(4) {
+            margin-left: 20px;
+          }
+        }
+
         .cs_stat_number {
           font-size: 34px;
           font-weight: 800;
@@ -3751,8 +3854,23 @@ label {
             margin-top: -5px;
           }
 
+          @media (max-width: 991px) {
+            font-size: 24px;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .cs_stat_icon {
+              margin-right: 4px;
+              width: 22px;
+              height: 22px;
+              margin-top: 0;
+            }
+          }
+
           @media (max-width: 767px) {
-            font-size: 28px;
+            font-size: 22px;
           }
         }
         .cs_stat_text {
@@ -3760,8 +3878,8 @@ label {
           line-height: 1.4;
           font-weight: 500;
           color: #030303;
-          @media (max-width: 767px) {
-            font-size: 12px;
+          @media (max-width: 991px) {
+            display: none;
           }
         }
       }
@@ -3778,14 +3896,18 @@ label {
     transition: all 0.3s ease;
 
     @media (max-width: 991px) {
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      padding: 18px;
+      transform: translateY(95px);
     }
     
     @media (max-width: 575px) {
-      margin-top: 10px;
-      margin-bottom: 30px;
+      margin-top: 0;
+      margin-bottom: 20px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      transform: translateY(250px);
     }
 
     .cs_header_form_title {
@@ -3845,6 +3967,58 @@ label {
       border: none;
       box-shadow: 0 4px 10px rgba(223, 54, 85, 0.3);
     }
+
+    @media (max-width: 991px) {
+      .cs_header_form_title {
+        font-size: 18px;
+        margin-bottom: 12px;
+        letter-spacing: 0.2px;
+      }
+
+      .cs_form_group {
+        margin-bottom: 10px;
+
+        .cs_form_field {
+          padding: 10px 12px;
+          font-size: 12px;
+        }
+      }
+
+      .cs_form_row {
+        gap: 10px;
+        margin-bottom: 14px;
+
+        .cs_form_col {
+          .cs_form_label_small {
+            font-size: 10px;
+            margin-bottom: 4px;
+          }
+
+          .cs_form_field {
+            padding: 6px 8px;
+            font-size: 12px;
+            height: 34px;
+          }
+        }
+      }
+
+      .cs_header_form_btn {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 26px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cs_header_form_title {
+        font-size: 16px;
+      }
+
+      .cs_header_form_btn {
+        padding: 9px;
+        font-size: 13px;
+      }
+    }
   }
 
   .breadcrumb {
@@ -3884,6 +4058,14 @@ label {
     }
   }
 }
+
+@media (max-width: 575px) {
+  /* PageHeading ke translated form ki wajah se jo content mobile me overlap hota hai, uske liye next block ko clear space */
+  .cs_page_heading + *:not(.cs_best_ivf_section) {
+    margin-top: 150px;
+  }
+}
+
 
 .cs_error_content {
   width: 100%;
