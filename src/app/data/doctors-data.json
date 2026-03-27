@@ -296,52 +296,6 @@
     "newSlug": "dr-disha-datta-choudhury-ivf-specialist"
   },
   {
-    "slug": "dr-divya-shivanand",
-    "name": "Dr. Divya Shivanand",
-    "subtitle": "IVF Specialist",
-    "image": "/assets/img/Doctors/divya.jpg",
-    "description": [
-      "Highly skilled and compassionate Gynecologist and IVF Consultant with over 4+ of experience in obstetrics, gynaecology and reproductive health, infertility treatment, and advanced gynecological care. Expertise in managing complex cases of infertility, performing ART (Assisted Reproductive Technology) procedures, and delivering evidence-based treatments tailored to patient needs. Committed to providing holistic care and achieving exceptional patient outcomes."
-    ],
-    "location": "Lucknow-Uttarpradesh",
-    "email": "drdivyashivanand@seedsofinnocens.com",
-    "qualification": "MBBS, DGO, DNB",
-    "specialization": "IVF, Personalized Fertility Treatments, Patient Counseling",
-    "experience": "4+ years",
-    "workExperience": [
-      "2020- Consultant obstetrician and gynaecologist at Government Hospital Hebri, Udupi, Karnataka - Skilled in obstetric procedures, Gynec procedures, Family planning, Antenatal care, High-risk pregnancy",
-      "2021 - Senior Resident at Sakra World Hospital, Bangalore, Karnataka - High-risk pregnancy management, OHSS management, Obs and Gyne procedures",
-      "2024- Clinical Associate in obstetrics and Gynecology at ApolloMedic Superspeciality hospital, Lucknow - Management of high-risk pregnancy, Laparoscopic gynaecology procedures, obs and gyne procedures"
-    ],
-    "education": [
-      "MBBS at Basaveshwara Medical college and hospital and Research centre, Chitradurga, Karnataka (2011-2017)",
-      "Diploma in Obstetrics and Gynecology (DGO) Vijayanagar Institute of Medical Sciences ( 2018 - 2020 )",
-      "Diplomate of the National Board at Holy Family Hospital, New Delhi (2022-2024)",
-      "MRCOG PART 1",
-      "Fellowship in minimal access surgery (FMAS) at AMASI"
-    ],
-    "awards": [],
-    "progressBars": [
-      {
-        "label": "IVF Procedures",
-        "percentage": 84
-      },
-      {
-        "label": "Patient Satisfaction",
-        "percentage": 91
-      },
-      {
-        "label": "Success Rate",
-        "percentage": 74
-      },
-      {
-        "label": "Clinical Expertise",
-        "percentage": 82
-      }
-    ],
-    "newSlug": "dr-divya-shivanand-ivf-specialist"
-  },
-  {
     "slug": "dr-aiman-akram",
     "name": "Dr. Aiman Akram",
     "subtitle": "IVF Specialist",
@@ -835,7 +789,7 @@
     "slug": "dr-vinod-kumar-b",
     "name": "Dr. Vinod Kumar B",
     "subtitle": "IVF Specialist",
-    "image": "/assets/img/Doctors/vinod.jpg",
+    "image": "/assets/img/Doctors/vinod.png",
     "description": [
       "Compassionate Obstetric, Gynecologist, and laparoscopic surgeon offering 7 years of background in developing, assessing, and creating treatment plans, accurately recording progress notes, and providing patient care and counseling. Kind-hearted and friendly professional."
     ],

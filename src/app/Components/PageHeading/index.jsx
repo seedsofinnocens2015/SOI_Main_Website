@@ -63,25 +63,25 @@ const PageHeading = ({ data }) => {
             <div className="cs_header_stats_grid">
               <div className="cs_header_stat_item">               
                 <div className="cs_stat_number cs_stat_1">
-                  <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="Healthy Babies" className="cs_stat_icon" width={24} height={24} loading="eager" /> 20,000+
+                  <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="Healthy Babies+" className="cs_stat_icon cs_stat_1" width={24} height={24} loading="eager" /> 20,000+
                 </div>
                 <div className="cs_stat_text">Healthy Babies, Countless <br /> Smiles</div>
               </div>
               <div className="cs_header_stat_item">
                 <div className="cs_stat_number cs_stat_2">
-                  <Image src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="IVF Centres" className="cs_stat_icon" width={24} height={24} loading="eager" /> 35+
+                  <Image src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="IVF Centres" className="cs_stat_icon cs_stat_2" width={24} height={24} loading="eager" /> 35+
                 </div>
                 <div className="cs_stat_text">IVF Centres Spreading <br /> Parenthood Joy</div>
               </div>
               <div className="cs_header_stat_item">
                 <div className="cs_stat_number cs_stat_3">
-                  <Image src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Success Rate" className="cs_stat_icon" width={24} height={24} loading="eager" /> 78%
+                  <Image src={getAssetPathClient("/assets/img/icons/Success Rate.svg")} alt="Success Rate" className="cs_stat_icon cs_stat_3" width={24} height={24} loading="eager" /> 78%
                 </div>
                 <div className="cs_stat_text">Success Rate Bringing <br /> Hope to Families</div>
               </div>
               <div className="cs_header_stat_item">
                 <div className="cs_stat_number cs_stat_4">
-                  <Image src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="Dedicated Fertility" className="cs_stat_icon" width={24} height={24} loading="eager" /> 30+
+                  <Image src={getAssetPathClient("/assets/img/icons/Dedicated Fertility.svg")} alt="Dedicated Fertility" className="cs_stat_icon cs_stat_4" width={24} height={24} loading="eager" /> 30+
                 </div>
                 <div className="cs_stat_text">Dedicated Fertility <br /> Specialists</div>
               </div>

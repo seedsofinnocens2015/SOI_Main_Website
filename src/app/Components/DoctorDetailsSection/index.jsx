@@ -96,7 +96,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
             </div>
 
             {/* Performance Statistics */}
-            {data.progressBars && data.progressBars.length > 0 && (
+            {/* {data.progressBars && data.progressBars.length > 0 && (
               <div className="cs_performance_stats">
                 <AccentHeading level={3} className="cs_section_title_small">Performance Statistics</AccentHeading>
                 <div className="cs_progress_bar_wrapper">
@@ -116,7 +116,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* Work Experience */}
             {data.workExperience && (
