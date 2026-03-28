@@ -3886,162 +3886,84 @@
   },
   "couple-carrier-screening": {
     "headerImage": "/assets/img/Services/CouplesGenetic.png",
-    "uspTitle": "Couple   <span class=\"cs_accent_color\">Carrier Screening</span>",
-    "title": "Couple Carrier Screening",
+    "uspTitle": "Dummy <span class=\"cs_accent_color\">Content</span>",
+    "title": "Dummy Title",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
     "benefitImages": [
-      "/assets/img/genetic.jpg",
       "/assets/img/genetic.jpg"
     ],
     "ivfContentData": {
       "sections": [
         {
-          "heading": "Couple Carrier Screening: Ensuring a Healthy Future",
+          "heading": "Couple Carrier Screening",
           "paragraphs": [
-            "Planning a family is very exciting but does not come easy. One of the most critical steps that the couple can make before conception is Carrier Screening, which is also known as a genetic test, identifying whether or not prospective parents carry genes that can cause conditions inherited in them and affect the health of the child. Given the advancements in reproductive genetics, screening has become an important part of family planning; this makes it possible for couples to make informed decisions and reduce the risk of genetic disorders to their offspring."
-          ],
-          "sideImage": "/assets/img/Couple Carrier Screening.webp"
-        },
-        {
-          "heading": "What is Couple Carrier Screening?",
-          "paragraphs": [
-            "Carrier screening is the genetic test developed to detect mutations in genes causing inherited disorders. Though many people are the carriers of genetic conditions without showing any symptoms, it occurs that they would carry a mutation within the same gene when both partners of a couple are the carriers.",
-            "This screening helps in identifying conditions such as:"
+            "The couple decided to undergo genetic testing before starting their family because they wanted to find out about their potential risk of passing genetic disorders to their children. Genetic testing is available to couples who are planning to start a family or even pregnant. Carrier screening has gained vital importance in family planning since it helps to identify genetic conditions that can be passed on to children. Carrier screening represents a genetic test that identifies genetic mutations that lead to hereditary diseases. Though many people are carriers of genetic conditions without showing any symptoms, it is possible that they will carry a mutation within the same gene when both partners of a couple are carriers. The screening procedure will identify"
           ],
           "listItems": [
             "Cystic fibrosis",
             "Sickle cell anemia",
-            "Tay-Sachs disease",
+            "Tay-sachs disease",
             "Thalassemia",
-            "Spinal muscular atrophy"
+            "Spinal muscular atrophy."
           ]
         },
         {
-          "heading": "Benefits of Screening",
+          "heading": "Who qualifies as a health condition carrier?",
           "paragraphs": [
-            "By undergoing this test, couples can determine their risk of having a child affected by a genetic disorder and explore reproductive options to ensure a healthy pregnancy."
+            "A person who has carrier status will probably transmit a gene variant to their children who share their biological descent. You receive one genetic copy from each parent, which results in two genetic copies for every gene. A carrier has only one copy of the gene variant that causes the medical condition. Your other normal gene cancels out the gene variant, which results in no health symptoms for you.",
+            "Most carrier screenings now test for conditions that follow an autosomal recessive inheritance pattern. When both parents carry the condition, the child can inherit any of these particular health conditions. Many people carry autosomal recessive conditions but don’t know it. The family does not have any documented cases of the health condition that exists.",
+            "Female carriers with two X chromosomes can transmit an X-linked disorder to their offspring. Most carriers experience fewer symptoms than their relatives who have both an X chromosome with the variant and a Y chromosome. Carrier screening panels include various X-linked disorders, which contain fragile X syndrome as one of their components."
           ]
         },
         {
-          "heading": "Who Should Consider Couple Carrier Screening?",
+          "heading": "WUnderstanding Your Carrier Screening Results",
           "paragraphs": [
-            "While Couple Carrier Screening is beneficial for all couples, it is especially recommended for:"
-          ],
-          "listItems": [
-            "Couples with a family history of genetic disorders.",
-            "Couples undergoing assisted reproductive technologies like IVF",
-            "Those who have repeated miscarriages."
+            "A carrier screening test result will display one of two results for the different diseases or genes:",
+            "Negative: For tested conditions, no carrier status detected.",
+            "Positive: In this case, a partner should undergo testing, and genetic counselling is advised.",
+            "It is crucial to note that a negative result will reduce but does not eradicate genetic risks, since not all genes are known to be testable. Positive results do not mean that you are sick since most carriers are completely healthy.",
+            "The main reason for testing is to help in reproductive planning, especially when both of the partners carry the same recessive gene.",
+            "However, if both partners are carriers, then genetic counsellors usually discuss the following probabilities with each pregnancy."
           ]
         },
         {
-          "heading": "Early Screening Benefits",
+          "heading": "Reproductive Options When Both Partners Are Carriers",
           "paragraphs": [
-            "Early screening helps couples to be proactive towards a successful and healthy pregnancy."
+            "If both of the partners happen to be carriers of a similar condition, they will still go ahead with the family planning. However, at Seeds of Innocens IVF, our IVF specialists offer customized guidance and support at every stage to eliminate any genetic disease."
           ]
         },
         {
-          "heading": "How is Couple Carrier Screening Done?",
+          "heading": "How to Prepare for Couple Carrier Screening",
           "paragraphs": [
-            "The screening process is simple and involves:"
-          ],
-          "listItems": [
-            "Sample Collection: A blood or saliva sample is drawn from both partners.",
-            "Genetic Testing: The test sample is forwarded to the laboratory to identify any gene mutations through genetic testing.",
-            "Results & Counselling – A genetic counsellor interprets results and discusses risk and reproductive choices."
+            "There is no special preparation required. Follow any instructions for the blood draw, and both partners are required to be tested for the meaningful couple screening."
           ]
         },
         {
-          "heading": "Reproductive Options",
+          "heading": "Understanding Couple Carrier Screening Results",
           "paragraphs": [
-            "If the couple is both carriers of the same genetic disorder, they may consider preimplantation genetic diagnosis during IVF, a donor egg or sperm, or other assisted reproductive techniques to prevent passing the disorder to their child."
+            "If only one or neither partner is a carrier for a condition, the risk to offspring is low. If both are carriers of the same condition, there is an enhanced risk, our counselors explain options like PGD in IVF or donor gametes."
           ]
         },
         {
-          "heading": "Couple Carrier Screening Test Cost",
+          "heading": "What are the risks of carrier screening?",
           "paragraphs": [
-            "The Couple Carrier Screening test cost varies based on the number of conditions screened, the types of tests, and the clinic or laboratory performing the analysis. In India, it usually lies in the range from ₹10,000 to ₹50,000. Complete panels can involve more than one condition and hence may be more expensive but offer a very detailed risk assessment.",
-            "Seeds of Innocens provides the latest Couple Carrier Screening at competitive prices. This ensures that couples get the most accurate and reliable results for planning their family."
+            "During a blood draw, you might feel a poke or have some minor soreness afterward. But before having carrier screening, you can speak with your healthcare provider about the benefits and limitations of this test. Also, this can include the possibility of finding out that you may have a mild form of the condition yourself in spite of just being a carrier. Some people also experience anxiety or stress over having carrier screening."
           ]
         },
         {
-          "heading": "Finding a Carrier Screening Test Near Me",
+          "heading": "What do the results mean?",
           "paragraphs": [
-            "If you seek to obtain a Carrier Screening test near me, it is true to look for a reliable fertility clinic or genetic testing centre. Seeds of Innocens offers professional genetic screening services with expert consultancy. Our advanced facilities for genetic testing along with skilled counsellors ensure you get the best advice at each step on your way through reproductive life."
+            "A negative result means that the test didn’t detect any known genetic variants in your body. However, in this case, your children might have a low risk of inheriting certain genetic diseases. Moreover, carrier screening cannot detect 100% of carriers for several conditions. A negative result does not guarantee that your children will be free of all genetic health conditions. However, a positive result on your carrier screening means that you are a carrier for one or more genetic health conditions. "
           ]
         },
         {
-          "heading": "Benefits of Couple Carrier Screening",
+          "heading": "When will I get to know the results of carrier screening?",
           "paragraphs": [
-            "Couple Carrier Screening offers numerous advantages:"
-          ],
-          "listItems": [
-            "Informed Decision-Making – Knowing your genetic status helps you make informed choices about pregnancy.",
-            "Reduced Risk of Genetic Disorders – Couples can take preventive measures if they are at risk.",
-            "Personalized Reproductive Options – Offers alternatives like PGD, donor eggs, or sperm.",
-            "Peace of Mind – Reduces uncertainty and enhances confidence in pregnancy planning."
+            "Genetic testing generally takes several days to a few weeks to complete. Also, you can ask your healthcare provider when you can expect your results."
           ]
         }
       ]
-    },
-    "diagnosticContent": {
-      "purpose": {
-        "paragraphs": [
-          "Couple carrier screening is done to find out if both partners carry gene changes for the same inherited condition, which could affect their children."
-        ],
-        "listItems": [
-          "Identify carrier status for inherited disorders",
-          "Assess risk of having a child with a genetic condition",
-          "Support informed family planning and reproductive options"
-        ]
-      },
-      "whatItChecks": {
-        "paragraphs": [
-          "Screening typically checks for carrier status for conditions such as:"
-        ],
-        "listItems": [
-          "Cystic fibrosis",
-          "Sickle cell anemia",
-          "Tay-Sachs disease",
-          "Thalassemia",
-          "Spinal muscular atrophy",
-          "Other panel-specific conditions"
-        ]
-      },
-      "howPerformed": {
-        "paragraphs": [
-          "The process is straightforward:"
-        ],
-        "steps": [
-          {
-            "title": "Sample collection",
-            "description": "Blood or saliva is collected from both partners."
-          },
-          {
-            "title": "Genetic testing",
-            "description": "Samples are analyzed in the lab for gene mutations linked to inherited disorders."
-          },
-          {
-            "title": "Results and counseling",
-            "description": "A genetic counselor interprets results and discusses risk and options (e.g. PGD, prenatal testing)."
-          }
-        ]
-      },
-      "preparation": {
-        "paragraphs": [
-          "Usually no special preparation. For blood draw, follow any instructions from the lab. Both partners need to be tested for meaningful couple screening."
-        ]
-      },
-      "understandingResults": {
-        "paragraphs": [
-          "If only one or neither partner is a carrier for a condition, the risk to offspring is low. If both are carriers of the same condition, there is increased risk; our counselors explain options such as PGD during IVF, prenatal testing, or donor gametes."
-        ]
-      },
-      "cost": {
-        "paragraphs": [
-          "Couple Carrier Screening test cost varies with the number of conditions screened and the panel. In India it often ranges from ₹10,000 to ₹50,000. Contact us for a quote and to book an appointment."
-        ]
-      }
     }
   },
   "pgt-m": {

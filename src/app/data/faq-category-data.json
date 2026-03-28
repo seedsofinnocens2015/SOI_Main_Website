@@ -5,7 +5,6 @@
     "description": "Answers related to ovarian reserve, menstrual cycle, egg quality, diagnosis and treatment planning.",
     "contentHeading": "Understanding Female Fertility",
     "uspTitle": "Commonly Asked Questions <span class=\"cs_accent_color\">About Female Fertility</span>",
-    
     "faqs": [
       {
         "question": "1. What is Female Infertility?",
@@ -83,39 +82,74 @@
     "description": "Common questions about sperm health, semen analysis, hormonal factors, and male fertility treatments.",
     "contentHeading": "Male Fertility and Reproductive Health",
     "uspTitle": "Commonly Asked Questions <span class=\"cs_accent_color\">About Male Fertility</span>",
-    "contentParagraphs": [
-      "Male factors contribute to a significant share of infertility cases, and timely evaluation is very important.",
-      "A semen analysis and specialist consultation can quickly identify treatable causes and improve outcomes."
-    ],
     "faqs": [
       {
-        "question": "What is semen analysis and why is it important?",
+        "question": "1. What is Male Infertility?",
         "answer": [
-          "It evaluates sperm count, motility and morphology to assess fertility potential."
+          "Male infertility is a reproductive system disease that affects 7-10% of men, contributing to 40- 50% of the infertility cases. Also, it is characterized by an inability to conceive due to ejaculation problems and low sperm count."
         ]
       },
       {
-        "question": "Can lifestyle affect sperm quality?",
+        "question": "2. How long does it take for lifestyle changes to improve sperm health?",
         "answer": [
-          "Yes, smoking, alcohol, obesity, stress and poor sleep can negatively impact sperm parameters."
+          "Sperm can take about 2-3 months to fully develop. However, positive changes in exercise, diet, and lifestyle habits can begin to improve sperm quality within that time."
         ]
       },
       {
-        "question": "How long does sperm improvement take?",
+        "question": "3. Can cycling affect male fertility?",
         "answer": [
-          "Sperm production cycle takes about 70-90 days, so improvements are usually seen after 2-3 months."
+          "Hard seats and long hours of cycling can enhance scrotal temperature and pressure that can affect sperm over time. Taking breaks and using padded seats can help."
         ]
       },
       {
-        "question": "Is low sperm count always permanent?",
+        "question": "4. Are supplements like zinc or folic acid helpful for male fertility?",
         "answer": [
-          "Not always. Many causes are treatable with medicine, lifestyle changes or minor procedures."
+          "Yes, nutrients such as folic acid, zinc, and vitamins C and E are linked to better sperm health. Moreover, you can also consult your doctor before starting any supplements."
         ]
       },
       {
-        "question": "When is advanced treatment like ICSI advised?",
+        "question": "5. Does wearing tight underwear cause infertility?",
         "answer": [
-          "ICSI is considered when sperm count/motility is very low or in previous IVF fertilization failure."
+          "Wearing tight underwear may slightly raise scrotal temperature, which can affect sperm production. Looser-fitting boxers can actually help in keeping temperatures optimal."
+        ]
+      },
+      {
+        "question": "6. Can past sexually transmitted infections (STIs) affect male fertility?",
+        "answer": [
+          "Yes, untreated STIs such as gonorrhea or chlamydia can impact inflammation or blockages that can affect fertility. However, early treatment will help in reducing these risks"
+        ]
+      },
+      {
+        "question": "7. What are the key parts of sperm health?",
+        "answer": [
+          "Sperm health relies mainly on sperm quantity, shape, and movement:",
+          "Quantity : Ideally, the semen in a single ejaculation is well known as an ejaculate that has at least 15 million sperm per milliliter. Less than that lowers the chances of getting pregnant, as there are few sperm available to fertilize an egg.",
+          "Movement :  To reach and fertilize an egg, sperm should be able to move easily through the cervix, fallopian tubes, and uterus. Also, this is known as motility. However, at least 40% of the sperm is required",
+          "Morphology : Typical sperm have oval heads and long tails that work together to help sperm move. Also, sperm shape isn’t as important to fertility as quantity or movement. "
+        ]
+      },
+      {
+        "question": "8. What causes male fertility problems?",
+        "answer": [
+          "Some health problems also have an impact on male fertility, which includes:",
+          "1. Conditions that affect how sperm move.",
+          "2.  Diseases and conditions that affect the testicles",
+          "3.  Medical conditions that affect the hypothalamus or the pituitary gland. These glands secrete hormones that can affect the testes, helping them produce testosterone and sperm",
+          "Age also plays a major role in sperm’s ability to move, and the number of sperm that have a typical shape tends to decrease with age. Also, this is true after the age of 50."
+        ]
+      },
+      {
+        "question": "9. What's the best way to make healthy sperm?",
+        "answer": [
+          "Simple steps to raise the chances of having healthy sperm include:",
+          "Maintain a healthy weight. Research suggests that increasing body mass index (BMI) is related to a decrease in sperm count.",
+          "Manage stress, since stress can lower a person’s ability to have sex. Stress can also have an impact on hormones that the body requires to make healthy sperm."
+        ]
+      },
+      {
+        "question": "10. How do I check if my sperm is healthy?",
+        "answer": [
+          "The best way to check the sperm health is to get a semen analysis from a fertility lab. Consulting a fertility expert about the tests for it will provide more information about it."
         ]
       }
     ]
@@ -207,4 +241,3 @@
     ]
   }
 }
-
