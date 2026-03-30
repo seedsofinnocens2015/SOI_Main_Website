@@ -5,9 +5,11 @@ import SectionHeading from "../SectionHeading";
 import Spacing from "../Spacing";
 import Link from "next/link";
 import Image from "next/image";
+import { FaSuitcase, FaLocationDot } from "react-icons/fa6";
 import { getAssetPathClient } from "@/app/utils/assetPath";
 
-const TeamSection = ({ data, bgColor, variant, hr }) => {
+/** When true, cards match /doctors (AppointmentSection): blue panel, accent shape, experience + location. */
+const TeamSection = ({ data, bgColor, variant, hr, doctorsPageCardStyle = false }) => {
   const sliderRef = useRef(null);
 
   const settings = {
@@ -69,21 +71,60 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
                     onMouseEnter={() => sliderRef.current?.slickPause()}
                     onMouseLeave={() => sliderRef.current?.slickPlay()}
                   >
-                    <div className="cs_team cs_style_1 cs_team_minimalistic">
-                      <Link href={item.link} className="cs_team_thumbnail">
-                        <Image src={getAssetPathClient(item.imageUrl)} alt={item.name} width={280} height={300} loading="eager" />
-                      </Link>
-                      <div className="cs_team_bio">
-                        <h3 className="cs_team_title cs_extra_bold mb-0">
-                          <Link href={item.link}>{item.name}</Link>
-                        </h3>
-                        <p className="cs_team_subtitle">{item.profession}</p>
-                        <p className="cs_team_experience">Experience: 12+ Years</p>
-                        <Link href={item.link} className="cs_team_view_profile">
-                          View Profile
+                    {doctorsPageCardStyle ? (
+                      <div className="cs_team cs_style_1 cs_blue_bg">
+                        <div className="cs_team_shape cs_accent_bg" />
+                        <Link href={item.link} className="cs_team_thumbnail">
+                          <Image
+                            src={getAssetPathClient(item.imageUrl)}
+                            alt={`${item.name} Thumbnail`}
+                            width={302}
+                            height={423}
+                            loading="eager"
+                          />
                         </Link>
+                        <div className="cs_team_bio">
+                          <h3 className="cs_team_title cs_extra_bold mb-0">
+                            <Link href={item.link}>{item.name}</Link>
+                          </h3>
+                          <p className="cs_team_subtitle">{item.profession}</p>
+                          <div className="cs_team_info_items">
+                            {item.experience && (
+                              <div className="cs_team_info_item">
+                                <i>
+                                  <FaSuitcase />
+                                </i>
+                                <span>{item.experience} Experience </span>
+                              </div>
+                            )}
+                            {item.state && (
+                              <div className="cs_team_info_item">
+                                <i>
+                                  <FaLocationDot />
+                                </i>
+                                <span>{item.state}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      <div className="cs_team cs_style_1 cs_team_minimalistic">
+                        <Link href={item.link} className="cs_team_thumbnail">
+                          <Image src={getAssetPathClient(item.imageUrl)} alt={item.name} width={280} height={300} loading="eager" />
+                        </Link>
+                        <div className="cs_team_bio">
+                          <h3 className="cs_team_title cs_extra_bold mb-0">
+                            <Link href={item.link}>{item.name}</Link>
+                          </h3>
+                          <p className="cs_team_subtitle">{item.profession}</p>
+                          <p className="cs_team_experience">Experience: 12+ Years</p>
+                          <Link href={item.link} className="cs_team_view_profile">
+                            View Profile
+                          </Link>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 ))}
               </Slider>

@@ -8,6 +8,8 @@ import doctorsData from '@/app/data/doctors-data.json';
 const page = () => {
   const headingData = {
     title: 'All IVF Specialists',
+    uspTitle:
+      'WORLD-CLASS IVF EXPERTS <br /> <span class="cs_accent_color">MEET OUR SPECIALISTS</span>',
   };
 
   // Function to extract state from location

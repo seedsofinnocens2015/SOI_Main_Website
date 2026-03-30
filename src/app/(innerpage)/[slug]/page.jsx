@@ -14,6 +14,9 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import BestIVFCentre from '@/app/Components/BestIVFCentre';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.seedsofinnocence.com';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 function cityNameToSlug(cityName) {
     return cityName
         .toLowerCase()
@@ -49,9 +52,34 @@ export async function generateMetadata({ params }) {
     // 1. Check if it's an international center slug
     const internationalCenter = centresData.find(c => c.isInternational && c.slug === slug);
     if (internationalCenter) {
+        const defaultDesc = internationalCenter.description
+            ? internationalCenter.description[0]
+            : `Best IVF Centre in ${internationalCenter.name}.`;
+        const title =
+            internationalCenter.metaTitle || `${internationalCenter.name} | Seeds of Innocens`;
+        const description = internationalCenter.metaDescription || defaultDesc;
+        const path = `${basePath}/${slug}/`.replace(/\/{2,}/g, '/');
+        const canonicalUrl = `${SITE_URL}${path}`;
+        const ogImage = internationalCenter.image || '/assets/img/Top-Header.png';
+        const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${basePath}${ogImage}`;
+
         return {
-            title: internationalCenter.name + ' | Seeds of Innocens',
-            description: internationalCenter.description ? internationalCenter.description[0] : `Best IVF Centre in ${internationalCenter.name}.`,
+            title,
+            description,
+            openGraph: {
+                title,
+                description,
+                url: canonicalUrl,
+                siteName: 'Seeds of Innocens',
+                images: [{ url: ogImageUrl }],
+                type: 'website',
+            },
+            twitter: {
+                card: 'summary_large_image',
+                title,
+                description,
+            },
+            alternates: { canonical: canonicalUrl },
         };
     }
 
@@ -70,9 +98,43 @@ export async function generateMetadata({ params }) {
     }
 
     const stateName = filteredCentres[0].state;
+    const rawStateContent = stateContentConfig[stateSlug] || stateContentConfig.default || {};
+    const replaceStateName = (text) =>
+        typeof text === 'string' ? text.replace(/{{stateName}}/g, stateName) : text;
+    const defaultTitle = `Best IVF Centre in ${stateName} | Seeds of Innocens`;
+    const defaultDescription = `Looking for the best IVF centre in ${stateName}? Seeds of Innocens offers advanced fertility treatments with high success rates and experienced specialists in ${stateName}.`;
+    const title = replaceStateName(
+        rawStateContent.metaTitle ||
+        rawStateContent.sections?.[0]?.heading ||
+        defaultTitle
+    );
+    const description = replaceStateName(
+        rawStateContent.metaDescription ||
+        rawStateContent.sections?.[0]?.paragraphs?.[0] ||
+        defaultDescription
+    );
+    const path = `${basePath}/${slug}/`.replace(/\/{2,}/g, '/');
+    const canonicalUrl = `${SITE_URL}${path}`;
+    const ogImage = '/assets/img/Top-Header.png';
+    const ogImageUrl = `${SITE_URL}${basePath}${ogImage}`;
+
     return {
-        title: `Best IVF Centre in ${stateName} | Seeds of Innocens`,
-        description: `Looking for the best IVF centre in ${stateName}? Seeds of Innocens offers advanced fertility treatments with high success rates and experienced specialists in ${stateName}.`,
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            url: canonicalUrl,
+            siteName: 'Seeds of Innocens',
+            images: [{ url: ogImageUrl }],
+            type: 'website',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+        },
+        alternates: { canonical: canonicalUrl },
     };
 }
 
@@ -218,9 +280,9 @@ const DynamicPage = async ({ params }) => {
                 <div className="container">
                     <div className="cs_best_ivf_content">
                         {/* Main Heading from JSON with Partial Coloring */}
-                        <h2 className="cs_best_ivf_title">
+                        <h1 className="cs_best_ivf_title">
                             Best IVF Centres in <span className='cs_best_ivf_title_span'>{stateContentData.sections[0]?.heading.replace(/Best IVF Centres in/i, '').trim()}</span>
-                        </h2>
+                        </h1>
 
                         {/* Description Paragraph from JSON */}
                         <div className="cs_best_ivf_description">
@@ -247,7 +309,7 @@ const DynamicPage = async ({ params }) => {
                                                         className="w-12 h-12 object-contain"
                                                     />
                                                 </div>
-                                                <h3 className="cs_service_title_mobile">{service.title}</h3>
+                                                <h2 className="cs_service_title_mobile">{service.title}</h2>
                                                 {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
                                             </div>
                                         </Wrapper>
@@ -270,7 +332,7 @@ const DynamicPage = async ({ params }) => {
                                                         className="w-12 h-12 object-contain"
                                                     />
                                                 </div>
-                                                <h3 className="cs_service_title_mobile">{service.title}</h3>
+                                                <h2 className="cs_service_title_mobile">{service.title}</h2>
                                                 {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
                                             </div>
                                         </Wrapper>
@@ -297,7 +359,7 @@ const DynamicPage = async ({ params }) => {
                                                     loading="lazy"
                                                 />
                                             </div>
-                                            <h3 className="cs_service_title_desktop">{service.title}</h3>
+                                            <h2 className="cs_service_title_desktop">{service.title}</h2>
                                             {service.subtitle && <p className="cs_service_subtitle_desktop">{service.subtitle}</p>}
                                         </div>
                                     </Wrapper>
@@ -319,12 +381,12 @@ const DynamicPage = async ({ params }) => {
             <Section topSpaceLg="30" topSpaceMd="30" bottomSpaceLg="80" bottomSpaceMd="50">
                 <div className="container">
                     <div className="cs_service_title_section mb-10 text-center">
-                        <h2 className="cs_service_main_title">
+                        <h1 className="cs_service_main_title">
                             <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                 OUR CENTRES
                             </span>{' '}
                             <span style={{ color: '#000000' }}>IN {stateName.toUpperCase()}</span>
-                        </h2>
+                        </h1>
                     </div>
                     <div className="row cs_gap_y_40">
                         {filteredCentres.map((centre, index) => (
@@ -375,12 +437,12 @@ const DynamicPage = async ({ params }) => {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     {/* Section Heading matching NewsMediaSection style */}
                     <div className="cs_service_title_section mb-10">
-                        <h2 className="cs_service_main_title text-center">
+                        <h1 className="cs_service_main_title text-center">
                             <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                 WHY CHOOSE
                             </span>{' '}
                             <span style={{ color: '#000000' }}>SEEDS OF INNOCENS IVF</span>
-                        </h2>
+                        </h1>
                     </div>
                     {/* Feature Grid - Mobile 2 Rows */}
                     <div className="d-block d-sm-none mt-4">
@@ -526,12 +588,12 @@ const DynamicPage = async ({ params }) => {
                 <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="80" bottomSpaceMd="50">
                     <div className="container">
                         <div className="cs_service_title_section mb-10 text-center">
-                            <h2 className="cs_service_main_title">
+                            <h1 className="cs_service_main_title">
                                 <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                     FREQUENTLY ASKED
                                 </span>{' '}
                                 <span style={{ color: '#000000' }}>QUESTIONS</span>
-                            </h2>
+                            </h1>
                         </div>
                         <div className="row">
                             <div className="col-12">

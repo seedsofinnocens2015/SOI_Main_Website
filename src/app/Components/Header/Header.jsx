@@ -139,7 +139,7 @@ const Header = ({ isTopBar, variant }) => {
             href: '',
             subItems: [
               { label: 'Male Infertility', href: '/male-infertility-treatments/male-infertility-treatment-in-india' },
-              { label: 'TESA / PESA', href: '/male-infertility-treatments/tesa' },
+              { label: 'TESA / PESA', href: '/male-infertility-treatments/tesa-pesa' },
               { label: 'MicroTESE', href: '/male-infertility-treatments/microtese' },
               { label: 'Semen Analysis', href: '/male-infertility-treatments/semen-analysis' },
               { label: 'Semen Analysis at Home', href: '/male-infertility-treatments/semen-analysis-at-home' },

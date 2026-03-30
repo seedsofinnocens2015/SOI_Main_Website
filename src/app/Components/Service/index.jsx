@@ -415,7 +415,7 @@ const Service = ({ data, cardBg }) => {
       <div className="container">
         {/* Title Section - "OUR SERVICES" */}
         <div className="cs_service_title_section">
-          <h2 className="cs_service_main_title"><span className="cs_service_main_title_span">OUR</span> SERVICES</h2>
+          <h1 className="cs_service_main_title"><span className="cs_service_main_title_span">OUR</span> SERVICES</h1>
         </div>
         <div className="cs_height_30 cs_height_lg_30" />
         

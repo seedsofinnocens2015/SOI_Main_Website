@@ -1,15 +1,21 @@
 [
   {
     "slug": "dr-gauri-agarwal",
+    "uspTitle": "Founder & IVF Expert <br /> <span class=\"cs_accent_color\">Dr. Gauri Agarwal</span>",
+    "headerImage": "/assets/img/Doctor-Headers/gauri.png",
     "name": "Dr. Gauri Agarwal",
     "subtitle": "Founder & Chief IVF Specialist",
     "image": "/assets/img/Doctors/Dr Gauri maam.jpg",
     "description": [
-      "Dr. Gauri Agarwal is a young, dynamic, and leading fertility specialist of Delhi/NCR. Dr. Agarwal is backed by visionary thinking, die-hard determination, and industry-rich experience of more than 10 years. She is the Director, IVF at Seeds of Innocence Centre. Dr. Agarwal finished her MBBS degree from Bharati Vidyapeeth Medical College, Pune. Post that, she did a Diplomate of National Board (DNB), Obstetrics and Gynaecology Residency Program from KG Superspecialty Hospital, Coimbatore. She followed this with a hard-earned Fellowship Program in Reproductive Medicine (Infertility) from the University of Gent, Belgium. Further, she received training in Embryology at the National University of Singapore."
+      "Dr. Gauri Agarwal, Founder and Director of Seeds of Innocens IVF & Genestring Labs (Chain of Molecular, Genetic, and Pathology Labs). With over 15 years of experience in the field, she has played a pivotal role in bringing innovative fertility solutions to India and beyond. Trained at the prestigious medical institutions in Belgium and Singapore, Dr. Gauri Agarwal has been at the forefront of introducing advanced reproductive technologies and evidence-based fertility treatments. Under the leadership, Seeds of Innocens IVF has expanded globally, establishing IVF centres in Muscat (Oman) and Lusaka (Zambia), which is a significant milestone as one of India’s leading homegrown IVF brands with an international presence.",
+      "Seeds of Innocens IVF is recognized as one of the best IVF centres in India and internationally. It is also the FIRST IVF centre in India to be equipped with an in-house genetic testing laboratory, which has enabled comprehensive fertility care and improved treatment outcomes. It was her vision that led Genestring Labs to become India’s First and Largest Airport Covid-19 testing Lab situated at IGI International Airport, New Delhi.",
+      "Also, testimony to her magnetic presence is that her recent interaction on Lallantop.com is an online platform catering to the Indian audience, garnering an astonishing 10 million plus views across the social media platforms.",
+      "Another podcast with a renowned media personality, Shubhankar Mishra, has also garnered over 8 million views. Adding to her remarkable story, she has also been recognized as a Times 40 under 40 Healthcare Leaders in India 2022.",
+      "This centre is recognized for its high success rates and commitment to delivering customized and ethical care to each patient. Dr. Gauri Agarwal is dedicated to improving women’s health, especially in rural areas. She is working towards spreading awareness about reproductive health and breaking the stigma surrounding infertility through education and outreach initiatives."
     ],
     "location": "Delhi/NCR",
     "email": "drgauriagarwal@seedsofinnocens.com",
-    "qualification": "MD, DNB, MBBS",
+    "qualification": " Diplomate of National Board, Bachelor of Medicine, Bachelor of Surgery, Doctor of Medicine",
     "specialization": "IVF, Reproductive Endocrinology, Advanced Fertility Techniques",
     "experience": "15+ years",
     "workExperience": [
@@ -17,9 +23,14 @@
       "Leading Gynecologist and highly respected IVF specialist with over 15 years of experience in Advanced Infertility Treatment & Reproductive Genetics."
     ],
     "education": [
+      "MD, DNB, MBBS",
+
       "Trained in Embryology at the National University of Singapore",
+
       "Fellowship in IVF & ART from Ghent University, Belgium",
+
       "Stanford University Graduate: School of Business",
+
       "FDGSI Fertility Specialist"
     ],
     "awards": [
@@ -49,6 +60,7 @@
   },
   {
     "slug": "dr-ranjana-mishra",
+    "uspTitle": "Empathy & IVF Care <br /> <span class=\"cs_accent_color\">Dr. Ranjana Mishra</span>",
     "name": "Dr. Ranjana Mishra",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/ranjana.jpg",
@@ -84,6 +96,7 @@
   },
   {
     "slug": "dr-alpana-razadan",
+    "uspTitle": "Personalised Fertility Care <br /> <span class=\"cs_accent_color\">Dr. Alpana Razadan</span>",
     "name": "Dr. Alpana Razadan",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/alpana.jpg",
@@ -119,6 +132,7 @@
   }, 
   {
     "slug": "dr-lisha-singh",
+    "uspTitle": "RIF & IVF Expert <br /> <span class=\"cs_accent_color\">Dr. Lisha Singh</span>",
     "name": "Dr. Lisha Singh",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/lisha.jpg",
@@ -163,6 +177,7 @@
   },
   {
     "slug": "dr-monika-maan",
+    "uspTitle": "Repeat IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Monika Maan</span>",
     "name": "Dr. Monika Maan",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/monika.jpg",
@@ -210,6 +225,7 @@
   },
   {
     "slug": "dr-pratik-kakani",
+    "uspTitle": "Surgery & Fertility <br /> <span class=\"cs_accent_color\">Dr. Pratik Kakani</span>",
     "name": "Dr. Pratik Kakani",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/pratik.jpg",
@@ -256,6 +272,7 @@
   },
   {
     "slug": "dr-disha-datta",
+    "uspTitle": "Evidence-Based IVF <br /> <span class=\"cs_accent_color\">Dr. Disha Datta</span>",
     "name": "Dr. Disha Datta",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/disha.jpg",
@@ -297,6 +314,7 @@
   },
   {
     "slug": "dr-aiman-akram",
+    "uspTitle": "Leadership & IVF Care <br /> <span class=\"cs_accent_color\">Dr. Aiman Akram</span>",
     "name": "Dr. Aiman Akram",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/aiman.jpg",
@@ -341,6 +359,7 @@
   },
   {
     "slug": "dr-nivedita-nehal",
+    "uspTitle": "Senior IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Nivedita Nehal</span>",
     "name": "Dr. Nivedita Nehal",
     "subtitle": "Senior IVF Specialist",
     "image": "/assets/img/Doctors/nivedita.jpg",
@@ -382,6 +401,7 @@
   },
   {
     "slug": "dr-britika-prakash",
+    "uspTitle": "Science & Parenthood <br /> <span class=\"cs_accent_color\">Dr. Britika Prakash</span>",
     "name": "Dr. Britika Prakash",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/britika.png",
@@ -430,6 +450,7 @@
   },
   {
     "slug": "dr-preeti",
+    "uspTitle": "PCOS & Fertility <br /> <span class=\"cs_accent_color\">Dr. Preeti</span>",
     "name": "Dr. Preeti",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/preeti.jpg",
@@ -465,6 +486,7 @@
   },
   {
     "slug": "dr-varkha-chandra",
+    "uspTitle": "Endometriosis & IVF <br /> <span class=\"cs_accent_color\">Dr. Varkha Chandra</span>",
     "name": "Dr. Varkha Chandra",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/varkha.jpg",
@@ -500,6 +522,7 @@
   },
   {
     "slug": "dr-debilina-roy",
+    "uspTitle": "IVF & High-Risk Care <br /> <span class=\"cs_accent_color\">Dr. Debilina Roy</span>",
     "name": "Dr. Debilina Roy",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/debilina.jpg",
@@ -544,6 +567,7 @@
   },
   {
     "slug": "dr-sanjana-singh",
+    "uspTitle": "Fertility Consultant <br /> <span class=\"cs_accent_color\">Dr. Sanjana Singh</span>",
     "name": "Dr. Sanjana Singh",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/sanjana.png",
@@ -590,6 +614,7 @@
   },
   {
     "slug": "dr-aditi-bhatnagar",
+    "uspTitle": "Complex IVF Expert <br /> <span class=\"cs_accent_color\">Dr. Aditi Bhatnagar</span>",
     "name": "Dr. Aditi Bhatnagar",
     "subtitle": "Senior IVF Specialist",
     "image": "/assets/img/Doctors/aditi.jpg",
@@ -625,6 +650,7 @@
   },
   {
     "slug": "dr-beena-upadhyay",
+    "uspTitle": "AMA & Fertility Care <br /> <span class=\"cs_accent_color\">Dr. Beena Upadhyay</span>",
     "name": "Dr. Beena Upadhyay",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/beena.jpg",
@@ -660,6 +686,7 @@
   },
   {
     "slug": "dr-kriti-prasad",
+    "uspTitle": "Hormones & IVF <br /> <span class=\"cs_accent_color\">Dr. Kriti Prasad</span>",
     "name": "Dr. Kriti Prasad",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/kriti.jpg",
@@ -701,11 +728,13 @@
   },
   {
     "slug": "dr-pallavi-shrivastava",
+    "uspTitle": "Centre Head & IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Pallavi Shrivastava</span>",
+    "headerImage": "/assets/img/Doctor-Headers/pallavi.png",
     "name": "Dr. Pallavi Shrivastava",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/pallavi.jpg",
     "description": [
-      "Fellowship ( Infertility and Reproductive Endocrinology), PGIMER Chandigarh. Young and dynamic fertility and IVF expert, with over 6 years of experience. Serves as Clinical center Head at seeds of innocence, IVF center, Haldwani. Special interest - Hormonal causes of infertility and male infertility."
+      "Dr. Pallavi Shrivastava is a dynamic IVF specialist with more than 5+ years of extensive experience. She serves as an IVF specialist at Seeds of Innocens IVF in Haldwani offering expert care to the couples struggling with infertility. Her expertise relies in treating all kinds of infertility. Dr. Pallavi Shrivastava is dedicated to providing customized fertility solutions."
     ],
     "location": "Haldwani-Uttrakhand",
     "email": "drpallavishrivastava@seedsofinnocens.com",
@@ -713,11 +742,16 @@
     "specialization": "IVF, Complex Infertility Cases, Advanced IVF Techniques",
     "experience": "6+ years",
     "workExperience": [
-      "3 years of Senior Residency from North Bengal Medical College. Registrar ship at Neotial Getwell hospital, for 1 year. Assistant professor at Chirayu Medical College. Then, Consultant Gynecologist at Indira IVF Hospital."
+      "Dr. Pallavi Shrivastava is an experienced IVF specialist with more than 5 years of reproductive and fertility expertise.", 
+      "She has successfully managed complex infertility cases, including multiple IVF failures, severe male factor infertility.", 
+      "She has special interest in hormonal causes of both female and male infertility, Before joining Seeds of Innocens IVF Haldwani, she served as an IVF specialist at PGIMER Chandigarh and Assistant Professor at Chirayu Medical college, Bhopal.", 
+      "With her deep knowledge and patient-centric approach, Dr. Pallavi is dedicated to helping couples  achieve their parenthood dream."
     ],
     "education": [
-      "MBBS from GMC Bhopal. MS obstetrics and gynecology from NBMC, Darjeeling. Also did DNB in obs and gynae. Senior residency of 3 years from NBMCH, Darjeeling.",
-      "Fellowship ( Infertility and Reproductive Endocrinology), PGIMER Chandigarh."
+      "She has completed her MBBS from Gandhi Medical College (GMC), Bhopal and M.S ( Obstetrics & Gynaecology) from North Bengal Medical College, Darjeeling.", 
+      "She has numerous publications in national and international journals. Also she has Secured Rank 1 AIR in fellowship exam for the Infertility and Reproductive Endocrinology at PGIMER, Chandigarh.", 
+      "After the fellowship, she did training in Minimal Invasive Surgery at Jogal Women’s hospital, Gujarat.", 
+      "With extensive experience in corporate and both government healthcare settings, she specializes in obstetric emergencies and minimally invasive  gynecological procedures"
     ],
     "awards": [],
     "progressBars": [
@@ -742,6 +776,7 @@
   },
   {
     "slug": "dr-julie-chhawchharia",
+    "uspTitle": "Clinical Head & IVF <br /> <span class=\"cs_accent_color\">Dr. Julie Chhawchharia</span>",
     "name": "Dr. Julie Chhawchharia",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/julie.jpg",
@@ -787,6 +822,7 @@
   },
   {
     "slug": "dr-vinod-kumar-b",
+    "uspTitle": "IVF & Keyhole Surgery <br /> <span class=\"cs_accent_color\">Dr. Vinod Kumar B</span>",
     "name": "Dr. Vinod Kumar B",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/vinod.png",
@@ -833,6 +869,7 @@
   },
   {
     "slug": "dr-sonia-raju",
+    "uspTitle": "IVF & Obstetrics <br /> <span class=\"cs_accent_color\">Dr. Sonia Raju</span>",
     "name": "Dr. Sonia Raju",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/sonia.jpg",
@@ -877,6 +914,7 @@
   },
   {
     "slug": "dr-jasna-mohammed",
+    "uspTitle": "Dedicated IVF Care <br /> <span class=\"cs_accent_color\">Dr. Jasna Mohammed</span>",
     "name": "Dr. Jasna Mohammed",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/jasna.jpg",
@@ -915,9 +953,9 @@
     ],
     "newSlug": "dr-jasna-mohammed-ivf-specialist"
   },
-
   {
     "slug": "dr-sneha-narayan",
+    "uspTitle": "Guidance & IVF Care <br /> <span class=\"cs_accent_color\">Dr. Sneha Narayan</span>",
     "name": "Dr. Sneha Narayan",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/Dr Sneha Narayan.png",
@@ -959,12 +997,10 @@
       }
     ],
     "newSlug": "dr-adrija-ghosal-ivf-specialist"
-  },
-
-
-  
+  }, 
   {
     "slug": "dr-adrija-ghosal",
+    "uspTitle": "Holistic Fertility Care <br /> <span class=\"cs_accent_color\">Dr. Adrija Ghosal</span>",
     "name": "Dr. Adrija Ghosal",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/adrija.png",
@@ -1009,13 +1045,9 @@
     ],
     "newSlug": "dr-adrija-ghosal-ivf-specialist"
   },
- 
- 
- 
- 
- 
   {
     "slug": "dr-rashmi-singh",
+    "uspTitle": "Global IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Rashmi Singh</span>",
     "name": "Dr. Rashmi Singh",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/rashmi.jpg",
@@ -1049,19 +1081,9 @@
     ],
     "newSlug": "dr-rashmi-singh-ivf-specialist"
   },
- 
- 
-  
-  
-  
-  
-  
-  
- 
- 
-  
   {
     "slug": "dr-mangla-kawade",
+    "uspTitle": "Tubal Fertility Expert <br /> <span class=\"cs_accent_color\">Dr. Mangla Kawade</span>",
     "name": "Dr. Mangla Kawade",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/mangla.jpg",
@@ -1097,6 +1119,7 @@
   },
   {
     "slug": "dr-khushboo-singh",
+    "uspTitle": "Hope & IVF Journey <br /> <span class=\"cs_accent_color\">Dr. Khushboo Singh</span>",
     "name": "Dr. Khushboo Singh",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/khushboo.jpg",
@@ -1130,11 +1153,4 @@
     ],
     "newSlug": "dr-khushboo-singh-ivf-specialist"
   }
- 
- 
- 
- 
- 
- 
- 
 ]

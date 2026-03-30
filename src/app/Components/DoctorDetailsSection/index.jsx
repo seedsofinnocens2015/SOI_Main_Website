@@ -6,7 +6,7 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import {
   FaLocationDot,
   FaSuitcase,
-  FaCertificate,
+  FaGraduationCap,
   FaGlobe,
 } from 'react-icons/fa6';
 
@@ -25,7 +25,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
             {/* Doctor Image and Basic Info Card */}
             <div className="cs_doctor_info_card">
               <div className="row cs_row_gap_30 cs_gap_y_30">
-                <div className="col-md-4">
+                <div className="col-md-4 order-2 order-md-1">
                   <div className="cs_doctor_details_thumbnail">
                     <Image 
                       src={getAssetPath(data.image)} 
@@ -36,7 +36,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
                     />
                   </div>
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 order-1 order-md-2">
                   <div className="cs_doctor_info_header">
                     <AccentHeading level={2} className="cs_doctor_title">{data.name}</AccentHeading>
                     <p className="cs_doctor_subtitle">{data.subtitle}</p>
@@ -64,7 +64,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
                     </div>
                     <div className="cs_iconbox cs_style_10">
                       <div className="cs_iconbox_icon">
-                        <i><FaCertificate /></i>
+                        <i><FaGraduationCap /></i>
                       </div>
                       <div className="cs_iconbox_text">
                         <h4 className="cs_iconbox_title">Qualification</h4>

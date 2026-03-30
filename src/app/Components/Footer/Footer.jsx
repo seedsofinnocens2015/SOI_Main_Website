@@ -30,7 +30,7 @@ const Footer = () => {
           { href: '/fertility-treatments/blastocyst-transfer/', text: 'Blastocyst Transfer' },
           { href: '/fertility-treatments/ovulation-induction/', text: 'Ovulation Induction' },
           { href: '/fertility-treatments/follicular-monitoring/', text: 'Follicular Monitoring' },
-          { href: '/male-infertility-treatments/tesa/', text: 'TESA/PESA' },
+          { href: '/male-infertility-treatments/tesa-pesa/', text: 'TESA/PESA' },
         ],
       },
       {

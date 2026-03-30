@@ -11,17 +11,27 @@ const page = () => {
     title: 'Maternal–Fetal Medicine Specialists',
   };
 
-  // Map doctors from JSON to TeamSection format (sliderData)
+  const getStateFromLocation = (location) => {
+    if (!location) return '';
+    const parts = location.split(',').map((part) => part.trim());
+    if (parts.length > 1) {
+      return parts[parts.length - 1];
+    }
+    return location;
+  };
+
   const sliderData = doctorsData.map((doctor) => ({
     name: doctor.name,
     profession: doctor.subtitle,
     imageUrl: doctor.image,
     link: `/doctors/${doctor.newSlug || doctor.slug + '-ivf-specialist'}`,
-    facebook: '/',
-    pinterest: '/',
-    twitter: '/',
-    instagram: '/',
+    experience: doctor.experience,
+    state: getStateFromLocation(doctor.location),
   }));
+
+  const teamData = {
+    sliderData,
+  };
 
   const ivfContentData = {
     sections: [
@@ -41,10 +51,6 @@ const page = () => {
         sideImage: '/assets/img/recent_post2.jpg',
       },
     ],
-  };
-
-  const teamData = {
-    sliderData: sliderData,
   };
 
   return (
@@ -73,7 +79,7 @@ const page = () => {
         </div>
       </Section>
 
-      {/* Doctors Section */}
+      {/* Doctors slider — cards styled like /doctors */}
       <Section
         topSpaceLg="0"
         topSpaceMd="0"
@@ -92,6 +98,7 @@ const page = () => {
           hr={true}
           variant={'cs_pagination cs_style_2'}
           data={teamData}
+          doctorsPageCardStyle
         />
       </Section>
       {/* End Maternal–Fetal Medicine Section */}

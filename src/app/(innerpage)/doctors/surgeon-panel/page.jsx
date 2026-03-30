@@ -11,16 +11,22 @@ const page = () => {
     title: 'Surgeon Panel',
   };
 
-  // Map doctors from JSON to TeamSection format (sliderData)
+  const getStateFromLocation = (location) => {
+    if (!location) return '';
+    const parts = location.split(',').map((part) => part.trim());
+    if (parts.length > 1) {
+      return parts[parts.length - 1];
+    }
+    return location;
+  };
+
   const sliderData = doctorsData.map((doctor) => ({
     name: doctor.name,
     profession: doctor.subtitle,
     imageUrl: doctor.image,
     link: `/doctors/${doctor.newSlug || doctor.slug + '-ivf-specialist'}`,
-    facebook: '/',
-    pinterest: '/',
-    twitter: '/',
-    instagram: '/',
+    experience: doctor.experience,
+    state: getStateFromLocation(doctor.location),
   }));
 
   const ivfContentData = {
@@ -46,7 +52,7 @@ const page = () => {
   };
 
   const teamData = {
-    sliderData: sliderData,
+    sliderData,
   };
 
   return (
@@ -94,6 +100,7 @@ const page = () => {
           hr={true}
           variant={'cs_pagination cs_style_2'}
           data={teamData}
+          doctorsPageCardStyle
         />
       </Section>
       {/* End Surgeon Panel Section */}

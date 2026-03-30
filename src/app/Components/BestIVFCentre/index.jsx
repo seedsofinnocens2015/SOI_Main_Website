@@ -148,9 +148,9 @@ const BestIVFCentre = ({
                 <div className="container">
                     <div className="cs_best_ivf_content">
                         {/* Main Heading */}
-                        <h2 className="cs_best_ivf_title">
+                        <h1 className="cs_best_ivf_title">
                             Best IVF Centre in <span className='cs_best_ivf_title_span'>{cityName}</span>
-                        </h2>
+                        </h1>
 
                         {/* Description Paragraph */}
                         {description && (
@@ -177,7 +177,7 @@ const BestIVFCentre = ({
                                                         className="w-12 h-12 object-contain"
                                                     />
                                                 </div>
-                                                <h3 className="cs_service_title_mobile">{service.title}</h3>
+                                                <h2 className="cs_service_title_mobile">{service.title}</h2>
                                                 {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
                                             </div>
                                         </Wrapper>
@@ -200,7 +200,7 @@ const BestIVFCentre = ({
                                                         className="w-12 h-12 object-contain"
                                                     />
                                                 </div>
-                                                <h3 className="cs_service_title_mobile">{service.title}</h3>
+                                                <h2 className="cs_service_title_mobile">{service.title}</h2>
                                                 {service.subtitle && <p className="cs_service_subtitle_mobile">{service.subtitle}</p>}
                                             </div>
                                         </Wrapper>
@@ -227,7 +227,7 @@ const BestIVFCentre = ({
                                                     loading="lazy"
                                                 />
                                             </div>
-                                            <h3 className="cs_service_title_desktop">{service.title}</h3>
+                                            <h2 className="cs_service_title_desktop">{service.title}</h2>
                                             {service.subtitle && <p className="cs_service_subtitle_desktop">{service.subtitle}</p>}
                                         </div>
                                     </Wrapper>
@@ -346,12 +346,12 @@ const BestIVFCentre = ({
                     <div className="container">
                         {/* Section Heading matching NewsMediaSection style */}
                         <div className="cs_service_title_section">
-                            <h2 className="cs_service_main_title">
+                            <h1 className="cs_service_main_title">
                                 <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                     WHAT OUR HAPPY
                                 </span>{' '}
                                 <span style={{ color: '#000000' }}>COUPLES ARE SAYING!</span>
-                            </h2>
+                            </h1>
                             <p
                                 style={{
                                     fontSize: 'clamp(14px, 2vw, 18px)',
@@ -418,12 +418,12 @@ const BestIVFCentre = ({
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     {/* Section Heading matching NewsMediaSection style */}
                     <div className="cs_service_title_section mb-10">
-                        <h2 className="cs_service_main_title">
+                        <h1 className="cs_service_main_title">
                             <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                 WHY CHOOSE
                             </span>{' '}
                             <span style={{ color: '#000000' }}>SEEDS OF INNOCENS IVF</span>
-                        </h2>
+                        </h1>
                     </div>
                     {/* Feature Grid - Mobile 2 Rows */}
                     <div className="d-block d-sm-none mt-4">
@@ -571,12 +571,12 @@ const BestIVFCentre = ({
                     <div className="cs_about_v2_container">
                         {/* Main Heading */}
                         <div className="cs_service_title_section mb-10">
-                            <h2 className="cs_service_main_title">
+                            <h1 className="cs_service_main_title">
                                 <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                     About Seeds of Innocens IVF
                                 </span>{' '}
                                 <span style={{ color: '#000000' }}> Centre {cityName}</span>
-                            </h2>
+                            </h1>
                         </div>
                         <div className="cs_about_v2_wrapper">
                             {/* Building image */}
@@ -677,12 +677,12 @@ const BestIVFCentre = ({
                 >
                     <div className="container">
                         <div className="cs_service_title_section mb-10">
-                            <h2 className="cs_service_main_title">
+                            <h1 className="cs_service_main_title">
                                 <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                     FREQUENTLY ASKED
                                 </span>{' '}
                                 <span style={{ color: '#000000' }}>QUESTIONS</span>
-                            </h2>
+                            </h1>
                         </div>
                         <div className="row">
                             <div className="col-12">

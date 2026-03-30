@@ -232,7 +232,7 @@ const heroData = {
         subHeading: 'TESA/PESA: Advanced Fertility Treatment for Male Infertility',
         subtitle: '<strong>TESA/PESA</strong> is a specialized surgical procedure that helps in resolving the fertility issues such as TESA/PESA, Semen analysis, PESA, and the treatment for the low sperm count. This technique involves collecting sperm from the testicles or epididymis, allowing for analysis and treatment of male infertility.',
         imageUrl: '/assets/img/TESA-PESA.jpg',
-        link: '/male-infertility-treatments/tesa/',
+        link: '/male-infertility-treatments/tesa-pesa/',
       },
       {
         iconUrl: '/assets/img/icons/Donor Program.svg',

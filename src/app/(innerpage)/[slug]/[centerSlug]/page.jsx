@@ -4,13 +4,11 @@ const centerContentConfig = centresAllData.centerContent;
 import doctorsData from '@/app/data/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
+import BestIVFCentre from '@/app/Components/BestIVFCentre';
+import { cityNameToSlug, resolveIndiaCenterFromCenterSlug } from '@/app/utils/resolveCenterFromRoute';
 
-function cityNameToSlug(cityName) {
-    return cityName
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^a-z0-9-]/g, '');
-}
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.seedsofinnocence.com';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export async function generateStaticParams() {
     try {
@@ -49,7 +47,52 @@ export async function generateStaticParams() {
     }
 }
 
-import BestIVFCentre from '@/app/Components/BestIVFCentre';
+export async function generateMetadata({ params }) {
+    const resolvedParams = await params;
+    const { slug: stateSlug, centerSlug } = resolvedParams || {};
+    if (!centerSlug || !stateSlug) {
+        return { title: 'Not Found' };
+    }
+
+    const cleanSlug = centerSlug.replace(/\/$/, '');
+    const center = resolveIndiaCenterFromCenterSlug(cleanSlug, indiaCentresData);
+    if (!center) {
+        return { title: 'Not Found' };
+    }
+
+    const cityName = center.name.split(',')[0].trim();
+    const defaultDesc = Array.isArray(center.description)
+        ? center.description[0]
+        : center.description ||
+          `IVF and fertility care at Seeds of Innocens in ${cityName}.`;
+    const title =
+        center.metaTitle || `${center.name} | Best IVF Centre | Seeds of Innocens`;
+    const description = center.metaDescription || defaultDesc;
+
+    const path = `${basePath}/${stateSlug}/${cleanSlug}/`.replace(/\/{2,}/g, '/');
+    const canonicalUrl = `${SITE_URL}${path}`;
+    const ogImage = center.image || '/assets/img/Top-Header.png';
+    const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${basePath}${ogImage}`;
+
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            url: canonicalUrl,
+            siteName: 'Seeds of Innocens',
+            images: [{ url: ogImageUrl }],
+            type: 'website',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+        },
+        alternates: { canonical: canonicalUrl },
+    };
+}
 
 const page = async ({ params }) => {
     const resolvedParams = await params;
@@ -60,30 +103,7 @@ const page = async ({ params }) => {
     }
 
     const cleanSlug = centerSlug.replace(/\/$/, '');
-    const citySlug = cleanSlug.replace(/^best-ivf-centre-in-/, '');
-
-    let center;
-    if (
-        cleanSlug === 'best-ivf-centre-in-delhi' ||
-        cleanSlug === 'best-ivf-centre-in-malviyanagar'
-    ) {
-        center = indiaCentresData.find((c) => {
-            return (
-                c.name === 'Malviya Nagar, Delhi' &&
-                c.stateSlug === 'delhi' &&
-                !c.isInternational
-            );
-        });
-    } else {
-        center = indiaCentresData.find((c) => {
-            if (c.isInternational) {
-                return false;
-            }
-            const cityName = c.name.split(',')[0].trim();
-            const centerCitySlug = cityNameToSlug(cityName);
-            return centerCitySlug === citySlug;
-        });
-    }
+    const center = resolveIndiaCenterFromCenterSlug(cleanSlug, indiaCentresData);
 
     if (!center) {
         notFound();
