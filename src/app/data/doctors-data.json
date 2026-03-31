@@ -132,20 +132,21 @@
   }, 
   {
     "slug": "dr-lisha-singh",
-    "uspTitle": "RIF & IVF Expert <br /> <span class=\"cs_accent_color\">Dr. Lisha Singh</span>",
+    "uspTitle": "Best IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Lisha Singh</span>",
+    "headerImage": "/assets/img/Doctor-Headers/lisha.png",
     "name": "Dr. Lisha Singh",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/lisha.jpg",
     "description": [
-      "Dr. Lisha Singh is a highly experienced IVF specialist with over 7 years of dedicated practice in reproductive medicine. She is committed to providing compassionate and personalized care to her patients, helping them navigate their fertility journey with expertise and understanding. She is working as an IVF Specialist at Seeds of Innocence IVF in New Delhi."
+      "Dr. Lisha Singh is a highly skilled IVF specialist with more than 7+ years of dedicated practice in reproductive medicine. She is also dedicated to providing compassionate, customized care to her patients, helping them navigate their fertility journey with understanding and expertise. Furthermore, she is also working as an IVF specialist at Seeds of Innocens IVF in New Delhi."
     ],
-    "location": "Malviya nagar-New Delhi",
+    "location": "Malviya nagar, New Delhi",
     "email": "drlishasingh@seedsofinnocens.com",
     "qualification": "MBBS, DGO, DNB, Fellowship in IVF",
     "specialization": "IVF, Unexplained Infertility, Recurrent Implantation Failure",
     "experience": "7+ years",
     "workExperience": [
-      "With 7 years of experience, she has a strong background and knowledge in gynecology and reproductive medicine.",
+      "With more than 7 years of experience, she has knowledge and a strong background in reproductive medicine and gynecology.",
       "She has worked as an IVF consultant at Indira IVF."
     ],
     "education": [
@@ -315,6 +316,7 @@
   {
     "slug": "dr-aiman-akram",
     "uspTitle": "Leadership & IVF Care <br /> <span class=\"cs_accent_color\">Dr. Aiman Akram</span>",
+    "headerImage": "/assets/img/Doctor-Headers/aiman.png",
     "name": "Dr. Aiman Akram",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/aiman.jpg",
@@ -522,28 +524,34 @@
   },
   {
     "slug": "dr-debilina-roy",
-    "uspTitle": "IVF & High-Risk Care <br /> <span class=\"cs_accent_color\">Dr. Debilina Roy</span>",
+    "uspTitle": "Centre Head & Fertility Expert <br /> <span class=\"cs_accent_color\">Dr. Debilina Roy</span>",
+    "headerImage": "/assets/img/Doctor-Headers/debilina.png",
     "name": "Dr. Debilina Roy",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/debilina.jpg",
     "description": [
-      "Dr. Debilina Roy is a highly experienced IVF specialist with over 10 years an obstetrician and gynecologist proficient in obstetric and gynecological emergencies, high-risk pregnancies. She is committed to providing compassionate and personalized care to her patients, helping them navigate their fertility journey with expertise and understanding. She is working as an IVF Specialist at Seeds of Innocence IVF in Patna."
+      "Dr. Debilina Roy is a highly qualified and skilled gynecologist and obstetrician. She holds an MBBS and an MS (Gynae & Obs) degree, with MRCOG, EFOG-EBCOG, and FMAS and DMAS qualifications. Also, she is the Centre Head of Seeds of Innocens IVF Patna."
     ],
-    "location": "Patna-Bihar",
+    "location": "Patna,Bihar",
     "email": "drdebilinaroy@seedsofinnocens.com",
     "qualification": "MBBS, MS (Obstetrics & Gynecology), FMAS, DMAS",
     "specialization": "IVF, Personalized Treatment Protocols, Advanced Embryology",
-    "experience": "10+ years",
+    "experience": "11+ years",
     "workExperience": [
-      "With 10 years of experience, she has a strong background and knowledge in obstetrics and gynecology. She has been working as an IVF consultant at Seeds of innocence for a long time."
+      "She began her career as a Senior Resident in the Department of Gynecology & Obstetrics at Bankura Sammilani Medical College.", 
+      "Also, she has served as a consultant Gynecologist and Obstetrician at Ramkrishna Mission Sevashrama, Haridwar, and Senior Resident at Chittaranjan National Cancer Institute, Kolkata.", 
+      "Furthermore, she is also an attending consultant at Fortis Hospital, Kangra, Consultant Obstetrician and Gynecologist at Coochbehar, West Bengal.",
+      "Also a well-recognized consultant at JEEWAN hospital, Delhi, and Consultant Gynecologist at Iswarya Fertility Centre, Kolkata."
     ],
     "education": [
-      "MBBS R.G. Kar Medical College, Kolkata, West Bengal University of Health Sciences",
-      "MS (obs and gynac), Bankura Sammilani Medical College, West Bengal University of Health Sciences",
-      "FMAS and DMAS World Laparoscopy Hospital, Gurgaon"
+      "Dr. Debilina completed her MBBS degree from R.G. Kar Medical College, Kolkata, and her MS in obstetrics and gynecology from Bankura Sammilani Medical College.",
+      "She has also extended her training with FMAS and DMAs at the World Laparoscopy Hospital, Gurgaon.",  
+      "She has completed MRCOG from the Royal College of Obstetricians and Gynecologists (UK) and is also recognized as a member of it, and became a European Fellow of Obstetrics and Gynecology ( EFOG-EBCOG).",
+      "She holds a highly skilled specialization in obstetrics and gynecology from FACOG, which is the Fellow of the American College of Obstetricians and Gynaecologists."
     ],
     "awards": [
-      "Gold medal in Microbiology (2006) and Best paper presentation award at Yuva FOGSI, Guwahati, April 2013, Topic-Comparative study on infraumbilical use of oxytocin versus misoprostol in the management of retained placenta via Pipingas technique"
+      "Gold Medal in Microbiology (2016)",
+      "Best Paper Presentation Award at Yuva FOGSI in Guwahati"
     ],
     "progressBars": [
       {
@@ -614,20 +622,33 @@
   },
   {
     "slug": "dr-aditi-bhatnagar",
-    "uspTitle": "Complex IVF Expert <br /> <span class=\"cs_accent_color\">Dr. Aditi Bhatnagar</span>",
+    "uspTitle": "Best Fertility Expert <br /> <span class=\"cs_accent_color\">Dr. Aditi Bhatnagar</span>",
+    "headerImage": "/assets/img/Doctor-Headers/aditi.png",
     "name": "Dr. Aditi Bhatnagar",
     "subtitle": "Senior IVF Specialist",
     "image": "/assets/img/Doctors/aditi.jpg",
     "description": [
-      "Dr. Aditi Bhatnagar is a highly experienced IVF specialist with expertise in advanced reproductive medicine. She specializes in complex infertility cases, recurrent implantation failures, and personalized IVF protocols.",
-      "With a patient-centric approach, Dr. Bhatnagar ensures that each couple receives individualized care tailored to their specific needs. Her commitment to excellence and compassionate care has helped numerous couples achieve successful pregnancies.",
-      "She stays updated with the latest advancements in fertility medicine and is actively involved in research to improve success rates and patient outcomes."
+      "Dr. Aditi Bhatnagar is a fertility and IVF specialist with extensive and Voluminous experience of more than 10 years. Also, she has a special interest in recurrent IVF & Secondary Infertility failures. She has completed her MBBS degree from Mullana Medical College, Ambala. Post to that, she has also pursued her master's in obstetrics and gynaecology from DY Patil Medical College, Pune, receiving a Gold Medal. She further pursued her fellowship in reproductive medicine (infertility). Since then, she has been working with the established high-volume fertility centres of Delhi-NCR. She has extensive knowledge, a wide skill set, and vast experience."
     ],
-    "location": "Gurugram-Haryana",
+    "location": "Gurugram, Haryana",
     "email": "draditibhatnagar@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
     "specialization": "IVF, ICSI, Advanced Reproductive Techniques",
-    "experience": "12+ Years",
+    "experience": "10+ Years",
+    "workExperience": [
+      "Working as a full-time IVF consultant for the last 10 years with a high success rate in secondary infertility cases and multiple IVF Failures."
+    ],
+    "education": [
+      "MBBS (Mullana Medical College, Ambala)",
+      " MS - Obstetrics and gynaecology (DY Patil medical college, Pune)",
+      "Fellowship in Reproductive Medicine (IFC, Delhi)"
+    ],
+    "awards": [
+      "Gold Medalist in MS (Obs & Gynae).",
+      "Awarded at multiple state and national conferences.",
+      "Numerous Publications in National and International Journals.",
+      "Recognized for her work in ESHRE 2024, 2025"
+    ],
     "progressBars": [
       {
         "label": "IVF Procedures",
