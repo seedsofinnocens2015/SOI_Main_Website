@@ -4214,16 +4214,28 @@ i {
   }
 }
 
-.cs_fertility_fab {
+.cs_floating_fab_stack {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.cs_fertility_fab {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 14px;
-  border-radius: 999px;
+  width: 150px;
+  height: 62px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  border-radius: 12px 0 0 12px;
   background: var(--accent-color);
   color: #fff;
   font-weight: 800;
@@ -4231,18 +4243,12 @@ i {
   line-height: 1;
   box-shadow: 0 16px 36px rgba(223, 54, 85, 0.28);
   border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+  transition: background-color 180ms ease;
   text-decoration: none;
-  white-space: nowrap;
-  animation: csFabFloat 2.6s ease-in-out infinite, csFabPulse 2.6s ease-in-out infinite;
-  will-change: transform, box-shadow;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 20px 44px rgba(223, 54, 85, 0.33);
-    filter: brightness(0.98);
+    background: var(--accent-color);
     color: #fff;
-    animation: none;
   }
 }
 
@@ -4253,36 +4259,132 @@ i {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.16);
+  background: #ffffff33;
 
   svg {
     width: 18px;
     height: 18px;
-    animation: csFabIconNudge 1.8s ease-in-out infinite;
     transform-origin: 50% 50%;
   }
 }
 
-.cs_fertility_fab:hover .cs_fertility_fab_icon svg {
-  animation: none;
+.cs_fertility_fab_text {
+  flex: 1;
+  text-align: left;
+}
+
+.cs_floating_chat_button {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 210px;
+  height: 62px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+
+  &:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+  }
+}
+
+.cs_floating_calculator_button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+
+  &:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+  }
+}
+
+.cs_floating_chat_button_icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .cs_fertility_fab,
-  .cs_fertility_fab_icon svg {
-    animation: none !important;
+  .cs_fertility_fab_icon svg,
+  .cs_floating_chat_button,
+  .cs_floating_calculator_button {
     transition: none !important;
   }
 }
 
 @media (max-width: 520px) {
+  .cs_floating_fab_stack {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   .cs_fertility_fab {
-    right: 14px;
-    bottom: 14px;
-    padding: 12px 12px;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    justify-content: center;
   }
   .cs_fertility_fab_text {
     display: none;
+  }
+  .cs_floating_chat_button {
+    left: 14px;
+    bottom: 14px;
+    padding: 0;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+
+    span:last-child {
+      display: none;
+    }
+  }
+  .cs_floating_calculator_button {
+    right: 14px;
+    bottom: 14px;
+    padding: 0;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+
+    span:last-child {
+      display: none;
+    }
   }
 }
 

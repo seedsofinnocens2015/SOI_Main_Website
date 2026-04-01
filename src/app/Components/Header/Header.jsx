@@ -12,7 +12,11 @@ import { IoCall } from "react-icons/io5";
 import { FaAnglesRight } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
 import { getAssetPathClient } from '@/app/utils/assetPath';
-import FertilityCalculatorFab from '@/app/Components/FertilityCalculatorFab';
+import FloatingButton from '@/app/Components/FloatingButton';
+import doctorsData from '@/app/data/doctors-data.json';
+import blogsData from '@/app/data/blogs.json';
+import centresData from '@/app/data/centres-data.json';
+import servicesContent from '@/app/data/servicesContent.json';
 
 // Collect all hrefs under a nav item (for active state matching)
 const getNavItemHrefs = (item) => {
@@ -85,6 +89,39 @@ const isNodeActive = (pathname, node) => {
   });
 };
 
+const flattenNavSearchEntries = (items = []) => {
+  const results = [];
+  const walk = (list) => {
+    list.forEach((item) => {
+      if (item?.label && item?.href) {
+        results.push({
+          label: item.label,
+          href: item.href,
+          type: 'Page',
+        });
+      }
+      if (Array.isArray(item?.megaMenuCategories)) {
+        walk(item.megaMenuCategories);
+      }
+      if (Array.isArray(item?.subItems)) {
+        walk(item.subItems);
+      }
+    });
+  };
+  walk(items);
+  return results;
+};
+
+const cleanPhoneDigits = (value = '') => (value || '').replace(/[^\d+]/g, '');
+
+const getCenterHref = (center) => {
+  if (center?.isInternational) return `/${center.slug}/`;
+  const isMalviyaDelhi =
+    center?.name === 'Malviya Nagar, Delhi' && center?.stateSlug === 'delhi';
+  const resolvedSlug = isMalviyaDelhi ? 'best-ivf-centre-in-malviyanagar' : center?.slug;
+  return `/${center?.stateSlug}/${resolvedSlug}/`;
+};
+
 const Header = ({ isTopBar, variant }) => {
   const router = useRouter();
   const pathname = usePathname();
@@ -97,6 +134,7 @@ const Header = ({ isTopBar, variant }) => {
   const [hoveredStateIndex, setHoveredStateIndex] = useState(null);
   const [openMegaCategories, setOpenMegaCategories] = useState({});
   const [isMobileView, setIsMobileView] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const menu = {
     email: 'info@seedsofinnocens.com',
     location: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
@@ -503,6 +541,87 @@ const Header = ({ isTopBar, variant }) => {
     btnText: 'Book a Visit',
   };
 
+  const searchItems = useMemo(() => {
+    const navItems = flattenNavSearchEntries(menu.navItems);
+    const doctorItems = (Array.isArray(doctorsData) ? doctorsData : []).map((doctor) => ({
+      label: doctor.name,
+      href: `/doctors/${doctor.newSlug || `${doctor.slug}-ivf-specialist`}`,
+      type: 'Doctor',
+    }));
+    const blogItems = (blogsData?.blogs || []).map((blog) => ({
+      label: blog.title,
+      href: `/blogs/${blog.slug}`,
+      type: 'Blog',
+    }));
+    const centerItems = (centresData?.centres || []).map((center) => ({
+      label: center.name,
+      href: getCenterHref(center),
+      type: 'Center',
+    }));
+    const serviceItems = Object.keys(servicesContent || {}).map((key) => ({
+      label: servicesContent[key]?.title || key,
+      href: `/services/${servicesContent[key]?.slug || key}`,
+      type: 'Service',
+    }));
+    const contactItems = (centresData?.centres || [])
+      .map((center) => center?.phone || center?.contactInfo?.phone)
+      .filter(Boolean)
+      .map((phone) => {
+        const normalized = cleanPhoneDigits(phone);
+        return {
+          label: `Contact ${phone}`,
+          href: `tel:${normalized.startsWith('+') ? normalized : `+91${normalized}`}`,
+          type: 'Contact',
+        };
+      });
+
+    const deduped = new Map();
+    [...navItems, ...doctorItems, ...blogItems, ...centerItems, ...serviceItems, ...contactItems].forEach((item) => {
+      const key = `${item.label}__${item.href}`;
+      if (!deduped.has(key)) deduped.set(key, item);
+    });
+    return Array.from(deduped.values());
+  }, [menu.navItems]);
+
+  const filteredSearchItems = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return [];
+    return searchItems
+      .filter((item) => item.label.toLowerCase().includes(query))
+      .slice(0, 8);
+  }, [searchItems, searchQuery]);
+
+  const handleSearchSelect = useCallback((href) => {
+    if (!href) return;
+    if (href.startsWith('tel:')) {
+      window.location.href = href;
+    } else {
+      router.push(href);
+    }
+    setIsSearchActive(false);
+    setSearchQuery('');
+  }, [router]);
+
+  const handleSearchSubmit = useCallback((e) => {
+    e.preventDefault();
+    if (!searchQuery.trim()) return;
+    if (filteredSearchItems.length) {
+      handleSearchSelect(filteredSearchItems[0].href);
+    }
+  }, [filteredSearchItems, handleSearchSelect, searchQuery]);
+
+  const handleSearchIconClick = useCallback(() => {
+    if (!isSearchActive) {
+      setIsSearchActive(true);
+      return;
+    }
+    if (searchQuery.trim() && filteredSearchItems.length) {
+      handleSearchSelect(filteredSearchItems[0].href);
+    } else {
+      setIsSearchActive(false);
+    }
+  }, [filteredSearchItems, handleSearchSelect, isSearchActive, searchQuery]);
+
   const handleOpenMobileSubmenu = index => {
     setOpenMobileSubmenuIndex(prev => {
       if (prev.includes(index)) {
@@ -601,34 +720,18 @@ const Header = ({ isTopBar, variant }) => {
             <div className="cs_top_bar_in cs_top_bar_desktop">
               <div className="cs_top_bar_left">
                 <div className="cs_location_info">
-                  <div className="cs_location_icon">
-                    <Image
-                      src={getAssetPathClient('/assets/img/icons/Location.png')}
-                      alt="Location"
-                      width={20}
-                      height={20}
-                    />
-                  </div>
-                  <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
-                  <div className="cs_top_bar_separator"></div>
-                  <span className="cs_timing_text">India Mon - Sun: 9:00 am - 6:00 pm</span>
+                  <a href="mailto:info@seedsofinnocence.com" className="cs_location_text">
+                    <FaEnvelope style={{ color: '#df3655', marginRight: '10px' }} />
+                    info@seedsofinnocence.com
+                  </a>
+                  <span className="cs_top_bar_separator">&nbsp;</span>
+                  <a href="tel:+91-9810350512" className="cs_timing_text">
+                    <IoCall style={{ color: '#df3655', marginRight: '6px' }} />
+                    +91 98103 50512
+                  </a>
                 </div>
               </div>
               <div className="cs_top_bar_right">
-                <a href="/doctors/dr-gauri-agarwal-ivf-specialist/" className="cs_location_text">
-                  Dr. Gauri Agarwal
-                </a>
-                <a href="tel:+91-9810350512" className="cs_phone_banner">
-                  <div className="cs_phone_icon">
-                    <Image
-                      src={getAssetPathClient('/assets/img/icons/Call.png')}
-                      alt="Phone"
-                      width={20}
-                      height={20}
-                    />
-                  </div>
-                  <span className="cs_phone_text">9810350 512</span>
-                </a>
                 <div className="cs_social_icons">
                   <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                     <Image
@@ -670,31 +773,18 @@ const Header = ({ isTopBar, variant }) => {
               <div className="cs_top_bar_content">
                 <div className="cs_top_bar_left">
                   <div className="cs_location_info">
-                    <div className="cs_location_icon">
-                      <Image
-                        src={getAssetPathClient('/assets/img/icons/Location.png')}
-                        alt="Location"
-                        width={20}
-                        height={20}
-                      />
-                    </div>
-                    <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
-                    <div className="cs_top_bar_separator"></div>
-                    <span className="cs_timing_text">India Mon - Sun: 9:00 am - 7:00 pm,</span>
+                    <a href="mailto:info@seedsofinnocence.com" className="cs_location_text">
+                      <FaEnvelope style={{ color: '#df3655', marginRight: '6px' }} />
+                      info@seedsofinnocence.com
+                    </a>
+                    <span className="cs_top_bar_separator">&nbsp;</span>
+                    <a href="tel:+91-9810350512" className="cs_timing_text">
+                      <IoCall style={{ color: '#df3655', marginRight: '6px' }} />
+                      9810350 512
+                    </a>
                   </div>
                 </div>
                 <div className="cs_top_bar_right">
-                  <a href="tel:+91-9810350512" className="cs_phone_banner">
-                    <div className="cs_phone_icon">
-                      <Image
-                        src={getAssetPathClient('/assets/img/icons/Call.png')}
-                        alt="Phone"
-                        width={20}
-                        height={20}
-                      />
-                    </div>
-                    <span className="cs_phone_text">9810350 512</span>
-                  </a>
                   <div className="cs_social_icons">
                     <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
@@ -735,31 +825,18 @@ const Header = ({ isTopBar, variant }) => {
               <div className="cs_top_bar_content">
                 <div className="cs_top_bar_left">
                   <div className="cs_location_info">
-                    <div className="cs_location_icon">
-                      <Image
-                        src={getAssetPathClient('/assets/img/icons/Location.png')}
-                        alt="Location"
-                        width={20}
-                        height={20}
-                      />
-                    </div>
-                    <span className="cs_location_text">Malviya Nagar, New Delhi 110017</span>
-                    <div className="cs_top_bar_separator"></div>
-                    <span className="cs_timing_text">India Mon - Sun: 9:00 am - 7:00 pm,</span>
+                    <a href="mailto:info@seedsofinnocence.com" className="cs_location_text">
+                      <FaEnvelope style={{ color: '#df3655', marginRight: '6px' }} />
+                      info@seedsofinnocence.com
+                    </a>
+                    <span className="cs_top_bar_separator">|</span>
+                    <a href="tel:+91-9810350512" className="cs_timing_text">
+                      <IoCall style={{ color: '#df3655', marginRight: '6px' }} />
+                      9810350 512
+                    </a>
                   </div>
                 </div>
                 <div className="cs_top_bar_right">
-                  <a href="tel:+91-9810350512" className="cs_phone_banner">
-                    <div className="cs_phone_icon">
-                      <Image
-                        src={getAssetPathClient('/assets/img/icons/Call.png')}
-                        alt="Phone"
-                        width={20}
-                        height={20}
-                      />
-                    </div>
-                    <span className="cs_phone_text">9810350 512</span>
-                  </a>
                   <div className="cs_social_icons">
                     <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
@@ -1253,34 +1330,51 @@ const Header = ({ isTopBar, variant }) => {
                   </span>
                 </div>
                 <div className="cs_search_wrap">
-                  {/* <div
+                  <div
                     className="cs_search_toggle cs_center"
-                    onClick={() => setIsSearchActive(!isSearchActive)}
+                    onClick={handleSearchIconClick}
                   >
                     <i>
                       <HiMiniMagnifyingGlass />
                     </i>
-                  </div> */}
+                  </div>
                   <form
                     action="#"
-                    className={`cs_header_search_form ${isSearchActive ? 'active' : ''
-                      }`}
+                    onSubmit={handleSearchSubmit}
+                    className={`cs_header_search_form cs_header_search_form_static ${isSearchActive ? 'active' : ''}`}
                   >
                     <div className="cs_header_search_form_in">
                       <input
                         type="text"
                         placeholder="Search"
                         className="cs_header_search_field"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
                       />
-                      <button className="cs_header_submit_btn">
-                        <i>
-                          <HiMiniMagnifyingGlass />
-                        </i>
-                      </button>
+                      {isSearchActive && searchQuery.trim() && (
+                        <ul className="cs_header_search_results">
+                          {filteredSearchItems.length > 0 ? (
+                            filteredSearchItems.map((item, idx) => (
+                              <li key={`${item.href}-${idx}`}>
+                                <button
+                                  type="button"
+                                  onClick={() => handleSearchSelect(item.href)}
+                                  className="cs_header_search_result_btn"
+                                >
+                                  <span>{item.label}</span>
+                                  <small>{item.type}</small>
+                                </button>
+                              </li>
+                            ))
+                          ) : (
+                            <li className="cs_header_search_no_result">No results found</li>
+                          )}
+                        </ul>
+                      )}
                     </div>
                   </form>
                 </div>
-                <Link href={menu.btnUrl} className="cs_btn cs_style_1 cs_color_1" prefetch={false}>
+                <Link href={menu.btnUrl} className="cs_btn cs_style_1 cs_color_1 cs_book_visit_btn" prefetch={false}>
                   <span>{menu.btnText}</span>
                   <i>
                     <FaAnglesRight />
@@ -1311,7 +1405,7 @@ const Header = ({ isTopBar, variant }) => {
           </div>
         )}
       </header>
-      <FertilityCalculatorFab />
+      <FloatingButton />
       {isTopBar && <div className="cs_site_header_spacing_150" />}
     </>
   );

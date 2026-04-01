@@ -890,29 +890,40 @@
   },
   {
     "slug": "dr-sonia-raju",
-    "uspTitle": "IVF & Obstetrics <br /> <span class=\"cs_accent_color\">Dr. Sonia Raju</span>",
-    "name": "Dr. Sonia Raju",
+    "uspTitle": "Leading IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Sonia Raju</span>",
+    "headerImage": "/assets/img/Doctor-Headers/sonia.png",
+    "name": "Dr. Sonia Raju ",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/sonia.jpg",
     "description": [
-      "MBBS, MS (OBGYN), DNB, FRM, DRM. Fertility Specialist & Gynaecologist with expertise in IVF, reproductive medicine, and high-risk obstetrics. Currently at Seeds of Innocence, Kochi, helping couples achieve their dream of parenthood with compassionate, evidence-based care."
+      "Dr. Sonia Raju Aluvilayil is a highly skilled fertility expert and IVF expert with more than 10 years of extensive experience in the field of obstetrics, gynecology, and reproductive medicine. Also, she brings deep understanding and global exposure of infertility treatment protocols, having worked across reputed institutions in India and abroad. She is well-known for her patient-centric approach and proficiency in treating high-risk pregnancies, difficult infertility cases, and recurrent IVF failures. Also, she is now a proud member of the Seeds of Innocens IVF family."
     ],
-    "location": "Kochi-Kerala",
+    "location": "Kochi, Kerala",
     "email": "drsoniaraju@seedsofinnocens.com",
     "qualification": "MBBS, MS (OBGYN), DNB, FRM, DRM",
     "specialization": "IVF, Unexplained Infertility, Recurrent Pregnancy Loss",
-    "experience": "7+ years",
+    "experience": "10+ years",
     "workExperience": [
-      "2018 to 2019 - Assistant Professor at GMC Latur",
-      "2020 - Fellow in reproductive medicine at Craft Hospital, Kerala",
-      "2022- 2025 Specialist in Dept of obstetrics and gynecology, Ibra hospital, Oman",
-      "2025- IVF Consultant at Seeds of innocence, Kochi"
+      "Dr. Sonia Raju started her career with a 3-year residency in Obstetrics and Gynecology at TNMC Mumbai, where she has gained hands-on experience in managing difficult cases such as placenta previa and difficult cesarean deliveries.", 
+      "Moreover, she served as an Assistant Professor at GMC Latur, handling more than 8000 deliveries annually and training residents in both clinical and surgical procedures.",
+      "She pursued a Fellowship in Reproductive Medicine at the prestigious Craft Hospital & Research Centre, Kerala, where she was trained in handling complex male and female infertility cases, which include ovulation induction, IVF, IUI/ICSI, and Embryology Lab techniques.", 
+      "She has independently performed oocyte retrievals, IUIs, follicular scans, and embryo transfers. Also, she has been involved in crucial obstetric cases, which include multiple pregnancies, placenta previa, and molar pregnancies."
     ],
     "education": [
-      "FELLOWSHIP IN REPRODUCTIVE MEDICINE(FRM)",
-      "DIPLOMA IN REPRODUCTIVE MEDICINE(DRM)"
+      "MBBS - L.T.M.M.C Mumbai (2013)",
+      "MUHS Maharashtra",
+      "MS (Obstetrics and Gynecology) - T.N.M.C Mumbai (2018)",
+      "MUHS Maharashtra",
+      "DNB (OBGY) - National Board of Examinations, New Delhi",
+      "FRM - Fellowship in Reproductive Medicine - Craft Hospital and Research Centre, Kerala (2020)",
+      "MRCOG (UK) - Royal College of Obstetricians and Gynecologists, London",
+      "DRM diploma in reproductive medicine- Keil University, Germany"
     ],
-    "awards": [],
+    "awards": [
+      "Genuine Empty Follicle Syndrome: Role of Double Trigger and Delayed Oocyte Retrieval (DTDO)- paper published in JHRS 2021",
+      "An audit of cesarean section rate in a regional hospital in Oman - poster presentation in RCOG World Congress 2024",
+      "Incidental finding of placenta accreta in LSCS - poster presentation at RCOG World Congress 2024"
+    ],
     "progressBars": [
       {
         "label": "IVF Procedures",
