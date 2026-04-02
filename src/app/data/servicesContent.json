@@ -1238,7 +1238,8 @@
     }
   },
   "cryopreservation": {
-    "uspTitle": "Cryopreservation <span class=\"cs_accent_color\">(Egg, Sperm & Embryos)</span>",
+    "uspTitle": "Cryopreservation <br/> <span class=\"cs_accent_color\">(Egg, Sperm & Embryos)</span>",
+    "headerImage": "/assets/img/Services/Cryopreservation.png",
     "title": "Cryopreservation",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
@@ -1251,142 +1252,33 @@
         {
           "heading": "What is Cryopreservation?",
           "paragraphs": [
-            "Cryopreservation is a process that involves freezing and storing biological materials at very low temperatures (typically -196°C using liquid nitrogen) to preserve them for future use. In fertility treatment, cryopreservation is used to store eggs, sperm, embryos, and ovarian tissue.",
-            "This advanced technique allows individuals and couples to preserve their fertility for various reasons, including medical treatments, career planning, or personal choice."
-          ],
-          "sideImage": "/assets/img/recent_post2.jpg"
-        },
-        {
-          "heading": "Types of Cryopreservation",
-          "paragraphs": [
-            "At Seeds of Innocence, we offer various types of cryopreservation services:"
-          ],
-          "listItems": [
-            "Egg Freezing (Oocyte Cryopreservation)",
-            "Sperm Freezing (Sperm Cryopreservation)",
-            "Embryo Freezing (Embryo Cryopreservation)",
-            "Ovarian Tissue Freezing",
-            "Testicular Tissue Freezing"
+            "People experience the same natural ability to have children as they do to perform essential bodily functions like breathing, walking, eating, and sleeping. The method that leads up to pregnancy is also undeniably beautiful, but while having sex, sometimes conception may not be as easy and quick as you may have thought. Women who succeed in conceiving a couple of months after unprotected sexual activity face anxiety because of the rising infertility rates."
           ]
         },
         {
-          "heading": "Benefits of Cryopreservation",
+          "heading": "Why is cryopreservation done?",
           "paragraphs": [
-            "Cryopreservation offers numerous benefits:"
-          ],
-          "listItems": [
-            "Preserves fertility for cancer patients before treatment",
-            "Allows family planning flexibility",
-            "Enables multiple IVF cycles from one egg retrieval",
-            "Reduces the need for repeated ovarian stimulation",
-            "Provides backup options for fertility treatment",
-            "Helps preserve fertility for medical or personal reasons"
+            "Cryopreservation procedure allows freezing of the eggs, sperm, or embryos for future use. In IVF, three cryopreservation methods are utilized during the treatment process. Oocyte cryopreservation, or Egg Freezing Oocyte cryopreservation, allows you, at any desired time later in the future, to use these frozen eggs.",
+            "Women can use their preserved eggs when they want to become pregnant. Women can use this method to reduce anxiety about chromosomal abnormalities, which become more frequent after age 35. The clinical lab can thaw frozen oocytes, which can then be combined with sperm. The fertilized egg will create an embryo, which will undergo implantation into the uterus during the IVF cycle.",
+            "IVF users need to preserve their unused harvested eggs through oocyte cryopreservation because it helps them with future family planning. People who need assistance in getting pregnant can receive your frozen eggs as a gift. Oocyte cryopreservation enables women to store their eggs who require medical treatment that makes them unable to produce eggs because of cancer therapy.",
+            "Procedure: Oocyte preservation has the following steps. Your doctor will deliver Ovarian stimulation medications, which will result in your body creating multiple eggs. The hospital performs egg retrieval, which is a minor surgical procedure that removes the eggs from the ovaries. The eggs are then frozen and stored in liquid nitrogen.",
+            "Egg retrieval through sedation: A transvaginal ultrasound uses a vaginal probe to detect follicles through its insertion method, which enables the identification of follicles. The procedure starts with a needle insertion, which enables the removal of eggs from the follicles. The standard procedure allows for the retrieval of about 15 eggs during each cycle. The procedure will cause you to experience mild discomfort and cramping symptoms that will happen after its completion. The process of freezing begins with the collection of retrieved eggs, which undergo cooling until they reach subzero temperatures for their future storage.",
+            "Vitrification stands as the most widely used technique for egg freezing because it enables rapid freezing during the freezing process. The cooling process uses cryoprotectants to prevent ice crystals from forming. The process of Slow freezing allows for egg preservation through its freezing method. Vitrification or rapid freezing stands as the most effective method because it diminishes damage risks to oocytes while increasing egg survival rates through the freezing and thawing process."
           ]
         },
         {
-          "heading": "The Cryopreservation Process",
+          "heading": "Embryo Cryopreservation",
           "paragraphs": [
-            "The cryopreservation process involves several steps:"
-          ],
-          "listItems": [
-            "Initial consultation and fertility assessment",
-            "Hormonal stimulation (for egg freezing)",
-            "Collection of eggs, sperm, or embryos",
-            "Laboratory processing and preparation",
-            "Freezing using vitrification technique",
-            "Storage in liquid nitrogen tanks",
-            "Long-term monitoring and maintenance"
+            "The doctor will administer drugs to the woman so she can produce multiple eggs. The retrieved eggs need to undergo fertilization, which happens through the partner's sperm introduction. The process of freezing fertilized eggs or embryos occurs three to five days after fertilization. The slow freezing method involves freezing embryos at a gradual pace, which takes two to four hours. The process of rapid freezing enables embryos to freeze immediately when they enter the liquid nitrogen environment, which exists at subzero temperatures. You can use cryopreservation to maintain your ability to have children as an alternative to immediate parenthood. Cryopreservation serves as a valuable solution for your IVF process or previous IVF failures to manage your infertility difficulties. Understanding cryopreservation requires you to evaluate specific elements before proceeding. Your doctor will ask you to undergo fertility testing, which will determine your suitability for cryopreservation."
           ]
-        },
+        }, 
         {
-          "heading": "Storage and Safety",
+          "heading": "Risks Associated with Cryopreservation",
           "paragraphs": [
-            "At Seeds of Innocence, we maintain the highest standards for cryopreservation storage:"
-          ],
-          "listItems": [
-            "State-of-the-art cryogenic storage facilities",
-            "24/7 monitoring systems",
-            "Backup storage systems",
-            "Comprehensive documentation and tracking",
-            "Regular quality checks and maintenance"
-          ],
-          "bottomImage": "/assets/img/recent_post2.jpg"
+            "Cryopreservation and IVF are generally considered safe procedures. Scientific studies have demonstrated that cryopreservation of sperm, eggs, or embryos does not pose any health risks to the people who undergo the procedure. The children who are born through the process of cryopreservation using embryos or oocytes will not have any congenital disabilities or birth defects."
+            ]
         }
       ]
-    },
-    "treatmentContent": {
-      "whoNeeds": {
-        "paragraphs": [
-          "Cryopreservation is used by individuals and couples who need to preserve fertility or store genetic material for future use."
-        ],
-        "listItems": [
-          "Cancer patients before treatment",
-          "Couples with excess embryos from IVF",
-          "Women delaying childbearing (egg freezing)",
-          "Men storing sperm before treatment or deployment",
-          "Those pursuing ovarian or testicular tissue preservation"
-        ]
-      },
-      "howItWorks": {
-        "paragraphs": [
-          "Biological material (eggs, sperm, embryos, or tissue) is processed in the lab and frozen using vitrification or other proven techniques. It is stored in liquid nitrogen at -196°C and can be thawed when needed for treatment."
-        ]
-      },
-      "procedure": {
-        "paragraphs": [
-          "The cryopreservation process involves:"
-        ],
-        "steps": [
-          {
-            "title": "Initial consultation and fertility assessment",
-            "description": "Evaluation and planning based on what is being frozen (eggs, sperm, embryos, or tissue)."
-          },
-          {
-            "title": "Stimulation or collection",
-            "description": "For eggs: hormonal stimulation and retrieval. For sperm or tissue: collection as per protocol."
-          },
-          {
-            "title": "Laboratory processing",
-            "description": "Samples are prepared and frozen using vitrification or appropriate technique."
-          },
-          {
-            "title": "Storage",
-            "description": "Storage in liquid nitrogen with long-term monitoring and maintenance."
-          }
-        ]
-      },
-      "benefits": {
-        "items": [
-          "Preserves fertility for cancer patients",
-          "Family planning flexibility",
-          "Backup options for IVF",
-          "Safe, monitored storage"
-        ]
-      },
-      "successRate": {
-        "paragraphs": [
-          "Survival and success rates after thawing depend on the type of material and technique. Our team maintains high standards and will discuss expected outcomes with you."
-        ]
-      },
-      "risks": {
-        "paragraphs": [
-          "Risks depend on the type of cryopreservation (e.g. egg retrieval risks for egg freezing). Storage is highly regulated and monitored."
-        ],
-        "listItems": [
-          "Not all samples survive thawing",
-          "Long-term storage costs"
-        ]
-      },
-      "recovery": {
-        "paragraphs": [
-          "Recovery is similar to the underlying procedure (e.g. egg retrieval if freezing eggs). No ongoing recovery for storage itself."
-        ]
-      },
-      "cost": {
-        "paragraphs": [
-          "Cost includes processing, freezing, and annual or long-term storage. Ask for a detailed breakdown at your consultation."
-        ]
-      }
     }
   },
   "ovulation-induction": {

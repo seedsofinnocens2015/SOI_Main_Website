@@ -315,29 +315,32 @@
   },
   {
     "slug": "dr-aiman-akram",
-    "uspTitle": "Leadership & IVF Care <br /> <span class=\"cs_accent_color\">Dr. Aiman Akram</span>",
+    "uspTitle": "IVF & Medicine Consultant <br /> <span class=\"cs_accent_color\">Dr. Aiman Akram</span>",
     "headerImage": "/assets/img/Doctor-Headers/aiman.png",
     "name": "Dr. Aiman Akram",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/aiman.jpg",
     "description": [
-      "Dr. Aiman Akram is a young and charismatic Reproductive Medicine and IVF expert, holding skilled experience in the field for over 7 years, with a distinguished dexterity in modern techniques and regenerative therapies in infertility. She is compassionate and dedicated towards alleviating the stigma of infertility by providing the best individualised treatment to her patients. She is working as Clinical Head and Senior Fertility Consultant at Seeds of Innocens IVF, Agra."
+      "Dr. Aiman Akram is one of the best clinicians of IVF and Reproductive Medicine in Seeds of Innocens IVF Agra. She exhibits dynamic charisma while working in her field of expertise for more than eight years because she possesses advanced skills in modern infertility treatment methods. Moreover, she provides personalized treatment to her patients because she wants to eliminate infertility stigma through her work. She holds the position of clinical head while serving as a senior fertility consultant for Seeds of Innocens IVF Agra."
     ],
     "location": "Agra-Uttarpradesh",
     "email": "draimanakram@seedsofinnocens.com",
     "qualification": "MBBS, MS (Obstetrics & Gynecology), FRM",
-    "specialization": "IVF, Male Factor Infertility, Advanced ART Techniques",
-    "experience": "7+ years",
+    "specialization": "IVF, Reproductive Medicine, Advanced ART Techniques",
+    "experience": "8+ years",
     "workExperience": [
-      "With over 7 years of experience, she is well versed with the latest developments of Reproductive Medicine, with special interests in Recurrent Pregnancy Losses and previous IVF failures."
+      "With over eight years of experience, Dr. Aiman is a highly skilled expert in Reproductive Medicine. ",
+      "She provides personalized treatment, recognizing that every couple is unique in their own way. ",
+      "Dr. Aiman is committed to actively eliminate the societal stigma associated with infertility through her science-backed, compassionate, and holistic approach."
     ],
     "education": [
-      "MBBS from KMC, Manipal",
-      "MS-OBGYN Dr. B R Ambedkar Med college, Bangalore",
-      "FRM- IIRRH Milann Fertility, Bangalore"
+      "KMC Manipal awarded him the MBBS degree. The MS-OBGYN degree was obtained from Dr. B. R. Ambedkar Medical College.",
+      "The FRM credential was awarded to him by IIRRH Milann Fertility in Bangalore."
     ],
     "awards": [
-      "Golden Aim Most Emerging Obstetrician and Gynaecologist in UP, 2025. Best Poster for Placental Teratoma in Life Conference, 2017. Various papers have been published in national and international journals."
+      "The Golden Aim Most Emerging Obstetrician and Gynaecologist award was given to her in 2025 for her achievements in Uttar Pradesh. ",
+      "The Life Conference 2017 awarded her the Best Poster award for her research work on Placental Teratoma. ",
+      "Several academic papers have been published in both National and International Journals."
     ],
     "progressBars": [
       {
@@ -452,20 +455,31 @@
   },
   {
     "slug": "dr-preeti",
-    "uspTitle": "PCOS & Fertility <br /> <span class=\"cs_accent_color\">Dr. Preeti</span>",
+    "uspTitle": "Advanced IVF & Fertility Specialist <span class=\"cs_accent_color\">Dr. Preeti</span>",
     "name": "Dr. Preeti",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/preeti.jpg",
     "description": [
-      "Dr. Preeti is a dedicated IVF specialist with expertise in reproductive medicine and infertility management. She has a special focus on treating couples with ovulatory disorders and polycystic ovary syndrome.",
-      "Her patient-centered approach ensures comprehensive care and support throughout the treatment process. Dr. Preeti is known for her empathetic nature and ability to connect with patients.",
-      "She is committed to staying updated with the latest advancements in fertility medicine and applying them to improve patient outcomes."
+      "Dr. Preeti is a skilled and compassionate Gynaecologist & Obstetrician with more than 6 years of clinical experience, who specializes in high-risk pregnancies, laparoscopic & infertility gynaecological surgery. She is a gold medalist in MS obstetrics & Gynaecology as she combines scientific precision with a patient-centric, empathetic approach. Her professional journey includes successful tenures at well-reputed government medical colleges and hospitals across Uttar Pradesh, where she consistently delivered great surgical and patient care outcomes."
     ],
-    "location": "Kanpur-Uttarpradesh",
+    "location": "Kanpur, Uttarpradesh",
     "email": "drpreeti@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), Certificate in Laparoscopic Surgery",
     "specialization": "IVF, Ovulatory Disorders, PCOS Management",
-    "experience": "8+ Years",
+    "experience": "6+ Years",
+    "workExperience": [
+      "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine, Diploma and Training in Ultrasonography (USG), and Fellowship in Laparoscopy."
+    ],
+    "education": [
+      "MS – Obstetrics & Gynaecology (Gold Medalist) – UPUMS, Saifai",
+      "MBBS – GSVM Medical College, Kanpur",
+      "Diploma in Ultrasound Imaging – Bilmed, New Delhi",
+      "Certificate in Laparoscopic Surgery – Saidham Academy, Maharashtra",
+      "Critical Care in Obstetrics – Medvarsity"
+    ],
+    "awards": [
+      "Gold Medalist in MS Obstetrics and Gynaecology"
+    ],
     "progressBars": [
       {
         "label": "IVF Procedures",
@@ -987,29 +1001,29 @@
   },
   {
     "slug": "dr-sneha-narayan",
-    "uspTitle": "Guidance & IVF Care <br /> <span class=\"cs_accent_color\">Dr. Sneha Narayan</span>",
+    "uspTitle": "Senior IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Sneha Narayan</span>",
+    "headerImage": "/assets/img/Doctor-Headers/sneha.png",
     "name": "Dr. Sneha Narayan",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/Dr Sneha Narayan.png",
     "description": [
-      "Dedicated gynaecologist & infertility specialist with strong expertise in reproductive medicine & women's health. Skilled in IUI, IVF & experienced in guiding couples to turn their parenthood dreams into reality with a blend of advanced medical knowledge and compassionate care. Passionate about breaking infertility myths & spreading awareness, providing patient-centric solutions that bring positive results. Known for her empathetic, caring, and efficient nature, continuous learning, and contributing to the field through awareness campaigns & infertility camps"
+      "Dr. Sneha Narayan is an experienced IVF specialist with over 12 years of experience in reproductive medicine and infertility management. She also specializes in treating PCOS, Ovulatory disorders, Endometriosis, recurrent pregnancy loss, and evidence-based care for every couple."
     ],
     "location": "Kolkata-Westbengal",
     "email": "drsnehanarayan@seedsofinnocens.com",
-    "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in IVF",
-    "specialization": "IVF, ICSI, Advanced Reproductive Techniques",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), DNB, FRM, FMAS",
+    "specialization": "IVF, ICSI, PCOS, Ovulatory Disorders, Endometriosis, Recurrent Pregnancy Loss, Recurrent Implantation Failure",
     "experience": "12+ years",
     "workExperience": [
-      "Initially working in a government medical College in West Bengal, where she managed both in patient and out patient services, was a bed holder who managed high-risk pregnancies and reproductive diseases, and independently conducted 1000+ complex deliveries, cesarean sections & other gynaecological surgeries. She was also involved in academic activities, teaching, and clinical research.",
-      "Then she worked in some private hospitals in West Bengal before venturing into infertility.",
-      "Thereafter joined an IVF centre and am working specifically to provide fertility evaluation and advanced infertility treatment. She is known for her holistic & patient-centric care with individualized treatment protocols."
+      "With over 12 years of expertise, Dr. Sneha Narayan is a highly experienced IVF specialist in reproductive medicine and infertility management. She specializes in treating ovulatory disorders, PCOS, Endometriosis, recurrent pregnancy loss, and recurrent implantation failure.",
+      "Recognized for her compassionate and patient-centred approach, she supports patients at every stage of their fertility journey with clear communication and empathy. Dr. Sneha Narayan also holds an MBBS, MS, and DNB in Gynecology & Obstetrics with advanced training in reproductive medicine and laparoscopic surgery. She has successfully handled for more than 1000 IVF cases."
     ],
     "education": [
-      "MBBS from Government Medical College, Mangalore",
-      "MS (Obstetrics & Gynecology) from Kasturba Medical College, Mangalore",
-      "Fellowship in IVF from Kasturba Medical College, Mangalore"
+      "MBBS, MS, DNB, FRM, FMAS, MRCOG1"
     ],
-    "awards": [],
+    "awards": [
+      "Best Paper Presentation in BOGSCON 2016"
+    ],
     "progressBars": [
       {
         "label": "IVF Procedures",
@@ -1028,7 +1042,7 @@
         "percentage": 84
       }
     ],
-    "newSlug": "dr-adrija-ghosal-ivf-specialist"
+    "newSlug": "dr-sneha-narayan-ivf-specialist"
   }, 
   {
     "slug": "dr-adrija-ghosal",
