@@ -3,7 +3,10 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
-import React from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { submitUnifiedForm, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 
 const headingData = {
   title: 'Training Registration',
@@ -44,6 +47,38 @@ const trainingPrograms = [
 ];
 
 const Page = () => {
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+    const fd = new FormData(e.target);
+    const payload = {
+      trainingProgram: fd.get('trainingProgram'),
+      name: fd.get('name'),
+      email: fd.get('email'),
+      mobile: fd.get('mobile'),
+      city: fd.get('city'),
+      qualification: fd.get('qualification'),
+      slot: fd.get('slot'),
+    };
+    try {
+      const { ok, data } = await submitUnifiedForm(WEBSITE_FORM_TYPES.TRAINING_REGISTRATION, payload);
+      if (ok) {
+        router.push(getThankYouUrl(THANK_YOU_TYPE.training));
+      } else {
+        setError(data.error || 'Something went wrong.');
+        setIsSubmitting(false);
+      }
+    } catch {
+      setError('Network error.');
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div>
       <Section
@@ -89,7 +124,7 @@ const Page = () => {
               }}>
                 <AccentHeading style={{ marginBottom: '30px' }}>Registration Form</AccentHeading>
 
-                <form className="cs_contact_form">
+                <form className="cs_contact_form" onSubmit={handleSubmit}>
                   <div className="row cs_gap_y_30">
                     <div className="col-md-12">
                       <label className="cs_form_label">
@@ -198,13 +233,19 @@ const Page = () => {
                         </span>
                       </label>
                     </div>
+                    {error ? (
+                      <div className="col-md-12" style={{ color: '#c00', fontSize: '14px' }}>
+                        {error}
+                      </div>
+                    ) : null}
                     <div className="col-md-12">
                       <button
                         type="submit"
+                        disabled={isSubmitting}
                         className="cs_btn cs_style_1 cs_color_1"
                         style={{ width: '100%' }}
                       >
-                        <span>Submit Registration</span>
+                        <span>{isSubmitting ? 'Submitting…' : 'Submit Registration'}</span>
                       </button>
                     </div>
                   </div>

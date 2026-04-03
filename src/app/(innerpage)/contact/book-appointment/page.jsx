@@ -1,6 +1,8 @@
 "use client";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { submitBookAppointment } from '@/app/utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
@@ -50,8 +52,6 @@ const Page = () => {
     center: '',
     message: '',
   });
-
-  const API_BASE_URL = 'https://soi.seedsofinnocens.com';
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -103,16 +103,10 @@ const Page = () => {
     setError('');
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/new-website/book-appointment`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      const { ok, data: result } = await submitBookAppointment(formData);
 
-      const result = await response.json();
-
-      if (result.ok) {
-        router.push('/thank-you?type=appointment');
+      if (ok) {
+        router.push(getThankYouUrl(THANK_YOU_TYPE.appointment));
       } else {
         setError(result.error || 'Something went wrong. Please try again.');
         setIsSubmitting(false);

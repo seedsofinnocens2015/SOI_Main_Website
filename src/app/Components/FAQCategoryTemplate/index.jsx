@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { submitUnifiedForm, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
@@ -9,6 +12,8 @@ import FAQAccordion from '@/app/Components/FAQAccordion';
 
 export default function FAQCategoryTemplate({ pageTitle, heading, description, contentHeading, contentParagraphs, faqs, uspTitle }) {
   const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const headingData = { title: pageTitle, uspTitle };
 
@@ -21,9 +26,29 @@ export default function FAQCategoryTemplate({ pageTitle, heading, description, c
     ],
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    router.push('/contact/book-appointment?type=faq');
+    setIsSubmitting(true);
+    setError('');
+    const fd = new FormData(e.target);
+    const payload = {
+      name: fd.get('name'),
+      phone: fd.get('phone'),
+      question: fd.get('question'),
+      pageTitle,
+    };
+    try {
+      const { ok, data } = await submitUnifiedForm(WEBSITE_FORM_TYPES.FAQ_INQUIRY, payload);
+      if (ok) {
+        router.push(getThankYouUrl(THANK_YOU_TYPE.faq));
+      } else {
+        setError(data.error || 'Something went wrong.');
+        setIsSubmitting(false);
+      }
+    } catch {
+      setError('Network error.');
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -56,21 +81,26 @@ export default function FAQCategoryTemplate({ pageTitle, heading, description, c
                       <label className="cs_form_label">
                         Full Name <span style={{ color: '#df3655' }}>*</span>
                       </label>
-                      <input type="text" required placeholder="Enter your full name" className="cs_form_field" />
+                      <input name="name" type="text" required placeholder="Enter your full name" className="cs_form_field" />
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
                         Phone Number <span style={{ color: '#df3655' }}>*</span>
                       </label>
-                      <input type="tel" required placeholder="Enter your phone number" className="cs_form_field" />
+                      <input name="phone" type="tel" required placeholder="Enter your phone number" className="cs_form_field" />
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">Your Question</label>
-                      <textarea rows="1" placeholder="Type your concern here" className="cs_form_field" style={{ resize: 'vertical' }} />
+                      <textarea name="question" rows="1" placeholder="Type your concern here" className="cs_form_field" style={{ resize: 'vertical' }} />
                     </div>
+                    {error ? (
+                      <div className="col-md-12" style={{ color: '#c00', fontSize: '14px' }}>
+                        {error}
+                      </div>
+                    ) : null}
                     <div className="col-md-12">
-                      <button type="submit" className="cs_btn cs_style_1 cs_color_1">
-                        <span>Submit & Book Consultation</span>
+                      <button type="submit" disabled={isSubmitting} className="cs_btn cs_style_1 cs_color_1">
+                        <span>{isSubmitting ? 'Submitting…' : 'Submit & Book Consultation'}</span>
                       </button>
                     </div>
                   </div>

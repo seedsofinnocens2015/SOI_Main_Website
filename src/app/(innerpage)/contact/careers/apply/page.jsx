@@ -5,6 +5,10 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { submitUnifiedFormMultipart, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 
 const headingData = {
   title: 'Apply for Position',
@@ -73,7 +77,31 @@ const jobOpenings = [
   },
 ];
 
-const page = () => {
+const Page = () => {
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+    const fd = new FormData(e.target);
+    fd.append('formType', WEBSITE_FORM_TYPES.CAREERS_APPLY);
+    try {
+      const { ok, data } = await submitUnifiedFormMultipart(fd);
+      if (ok) {
+        router.push(getThankYouUrl(THANK_YOU_TYPE.careersApply));
+      } else {
+        setError(data.error || 'Something went wrong.');
+        setIsSubmitting(false);
+      }
+    } catch {
+      setError('Network error.');
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div>
       <Section
@@ -119,7 +147,7 @@ const page = () => {
               }}>
                 <AccentHeading style={{ marginBottom: '30px' }}>Application Form</AccentHeading>
 
-                <form className="cs_contact_form">
+                <form className="cs_contact_form" onSubmit={handleSubmit}>
                   <div className="row cs_gap_y_30">
                     <div className="col-md-12">
                       <label className="cs_form_label">
@@ -286,13 +314,19 @@ const page = () => {
                         </span>
                       </label>
                     </div>
+                    {error ? (
+                      <div className="col-md-12" style={{ color: '#c00', fontSize: '14px' }}>
+                        {error}
+                      </div>
+                    ) : null}
                     <div className="col-md-12">
                       <button
                         type="submit"
+                        disabled={isSubmitting}
                         className="cs_btn cs_style_1 cs_color_1"
                         style={{ width: '100%' }}
                       >
-                        <span>Submit Application</span>
+                        <span>{isSubmitting ? 'Submitting…' : 'Submit Application'}</span>
                       </button>
                     </div>
                   </div>
@@ -321,5 +355,5 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 

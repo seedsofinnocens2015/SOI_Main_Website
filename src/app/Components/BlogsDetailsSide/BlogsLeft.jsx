@@ -3,10 +3,43 @@ import { Rating } from '@smastrom/react-rating';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { FaCalendarAlt, FaUser } from 'react-icons/fa';
+import { submitUnifiedForm, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 
 const BlogsLeft = ({ data }) => {
+  const router = useRouter();
   const [rating, setRating] = useState();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState('');
+
+  const handleAppointmentSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setFormError('');
+    const fd = new FormData(e.target);
+    const payload = {
+      name: fd.get('name'),
+      email: fd.get('email'),
+      phone: fd.get('phone'),
+      service: fd.get('service'),
+      address: fd.get('address'),
+      date: fd.get('date'),
+    };
+    try {
+      const { ok, data: res } = await submitUnifiedForm(WEBSITE_FORM_TYPES.BLOG_APPOINTMENT, payload);
+      if (ok) {
+        router.push(getThankYouUrl(THANK_YOU_TYPE.blogAppointment));
+      } else {
+        setFormError(res.error || 'Something went wrong.');
+        setIsSubmitting(false);
+      }
+    } catch {
+      setFormError('Network error.');
+      setIsSubmitting(false);
+    }
+  };
   return (
     <>
       <div className="col-lg-8">
@@ -122,6 +155,7 @@ const BlogsLeft = ({ data }) => {
           <form
             className="cs_reply_form row cs_row_gap_30 cs_gap_y_30"
             id="comment"
+            onSubmit={handleAppointmentSubmit}
           >
             <div className="col-md-6">
               <input
@@ -167,9 +201,14 @@ const BlogsLeft = ({ data }) => {
             <div className="col-md-6">
               <input type="date" name="date" className="cs_form_field" />
             </div>
+            {formError ? (
+              <div className="col-md-12" style={{ color: '#c00', fontSize: '14px' }}>
+                {formError}
+              </div>
+            ) : null}
             <div className="col-md-12">
-              <button type="submit" className="cs_btn cs_style_1 cs_color_1">
-                Make an Appointment
+              <button type="submit" disabled={isSubmitting} className="cs_btn cs_style_1 cs_color_1">
+                {isSubmitting ? 'Submitting…' : 'Make an Appointment'}
               </button>
             </div>
           </form>

@@ -6,7 +6,10 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { FaStar, FaCheckCircle, FaClock, FaHeart } from 'react-icons/fa';
+import { submitUnifiedForm, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 
 const headingData = {
   title: 'Feedback',
@@ -25,8 +28,43 @@ const ivfContentData = {
 };
 
 const Page = () => {
+  const router = useRouter();
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!rating) {
+      setError('Please select an overall rating.');
+      return;
+    }
+    setError('');
+    setIsSubmitting(true);
+    const fd = new FormData(e.target);
+    const payload = {
+      name: fd.get('name'),
+      email: fd.get('email'),
+      phone: fd.get('phone'),
+      center: fd.get('center'),
+      feedbackType: fd.get('feedbackType'),
+      rating: String(rating),
+      feedback: fd.get('feedback'),
+    };
+    try {
+      const { ok, data } = await submitUnifiedForm(WEBSITE_FORM_TYPES.FEEDBACK, payload);
+      if (ok) {
+        router.push(getThankYouUrl(THANK_YOU_TYPE.feedback));
+      } else {
+        setError(data.error || 'Something went wrong.');
+        setIsSubmitting(false);
+      }
+    } catch {
+      setError('Network error.');
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div>
@@ -74,7 +112,7 @@ const Page = () => {
               }}>
                 <AccentHeading style={{ marginBottom: '30px' }}>Feedback Form</AccentHeading>
 
-                <form className="cs_contact_form">
+                <form className="cs_contact_form" onSubmit={handleSubmit}>
                   <div className="row cs_gap_y_30">
                     <div className="col-md-6">
                       <label className="cs_form_label">
@@ -203,13 +241,19 @@ const Page = () => {
                         </span>
                       </label>
                     </div>
+                    {error ? (
+                      <div className="col-md-12" style={{ color: '#c00', fontSize: '14px' }}>
+                        {error}
+                      </div>
+                    ) : null}
                     <div className="col-md-12">
                       <button
                         type="submit"
+                        disabled={isSubmitting}
                         className="cs_btn cs_style_1 cs_color_1"
                         style={{ width: '100%' }}
                       >
-                        <span>Submit Feedback</span>
+                        <span>{isSubmitting ? 'Submitting…' : 'Submit Feedback'}</span>
                       </button>
                     </div>
                   </div>

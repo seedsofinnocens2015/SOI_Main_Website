@@ -5,6 +5,9 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { submitUnifiedForm, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 import { FaPhoneAlt, FaEnvelope, FaClock, FaCheckCircle, FaGlobe } from 'react-icons/fa';
 
 const headingData = {
@@ -87,7 +90,30 @@ const contactContentData = {
 };
 
 const Page = () => {
+  const router = useRouter();
   const [patientType, setPatientType] = useState('india');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+    const fd = new FormData(e.target);
+    const payload = { ...Object.fromEntries(fd.entries()), patientType };
+    try {
+      const { ok, data } = await submitUnifiedForm(WEBSITE_FORM_TYPES.INTERNATIONAL_CONTACT, payload);
+      if (ok) {
+        router.push(getThankYouUrl(THANK_YOU_TYPE.internationalContact));
+      } else {
+        setError(data.error || 'Something went wrong.');
+        setIsSubmitting(false);
+      }
+    } catch {
+      setError('Network error.');
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div>
@@ -181,7 +207,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <form className="cs_contact_form">
+                <form className="cs_contact_form" onSubmit={handleContactSubmit}>
                   <div className="row cs_gap_y_30">
                     <div className="col-md-6">
                       <label className="cs_form_label">
@@ -317,13 +343,19 @@ const Page = () => {
                         style={{ resize: 'vertical' }}
                       />
                     </div>
+                    {error ? (
+                      <div className="col-md-12" style={{ color: '#c00', fontSize: '14px' }}>
+                        {error}
+                      </div>
+                    ) : null}
                     <div className="col-md-12">
                       <button
                         type="submit"
+                        disabled={isSubmitting}
                         className="cs_btn cs_style_1 cs_color_1"
                         style={{ width: '100%' }}
                       >
-                        <span>Request Call Back</span>
+                        <span>{isSubmitting ? 'Submitting…' : 'Request Call Back'}</span>
                       </button>
                     </div>
                   </div>

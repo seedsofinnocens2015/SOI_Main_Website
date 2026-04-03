@@ -1,6 +1,8 @@
 "use client";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { submitCallBack } from '@/app/utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
@@ -49,8 +51,6 @@ const Page = () => {
     message: '',
   });
 
-  const API_BASE_URL = 'https://soi.seedsofinnocens.com';
-
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     setStepError('');
@@ -92,14 +92,9 @@ const Page = () => {
     setError('');
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/new-website/call-back-form`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-      const result = await response.json();
-      if (result.ok) {
-        router.push('/thank-you?type=call-back');
+      const { ok, data: result } = await submitCallBack(formData);
+      if (ok) {
+        router.push(getThankYouUrl(THANK_YOU_TYPE.callBack));
       } else {
         setError(result.error || 'Something went wrong. Please try again.');
         setIsSubmitting(false);

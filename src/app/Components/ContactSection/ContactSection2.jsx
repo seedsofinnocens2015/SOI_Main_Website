@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import loadBackgroudImages from "../Common/loadBackgroudImages";
 import Image from "next/image";
+import WebsiteContactForm from "../WebsiteContactForm/WebsiteContactForm";
 
 const ContactSection2 = () => {
 
@@ -22,26 +23,7 @@ const ContactSection2 = () => {
               <h2 className="cs_section_title">Book Your Online Appointment <br/>Begin Your IVF Journey Here</h2>
             </div>
             <div className="cs_height_25 cs_height_lg_25"></div>
-            <form className="cs_contact_form row cs_gap_y_30 home_form_area">
-              <div className="col-md-6">
-                <input type="text" name="name" className="cs_form_field" placeholder="Your name" />
-              </div>
-              <div className="col-md-6">
-                <input type="email" name="email" className="cs_form_field" placeholder="Your email" />
-              </div>
-              <div className="col-md-6">
-                <input type="text" name="subject" className="cs_form_field" placeholder="Your Subject" />
-              </div>
-              <div className="col-md-6">
-                <input type="text" name="phone" className="cs_form_field" placeholder="Your phone" />
-              </div>
-              <div className="col-lg-12">
-                <textarea rows="5" name="message" className="cs_form_field" placeholder="Your comments"></textarea>
-              </div>
-              <div className="col-lg-12">
-                <button type="submit" className="cs_btn cs_style_1 cs_color_1 cs_solution_content">Book Appointment</button>
-              </div>
-            </form>
+            <WebsiteContactForm formClassName="cs_contact_form row cs_gap_y_30 home_form_area" />
             </div>
             <div className="col-lg-6">
               <div className="cs_solution_thumbnail cs_bg_filed" data-background="/assets/img/medical_solution.png" >

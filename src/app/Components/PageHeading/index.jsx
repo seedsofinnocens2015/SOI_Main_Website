@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { getAssetPathClient } from '../../utils/assetPath';
+import { submitBookAppointment } from '../../utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '../../utils/thankYou';
 
 const PageHeading = ({ data }) => {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const API_BASE_URL = 'https://soi.seedsofinnocens.com';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,20 +19,17 @@ const PageHeading = ({ data }) => {
       phone: formData.get('phone'),
       date: formData.get('date'),
       time: formData.get('time'),
-      email: 'not-provided@example.com',
+      // Keep email blank for header quick form (no email input here),
+      // so LSQ duplicate checks are not triggered by a fixed placeholder email.
+      email: '',
       center: 'Header Common Form',
       message: 'Appointment requested from header form',
     };
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/new-website/book-appointment`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dataObj),
-      });
-      const result = await response.json();
-      if (result.ok) {
-        router.push('/thank-you?type=appointment');
+      const { ok, data: result } = await submitBookAppointment(dataObj);
+      if (ok) {
+        router.push(getThankYouUrl(THANK_YOU_TYPE.appointment));
       } else {
         alert(result.error || 'Something went wrong.');
         setIsSubmitting(false);

@@ -59,6 +59,43 @@
     "newSlug": "dr-gauri-agarwal-ivf-specialist"
   },
   {
+    "slug": "dr-alpana-razadan",
+    "uspTitle": "Personalised Fertility Care <br /> <span class=\"cs_accent_color\">Dr. Alpana Razadan</span>",
+    "headerImage": "/assets/img/Doctor-Headers/alpana.png",
+    "name": "Dr. Alpana Razadan",
+    "subtitle": "IVF Specialist",
+    "image": "/assets/img/Doctors/alpana.jpg",
+    "description": [
+      "Dr. Alpana Razadan is an experienced IVF specialist with comprehensive expertise in reproductive medicine. She specializes in advanced fertility treatments and has a special interest in helping couples achieve successful pregnancies.",
+      "Her patient-centered approach ensures that every couple receives personalized attention and care. Dr. Razadan is known for her compassionate nature and excellent communication skills.",
+      "She is committed to staying updated with the latest advancements in fertility medicine and applying them to improve patient outcomes."
+    ],
+    "location": "Malviya nagar-New Delhi",
+    "email": "dralpanarazadan@seedsofinnocens.com",
+    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
+    "specialization": "IVF, Advanced Fertility Treatments, Patient Care",
+    "experience": "10+ Years",
+    "progressBars": [
+      {
+        "label": "IVF Procedures",
+        "percentage": 88
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 94
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 78
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 86
+      }
+    ],
+    "newSlug": "dr-alpana-razadan-ivf-specialist"
+  },
+  {
     "slug": "dr-ranjana-mishra",
     "uspTitle": "Empathy & IVF Care <br /> <span class=\"cs_accent_color\">Dr. Ranjana Mishra</span>",
     "name": "Dr. Ranjana Mishra",
@@ -93,43 +130,7 @@
       }
     ],
     "newSlug": "dr-ranjana-mishra-ivf-specialist"
-  },
-  {
-    "slug": "dr-alpana-razadan",
-    "uspTitle": "Personalised Fertility Care <br /> <span class=\"cs_accent_color\">Dr. Alpana Razadan</span>",
-    "name": "Dr. Alpana Razadan",
-    "subtitle": "IVF Specialist",
-    "image": "/assets/img/Doctors/alpana.jpg",
-    "description": [
-      "Dr. Alpana Razadan is an experienced IVF specialist with comprehensive expertise in reproductive medicine. She specializes in advanced fertility treatments and has a special interest in helping couples achieve successful pregnancies.",
-      "Her patient-centered approach ensures that every couple receives personalized attention and care. Dr. Razadan is known for her compassionate nature and excellent communication skills.",
-      "She is committed to staying updated with the latest advancements in fertility medicine and applying them to improve patient outcomes."
-    ],
-    "location": "Malviya nagar-New Delhi",
-    "email": "dralpanarazadan@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
-    "specialization": "IVF, Advanced Fertility Treatments, Patient Care",
-    "experience": "10+ Years",
-    "progressBars": [
-      {
-        "label": "IVF Procedures",
-        "percentage": 88
-      },
-      {
-        "label": "Patient Satisfaction",
-        "percentage": 94
-      },
-      {
-        "label": "Success Rate",
-        "percentage": 78
-      },
-      {
-        "label": "Clinical Expertise",
-        "percentage": 86
-      }
-    ],
-    "newSlug": "dr-alpana-razadan-ivf-specialist"
-  }, 
+  },  
   {
     "slug": "dr-lisha-singh",
     "uspTitle": "Best IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Lisha Singh</span>",
@@ -364,12 +365,13 @@
   },
   {
     "slug": "dr-nivedita-nehal",
-    "uspTitle": "Senior IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Nivedita Nehal</span>",
+    "uspTitle": "Leading IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Nivedita Nehal</span>",
+    "headerImage": "/assets/img/Doctor-Headers/nivedita.png",
     "name": "Dr. Nivedita Nehal",
-    "subtitle": "Senior IVF Specialist",
+    "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/nivedita.jpg",
     "description": [
-      "Dr. Nivedita Nehal is a highly skilled and dedicated specialist in the field of obstetrics & gynecology. She is an expert in her field and brings a profound wealth of knowledge. She is working as an IVF Specialist at Seeds of Innocens IVF in Gorakhpur."
+      "Dr. Nivedita Nehal is an experienced IVF specialist. She is highly skilled and very passionate and dedicated in creating awareness to women’s health and treating them. She is working as senior IVF specialist and center head  at Seeds of Innocens IVF in Gorakhpur."
     ],
     "location": "Gorakhpur-Uttarpradesh",
     "email": "drniveditanehal@seedsofinnocens.com",
@@ -377,11 +379,11 @@
     "specialization": "IVF, PCOS Management, Hormonal Disorders",
     "experience": "7+ years",
     "workExperience": [
-      "With more than 05 years of experience, she has a strong background and knowledge in gynecology and reproductive medicine. She served as a senior resident at AIIMS Bhopal.",
-      "She did her fellowship in reproductive medicine from Ferty9 Hyderabad. And also served as an IVF consultant in Ferty9 Hyderabad."
+      "She has a wide range of experience in the reproductive medicine field. She started as a Junior Resident in Obstetrics and Gynecology at Hindu Rao Hospital, New Delhi. She also worked as senior resident at AIIMS BHOPAL .She  worked in RAINBOW HOSPITAL AND HEALTH CARE hyderabad . She joined as ivf consultant in FERTY9 hyderabad.",
+      "Her experience and skills will help her to handle the difficult cases and help in completing many family dreams."
     ],
     "education": [
-      "She has completed her MBBS from Era Medical College, Lucknow, and MS in Obstetrics and Gynecology from DY Patil Medical College, Kolhapur. Additionally, she did her fellowships in fetal sonography, infertility, and hysteroscopy. She has also registered and earned a Medical Registration certificate from the Medical Council, Madhya Pradesh."
+      "She has completed her MBBS from Era Medical College, Lucknow and MS in Obstetrics and Gynecology from the D.Y Patil Medical College, Kolhapur. Additionally she did her fellowships in fetal sonography, hysteroscopy and infertility. She achieved her FRM degree from ferty9 hyderabad."
     ],
     "awards": [],
     "progressBars": [
