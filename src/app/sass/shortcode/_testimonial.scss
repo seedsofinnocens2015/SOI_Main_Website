@@ -162,11 +162,11 @@
   &.cs_testimonial_card_tinted {
     .cs_testimonial_name,
     .cs_testimonial_text {
-      color: #000000;
+      color: #ffffff;
     }
     .cs_testimonial_rating_wrapper polygon,
     .cs_testimonial_rating_wrapper path {
-      fill: #df3655;
+      fill: #000000;
     }
   }
 
@@ -239,7 +239,7 @@
 .cs_testimonial_name {
   font-size: 13px;
   font-weight: 700;
-  color: #333333;
+  color: #fffefe;
   margin-bottom: 12px;
   text-align: center;
   line-height: 1.3;

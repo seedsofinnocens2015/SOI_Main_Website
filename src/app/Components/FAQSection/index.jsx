@@ -9,9 +9,9 @@ const FAQSection = ({ data }) => {
 
     // Same palette mapping by icon filename
     if (normalized.endsWith('/ffc.svg') || normalized.includes('ffc.svg')) return '#df3655';
-    if (normalized.endsWith('/mfc.svg') || normalized.includes('mfc.svg')) return '#53A7A7';
-    if (normalized.endsWith('/cgt.svg') || normalized.includes('cgt.svg')) return '#E1B41A';
-    if (normalized.endsWith('/fa.svg') || normalized.includes('fa.svg')) return '#38425B';
+    if (normalized.endsWith('/mfc.svg') || normalized.includes('mfc.svg')) return '#4cacae';
+    if (normalized.endsWith('/cgt.svg') || normalized.includes('cgt.svg')) return '#fcca1d';
+    if (normalized.endsWith('/fa.svg') || normalized.includes('fa.svg')) return '#45536e';
 
     return '#df3655';
   };

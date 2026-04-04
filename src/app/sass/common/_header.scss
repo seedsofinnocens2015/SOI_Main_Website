@@ -271,8 +271,20 @@
   .cs_top_bar_right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     flex-shrink: 0;
+  }
+  .cs_top_bar_doctor_link {
+    color: #000000d0;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+    &:hover {
+      color: #df3655;
+    }
   }
   .cs_phone_banner {
     display: flex;

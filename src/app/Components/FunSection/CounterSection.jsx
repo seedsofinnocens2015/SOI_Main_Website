@@ -52,13 +52,13 @@ const CounterSection = ({ data }) => {
 
     // Requested mapping:
     // 20,000 => #df3655
-    // 35+    => #53A7A7
-    // 78%    => #E1B41A
-    // 30+    => #38425B
+    // 35+    => #4cacae
+    // 78%    => #fcca1d
+    // 30+    => #45536e
     if (normalized.startsWith('20,000') || normalized.startsWith('20000')) return '#df3655';
-    if ((normalized.startsWith('35') || normalized === '35+') && normalized.includes('+')) return '#53A7A7';
-    if ((normalized.startsWith('78') || normalized === '78%') && normalized.includes('%')) return '#E1B41A';
-    if ((normalized.startsWith('30') || normalized === '30+') && normalized.includes('+')) return '#38425B';
+    if ((normalized.startsWith('35') || normalized === '35+') && normalized.includes('+')) return '#4cacae';
+    if ((normalized.startsWith('78') || normalized === '78%') && normalized.includes('%')) return '#fcca1d';
+    if ((normalized.startsWith('30') || normalized === '30+') && normalized.includes('+')) return '#45536e';
 
     return '#df3655';
   };

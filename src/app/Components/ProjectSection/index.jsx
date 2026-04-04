@@ -43,9 +43,9 @@ const ProjectSection = ({ data }) => {
     ]);
 
     if (groupCB3148.has(key)) return "#df3655";
-    if (group53A7A7.has(key)) return "#53A7A7";
-    if (groupE1B41A.has(key)) return "#E1B41A";
-    if (group38425B.has(key)) return "#38425B";
+    if (group53A7A7.has(key)) return "#4cacae";
+    if (groupE1B41A.has(key)) return "#fcca1d";
+    if (group38425B.has(key)) return "#45536e";
 
     return "#df3655";
   };

@@ -25,7 +25,7 @@ const StarIcon = () => (
   </svg>
 );
 
-const CARD_BG_COLORS = ['#9de3e3', '#f0d473', '#99ade0'];
+const CARD_BG_COLORS = ['#df3655', '#4cacae', '#fcca1d', '#45536e'];
 
 const TestimonialSection = ({ data }) => {
   // Duplicate testimonials for seamless loop

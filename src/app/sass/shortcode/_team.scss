@@ -862,3 +862,16 @@
     border-radius: 14px;
   }
 }
+
+.cs_youtube_video {
+  margin-top: 40px;
+
+  .cs_section_title_small {
+    margin-bottom: 20px;
+  }
+
+  /* Slider layout + dots match NewsMedia / BestIVFCentre (see _slider.scss, _post.scss) */
+  .cs_slider {
+    margin-bottom: 8px;
+  }
+}

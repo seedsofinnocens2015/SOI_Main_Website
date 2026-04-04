@@ -24,13 +24,9 @@
     ],
     "education": [
       "MD, DNB, MBBS",
-
       "Trained in Embryology at the National University of Singapore",
-
       "Fellowship in IVF & ART from Ghent University, Belgium",
-
       "Stanford University Graduate: School of Business",
-
       "FDGSI Fertility Specialist"
     ],
     "awards": [
@@ -56,25 +52,54 @@
         "percentage": 92
       }
     ],
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Gauri Agarwal — Seeds of Innocens IVF"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Gauri Agarwal — Seeds of Innocens IVF"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Gauri Agarwal — Seeds of Innocens IVF"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Gauri Agarwal — Seeds of Innocens IVF"
+      }
+    ],
     "newSlug": "dr-gauri-agarwal-ivf-specialist"
   },
   {
     "slug": "dr-alpana-razadan",
-    "uspTitle": "Personalised Fertility Care <br /> <span class=\"cs_accent_color\">Dr. Alpana Razadan</span>",
+    "uspTitle": "Genomics and Molecular Biology <span class=\"cs_accent_color\">Dr. Alpana Razadan</span>",
     "headerImage": "/assets/img/Doctor-Headers/alpana.png",
     "name": "Dr. Alpana Razadan",
-    "subtitle": "IVF Specialist",
+    "subtitle": "Genestrings Diagnostic Centre",
     "image": "/assets/img/Doctors/alpana.jpg",
     "description": [
-      "Dr. Alpana Razadan is an experienced IVF specialist with comprehensive expertise in reproductive medicine. She specializes in advanced fertility treatments and has a special interest in helping couples achieve successful pregnancies.",
-      "Her patient-centered approach ensures that every couple receives personalized attention and care. Dr. Razadan is known for her compassionate nature and excellent communication skills.",
-      "She is committed to staying updated with the latest advancements in fertility medicine and applying them to improve patient outcomes."
+      "A highly self-motivated leader with experience of 26+ years in the Life Science industry, working as a Vice President and Head of Lab Services at Genestrings Diagnostic Centre Pvt. Ltd."
     ],
-    "location": "Malviya nagar-New Delhi",
+    "location": "Malviya nagar, New Delhi",
     "email": "dralpanarazadan@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in IVF",
-    "specialization": "IVF, Advanced Fertility Treatments, Patient Care",
-    "experience": "10+ Years",
+    "qualification": "Ph.D in clinical research, Forensic Genetics and DNA Database Technology",
+    "specialization": "Molecular Diagnostics, Genomics, Reproductive Health Science, Next Generation Sequencing Technology, High Throughput Automated DNA Sequencing, Real Time PCR, Micro Array, and Forensics.",
+    "experience": "26+ Years",
+    "workExperience": [
+      "She is a certified 15189:2012 Auditor for International Accreditation Services, U.S.A., and FDAS India.",
+      "Previously, she was associated with Life Technologies (Thermofisher Scientific) as Technical Support Lead, South Asia.",
+      "She has worked on “Development of Tissue Culture-derived vaccine against Japanese Encephalitis Virus” at the National Institute of Immunology, New Delhi, and has several publications to her credit."
+    ],
+    "education": [
+      "She has completed her Ph.D in clinical research and is trained in Forensic Genetics and DNA Database Technology at the University of North Texas Health Science Centre-Graduate School of Biomedical Sciences"
+    ],
+    "awards": [
+      "Molecular Diagnostics, Genomics, Reproductive Health Science, Next Generation Sequencing Technology, High Throughput Automated DNA Sequencing, Real Time PCR, Micro Array, and Forensics.",
+      "She has been instrumental in running the COVID-19 testing laboratory at IGI Airport, handling about 10,000 samples a day.",
+      "Her forte is Quality Management Systems, Research, and Molecular Diagnostics."
+    ],
     "progressBars": [
       {
         "label": "IVF Procedures",
@@ -93,24 +118,39 @@
         "percentage": 86
       }
     ],
-    "newSlug": "dr-alpana-razadan-ivf-specialist"
+    "newSlug": "dr-alpana-razadan-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Alpana Razadan — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-ranjana-mishra",
-    "uspTitle": "Empathy & IVF Care <br /> <span class=\"cs_accent_color\">Dr. Ranjana Mishra</span>",
+    "uspTitle": "Genetic Expert <br /> <span class=\"cs_accent_color\">Dr. Ranjana Mishra</span>",
+    "headerImage": "/assets/img/Doctor-Headers/ranjana.png",
     "name": "Dr. Ranjana Mishra",
-    "subtitle": "IVF Specialist",
+    "subtitle": "Genetic Expert",
     "image": "/assets/img/Doctors/ranjana.jpg",
     "description": [
-      "Dr. Ranjana Mishra is a dedicated IVF specialist with extensive experience in reproductive medicine and infertility management. She specializes in treating couples with various fertility challenges.",
-      "Her holistic approach addresses both medical and emotional aspects of infertility. Dr. Mishra is known for her empathetic approach and ability to provide excellent support to her patients.",
-      "She continuously enhances her knowledge and skills through active participation in medical conferences and training programs."
+      "Dr Ranjana Mishra is a knowledgeable and highly experienced Clinical genetic expert. She works as a Senior consultant Clinical Genetics at Seeds of Innocens IVF, Delhi NCR. Her main focus is to counsel patients about inherited genetic disorders, and personalized reproductive medicine. She helps couples to gain knowledge about the genetic risks and make informed decisions about the fertility journey."
     ],
     "location": "Delhi/NCR",
     "email": "drranjanamishra@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
-    "specialization": "IVF, Infertility Management, Patient Support",
-    "experience": "9+ Years",
+    "qualification": "MBBS, DNB (Obs & Gynae), DNB-SS (Medical Genetics)",
+    "specialization": "Medical Genetics, Obstetrics & Gynaecology, Reproductive Medicine",
+    "experience": "14+ Years",
+    "workExperience": [
+      "She has more than 25 years of experience in the field of medical genetics and obstetrics & gynaecology. Before this, she served as a Senior Medical Officer at Lok Nayak Government Hospital, Delhi; Junior Research Fellow at the Indian Council of Medical Research (ICMR), Delhi; Medical Officer at Sardar Vallabhai Patel Hospital, Delhi; and Senior Resident at Sir Ganga Ram & Sardar Vallabhai Patel Hospital, Delhi."
+    ],
+    "education": [
+      "She completed her MBBS from Motilal Nehru Medical College and DGO from King George’s Medical University. She has also earned a DNB (Obs & Gynae) degree from Army Hospital, Research & Referral, and DNB-SS (Medical Genetics) from Sir Ganga Ram Hospital. She has good expertise in genetic research and technology.",
+      "Dr. Ranjana is actively involved in research and various publications. Her compassionate approach and comprehensive genetic counselling empowers patients"
+    ],
+    "awards": [
+      "Genetic work up of  Primary/secondary infertility, Recurrent pregnancy loss, unexplained still birth, previous affected child with any genetic disorder (thalassemia, SMA, autism etc.), or family history of any genetic disorder including hereditary cancers. She also has expertise in various pre-implantation genetic testing procedures (PGT-A, PGT-SR, PGT-M) ensuring healthy pregnancies for couples"
+    ],
     "progressBars": [
       {
         "label": "IVF Procedures",
@@ -129,8 +169,14 @@
         "percentage": 85
       }
     ],
-    "newSlug": "dr-ranjana-mishra-ivf-specialist"
-  },  
+    "newSlug": "dr-ranjana-mishra-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Ranjana Mishra — Seeds of Innocens IVF"
+      }
+    ]
+  },
   {
     "slug": "dr-lisha-singh",
     "uspTitle": "Best IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Lisha Singh</span>",
@@ -175,7 +221,13 @@
         "percentage": 85
       }
     ],
-    "newSlug": "dr-lisha-singh-ivf-specialist"
+    "newSlug": "dr-lisha-singh-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Lisha Singh — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-monika-maan",
@@ -223,7 +275,13 @@
         "percentage": 83
       }
     ],
-    "newSlug": "dr-monika-mann-ivf-specialist"
+    "newSlug": "dr-monika-mann-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Monika Maan — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-pratik-kakani",
@@ -270,7 +328,13 @@
         "percentage": 82
       }
     ],
-    "newSlug": "dr-pratik-kakani-ivf-specialists"
+    "newSlug": "dr-pratik-kakani-ivf-specialists",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Pratik Kakani — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-disha-datta",
@@ -312,7 +376,13 @@
         "percentage": 82
       }
     ],
-    "newSlug": "dr-disha-datta-choudhury-ivf-specialist"
+    "newSlug": "dr-disha-datta-choudhury-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Disha Datta — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-aiman-akram",
@@ -361,7 +431,13 @@
         "percentage": 84
       }
     ],
-    "newSlug": "dr-aiman-akram-ivf-specialist"
+    "newSlug": "dr-aiman-akram-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Aiman Akram — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-nivedita-nehal",
@@ -404,35 +480,41 @@
         "percentage": 86
       }
     ],
-    "newSlug": "dr-nivedita-nehal-ivf-specialist"
+    "newSlug": "dr-nivedita-nehal-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Nivedita Nehal — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-britika-prakash",
-    "uspTitle": "Science & Parenthood <br /> <span class=\"cs_accent_color\">Dr. Britika Prakash</span>",
+    "uspTitle": "Best IVF Consultant <br /> <span class=\"cs_accent_color\">Dr. Britika Prakash</span>",
+    "headerImage": "/assets/img/Doctor-Headers/britika.png",
     "name": "Dr. Britika Prakash",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/britika.png",
     "description": [
-      "Dr. Britika Prakash is a dedicated IVF specialist with extensive experience in reproductive medicine and infertility management."
+      "Dr Britika Prakash is a fertility specialist renowned for her expertise in advanced IVF treatment and fertility enhancing procedures.skill set encompasses fertility counseling,tailored stimulation protocol,USG guided pickup and embryo transfer and sperm preparation techniques like tesa/ pesa,prp , hysteroscopy and high risk obstetrics and gynaecology surgery."
     ],
-    "location": "Gorakhpur-Uttarpradesh",
+    "location": "Gorakhpur, Uttarpradesh",
     "email": "drbritikaprakash@seedsofinnocens.com",
-    "qualification": "MBBS, MD, FRM",
-    "specialization": "IVF, Infertility Management, Advanced Reproductive Techniques",
+    "qualification": "MBBS, MD, Fellowship in Reproductive Medicine",
+    "specialization": "IVF, Fertility Enhancing Procedures, High Risk Obstetrics and Gynaecology Surgery",
     "experience": "7+ years",
     "workExperience": [
-      "Work experience: KGMU 2015-2018",
-      "Vyas hospital, hp 2018-2019",
-      "Fatima Hospital, Gorakhpur -2019-2020",
-      "Senior resident, BRD Medical College, GKP 2020-2021",
-      "Assistant professor, SBMC Tirupati, 2 years",
-      "Radhakrishna IVF Bangalore 1 year",
-      "Birla IVF gkp 1 year"
+      "Well Versed in High Risk Pregnancy and Gynaecology Surgery.",
+      "Ex Senior Resident at BRD Medical College Gorakhpur",
+      "Ex Consultant at Fatima Hospital Gorakhpur",
+      "Ex Assistant Professor at SBMC Tirupati",
+      "IVF Specialist with Birla Fertility GKP"
     ],
     "education": [
-      "MBBS",
-      "MD",
-      "FRM"
+      "Mbbs king george medical university lko",
+      "MD obs and gynae KGMU lko",
+      "Fellowship in reproductive medicine ( bangalore)",
+      "Senior resident BRD medical College gorakhpur"
     ],
     "awards": [],
     "progressBars": [
@@ -453,7 +535,13 @@
         "percentage": 83
       }
     ],
-    "newSlug": "dr-britika-prakash-ivf-specialist"
+    "newSlug": "dr-britika-prakash-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Britika Prakash — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-preeti",
@@ -500,24 +588,38 @@
         "percentage": 83
       }
     ],
-    "newSlug": "dr-preeti-ivf-specialist"
+    "newSlug": "dr-preeti-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Preeti — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-varkha-chandra",
     "uspTitle": "Endometriosis & IVF <br /> <span class=\"cs_accent_color\">Dr. Varkha Chandra</span>",
+    "headerImage": "/assets/img/Doctor-Headers/varkha.png",
     "name": "Dr. Varkha Chandra",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/varkha.jpg",
     "description": [
-      "Dr. Varkha Chandra is an accomplished IVF specialist known for her expertise in reproductive medicine and infertility management. She has a special interest in treating couples with endometriosis and other gynecological conditions affecting fertility.",
-      "Her comprehensive approach ensures that underlying conditions are properly diagnosed and treated. Dr. Chandra is known for her meticulous attention to detail and personalized care plans.",
-      "She continuously enhances her knowledge and skills to provide the best possible care to her patients."
+      "Dr. Varkha Chandra is a dedicated and compassionate fertility specialist. She works as an IVF specialist at Seeds of Innocens IVF, Meerut. Her main aim is to provide personalized, comprehensive, high-quality care to patients."
     ],
-    "location": "Meerut-Uttarpradesh",
+    "location": "Meerut,Uttarpradesh",
     "email": "drvarkhachandra@seedsofinnocens.com",
-    "qualification": "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
+    "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
     "specialization": "IVF, Endometriosis, Gynecological Conditions",
-    "experience": "8+ Years",
+    "experience": "12+ Years",
+    "workExperience": [
+      "With over 12 years of experience, she sharpens her skills in the reproductive medicine field. Prior, she worked as a Senior Resident at the University College of Medical Sciences. She gained valuable expertise in managing complex obstetric and gynaecological cases. She has expertise in intrapartum sonography that helps in predicting labour outcomes as well as ensuring the best care for expectant mothers."
+    ],
+    "education": [
+      "She has completed her MBBS & MS from Lady Hardinge Medical College, which is followed by an MS from University College of Medical Sciences. With her continuous knowledge and commitment, she hosted various conferences on topics like IUI and diabetes in pregnancy.."
+    ],
+    "awards": [
+      "AOGO consolation prize – Paper presentation in AOGD 35 and NARCHI 20 (2013)"
+    ],
     "progressBars": [
       {
         "label": "IVF Procedures",
@@ -536,7 +638,13 @@
         "percentage": 83
       }
     ],
-    "newSlug": "dr-varkha-chandra-ivf-specialist"
+    "newSlug": "dr-varkha-chandra-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Varkha Chandra — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-debilina-roy",
@@ -554,14 +662,14 @@
     "specialization": "IVF, Personalized Treatment Protocols, Advanced Embryology",
     "experience": "11+ years",
     "workExperience": [
-      "She began her career as a Senior Resident in the Department of Gynecology & Obstetrics at Bankura Sammilani Medical College.", 
-      "Also, she has served as a consultant Gynecologist and Obstetrician at Ramkrishna Mission Sevashrama, Haridwar, and Senior Resident at Chittaranjan National Cancer Institute, Kolkata.", 
+      "She began her career as a Senior Resident in the Department of Gynecology & Obstetrics at Bankura Sammilani Medical College.",
+      "Also, she has served as a consultant Gynecologist and Obstetrician at Ramkrishna Mission Sevashrama, Haridwar, and Senior Resident at Chittaranjan National Cancer Institute, Kolkata.",
       "Furthermore, she is also an attending consultant at Fortis Hospital, Kangra, Consultant Obstetrician and Gynecologist at Coochbehar, West Bengal.",
       "Also a well-recognized consultant at JEEWAN hospital, Delhi, and Consultant Gynecologist at Iswarya Fertility Centre, Kolkata."
     ],
     "education": [
       "Dr. Debilina completed her MBBS degree from R.G. Kar Medical College, Kolkata, and her MS in obstetrics and gynecology from Bankura Sammilani Medical College.",
-      "She has also extended her training with FMAS and DMAs at the World Laparoscopy Hospital, Gurgaon.",  
+      "She has also extended her training with FMAS and DMAs at the World Laparoscopy Hospital, Gurgaon.",
       "She has completed MRCOG from the Royal College of Obstetricians and Gynecologists (UK) and is also recognized as a member of it, and became a European Fellow of Obstetrics and Gynecology ( EFOG-EBCOG).",
       "She holds a highly skilled specialization in obstetrics and gynecology from FACOG, which is the Fellow of the American College of Obstetricians and Gynaecologists."
     ],
@@ -587,7 +695,13 @@
         "percentage": 84
       }
     ],
-    "newSlug": "dr-debilina-roy-ivf-specialist"
+    "newSlug": "dr-debilina-roy-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Debilina Roy — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-sanjana-singh",
@@ -634,7 +748,13 @@
         "percentage": 85
       }
     ],
-    "newSlug": "dr-sanjana-singh-ivf-specialist"
+    "newSlug": "dr-sanjana-singh-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Sanjana Singh — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-aditi-bhatnagar",
@@ -683,7 +803,13 @@
         "percentage": 88
       }
     ],
-    "newSlug": "dr-aditi-bhatnagar-ivf-specialist"
+    "newSlug": "dr-aditi-bhatnagar-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Aditi Bhatnagar — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-beena-upadhyay",
@@ -719,7 +845,13 @@
         "percentage": 87
       }
     ],
-    "newSlug": "dr-beena-upadhyay-ivf-specialist"
+    "newSlug": "dr-beena-upadhyay-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Beena Upadhyay — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-kriti-prasad",
@@ -761,7 +893,13 @@
         "percentage": 85
       }
     ],
-    "newSlug": "dr-kriti-prasad-ivf-specialist"
+    "newSlug": "dr-kriti-prasad-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Kriti Prasad — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-pallavi-shrivastava",
@@ -779,15 +917,15 @@
     "specialization": "IVF, Complex Infertility Cases, Advanced IVF Techniques",
     "experience": "6+ years",
     "workExperience": [
-      "Dr. Pallavi Shrivastava is an experienced IVF specialist with more than 5 years of reproductive and fertility expertise.", 
-      "She has successfully managed complex infertility cases, including multiple IVF failures, severe male factor infertility.", 
-      "She has special interest in hormonal causes of both female and male infertility, Before joining Seeds of Innocens IVF Haldwani, she served as an IVF specialist at PGIMER Chandigarh and Assistant Professor at Chirayu Medical college, Bhopal.", 
+      "Dr. Pallavi Shrivastava is an experienced IVF specialist with more than 5 years of reproductive and fertility expertise.",
+      "She has successfully managed complex infertility cases, including multiple IVF failures, severe male factor infertility.",
+      "She has special interest in hormonal causes of both female and male infertility, Before joining Seeds of Innocens IVF Haldwani, she served as an IVF specialist at PGIMER Chandigarh and Assistant Professor at Chirayu Medical college, Bhopal.",
       "With her deep knowledge and patient-centric approach, Dr. Pallavi is dedicated to helping couples  achieve their parenthood dream."
     ],
     "education": [
-      "She has completed her MBBS from Gandhi Medical College (GMC), Bhopal and M.S ( Obstetrics & Gynaecology) from North Bengal Medical College, Darjeeling.", 
-      "She has numerous publications in national and international journals. Also she has Secured Rank 1 AIR in fellowship exam for the Infertility and Reproductive Endocrinology at PGIMER, Chandigarh.", 
-      "After the fellowship, she did training in Minimal Invasive Surgery at Jogal Women’s hospital, Gujarat.", 
+      "She has completed her MBBS from Gandhi Medical College (GMC), Bhopal and M.S ( Obstetrics & Gynaecology) from North Bengal Medical College, Darjeeling.",
+      "She has numerous publications in national and international journals. Also she has Secured Rank 1 AIR in fellowship exam for the Infertility and Reproductive Endocrinology at PGIMER, Chandigarh.",
+      "After the fellowship, she did training in Minimal Invasive Surgery at Jogal Women’s hospital, Gujarat.",
       "With extensive experience in corporate and both government healthcare settings, she specializes in obstetric emergencies and minimally invasive  gynecological procedures"
     ],
     "awards": [],
@@ -809,7 +947,13 @@
         "percentage": 83
       }
     ],
-    "newSlug": "dr-pallavi-shrivastava-ivf-specialist"
+    "newSlug": "dr-pallavi-shrivastava-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Pallavi Shrivastava — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-julie-chhawchharia",
@@ -855,7 +999,13 @@
         "percentage": 85
       }
     ],
-    "newSlug": "dr-julie-chhawchharia-ivf-specialist"
+    "newSlug": "dr-julie-chhawchharia-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Julie Chhawchharia — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-vinod-kumar-b",
@@ -902,7 +1052,13 @@
         "percentage": 86
       }
     ],
-    "newSlug": "dr-vinod-kumar-b-ivf-specialists"
+    "newSlug": "dr-vinod-kumar-b-ivf-specialists",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Vinod Kumar B — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-sonia-raju",
@@ -920,9 +1076,9 @@
     "specialization": "IVF, Unexplained Infertility, Recurrent Pregnancy Loss",
     "experience": "10+ years",
     "workExperience": [
-      "Dr. Sonia Raju started her career with a 3-year residency in Obstetrics and Gynecology at TNMC Mumbai, where she has gained hands-on experience in managing difficult cases such as placenta previa and difficult cesarean deliveries.", 
+      "Dr. Sonia Raju started her career with a 3-year residency in Obstetrics and Gynecology at TNMC Mumbai, where she has gained hands-on experience in managing difficult cases such as placenta previa and difficult cesarean deliveries.",
       "Moreover, she served as an Assistant Professor at GMC Latur, handling more than 8000 deliveries annually and training residents in both clinical and surgical procedures.",
-      "She pursued a Fellowship in Reproductive Medicine at the prestigious Craft Hospital & Research Centre, Kerala, where she was trained in handling complex male and female infertility cases, which include ovulation induction, IVF, IUI/ICSI, and Embryology Lab techniques.", 
+      "She pursued a Fellowship in Reproductive Medicine at the prestigious Craft Hospital & Research Centre, Kerala, where she was trained in handling complex male and female infertility cases, which include ovulation induction, IVF, IUI/ICSI, and Embryology Lab techniques.",
       "She has independently performed oocyte retrievals, IUIs, follicular scans, and embryo transfers. Also, she has been involved in crucial obstetric cases, which include multiple pregnancies, placenta previa, and molar pregnancies."
     ],
     "education": [
@@ -958,7 +1114,13 @@
         "percentage": 82
       }
     ],
-    "newSlug": "dr-sonia-raju-aluvilayil-ivf-specialist"
+    "newSlug": "dr-sonia-raju-aluvilayil-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Sonia Raju — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-jasna-mohammed",
@@ -999,7 +1161,13 @@
         "percentage": 83
       }
     ],
-    "newSlug": "dr-jasna-mohammed-ivf-specialist"
+    "newSlug": "dr-jasna-mohammed-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Jasna Mohammed — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-sneha-narayan",
@@ -1044,8 +1212,14 @@
         "percentage": 84
       }
     ],
-    "newSlug": "dr-sneha-narayan-ivf-specialist"
-  }, 
+    "newSlug": "dr-sneha-narayan-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Sneha Narayan — Seeds of Innocens IVF"
+      }
+    ]
+  },
   {
     "slug": "dr-adrija-ghosal",
     "uspTitle": "Holistic Fertility Care <br /> <span class=\"cs_accent_color\">Dr. Adrija Ghosal</span>",
@@ -1091,7 +1265,13 @@
         "percentage": 84
       }
     ],
-    "newSlug": "dr-adrija-ghosal-ivf-specialist"
+    "newSlug": "dr-adrija-ghosal-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Adrija Ghosal — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-rashmi-singh",
@@ -1127,7 +1307,13 @@
         "percentage": 86
       }
     ],
-    "newSlug": "dr-rashmi-singh-ivf-specialist"
+    "newSlug": "dr-rashmi-singh-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Rashmi Singh — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-mangla-kawade",
@@ -1163,7 +1349,13 @@
         "percentage": 84
       }
     ],
-    "newSlug": "dr-mangla-kawade-ivf-specialist"
+    "newSlug": "dr-mangla-kawade-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Mangla Kawade — Seeds of Innocens IVF"
+      }
+    ]
   },
   {
     "slug": "dr-khushboo-singh",
@@ -1199,6 +1391,12 @@
         "percentage": 83
       }
     ],
-    "newSlug": "dr-khushboo-singh-ivf-specialist"
+    "newSlug": "dr-khushboo-singh-ivf-specialist",
+    "youtubeVideos": [
+      {
+        "url": "https://www.youtube.com/watch?v=0XD9OrkunWI",
+        "title": "Dr. Khushboo Singh — Seeds of Innocens IVF"
+      }
+    ]
   }
 ]

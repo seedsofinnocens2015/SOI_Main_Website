@@ -1,4 +1,3 @@
-import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -44,13 +43,7 @@ const BlogDetailPage = async ({ params }) => {
   if (!blog) {
     return (
       <div>
-        <Section
-          className={'cs_page_heading cs_bg_filed cs_center'}
-          backgroundImage="/assets/img/Top-Header.png"
-        >
-          <PageHeading data={{ title: 'Blog Not Found' }} />
-        </Section>
-        <Section topSpaceLg="80" bottomSpaceLg="80">
+        <Section topSpaceLg="100" topSpaceMd="130" bottomSpaceLg="80">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 text-center">
@@ -83,55 +76,58 @@ const BlogDetailPage = async ({ params }) => {
 
   return (
     <div>
-      <Section
-        className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.png"
-      >
-        <PageHeading data={{ title: blog.title }} />
-      </Section>
-
       {/* Blog Detail Section */}
-      <Section topSpaceLg="80" bottomSpaceLg="80">
+      <Section topSpaceLg="100" topSpaceMd="130" bottomSpaceLg="80">
         <div className="container">
+          {/* Full-width hero image */}
           <div className="row">
-            {/* Back Button */}
-            <div className="col-lg-12" style={{ marginBottom: '30px', textAlign: 'left' }}>
-              <Link
-                href={`/blogs/${getCategoryRoute(blog.category)}`}
+            <div className="col-12" style={{ marginBottom: '28px' }}>
+              <div
                 style={{
-                  display: 'inline-flex',
-                  alignItems: 'left',
-                  gap: '8px',
-                  color: '#df3655',
-                  textDecoration: 'none',
-                  fontWeight: '600',
-                  fontSize: '16px',
-                  transition: 'gap 0.3s ease'
+                  position: 'relative',
+                  width: '100%',
+                  height: 'clamp(380px, 52vw, 620px)',
+                  borderRadius: '12px',
+                  overflow: 'hidden',
                 }}
               >
-                <FaArrowLeft style={{ fontSize: '14px' }} />
-                Back to {blog.category} Blogs
-              </Link>
+                <Image
+                  src={getAssetPath(blog.image)}
+                  alt={blog.title}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  priority
+                  sizes="(max-width: 1200px) 100vw, 1140px"
+                />
+              </div>
             </div>
+          </div>
 
-            {/* Main Content - title & content centered like doctor page */}
+          <div className="row">
+            {/* Main column: back link + article (no duplicate image) */}
             <div className="col-lg-8">
-              <article className="cs_blog_detail_article" style={{
-                overflow: 'hidden',
-              }}>
-                {/* Blog Image */}
-                <div style={{ position: 'relative', width: '100%', height: '400px', overflow: 'hidden' }}>
-                  <Image
-                    src={getAssetPath(blog.image)}
-                    alt={blog.title}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    priority
-                  />
-                </div>
+              <div style={{ marginBottom: '24px', textAlign: 'left' }}>
+                <Link
+                  href={`/blogs/${getCategoryRoute(blog.category)}`}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    color: '#df3655',
+                    textDecoration: 'none',
+                    fontWeight: '600',
+                    fontSize: '16px',
+                    transition: 'gap 0.3s ease',
+                  }}
+                >
+                  <FaArrowLeft style={{ fontSize: '14px' }} />
+                  Back to {blog.category} Blogs
+                </Link>
+              </div>
 
+              <article className="cs_blog_detail_article" style={{ overflow: 'hidden' }}>
                 {/* Blog Content - centered */}
-                <div className="cs_blog_detail_content" style={{ padding: '40px', textAlign: 'center' }}>
+                <div className="cs_blog_detail_content" style={{ padding: '0 0 40px', textAlign: 'center' }}>
                   {/* Category Badge */}
                   <div style={{
                     display: 'inline-block',

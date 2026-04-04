@@ -732,6 +732,9 @@ const Header = ({ isTopBar, variant }) => {
                 </div>
               </div>
               <div className="cs_top_bar_right">
+                <Link href="/doctors/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
+                  MD Dr. Gauri Agarwal
+                </Link>
                 <div className="cs_social_icons">
                   <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                     <Image
@@ -785,6 +788,9 @@ const Header = ({ isTopBar, variant }) => {
                   </div>
                 </div>
                 <div className="cs_top_bar_right">
+                  <Link href="/doctors/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
+                    MD Dr. Gauri Agarwal
+                  </Link>
                   <div className="cs_social_icons">
                     <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
@@ -837,6 +843,9 @@ const Header = ({ isTopBar, variant }) => {
                   </div>
                 </div>
                 <div className="cs_top_bar_right">
+                  <Link href="/doctors/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
+                    MD Dr. Gauri Agarwal
+                  </Link>
                   <div className="cs_social_icons">
                     <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image

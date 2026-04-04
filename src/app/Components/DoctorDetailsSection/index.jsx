@@ -1,6 +1,8 @@
 'use client';
+import { useMemo, useRef } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import Slider from 'react-slick';
 import { getAssetPath } from "@/app/utils/assetPath";
 import AccentHeading from '@/app/Components/AccentHeading';
 import {
@@ -10,7 +12,65 @@ import {
   FaGlobe,
 } from 'react-icons/fa6';
 
+function getEmbedUrl(url) {
+  if (!url) return '';
+  if (url.includes('youtube.com/embed/')) return url;
+  let videoId = '';
+  if (url.includes('youtube.com/watch?v=')) {
+    videoId = url.split('v=')[1]?.split('&')[0];
+  } else if (url.includes('youtu.be/')) {
+    videoId = url.split('youtu.be/')[1]?.split('?')[0];
+  }
+  if (videoId) {
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  return url;
+}
+
 const DoctorDetailsSection = ({ data, otherDoctors }) => {
+  const youtubeSliderRef = useRef(null);
+  const youtubeVideos = data.youtubeVideos || [];
+
+  const youtubeSliderSettings = useMemo(() => {
+    const n = youtubeVideos.length;
+    return {
+      dots: n > 1,
+      infinite: n > 2,
+      speed: 1000,
+      slidesToShow: n >= 2 ? 2 : 1,
+      slidesToScroll: 1,
+      fade: false,
+      swipeToSlide: true,
+      autoplay: n > 2,
+      autoplaySpeed: 4000,
+      pauseOnHover: true,
+      pauseOnFocus: true,
+      pauseOnDotsHover: true,
+      appendDots: (dots) => (
+        <div>
+          <ul>{dots}</ul>
+        </div>
+      ),
+      dotsClass: 'cs_pagination cs_style_2',
+      responsive: [
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: Math.min(2, n),
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+  }, [youtubeVideos.length]);
+
   return (
     <div className="container">
       <div className="cs_doctor_details_wrapper">
@@ -172,6 +232,44 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
                 </ul>
               </div>
             )}
+
+            {/* YouTube videos — react-slick autoplay, same pattern as home / centre */}
+            {youtubeVideos.length > 0 && (
+              <div className="cs_youtube_video">
+                <AccentHeading level={3} className="cs_section_title_small">
+                  {youtubeVideos.length > 1 ? 'YouTube Videos' : 'YouTube Video'}
+                </AccentHeading>
+                <div className="cs_slider cs_style_1 cs_slider_gap_24">
+                  <div className="cs_slider_container">
+                    <div className="cs_slider_wrapper">
+                      <Slider ref={youtubeSliderRef} {...youtubeSliderSettings}>
+                        {youtubeVideos.map((video, index) => (
+                          <div
+                            key={index}
+                            className="cs_slide"
+                            onMouseEnter={() => youtubeSliderRef.current?.slickPause()}
+                            onMouseLeave={() => youtubeSliderRef.current?.slickPlay()}
+                          >
+                            <div className="cs_news_media_item">
+                              <div className="cs_news_media_video">
+                                <iframe
+                                  src={getEmbedUrl(video.url)}
+                                  title={video.title || `Video ${index + 1}`}
+                                  frameBorder={0}
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  allowFullScreen
+                                  loading="lazy"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </Slider>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right Sidebar */}
@@ -194,7 +292,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
               {/* Other Doctors Section */}
               {otherDoctors && otherDoctors.length > 0 && (
                 <div className="cs_other_doctors">
-                  <AccentHeading level={3} className="cs_sidebar_title">Other Doctors</AccentHeading>
+                  <AccentHeading level={3} className="cs_sidebar_title">Other Doctor's</AccentHeading>
                   <div className="cs_other_doctors_list">
                     {otherDoctors.map((doctor, index) => (
                       <Link 
