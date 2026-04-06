@@ -3713,6 +3713,19 @@ label {
   font-style: italic;
 }
 
+/* Inner pages without .cs_page_heading — offset fixed/sticky header */
+.cs_clear_fixed_header {
+  margin-top: 105px;
+
+  @media (max-width: 991px) {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 575px) {
+    margin-top: 80px;
+  }
+}
+
 .cs_page_heading {
   height: 600px;
   padding: 80px 0 30px;

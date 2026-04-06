@@ -3,16 +3,11 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { submitCallBack } from '@/app/utils/websiteForms';
 import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
-import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
 import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaCheck } from 'react-icons/fa';
-
-const headingData = {
-  title: 'Call Back Form',
-};
 
 const ivfContentData = {
   sections: [
@@ -150,13 +145,12 @@ const Page = () => {
   return (
     <div>
       <Section
-        className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.png"
+        className="cs_clear_fixed_header"
+        topSpaceLg="50"
+        topSpaceMd="60"
+        bottomSpaceLg="50"
+        bottomSpaceMd="60"
       >
-        <PageHeading data={headingData} />
-      </Section>
-
-      <Section topSpaceLg="50" topSpaceMd="60" bottomSpaceLg="50" bottomSpaceMd="60">
         <div className="container">
           <div className="row">
             <div className="col-12">

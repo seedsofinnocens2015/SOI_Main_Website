@@ -45,8 +45,7 @@ const page = () => {
           'Endometriosis treatment',
           'Ovarian cystectomy',
           'Adhesion removal procedures',
-        ],
-        sideImage: '/assets/img/recent_post2.jpg',
+        ]
       },
     ],
   };

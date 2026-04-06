@@ -87,29 +87,31 @@ const BlogDetailPage = async ({ params }) => {
       {/* Blog Detail Section */}
       <Section topSpaceLg="100" topSpaceMd="130" bottomSpaceLg="80">
         <div className="container">
-          {/* Full-width hero image */}
-          <div className="row">
-            <div className="col-12" style={{ marginBottom: '28px' }}>
-              <div
-                style={{
-                  position: 'relative',
-                  width: '100%',
-                  height: 'clamp(380px, 52vw, 620px)',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                }}
-              >
-                <Image
-                  src={getAssetPath(blog.image)}
-                  alt={blog.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  priority
-                  sizes="(max-width: 1200px) 100vw, 1140px"
-                />
+          {/* Full-width hero image — only when present in data */}
+          {blog.image ? (
+            <div className="row">
+              <div className="col-12" style={{ marginBottom: '28px' }}>
+                <div
+                  style={{
+                    position: 'relative',
+                    width: '100%',
+                    height: 'clamp(380px, 52vw, 620px)',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <Image
+                    src={getAssetPath(blog.image)}
+                    alt={blog.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    priority
+                    sizes="(max-width: 1200px) 100vw, 1140px"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          ) : null}
 
           <div className="row">
             {/* Main column: back link + article (no duplicate image) */}
@@ -272,21 +274,23 @@ const BlogDetailPage = async ({ params }) => {
                               border: '1px solid transparent'
                             }}
                             >
-                              <div style={{
-                                position: 'relative',
-                                width: '100px',
-                                height: '80px',
-                                borderRadius: '8px',
-                                overflow: 'hidden',
-                                flexShrink: 0
-                              }}>
-                                <Image
-                                  src={getAssetPath(relatedBlog.image)}
-                                  alt={relatedBlog.title}
-                                  fill
-                                  style={{ objectFit: 'cover' }}
-                                />
-                              </div>
+                              {relatedBlog.image ? (
+                                <div style={{
+                                  position: 'relative',
+                                  width: '100px',
+                                  height: '80px',
+                                  borderRadius: '8px',
+                                  overflow: 'hidden',
+                                  flexShrink: 0
+                                }}>
+                                  <Image
+                                    src={getAssetPath(relatedBlog.image)}
+                                    alt={relatedBlog.title}
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                  />
+                                </div>
+                              ) : null}
                               <div style={{ flex: 1 }}>
                                 <h4 style={{
                                   fontSize: '15px',

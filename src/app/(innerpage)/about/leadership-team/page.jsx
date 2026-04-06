@@ -2,32 +2,65 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
-import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
-import { getAssetPathClient } from '@/app/utils/assetPath';
+import { getAssetPath } from '@/app/utils/assetPath';
+import LeadershipTeamCards from '@/app/Components/LeadershipTeamCards';
 
 const headingData = {
-  title: 'Leadership Team',
+  title: 'Our Leadership Team',
+  /** Banner: red (h2) + black (.cs_accent_color) — same pattern as default PageHeading USP */
+  uspTitle: 'Our  <span class="cs_accent_color">Leadership Team</span>',
 };
 
 const leadershipTeamData = [
   {
+    id: 'gauri',
     name: 'Dr. Gauri Agarwal',
     profession: 'Founder & Chief Fertility Specialist',
-    imageUrl: getAssetPathClient("/assets/img/Doctors/Dr%20Gauri%20maam.jpg"),
-    profileLink: '/doctors/dr-gauri-agarwal-ivf-specialist/',
+    imageUrl: getAssetPath('/assets/img/Doctors/Dr%20Gauri%20maam.jpg'),
     experience: '15+ Years',
     location: 'Delhi/NCR',
+    bio: [
+      'Dr. Gauri Agarwal is Founder and Director of Seeds of Innocens IVF & Genestring Labs, with 15+ years in advanced fertility and reproductive genetics.',
+      'Trained in Belgium and Singapore, she has helped expand Seeds of Innocens across India and internationally, including IVF centres in Muscat and Lusaka.',
+      'Under her leadership, the network is known for ethical, personalised care, strong embryology standards, and integrated genetic testing supporting better outcomes.',
+    ],
   },
   {
+    id: 'rajat',
     name: 'Dr. Rajat Arora',
     profession: 'Co-Founder & Director',
-    imageUrl: getAssetPathClient("/assets/img/Doctors/rajat.png"),
-    profileLink: '/doctors/dr-gauri-agarwal-ivf-specialist/',
+    imageUrl: getAssetPath('/assets/img/Doctors/rajat.png'),
     experience: '15+ Years',
     location: 'Delhi/NCR',
+    bio: [
+      'Dr. Rajat Arora is the Managing Director(MD) of Yashoda Group of Hospitals, Uttar Pradesh, as well as the Co-Founder of Seeds of Innocence (Infertility & IVF Centres) and Genestrings Diagnostic Centre (Genetic Testing Lab) in Delhi NCR. Dr. Rajat Arora has exceptional educational qualifications, starting from M.B.B.S. and M.D. in India to MRCP & FRCP in internal medicine from the UK. Dr. Rajat Arora has also been a fellow in Non-Interventional Cardiology at KLE University and completed his D.M. in cardiology from KLE’s Hospital.',
+      'Dr. Rajat Arora is a proficient and experienced interventional cardiologist with more than 1000 PCIs (Percutaneous Coronary Intervention) and 12000 coronary angiographies to his credit. Dr. Rajat Arora performs all kinds of congenital heart disease interventions, such as ASD device closure, VSD device closure, and RSOV closure. He also has expertise in performing Endovascular Aortic Repairs independently. Besides this, he performs all types of pacemaker insertions, ICD device, and CRT therapy.',
+    ],
+  },
+  {
+    id: 'yashpal',
+    name: 'Yashpal Singh Rao',
+    profession: 'Chief Growth Officer',
+    imageUrl: getAssetPath('/assets/img/Doctors/yashpal.png'),
+    experience: '17+ Years',
+    location: 'Delhi/NCR',
+    bio: [
+      'Yashpal Singh is a seasoned healthcare leader with over 17 years of experience in scaling multi-location healthcare and fertility businesses. As Chief Growth Officer at Seeds of Innocence IVF & Home IVF, he leads national growth strategy across patient acquisition, digital ecosystems, and network expansion.',
+      'He brings deep expertise in driving operational excellence, strengthening patient conversion systems, and building scalable growth platforms across clinic networks. Prior to this, he has held leadership roles at leading organizations such as Indira IVF and ART Fertility Clinics, contributing to large-scale business transformation and expansion initiatives.',
+    ],
+  },
+  {
+    id: 'aditi',
+    name: 'Dr. Aditi Bhatnagar',
+    profession: 'Medical Director',
+    imageUrl: getAssetPath('/assets/img/Doctors/aditi.jpg'),
+    experience: '10+ Years',
+    location: 'Delhi/NCR',
+    bio: [
+      'Dr. Aditi Bhatnagar is a fertility and IVF specialist with extensive and Voluminous experience of more than 10 years. Also, she has a special interest in recurrent IVF & Secondary Infertility failures. She has completed her MBBS degree from Mullana Medical College, Ambala. Post to that, she has also pursued her master in obstetrics and gynaecology from DY Patil Medical College, Pune, receiving a Gold Medal. She further pursued her fellowship in reproductive medicine (infertility). Since then, she has been working with the established high-volume fertility centres of Delhi-NCR. She has extensive knowledge, a wide skill set, and vast experience.',
+
+    ],
   },
 ];
 
@@ -93,45 +126,7 @@ const Page = () => {
               <AccentHeading style={{ marginBottom: '40px' }}>Our Leadership Team</AccentHeading>
             </div>
           </div>
-          <div className="cs_doctors_grid cs_style_1">
-            {leadershipTeamData.map((member, index) => (
-              <div className="cs_team cs_style_1 cs_blue_bg" key={index}>
-                <div className="cs_team_shape cs_accent_bg" />
-                <Link href={member.profileLink} className="cs_team_thumbnail">
-                  <Image
-                    src={member.imageUrl}
-                    alt={`${member.name} Thumbnail`}
-                    width={302}
-                    height={423}
-                  />
-                </Link>
-                <div className="cs_team_bio">
-                  <h3 className="cs_team_title cs_extra_bold mb-0">
-                    <Link href={member.profileLink}>{member.name}</Link>
-                  </h3>
-                  <p className="cs_team_subtitle">{member.profession}</p>
-                  <div className="cs_team_info_items">
-                    {member.experience && (
-                      <div className="cs_team_info_item">
-                        <i>
-                          <FaSuitcase />
-                        </i>
-                        <span>{member.experience} Experience </span>
-                      </div>
-                    )}
-                    {member.location && (
-                      <div className="cs_team_info_item">
-                        <i>
-                          <FaLocationDot />
-                        </i>
-                        <span>{member.location}</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <LeadershipTeamCards members={leadershipTeamData} />
         </div>
       </Section>
     </div>

@@ -93,6 +93,24 @@
   }
 }
 
+/* Inline row only: same counter item design as home, no band / extra padding */
+.cs_counter_figma_wrapper.cs_counter_inline {
+  background-color: transparent;
+
+  .container {
+    padding: 0;
+    max-width: 1200px;
+  }
+
+  @media (max-width: 991px) {
+    padding: 0;
+  }
+
+  @media (max-width: 575px) {
+    padding: 0;
+  }
+}
+
 .cs_counter_simple_line {
   display: flex;
   justify-content: center;

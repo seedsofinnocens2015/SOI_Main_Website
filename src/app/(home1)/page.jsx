@@ -83,39 +83,39 @@ const heroData = {
         iconImgUrl: '/assets/img/icons/hero_icon.png',
         isCenterLayout: true,
       },
-      // {
-      //   bgImageUrl: '/assets/img/banner.png',
-      //   mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
-      //   title: 'Tiny hands, Sweet smile,<br/> and the bliss of a fulfilled dream',
-      //   titleClass: 'cs_single_line_title',
-      //   titleStyle: {
-      //     fontSize: 'clamp(32px, 5vw, 72px)',
-      //     // fontWeight: 'bold',
-      //     textTransform: 'uppercase',
-      //     textAlign: 'center',
-      //     color: '#FFFFFF',
-      //     lineHeight: '1.2',
-      //     letterSpacing: '1px',
-      //     textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.5)',
-      //   },
-      //   contactSubtitle:
-      //     'Creating beautiful beginings with a smile.',
-      //   subtitleStyle: {
-      //     fontSize: 'clamp(22px, 3.5vw, 32px)',
-      //     textAlign: 'center',
-      //     color: '#FFFFFF',
-      //     //  fontWeight: '400',
-      //     marginBottom: '30px',
-      //     textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6), 3px 3px 8px rgba(0, 0, 0, 0.5)',
-      //   },
-      //   btnText1: 'Schedule a Visit',
-      //   btnStyle: 'cs_green_btn',
-      //   link: '/contact/book-appointment',
-      //   phoneNumber: '9810350 512',
-      //   phoneLink: 'tel:+919810350512',
-      //   iconImgUrl: '/assets/img/icons/hero_icon.png',
-      //   isCenterLayout: true,
-      // },
+      {
+        bgImageUrl: '/assets/img/Banner-3.png',
+        mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
+        title: 'One of Asia\'s Leading<br/>Fertility Centres',
+        titleClass: 'cs_single_line_title',
+        titleStyle: {
+          fontSize: 'clamp(32px, 5vw, 72px)',
+          // fontWeight: 'bold',
+          textTransform: 'uppercase',
+          textAlign: 'center',
+          color: '#FFFFFF',
+          lineHeight: '1.2',
+          letterSpacing: '1px',
+          textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.5)',
+        },
+        contactSubtitle:
+          'Creating beautiful beginings with smile.',
+        subtitleStyle: {
+          fontSize: 'clamp(22px, 3.5vw, 32px)',
+          textAlign: 'center',
+          color: '#FFFFFF',
+          //  fontWeight: '400',
+          marginBottom: '30px',
+          textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6), 3px 3px 8px rgba(0, 0, 0, 0.5)',
+        },
+        btnText1: 'Schedule a Visit',
+        btnStyle: 'cs_green_btn',
+        link: '/contact/book-appointment',
+        phoneNumber: '9810350 512',
+        phoneLink: 'tel:+919810350512',
+        iconImgUrl: '/assets/img/icons/hero_icon.png',
+        isCenterLayout: true,
+      },
     ],
     // secondarySlider: [
     //   '/assets/img/hero_slider_sm_1.png',
@@ -133,7 +133,7 @@ const heroData = {
   };
   
   const countersData = {
-    badgeText: 'Outstanding cess rates',
+    badgeText: 'Outstanding Success Rates',
     heading: {
       highlighted: '20,000+',
       rest: 'SUCCESS STORIES AND THE JOURNEY CONTINUES.'
@@ -697,7 +697,7 @@ const heroData = {
     designImage: '/assets/img/leaf.png', // Design image for left side background
     whyChooseHeading: 'WHY CHOOSE US?',
     whyChooseText: [
-      'Seeds of Innocens has always been the encouraged choice',
+      'Seeds of Innocens IVF has always been the encouraged choice',
       'Founded in 2015 by the second generation of the promoter family, Dr. Gauri Agarwal and Dr. Rajat Arora',
       'Seeds of Innocens is India\'s best IVF centre',
       'Grown to over 35 centres across 8 states',
@@ -707,7 +707,7 @@ const heroData = {
     callUsLink: 'tel:+919810350512',
     callUsText: 'CALL US',
     selfCycleHeading: 'VISION AND MISSION',
-    selfCycleText: 'At Seeds of Innocens, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
+    selfCycleText: 'At Seeds of Innocens IVF, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
     bookAppointmentLink: '/contact/book-appointment',
     bookAppointmentText: 'BOOK AN APPOINTMENT',
     selfieImage: '/assets/img/babywithgirl.svg', // Please replace with actual selfie image

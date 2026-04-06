@@ -292,7 +292,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
               {/* Other Doctors Section */}
               {otherDoctors && otherDoctors.length > 0 && (
                 <div className="cs_other_doctors">
-                  <AccentHeading level={3} className="cs_sidebar_title">Other Doctor's</AccentHeading>
+                  <AccentHeading level={3} className="cs_sidebar_title">Other Doctors</AccentHeading>
                   <div className="cs_other_doctors_list">
                     {otherDoctors.map((doctor, index) => (
                       <Link 

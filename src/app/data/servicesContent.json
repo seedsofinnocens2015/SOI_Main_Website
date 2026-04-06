@@ -3719,8 +3719,8 @@
   },
   "couple-carrier-screening": {
     "headerImage": "/assets/img/Services/CouplesGenetic.png",
-    "uspTitle": "Dummy <span class=\"cs_accent_color\">Content</span>",
-    "title": "Dummy Title",
+    "uspTitle": "Couple Carrier Screening <span class=\"cs_accent_color\">Testing</span>",
+    "title": "Couple Carrier Screening Testing",
     "heroBackground": "/assets/img/Top-Header.png",
     "layoutType": "ivfContent",
     "benefitImages": [

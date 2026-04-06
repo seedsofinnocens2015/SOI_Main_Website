@@ -104,9 +104,11 @@ export default function BlogsCategoryPage({
               <div key={index} className="col-lg-4 col-md-6">
                 <Link href={blog.link} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
                   <div className="cs_blog_card cs_style_1" style={{ height: '100%', backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e8e8e8', boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)', display: 'flex', flexDirection: 'column' }}>
-                    <div className="cs_blog_img" style={{ overflow: 'hidden', position: 'relative', height: '250px', width: '100%' }}>
-                      <Image src={getAssetPathClient(blog.image)} alt={blog.title} width={400} height={250} className="w-100" loading="lazy" style={{ objectFit: 'contain' }} />
-                    </div>
+                    {blog.image ? (
+                      <div className="cs_blog_img" style={{ overflow: 'hidden', position: 'relative', height: '250px', width: '100%' }}>
+                        <Image src={getAssetPathClient(blog.image)} alt={blog.title} width={400} height={250} className="w-100" loading="lazy" style={{ objectFit: 'contain' }} />
+                      </div>
+                    ) : null}
                     <div className="cs_blog_info" style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div className="cs_blog_meta mb-3" style={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '13px', color: '#999', flexWrap: 'wrap' }}>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><FaCalendarAlt style={{ fontSize: '12px' }} />{blog.date}</span>

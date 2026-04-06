@@ -128,16 +128,18 @@ const BlogDetailPage = ({ params }) => {
                 boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
                 marginBottom: '40px'
               }}>
-                {/* Blog Image */}
-                <div style={{ position: 'relative', width: '100%', height: '400px', overflow: 'hidden' }}>
-                  <Image
-                    src={getAssetPath(blog.image)}
-                    alt={blog.title}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    priority
-                  />
-                </div>
+                {/* Blog Image — only when present in data (no default placeholder) */}
+                {blog.image ? (
+                  <div style={{ position: 'relative', width: '100%', height: '400px', overflow: 'hidden' }}>
+                    <Image
+                      src={getAssetPath(blog.image)}
+                      alt={blog.title}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      priority
+                    />
+                  </div>
+                ) : null}
 
                 {/* Blog Content */}
                 <div style={{ padding: '40px' }}>
@@ -261,21 +263,23 @@ const BlogDetailPage = ({ params }) => {
                             border: '1px solid transparent'
                           }}
                           >
-                            <div style={{
-                              position: 'relative',
-                              width: '100px',
-                              height: '80px',
-                              borderRadius: '8px',
-                              overflow: 'hidden',
-                              flexShrink: 0
-                            }}>
-                              <Image
-                                src={getAssetPath(relatedBlog.image)}
-                                alt={relatedBlog.title}
-                                fill
-                                style={{ objectFit: 'cover' }}
-                              />
-                            </div>
+                            {relatedBlog.image ? (
+                              <div style={{
+                                position: 'relative',
+                                width: '100px',
+                                height: '80px',
+                                borderRadius: '8px',
+                                overflow: 'hidden',
+                                flexShrink: 0
+                              }}>
+                                <Image
+                                  src={getAssetPath(relatedBlog.image)}
+                                  alt={relatedBlog.title}
+                                  fill
+                                  style={{ objectFit: 'cover' }}
+                                />
+                              </div>
+                            ) : null}
                             <div style={{ flex: 1 }}>
                               <h4 style={{
                                 fontSize: '15px',

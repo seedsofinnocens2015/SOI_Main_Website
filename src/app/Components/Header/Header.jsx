@@ -445,10 +445,10 @@ const Header = ({ isTopBar, variant }) => {
               // { label: 'News & Press', href: '/blogs/news-press' },
             ],
           },
-          {
-            label: 'Insurance / Financing Options',
-            href: '/resources/insurance-financing-options',
-          },
+          // {
+          //   label: 'Insurance / Financing Options',
+          //   href: '/resources/insurance-financing-options',
+          // },
         ],
       },
       {
@@ -733,7 +733,7 @@ const Header = ({ isTopBar, variant }) => {
               </div>
               <div className="cs_top_bar_right">
                 <Link href="/doctors/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
-                  MD Dr. Gauri Agarwal
+                  Dr. Gauri Agarwal
                 </Link>
                 <div className="cs_social_icons">
                   <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
@@ -789,7 +789,7 @@ const Header = ({ isTopBar, variant }) => {
                 </div>
                 <div className="cs_top_bar_right">
                   <Link href="/doctors/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
-                    MD Dr. Gauri Agarwal
+                    Dr. Gauri Agarwal
                   </Link>
                   <div className="cs_social_icons">
                     <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
@@ -844,12 +844,12 @@ const Header = ({ isTopBar, variant }) => {
                 </div>
                 <div className="cs_top_bar_right">
                   <Link href="/doctors/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
-                    MD Dr. Gauri Agarwal
+                    Dr. Gauri Agarwal
                   </Link>
                   <div className="cs_social_icons">
                     <Link href="https://www.youtube.com/@seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
-                        src={getAssetPathClient('/assets/img/icons/you.png')}
+                        src={getAssetPathClient('/assets/img/icons/youtube.svg')}
                         alt="YouTube"
                         width={20}
                         height={20}
@@ -857,7 +857,7 @@ const Header = ({ isTopBar, variant }) => {
                     </Link>
                     <Link href="https://www.instagram.com/seedsofinnocensivf" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
-                        src={getAssetPathClient('/assets/img/icons/029-instagram.png')}
+                        src={getAssetPathClient('/assets/img/icons/instagram.svg')}
                         alt="Instagram"
                         width={20}
                         height={20}
@@ -865,7 +865,7 @@ const Header = ({ isTopBar, variant }) => {
                     </Link>
                     <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
-                        src={getAssetPathClient('/assets/img/icons/036-facebook.png')}
+                        src={getAssetPathClient('/assets/img/icons/facebook.svg')}
                         alt="Facebook"
                         width={20}
                         height={20}
@@ -873,7 +873,7 @@ const Header = ({ isTopBar, variant }) => {
                     </Link>
                     <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
-                        src={getAssetPathClient('/assets/img/icons/027-linkedin.png')}
+                        src={getAssetPathClient('/assets/img/icons/027-linkedin.svg')}
                         alt="LinkedIn"
                         width={20}
                         height={20}

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-const CounterSection = ({ data }) => {
+const CounterSection = ({ data, inline = false }) => {
   const [counters, setCounters] = useState([]);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [animationCompleted, setAnimationCompleted] = useState(false);
@@ -311,7 +311,10 @@ const CounterSection = ({ data }) => {
       });
 
   return (
-    <div className="cs_counter_figma_wrapper" ref={sectionRef}>
+    <div
+      className={inline ? 'cs_counter_figma_wrapper cs_counter_inline' : 'cs_counter_figma_wrapper'}
+      ref={sectionRef}
+    >
       <div className="container">
         {/* Top Badge */}
         {data?.badgeText && (

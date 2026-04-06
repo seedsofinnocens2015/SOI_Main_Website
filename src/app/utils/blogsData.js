@@ -24,7 +24,7 @@ function mapBlogCard(blog) {
   return {
     title: blog.title || '',
     excerpt: blog.excerpt || '',
-    image: blog.image || '/assets/img/recent_post2.jpg',
+    image: blog.image,
     date: blog.date || '',
     author: blog.author || '',
     category: blog.category || '',

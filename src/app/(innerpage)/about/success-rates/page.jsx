@@ -1,40 +1,21 @@
-"use client";
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
-import Image from 'next/image';
-import React, { useState } from 'react';
+import CounterSection from '@/app/Components/FunSection/CounterSection';
 
 const headingData = {
   title: 'Success Rates',
 };
 
-const countersData = [
-  {
-    iconUrl: '/assets/img/icons/counter_icon_1.png',
-    number: '20,000+',
-    title: 'Healthy Babies',
-    backgroundColor: '#17A2B8', // Teal/Light Blue
-  },
-  {
-    iconUrl: '/assets/img/icons/counter_icon_4.png',
-    number: '78%',
-    title: 'UPTO Success Rate*',
-    backgroundColor: '#df3655', // Red/Pink
-  },
-  {
-    iconUrl: '/assets/img/icons/counter_icon_3.png',
-    number: '30+',
-    title: 'Certified Trained Clinicians',
-    backgroundColor: '#FFC107', // Yellow/Gold
-  },
-  {
-    iconUrl: '/assets/img/icons/counter_icon_2.png',
-    number: '35+',
-    title: 'IVF Centres',
-    backgroundColor: '#000000', // Dark Blue/Navy
-  },
-];
+/** Home jaisi counter line (rang + typography); badge/heading / peach band nahi */
+const countersData = {
+  counters: [
+    { number: '20,000+', title: 'Healthy Babies' },
+    { number: '78%', title: 'Up to Success Rate*' },
+    { number: '30+', title: 'Certified Trained Clinicians' },
+    { number: '35+', title: 'IVF Centres' },
+  ],
+};
 
 const firstSectionData = {
   sections: [
@@ -130,82 +111,14 @@ const page = () => {
         </div>
       </Section>
 
-      {/* Counter Section - Card Design */}
+      {/* Counter row: home jaisa number/label design; poora home section nahi */}
       <Section
         topSpaceLg="60"
         topSpaceMd="70"
         bottomSpaceLg="40"
         bottomSpaceMd="50"
       >
-        <div className="container">
-          <div className="row cs_gap_y_30">
-            {countersData.map((counter, index) => {
-              const [isHovered, setIsHovered] = useState(false);
-
-              return (
-                <div key={index} className="col-lg-3 col-md-6">
-                  <div
-                    style={{
-                      backgroundColor: counter.backgroundColor || '#ffffff',
-                      borderRadius: '12px',
-                      padding: '40px 30px',
-                      textAlign: 'center',
-                      boxShadow: isHovered ? '0px 12px 30px rgba(0, 0, 0, 0.15)' : '0px 4px 15px rgba(0, 0, 0, 0.1)',
-                      border: '2px solid rgba(255, 255, 255, 0.3)',
-                      transition: 'all 0.3s ease',
-                      height: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      position: 'relative',
-                      overflow: 'hidden',
-                      transform: isHovered ? 'translateY(-8px)' : 'translateY(0)',
-                      cursor: 'pointer'
-                    }}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                  >
-                    {/* Icon */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '0',
-                      left: '0',
-                      width: '4px',
-                      height: '100%',
-                      // backgroundColor: isHovered ? '#df3655' : 'transparent',
-                      transition: 'all 0.3s ease'
-                    }} />
-
-                    {/* Number */}
-                    <div style={{
-                      fontSize: '48px',
-                      fontWeight: '700',
-                      color: '#ffffff',
-                      marginBottom: '12px',
-                      lineHeight: '1.2',
-                      transition: 'all 0.3s ease',
-                      textShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'
-                    }}>
-                      {counter.number}
-                    </div>
-
-                    {/* Title */}
-                    <div style={{
-                      fontSize: '16px',
-                      color: '#ffffff',
-                      fontWeight: '600',
-                      lineHeight: '1.5',
-                      textShadow: '0px 1px 2px rgba(0, 0, 0, 0.1)'
-                    }}>
-                      {counter.title}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <CounterSection data={countersData} inline />
       </Section>
 
       {/* Remaining Content Sections */}

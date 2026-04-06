@@ -16,8 +16,8 @@ const ivfContentData = {
       heading: 'Our Recognition & Excellence',
       paragraphs: [
         'Seeds of Innocens has been recognized for excellence in fertility medicine, innovation, and patient care. Our accreditations and awards reflect our commitment to maintaining the highest standards in reproductive medicine.',
-      ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      ]
+
     },
     {
       heading: 'Accreditations & Certifications',
@@ -66,24 +66,42 @@ const ivfContentData = {
   ],
 };
 
+/** Copy aligned with each badge: Times Achievers, Healthworld, IFS, AOGD, Women of Excellence */
 const awardsData = [
   {
-    title: 'Best IVF Centre 2023',
-    description: 'Recognized as the Best IVF Centre in India for excellence in fertility treatments and patient care.',
-    awardedBy: 'Healthcare Excellence Awards',
-    image: '/assets/img/recent_post2.jpg',
+    title: 'Times Healthcare Achievers — Delhi NCR 2020',
+    description:
+      'Recognised among Times Healthcare Achievers for excellence in healthcare delivery and fertility services in the Delhi NCR region.',
+    awardedBy: 'The Times of India — Times Healthcare Achievers',
+    image: '/assets/img/Times-Healthcare-Achievers.png',
   },
   {
-    title: 'Excellence in Reproductive Medicine',
-    description: 'Awarded for outstanding achievements in reproductive medicine and innovative treatment approaches.',
-    awardedBy: 'National Fertility Association',
-    image: '/assets/img/recent_post2.jpg',
+    title: 'National Fertility Awards',
+    description:
+      'Honoured at Healthworld’s National Fertility Awards for leadership, clinical outcomes, and contribution to fertility care in India.',
+    awardedBy: 'Healthworld.com — National Fertility Awards',
+    image: '/assets/img/National-Fertility-Awards-2022.png',
   },
   {
-    title: 'Innovation in Fertility Technology',
-    description: 'Recognized for implementing cutting-edge technology and advanced laboratory techniques in fertility treatment.',
-    awardedBy: 'Medical Technology Innovation Awards',
-    image: '/assets/img/recent_post2.jpg',
+    title: 'Indian Fertility Society (IFS)',
+    description:
+      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
+    awardedBy: 'Indian Fertility Society (IFS)',
+    image: '/assets/img/Indian-Fertility-Society.png',
+  },
+  {
+    title: 'Association of Obstetricians & Gynaecologists of Delhi (AOGD)',
+    description:
+      'Connected with AOGD’s community of obstetricians and gynaecologists, reflecting our commitment to women’s health and safe, evidence-based care.',
+    awardedBy: 'AOGD — Association of Obstetricians and Gynaecologists of Delhi',
+    image: '/assets/img/Association-of-Obstetricians-And-Gynaecologists-of-Delhi.png',
+  },
+  {
+    title: 'Women of Excellence 2025',
+    description:
+      'Recognised among Women of Excellence 2025 for outstanding contribution to healthcare, leadership, and patient-centred fertility care.',
+    awardedBy: 'Women of Excellence Awards 2025',
+    image: '/assets/img/women-of-excellence-2025.png',
   },
 ];
 
@@ -154,25 +172,27 @@ const page = () => {
                   }}
                 >
                   <div style={{
-                    width: '120px',
-                    height: '120px',
-                    backgroundColor: '#f5f5f5',
-                    borderRadius: '10px',
-                    margin: '0 auto 20px',
+                    width: 'min(100%, 220px)',
+                    height: '220px',
+                    maxWidth: '220px',
+                    backgroundColor: '#fafafa',
+                    borderRadius: '12px',
+                    margin: '0 auto 24px',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    padding: '12px',
                   }}>
                     <Image
                       src={award.image}
                       alt={award.title}
-                      width={120}
-                      height={120}
+                      width={220}
+                      height={220}
                       style={{
                         width: '100%',
                         height: '100%',
-                        objectFit: 'cover',
-                        borderRadius: '10px'
+                        objectFit: 'contain',
+                        borderRadius: '8px',
                       }}
                     />
                   </div>

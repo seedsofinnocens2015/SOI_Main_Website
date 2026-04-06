@@ -47,8 +47,7 @@ const page = () => {
           'Preconception counseling',
           'Prenatal diagnosis and fetal therapy',
           'Maternal medical complications during pregnancy',
-        ],
-        sideImage: '/assets/img/recent_post2.jpg',
+        ]
       },
     ],
   };
