@@ -5,6 +5,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
 import Image from 'next/image';
+import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
   title: 'Awards & Accreditations',
@@ -73,35 +74,63 @@ const awardsData = [
     description:
       'Recognised among Times Healthcare Achievers for excellence in healthcare delivery and fertility services in the Delhi NCR region.',
     awardedBy: 'The Times of India — Times Healthcare Achievers',
-    image: '/assets/img/Times-Healthcare-Achievers.png',
+    image: '/assets/img/Awards/1.png',
   },
   {
     title: 'National Fertility Awards',
     description:
       'Honoured at Healthworld’s National Fertility Awards for leadership, clinical outcomes, and contribution to fertility care in India.',
     awardedBy: 'Healthworld.com — National Fertility Awards',
-    image: '/assets/img/National-Fertility-Awards-2022.png',
+    image: '/assets/img/Awards/2.png',
   },
   {
     title: 'Indian Fertility Society (IFS)',
     description:
       'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
     awardedBy: 'Indian Fertility Society (IFS)',
-    image: '/assets/img/Indian-Fertility-Society.png',
+    image: '/assets/img/Awards/3.png',
   },
   {
     title: 'Association of Obstetricians & Gynaecologists of Delhi (AOGD)',
     description:
       'Connected with AOGD’s community of obstetricians and gynaecologists, reflecting our commitment to women’s health and safe, evidence-based care.',
     awardedBy: 'AOGD — Association of Obstetricians and Gynaecologists of Delhi',
-    image: '/assets/img/Association-of-Obstetricians-And-Gynaecologists-of-Delhi.png',
+    image: '/assets/img/Awards/4.png',
   },
   {
     title: 'Women of Excellence 2025',
     description:
       'Recognised among Women of Excellence 2025 for outstanding contribution to healthcare, leadership, and patient-centred fertility care.',
     awardedBy: 'Women of Excellence Awards 2025',
-    image: '/assets/img/women-of-excellence-2025.png',
+    image: '/assets/img/Awards/5.png',
+  },
+  {
+    title: 'IFS Member',
+    description:
+      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
+    awardedBy: 'Indian Fertility Society (IFS)',
+    image: '/assets/img/Awards/6.png',
+  },
+  {
+    title: 'IFS Member',
+    description:
+      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
+    awardedBy: 'Indian Fertility Society (IFS)',
+    image: '/assets/img/Awards/7.png',
+  },
+  {
+    title: 'IFS Member',
+    description:
+      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
+    awardedBy: 'Indian Fertility Society (IFS)',
+    image: '/assets/img/Awards/8.png',
+  },
+  {
+    title: 'IFS Member',
+    description:
+      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
+    awardedBy: 'Indian Fertility Society (IFS)',
+    image: '/assets/img/Awards/9.png',
   },
 ];
 
@@ -149,54 +178,40 @@ const page = () => {
 
             {awardsData.map((award, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <div style={{
-                  backgroundColor: '#ffffff',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)',
-                  border: '1px solid #e8e8e8',
-                  transition: 'all 0.3s ease',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  textAlign: 'center',
-                  padding: '30px 20px'
-                }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0px 2px 10px rgba(0, 0, 0, 0.05)';
-                  }}
-                >
-                  <div style={{
-                    width: 'min(100%, 220px)',
-                    height: '220px',
-                    maxWidth: '220px',
-                    backgroundColor: '#fafafa',
-                    borderRadius: '12px',
-                    margin: '0 auto 24px',
+                <div
+                  style={{
+                    height: '100%',
                     display: 'flex',
+                    flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    padding: '12px',
-                  }}>
+                    textAlign: 'center',
+                    padding: '12px 8px',
+                  }}
+                >
+                  <div
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
                     <Image
-                      src={award.image}
+                      src={getAssetPathClient(award.image)}
                       alt={award.title}
-                      width={220}
-                      height={220}
+                      width={520}
+                      height={520}
                       style={{
-                        width: '100%',
-                        height: '100%',
+                        width: 'auto',
+                        height: 'auto',
+                        maxWidth: '100%',
+                        maxHeight: 'min(400px, 70vw)',
                         objectFit: 'contain',
-                        borderRadius: '8px',
                       }}
                     />
                   </div>
-                  <h4 style={{
+                  {/* <h4 style={{
                     fontSize: '20px',
                     fontWeight: '600',
                     color: '#000000',
@@ -220,7 +235,7 @@ const page = () => {
                     margin: 0
                   }}>
                     Awarded by: {award.awardedBy}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             ))}

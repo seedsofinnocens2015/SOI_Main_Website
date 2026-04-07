@@ -9,7 +9,10 @@ const page = () => {
   const headingData = {
     title: 'All IVF Specialists',
     uspTitle:
-      'WORLD-CLASS IVF EXPERTS <br /> <span class="cs_accent_color">MEET OUR SPECIALISTS</span>',
+      'WORLD-CLASS <span class="cs_accent_color"> IVF SPECIALISTS</span>',
+    centerUspTitle: true,
+    hideStatsGrid: true,
+    hideAppointmentForm: true,
   };
 
   // Function to extract state from location
@@ -41,7 +44,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.png"
+        backgroundImage="/assets/img/Doctor-Headers/Doctors-Banner.png"
       >
         <PageHeading data={headingData} />
       </Section>

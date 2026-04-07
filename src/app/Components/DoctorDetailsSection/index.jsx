@@ -220,7 +220,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
             {data.awards && data.awards.length > 0 && (
               <div className="cs_awards">
                 <div className="cs_section_header">
-                  <AccentHeading level={3} className="cs_section_title_small">Awards</AccentHeading>
+                  <AccentHeading level={3} className="cs_section_title_small">Awards & Publications</AccentHeading>
                 </div>
                 <ul className="cs_education_list">
                   {data.awards.map((award, index) => (

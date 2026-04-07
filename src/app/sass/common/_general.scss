@@ -3785,6 +3785,28 @@ label {
       padding: 20px;
     }
 
+    &.cs_header_usp_wrapper_no_form {
+      // Keep USP heading slightly higher when right-side form is hidden.
+      margin-top: -250px;
+
+      @media (max-width: 1199px) {
+        margin-top: -50px;
+      }
+
+      @media (max-width: 991px) {
+        margin-top: -20px;
+      }
+    }
+
+    &.cs_header_usp_wrapper_center_title {
+      // Slight right shift for centered doctors heading.
+      margin-left: 1px;
+
+      @media (max-width: 1199px) {
+        margin-left: 0;
+      }
+    }
+
     .cs_header_usp_topline {
       font-size: 48px;
       font-weight: 800;
