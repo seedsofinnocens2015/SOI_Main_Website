@@ -8,7 +8,7 @@ import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const page = () => {
   const headingData = {
-    title: 'Our Story',
+    uspTitle: 'Our <span class="cs_accent_color">Story </span>',
   };
 
   return (

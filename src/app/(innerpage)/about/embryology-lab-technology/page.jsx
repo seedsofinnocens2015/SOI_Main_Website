@@ -7,7 +7,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const headingData = {
-  title: 'Our Embryology Lab & Technology',
+  uspTitle: 'Our Embryology Lab & <span class="cs_accent_color">Technology </span>',
 };
 
 const ivfContentData = {

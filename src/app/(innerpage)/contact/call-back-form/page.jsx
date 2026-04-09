@@ -62,7 +62,7 @@ const Page = () => {
       if (!formData.callTime) return 'Please select your preferred call time.';
     }
     if (step === 3) {
-      if (!formData.reason) return 'Please select a reason for the call.';
+      // Reason/message is optional for this form.
     }
     return '';
   };
@@ -323,7 +323,7 @@ const Page = () => {
                     <div className="row cs_gap_y_30">
                       <div className="col-md-12">
                         <label className="cs_form_label">
-                          Reason for Call <span style={{ color: '#df3655' }}>*</span>
+                          Reason for Call <span style={{ fontSize: '12px', color: '#999' }}>(Optional)</span>
                         </label>
                         <select
                           name="reason"

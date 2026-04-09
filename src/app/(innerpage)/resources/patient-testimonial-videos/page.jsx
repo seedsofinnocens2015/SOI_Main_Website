@@ -5,7 +5,7 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import React, { useState } from 'react';
 
 const headingData = {
-  title: 'Patient Testimonial Videos',
+  uspTitle: 'Patient <span class="cs_accent_color">Testimonial Videos </span>',
 };
 
 // Convert YouTube URL to embed format

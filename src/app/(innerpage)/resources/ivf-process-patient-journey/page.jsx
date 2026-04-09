@@ -4,7 +4,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
 
 const headingData = {
-  title: 'IVF Process / Patient Journey',
+ uspTitle: 'IVF Process / <span class="cs_accent_color">Patient Journey </span>',
 };
 
 const serviceData = {

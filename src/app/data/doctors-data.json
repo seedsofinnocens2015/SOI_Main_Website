@@ -782,6 +782,7 @@
   {
     "slug": "dr-kriti-prasad",
     "uspTitle": "Hormones & IVF <br /> <span class=\"cs_accent_color\">Dr. Kriti Prasad</span>",
+    "headerImage": "/assets/img/Doctor-Headers/kriti.png",
     "name": "Dr. Kriti Prasad",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/kriti.jpg",
@@ -872,6 +873,7 @@
   {
     "slug": "dr-julie-chhawchharia",
     "uspTitle": "Clinical Head & IVF <br /> <span class=\"cs_accent_color\">Dr. Julie Chhawchharia</span>",
+    "headerImage": "/assets/img/Doctor-Headers/julie.png",
     "name": "Dr. Julie Chhawchharia",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/julie.jpg",
@@ -1028,6 +1030,7 @@
   {
     "slug": "dr-jasna-mohammed",
     "uspTitle": "Dedicated IVF Care <br /> <span class=\"cs_accent_color\">Dr. Jasna Mohammed</span>",
+    "headerImage": "/assets/img/Doctor-Headers/jasna.png",
     "name": "Dr. Jasna Mohammed",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/jasna.jpg",
@@ -1160,6 +1163,7 @@
   {
     "slug": "dr-rashmi-singh",
     "uspTitle": "Global IVF Specialist <br /> <span class=\"cs_accent_color\">Dr. Rashmi Singh</span>",
+    "headerImage": "/assets/img/Doctor-Headers/rashmi.png",
     "name": "Dr. Rashmi Singh",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/rashmi.jpg",
@@ -1196,6 +1200,7 @@
   {
     "slug": "dr-mangla-kawade",
     "uspTitle": "Tubal Fertility Expert <br /> <span class=\"cs_accent_color\">Dr. Mangla Kawade</span>",
+    "headerImage": "/assets/img/Doctor-Headers/mangla.png",
     "name": "Dr. Mangla Kawade",
     "subtitle": "IVF Specialist",
     "image": "/assets/img/Doctors/mangla.jpg",

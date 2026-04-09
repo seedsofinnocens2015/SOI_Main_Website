@@ -10,7 +10,7 @@ import FertilityCalculatorsPage from './FertilityCalculatorsPage';
 import { FaCalculator, FaChartLine, FaUserMd, FaInfoCircle } from 'react-icons/fa';
 
 const headingData = {
-  title: 'Fertility Calculator',
+  uspTitle: 'Fertility <span class="cs_accent_color">Calculator </span>',
 };
 
 const serviceData = {

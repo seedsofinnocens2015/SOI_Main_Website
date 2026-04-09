@@ -3,8 +3,8 @@
 ## 🔧 Kya Fix Kiya Gaya
 
 ### 1. **Next.js Configuration Update**
-- `next.config.mjs` में `assetPrefix: '/new'` add kiya
-- Ye ensure karta hai ki sab assets `/new` prefix ke saath load honge
+- `next.config.mjs` ko root hosting ke liye simplify kiya
+- Assets ab direct root paths se load honge
 
 ### 2. **Post-Build Script**
 - `scripts/fix-asset-paths.js` create kiya
@@ -31,13 +31,13 @@ Ye command:
 
 ### Step 2: Out Folder Ko Hostinger Par Upload Karein
 
-1. `out` folder ki saari files ko Hostinger ke `/new` folder mein upload karein
+1. `out` folder ki saari files ko Hostinger ke `public_html` folder mein upload karein
 2. Purani files ko replace karein (agar pehle se upload ki hui hain)
 
 ### Step 3: Test Karein
 
 Browser mein check karein:
-- `https://www.seedsofinnocens.com/new`
+- `https://www.seedsofinnocens.com`
 - Images properly load ho rahi hain ya nahi
 
 ---
@@ -53,12 +53,12 @@ Browser mein check karein:
 1. Network tab open karein
 2. Page reload karein
 3. Failed requests check karein
-4. Image URLs check karein - kya wo `/new/assets/...` se start ho rahe hain?
+4. Image URLs check karein - kya wo `/assets/...` se start ho rahe hain?
 
 ### Check 3: File Structure
-Hostinger par `/new` folder mein structure aisa hona chahiye:
+Hostinger par `public_html` ke andar structure aisa hona chahiye:
 ```
-/new/
+/public_html/
   ├── assets/
   │   └── img/
   │       ├── logo.svg
@@ -70,7 +70,7 @@ Hostinger par `/new` folder mein structure aisa hona chahiye:
 ```
 
 ### Check 4: .htaccess File
-`.htaccess` file `/new` folder mein honi chahiye aur properly configured honi chahiye.
+`.htaccess` file `public_html` folder mein honi chahiye aur properly configured honi chahiye.
 
 ---
 
@@ -91,7 +91,7 @@ Hostinger par `/new` folder mein structure aisa hona chahiye:
 **Solution:**
 - Post-build script properly run hui hai ya nahi check karein
 - `out/_next/static/css/` folder ki CSS files check karein
-- CSS files mein paths `/new/assets/...` se start ho rahe hain ya nahi
+- CSS files mein paths `/assets/...` se start ho rahe hain ya nahi
 
 ---
 
@@ -100,7 +100,7 @@ Hostinger par `/new` folder mein structure aisa hona chahiye:
 Agar post-build script kaam nahi kare, to manually ye karein:
 
 1. `out` folder ki saari `.css` files mein search karein: `/assets/`
-2. Replace karein: `/new/assets/`
+2. Replace karein: `/assets/`
 3. Same `.js` files mein bhi karein
 4. HTML files mein bhi check karein
 
@@ -111,7 +111,7 @@ Agar post-build script kaam nahi kare, to manually ye karein:
 - [ ] `npm run build` successfully complete hua
 - [ ] Post-build script run hui (console mein messages dikhne chahiye)
 - [ ] `out` folder ki saari files Hostinger par upload hui hain
-- [ ] `.htaccess` file `/new` folder mein hai
+- [ ] `.htaccess` file `public_html` folder mein hai
 - [ ] Browser mein website check kiya
 - [ ] Images properly load ho rahi hain
 - [ ] Browser console mein koi errors nahi hain

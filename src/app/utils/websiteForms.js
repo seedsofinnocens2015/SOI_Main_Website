@@ -3,7 +3,7 @@
  *
  * - Set NEXT_PUBLIC_SOI_API_URL in .env.local if the API host changes (no trailing slash).
  * - Legacy JSON endpoints: book-appointment, call-back-form (unchanged payloads).
- * - All other forms POST to unified: /api/new-website/form-submit
+ * - All other forms POST to unified: /api/website/form-submit
  *   Body: { formType, ...fields } or multipart + formType field (implement on server).
  */
 

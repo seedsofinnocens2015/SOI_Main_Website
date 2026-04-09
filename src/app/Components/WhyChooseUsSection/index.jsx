@@ -213,7 +213,7 @@ const WhyChooseUsSection = ({ data }) => {
             />
           </div>
         </div>
-        <div className="cs_why_choose_content">
+        <div className="cs_why_choose_content" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
           <h2 className="cs_why_choose_heading">{data.whyChooseHeading}</h2>
           {Array.isArray(data.whyChooseText) ? (
             <ul className="cs_why_choose_list" style={{ listStyle: 'none', paddingLeft: 0, marginBottom: '20px' }}>
@@ -236,7 +236,7 @@ const WhyChooseUsSection = ({ data }) => {
           ) : (
             <p className="cs_why_choose_text">{data.whyChooseText}</p>
           )}
-          <Link href={data.callUsLink || '/contact'} className="cs_why_choose_btn">
+          <Link href={data.callUsLink || '/contact'} className="cs_why_choose_btn" style={{ alignSelf: 'flex-start' }}>
             <FaPhoneAlt className="cs_btn_icon" />
             <span>{data.callUsText || 'CALL US'}</span>
           </Link>
@@ -296,7 +296,7 @@ const WhyChooseUsSection = ({ data }) => {
             )}
           </div>
         </div>
-        <div className="cs_why_choose_content">
+        <div className="cs_why_choose_content" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
           <h2 className="cs_why_choose_heading">
             {data.selfCycleHeading.includes('™') ? (
               data.selfCycleHeading.split('™').map((part, index, arr) => (
@@ -313,7 +313,7 @@ const WhyChooseUsSection = ({ data }) => {
             )}
           </h2>
           <p className="cs_why_choose_text">{data.selfCycleText}</p>
-          <Link href={data.bookAppointmentLink || '/contact/book-appointment'} className="cs_why_choose_btn">
+          <Link href={data.bookAppointmentLink || '/contact/book-appointment'} className="cs_why_choose_btn" style={{ alignSelf: 'flex-start' }}>
             <FaCalendarAlt className="cs_btn_icon" />
             <span>{data.bookAppointmentText || 'BOOK AN APPOINTMENT'}</span>
           </Link>

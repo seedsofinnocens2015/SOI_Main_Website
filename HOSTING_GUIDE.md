@@ -43,15 +43,14 @@ Build complete होने के बाद:
 1. h-panel में **File Manager** पर click करें
 2. या **Files** section में जाएं
 
-### 3.3 `/new` Folder बनाएं
+### 3.3 Root Folder Use करें
 1. File Manager में root directory (`public_html`) में जाएं
 2. **New Folder** button click करें
-3. Folder name: `new` (lowercase)
-4. Create करें
+3. `public_html` ko website root ke roop me use karein (alag folder ki zarurat nahi)
 
 ### 3.4 Files Upload करें
 **Option A: File Manager से (Small projects के लिए)**
-1. `new` folder में जाएं
+1. `public_html` folder में जाएं
 2. **Upload** button click करें
 3. Local machine से `out` folder की सभी files और folders select करें
 4. Upload करें
@@ -64,17 +63,17 @@ Build complete होने के बाद:
    - Password: FTP password
    - Port: 21
 3. Local side: `out` folder select करें
-4. Remote side: `public_html/new` folder में जाएं
+4. Remote side: `public_html` folder में जाएं
 5. सभी files और folders को drag & drop करें
 
 ---
 
 ## ⚙️ Step 4: .htaccess File Setup (Important!)
 
-`/new` folder में `.htaccess` file बनाएं ताकि routing properly काम करे:
+`public_html` folder में `.htaccess` file बनाएं ताकि routing properly काम करे:
 
 ### 4.1 File Manager में:
-1. `public_html/new` folder में जाएं
+1. `public_html` folder में जाएं
 2. **New File** button click करें
 3. File name: `.htaccess`
 4. नीचे दिया गया content paste करें:
@@ -82,17 +81,17 @@ Build complete होने के बाद:
 ```apache
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /new/
+  RewriteBase /
   
   # Handle Next.js static files
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ /new/$1 [L]
+  RewriteRule ^(.*)$ /$1 [L]
   
   # Redirect to index.html for client-side routing
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ /new/index.html [L]
+  RewriteRule ^ /index.html [L]
 </IfModule>
 
 # Enable compression
@@ -120,12 +119,12 @@ Build complete होने के बाद:
 ## 🔍 Step 5: Testing
 
 ### 5.1 Website Check करें
-1. Browser में जाएं: `https://www.seedsofinnocens.com/new`
+1. Browser में जाएं: `https://www.seedsofinnocens.com`
 2. Homepage load होना चाहिए
 3. सभी pages check करें:
-   - `https://www.seedsofinnocens.com/new/about`
-   - `https://www.seedsofinnocens.com/new/contact`
-   - `https://www.seedsofinnocens.com/new/blog`
+   - `https://www.seedsofinnocens.com/about`
+   - `https://www.seedsofinnocens.com/contact`
+   - `https://www.seedsofinnocens.com/blog`
    - etc.
 
 ### 5.2 Common Issues और Solutions
@@ -139,7 +138,7 @@ Build complete होने के बाद:
 
 **Issue 3: CSS/JS files नहीं load हो रहे**
 - Solution: Browser console check करें
-- File paths check करें - सभी paths `/new/` से start होने चाहिए
+- File paths check करें - सभी paths root `/` से resolve होने चाहिए
 
 ---
 
@@ -160,7 +159,7 @@ Build complete होने के बाद:
 
 ## 🎯 Important Notes
 
-1. **Base Path**: Project `/new` folder में host हो रहा है, इसलिए सभी internal links automatically `/new` prefix के साथ काम करेंगे
+1. **Base Path**: Project root (`/`) पर host हो रहा है, इसलिए internal links direct domain path par kaam karenge
 
 2. **Static Export**: यह static export है, इसलिए:
    - Server-side rendering (SSR) काम नहीं करेगा
@@ -184,7 +183,7 @@ Build complete होने के बाद:
 
 ### Problem: Routes काम नहीं कर रहे
 - `.htaccess` file में rewrite rules check करें
-- `basePath: '/new'` properly set है या नहीं verify करें
+- `basePath` empty (`''`) hai ya nahi verify करें
 
 ### Problem: Build error आ रहा है
 - `node_modules` delete करें और फिर `npm install` करें
@@ -196,10 +195,10 @@ Build complete होने के बाद:
 
 - [ ] Project successfully build हो गया
 - [ ] `out` folder में सभी files हैं
-- [ ] `/new` folder Hostinger पर बन गया
+- [ ] `out` folder ki files direct `public_html` me upload ho gayi
 - [ ] सभी files upload हो गईं
 - [ ] `.htaccess` file properly configured है
-- [ ] Website `https://www.seedsofinnocens.com/new` पर accessible है
+- [ ] Website `https://www.seedsofinnocens.com` पर accessible है
 - [ ] सभी pages properly load हो रहे हैं
 - [ ] Images और assets properly load हो रहे हैं
 

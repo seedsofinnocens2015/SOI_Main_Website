@@ -8,7 +8,7 @@ import doctorsData from '@/app/data/doctors-data.json';
 
 const page = () => {
   const headingData = {
-    title: 'Maternal–Fetal Medicine Specialists',
+    uspTitle: 'Maternal–Fetal Medicine <span class="cs_accent_color">Specialists </span>',
   };
 
   const getStateFromLocation = (location) => {

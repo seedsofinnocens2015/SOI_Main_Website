@@ -8,128 +8,72 @@ import Image from 'next/image';
 import { getAssetPathClient } from '@/app/utils/assetPath';
 
 const headingData = {
-  title: 'Awards & Accreditations',
-};
-
-const ivfContentData = {
-  sections: [
-    {
-      heading: 'Our Recognition & Excellence',
-      paragraphs: [
-        'Seeds of Innocens has been recognized for excellence in fertility medicine, innovation, and patient care. Our accreditations and awards reflect our commitment to maintaining the highest standards in reproductive medicine.',
-      ]
-
-    },
-    {
-      heading: 'Accreditations & Certifications',
-      paragraphs: [
-        'Our laboratory follows strict quality control protocols and maintains certifications from leading regulatory bodies. We conduct regular quality audits, equipment calibration, and staff training to ensure consistent, high-quality outcomes.',
-      ],
-      listItems: [
-        'ISO 9001:2015 - Quality Management System Certification',
-        'NABH Accredited - National Accreditation Board for Hospitals & Healthcare Providers',
-        'ISAR Member - Indian Society of Assisted Reproduction',
-        'FOGSI Affiliated - Federation of Obstetric and Gynaecological Societies of India',
-      ],
-    },
-    {
-      heading: 'Professional Associations & Memberships',
-      paragraphs: [
-        'Seeds of Innocens is an active member of leading professional organizations in reproductive medicine, ensuring we stay at the forefront of medical advances and best practices.',
-      ],
-      listItems: [
-        'Indian Society for Assisted Reproduction (ISAR)',
-        'Federation of Obstetric and Gynaecological Societies of India (FOGSI)',
-        'Indian Medical Association (IMA)',
-        'European Society of Human Reproduction and Embryology (ESHRE)',
-        'American Society for Reproductive Medicine (ASRM)',
-        'Asia Pacific Initiative on Reproduction (ASPIRE)',
-        'International Federation of Fertility Societies (IFFS)',
-        'Preimplantation Genetic Diagnosis International Society (PGDIS)',
-      ],
-    },
-    {
-      heading: 'Quality Assurance & Compliance',
-      paragraphs: [
-        'Seeds of Innocens maintains the highest standards of quality and compliance across all our centres. Our commitment to excellence is demonstrated through:',
-      ],
-      listItems: [
-        'Regular internal and external quality audits',
-        'Continuous staff training and development programs',
-        'Compliance with all regulatory requirements',
-        'Ethical guidelines and best practices',
-        'State-of-the-art equipment maintenance and calibration',
-        'Patient safety protocols and procedures',
-        'Data privacy and confidentiality measures',
-        'Transparent reporting and documentation',
-      ],
-    },
-  ],
+  uspTitle: 'Heading- Remarkable <br /> <span class="cs_accent_color"> IVF Chain of India </span>',
 };
 
 /** Copy aligned with each badge: Times Achievers, Healthworld, IFS, AOGD, Women of Excellence */
 const awardsData = [
   {
-    title: 'Times Healthcare Achievers — Delhi NCR 2020',
+    title: 'The RX Healthcare Excellence Award',
     description:
-      'Recognised among Times Healthcare Achievers for excellence in healthcare delivery and fertility services in the Delhi NCR region.',
-    awardedBy: 'The Times of India — Times Healthcare Achievers',
+      'Seeds of Innocens IVF\'s exceptional achievement in treating infertility is recognised with the RX Healthcare Excellence Award.',
+    awardedBy: 'RX Healthcare Excellence Award',
     image: '/assets/img/Awards/1.png',
   },
   {
-    title: 'National Fertility Awards',
+    title: 'The Femina 40 Under 40 Award',
     description:
-      'Honoured at Healthworld’s National Fertility Awards for leadership, clinical outcomes, and contribution to fertility care in India.',
-    awardedBy: 'Healthworld.com — National Fertility Awards',
+      'In 2022, Dr. Gauri Agarwal received the Femina Under 40 Award for her dedication to women\'s reproductive health.',
+    awardedBy: 'Femina 40 Under 40 Award',
     image: '/assets/img/Awards/2.png',
   },
   {
-    title: 'Indian Fertility Society (IFS)',
+    title: 'The BW 40 Under 40 Award',
     description:
-      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
-    awardedBy: 'Indian Fertility Society (IFS)',
+      'Because of her extraordinary medical skills and her contributions to the development of cutting-edge fertility therapies, Dr. Gauri Agarwal was given the BW 40 under 40 award.',
+    awardedBy: 'BW 40 Under 40 Award',
     image: '/assets/img/Awards/3.png',
   },
   {
-    title: 'Association of Obstetricians & Gynaecologists of Delhi (AOGD)',
+    title: 'The Times 40 Under 40 Award',
     description:
-      'Connected with AOGD’s community of obstetricians and gynaecologists, reflecting our commitment to women’s health and safe, evidence-based care.',
-    awardedBy: 'AOGD — Association of Obstetricians and Gynaecologists of Delhi',
+      'Dr. Gauri Agarwal received the Times 40 Under 40 Award for instilling confidence among the patients and acknowledged for her compassionate approach to reproductive medicine.',
+    awardedBy: 'Times 40 Under 40 Award',
     image: '/assets/img/Awards/4.png',
   },
   {
-    title: 'Women of Excellence 2025',
+    title: 'Voice of Healthcare and Acknowledged Public Choice',
     description:
-      'Recognised among Women of Excellence 2025 for outstanding contribution to healthcare, leadership, and patient-centred fertility care.',
-    awardedBy: 'Women of Excellence Awards 2025',
+      'Seeds of Innocens IVF has been remarked as the  Best IVF and Fertility Chain of the Year North for their outstanding contribution to reproductive healthcare.',
+    awardedBy: 'Voice of Healthcare and Acknowledged Public Choice',
     image: '/assets/img/Awards/5.png',
   },
   {
-    title: 'IFS Member',
+    title: 'Certificate for Excellence in Global Healthcare',
     description:
-      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
-    awardedBy: 'Indian Fertility Society (IFS)',
+      'Seeds of Innocens IVF has won a Global Healthcare Excellence Awards 2018 for a valuable contribution towards healthcare excellence and dedicated fertility services.',
+    awardedBy: 'Certificate for Excellence in Global Healthcare',
     image: '/assets/img/Awards/6.png',
   },
   {
-    title: 'IFS Member',
+    title: 'Prestigious Healthcare Winner Award',
     description:
-      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
-    awardedBy: 'Indian Fertility Society (IFS)',
+      'Seeds of Innocence IVF has remarked its place as IVF Chain of the year North at National Fertility Awards in 2022.',
+    awardedBy: 'Prestigious Healthcare Winner Award',
     image: '/assets/img/Awards/7.png',
   },
   {
-    title: 'IFS Member',
+    title: 'Integrated Team in IVF of the year North at National Fertility Awards',
     description:
-      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
-    awardedBy: 'Indian Fertility Society (IFS)',
+      'Given in recognition of his continuous dedication and excellence in reproductive medicine and innovative infertility treatment solutions.',
+    awardedBy: 'Integrated Team in IVF of the year North at National Fertility Awards',
     image: '/assets/img/Awards/8.png',
   },
   {
-    title: 'IFS Member',
+    title: 'Best Fertility Specialist Award',
     description:
-      'Aligned with the Indian Fertility Society — India’s leading professional body for assisted reproduction, ethics, and clinical standards.',
-    awardedBy: 'Indian Fertility Society (IFS)',
+      'Dr. Gauri Agarwal has been acknowledged for excellence in work, a trusted fertility specialist, and consistent success in fertility treatment.',
+    awardedBy: 'Best Fertility Specialist Award',
     image: '/assets/img/Awards/9.png',
   },
 ];
@@ -145,21 +89,20 @@ const page = () => {
       </Section>
 
       {/* Main Content Section */}
-      <Section
+      {/* <Section
         topSpaceLg="50"
         topSpaceMd="60"
         bottomSpaceLg="50"
         bottomSpaceMd="60"
       >
         <div className="container">
-          {/* Content Section - Centered and Full Width */}
           <div className="row">
             <div className="col-12">
               <IVFContentSection data={ivfContentData} accentHeadingStyle />
             </div>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* Awards Cards Section */}
       <Section
@@ -171,7 +114,7 @@ const page = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <AccentHeading style={{ marginBottom: '40px' }}>Our Awards & Recognition</AccentHeading>
+              <AccentHeading style={{ marginBottom: '40px', marginTop: '40px' }}>Our Awards & Recognition</AccentHeading>
             </div>
           </div>
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
@@ -211,7 +154,7 @@ const page = () => {
                       }}
                     />
                   </div>
-                  {/* <h4 style={{
+                  <h4 style={{
                     fontSize: '20px',
                     fontWeight: '600',
                     color: '#000000',
@@ -235,7 +178,7 @@ const page = () => {
                     margin: 0
                   }}>
                     Awarded by: {award.awardedBy}
-                  </p> */}
+                  </p>
                 </div>
               </div>
             ))}

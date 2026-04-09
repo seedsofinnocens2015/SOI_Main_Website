@@ -8,7 +8,7 @@ import doctorsData from '@/app/data/doctors-data.json';
 
 const page = () => {
   const headingData = {
-    title: 'Surgeon Panel',
+    uspTitle: 'Surgeon <span class="cs_accent_color">Panel </span>',
   };
 
   const getStateFromLocation = (location) => {

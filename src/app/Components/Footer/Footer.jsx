@@ -14,7 +14,7 @@ const Footer = () => {
       'All Days Open <br /> Open Hours:<br />  Mon - Sun: 9.00 am. - 7.00 pm. ',
     contactText2: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
     contactText3: '+91-9810350512',
-    facebookHref: 'https://www.facebook.com/SeedsofInnocence',
+    facebookHref: 'https://www.facebook.com/seedsofinnocens/',
     youtubeHref: 'https://www.youtube.com/@seedsofinnocens',
     linkedinHref: 'https://www.linkedin.com/company/seedsofinnocens',
     instagramHref: 'https://www.instagram.com/seedsofinnocensivf',
@@ -51,7 +51,7 @@ const Footer = () => {
       { href: '/training-academy/gynecologic-surgical-training-program', text: 'Gynecologic Surgical' },
       { href: '/training-academy/training-registration', text: 'Training Registration' },
     ],
-    copyrightText: 'Copyright © 2026 Felicity. All rights reserved.',
+    copyrightText: 'Copyright © 2026 Seeds of Innocens IVF. All Rights Reserved.',
   };
 
   return (
@@ -75,12 +75,17 @@ const Footer = () => {
                   <p className="cs_footer_text">Mon - Sun: 9.00 a.m. - 7.00 p.m.</p>
                 </div>
                 <div className="cs_footer_address">
-                  <p className="cs_footer_text">3, opp. Aurbindo College,</p>
-                  <p className="cs_footer_text">MMTC Colony, Malviya Nagar,</p>
-                  <p className="cs_footer_text">New Delhi, Delhi 110017</p>
+                  <p className="cs_footer_text">
+                    We are available across multiple cities in India. Find your nearest center on our{' '}
+                    <Link href="/contact/center-locator/" aria-label="View all centers">
+                      <span className="cs_accent_color cs_underline">Center Locator</span>
+                    </Link>
+                    .
+                  </p>
                 </div>
                 <div className="cs_footer_phone">
-                  <p className="cs_footer_text">+91-9810350512</p>
+                  <p className="cs_footer_text"><span className="cs_footer_label">Phone:</span> <a href="tel:+91-9810350512" className="cs_accent_color cs_underline">+91-9810350512</a></p>
+                  <p className="cs_footer_text"><span className="cs_footer_label">Email:</span> <a href="mailto:info@seedsofinnocens.com" className="cs_accent_color cs_underline">info@seedsofinnocens.com</a></p>
                 </div>
               </div>
               <div className="cs_social_btns cs_style_1">

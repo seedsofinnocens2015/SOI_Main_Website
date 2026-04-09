@@ -11,14 +11,20 @@
   margin-top: -200px;
   z-index: 1;
 
-  // Curved top border (concave curve - dips down in the middle)
-  // Creates a smooth concave curve that dips down in the center
-  clip-path: polygon(0% 80px,
-      25% 110px,
-      50% 125px,
-      /* bowl center */
-      75% 110px,
-      100% 80px,
+  // Smooth concave top curve under home banner
+  clip-path: polygon(0% 70px,
+      8% 82px,
+      16% 94px,
+      24% 104px,
+      32% 112px,
+      40% 118px,
+      50% 122px,
+      60% 118px,
+      68% 112px,
+      76% 104px,
+      84% 94px,
+      92% 82px,
+      100% 70px,
       100% 100%,
       0% 100%);
 
@@ -30,24 +36,34 @@
   @media (max-width: 991px) {
     min-height: auto;
     padding: 50px 0 50px 0;
-    clip-path: polygon(0% 80px,
-        25% 107px,
-        50% 120px,
-        /* bowl center */
-        75% 107px,
-        100% 80px,
+    clip-path: polygon(0% 62px,
+        10% 72px,
+        20% 82px,
+        30% 90px,
+        40% 96px,
+        50% 100px,
+        60% 96px,
+        70% 90px,
+        80% 82px,
+        90% 72px,
+        100% 62px,
         100% 100%,
         0% 100%);
   }
 
   @media (max-width: 575px) {
     padding: 45px 0 45px 0;
-    clip-path: polygon(0% 80px,
-        25% 107px,
-        50% 120px,
-        /* bowl center */
-        75% 107px,
-        100% 80px,
+    clip-path: polygon(0% 58px,
+        10% 68px,
+        20% 77px,
+        30% 84px,
+        40% 89px,
+        50% 92px,
+        60% 89px,
+        70% 84px,
+        80% 77px,
+        90% 68px,
+        100% 58px,
         100% 100%,
         0% 100%);
 

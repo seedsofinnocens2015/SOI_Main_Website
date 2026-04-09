@@ -85,8 +85,8 @@ const heroData = {
       },
       {
         bgImageUrl: '/assets/img/Banner-3.png',
-        mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
-        title: 'One of Asia\'s Leading<br/>Fertility Centres',
+        mobileBgImageUrl: '/assets/img/Banner-3.png', // Add mobile image path here
+        title: 'One of Asia\'s Leading<br/>Fertility Chain',
         titleClass: 'cs_single_line_title',
         titleStyle: {
           fontSize: 'clamp(32px, 5vw, 72px)',

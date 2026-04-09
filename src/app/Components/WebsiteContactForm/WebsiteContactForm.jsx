@@ -46,7 +46,7 @@ export default function WebsiteContactForm({
         <input type="text" name="name" required className="cs_form_field" placeholder="Your name" />
       </div>
       <div className="col-md-6">
-        <input type="email" name="email" required className="cs_form_field" placeholder="Your email" />
+        <input type="email" name="email" className="cs_form_field" placeholder="Your email (optional)" />
       </div>
       <div className="col-md-6">
         <input type="text" name="subject" className="cs_form_field" placeholder="Your Subject" />

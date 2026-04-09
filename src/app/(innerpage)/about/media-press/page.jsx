@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 const headingData = {
-  title: 'Media & Press',
+  uspTitle: 'Media & <span class="cs_accent_color">Press </span>',
 };
 
 const ivfContentData = {

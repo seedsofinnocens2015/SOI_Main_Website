@@ -57,16 +57,15 @@ const Page = () => {
     if (step === 1) {
       if (!formData.name.trim()) return 'Please enter your full name.';
       if (!formData.phone.trim()) return 'Please enter your phone number.';
-      if (!formData.email.trim()) return 'Please enter your email address.';
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(formData.email)) return 'Please enter a valid email address.';
+      if (formData.email.trim() && !emailRegex.test(formData.email)) return 'Please enter a valid email address.';
     }
     if (step === 2) {
       if (!formData.date) return 'Please select a preferred date.';
       if (!formData.time) return 'Please select a preferred time.';
     }
     if (step === 3) {
-      if (!formData.message.trim()) return 'Please mention your reason for visit.';
+      // Reason/message is optional for this form.
     }
     return '';
   };
@@ -282,7 +281,7 @@ const Page = () => {
                       </div>
                       <div className="col-md-12">
                         <label className="cs_form_label">
-                          Email Address <span style={{ color: '#df3655' }}>*</span>
+                          Email Address <span style={{ fontSize: '12px', color: '#999' }}>(Optional)</span>
                         </label>
                         <input
                           type="email"
@@ -378,7 +377,7 @@ const Page = () => {
                       </div>
                       <div className="col-md-12">
                         <label className="cs_form_label">
-                          Reason for Visit <span style={{ color: '#df3655' }}>*</span>
+                          Reason for Visit <span style={{ fontSize: '12px', color: '#999' }}>(Optional)</span>
                         </label>
                         <textarea
                           rows="4"

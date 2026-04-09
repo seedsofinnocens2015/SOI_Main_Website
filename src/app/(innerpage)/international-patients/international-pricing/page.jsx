@@ -4,7 +4,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
 
 const headingData = {
-  title: 'International Pricing',
+  uspTitle: 'International <span class="cs_accent_color">Pricing </span>',
 };
 
 const serviceData = {

@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const isProduction = process.env.NODE_ENV === 'production';
-const basePath = isProduction ? '/new' : '';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const nextConfig = {
-  // Use /new only on production deployment (Hostinger subpath)
   basePath,
   poweredByHeader: false,
   // Only use static export for production builds

@@ -6,10 +6,8 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { FaStar, FaCheckCircle, FaClock, FaHeart } from 'react-icons/fa';
 import { submitUnifiedForm, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
-import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 
 const headingData = {
   title: 'Feedback',
@@ -28,11 +26,11 @@ const ivfContentData = {
 };
 
 const Page = () => {
-  const router = useRouter();
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,7 +53,11 @@ const Page = () => {
     try {
       const { ok, data } = await submitUnifiedForm(WEBSITE_FORM_TYPES.FEEDBACK, payload);
       if (ok) {
-        router.push(getThankYouUrl(THANK_YOU_TYPE.feedback));
+        e.target.reset();
+        setRating(0);
+        setHoveredRating(0);
+        setShowSuccessPopup(true);
+        setIsSubmitting(false);
       } else {
         setError(data.error || 'Something went wrong.');
         setIsSubmitting(false);
@@ -128,12 +130,11 @@ const Page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Email Address <span style={{ color: '#df3655' }}>*</span>
+                        Email Address <span style={{ fontSize: '12px', color: '#999' }}>(Optional)</span>
                       </label>
                       <input
                         type="email"
                         name="email"
-                        required
                         placeholder="Enter your email"
                         className="cs_form_field"
                       />
@@ -344,6 +345,46 @@ const Page = () => {
           </div>
         </div>
       </Section>
+
+      {showSuccessPopup ? (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.45)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            padding: '20px',
+          }}
+        >
+          <div
+            style={{
+              width: '100%',
+              maxWidth: '420px',
+              backgroundColor: '#fff',
+              borderRadius: '12px',
+              padding: '28px 24px',
+              textAlign: 'center',
+              boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+            }}
+          >
+            <FaCheckCircle style={{ color: '#22a447', fontSize: '42px', marginBottom: '12px' }} />
+            <h3 style={{ marginBottom: '8px' }}>Thank You</h3>
+            <p style={{ marginBottom: '18px', color: '#666', lineHeight: '1.6' }}>
+              Thank you to choose Seeds of Innocence.
+            </p>
+            <button
+              type="button"
+              className="cs_btn cs_style_1 cs_color_1"
+              onClick={() => setShowSuccessPopup(false)}
+            >
+              <span>Close</span>
+            </button>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -11,7 +11,7 @@ import centresAllData from '@/app/data/centres-data.json';
 import { getAssetPathClient } from '@/app/utils/assetPath';
 const allCentresRaw = centresAllData.centres;
 
-const headingData = { title: 'Center Locator' };
+const headingData = { uspTitle: 'Center <span class="cs_accent_color">Locator </span>' };
 
 function cityNameToSlug(cityName) {
   return cityName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');

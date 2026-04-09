@@ -112,11 +112,10 @@ const Page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Email Address <span style={{ color: '#df3655' }}>*</span>
+                        Email Address <span style={{ fontSize: '12px', color: '#999' }}>(Optional)</span>
                       </label>
                       <input
                         type="email"
-                        required
                         name="email"
                         placeholder="Enter your email"
                         className="cs_form_field"

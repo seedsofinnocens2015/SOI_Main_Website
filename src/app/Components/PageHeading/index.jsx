@@ -53,6 +53,8 @@ const PageHeading = ({ data }) => {
             <h2 className={`cs_header_usp_topline ${centerUspTitle ? 'text-center' : ''}`}>
               {data?.uspTitle ? (
                 <span dangerouslySetInnerHTML={{ __html: data.uspTitle }} />
+              ) : data?.title ? (
+                data.title
               ) : (
                 <>
                   EXPERT HANDS, PROVEN SUCCESS. <br />

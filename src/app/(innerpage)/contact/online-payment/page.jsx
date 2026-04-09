@@ -12,17 +12,17 @@ const headingData = {
 const page = () => {
   return (
     <div>
-      <Section
+      {/* <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
         backgroundImage="/assets/img/Top-Header.png"
       >
         <PageHeading data={headingData} />
-      </Section>
+      </Section> */}
 
       {/* Main Content Section */}
       <Section
-        topSpaceLg="50"
-        topSpaceMd="60"
+        topSpaceLg="140"
+        topSpaceMd="150"
         bottomSpaceLg="50"
         bottomSpaceMd="60"
       >

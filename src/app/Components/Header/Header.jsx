@@ -752,7 +752,7 @@ const Header = ({ isTopBar, variant }) => {
                       height={20}
                     />
                   </Link>
-                  <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                  <Link href="https://www.facebook.com/seedsofinnocens/" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                     <Image
                       src={getAssetPathClient('/assets/img/icons/facebook.svg')}
                       alt="Facebook"
@@ -808,7 +808,7 @@ const Header = ({ isTopBar, variant }) => {
                         height={20}
                       />
                     </Link>
-                    <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Link href="https://www.facebook.com/seedsofinnocens/" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
                         src={getAssetPathClient('/assets/img/icons/facebook.svg')}
                         alt="Facebook"
@@ -863,7 +863,7 @@ const Header = ({ isTopBar, variant }) => {
                         height={20}
                       />
                     </Link>
-                    <Link href="https://www.facebook.com/SeedsofInnocence" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
+                    <Link href="https://www.facebook.com/seedsofinnocens/" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
                         src={getAssetPathClient('/assets/img/icons/facebook.svg')}
                         alt="Facebook"

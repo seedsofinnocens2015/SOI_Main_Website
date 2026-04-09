@@ -4,7 +4,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import CounterSection from '@/app/Components/FunSection/CounterSection';
 
 const headingData = {
-  title: 'Success Rates',
+  uspTitle: 'Success <span class="cs_accent_color">Rates </span>',
 };
 
 /** Home jaisi counter line (rang + typography); badge/heading / peach band nahi */

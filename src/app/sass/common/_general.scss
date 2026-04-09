@@ -4316,15 +4316,40 @@ i {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  width: 210px;
-  height: 62px;
+  width: 155px;
+  height: 60px;
   padding: 12px 16px;
   border-radius: 999px;
-  background: #25d366;
+  background: #007bff;
   color: #fff;
   font-weight: 700;
   font-size: 20px;
   line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+
+  &:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+  }
+}
+
+.cs_floating_whatsapp_button {
+  position: fixed;
+  left: 190px;
+  bottom: 20px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
   text-decoration: none;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -4368,14 +4393,15 @@ i {
   justify-content: center;
 
   svg {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .cs_fertility_fab,
   .cs_fertility_fab_icon svg,
+  .cs_floating_whatsapp_button,
   .cs_floating_chat_button,
   .cs_floating_calculator_button {
     transition: none !important;
@@ -4383,6 +4409,10 @@ i {
 }
 
 @media (max-width: 520px) {
+  body {
+    padding-bottom: calc(50px + env(safe-area-inset-bottom));
+  }
+
   .cs_floating_fab_stack {
     right: 0;
     top: 50%;
@@ -4397,28 +4427,66 @@ i {
   .cs_fertility_fab_text {
     display: none;
   }
-  .cs_floating_chat_button {
-    left: 14px;
-    bottom: 14px;
+  .cs_floating_whatsapp_button {
+    left: 10px;
+    bottom: 62px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     padding: 0;
-    width: 56px;
-    height: 56px;
     justify-content: center;
+    background: #25d366;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 
-    span:last-child {
-      display: none;
+    .cs_floating_chat_button_icon svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .cs_floating_chat_button {
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 52px;
+    border-radius: 0;
+    padding: 0 8px;
+    justify-content: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    background: #007bff;
+    box-shadow: none;
+
+    .cs_floating_chat_button_icon svg {
+      width: 16px;
+      height: 16px;
     }
   }
   .cs_floating_calculator_button {
-    right: 14px;
-    bottom: 14px;
-    padding: 0;
-    width: 56px;
-    height: 56px;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 52px;
+    border-radius: 0;
+    padding: 0 8px;
     justify-content: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    background: #df3655;
+    box-shadow: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
 
-    span:last-child {
-      display: none;
+    .cs_fertility_fab_icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .cs_fertility_fab_icon svg {
+      width: 15px;
+      height: 15px;
     }
   }
 }

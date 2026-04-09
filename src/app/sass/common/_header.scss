@@ -145,7 +145,7 @@
     @media (max-width: 991px) {
       display: block;
       width: 100%;
-      overflow: hidden;
+      // overflow: hidden;
       position: relative;
       white-space: nowrap;
       &::before {
@@ -155,7 +155,7 @@
         left: 0;
         width: 50px;
         height: 100%;
-        background: linear-gradient(to right, #FCE8DD, transparent);
+        // background: linear-gradient(to right, #FCE8DD, transparent);
         z-index: 10;
         pointer-events: none;
       }
@@ -166,7 +166,7 @@
         right: 0;
         width: 50px;
         height: 100%;
-        background: linear-gradient(to left, #FCE8DD, transparent);
+        // background: linear-gradient(to left, #FCE8DD, transparent);
         z-index: 10;
         pointer-events: none;
       }
@@ -180,7 +180,7 @@
     flex-shrink: 0;
     padding-right: 30px;
     @media (max-width: 991px) {
-      animation: marquee 40s linear infinite;
+      animation: marquee 10s linear infinite;
       will-change: transform;
       // Ensure links are clickable during animation
       a {

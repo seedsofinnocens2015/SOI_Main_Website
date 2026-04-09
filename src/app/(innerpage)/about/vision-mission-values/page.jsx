@@ -4,7 +4,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
 
 const headingData = {
-  title: 'Vision, Mission & Values',
+  uspTitle: 'Vision, Mission <span class="cs_accent_color"> & Values </span>',
 };
 
 const ivfContentData = {
