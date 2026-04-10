@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { getAssetPathClient } from '@/app/utils/assetPath';
@@ -279,6 +279,24 @@ const ThankYouInner = () => {
   const typeParam = searchParams.get('type');
   const config = getConfig(typeParam);
   const TypeIcon = config.icon || FaCheckCircle;
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    window.dataLayer = window.dataLayer || [];
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', { send_to: 'AW-719316761/M2nuCPTl4pgcEJnO_9YC' });
+      return;
+    }
+
+    // Queue conversion event in case gtag loads a moment later.
+    window.dataLayer.push([
+      'event',
+      'conversion',
+      { send_to: 'AW-719316761/M2nuCPTl4pgcEJnO_9YC' },
+    ]);
+  }, []);
 
   return (
     <div>
