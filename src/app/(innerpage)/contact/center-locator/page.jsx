@@ -11,7 +11,7 @@ import centresAllData from '@/app/data/centres-data.json';
 import { getAssetPathClient } from '@/app/utils/assetPath';
 const allCentresRaw = centresAllData.centres;
 
-const headingData = { uspTitle: 'Center <span class="cs_accent_color">Locator </span>' };
+const headingData = { uspTitle: 'Centre <span class="cs_accent_color">Locator </span>' };
 
 function cityNameToSlug(cityName) {
   return cityName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
@@ -50,9 +50,9 @@ const internationalCentres = allCentresRaw.filter(c => c.isInternational).map(c 
 
 const ivfContentData = {
   sections: [{
-    heading: 'Find Your Nearest Center',
+    heading: 'Find Your Nearest Centre',
     paragraphs: [
-      'Locate the nearest Seeds of Innocens center to you. We have multiple locations across India and internationally to serve you better. Find contact details, directions, and book appointments at your preferred center.',
+      'Locate the nearest Seeds of Innocens centre to you. We have multiple locations across India and internationally to serve you better. Find contact details, directions, and book appointments at your preferred centre.',
     ],
   }],
 };
@@ -78,7 +78,7 @@ const CenterCard = ({ center }) => (
       e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.07)';
     }}
   >
-    {/* Center Image */}
+    {/* Centre Image */}
     <div style={{ position: 'relative', width: '100%', height: '200px', overflow: 'hidden' }}>
       <Image
         src={getAssetPathClient(center.image)}
@@ -257,7 +257,7 @@ const Page = () => {
                 }} />
                 <input
                   type="text"
-                  placeholder="Search by city, state or center name..."
+                  placeholder="Search by city, state or centre name..."
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   style={{
@@ -364,7 +364,7 @@ const Page = () => {
                 No centres found for <strong>&quot;{searchQuery}&quot;</strong>
               </p>
               <p style={{ fontSize: '14px', margin: 0 }}>
-                Try searching by city name, state or center name.
+                Try searching by city name, state or centre name.
               </p>
             </div>
           )}

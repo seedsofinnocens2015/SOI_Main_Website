@@ -78,7 +78,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
           {/* Left Main Content */}
           <div className="col-lg-8">
             {/* Back to All Doctors Link */}
-            <Link href="/doctors" className="cs_back_link">
+            <Link href="/ivf-doctor" className="cs_back_link">
               ← Back to All Doctors
             </Link>
 

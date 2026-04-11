@@ -3,6 +3,7 @@ import Section from '@/app/Components/Section';
 import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import { notFound } from 'next/navigation';
 import doctorsData from '@/app/data/doctors-data.json';
+import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 
 export async function generateMetadata({ params }) {
   const { doctorSlug } = await params;
@@ -39,7 +40,7 @@ const DoctorPage = async ({ params }) => {
       imageUrl: d.image,
       profession: d.subtitle,
       experience: d.experience,
-      link: `/doctors/${d.newSlug || d.slug + '-ivf-specialist'}`,
+      link: getDoctorProfilePath(d),
     }));
 
   return (

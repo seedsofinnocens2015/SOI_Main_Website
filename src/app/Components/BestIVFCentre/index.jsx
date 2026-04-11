@@ -9,6 +9,7 @@ import PageHeading from '../PageHeading';
 import FAQAccordion from '@/app/Components/FAQAccordion';
 import LazyGoogleMap from '../LazyGoogleMap';
 import { getAssetPathClient } from '@/app/utils/assetPath';
+import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 
 const BestIVFCentre = ({
     center,
@@ -261,7 +262,7 @@ const BestIVFCentre = ({
                             {centerDoctors.map((doctor, index) => {
                                 const resolvedDoctorSlug = doctorSlugMap?.[doctor.slug];
                                 const doctorLink = resolvedDoctorSlug
-                                    ? `/doctors/${resolvedDoctorSlug}`
+                                    ? getDoctorProfilePath({ newSlug: resolvedDoctorSlug })
                                     : null;
 
                                 return (

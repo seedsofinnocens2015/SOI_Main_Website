@@ -19,22 +19,22 @@ const CtaSection = ({ data = {} }) => {
     {
       imageUrl: "/assets/img/icons/ffc.svg",
       title: "Female fertility care",
-      link:  "/fertility-treatments/ivf",
+      link: "/fertility-treatments/ivf",
     },
     {
       imageUrl: "/assets/img/icons/mfc.svg",
       title: "Male fertility care",
-      link:  "/male-infertility-treatments/male-infertility-treatment-in-india",
+      link: "/male-infertility-treatments/male-infertility-treatment-in-india",
     },
     {
-      imageUrl:  "/assets/img/icons/cgt.svg",
+      imageUrl: "/assets/img/icons/cgt.svg",
       title: "Couples genetic testing",
-      link:  "/genetic-testing-screening/couple-carrier-screening",
+      link: "/genetic-testing-screening/couple-carrier-screening",
     },
     {
-      imageUrl:"/assets/img/icons/fa.svg",
+      imageUrl: "/assets/img/icons/fa.svg",
       title: "Fertility Academy",
-      link:  "/training-academy/gynecologic-surgical-training-program",
+      link: "/training-academy/gynecologic-surgical-training-program",
     },
   ];
 
@@ -43,7 +43,7 @@ const CtaSection = ({ data = {} }) => {
       <div className="container">
         <div className="cs_cta_in">
           <div className="cs_cta_left">
-            <h2 className="cs_cta_title">BEGIN YOUR<br /> FERTILITY JOURNEY<br /> TODAY.</h2>
+            <h1 className="cs_cta_title">BEGIN YOUR<br /> FERTILITY JOURNEY<br /> TODAY.</h1>
           </div>
           <div className="cs_cta_right">
             <div className="cs_cta_cards">

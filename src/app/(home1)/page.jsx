@@ -14,6 +14,65 @@ import CredibilitySection from '../Components/CredibilitySection';
 import FAQSection from '../Components/FAQSection';
 import blogsDataJson from '../data/blogs.json';
 
+export const metadata = {
+  title: {
+    absolute: 'Fertility Clinic: Fertility Hospital in India | Seeds Of Innocens IVF',
+  },
+  description:
+    'Seeds of Innocens IVF is a leading fertility clinic offering IVF, ICSI, IUI and test tube baby treatments. Find trusted care and high success rates.',
+  keywords: [
+    'fertility clinic',
+    'ivf center',
+    'best ivf center in india',
+    'best ivf centre',
+    'Seeds Of Innocens IVF',
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://www.seedsofinnocens.com',
+  },
+  openGraph: {
+    siteName: 'Seeds Of Innocens IVF',
+    type: 'website',
+    url: 'https://seedsofinnocens.com/',
+    title: 'Fertility Clinic: Fertility Hospital in India | Seeds Of Innocens IVF',
+    description:
+      'Seeds of Innocens IVF is a leading fertility clinic offering IVF, ICSI, IUI and test tube baby treatments. Find trusted care and high success rates.',
+    locale: 'en_IN',
+    images: [
+      {
+        url: 'https://seedsofinnocens.com/assets/img/Banner-2.png',
+        alt: 'Seeds Of Innocens IVF',
+      },
+      {
+        url: 'https://seedsofinnocens.com/assets/img/banner.png',
+        alt: 'Seeds Of Innocens IVF',
+      },
+      {
+        url: 'https://seedsofinnocens.com/assets/img/Header%20Logo.svg',
+        alt: 'Seeds Of Innocens IVF',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Fertility Clinic: Fertility Hospital in India | Seeds Of Innocens IVF',
+    description:
+      'Seeds of Innocens IVF is a leading fertility clinic offering IVF, ICSI, IUI and test tube baby treatments. Find trusted care and high success rates.',
+    images: ['https://seedsofinnocens.com/assets/img/Header%20Logo.svg'],
+    site: 'Seeds Of Innocens IVF',
+  },
+  other: {
+    Generator: 'Drupal 10 (https://www.drupal.org)',
+    MobileOptimized: 'width',
+    HandheldFriendly: 'true',
+    shortlink: 'https://www.seedsofinnocens.com/',
+  },
+};
+
 
 const heroData = {
     primarySlider: [
@@ -128,7 +187,7 @@ const heroData = {
     imageUrl: '/assets/img/cta_img_12.png',
     title: 'Meet Our Team of Trained Certified Doctors.',
     subtitle: 'Our experienced fertility specialists are dedicated to providing personalized care and support throughout your journey.',
-    buttonUrl: '/doctors',
+    buttonUrl: '/ivf-doctor',
     buttonText: 'Our Doctors',
   };
   
@@ -706,7 +765,7 @@ const heroData = {
     ],
     callUsLink: 'tel:+919810350512',
     callUsText: 'CALL US',
-    selfCycleHeading: 'VISION AND MISSION',
+    selfCycleHeading: 'VISION AND MISSION™',
     selfCycleText: 'At Seeds of Innocens IVF, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
     bookAppointmentLink: '/contact/book-appointment',
     bookAppointmentText: 'BOOK AN APPOINTMENT',

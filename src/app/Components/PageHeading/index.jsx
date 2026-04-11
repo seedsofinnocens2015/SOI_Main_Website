@@ -5,6 +5,9 @@ import Image from 'next/image';
 import { getAssetPathClient } from '../../utils/assetPath';
 import { submitBookAppointment } from '../../utils/websiteForms';
 import { getThankYouUrl, THANK_YOU_TYPE } from '../../utils/thankYou';
+import centresAllData from '../../data/centres-data.json';
+
+const centresData = centresAllData.centres;
 
 const PageHeading = ({ data }) => {
   const router = useRouter();
@@ -20,12 +23,10 @@ const PageHeading = ({ data }) => {
     const dataObj = {
       name: formData.get('name'),
       phone: formData.get('phone'),
-      date: formData.get('date'),
-      time: formData.get('time'),
       // Keep email blank for header quick form (no email input here),
       // so LSQ duplicate checks are not triggered by a fixed placeholder email.
       email: '',
-      center: 'Header Common Form',
+      center: formData.get('center') || 'Header Common Form',
       message: 'Appointment requested from header form',
     };
 
@@ -97,65 +98,78 @@ const PageHeading = ({ data }) => {
           <div className="col-lg-4 d-none d-lg-block" />
         ) : !hideAppointmentForm ? (
           <div className="col-lg-4 col-md-6 col-sm-12">
-            <div className="cs_header_form_wrapper">
-              <h3 className="cs_header_form_title"><span className="cs_accent_color">Book </span>Appointment</h3>
+            <div className="cs_header_form_wrapper" style={{ position: 'relative', overflow: 'hidden' }}>
+              <div style={{ filter: isSubmitting ? 'blur(2px)' : 'none', transition: 'filter 0.2s ease', pointerEvents: isSubmitting ? 'none' : 'auto' }}>
+                <h3 className="cs_header_form_title"><span className="cs_accent_color">Book </span>Appointment</h3>
 
-              <form onSubmit={handleSubmit}>
-                <div className="cs_form_group">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Full Name *"
-                    required
-                    className="cs_form_field"
-                  />
-                </div>
-                <div className="cs_form_group">
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number *"
-                    required
-                    className="cs_form_field"
-                  />
-                </div>
-                <div className="cs_form_row">
-                  <div className="cs_form_col">
-                    <label className="cs_form_label_small">Preferred Date</label>
+                <form onSubmit={handleSubmit}>
+                  <div className="cs_form_group">
                     <input
-                      type="date"
-                      name="date"
+                      type="text"
+                      name="name"
+                      placeholder="Full Name *"
                       required
-                      className="cs_form_field cs_date_input"
+                      className="cs_form_field"
                     />
                   </div>
-                  <div className="cs_form_col">
-                    <label className="cs_form_label_small">Preferred Time</label>
-                    <select
-                      name="time"
+                  <div className="cs_form_group">
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone Number *"
                       required
-                      className="cs_form_field cs_time_select"
+                      className="cs_form_field"
+                    />
+                  </div>
+                  <div className="cs_form_group">
+                    <select
+                      name="center"
+                      className="cs_form_field"
+                      defaultValue=""
                     >
-                      <option value="">Time *</option>
-                      <option value="09:00">09 AM</option>
-                      <option value="10:00">10 AM</option>
-                      <option value="11:00">11 AM</option>
-                      <option value="12:00">12 PM</option>
-                      <option value="14:00">02 PM</option>
-                      <option value="15:00">03 PM</option>
-                      <option value="16:00">04 PM</option>
-                      <option value="17:00">05 PM</option>
+                      <option value="">Select Centre</option>
+                      <optgroup label="India Centres">
+                        {centresData
+                          .filter((c) => !c.isInternational)
+                          .map((c) => (
+                            <option key={c.slug} value={c.slug}>{c.name}</option>
+                          ))}
+                      </optgroup>
+                      <optgroup label="International Centres">
+                        {centresData
+                          .filter((c) => c.isInternational)
+                          .map((c) => (
+                            <option key={c.slug} value={c.slug}>{c.name}</option>
+                          ))}
+                      </optgroup>
                     </select>
                   </div>
-                  </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="cs_btn cs_style_1 cs_color_1 cs_header_form_btn"
-                >
-                  <span>{isSubmitting ? 'Submitting...' : 'Book Appointment'}</span>
-                </button>
-              </form>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="cs_btn cs_style_1 cs_color_1 cs_header_form_btn"
+                  >
+                    <span>{isSubmitting ? 'Submitting...' : 'Book Appointment'}</span>
+                  </button>
+                </form>
+              </div>
+              {isSubmitting && (
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  backgroundColor: 'rgba(255, 255, 255, 0.45)',
+                  backdropFilter: 'blur(2px)',
+                  WebkitBackdropFilter: 'blur(2px)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  zIndex: 3,
+                  fontWeight: '600',
+                  color: '#1f2b3a',
+                }}>
+                  Processing your request...
+                </div>
+              )}
             </div>
           </div>
         ) : null}

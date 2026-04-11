@@ -20,9 +20,9 @@ const BlogSection = ({ data }) => {
       <div className="container">
         {data.sectionTitle && (
           <div className="cs_service_title_section">
-            <h1 className="cs_service_main_title">
+            <h3 className="cs_service_main_title">
               <span className="cs_service_main_title_span">{titleParts.first}</span> {titleParts.rest}
-            </h1>
+            </h3>
           </div>
         )}
 

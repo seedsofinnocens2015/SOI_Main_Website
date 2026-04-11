@@ -325,14 +325,14 @@ const CounterSection = ({ data, inline = false }) => {
 
         {/* Main Heading */}
         {data?.heading && (
-          <div className="cs_counter_heading">
+          <h2 className="cs_counter_heading">
             <span className="cs_counter_heading_highlighted">
               {data.heading.highlighted}
             </span>
             <span className="cs_counter_heading_rest">
               {' '}{data.heading.rest}
             </span>
-          </div>
+          </h2>
         )}
 
         {/* Counter Items */}

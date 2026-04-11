@@ -5,6 +5,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
 import doctorsData from '@/app/data/doctors-data.json';
+import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 
 const page = () => {
   const headingData = {
@@ -24,7 +25,7 @@ const page = () => {
     name: doctor.name,
     profession: doctor.subtitle,
     imageUrl: doctor.image,
-    link: `/doctors/${doctor.newSlug || doctor.slug + '-ivf-specialist'}`,
+    link: getDoctorProfilePath(doctor),
     experience: doctor.experience,
     state: getStateFromLocation(doctor.location),
   }));
@@ -78,7 +79,7 @@ const page = () => {
         </div>
       </Section>
 
-      {/* Doctors slider — cards styled like /doctors */}
+      {/* Doctors slider — cards styled like /ivf-doctor */}
       <Section
         topSpaceLg="0"
         topSpaceMd="0"

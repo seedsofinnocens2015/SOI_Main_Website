@@ -39,7 +39,7 @@ const ivfContentData = {
 //   },
 //   {
 //     date: 'January 20, 2024',
-//     title: 'International Expansion: Seeds of Innocens Opens Center in Africa',
+//     title: 'International Expansion: Seeds of Innocens Opens Centre in Africa',
 //     description: 'Seeds of Innocens expands its global presence with the opening of a new state-of-the-art fertility centre in Zambia, bringing world-class fertility care to more regions.',
 //     image: '/assets/img/recent_post2.jpg',
 //   },

@@ -152,7 +152,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Center Visited
+                        Centre Visited
                       </label>
                       <select name="center" className="cs_form_field">
                         <option value="">Select center (optional)</option>

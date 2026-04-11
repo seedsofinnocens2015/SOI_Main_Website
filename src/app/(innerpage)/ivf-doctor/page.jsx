@@ -4,6 +4,7 @@ import Section from '@/app/Components/Section';
 import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
 import doctorsData from '@/app/data/doctors-data.json';
+import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 
 const page = () => {
   const headingData = {
@@ -31,7 +32,7 @@ const page = () => {
     name: doctor.name,
     specialty: doctor.subtitle,
     imageUrl: doctor.image,
-    profileLink: `/doctors/${doctor.newSlug || doctor.slug + '-ivf-specialist'}`,
+    profileLink: getDoctorProfilePath(doctor),
     experience: doctor.experience,
     state: getStateFromLocation(doctor.location),
   }));

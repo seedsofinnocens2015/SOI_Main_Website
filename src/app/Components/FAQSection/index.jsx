@@ -22,7 +22,7 @@ const FAQSection = ({ data }) => {
         {/* Section Title */}
         {data.sectionTitle && (
           <div className="cs_faq_title_section">
-            <h2 className="cs_faq_main_title">
+            <h4 className="cs_faq_main_title">
               {typeof data.sectionTitle === 'object' && data.sectionTitle.part1 ? (
                 <>
                   <span className="cs_faq_title_part1" style={{ color: '#df3655' }}>
@@ -35,7 +35,7 @@ const FAQSection = ({ data }) => {
               ) : (
                 data.sectionTitle
               )}
-            </h2>
+            </h4>
           </div>
         )}
 
@@ -78,7 +78,11 @@ const FAQSection = ({ data }) => {
                       </div>
                     )}
                     <div className="cs_faq_card_body">
-                      <h3 className="cs_faq_card_title">{category.title}</h3>
+                      {index < 2 ? (
+                        <h4 className="cs_faq_card_title">{category.title}</h4>
+                      ) : (
+                        <h5 className="cs_faq_card_title">{category.title}</h5>
+                      )}
                       <p className="cs_faq_card_description">{category.description}</p>
                       {category.link && (
                         <Link href={category.link} className="cs_faq_explore_link">

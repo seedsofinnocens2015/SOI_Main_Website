@@ -36,8 +36,8 @@ const Footer = () => {
       {
         title: 'Quick Links',
         links: [
-          { href: '/doctors', text: 'Our Doctors' },
-          { href: '/contact/center-locator/', text: 'Our Centers' },
+          { href: '/ivf-doctor', text: 'Our Doctors' },
+          { href: '/contact/centre-locator/', text: 'Our Centres' },
           { href: '/contact/careers/', text: 'Careers' },
           { href: '/contact/feedback/', text: 'Feedback' },
           { href: '/contact/call-back-form/', text: 'Contact' },
@@ -76,9 +76,9 @@ const Footer = () => {
                 </div>
                 <div className="cs_footer_address">
                   <p className="cs_footer_text">
-                    We are available across multiple cities in India. Find your nearest center on our{' '}
-                    <Link href="/contact/center-locator/" aria-label="View all centers">
-                      <span className="cs_accent_color cs_underline">Center Locator</span>
+                    We are available across multiple cities in India. Find your nearest centre on our{' '}
+                    <Link href="/contact/centre-locator/" aria-label="View all centres">
+                      <span className="cs_accent_color cs_underline">Centre Locator</span>
                     </Link>
                     .
                   </p>

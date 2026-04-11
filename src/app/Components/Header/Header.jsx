@@ -17,6 +17,7 @@ import doctorsData from '@/app/data/doctors-data.json';
 import blogsData from '@/app/data/blogs.json';
 import centresData from '@/app/data/centres-data.json';
 import servicesContent from '@/app/data/servicesContent.json';
+import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 
 // Collect all hrefs under a nav item (for active state matching)
 const getNavItemHrefs = (item) => {
@@ -264,7 +265,7 @@ const Header = ({ isTopBar, variant }) => {
         ],
       },
       {
-        label: 'IVF Centers',
+        label: 'IVF Centres',
         href: '',
         isMegaMenu: true,
         megaMenuCategories: [
@@ -274,7 +275,7 @@ const Header = ({ isTopBar, variant }) => {
             subItems: [
               {
                 label: 'Delhi',
-                href: '/best-ivf-center-in-delhi',
+                href: '/best-ivf-centre-in-delhi',
                 subItems: [
                   { label: 'Malviya Nagar, New Delhi', href: '/delhi/best-ivf-centre-in-malviyanagar/' },
                   { label: 'Pitampura, New Delhi', href: '/delhi/best-ivf-centre-in-pitampura/' },
@@ -283,7 +284,7 @@ const Header = ({ isTopBar, variant }) => {
               },
               {
                 label: 'Uttar Pradesh',
-                href: '/best-ivf-center-in-uttar-pradesh',
+                href: '/best-ivf-centre-in-uttar-pradesh',
                 subItems: [
                   { label: 'Ghaziabad, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-ghaziabad/' },
                   { label: 'Lucknow, Uttar Pradesh', href: '/uttar-pradesh/best-ivf-centre-in-lucknow/' },
@@ -295,7 +296,7 @@ const Header = ({ isTopBar, variant }) => {
               },
               {
                 label: 'Bihar',
-                href: '/best-ivf-center-in-bihar',
+                href: '/best-ivf-centre-in-bihar',
                 subItems: [
                   { label: 'Patna, Bihar', href: '/bihar/best-ivf-centre-in-patna/' },
                   { label: 'Muzaffarpur, Bihar', href: '/bihar/best-ivf-centre-in-muzaffarpur/' },
@@ -303,7 +304,7 @@ const Header = ({ isTopBar, variant }) => {
               },
               {
                 label: 'Haryana',
-                href: '/best-ivf-center-in-haryana',
+                href: '/best-ivf-centre-in-haryana',
                 subItems: [
                   { label: 'Faridabad, Haryana', href: '/haryana/best-ivf-centre-in-faridabad/' },
                   { label: 'Gurugram, Haryana', href: '/haryana/best-ivf-centre-in-gurugram/' },
@@ -311,28 +312,28 @@ const Header = ({ isTopBar, variant }) => {
               },
               {
                 label: 'Jharkhand',
-                href: '/best-ivf-center-in-jharkhand',
+                href: '/best-ivf-centre-in-jharkhand',
                 subItems: [
                   { label: 'Ranchi, Jharkhand', href: '/jharkhand/best-ivf-centre-in-ranchi/' },
                 ],
               },
               {
                 label: 'Uttarakhand',
-                href: '/best-ivf-center-in-uttarakhand',
+                href: '/best-ivf-centre-in-uttarakhand',
                 subItems: [
                   { label: 'Haldwani, Uttarakhand', href: '/uttarakhand/best-ivf-centre-in-haldwani/' },
                 ],
               },
               {
                 label: 'Assam',
-                href: '/best-ivf-center-in-assam',
+                href: '/best-ivf-centre-in-assam',
                 subItems: [
                   { label: 'Guwahati, Assam', href: '/assam/best-ivf-centre-in-guwahati/' },
                 ],
               },
               {
                 label: 'Kerala',
-                href: '/best-ivf-center-in-kerala',
+                href: '/best-ivf-centre-in-kerala',
                 subItems: [
                   { label: 'Kasaragod, Kerala', href: '/kerala/best-ivf-centre-in-kasaragod/' },
                   { label: 'Kochi, Kerala', href: '/kerala/best-ivf-centre-in-kochi/' },
@@ -340,14 +341,14 @@ const Header = ({ isTopBar, variant }) => {
               },
               {
                 label: 'Jammu & Kashmir',
-                href: '/best-ivf-center-in-jammu-kashmir',
+                href: '/best-ivf-centre-in-jammu-kashmir',
                 subItems: [
                   { label: 'Srinagar, J&K', href: '/jammu-kashmir/best-ivf-centre-in-srinagar/' },
                 ],
               },
               {
                 label: 'West Bengal',
-                href: '/best-ivf-center-in-west-bengal',
+                href: '/best-ivf-centre-in-west-bengal',
                 subItems: [
                   { label: 'Kolkata', href: '/west-bengal/best-ivf-centre-in-kolkata/' },
                 ],
@@ -462,7 +463,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Dr. Gauri Agrawal – Founder',
-            href: '/doctors/dr-gauri-agarwal-ivf-specialist/',
+            href: '/ivf-doctor/dr-gauri-agarwal-ivf-specialist/',
           },
           {
             label: 'Leadership Team',
@@ -492,20 +493,20 @@ const Header = ({ isTopBar, variant }) => {
       },
       {
         label: 'Doctors',
-        href: '/doctors',
+        href: '/ivf-doctor',
         isMegaMenu: true,
         megaMenuCategories: [
           {
             label: 'All IVF Specialists',
-            href: '/doctors',
+            href: '/ivf-doctor',
           },
           {
             label: 'Maternal–Fetal Medicine Specialists',
-            href: '/doctors/maternal-fetal-medicine',
+            href: '/ivf-doctor/maternal-fetal-medicine',
           },
           {
             label: 'Surgeon Panel',
-            href: '/doctors/surgeon-panel',
+            href: '/ivf-doctor/surgeon-panel',
           },
         ],
       },
@@ -518,7 +519,7 @@ const Header = ({ isTopBar, variant }) => {
           { label: 'Online Payment', href: '/contact/online-payment' },
           { label: 'WhatsApp', href: '/contact/whatsapp' },
           { label: 'Call Back Form', href: '/contact/call-back-form' },
-          { label: 'Center Locator', href: '/contact/center-locator' },
+          { label: 'Centre Locator', href: '/contact/centre-locator' },
           { label: 'Careers', href: '/contact/careers' },
           { label: 'Feedback', href: '/contact/feedback' },
         ],
@@ -545,7 +546,7 @@ const Header = ({ isTopBar, variant }) => {
     const navItems = flattenNavSearchEntries(menu.navItems);
     const doctorItems = (Array.isArray(doctorsData) ? doctorsData : []).map((doctor) => ({
       label: doctor.name,
-      href: `/doctors/${doctor.newSlug || `${doctor.slug}-ivf-specialist`}`,
+      href: getDoctorProfilePath(doctor),
       type: 'Doctor',
     }));
     const blogItems = (blogsData?.blogs || []).map((blog) => ({
@@ -556,7 +557,7 @@ const Header = ({ isTopBar, variant }) => {
     const centerItems = (centresData?.centres || []).map((center) => ({
       label: center.name,
       href: getCenterHref(center),
-      type: 'Center',
+      type: 'Centre',
     }));
     const serviceItems = Object.keys(servicesContent || {}).map((key) => ({
       label: servicesContent[key]?.title || key,
@@ -732,7 +733,7 @@ const Header = ({ isTopBar, variant }) => {
                 </div>
               </div>
               <div className="cs_top_bar_right">
-                <Link href="/doctors/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
+                <Link href="/ivf-doctor/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
                   Dr. Gauri Agarwal
                 </Link>
                 <div className="cs_social_icons">
@@ -788,7 +789,7 @@ const Header = ({ isTopBar, variant }) => {
                   </div>
                 </div>
                 <div className="cs_top_bar_right">
-                  <Link href="/doctors/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
+                  <Link href="/ivf-doctor/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
                     Dr. Gauri Agarwal
                   </Link>
                   <div className="cs_social_icons">
@@ -843,7 +844,7 @@ const Header = ({ isTopBar, variant }) => {
                   </div>
                 </div>
                 <div className="cs_top_bar_right">
-                  <Link href="/doctors/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
+                  <Link href="/ivf-doctor/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
                     Dr. Gauri Agarwal
                   </Link>
                   <div className="cs_social_icons">
@@ -1014,7 +1015,7 @@ const Header = ({ isTopBar, variant }) => {
                                                           href={subItem.href}
                                                           prefetch={false}
                                                           onClick={(e) => {
-                                                            if (item.label === 'IVF Centers' && category.label === 'India' && !subItem.href) {
+                                                            if (item.label === 'IVF Centres' && category.label === 'India' && !subItem.href) {
                                                               e.preventDefault();
                                                             }
                                                             // Close mobile menu on navigation
@@ -1072,7 +1073,7 @@ const Header = ({ isTopBar, variant }) => {
                                                       prefetch={false}
                                                       className={isNodeActive(pathname, subItem) ? 'cs_sub_item_active' : ''}
                                                       onClick={(e) => {
-                                                        if (item.label === 'IVF Centers' && category.label === 'India' && !subItem.href) {
+                                                        if (item.label === 'IVF Centres' && category.label === 'India' && !subItem.href) {
                                                           e.preventDefault();
                                                         } else {
                                                           // Close mobile menu on navigation
@@ -1171,7 +1172,7 @@ const Header = ({ isTopBar, variant }) => {
                                   )}
                                 </ul>
                               </li>
-                              {/* Middle Column - Centers of hovered state */}
+                              {/* Middle Column - Centres of hovered state */}
                               <li style={{
                                 opacity: hoveredCategoryIndex !== null &&
                                   item.megaMenuCategories[
@@ -1225,7 +1226,7 @@ const Header = ({ isTopBar, variant }) => {
                                             href={subItem.href}
                                             prefetch={false}
                                             onClick={(e) => {
-                                              if (item.label === 'IVF Centers' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India' && !subItem.href) {
+                                              if (item.label === 'IVF Centres' && item.megaMenuCategories[hoveredCategoryIndex]?.label === 'India' && !subItem.href) {
                                                 e.preventDefault();
                                               }
                                             }}
@@ -1237,7 +1238,7 @@ const Header = ({ isTopBar, variant }) => {
                                     })}
                                 </ul>
                               </li>
-                              {/* Right Column - Nested centers of hovered state */}
+                              {/* Right Column - Nested centres of hovered state */}
                               <li style={{
                                 opacity: hoveredCategoryIndex !== null &&
                                   hoveredStateIndex !== null &&

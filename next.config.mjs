@@ -1,3 +1,5 @@
+import legacyCenterRedirects from './redirects/legacy-center-redirects.mjs';
+import legacyServiceRedirects from './redirects/legacy-service-redirects.mjs';
 /** @type {import('next').NextConfig} */
 const isProduction = process.env.NODE_ENV === 'production';
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -23,6 +25,9 @@ const nextConfig = {
   },
   experimental: {
     optimizePackageImports: ['react-icons/fa', 'react-icons/fa6'],
+  },
+  async redirects() {
+    return [...legacyCenterRedirects, ...legacyServiceRedirects];
   },
   trailingSlash: true,
   reactStrictMode: true,

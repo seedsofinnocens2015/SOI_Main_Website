@@ -1,4 +1,4 @@
-// Redirects configuration for International Centers
+// Redirects configuration for International Centres
 // Add these redirects to your next.config.mjs file
 
 export const internationalCenterRedirects = [

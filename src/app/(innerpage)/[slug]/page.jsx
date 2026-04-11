@@ -49,7 +49,7 @@ function getCenterLink(center) {
 export async function generateMetadata({ params }) {
     const { slug } = await params;
 
-    // 1. Check if it's an international center slug
+    // 1. Check if it's an international centre slug
     const internationalCenter = centresData.find(c => c.isInternational && c.slug === slug);
     if (internationalCenter) {
         const defaultDesc = internationalCenter.description
@@ -84,11 +84,11 @@ export async function generateMetadata({ params }) {
     }
 
     // 2. Otherwise treat as state page
-    if (!slug.startsWith('best-ivf-center-in-')) {
+    if (!slug.startsWith('best-ivf-centre-in-')) {
         return { title: 'Not Found' };
     }
 
-    const stateSlug = slug.replace('best-ivf-center-in-', '');
+    const stateSlug = slug.replace('best-ivf-centre-in-', '');
     const filteredCentres = centresData.filter(c => c.stateSlug === stateSlug);
 
     if (filteredCentres.length === 0) {
@@ -143,7 +143,7 @@ export async function generateStaticParams() {
         // State params
         const states = [...new Set(centresData.filter(c => !c.isInternational).map(c => c.stateSlug))];
         const stateParams = states.map(stateSlug => ({
-            slug: `best-ivf-center-in-${stateSlug}`
+            slug: `best-ivf-centre-in-${stateSlug}`
         }));
 
         // International center params (SEO slugs)
@@ -167,7 +167,7 @@ const DynamicPage = async ({ params }) => {
         notFound();
     }
 
-    // 1. Check if it's an International Center Slug
+    // 1. Check if it's an International Centre Slug
     const center = centresData.find(c => c.isInternational && c.slug === slug);
     if (center) {
         const cityName = center.name.split(',')[0].trim();
@@ -224,11 +224,11 @@ const DynamicPage = async ({ params }) => {
     }
 
     // 2. Otherwise handle as State Page
-    if (!slug.startsWith('best-ivf-center-in-')) {
+    if (!slug.startsWith('best-ivf-centre-in-')) {
         notFound();
     }
 
-    const stateSlug = slug.replace('best-ivf-center-in-', '');
+    const stateSlug = slug.replace('best-ivf-centre-in-', '');
     const filteredCentres = centresData.filter(c => c.stateSlug === stateSlug);
 
     if (filteredCentres.length === 0) {

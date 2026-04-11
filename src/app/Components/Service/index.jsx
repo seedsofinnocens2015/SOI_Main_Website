@@ -165,7 +165,7 @@ const Service = ({ data, cardBg }) => {
                               loading="eager"
                             />
                           </div>
-                          <h4 className="cs_service_simple_title">{service.title}</h4>
+                          <h2 className="cs_service_simple_title">{service.title}</h2>
                         </div>
                       </div>
                     </div>
@@ -258,7 +258,7 @@ const Service = ({ data, cardBg }) => {
           >
           </div>
           <div className="cs_service_subtitle_content_section">
-            <h3 className="cs_service_subtitle_title">{getSelectedServiceSubHeading()}</h3>
+            <h2 className="cs_service_subtitle_title">{getSelectedServiceSubHeading()}</h2>
             <p className="cs_service_subtitle_text" dangerouslySetInnerHTML={{ __html: getSelectedServiceSubtitle() }} />
             <Link href={getSelectedServiceLink()} className="cs_service_learn_more_link">
               Learn More
@@ -415,7 +415,7 @@ const Service = ({ data, cardBg }) => {
       <div className="container">
         {/* Title Section - "OUR SERVICES" */}
         <div className="cs_service_title_section">
-          <h1 className="cs_service_main_title"><span className="cs_service_main_title_span">OUR</span> SERVICES</h1>
+          <h2 className="cs_service_main_title"><span className="cs_service_main_title_span">OUR</span> SERVICES</h2>
         </div>
         <div className="cs_height_30 cs_height_lg_30" />
         

@@ -36,7 +36,7 @@ const TestimonialSection = ({ data }) => {
       <div className="container">
         {data.sectionTitle && (
           <div className="cs_service_title_section">
-            <h1 className="cs_service_main_title">
+            <h3 className="cs_service_main_title">
               {typeof data.sectionTitle === 'object' && data.sectionTitle.part1 ? (
                 <>
                   <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
@@ -47,7 +47,7 @@ const TestimonialSection = ({ data }) => {
               ) : (
                 data.sectionTitle
               )}
-            </h1>
+            </h3>
             {data.sectionSubtitle && (
               <div
                 style={{
