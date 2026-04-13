@@ -899,7 +899,9 @@ const Header = ({ isTopBar, variant }) => {
                   loading="eager"
                 />
               </Link>
-              <div className="cs_main_header_right ">
+              <div
+                className={`cs_main_header_right${isSearchActive ? ' cs_header_search_active' : ''}`}
+              >
                 <div className="cs_nav cs_primary_color ">
                   <ul
                     className={`cs_nav_list ${isShowMobileMenu && 'cs_active'}`}
