@@ -81,6 +81,85 @@ fbq('init', '1526747694884464');
 fbq('init', '2130475664040983');
 fbq('track', 'PageView');`}
         </Script>
+        <Script id="phone-input-limit" strategy="afterInteractive">
+          {`(function () {
+  var phoneFields = ['phone', 'mobile', 'contact', 'contactno', 'contact_no', 'contactnumber'];
+  var phoneErrorMessage = 'Phone number must be exactly 10 digits.';
+
+  function isPhoneInput(target) {
+    if (!(target instanceof HTMLInputElement)) return false;
+    var name = (target.getAttribute('name') || '').toLowerCase();
+    return phoneFields.indexOf(name) !== -1 || target.type === 'tel';
+  }
+
+  function getOrCreateErrorEl(input) {
+    var next = input.nextElementSibling;
+    if (next && next.getAttribute('data-phone-error') === 'true') return next;
+
+    var errorEl = document.createElement('div');
+    errorEl.setAttribute('data-phone-error', 'true');
+    errorEl.style.color = '#c33';
+    errorEl.style.fontSize = '12px';
+    errorEl.style.marginTop = '6px';
+    errorEl.style.display = 'none';
+    errorEl.textContent = phoneErrorMessage;
+    input.insertAdjacentElement('afterend', errorEl);
+    return errorEl;
+  }
+
+  function syncPhoneError(input) {
+    var errorEl = getOrCreateErrorEl(input);
+    var digits = input.value.replace(/\\D/g, '');
+    var shouldShow = digits.length > 0 && digits.length !== 10;
+    errorEl.style.display = shouldShow ? 'block' : 'none';
+    return shouldShow;
+  }
+
+  document.addEventListener('input', function (event) {
+    var target = event.target;
+    if (!isPhoneInput(target)) return;
+
+    target.maxLength = 10;
+    target.inputMode = 'numeric';
+    target.setAttribute('pattern', '[0-9]{10}');
+
+    var digits = target.value.replace(/\\D/g, '').slice(0, 10);
+    if (target.value !== digits) {
+      target.value = digits;
+    }
+
+    syncPhoneError(target);
+  });
+
+  document.addEventListener('blur', function (event) {
+    var target = event.target;
+    if (!isPhoneInput(target)) return;
+    syncPhoneError(target);
+  }, true);
+
+  document.addEventListener('submit', function (event) {
+    var form = event.target;
+    if (!(form instanceof HTMLFormElement)) return;
+
+    var phoneInputs = form.querySelectorAll('input[type="tel"], input[name="phone"], input[name="mobile"], input[name="contact"], input[name="contactNo"], input[name="contact_no"], input[name="contactNumber"]');
+    var firstInvalid = null;
+
+    for (var i = 0; i < phoneInputs.length; i += 1) {
+      var input = phoneInputs[i];
+      if (!(input instanceof HTMLInputElement)) continue;
+      var hasError = syncPhoneError(input);
+      if (hasError && !firstInvalid) {
+        firstInvalid = input;
+      }
+    }
+
+    if (firstInvalid) {
+      event.preventDefault();
+      firstInvalid.focus();
+    }
+  });
+})();`}
+        </Script>
       </head>
       <body className={`${inter.variable}`}>
         <noscript>
