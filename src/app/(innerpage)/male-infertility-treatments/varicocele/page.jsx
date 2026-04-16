@@ -97,7 +97,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.png"
+        backgroundImage="/assets/img/Top-Header.webp"
       >
         <PageHeading data={headingData} />
       </Section>

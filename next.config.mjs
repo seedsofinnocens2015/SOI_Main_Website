@@ -1,6 +1,7 @@
 import legacyCenterRedirects from './redirects/legacy-center-redirects.mjs';
 import legacyServiceRedirects from './redirects/legacy-service-redirects.mjs';
 import legacyDoctorRedirects from './redirects/legacy-doctor-redirects.mjs';
+import legacyContactRedirects from './redirects/legacy-contact-redirects.mjs';
 /** @type {import('next').NextConfig} */
 const isProduction = process.env.NODE_ENV === 'production';
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -28,7 +29,12 @@ const nextConfig = {
     optimizePackageImports: ['react-icons/fa', 'react-icons/fa6'],
   },
   async redirects() {
-    return [...legacyCenterRedirects, ...legacyServiceRedirects, ...legacyDoctorRedirects];
+    return [
+      ...legacyCenterRedirects,
+      ...legacyServiceRedirects,
+      ...legacyDoctorRedirects,
+      ...legacyContactRedirects,
+    ];
   },
   trailingSlash: true,
   reactStrictMode: true,

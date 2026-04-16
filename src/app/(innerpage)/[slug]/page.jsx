@@ -60,7 +60,7 @@ export async function generateMetadata({ params }) {
         const description = internationalCenter.metaDescription || defaultDesc;
         const path = `${basePath}/${slug}/`.replace(/\/{2,}/g, '/');
         const canonicalUrl = `${SITE_URL}${path}`;
-        const ogImage = internationalCenter.image || '/assets/img/Top-Header.png';
+        const ogImage = internationalCenter.image || '/assets/img/Top-Header.webp';
         const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${basePath}${ogImage}`;
 
         return {
@@ -115,7 +115,7 @@ export async function generateMetadata({ params }) {
     );
     const path = `${basePath}/${slug}/`.replace(/\/{2,}/g, '/');
     const canonicalUrl = `${SITE_URL}${path}`;
-    const ogImage = '/assets/img/Top-Header.png';
+    const ogImage = '/assets/img/Top-Header.webp';
     const ogImageUrl = `${SITE_URL}${basePath}${ogImage}`;
 
     return {
@@ -270,7 +270,7 @@ const DynamicPage = async ({ params }) => {
         <div className="cs_center_page_template">
             <Section
                 className={'cs_page_heading cs_bg_filed cs_center'}
-                backgroundImage={rawStateContent.headerImage || "/assets/img/Top-Header.png"}
+                backgroundImage={rawStateContent.headerImage || "/assets/img/Top-Header.webp"}
             >
                 <PageHeading data={headingData} />
             </Section>

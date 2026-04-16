@@ -77,8 +77,8 @@ export const metadata = {
 const heroData = {
     primarySlider: [
       {
-        bgImageUrl: '/assets/img/banner.png',
-        mobileBgImageUrl: '/assets/img/banner.png', // Add mobile image path here
+        bgImageUrl: '/assets/img/banner.webp',
+        mobileBgImageUrl: '/assets/img/banner.webp', // Add mobile image path here
         title: 'YOUR JOURNEY TO<br/>PARENTHOOD STARTS HERE.',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -110,8 +110,8 @@ const heroData = {
         isCenterLayout: true,
       },
       {
-        bgImageUrl: '/assets/img/Banner-2.png',
-        mobileBgImageUrl: '/assets/img/Banner-2.png', // Add mobile image path here
+        bgImageUrl: '/assets/img/Banner-2.webp',
+        mobileBgImageUrl: '/assets/img/Banner-2.webp', // Add mobile image path here
         title: 'Experience the Bliss of Parenthood.',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -143,8 +143,8 @@ const heroData = {
         isCenterLayout: true,
       },
       {
-        bgImageUrl: '/assets/img/Banner-3.png',
-        mobileBgImageUrl: '/assets/img/Banner-3.png', // Add mobile image path here
+        bgImageUrl: '/assets/img/Banner-3.webp',
+        mobileBgImageUrl: '/assets/img/Banner-3.webp', // Add mobile image path here
         title: 'One of Asia\'s Leading<br/>Fertility Chain',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -752,7 +752,7 @@ const heroData = {
   };
 
   const whyChooseUsData = {
-    familyImage: '/assets/img/shoegirl.svg', // Please replace with actual family image
+    familyImage: '/assets/img/shoegirl.webp', // Please replace with actual family image
     designImage: '/assets/img/leaf.png', // Design image for left side background
     whyChooseHeading: 'WHY CHOOSE US?',
     whyChooseText: [
@@ -769,7 +769,7 @@ const heroData = {
     selfCycleText: 'At Seeds of Innocens IVF, we believe in fulfilling the dreams of couples who are facing difficulty in conceiving. We believe in a future where advancements in medicine are delivered with a human touch, an end to infertility becoming less of an end and more of a beginning. Our vision is to bring happiness to everyone',
     bookAppointmentLink: '/contact/book-appointment',
     bookAppointmentText: 'BOOK AN APPOINTMENT',
-    selfieImage: '/assets/img/babywithgirl.svg', // Please replace with actual selfie image
+    selfieImage: '/assets/img/babywithgirl.webp', // Please replace with actual selfie image
     // speechBubbleText: 'Self-cycle™ IVF means\nA baby with your genes,\ntraits and quirks.',
   };
 

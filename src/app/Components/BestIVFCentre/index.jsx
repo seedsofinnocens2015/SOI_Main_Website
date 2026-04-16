@@ -139,7 +139,7 @@ const BestIVFCentre = ({
             {/* Header Section */}
             <Section
                 className={'cs_page_heading cs_bg_filed cs_center'}
-                backgroundImage={center?.headerImage || "/assets/img/Top-Header.png"}
+                backgroundImage={center?.headerImage || "/assets/img/Top-Header.webp"}
             >
                 <PageHeading data={headingData} />
             </Section>

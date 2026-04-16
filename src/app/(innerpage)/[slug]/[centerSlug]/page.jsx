@@ -71,7 +71,7 @@ export async function generateMetadata({ params }) {
 
     const path = `${basePath}/${stateSlug}/${cleanSlug}/`.replace(/\/{2,}/g, '/');
     const canonicalUrl = `${SITE_URL}${path}`;
-    const ogImage = center.image || '/assets/img/Top-Header.png';
+    const ogImage = center.image || '/assets/img/Top-Header.webp';
     const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${basePath}${ogImage}`;
 
     return {

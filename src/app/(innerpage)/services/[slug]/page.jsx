@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
 
   const title = config.title || slug;
   const description = config.description || getDefaultDescription(config);
-  const ogImage = config.heroBackground || config.benefitImages?.[0] || '/assets/img/Top-Header.png';
+  const ogImage = config.heroBackground || config.benefitImages?.[0] || '/assets/img/Top-Header.webp';
   const canonicalUrl = `${SITE_URL}/services/${slug}`;
 
   return {

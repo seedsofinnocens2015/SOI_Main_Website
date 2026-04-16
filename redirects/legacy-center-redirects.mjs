@@ -54,6 +54,11 @@ const legacyCenterRedirects = [
     permanent: true,
   },
   {
+    source: '/best-ivf-centre-in-kochi-what-to-look-for/',
+    destination: '/kerala/best-ivf-centre-in-kochi/',
+    permanent: true,
+  },
+  {
     source: '/best-ivf-centre-in-ghaziabad/',
     destination: '/uttar-pradesh/best-ivf-centre-in-ghaziabad/',
     permanent: true,
@@ -96,6 +101,16 @@ const legacyCenterRedirects = [
   {
     source: '/best-ivf-centre-in-srinagar/',
     destination: '/jammu-kashmir/best-ivf-centre-in-srinagar/',
+    permanent: true,
+  },
+  {
+    source: '/best-ivf-centre-in-oman/',
+    destination: '/best-ivf-centre-in-mabela-muscat/',
+    permanent: true,
+  },
+  {
+    source: '/best-ivf-centre-in-south-delhi/',
+    destination: '/best-ivf-centre-in-delhi/',
     permanent: true,
   },
 ];

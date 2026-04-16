@@ -53,7 +53,7 @@ const GeneticExpertDoctorPage = async ({ params }) => {
     <div className="cs_doctor_details_page">
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage={doctor.headerImage || '/assets/img/Top-Header.png'}
+        backgroundImage={doctor.headerImage || '/assets/img/Top-Header.webp'}
       >
         <PageHeading
           data={{
