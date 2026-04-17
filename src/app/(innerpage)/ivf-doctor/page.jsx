@@ -45,7 +45,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Doctor-Headers/Doctors-Banner.png"
+        backgroundImage="/assets/img/Doctor-Headers/Doctors-Banner.webp"
       >
         <PageHeading data={headingData} />
       </Section>

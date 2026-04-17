@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Components/Header/Header';
 import Footer from '../Components/Footer/Footer';
+import GlobalAppointmentPopup from '../Components/GlobalAppointmentPopup';
 
 const DefalultLayout = ({ children }) => {
     return (
@@ -8,6 +9,7 @@ const DefalultLayout = ({ children }) => {
             <Header isTopBar={true}></Header>
             {children}
             <Footer></Footer>
+            <GlobalAppointmentPopup />
         </div>
     );
 };

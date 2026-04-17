@@ -8,6 +8,7 @@ import { getThankYouUrl, THANK_YOU_TYPE } from '../../utils/thankYou';
 import centresAllData from '../../data/centres-data.json';
 
 const centresData = centresAllData.centres;
+const APPOINTMENT_SUBMITTED_KEY = 'soi_appointment_submitted';
 
 const PageHeading = ({ data }) => {
   const router = useRouter();
@@ -33,6 +34,9 @@ const PageHeading = ({ data }) => {
     try {
       const { ok, data: result } = await submitBookAppointment(dataObj);
       if (ok) {
+        if (typeof window !== 'undefined') {
+          localStorage.setItem(APPOINTMENT_SUBMITTED_KEY, 'true');
+        }
         router.push(getThankYouUrl(THANK_YOU_TYPE.appointment));
       } else {
         alert(result.error || 'Something went wrong.');
@@ -100,7 +104,7 @@ const PageHeading = ({ data }) => {
           <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="cs_header_form_wrapper" style={{ position: 'relative', overflow: 'hidden' }}>
               <div style={{ filter: isSubmitting ? 'blur(2px)' : 'none', transition: 'filter 0.2s ease', pointerEvents: isSubmitting ? 'none' : 'auto' }}>
-                <h3 className="cs_header_form_title"><span className="cs_accent_color">Book </span>Appointment</h3>
+                <h3 className="cs_header_form_title">Book your<br/><span className="cs_accent_color cs_blink_soft" style={{ fontWeight: '700' }}> Free Consultation </span></h3>
 
                 <form onSubmit={handleSubmit}>
                   <div className="cs_form_group">
@@ -174,6 +178,29 @@ const PageHeading = ({ data }) => {
           </div>
         ) : null}
       </div>
+      <style jsx>{`
+        .cs_blink_soft {
+          display: inline-block;
+          transform-origin: center;
+          animation: csSoftZoom 1.2s ease-in-out infinite;
+        }
+
+        @keyframes csSoftZoom {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.08);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .cs_blink_soft {
+            animation: none;
+          }
+        }
+      `}</style>
     </div>
   );
 };

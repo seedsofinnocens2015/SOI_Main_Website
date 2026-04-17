@@ -1,6 +1,6 @@
 {
   "ivf": {
-    "headerImage": "/assets/img/Services/IVF.png",
+    "headerImage": "/assets/img/Services/IVF.webp",
     "uspTitle": "IVF <span class=\"cs_accent_color\">(In-Vitro Fertilization)</span>",
     "title": "IVF",
     "slug": "ivf",
@@ -178,7 +178,7 @@
     }
   },
   "icsi": {
-    "headerImage": "/assets/img/Services/ICSI.png",
+    "headerImage": "/assets/img/Services/ICSI.webp",
     "uspTitle": "ICSI <span class=\"cs_accent_color\">(Intracytoplasmic Sperm Injection)</span>",
     "title": "ICSI",
     "slug": "icsi",
@@ -1110,7 +1110,7 @@
     }
   },
   "prp": {
-    "headerImage": "/assets/img/Services/PRP.png",
+    "headerImage": "/assets/img/Services/PRP.webp",
     "uspTitle": "PRP & Ovarian <span class=\"cs_accent_color\">Rejuvenation</span>",
     "title": "PRP & Ovarian Rejuvenation",
     "heroBackground": "/assets/img/Top-Header.webp",
@@ -1180,7 +1180,7 @@
   },
   "cryopreservation": {
     "uspTitle": "Cryopreservation <br/> <span class=\"cs_accent_color\">(Egg, Sperm & Embryos)</span>",
-    "headerImage": "/assets/img/Services/Cryopreservation.png",
+    "headerImage": "/assets/img/Services/Cryopreservation.webp",
     "title": "Cryopreservation",
     "heroBackground": "/assets/img/Top-Header.webp",
     "layoutType": "ivfContent",
@@ -1562,7 +1562,7 @@
     }
   },
   "blastocyst-transfer": {
-    "headerImage": "/assets/img/Services/BlastocystTransfer.png",
+    "headerImage": "/assets/img/Services/BlastocystTransfer.webp",
     "uspTitle": "Blastocyst  <span class=\"cs_accent_color\">Transfer</span>",
     "title": "Blastocyst Transfer",
     "heroBackground": "/assets/img/Top-Header.webp",
@@ -1846,66 +1846,87 @@
     "ivfContentData": {
       "sections": [
         {
-          "heading": "Varicocele Symptoms & Treatment",
+          "heading": "Varicocele",
           "paragraphs": [
-            "Varicoceles are the enlarged veins in the scrotum, a loose bag of skin in males that holds the testicles. It is a malfunction of the valves of the testicular vein that cause the blood to pool or collect in an area and enlarge the vein. This pooling of blood which is the main varicocele symptom, causes circulation problems in the testes, leading to temperature and environmental variations in the testicles.",
-            "This has an adverse effect on the motility, count, and morphology of the sperm, thus, having an indirect effect on the fertility of a male. Statistics from around the world show that about 15% of the male population suffers from Varicoceles. A Varicocele Treatment or simply Varicocelectomy, is a procedure that ties the swollen veins in the scrotum, while preserving the normal blood vessels.",
-            "At Seeds of Innocence our team of fertility specialists will help you with the right varicocele diagnosis and also identify the right varicocele causes."
+            "A varicocele develops when veins become swollen in the scrotum – the pouch of skin that houses the testicles. But the existence of the pampiniform plexus veins is normal in all men, just like varicose veins develop in 10-15 percent of men. Additionally, the development of varicocele is seen in puberty. The varicocele may develop further.",
+            "Varicoceles are swollen veins in the scrotum. Symptoms caused by varicoceles include swelling in the scrotum and aching in the testicles. Varicoceles can develop without showing any signs. Nonetheless, varicocele is one of the most common causes of infertility. A healthcare practitioner is able to diagnose varicocele and provide proper treatment.",
+            "Varicocele is a condition characterized by swollen veins in the scrotum. In this condition, there is a problem with the valves located within the veins, and they do not regulate the blood flow through the spermatic cord correctly, resulting in blood pooling in the veins.",
+            "Varicocele can thus result in the appearance of varicose veins. Symptoms of this condition include mild symptoms such as pain in the testicles and swelling in the scrotum. However, you may experience no symptoms from this condition."
           ]
         },
         {
-          "heading": "Symptoms of Varicoceles",
+          "heading": "Risk factors for varicoceles",
           "paragraphs": [
-            "The most daunting part about varicoceles is that they remain asymptomatic for a rather long time, often going unnoticed. In a majority of cases, men only find out about their varicoceles when they get checked for fertility issues. In the rare cases that varicoceles cause pain, the pain occurs due to long periods of sitting, and even then, it is just mild to moderate. The only viable symptom that they have is that they cause infertility in men."
+            "Varicoceles affect a lot of males and people born male. One out of every five men has varicoceles. You have an increased chance of having varicoceles on the left side of your scrotum compared to the right side or both sides.",
+            "Even though the causes of varicoceles are not fully known, some risk factors believed to cause varicocele include:",
+            "Damaged valves: Valves in your testicles transport blood to your heart. In case these valves do not function correctly, the blood tends to pool in your veins, thus creating varicocele.",
+            "Genetics: Studies show that varicocele tends to affect members of the same family, meaning it is hereditary.",
+            "Hormonal imbalance: Hormone imbalance, especially during puberty, is one factor believed to be involved since hormonal imbalances make the veins of your testicles widen.",
+            "Prolonged standing: Sitting or standing for prolonged periods may put too much pressure in the veins in your scrotum, thus making them dilated and contributing to varicocele.",
+            "Some outside factors that may cause varicoceles include kidney conditions, tumors, and physical damage that hampers proper blood flow in the scrotum."
           ]
         },
         {
-          "heading": "Benefits of Varicocelectomy",
+          "heading": "Complications of varicoceles",
           "paragraphs": [
-            "A Varicocelectomy is the most common operation or procedure that is performed to solve issues of male infertility. It is the best chance of repairing a Varicocele, with the goal of relieving pain, if any, and increasing the chances of pregnancy in couples that are facing infertility due to male factors. The stats with Varicocelectomy are astonishing, as close to half of the patients are able to conceive through natural way after the procedure, with almost 80% men seeing significant improvement in their health.",
-            "Aside from this, Varicocelectomy is a great factor in preventing any hormonal damage and improves Leydig cell function in a vast majority of men."
+            "Most varicoceles will resolve themselves with adequate treatment. Large varicoceles could lead to complications like low testosterone and infertility.",
+            "Low testosterone could result in shrinking of the size of the testicles, decreased libido, depression, and reduced muscle mass."
           ]
         },
         {
-          "heading": "Treatment",
+          "heading": "Symptoms of varicoceles",
           "paragraphs": [
-            "At SOI, you can get one of the most common treatments of varicoceles and the most effective one as well; Microscopic Varicocelectomy. In this, the swollen veins are tied off while preserving the blood flow into the testicles. The result of this procedure is a dramatic improvement in reproductive health of men."
+            "Many patients suffering from varicoceles do not experience any symptoms, especially those who suffer from mild varicoceles. In case there are some symptoms, the following can apply:",
+            "Pain or discomfort in the region",
+            "Enlargement of the scrotum due to swelling",
+            "Throbbing or aching in the scrotum"
           ]
         },
         {
-          "heading": "Q. Do varicoceles go away?",
+          "heading": "Infertility",
           "paragraphs": [
-            "No, varicoceles do not go away on their own."
+            "In many cases, varicoceles do not come with symptoms and can only be found incidentally while being examined physically. Contact your provider for any suspicion that you have a varicocele or are experiencing symptoms in the scrotum area."
           ]
         },
         {
-          "heading": "Q. What happens if varicocele is left untreated?",
+          "heading": "Diagnosis of varicoceles",
           "paragraphs": [
-            "For most people, the blood around the testicle is bound to cause some pressure, resulting in the shrinkage of the testes. However, varicocele may have a strong possibility of causing infertility in men especially if left untreated for a long time."
+            "The process of diagnosing varicoceles involves a physical examination and taking into account a patient's health history and his/her complaints. During the physical exam, the physician examines your scrotum.",
+            "Other tests used to diagnose varicoceles could include:",
+            "Blood test: This test involves examining hormone levels, particularly testosterone and follicle-stimulating hormones (FSH), which affect the process of sexual development in young patients.",
+            "Seminal fluid examination: A seminal fluid analysis may be prescribed to determine the condition of sperm and whether a varicocele affects the patient's fertility."
+          ]
+        },
+        
+        {
+          "heading": "Grading of a varicocele",
+          "paragraphs": [
+            "Doctors use a certain rating scale to assess the severity and size of varicoceles.",
+            "Grade 0: In this case, varicoceles are detected by ultrasound but cannot be felt.",
+            "Grade I: Varicoceles are felt in the scrotum during a Valsalva maneuver. It means that the patient stands upright, inhales deeply, holds his nose and mouth shut, and tries to exhale forcefully.",
+            "Grade II: Varicoceles can be palpated without performing a Valsalva maneuver.",
+            "Grade III: Varicoceles are easily detected and palpated.",
+            "Doctors offer different treatment approaches based on the severity (grade) of your varicocele. When it comes to milder cases, a doctor may prescribe some at-home remedies, including ice packs, changing your lifestyle habits, or using over-the-counter drugs, such as naproxen and ibuprofen, for alleviating pain caused by varicoceles."
           ]
         },
         {
-          "heading": "Q. Can heavy lifting cause varicocele?",
+          "heading": "Are varicoceles dangerous?",
           "paragraphs": [
-            "Heavy lifting is the cause of varicocele in a significant number of men. Aside from this, heavy lifting is also known to worsen the symptoms in a number of cases as well."
+            "Varicoceles are not considered to be life-threatening conditions. However, if you want to conceive biologically, then a varicocele is a very dangerous condition."
           ]
         },
         {
-          "heading": "Q. Can I exercise with varicocele?",
+          "heading": "Can varicoceles impair your fertility?",
           "paragraphs": [
-            "Exercising with Varicocele is a possibility if you know what possess danger to your health. It is important to identify what exercises are good for your health and what are not. Following specific precautions is important of you wish to exercise with a varicocele. For more information talk to one of our experts by booking an appointment."
+            "Yes, varicoceles can impair fertility. In up to 40% of cases of male infertility, varicoceles can cause fertility problems. At the same time, many men with varicoceles do not experience any problems with conception.",
+            "The mechanisms behind varicoceles as causes of fertility impairments remain unclear for medical professionals. Perhaps the problem is related to an increased body temperature caused by blood accumulation in the veins. An elevated body temperature can lead to reduced amounts of semen produced.",
+            "Consult a doctor in case you suspect infertility issues. Infertility is the primary reason for which patients seek treatment for varicoceles."
           ]
         },
         {
-          "heading": "Q. How long does Varicocelectomy pain last?",
+          "heading": "How common are varicoceles?",
           "paragraphs": [
-            "After the treatment, it will take about 2 days to return to normal non-strenous activities. For strenuous activities, it may take up to 2 weeks to be prepared, which is also based on how comfortable you are. Pain is generally mild and may last for about a few days to a few weeks depending on your condition."
-          ]
-        },
-        {
-          "heading": "Q. What causes pain in varicocele?",
-          "paragraphs": [
-            "The pressure of the pooling blood on the testicles causes pain in a varicocele."
+            "About 15%-20% of all American men suffer from varicoceles, that is, 1 out of 5 people. Usually, varicoceles are found in the left half of the scrotum due to the peculiarities of blood flow from the left testicle. In some cases, varicoceles appear either in the right part of the scrotum or in both parts."
           ]
         }
       ]
@@ -1986,58 +2007,50 @@
     "ivfContentData": {
       "sections": [
         {
-          "heading": "Vasectomy Reversal: Restoring Fertility for Couples Looking to Conceive",
+          "heading": "Vasectomy Reversal",
           "paragraphs": [
-            "Vasectomy is the procedure of cutting up the tubes (vas deferens) of the male reproductive system in order to prevent conception. For couples who did not want children early in their relationships, vasectomy is a common procedure. However, after a certain time, when the couple decides of conceiving, vasectomy can be reversed.",
-            "However, it is noteworthy that the success of Vasectomy Reversal has a direct correlation with the amount of time that has passed since the vasectomy was performed.",
-            "What the procedure does is that it reconnects each of the tubes that carries the sperm into the semen. This reversal then helps couples in conceiving through natural means as the sperms are back into the semen and can fertilise the female egg again."
+            "Vasectomy reversal surgery will connect the Vas deferens tubes which function to restore male reproductive capacity. The procedure exists to reconnect the Vas deferens which will enable couples to regain their ability to conceive children. The decision to undergo a vasectomy reversal is made by many men who first chose the procedure but now wish to become fathers.",
+            "The vasectomy procedure involves surgical cutting of the vas deferens tube which prevents sperm from leaving the body through the penis. The semen produced during ejaculation contains no sperm. This procedure does not impact the production of semen which originates from the prostate gland and seminal vesicles. A man wishing to have children in the future must choose between two options. The first option is to reverse his vasectomy while the second option involves sperm extraction through MESA or TESA during IVF procedures. The advantages of performing a vasectomy reversal procedure enable couples to attempt conception through natural sexual intercourse.",
+            "Urologists possess different levels of expertise which leads to varying outcomes when performing their medical procedures. The surgeon cannot successfully reconnect the vas deferens because the initial vasectomy removed excessive amounts of the tube. The patient will experience vasectomy reversal failure because the two surgically joined ends will develop blockage issues within two months after the operation.",
+            "The vasectomy results in a blood-tested barrier disruption which allows sperm and its components to enter the bloodstream. The immune system reacts to the blood because it has encountered sperm and its components at no previous time which causes the body to produce antibodies that attack sperm. The man can develop normal functions until he requires future childbearing capability which requires him to reverse his vasectomy. Antisperm antibodies enter all parts of the body because their small size enables them to access every region of the body including the testicles and epididymis and vas deferens."
           ]
         },
         {
-          "heading": "Q. Is vasectomy reversal possible?",
+          "heading": "How successful is vasectomy reversal?",
           "paragraphs": [
-            "Yes. It is basically tying the tubes back that were cut during Vasectomy."
+            "A successful vasectomy reversal operation results in sperm production which leads to renewed fertility for the patient. The success rate of vasectomy reversal procedures varies between different patients. The timing of your vasectomy reversal procedure depends on the time interval since your initial vasectomy procedure. The longer it’s been since your initial surgery the less likely you are to achieve successful results.",
+            "The success of your vasectomy reversal surgery depends on different factors which include your specific situation. These include the type of vasectomy you had, what surgery you may have to reverse it, and how experienced your surgeon is. Microsurgery, which uses a microscope to operate on the tubes, results in better surgical outcomes than other methods.",
+            "The chances of getting pregnant after vasectomy reversal are:",
+            "75% if the reversal is within 3 years of the original vasectomy",
+            "50–55% if it’s been 3 to 8 years since your vasectomy",
+            "40–45% if it’s been 9 to 14 years",
+            "30% if it’s been 15 to 19 years",
+            "less than 10% if your vasectomy was more than 20 years ago"
           ]
         },
         {
-          "heading": "Q. How long does a vasectomy reversal take?",
+          "heading": "Aftercare following a vasectomy reversal",
           "paragraphs": [
-            "Mostly performed as an outpatient procedure under local or general anaesthesia, the procedure usually takes 3 to 4 hours of time. Recovery from the surgery is a variable factor and may be anywhere between 5 to 14 days."
+            "The anaesthetic effects will require you to remain in bed until they completely disappear. The anaesthetic will start to fade and you will need pain relief medication to manage your discomfort. After your surgery, your doctor will administer a nerve block injection which provides you with temporary pain relief for several hours.",
+            "You need a driver to take you home from the hospital because you will need someone to stay with you during your first day at home. The patient requires a hospital stay because medical staff need to monitor their condition through the night. The patient needs to be hospitalized because their family members are unavailable to pick them up and their medical condition requires overnight observation. General anaesthetic recovery requires patients to wait for an extended period. Your coordination will decrease and your ability to think clearly will become difficult. The condition will resolve itself within 24 hours. You must avoid driving and drinking alcohol and operating machines and making major decisions during this time.",
+            "The nurse will provide you with instructions to follow before you leave regarding your scrotal wound care and pain relief medication options. The medical team will provide you with additional dressings to use at home until your wound finishes healing. The medical team will provide you with information about upcoming medical visits."
           ]
         },
         {
-          "heading": "Q. What is the cost to reverse a vasectomy?",
+          "heading": "Recovery following a vasectomy reversal",
           "paragraphs": [
-            "Since every body is different than the other, the cost of the procedure is a subjective matter. For more information on what the reversal will cost for you, feel free to visit us anytime. Book your appointment today."
+            "You should maintain a low activity level during the first week after your surgery to support your recovery from vasectomy reversal operation. You will experience swelling along with bruising and pain in your scrotum area for up to three days after your vasectomy reversal surgery. You should take over-the-counter pain medication which includes paracetamol and ibuprofen when you need pain relief. Ice packs can be beneficial to you but they should never be applied directly onto your skin.",
+            "You should wear tight-fitting underwear that provides proper support for the first three days after your surgery. The clinic will provide you with athletic support which offers better protection than a standard scrotal supporter. You can purchase the product from any sports stores or from online retailers. The product will offer scrotal protection while reducing discomfort and minimizing swelling.",
+            "You can start doing light exercises seven days after your operation. You should avoid all intense physical activities and weight lifting and sexual intercourse for the initial period of three weeks. You should wait for two weeks before you resume ejaculation. The first few times you ejaculate may contain blood in your semen.",
+            "You should wait two days before taking a shower and three weeks before you take your first bath. You should handle your genital area with gentle patting until it dries completely.",
+            "The sutures will dissolve on their own after two to three weeks."
           ]
         },
         {
-          "heading": "Q. How difficult is it to reverse a vasectomy?",
+          "heading": "Post-surgery sperm tests",
           "paragraphs": [
-            "It can be quite a difficult process. Normally, it is more difficult than performing a vasectomy, which is why it performed as a microsurgery. It requires special skill, expertise, and experience."
-          ]
-        },
-        {
-          "heading": "Q. Can vasectomy reversal cause birth defects?",
-          "paragraphs": [
-            "Problems like birth defects and other complications remain at the same level as the general population as compared to the people who have had a vasectomy reversal."
-          ]
-        },
-        {
-          "heading": "Q. Does sperm count increase after vasectomy reversal?",
-          "paragraphs": [
-            "No. As a procedure, vasectomy reversal has no effect whatsoever on the sperm count of a male."
-          ]
-        },
-        {
-          "heading": "Q. Risks involved in vasectomy reversal?",
-          "paragraphs": [
-            "Risks involved in the process of vasectomy reversal includes the following:"
-          ],
-          "listItems": [
-            "Bleeding in the scrotum",
-            "Infection on the surgery site",
-            "Pain around the surgery site"
+            "It takes three to six months for your body to produce sperm which will appear in your ejaculate after you have a vasectomy reversal. The process requires up to two years from its start date. You need a semen analysis to determine whether your sample contains sperm. Your doctor will provide you with instructions about this. The first evaluation of your semen will occur three months after your vasectomy reversal. The time needed to achieve sperm production in your semen will increase for patients who have undergone vasoepididymostomy. Your doctor will schedule your semen testing to occur every three months.",
+            "The surgeon will explain alternative treatment methods to you if your sperm count remains at zero. The patient can choose to undergo another surgical procedure which aims to restore their previous state. The patient has two treatment options: they can proceed with another surgical procedure or they can use assisted reproductive methods such as ICSI. The ase section on alternatives to vasectomy reversal provides you with additional information regarding this subject."
           ]
         }
       ]
@@ -2090,7 +2103,7 @@
     }
   },
   "azoospermia": {
-    "uspTitle": "Azoospermia  <span class=\"cs_accent_color\">Understanding the Condition & Finding Hope</span>",
+    "uspTitle": "Azoospermia Understanding<span class=\"cs_accent_color\"> the Condition & Finding Hope</span>",
     "title": "Azoospermia",
     "heroBackground": "/assets/img/Top-Header.webp",
     "layoutType": "ivfContent",
@@ -2101,174 +2114,112 @@
     "ivfContentData": {
       "sections": [
         {
-          "heading": "Azoospermia: Understanding the Condition & Finding Hope",
+          "heading": "Azoospermia",
           "paragraphs": [
-            "Azoospermia is a medical condition in men where there is no sperm present in the semen. This can make natural conception difficult or impossible. But the good news is that having azoospermia doesn't mean giving up on the dream of fatherhood. At Seeds of Innocens, we specialise in diagnosing and treating male infertility conditions like azoospermia with care, compassion and advanced medical expertise."
-          ],
-          "sideImage": "/assets/img/male.jpg"
+            "Finding out about azoospermia, a disease that is marked by the lack of sperms in the ejaculate, can be a very depressing experience for those who want to have children. Not only is the issue related to infertility itself, but there is also a lot of psychological and emotional stress associated with the disease. Here at Seeds of innocens ivf, our professionals are well aware of the intricacies of the disease and will conduct an accurate diagnosis and suggest a personalized course of treatment that will help you conceive."
+          ]
         },
         {
           "heading": "What Is Azoospermia?",
           "paragraphs": [
-            "In simple words, azoospermia means zero sperm count in the ejaculate. This condition affects around 1 in 100 men and up to 10% of men with infertility issues. Often, azoospermia doesn't cause obvious symptoms, so many men only find out about it when trying to conceive."
+            "Azoospermia is a health problem marked by the lack of sperms in the ejaculate. As a result, the patient suffers from male infertility since there are no sperms to fertilize the ovum. The diagnosis is made after conducting a semen analysis, which reveals the absence of sperms."
           ]
         },
         {
-          "heading": "Types of Azoospermia",
+          "heading": "Types Of Azoospermia",
           "paragraphs": [
-            "There are two main types:"
-          ],
-          "listItems": [
-            "Obstructive Azoospermia: In this type, the body produces sperm, but a blockage prevents the sperm from getting into the semen. Common causes include: Prior surgeries, Infections, Vasectomy, Congenital absence of the vas deferens (a condition some men are born with)",
-            "Non-Obstructive Azoospermia: Here, the problem lies in poor or no sperm production by the testicles. This can be due to: Genetic disorders, Hormonal imbalances, Undescended testicles, Exposure to radiation or chemotherapy, Certain medical conditions or medications"
+            "Azoospermia is a health problem marked by the lack of sperms in the ejaculate. As a result, the patient suffers from male infertility since there are no sperms to fertilize the ovum. The diagnosis is made after conducting a semen analysis, which reveals the absence of sperms.",
+            "There are three different types of azoospermia distinguished based on its causes and symptoms:",
+            "Pre-Testicular Azoospermia : In this form, hormonal disturbances lead to indirect problems in sperm production. In this case, the testes are perfectly fine, but they fail to get the required hormonal stimulation for sperm production. This is caused by the failure of the hypothalamus or pituitary glands in producing hormones.",
+            "Testicular Azoospermia (Non-Obstructive Azoospermia – NOA) : Here, there is a lack of sperm production or insufficient production of sperms because of intrinsic problems in the testes. This may be due to some genetic problems, varicocele, toxins, or previous therapies such as chemotherapy.",
+            "Post-Testicular Azoospermia (Obstructive Azoospermia – OA) : Here, there is a blockage somewhere along the reproductive tract, preventing ejaculation. Even though the testes produce adequate sperms, there is a physical blockage that does not allow sperms to mix with the semen."
+          ]
+        },
+        {
+          "heading": "Causes of Azoospermia",
+          "paragraphs": [
+            "Azoospermia may result from many underlying problems, which can be grouped according to their location in the reproductive system. There are three major types of azoospermia causes.",
+            "Pre-Testicular Azoospermia : Hypogonadotropic hypogonadism – low production of hormones stimulating the testes",
+            "Problems with the hypothalamus or pituitary glands",
+            " Overuse of anabolic steroids or other hormone-based medicines",
+            "Certain chronic or systemic illnesses",
+            "Testicular Azoospermia (Non-Obstructive): Genetic disorders (for instance, Klinefelter's syndrome or microdeletions on the Y chromosome)",
+            "Having had mumps orchitis (testicle inflammation as a result of a mumps virus infection)",
+            "Having received radiation or chemotherapy treatment for cancer",
+            "Injury to testes or their torsion",
+            "Proliferation of veins inside the scrotum",
+            "Exposure to certain environmental hazards or constant heat",
+            "Post-Testicular Azoospermia (Obstructive): Absence of the vas deferens at birth (sometimes connected with cystic fibrosis)",
+            "Infectious causes (such as STIs)",
+            "Previous surgeries (vasectomy or hernia removal)",
+            "Damage to or injury to male genitalia",
+            "Problems with ejaculation (disease of the ejaculatory duct)"
           ]
         },
         {
           "heading": "Symptoms of Azoospermia",
           "paragraphs": [
-            "Azoospermia typically does not have clear physical symptoms. However, some signs may include:"
-          ],
-          "listItems": [
-            "Trouble conceiving a child",
-            "Low sex drive",
-            "Erectile dysfunction",
-            "Swelling or discomfort in the testicles"
+            "The condition azoospermia, in its own right, has no apparent symptoms, and most men are oblivious to their diagnosis unless they undergo fertility testing. Nonetheless, there may be some other symptoms accompanying the condition, depending on the underlying cause:",
+            "Infertility: This is the first sign usually diagnosed when the couple cannot conceive.",
+            "Sexual Dysfunction: Sexual problems such as reduced sexual desire or erectile dysfunction.",
+            "Hormonal Problems: Symptoms such as reduced body or facial hair, enlarged breasts in males, and altered voice.",
+            "Testicle Problems: Symptoms such as pain, swelling, and lumps in the testicles.",
+            "Delayed Puberty: In cases where the azoospermia occurs due to hormonal and genetic disorders.",
+            "Other Possible Symptoms: Persistent fatigue, muscle weakness, and weight loss."
           ]
         },
         {
-          "heading": "Detection and Diagnosis",
+          "heading": "Azoospermia Treatment Methods",
           "paragraphs": [
-            "Because symptoms are often hidden, a semen analysis is the best way to detect it."
+            "Treatment approaches show major differences based on the specific underlying causes combined with the presence of obstructive or non-obstructive conditions. The following methods can be distinguished:",
+            "Underlying Cause Treatment",
+            "Hormone Replacement Therapy: Hormonal imbalances such as low FSH and/or LH levels should receive hormone replacement therapy as treatment to increase sperms production.",
+            "Infections Treatment: Antibiotics or antiviral medications should be prescribed for patients who experience infections that interfere with their ability to produce sperm.",
+            "Varicocele Treatment: The condition requires surgical intervention or embolization as treatment options.",
+            "Surgical Intervention",
+            "Sperm Retrieval Techniques: The sperm retrieval methods MESA, PESA, and TESE serve as surgical techniques to obtain sperms from patients who have obstruction azoospermia.",
+            "Obstruction Correction: Vasectomy reversal and ejaculatory duct obstruction removal surgeries serve as solutions for resolving obstruction issues.",
+            "ART Techniques",
+            "In Vitro Fertilisation with Intracytoplasmic Sperm Injection: Successful sperm retrieval allows for the direct injection of sperm into an egg using IVF techniques to achieve fertilisation.",
+            "Sperm Donation: Couples who cannot retrieve sperm may use donor sperm for their IVF treatment.",
+            "Genetic Consultation and Treatment",
+            "Genetic Consultation: Genetic consultation serves as a recommendation for couples who experience azoospermia due to genetic factors.",
+            "PGT-A: This test works with IVF-ICSI to check if embryos carry any genetic disorders before doctors place them into the womb.",
+            "Lifestyle Changes",
+            "Healthy Living: A balanced diet and regular exercise and smoke-free living and moderate alcohol consumption and stress management will help improve your fertility potential.",
+            "Psychological Help",
+            "Consultation: The process of diagnosing infertility and providing treatments can cause significant psychological stress. Infertility challenges require psychological consultation and social support groups for effective coping support.",
+            "The treatment approach for azoospermia is customised depending on personal factors and identified underlying causes. The most effective treatment should be determined through consultation with a fertility expert."
           ]
         },
         {
-          "heading": "Diagnosis at Seeds of Innocens",
+          "heading": "Complications of Azoospermia",
           "paragraphs": [
-            "At Seeds of Innocens, we take a thorough and compassionate approach to diagnosis. Our team uses advanced tests to understand the root cause of azoospermia. This may include:"
-          ],
-          "listItems": [
-            "Semen Analysis: The first step to check if sperm is present.",
-            "Hormonal Tests: To check levels of FSH, LH, and testosterone.",
-            "Scrotal Ultrasound: To detect blockages or abnormalities.",
-            "Genetic Testing: For detecting inherited conditions.",
-            "Testicular Biopsy: In some cases, a sample of testicular tissue is examined to look for sperm."
+            "Azoospermia itself does not cause health problems but patients face potential health risks from both their underlying medical conditions and the treatments they require. The following list contains various possible situations:",
+            "Blockage-related complications: Obstructive azoospermia may lead to chronic testicular pain and infection development for affected men who do not receive treatment.",
+            "Surgical complications: Surgical procedures can lead to infection risks and excessive bleeding and damage to surrounding tissues.",
+            "Hormone-related complications: Hormonal therapies frequently produce side effects which include mood changes and acne development and increased risk of blood clots.",
+            "Emotional issues: Infertile men with azoospermia experience emotional trauma and anxiety which also affects their relationships."
           ]
         },
         {
-          "heading": "Treatments for Azoospermia",
+          "heading": "Azoospermia Prevention",
           "paragraphs": [
-            "The treatment depends on whether the azoospermia is obstructive or non-obstructive:"
+            "Azoospermia cannot be prevented through any existing prevention methods. People can enhance their reproductive health by making specific lifestyle choices while decreasing their chances of developing this condition.",
+            "Keep your body at a healthy weight: Weight gain in men leads to hormonal disruptions which result in reduced sperm production.",
+            "Avoid toxins: Pesticides and other environmental toxins can harm the reproductive system.",
+            "Protect yourself from STIs: Untreated chlamydia infections lead to reproductive system damage through subsequent inflammatory responses.",
+            "Use protection: Mumps orchitis or testicular infection develops when individuals contract mumps after their initial infection.",
+            "Live a healthy life: A healthy diet, proper exercise, and sufficient sleep are part of having a healthy body; they play a role in making you fertile."
           ]
         },
         {
-          "heading": "1. Surgical Treatments (for Obstructive Azoospermia)",
+          "heading": "Wrapping It Up",
           "paragraphs": [
-            "If a blockage is found, it can sometimes be corrected with minor surgery. Procedures like Vasoepididymostomy or Vasovasostomy can help restore the flow of sperm."
-          ]
-        },
-        {
-          "heading": "2. Sperm Retrieval Techniques",
-          "paragraphs": [
-            "In many cases, especially with non-obstructive azoospermia, sperm can be retrieved directly from the testicles using methods like:"
-          ],
-          "listItems": [
-            "TESA (Testicular Sperm Aspiration)",
-            "TESE (Testicular Sperm Extraction)",
-            "Micro-TESE (Microsurgical TESE)"
-          ]
-        },
-        {
-          "heading": "Using Retrieved Sperm with IVF/ICSI",
-          "paragraphs": [
-            "Retrieved sperm can be used with IVF (In Vitro Fertilisation) and ICSI (Intracytoplasmic Sperm Injection) to achieve pregnancy."
-          ]
-        },
-        {
-          "heading": "3. Hormonal Therapy",
-          "paragraphs": [
-            "For hormone-related issues, medication may help balance levels and improve sperm production."
-          ]
-        },
-        {
-          "heading": "Personalized Treatment Plans",
-          "paragraphs": [
-            "At Seeds of Innocens, our fertility experts craft personalised treatment plans tailored to each couple's unique journey."
-          ]
-        },
-        {
-          "heading": "Why Choose Seeds of Innocens?",
-          "paragraphs": [
-            "We understand the emotional toll infertility can take on couples. That's why we combine clinical excellence with empathetic care. With advanced diagnostics, state-of-the-art labs, and experienced specialists, Seeds of Innocens is one of India's trusted names in fertility treatment. Our goal is simple: to help you build your dream family."
+            "Diagnosis and treatment of problems such as varicoceles will prevent them from leading to azoospermia. One thing that one must not forget here is that these tips are generic in nature and should be considered as a guide only. In case someone has any doubts regarding azoospermia or their reproductive health, a visit to the doctor will always prove beneficial."
           ]
         }
       ]
-    },
-    "maleInfertilityContent": {
-      "types": {
-        "paragraphs": [
-          "There are two main types of azoospermia:"
-        ],
-        "listItems": [
-          "Obstructive Azoospermia: The body produces sperm, but a blockage prevents sperm from reaching the semen (e.g. prior surgery, infection, vasectomy, congenital absence of vas deferens).",
-          "Non-Obstructive Azoospermia: Poor or no sperm production by the testicles (e.g. genetic, hormonal, radiation/chemotherapy, medications)."
-        ]
-      },
-      "causes": {
-        "paragraphs": [
-          "Causes depend on type. Obstructive: blockages from surgery, infection, vasectomy, or congenital absence of vas deferens. Non-obstructive: genetic disorders, hormonal imbalances, undescended testicles, radiation or chemotherapy, certain medications or medical conditions."
-        ],
-        "listItems": [
-          "Prior surgeries or infections",
-          "Vasectomy",
-          "Genetic or chromosomal conditions",
-          "Hormonal imbalances",
-          "Radiation or chemotherapy",
-          "Congenital absence of vas deferens"
-        ]
-      },
-      "symptoms": {
-        "paragraphs": [
-          "Azoospermia often has no clear physical symptoms. Some signs may include:"
-        ],
-        "listItems": [
-          "Trouble conceiving a child",
-          "Low sex drive",
-          "Erectile dysfunction",
-          "Swelling or discomfort in the testicles"
-        ]
-      },
-      "diagnosis": {
-        "paragraphs": [
-          "Semen analysis is the first step. At Seeds of Innocens we use advanced tests to find the cause:"
-        ],
-        "listItems": [
-          "Semen analysis",
-          "Hormonal tests (FSH, LH, testosterone)",
-          "Scrotal ultrasound",
-          "Genetic testing",
-          "Testicular biopsy when needed"
-        ]
-      },
-      "treatmentOptions": {
-        "paragraphs": [
-          "Treatment depends on whether azoospermia is obstructive or non-obstructive:"
-        ],
-        "listItems": [
-          "Surgery for obstructive: vasoepididymostomy, vasovasostomy",
-          "Sperm retrieval: TESA, TESE, Micro-TESE for use with IVF/ICSI",
-          "Hormonal therapy when appropriate"
-        ]
-      },
-      "fertilityOutlook": {
-        "paragraphs": [
-          "Yes. Many men with azoospermia can have biological children. Sperm can often be retrieved and used with IVF/ICSI. Obstructive cases may be corrected by surgery; non-obstructive cases may still yield sperm for ICSI. Our team will outline options based on your diagnosis."
-        ]
-      },
-      "whenToSeeDoctor": {
-        "paragraphs": [
-          "Consult a fertility specialist or urologist if you have been trying to conceive for a year without success or if a semen analysis shows no sperm. Early evaluation helps identify cause and the best treatment or ART option."
-        ]
-      }
     }
   },
   "non-obstructive-azoospermia": {
@@ -2938,7 +2889,7 @@
     }
   },
   "genetic-testing": {
-    "headerImage": "/assets/img/Services/GeneticTesting.png",
+    "headerImage": "/assets/img/Services/GeneticTesting.webp",
     "uspTitle": "Genetic  <span class=\"cs_accent_color\">Testing</span>",
     "title": "Genetic Testing",
     "heroBackground": "/assets/img/Top-Header.webp",
@@ -3489,7 +3440,7 @@
     }
   },
   "male-infertility-treatment-in-india": {
-    "headerImage": "/assets/img/Services/MaleInfertility.png",
+    "headerImage": "/assets/img/Services/MaleInfertility.webp",
     "uspTitle": "Male Infertility  <span class=\"cs_accent_color\">Treatment in India</span>",
     "title": "Male Infertility",
     "heroBackground": "/assets/img/Top-Header.webp",
@@ -3718,7 +3669,7 @@
     }
   },
   "couple-carrier-screening": {
-    "headerImage": "/assets/img/Services/CouplesGenetic.png",
+    "headerImage": "/assets/img/Services/CouplesGenetic.webp",
     "uspTitle": "Couple Carrier Screening <span class=\"cs_accent_color\">Testing</span>",
     "title": "Couple Carrier Screening Testing",
     "heroBackground": "/assets/img/Top-Header.webp",
@@ -4094,86 +4045,60 @@
     "ivfContentData": {
       "sections": [
         {
-          "heading": "Pre-implantation Genetic Testing & PGT A, PGT-M",
+          "heading": "PGT-A, PGT-M",
           "paragraphs": [
-            "Pre-implantation genetic testing is detection of genetic information in an embryo made by examining a few cells which are representative of the whole embryo, at the pre-implantation stage of development. Previously it was called as PGS (pre-implantation genetic screening) & PGD (pre-implantation genetic diagnosis), which are now replaced by the terms PGT-A (PGT for aneuploidies) & PGT-M & PGT-SR (PGT for monogenic disorders & structural rearrangement) respectively."
-          ],
-          "sideImage": "/assets/img/PGT A & PGT-MSR.jpg"
-        },
-        {
-          "heading": "Difference between PGT A & PGT-M/SR",
-          "paragraphs": [
-            "Understanding the key differences between PGT-A and PGT-M/SR helps couples make informed decisions about their fertility treatment options."
+            "People who know that they are at high risk of passing on a particular genetic condition. PGT-M, or preimplantation genetic testing for monogenic and single-gene defects, can be performed before embryo transfer to greatly reduce the risk of having a child affected with that condition. However, PGT-M for single-gene disorders includes testing embryos. However, PGT-M was formerly known as PGD (Preimplantation genetic diagnosis). For single-gene disorders.",
+            "PGT-M is involved in testing embryos that are made through in vitro fertilization (IVF) and then transferring unaffected embryos. Preimplantation genetic testing serves as an important tool in addressing these concerns. It is performed during an IVF cycle, and it will aid in the identification of genetic or chromosomal defects in an embryo before any implantation, thus enhancing the overall success rates of IVF cycles."
           ]
         },
         {
-          "heading": "PGT-A (Pre-implantation Genetic Testing for Aneuploidies)",
+          "heading": "Different Forms of Genetic Testing: PGT-A and PGT-M",
           "paragraphs": [
-            "This is indicated when genetic parents are presumed or known to be normal chromosomally.",
-            "The embryos are screened for most of the aneuploidies for which genetic probes are available. These aneuploidies can arise de novo as both the parents are at high risk, like old age parents."
-          ],
-          "listItems": [
-            "This is done in infertile couples with recurrent implantation failure, recurrent pregnancy loss patient, old females, males more than 50 years of age or severe male factor infertility.",
-            "No preliminary work up like collection of parents' blood/ saliva is required which is required to identify the flanking markers/ genetic probes linked with mutation.",
-            "It decreases the need of invasive antenatal testing as well."
+            "The advanced methodologies implemented in genetic screening include the detection of particular genetic defects, such as mutations or structural variations, with an analysis of chromosome numbers. Also, two key tests include PGT-A (Preimplantation Genetic Testing for Aneuploidy and PGT-M (Preimplantation Genetic Testing for Monogenic diseases). With PGT-A, the focus is on the number of chromosomes.",
+            "Embryos may have abnormal numbers of chromosomes, a condition known as aneuploidy. Also, PGT-A checks to confirm that the embryonic cells have the right number of chromosomes. It is significant because when there are too many or too few, then it will result in a miscarriage or birth defects. However, a bonus function of PGT-A is its ability to reveal the gender of each embryo that is being tested.",
+            "Oppositely, PGT-M pinpoints particular genetic diseases that are caused by alterations or mutations inherited from one or both parents. Also, this kind of genetic testing is the go-to choice for couples aware that they are carriers of monogenic diseases and want to prevent passing them on to their children."
           ]
         },
         {
-          "heading": "PGT-M/SR (Pre-implantation Genetic Testing for Monogenic Disorders & Structural Rearrangement)",
+          "heading": "A Look into PGT-A (Preimplantation Genetic Testing for Aneuploidy)",
           "paragraphs": [
-            "This is indicated when one or both genetic parents carry a genetic mutation or chromosomal rearrangement.",
-            "Also, whenever the disease we are looking for is known, like hereditary cancers or we are doing HLA matching.",
-            "Genetic testing is done to determine if the same genetic mutation or unbalanced chromosomal anomalies have been transmitted to the formed embryos, & therefore to decide which embryos can be transferred intra-uterine & which can't be.",
-            "The couple are usually able to conceive normally in these patients but to confirm the absence of similar disease in their child, they opt for PGT-M/SR."
-          ],
-          "listItems": [
-            "These tests require preliminary work up like collection of parents' blood / saliva, required to identify the flanking markers/ genetic probes linked with mutation."
+            "PGT-A or Preimplantation Genetic Testing for Aneuploidy is a medical method that is designed to examine embryos for an inconsistency in the number of chromosomes. However, sperm and egg cells will combine to form 46 chromosomes or 23 pairs, which is needed for healthy human development.",
+            "However, a deviation from the exact count, which might manifest as extra or missing chromosomes, is referred to as aneuploidy. Also, this abnormality majorly results in pregnancy loss, implantation failure, or a baby born with chromosomal abnormalities, the most common of which is Down Syndrome.",
+            "With such abnormalities that cannot be visibly recognized by observing embryos in an IVF laboratory, PGT-A serves as an effective solution. By identifying euploid embryos and those with the right number of chromosomes, this procedure enhances the success of embryo transfer considerably, reducing the risk of miscarriage."
           ]
         },
         {
-          "heading": "Key Differences Summary",
+          "heading": "A Deep Dive into PGT-M (Preimplantation Genetic Testing for Monogenic Diseases)",
           "paragraphs": [
-            "In short, both PGT-A & PGT-M / SR differ basically in the indication for which they are done & the work up required for them also differs slightly. The genetic testing is done on the cells removed from the embryos which we get after IVF & reach day 5 stage. The best embryos which are normal chromosomally are transferred in to the patient once the endometrial lining is ready. This gives the best chance to the patient to have a successful & healthy pregnancy, decreased chance of miscarriages/ aneuploid conception and a live & healthy baby."
+            "PGT-M, which is previously known as Preimplantation Genetic Diagnosis (PGD), centres around screening for particular genetic disorders. Also, these are monogenic disorders, conditions that can be caused by pathogenic changes in a single specific gene. However, monogenetic disorders can cause diseases like cystic fibrosis, Tay-Sachs disease, and Huntington's disease, among others.",
+            "PGT-M is suggested in some cases where one or both partners have a well-known family history of genetic conditions. For the couples who are carriers of such diseases, PGT-M can be a powerful tool to prevent transmitting genetic disorders to their offspring.",
+            "The main objective of PGT-M is to detect embryos unaffected by the inherited condition, ready for transfer. However, the method often necessitates the construction of a customized test for the couple. By integrating PGT-M into the reproductive plan, couples substantially lower the likelihood of having a child with a particular genetic disorder."
+          ]
+        },
+        {
+          "heading": "The Process of Genetic Testing in IVF",
+          "paragraphs": [
+            "Embryo biopsy is a critical step in preimplantation genetic testing, as it involves extracting cells from an embryo for examination. However, the preparation for the biopsy begins by making an opening in the Zona Pellucida, which is a protective shell encasing the embryo. However, an embryologist can develop this opening using a laser, acid, or glass needle.",
+            "The embryonic cells required for the testing are either gently squeezed out or removed using suction through a pipette. Relying on the stage at which an embryo is biopsied, the process includes different considerations."
+          ]
+        },
+        {
+          "heading": "Day 3 Embryo Biopsy",
+          "paragraphs": [
+            "Also known as blastomere, an embryo at this stage has only six to nine cells, while it is possible to perform genetic screening on just one cell, taking two offers more accurate results. One of the unique benefits of Day 3 biopsy is its capacity for fresh embryo transfer.",
+            "Well-known as a blastomere, an embryo at this stage contains only six to nine cells. While it is possible to perform genetic screening on just one cell, taking two offers more accurate results. One of the unique benefits of Day 3 biopsy is its capacity for fresh embryo transfer.",
+            "The embryonic cells needed for testing are either gently squeezed out or removed using the suction through a pipette, relying on the stage, which can enhance the risk of embryo arrest, which will result in less wait time and possibly lower expenses. Moreover, biopsy of more than one cell at this stage will enhance the risk of an embryo arrest, which will lead to halted development. Moreover, the risk of false positives and the inconclusive results is greater with a Day 3 biopsy."
+          ]
+        },
+        {
+          "heading": "Day 5 Embryo Biopsy",
+          "paragraphs": [
+            "At this stage, known as the blastocyst stage, the embryo consists of hundreds of cells. A significant advantage of a Day 5 biopsy is the provision to take more cells for testing, leading to better diagnoses and fewer inconclusive results.",
+            "However, a setback is that not all embryos can endure lab conditions for this same duration. Also, Day 5 biopsy mandates the cryopreservation of embryos until the test results are available.",
+            "Despite these challenges, the ability to bypass an inherited genetic disease or increase the chances of successful IVF makes a strong case for embryo biopsy and associated genetic testing."
           ]
         }
       ]
-    },
-    "diagnosticContent": {
-      "purpose": {
-        "paragraphs": [
-          "Understanding the difference between PGT-A and PGT-M helps couples and doctors choose the right test: PGT-A for chromosomal screening, PGT-M/SR for known genetic mutations or structural rearrangements."
-        ],
-        "listItems": [
-          "Clarify when PGT-A vs PGT-M/SR is indicated",
-          "Understand work-up and process differences",
-          "Support informed consent and treatment planning"
-        ]
-      },
-      "whatItChecks": {
-        "paragraphs": [
-          "PGT-A checks embryo chromosomes (aneuploidy). PGT-M checks for specific single-gene mutations. PGT-SR checks for structural chromosomal rearrangements. This page explains what each test checks and when each is used."
-        ]
-      },
-      "howPerformed": {
-        "paragraphs": [
-          "All involve IVF, blastocyst culture, and embryo biopsy. PGT-A usually needs no prior parent work-up. PGT-M and PGT-SR require parent samples and probe/marker work-up before the cycle. Your genetic counselor will explain the exact steps for your case."
-        ]
-      },
-      "preparation": {
-        "paragraphs": [
-          "For PGT-A: standard IVF preparation. For PGT-M/SR: preliminary blood/saliva collection and probe design, then IVF. Your clinic will guide you."
-        ]
-      },
-      "understandingResults": {
-        "paragraphs": [
-          "PGT-A results indicate euploid vs aneuploid embryos. PGT-M/SR results indicate which embryos are free of the tested mutation or rearrangement. Your doctor will recommend which embryos are suitable for transfer."
-        ]
-      },
-      "cost": {
-        "paragraphs": [
-          "Cost varies by test type and number of embryos. PGT-M/SR often costs more due to probe development. Contact us for a detailed quote and to book an appointment."
-        ]
-      }
     }
   },
   "amniocentesis": {
