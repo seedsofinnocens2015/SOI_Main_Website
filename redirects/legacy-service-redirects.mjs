@@ -4,8 +4,8 @@
  */
 const legacyServiceRedirects = [
   {
-    source: '/ivf-doctor/dr-alpana-razadan-ivf-specialist/',
-    destination: '/genetic-expert/dr-alpana-razadan-ivf-specialist/',
+    source: '/dr-alpana-razadan-ivf-specialist/',
+    destination: '/genetic-expert/dr-alpana-razadan/',
     permanent: true,
   },
   {
@@ -15,7 +15,7 @@ const legacyServiceRedirects = [
   },
   {
     source: '/doctors/dr-alpana-razadan-ivf-specialist/',
-    destination: '/genetic-expert/dr-alpana-razadan-ivf-specialist/',
+    destination: '/genetic-expert/dr-alpana-razadan/',
     permanent: true,
   },
   {

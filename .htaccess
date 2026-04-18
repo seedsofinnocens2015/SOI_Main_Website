@@ -4,10 +4,9 @@
 
   # Legacy redirects for static export deployments (Apache/Hostinger)
   # Keep order: service-specific overrides first, then generic doctor mappings.
-  RewriteRule ^ivf-doctor/dr-alpana-razadan-ivf-specialist/?$ /genetic-expert/dr-alpana-razadan-ivf-specialist/ [R=301,L,NC]
   RewriteRule ^ivf-doctor/dr-ranjana-mishra-ivf-specialist/?$ /genetic-expert/dr-ranjana-mishra-ivf-specialist/ [R=301,L,NC]
-  RewriteRule ^doctors/dr-alpana-razadan-ivf-specialist/?$ /genetic-expert/dr-alpana-razadan-ivf-specialist/ [R=301,L,NC]
-  RewriteRule ^doctors/dr-ranjana-mishra-ivf-specialist/?$ /genetic-expert/dr-ranjana-mishra-ivf-specialist/ [R=301,L,NC]
+  RewriteRule ^dr-alpana-razadan-ivf-specialist/?$ /genetic-expert/dr-alpana-razadan/ [R=301,L,NC]
+  RewriteRule ^doctors/dr-alpana-razadan-ivf-specialist/?$ /genetic-expert/dr-alpana-razadan/ [R=301,L,NC]
   RewriteRule ^doctors/?$ /ivf-doctor/ [R=301,L,NC]
   RewriteRule ^doctors/(.+)/?$ /ivf-doctor/$1/ [R=301,L,NC]
   RewriteRule ^ivf-doctors/?$ /ivf-doctor/ [R=301,L,NC]
@@ -239,7 +238,7 @@ Options -Indexes
   Header always set Cross-Origin-Resource-Policy "same-origin"
   Header always set Permissions-Policy "accelerometer=(), autoplay=(self), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
   Header always set X-XSS-Protection "1; mode=block"
-  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.cdnfonts.com https://fonts.googleapis.com; img-src 'self' data: blob: https://img.youtube.com https://i.ytimg.com https://www.facebook.com; font-src 'self' data: https://fonts.cdnfonts.com https://fonts.gstatic.com; connect-src 'self' https://soi.seedsofinnocens.com https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com; media-src 'self' blob:; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; upgrade-insecure-requests"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com https://connect.facebook.net https://googleads.g.doubleclick.net https://a.quora.com; script-src-elem 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com https://connect.facebook.net https://googleads.g.doubleclick.net https://a.quora.com; style-src 'self' 'unsafe-inline' https://fonts.cdnfonts.com https://fonts.googleapis.com; img-src 'self' data: blob: https://img.youtube.com https://i.ytimg.com https://www.facebook.com https://www.google.com https://www.google.co.in https://googleads.g.doubleclick.net https://www.googletagmanager.com https://q.quora.com; font-src 'self' data: https://fonts.cdnfonts.com https://fonts.gstatic.com; connect-src 'self' https://soi.seedsofinnocens.com https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://www.google.co.in https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.facebook.com; media-src 'self' blob:; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; upgrade-insecure-requests"
 
   # Enforce HTTPS transport (active only on HTTPS)
   Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
@@ -250,6 +249,11 @@ Options -Indexes
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
 </IfModule>
 
+# Prefer Brotli where available (better compression than gzip)
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
 # Cache static assets
 <IfModule mod_expires.c>
   ExpiresActive On
@@ -257,8 +261,21 @@ Options -Indexes
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType text/html "access plus 5 minutes"
+</IfModule>
+
+# Strong immutable caching for hashed/static assets
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:js|css|woff2?|svg|jpg|jpeg|png|gif|webp|avif|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
 </IfModule>

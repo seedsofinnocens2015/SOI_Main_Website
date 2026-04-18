@@ -53,9 +53,9 @@ export default function RootLayout({ children }) {
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-719316761"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-ads-gtag" strategy="afterInteractive">
+        <Script id="google-ads-gtag" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K68L3V8');`}
         </Script>
-        <Script id="meta-pixel" strategy="afterInteractive">
+        <Script id="meta-pixel" strategy="lazyOnload">
           {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -81,7 +81,7 @@ fbq('init', '1526747694884464');
 fbq('init', '2130475664040983');
 fbq('track', 'PageView');`}
         </Script>
-        <Script id="phone-input-limit" strategy="afterInteractive">
+        <Script id="phone-input-limit" strategy="lazyOnload">
           {`(function () {
   var phoneFields = ['phone', 'mobile', 'contact', 'contactno', 'contact_no', 'contactnumber'];
   var phoneErrorMessage = 'Phone number must be exactly 10 digits.';

@@ -15,8 +15,12 @@ const legacyDoctorRedirects = [
   },
   {
     source: '/doctors/dr-alpana-razadan-ivf-specialist/',
+    destination: '/genetic-expert/dr-alpana-razadan/',
+    permanent: true,
+  },
+  {
     source: '/dr-alpana-razadan-ivf-specialist/',
-    destination: '/geneticist-doctor/dr-alpana-razadan/',
+    destination: '/genetic-expert/dr-alpana-razadan/',
     permanent: true,
   },
   {

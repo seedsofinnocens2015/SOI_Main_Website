@@ -9,7 +9,6 @@ import { getAssetPathClient } from "../../utils/assetPath";
 const HeroSection = ({ data }) => {
   const sliderRef1 = useRef(null);
   const sliderRef2 = useRef(null);
-  const videoRefs = useRef([]);
   const [isMobile, setIsMobile] = useState(false);
   const hasSecondarySlider = Array.isArray(data?.secondarySlider) && data.secondarySlider.length > 0;
 
@@ -57,9 +56,9 @@ const HeroSection = ({ data }) => {
     return () => clearTimeout(timer);
   }, [data]);
 
-  // Handle page visibility changes to resume slider and video when page becomes active
+  // Handle page visibility changes to resume slider when page becomes active
   useEffect(() => {
-    const resumeSliderAndVideos = () => {
+    const resumeSliders = () => {
       // Resume slider autoplay
       if (sliderRef1.current && typeof sliderRef1.current.slickPlay === 'function') {
         try {
@@ -75,22 +74,13 @@ const HeroSection = ({ data }) => {
           // no-op
         }
       }
-
-      // Resume video playback
-      videoRefs.current.forEach((videoEl) => {
-        if (videoEl && videoEl.play) {
-          videoEl.play().catch((error) => {
-            // Ignore autoplay errors silently
-          });
-        }
-      });
     };
 
     const handleVisibilityChange = () => {
       if (!document.hidden) {
         // Page became visible - resume everything
         setTimeout(() => {
-          resumeSliderAndVideos();
+          resumeSliders();
         }, 100);
       }
     };
@@ -101,7 +91,7 @@ const HeroSection = ({ data }) => {
     // Also check when window gains focus
     const handleFocus = () => {
       setTimeout(() => {
-        resumeSliderAndVideos();
+        resumeSliders();
       }, 100);
     };
 
@@ -117,9 +107,9 @@ const HeroSection = ({ data }) => {
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                // Hero section is visible - ensure everything is playing
+                // Hero section is visible - ensure slider keeps playing
                 setTimeout(() => {
-                  resumeSliderAndVideos();
+                  resumeSliders();
                 }, 300);
               }
             });
@@ -163,12 +153,7 @@ const HeroSection = ({ data }) => {
     arrows: true,
     adaptiveHeight: false,
     lazyLoad: 'progressive',
-    afterChange: (currentSlide) => {
-      // When slide changes, ensure video on current slide plays
-      const videoEl = videoRefs.current[currentSlide];
-      if (videoEl && videoEl.paused && !document.hidden) {
-        videoEl.play().catch(() => {});
-      }
+    afterChange: () => {
       // Ensure slider keeps playing
       if (sliderRef1.current && typeof sliderRef1.current.slickPlay === 'function') {
         sliderRef1.current.slickPlay();
@@ -219,7 +204,6 @@ const HeroSection = ({ data }) => {
             }}
           >
             {data?.primarySlider.map((items, index) => {
-              const isVideo = items.bgImageUrl?.toLowerCase().endsWith(".mp4");
               // Use mobile image if available and on mobile, otherwise use desktop image
               const imageUrl = (isMobile && items.mobileBgImageUrl) ? items.mobileBgImageUrl : items.bgImageUrl;
               const bgImagePath = getAssetPathClient(imageUrl);
@@ -228,90 +212,27 @@ const HeroSection = ({ data }) => {
               return (
                 <div className="cs_hero_slider_thumb_item" key={index}>
                   <div
-                    className={`cs_hero cs_style_1 cs_center cs_bg_filed${
-                      isVideo ? " cs_has_video_bg" : ""
-                    }${items.isCenterLayout && !isVideo ? " cs_has_bg_image" : ""}`}
-                    style={isVideo ? undefined : { position: 'relative' }}
+                    className={`cs_hero cs_style_1 cs_center cs_bg_filed${items.isCenterLayout ? " cs_has_bg_image" : ""}`}
+                    style={{ position: 'relative' }}
                   >
-                    {!isVideo && (
-                      <Image
-                        src={bgImagePath}
-                        alt={items.title ? String(items.title).replace(/<[^>]*>/g, ' ').trim() : 'Hero background'}
-                        fill
-                        priority={index === 0}
-                        fetchPriority={index === 0 ? 'high' : 'auto'}
-                        sizes="100vw"
-                        style={{
-                          objectFit: 'cover',
-                          objectPosition: 'center',
-                        }}
-                      />
-                    )}
-                    {items.isCenterLayout && !isVideo && (
+                    <Image
+                      src={bgImagePath}
+                      alt={items.title ? String(items.title).replace(/<[^>]*>/g, ' ').trim() : 'Hero background'}
+                      fill
+                      priority={index === 0}
+                      fetchPriority={index === 0 ? 'high' : 'auto'}
+                      sizes="100vw"
+                      style={{
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                      }}
+                    />
+                    {items.isCenterLayout && (
                       <div className="cs_hero_overlay_dark"></div>
                     )}
                     {/* {!isVideo && (
                       <div className="cs_hero_overlay"></div>
                     )} */}
-                    {isVideo && (
-                      <>
-                        <video
-                          ref={(el) => {
-                            if (el) {
-                              videoRefs.current[index] = el;
-                            }
-                          }}
-                          className="cs_hero_video_bg"
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          preload="auto"
-                          poster={items.posterUrl ?? ""}
-                          onLoadedData={(e) => {
-                            // Ensure video plays after loading
-                            if (e.target) {
-                              e.target.play().catch((error) => {
-                                console.log("Video autoplay prevented:", error);
-                              });
-                            }
-                          }}
-                          onPlay={() => {
-                            // Ensure video stays playing
-                            const video = videoRefs.current[index];
-                            if (video && video.paused) {
-                              video.play().catch(() => {});
-                            }
-                          }}
-                          onPause={(e) => {
-                            // If video pauses unintentionally (not user-initiated), try to resume it
-                            // Only resume if page is visible and it's not a user interaction
-                            if (!document.hidden && e.target) {
-                              // Check if it's paused
-                              if (e.target.paused) {
-                                // Use requestAnimationFrame for better performance
-                                requestAnimationFrame(() => {
-                                  if (!document.hidden && e.target && e.target.paused) {
-                                    e.target.play().catch(() => {
-                                      // Ignore play errors
-                                    });
-                                  }
-                                });
-                              }
-                            }
-                          }}
-                          onError={(e) => {
-                            // no-op
-                          }}
-                          onLoadedMetadata={(e) => {
-                            // no-op
-                          }}
-                        >
-                          <source src={bgImagePath} type="video/mp4" />
-                        </video>
-                        {/* <div className="cs_hero_overlay"></div> */}
-                      </>
-                    )}
                     <div className="container">
                       <div className={`cs_hero_text ${items.isCenterLayout ? 'cs_hero_text_center' : ''}`}>
                         <div className={`cs_hero_text_in ${items.isCenterLayout ? 'cs_hero_text_in_center' : ''}`}>

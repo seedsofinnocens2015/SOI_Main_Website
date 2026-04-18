@@ -286,7 +286,9 @@ const Page = () => {
                 borderLeft: '4px solid #df3655',
                 border: '1px solid #ebeef2',
               }}>
-                <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}><AccentHeading style={{ marginBottom: '6px' }}>What to Expect</AccentHeading></h3>
+                <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>
+                  <h3>What to Expect</h3>
+                </AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li>Comprehensive consultation with our fertility specialist</li>
                   <li>Review of medical history and previous treatments</li>
@@ -306,7 +308,7 @@ const Page = () => {
                   border: '1px solid #ebedf0',
                   backgroundColor: '#fff',
                 }}>
-                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}><AccentHeading style={{ marginBottom: '6px' }}>Quick Contact</AccentHeading></h3>
+                  <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>Quick Contact</AccentHeading>
                   
                   <div>
                     <p style={{ marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -335,7 +337,7 @@ const Page = () => {
                   border: '1px solid #ebedf0',
                   backgroundColor: '#fff',
                 }}>
-                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}><AccentHeading style={{ marginBottom: '6px' }}>Office Hours</AccentHeading></h3>
+                  <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>Office Hours</AccentHeading>
                   <ul className="cs_list cs_list_style_1">
                     <li>
                       <strong>Monday – Sunday:</strong><br />
@@ -351,7 +353,7 @@ const Page = () => {
                   border: '1px solid #ebedf0',
                   backgroundColor: '#fff',
                 }}>
-                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}><AccentHeading style={{ marginBottom: '6px' }}>Other Options</AccentHeading></h3>
+                  <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>Other Options</AccentHeading>
                   <ul className="cs_list cs_list_style_1">
                     <li>
                       <Link href="/contact/whatsapp" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>

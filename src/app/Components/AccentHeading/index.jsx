@@ -1,5 +1,21 @@
 "use client";
 
+import { Fragment, isValidElement } from "react";
+
+/** Pull plain text from string/number/array or a single wrapper element (e.g. <h3>Title</h3>). */
+function getPlainTextFromChildren(node) {
+  if (node == null || typeof node === "boolean") return "";
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(getPlainTextFromChildren).join("");
+  if (isValidElement(node)) {
+    if (node.type === Fragment) {
+      return getPlainTextFromChildren(node.props.children);
+    }
+    return getPlainTextFromChildren(node.props.children);
+  }
+  return "";
+}
+
 /**
  * Renders a content heading with first half of text in #df3655 and rest in black, centered.
  * Use across all inner/content pages for consistent "What is IVF?" style headings.
@@ -11,7 +27,12 @@ const AccentHeading = ({
   style = {},
   forcePlain = false,
 }) => {
-  const text = children == null ? '' : (typeof children === 'string' ? children : String(children));
+  const text =
+    children == null
+      ? ""
+      : typeof children === "string" || typeof children === "number"
+        ? String(children)
+        : getPlainTextFromChildren(children);
   const headingStr = text.trim();
   const Tag = level === 3 ? 'h3' : 'h2';
   const baseClass = 'cs_ivf_content_heading';

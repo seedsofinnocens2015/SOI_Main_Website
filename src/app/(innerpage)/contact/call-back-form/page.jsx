@@ -329,7 +329,9 @@ const Page = () => {
                   border: '1px solid #ebedf0',
                   backgroundColor: '#fff',
                 }}>
-                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}><AccentHeading style={{ marginBottom: '6px' }}>Response Time</AccentHeading></h3>
+                  <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>
+                    <h3>Response Time</h3>
+                  </AccentHeading>
                   <p style={{ marginBottom: '15px', fontSize: '14px', lineHeight: '1.6' }}>
                     We typically respond to call back requests within:
                   </p>
@@ -347,7 +349,7 @@ const Page = () => {
                   border: '1px solid #ebedf0',
                   backgroundColor: '#fff',
                 }}>
-                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}><AccentHeading style={{ marginBottom: '6px' }}>Direct Contact</AccentHeading></h3>
+                  <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>Direct Contact</AccentHeading>
                   <p style={{ marginBottom: '15px', fontSize: '14px', lineHeight: '1.6' }}>
                     Need immediate assistance? Contact us directly:
                   </p>
@@ -374,7 +376,7 @@ const Page = () => {
                   border: '1px solid #ebedf0',
                   backgroundColor: '#fff',
                 }}>
-                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}><AccentHeading style={{ marginBottom: '6px' }}>Other Options</AccentHeading></h3>
+                  <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>Other Options</AccentHeading>
                   <ul className="cs_list cs_list_style_1">
                     <li>
                       <Link href="/contact/book-appointment" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>

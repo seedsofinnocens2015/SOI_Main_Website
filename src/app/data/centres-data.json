@@ -37,19 +37,11 @@
         },
         {
           "name": "Dr. Alpana Razadan",
-          "subtitle": "IVF Specialist",
+          "subtitle": "Genestrings Diagnostics Centre",
           "image": "/assets/img/Doctors/alpana.jpg",
           "experience": "10+ Years",
           "location": "Malviya nagar-New Delhi",
           "slug": "dr-alpana-razadan"
-        },
-        {
-          "name": "Dr. Ranjana Mishra",
-          "subtitle": "IVF Specialist",
-          "image": "/assets/img/Doctors/ranjana.jpg",
-          "experience": "9+ Years",
-          "location": "Delhi/NCR",
-          "slug": "dr-ranjana-mishra"
         },
         {
           "name": "Dr. Lisha Singh",
@@ -153,14 +145,6 @@
           "slug": "dr-gauri-agarwal"
         },
         {
-          "name": "Dr. Ranjana Mishra",
-          "subtitle": "IVF Specialist",
-          "image": "/assets/img/Doctors/ranjana.jpg",
-          "experience": "9+ Years",
-          "location": "Delhi/NCR",
-          "slug": "dr-ranjana-mishra"
-        },
-        {
           "name": "Dr. Pratik Kakani",
           "subtitle": "IVF Specialist",
           "image": "/assets/img/Doctors/pratik.jpg",
@@ -252,14 +236,6 @@
         "PCOS Treatment"
       ],
       "doctors": [
-        {
-          "name": "Dr. Divya Shivanand",
-          "subtitle": "IVF Specialist",
-          "image": "/assets/img/Doctors/divya.jpg",
-          "experience": "7+ Years",
-          "location": "Lucknow-Uttarpradesh",
-          "slug": "dr-divya-shivanand"
-        },
         {
           "name": "Dr. Disha Datta",
           "subtitle": "IVF Specialist",
@@ -1553,16 +1529,7 @@
         "Ovulation Induction",
         "Embryo Transfer"
       ],
-      "doctors": [
-        {
-          "name": "Dr. Disha Datta",
-          "subtitle": "IVF Specialist",
-          "image": "/assets/img/Doctors/disha.jpg",
-          "experience": "7+ Years",
-          "location": "Muzaffarpur, Bihar",
-          "slug": "dr-disha-datta"
-        }
-      ],
+     
       "timing": "9:00 AM to 6:00 PM",
       "testimonials": [
         {
@@ -1808,6 +1775,14 @@
         "Advanced Fertility Care"
       ],
       "doctors": [
+        {
+          "name": "Dr. Sneha Narayan",
+          "subtitle": "IVF Specialist",
+          "image": "/assets/img/Doctors/Dr Sneha Narayan.png",
+          "experience": "12+ Years",
+          "location": "Kolkata-Westbengal",
+          "slug": "dr-sneha-narayan"
+        },
         {
           "name": "Dr. Adrija Ghosal",
           "subtitle": "IVF Specialist",

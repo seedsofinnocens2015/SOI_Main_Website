@@ -6,7 +6,7 @@ import doctorsData from '@/app/data/doctors-data.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 
 const GENETIC_EXPERT_SLUGS = new Set([
-  'dr-alpana-razadan-ivf-specialist',
+  'dr-alpana-razadan',
   'dr-ranjana-mishra-ivf-specialist',
 ]);
 

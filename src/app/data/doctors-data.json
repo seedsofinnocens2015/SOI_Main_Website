@@ -100,52 +100,7 @@
         "percentage": 86
       }
     ],
-    "newSlug": "dr-alpana-razadan-ivf-specialist"
-  },
-  {
-    "slug": "dr-ranjana-mishra",
-    "uspTitle": "Genetic Expert <br /> <span class=\"cs_accent_color\">Dr. Ranjana Mishra</span>",
-    "headerImage": "/assets/img/Doctor-Headers/ranjana.webp",
-    "name": "Dr. Ranjana Mishra",
-    "subtitle": "Genetic Expert",
-    "image": "/assets/img/Doctors/ranjana.jpg",
-    "description": [
-      "Dr Ranjana Mishra is a knowledgeable and highly experienced Clinical genetic expert. She works as a Senior consultant Clinical Genetics at Seeds of Innocens IVF, Delhi NCR. Her main focus is to counsel patients about inherited genetic disorders, and personalized reproductive medicine. She helps couples to gain knowledge about the genetic risks and make informed decisions about the fertility journey."
-    ],
-    "location": "Delhi/NCR",
-    "email": "drranjanamishra@seedsofinnocens.com",
-    "qualification": "MBBS, DNB (Obs & Gynae), DNB-SS (Medical Genetics)",
-    "specialization": "Medical Genetics, Obstetrics & Gynaecology, Reproductive Medicine",
-    "experience": "14+ Years",
-    "workExperience": [
-      "She has more than 25 years of experience in the field of medical genetics and obstetrics & gynaecology. Before this, she served as a Senior Medical Officer at Lok Nayak Government Hospital, Delhi; Junior Research Fellow at the Indian Council of Medical Research (ICMR), Delhi; Medical Officer at Sardar Vallabhai Patel Hospital, Delhi; and Senior Resident at Sir Ganga Ram & Sardar Vallabhai Patel Hospital, Delhi."
-    ],
-    "education": [
-      "She completed her MBBS from Motilal Nehru Medical College and DGO from King George’s Medical University. She has also earned a DNB (Obs & Gynae) degree from Army Hospital, Research & Referral, and DNB-SS (Medical Genetics) from Sir Ganga Ram Hospital. She has good expertise in genetic research and technology.",
-      "Dr. Ranjana is actively involved in research and various publications. Her compassionate approach and comprehensive genetic counselling empowers patients"
-    ],
-    "awards": [
-      "Genetic work up of  Primary/secondary infertility, Recurrent pregnancy loss, unexplained still birth, previous affected child with any genetic disorder (thalassemia, SMA, autism etc.), or family history of any genetic disorder including hereditary cancers. She also has expertise in various pre-implantation genetic testing procedures (PGT-A, PGT-SR, PGT-M) ensuring healthy pregnancies for couples"
-    ],
-    "progressBars": [
-      {
-        "label": "IVF Procedures",
-        "percentage": 87
-      },
-      {
-        "label": "Patient Satisfaction",
-        "percentage": 93
-      },
-      {
-        "label": "Success Rate",
-        "percentage": 77
-      },
-      {
-        "label": "Clinical Expertise",
-        "percentage": 85
-      }
-    ],
-    "newSlug": "dr-ranjana-mishra-ivf-specialist"
+    "newSlug": "dr-alpana-razadan"
   },
   {
     "slug": "dr-lisha-singh",
