@@ -225,7 +225,7 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'High-Risk Pregnancy', href: '/maternal-fetal-medicine/high-risk-pregnancy' },
               { label: 'Fetal Reduction', href: '/maternal-fetal-medicine/fetal-reduction' },
               { label: 'MFM Scans & Diagnostics', href: '/maternal-fetal-medicine/maternal-and-fetal-medicine' },
-              { label: 'Pregnancy and Coronavirus', href: '/maternal-fetal-medicine/pregnancy-and-coronavirus-insights-from-experts' },
+              // { label: 'Pregnancy and Coronavirus', href: '/maternal-fetal-medicine/pregnancy-and-coronavirus-insights-from-experts' },
             ],
           },
           {

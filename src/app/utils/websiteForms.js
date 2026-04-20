@@ -11,7 +11,7 @@ export function getWebsiteApiBaseUrl() {
   if (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_SOI_API_URL) {
     return `${process.env.NEXT_PUBLIC_SOI_API_URL}`.replace(/\/$/, '');
   }
-  return 'https://soi.seedsofinnocens.com';
+  return 'http://localhost:4000';
 }
 
 export const WEBSITE_FORM_PATHS = {

@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import GlobalJsonLd from "./Components/GlobalJsonLd";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <GlobalJsonLd />
         <meta name="author" content="Themeservices" />
         <meta
           name="google-site-verification"
