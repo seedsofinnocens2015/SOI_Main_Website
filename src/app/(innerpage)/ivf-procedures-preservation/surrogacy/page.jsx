@@ -10,17 +10,17 @@ const headingData = {
 const serviceData = {
   serviceHeading: '',
   services: [],
-  mainImage: '/assets/img/recent_post2.jpg',
+  mainImage: '/assets/img/recent_post2webp',
   serviceDetails: [],
   footerText: '',
-  additionalImages: '/assets/img/recent_post2.jpg',
+  additionalImages: '/assets/img/recent_post2webp',
   iconBoxes: [],
   subtitle: '',
   readMoreUrl: '/contact/book-appointment',
   readMoreText: 'Book Appointment',
   benefitImages: [
-    '/assets/img/recent_post2.jpg',
-    '/assets/img/recent_post2.jpg'
+    '/assets/img/recent_post2webp',
+    '/assets/img/recent_post2webp'
   ],
 };
 

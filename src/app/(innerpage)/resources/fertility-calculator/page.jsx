@@ -15,8 +15,8 @@ const headingData = {
 
 const serviceData = {
   benefitImages: [
-    '/assets/img/recent_post2.jpg',
-    '/assets/img/recent_post2.jpg'
+    '/assets/img/recent_post2webp',
+    '/assets/img/recent_post2webp'
   ],
 };
 

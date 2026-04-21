@@ -171,7 +171,7 @@ const DynamicPage = async ({ params }) => {
     const center = centresData.find(c => c.isInternational && c.slug === slug);
     if (center) {
         const cityName = center.name.split(',')[0].trim();
-        const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2.jpg');
+        const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2webp');
         
         // Fetch Content and Services with Icons
         const centerContentConfig = centresAllData.centerContent;
@@ -399,7 +399,7 @@ const DynamicPage = async ({ params }) => {
                                     }}>
                                     <Link href={getCenterLink(centre)} className="cs_centre_thumbnail position-relative overflow-hidden" style={{ height: '260px', display: 'block' }}>
                                         <Image
-                                            src={getAssetPath(centre.image || '/assets/img/recent_post2.jpg')}
+                                            src={getAssetPath(centre.image || '/assets/img/recent_post2webp')}
                                             alt={centre.name}
                                             width={500}
                                             height={350}

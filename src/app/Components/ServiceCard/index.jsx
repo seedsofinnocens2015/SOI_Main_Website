@@ -11,7 +11,7 @@ import { getAssetPathClient } from '@/app/utils/assetPath';
  */
 const ServiceCard = ({ title, description, image, slug, className = '', hideImage = false }) => {
   const href = slug ? `/${slug}` : '#';
-  const imgSrc = image || '/assets/img/recent_post2.jpg';
+  const imgSrc = image || '/assets/img/recent_post2webp';
 
   return (
     <div className={`cs_service_card ${className}`}>

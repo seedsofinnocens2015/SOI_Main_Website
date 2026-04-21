@@ -725,7 +725,7 @@ const heroData = {
         rating: 5,
         subtitle:
           'The entire team at Seeds of Innocens made our IVF journey smooth and stress-free. Their expertise and care helped us achieve our dream of becoming parents. Highly recommended!',
-        avatar: '/assets/img/5.png',
+        avatar: '/assets/img/5.webp',
         name: 'Parents from Jharkhand, India',
         position: 'Happy Parents',
         videoUrl: 'https://www.youtube.com/watch?v=wmZZrZFaGB8', // Add YouTube video URL here (e.g., 'https://www.youtube.com/watch?v=VIDEO_ID_2')

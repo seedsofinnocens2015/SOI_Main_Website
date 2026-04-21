@@ -18,7 +18,7 @@ const ivfContentData = {
       paragraphs: [
         'Get instant answers to your fertility questions, schedule appointments, and receive support directly through WhatsApp. Our team is available to help you 24/7. Start a conversation with our fertility specialists and get personalized guidance for your journey to parenthood.',
       ],
-      // sideImage: '/assets/img/recent_post2.jpg',
+      // sideImage: '/assets/img/recent_post2webp',
     },
   ],
 };

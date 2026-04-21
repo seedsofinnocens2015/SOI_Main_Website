@@ -9,8 +9,8 @@ const headingData = {
 
 const serviceData = {
   benefitImages: [
-    '/assets/img/recent_post2.jpg',
-    '/assets/img/recent_post2.jpg'
+    '/assets/img/recent_post2webp',
+    '/assets/img/recent_post2webp'
   ],
 };
 
@@ -22,7 +22,7 @@ const storiesContentData = {
         'Read inspiring stories from international patients who traveled to India for fertility treatment at Seeds of Innocens. These real experiences showcase successful outcomes and the quality care we provide to patients from around the world.',
         'Each story represents a journey of hope, determination, and success. Our international patients come from diverse backgrounds and countries, united by their dream of parenthood and trust in our world-class fertility treatments.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/recent_post2webp',
     },
     {
       heading: 'Sarah & James from United Kingdom - IVF Success',

@@ -80,7 +80,7 @@ The header menu has been updated to include all routes from your old website:
 All new pages have been created with basic content structure. You need to:
 
 - **Review each new page** and add/update the actual content
-- **Add appropriate images** - Currently using placeholder images (`/assets/img/recent_post2.jpg`)
+- **Add appropriate images** - Currently using placeholder images (`/assets/img/recent_post2webp`)
 - **Update benefit images** in the serviceData objects
 - **Customize content sections** based on your specific requirements
 - **Add any missing information** that was on your old website

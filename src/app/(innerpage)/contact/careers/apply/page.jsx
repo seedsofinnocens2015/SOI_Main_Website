@@ -21,7 +21,7 @@ const ivfContentData = {
       paragraphs: [
         'Thank you for your interest in joining Seeds of Innocens. Please fill out the form below to apply for the position. We\'ll review your application and get back to you soon. We look forward to learning more about you and how you can contribute to our mission of helping couples achieve their dream of parenthood.',
       ],
-      // sideImage: '/assets/img/recent_post2.jpg',
+      // sideImage: '/assets/img/recent_post2webp',
     },
   ],
 };

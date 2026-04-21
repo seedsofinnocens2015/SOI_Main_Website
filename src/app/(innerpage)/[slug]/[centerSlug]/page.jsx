@@ -110,7 +110,7 @@ const page = async ({ params }) => {
     }
 
     const cityName = center.name.split(',')[0].trim();
-    const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2.jpg');
+    const processedCenterImage = getAssetPath(center.image || '/assets/img/recent_post2webp');
     
     // Map Address for Google Maps
     const mapAddress = encodeURIComponent(center.location);

@@ -29,25 +29,25 @@ const ivfContentData = {
 //     date: 'March 15, 2024',
 //     title: 'Seeds of Innocens Launches Advanced PGT Testing Program',
 //     description: 'Seeds of Innocens announces the launch of comprehensive preimplantation genetic testing services, offering couples improved success rates and reduced genetic risk.',
-//     image: '/assets/img/recent_post2.jpg',
+//     image: '/assets/img/recent_post2webp',
 //   },
 //   {
 //     date: 'February 10, 2024',
 //     title: 'Record-Breaking Success Rates at Seeds of Innocens',
 //     description: 'The fertility centre reports exceptional success rates, with over 20,000 successful pregnancies achieved through advanced IVF techniques and personalized care.',
-//     image: '/assets/img/recent_post2.jpg',
+//     image: '/assets/img/recent_post2webp',
 //   },
 //   {
 //     date: 'January 20, 2024',
 //     title: 'International Expansion: Seeds of Innocens Opens Centre in Africa',
 //     description: 'Seeds of Innocens expands its global presence with the opening of a new state-of-the-art fertility centre in Zambia, bringing world-class fertility care to more regions.',
-//     image: '/assets/img/recent_post2.jpg',
+//     image: '/assets/img/recent_post2webp',
 //   },
 //   {
 //     date: 'December 5, 2023',
 //     title: 'Dr. Gauri Agrawal Honored for Excellence in Fertility Medicine',
 //     description: 'Founder Dr. Gauri Agrawal receives recognition for outstanding contributions to reproductive medicine and commitment to advancing fertility treatments.',
-//     image: '/assets/img/recent_post2.jpg',
+//     image: '/assets/img/recent_post2webp',
 //   },
 // ];
 

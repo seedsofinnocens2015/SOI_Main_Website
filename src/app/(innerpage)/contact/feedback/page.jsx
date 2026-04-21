@@ -20,7 +20,7 @@ const ivfContentData = {
       paragraphs: [
         'Your feedback helps us improve our services and provide better care. We value your opinion and would love to hear about your experience with Seeds of Innocens. Your insights help us enhance patient care and continue delivering excellence in fertility treatment.',
       ],
-      // sideImage: '/assets/img/recent_post2.jpg',
+      // sideImage: '/assets/img/recent_post2webp',
     },
   ],
 };

@@ -108,7 +108,7 @@ const page = () => {
             <div className="col-lg-12">
               <div className="cs_service_details_thumbnail">
                 <Image
-                  src="/assets/img/recent_post2.jpg"
+                  src="/assets/img/recent_post2webp"
                   alt="Resources"
                   width={1200}
                   height={400}

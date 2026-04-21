@@ -9,8 +9,8 @@ const headingData = {
 
 const serviceData = {
   benefitImages: [
-    '/assets/img/recent_post2.jpg',
-    '/assets/img/recent_post2.jpg'
+    '/assets/img/recent_post2webp',
+    '/assets/img/recent_post2webp'
   ],
 };
 
@@ -22,7 +22,7 @@ const costContentData = {
         'At Seeds of Innocens, we believe in transparent pricing with no hidden costs. Our comprehensive packages are designed to provide complete care at competitive prices. All packages include consultations, procedures, and follow-up care.',
         'We understand that fertility treatment is a significant investment, and we are committed to providing value-driven packages that make quality fertility care accessible to all couples.',
       ],
-      sideImage: '/assets/img/recent_post2.jpg',
+      sideImage: '/assets/img/recent_post2webp',
     },
     {
       heading: 'Basic IVF Package - ₹1,50,000 - ₹2,50,000',
