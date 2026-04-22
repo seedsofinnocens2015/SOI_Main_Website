@@ -551,7 +551,7 @@ const Header = ({ isTopBar, variant }) => {
     }));
     const blogItems = (blogsData?.blogs || []).map((blog) => ({
       label: blog.title,
-      href: `/blogs/${blog.slug}`,
+      href: `/blog/${blog.slug}`,
       type: 'Blog',
     }));
     const centerItems = (centresData?.centres || []).map((center) => ({

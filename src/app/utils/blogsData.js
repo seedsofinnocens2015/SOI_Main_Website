@@ -12,15 +12,7 @@ const CATEGORY_FILTERS = {
   'news-press': ['News & Press', 'समाचार और प्रेस'],
 };
 
-function isHindiBlog(blog) {
-  const title = String(blog?.title || '');
-  const content = String(blog?.content || '');
-  const category = String(blog?.category || '');
-  return /[\u0900-\u097F]/.test(title) || /[\u0900-\u097F]/.test(content) || /[\u0900-\u097F]/.test(category);
-}
-
 function mapBlogCard(blog) {
-  const hindi = isHindiBlog(blog);
   return {
     title: blog.title || '',
     excerpt: blog.excerpt || '',
@@ -30,7 +22,7 @@ function mapBlogCard(blog) {
     category: blog.category || '',
     readTime: blog.readTime || '',
     type: blog.type || '',
-    link: hindi ? `/hindi/${blog.slug}/` : `/english/${blog.slug}/`,
+    link: `/blog/${blog.slug}/`,
   };
 }
 
