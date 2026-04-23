@@ -539,6 +539,15 @@ const heroData = {
             coordinates: [23.3441, 85.3096], // Ranchi coordinates
             link: '/jharkhand/best-ivf-centre-in-ranchi',
           },
+          {
+            imgUrl: '/assets/img/Centres/ranchi.jpg',
+            title: 'Kolkata, West Bengal',
+            subtitle:
+              'Seeds of Innocens IVF, Plot No. 03-702, Street No. 0702, AA-IID, New Town, Kolkata - 700161',
+            index: 4,
+            coordinates: [22.5726, 88.3639], // Kolkata coordinates
+            link: '/west-bengal/best-ivf-centre-in-kolkata',
+          },
 
           // {
           //   imgUrl: '/assets/img/Centres/srinagar.jpg',
@@ -577,29 +586,11 @@ const heroData = {
         id: 'international',
         items: [
           {
-            imgUrl: '/assets/img/Centres/lusaka.jpg',
-            title: 'Lusaka, Zambia, Africa',
-            subtitle:
-              'Seeds of Innocens IVF, Lusaka, Zambia, Africa',
-            index: 1,
-            coordinates: [-15.3875, 28.3228], // Lusaka coordinates
-            link: '/best-ivf-centre-in-lusaka-zambia',
-          },
-          {
-            imgUrl: '/assets/img/Centres/kitwe.jpg',
-            title: 'Kitwe, Zambia, Africa',
-            subtitle:
-              'Seeds of Innocens IVF, Kitwe, Zambia, Africa',
-            index: 2,
-            coordinates: [-12.8147, 28.2136], // Kitwe coordinates
-            link: '/best-ivf-centre-in-kitwe-zambia',
-          },
-          {
             imgUrl: '/assets/img/Centres/muscat.jpg',
             title: 'Mabela, Muscat, Oman',
             subtitle:
               'Seeds of Innocens IVF, Mabela, Muscat, Oman',
-            index: 3,
+            index: 1,
             coordinates: [23.5880, 58.3829], // Muscat coordinates
             link: '/best-ivf-centre-in-mabela-muscat',
           },

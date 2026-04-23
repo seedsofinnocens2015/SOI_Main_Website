@@ -108,7 +108,8 @@
         "direction": "https://www.google.com/maps/place/Seeds+of+Innocens+IVF+Centre+-+Best+IVF+Centre+in+Delhi+%7C+Fertility+Clinics/@28.5329671,77.2010063,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce20320e1d805:0x7d88d4bcd484e5ec!8m2!3d28.5329671!4d77.2035812!16s%2Fg%2F11clydmvm7?hl=en&entry=ttu&g_ep=EgoyMDI2MDMwNS4wIKXMDSoASAFQAw%3D%3D",
         "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.2246332573263!2d77.20100627528524!3d28.532967075719295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce20320e1d805%3A0x7d88d4bcd484e5ec!2sSeeds%20of%20Innocens%20IVF%20Centre%20-%20Best%20IVF%20Centre%20in%20Delhi%20%7C%20Fertility%20Clinics!5e0!3m2!1sen!2sin!4v1773123385736!5m2!1sen!2sin",
         "phone": "+919810350512"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Malviya Nagar, Delhi"
     },
     {
       "slug": "ghaziabad-uttar-pradesh",
@@ -209,7 +210,8 @@
         "direction": "https://www.google.com/maps/place/Seeds+of+Innocens+IVF+Centre+-+Best+IVF+Centre+in+Ghaziabad+%7C+Fertility+Clinic/@28.6598934,77.4360066,17z/data=!4m14!1m7!3m6!1s0x390cf1c5b4d8b201:0x6502bf0f722f09a5!2sSeeds+of+Innocens+IVF+Centre+-+Best+IVF+Centre+in+Ghaziabad+%7C+Fertility+Clinic!8m2!3d28.6598934!4d77.4385815!16s%2Fg%2F11hbc4c3ph!3m5!1s0x390cf1c5b4d8b201:0x6502bf0f722f09a5!8m2!3d28.6598934!4d77.4385815!16s%2Fg%2F11hbc4c3ph?hl=en&entry=ttu&g_ep=EgoyMDI2MDMwNS4wIKXMDSoASAFQAw%3D%3D",
         "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56017.07627810559!2d77.3443039302024!3d28.657704466360716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1c5b4d8b201%3A0x6502bf0f722f09a5!2sSeeds%20of%20Innocens%20IVF%20Centre%20-%20Best%20IVF%20Centre%20in%20Ghaziabad%20%7C%20Fertility%20Clinic!5e0!3m2!1sen!2sin!4v1773125511942!5m2!1sen!2sin",
         "phone": "+919810350512"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Ghaziabad, Uttar Pradesh"
     },
     {
       "slug": "lucknow-uttar-pradesh",
@@ -301,7 +303,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Drosia+Tower+5/5+Park+Rd+Raj+Bhavan+Colony+Hazratganj+Lucknow+Uttar+Pradesh+226001",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Drosia+Tower+5/5+Park+Rd+Raj+Bhavan+Colony+Hazratganj+Lucknow+Uttar+Pradesh+226001&output=embed",
         "phone": "+919459023333"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Lucknow, Uttar Pradesh"
     },
     {
       "slug": "agra-uttar-pradesh",
@@ -393,7 +396,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Block+No.9/4+1st+Floor+Shankar+Point+Sanjay+Place+Civil+Lines+Agra+U.P.",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Block+No.9/4+1st+Floor+Shankar+Point+Sanjay+Place+Civil+Lines+Agra+U.P.&output=embed",
         "phone": "+918448180814"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Agra, Uttar Pradesh"
     },
     {
       "slug": "gorakhpur-uttar-pradesh",
@@ -485,7 +489,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+2nd+Floor+1076+Kamlesh+Shopping+Arcade+Near+Kalimandir+Golghar+Gorakhpur+U.P.",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+2nd+Floor+1076+Kamlesh+Shopping+Arcade+Near+Kalimandir+Golghar+Gorakhpur+U.P.&output=embed",
         "phone": "+919459053333"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Gorakhpur, Uttar Pradesh"
     },
     {
       "slug": "patna-bihar",
@@ -576,7 +581,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Jagmano+Shree+Complex+Pillar+No+–+38+Khajpura+Bailey+Road+Patna+Bihar",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Jagmano+Shree+Complex+Pillar+No+–+38+Khajpura+Bailey+Road+Patna+Bihar&output=embed",
         "phone": "+918276004040"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Patna, Bihar"
     },
     {
       "slug": "faridabad-haryana",
@@ -668,7 +674,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+A-6/A+Neelam+Bata+Road+Above+ICICI+Bank+NIT+Faridabad+Haryana",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+A-6/A+Neelam+Bata+Road+Above+ICICI+Bank+NIT+Faridabad+Haryana&output=embed",
         "phone": "+918276003737"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Faridabad, Haryana"
     },
     {
       "slug": "gurugram-haryana",
@@ -685,6 +692,7 @@
         "Parenthood is a beautiful journey. However, if you are seeking advanced fertility solutions for male and female infertility problems, recurrent IVF failures, and other complications that are delaying your pregnancy, then you should consider the following: Seeds of Innocens IVF is one of the leading IVF centres, which is highly recognized.",
         "Suppose you are seeking advanced fertility solutions for female and male infertility issues, recurrent IVF failures, miscarriages, and all other complications that are delaying your pregnancy. At Seeds of Innocens IVF, we believe in fulfilling the dream of every couple who is struggling to conceive due to these issues."
       ],
+      "expertTeamDescription": "The journey to parenthood with infertility can be highly challenging. Couples and Individuals need emotional support and proper medical guidance to navigate the road ahead. However, the role of an IVF specialist extends beyond the expertise to offer support and guidance at every step. When choosing the best IVF doctor in Gurgaon, you should consider the key factors to make the best decision. Apart from the experience and expertise, it is crucial to find experts who will provide emotional support. Their dedication will ensure that each couple will receive a personalised treatment plan which will fulfill their emotional and medical needs.",
       "phone": "9266157675",
       "email": "info@seedsofinnocence.com",
       "services": [
@@ -695,6 +703,14 @@
         "Advanced Fertility Care"
       ],
       "doctors": [
+        {
+          "name": "Dr. Gauri Agarwal",
+          "subtitle": "Founder & Chief IVF Specialist",
+          "image": "/assets/img/Doctors/Dr Gauri maam.jpg",
+          "experience": "15+ Years",
+          "location": "Delhi/NCR",
+          "slug": "dr-gauri-agarwal"
+        },
         {
           "name": "Dr. Aditi Bhatnagar",
           "subtitle": "Senior IVF Specialist",
@@ -760,7 +776,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Plot+No.+-2+Sector-42+Gurgaon+Near+Nagar+Nigam+Office+Gurugram+Haryana",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Plot+No.+-2+Sector-42+Gurgaon+Near+Nagar+Nigam+Office+Gurugram+Haryana&output=embed",
         "phone": "+919266157675"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Gurugram - <span class=\"cs_accent_color\"> Your Journey to Parenthood Begins Here </span>"
     },
     {
       "slug": "ranchi-jharkhand",
@@ -851,7 +868,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+4th+Floor+Maru+Tower+Kanke+Road+Ranchi+Jharkhand",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+4th+Floor+Maru+Tower+Kanke+Road+Ranchi+Jharkhand&output=embed",
         "phone": "+918276004545"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Ranchi, Jharkhand"
     },
     {
       "slug": "haldwani-uttarakhand",
@@ -942,7 +960,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Laxmi+Mohan+Towers+2nd+Floor+Mukhani+Chauraha+Bamori+Talli+Haldwani+Uttarakhand",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Laxmi+Mohan+Towers+2nd+Floor+Mukhani+Chauraha+Bamori+Talli+Haldwani+Uttarakhand&output=embed",
         "phone": "+918448180800"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Haldwani, Uttarakhand"
     },
     {
       "slug": "guwahati-assam",
@@ -1033,7 +1052,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+4th+Floor+Aashi+Complex+Near+Rajib+Bhawan+ABC+Guwahati",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+4th+Floor+Aashi+Complex+Near+Rajib+Bhawan+ABC+Guwahati&output=embed",
         "phone": "+918276007474"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Guwahati, Assam"
     },
     {
       "slug": "kasaragod-kerala",
@@ -1134,7 +1154,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Wintouch+Multi+Speciality+Hospital+Bank+Road+Kasaragod+Kerala+671121",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Wintouch+Multi+Speciality+Hospital+Bank+Road+Kasaragod+Kerala+671121&output=embed",
         "phone": "+919459083333"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Kasaragod, Kerala"
     },
     {
       "slug": "kanpur-uttar-pradesh",
@@ -1226,7 +1247,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+7/153+Kumhar+Wali+Gali+Near+Kanpur+Vidya+Mandir+Khalasi+Line+Swaroop+Nagar+Kanpur+Uttar+Pradesh+208002",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+7/153+Kumhar+Wali+Gali+Near+Kanpur+Vidya+Mandir+Khalasi+Line+Swaroop+Nagar+Kanpur+Uttar+Pradesh+208002&output=embed",
         "phone": "+918276006464"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Kanpur, Uttar Pradesh"
     },
     {
       "slug": "kochi-kerala",
@@ -1319,7 +1341,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Opp.+Royal+Drive+Showroom+Kannadikadu+Upasana+Road+Kundannoor+Maradu+Kochi+682304",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Opp.+Royal+Drive+Showroom+Kannadikadu+Upasana+Road+Kundannoor+Maradu+Kochi+682304&output=embed",
         "phone": "+919958885242"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Kochi, Kerala"
     },
     {
       "slug": "pitampura-new-delhi",
@@ -1411,7 +1434,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Plot+no+1+First+floor+Shiva+Enclave+Near+Harsh+Vihar+Chowk+Pitampura+Delhi-110034",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Plot+no+1+First+floor+Shiva+Enclave+Near+Harsh+Vihar+Chowk+Pitampura+Delhi-110034&output=embed",
         "phone": "+919266300157"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Pitampura, New Delhi"
     },
     {
       "slug": "meerut-uttar-pradesh",
@@ -1502,7 +1526,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+303/305+Mangal+Pandey+Nagar+Opp+CCS+University+Garh+Road+Meerut+UP",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+303/305+Mangal+Pandey+Nagar+Opp+CCS+University+Garh+Road+Meerut+UP&output=embed",
         "phone": "+918276008484"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Meerut, Uttar Pradesh"
     },
     {
       "slug": "muzaffarpur-bihar",
@@ -1529,7 +1554,6 @@
         "Ovulation Induction",
         "Embryo Transfer"
       ],
-     
       "timing": "9:00 AM to 6:00 PM",
       "testimonials": [
         {
@@ -1584,7 +1608,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Hansa+Complex+Maripur+Main+Road+Muzaffarpur+Bihar",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Hansa+Complex+Maripur+Main+Road+Muzaffarpur+Bihar&output=embed",
         "phone": "+918276006565"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Muzaffarpur, Bihar"
     },
     {
       "slug": "srinagar-jk",
@@ -1664,7 +1689,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+The+Apollo+Clinic+Karan+Nagar+Near+National+School+Srinagar",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+The+Apollo+Clinic+Karan+Nagar+Near+National+School+Srinagar&output=embed",
         "phone": "+919459073333"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Srinagar, J&K"
     },
     {
       "slug": "janakpuri-new-delhi",
@@ -1747,7 +1773,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+C1A/50A+Pankha+Road+Janakpuri+New+Delhi",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+C1A/50A+Pankha+Road+Janakpuri+New+Delhi&output=embed",
         "phone": "+919459043333"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Janakpuri, New Delhi"
     },
     {
       "slug": "kolkata",
@@ -1847,7 +1874,8 @@
         "address": "Plot Number 03-702, Plot-IID/41/1, Major Arterial Road (North Extension), Street No-0702, AA-IID, J.L No-12, Raigachi, Mouza, Kolkata, West Bengal 700161",
         "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.4754564257853!2d88.45934147596245!3d22.626544931908487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89fd528a95cf9%3A0x52c81a2c4b48ed8b!2sSeeds%20of%20Innocence%20IVF%20Centre%20Kolkata!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
         "phone": "+919810350512"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Kolkata"
     },
     {
       "slug": "best-ivf-centre-in-lusaka-zambia",
@@ -1939,7 +1967,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Lusaka+Zambia",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Lusaka+Zambia&output=embed",
         "phone": "+260 976832953"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Lusaka, Zambia, Africa"
     },
     {
       "slug": "best-ivf-centre-in-kitwe-zambia",
@@ -2022,7 +2051,8 @@
         "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Kitwe+Zambia",
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Kitwe+Zambia&output=embed",
         "phone": "+260 976837261"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Kitwe, Zambia, Africa"
     },
     {
       "slug": "best-ivf-centre-in-mabela-muscat",
@@ -2122,7 +2152,8 @@
         "direction": "https://www.google.com/maps?q=Badr+Al+Samaa+Premium+Medical+Centre+Mabela+Muscat",
         "mapUrl": "https://www.google.com/maps?q=Badr+Al+Samaa+Premium+Medical+Centre+Mabela+Muscat&output=embed",
         "phone": "+968 22717111"
-      }
+      },
+      "bestIvfHeading": "Best IVF Centre in Mabela, Muscat, Oman"
     }
   ],
   "centerContent": {

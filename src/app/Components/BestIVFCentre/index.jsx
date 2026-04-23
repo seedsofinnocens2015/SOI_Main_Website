@@ -129,7 +129,8 @@ const BestIVFCentre = ({
     const testimonials = center?.testimonials || [];
     const aboutUs = injectedAboutUs ?? center?.aboutUs;
     const contactInfo = center?.contactInfo;
-
+    const bestIvfHeading = center?.bestIvfHeading || `Best IVF Centre in ${cityName}`;
+    const expertTeamDescription = center?.expertTeamDescription;
     const featuresRow1Ref = useRef(null);
     const featuresRow2Ref = useRef(null);
     const [isContactOpen, setIsContactOpen] = React.useState(false);
@@ -149,9 +150,10 @@ const BestIVFCentre = ({
                 <div className="container">
                     <div className="cs_best_ivf_content">
                         {/* Main Heading */}
-                        <h1 className="cs_best_ivf_title">
-                            Best IVF Centre in <span className='cs_best_ivf_title_span'>{cityName}</span>
-                        </h1>
+                        <h1
+                            className="cs_best_ivf_title"
+                            dangerouslySetInnerHTML={{ __html: bestIvfHeading }}
+                        />
 
                         {/* Description Paragraph */}
                         {description && (
@@ -257,6 +259,9 @@ const BestIVFCentre = ({
                     <div className="container">
                         <div className="cs_section_heading cs_style_1 text-center mb-5">
                             <h2 className="cs_section_title">Our Expert  <span style={{ color: '#000000' }}>Team of Doctors</span></h2>
+                            <p className="cs_best_ivf_description">
+                                {expertTeamDescription}
+                            </p>
                         </div>
                         <div className="cs_doctors_grid cs_style_1">
                             {centerDoctors.map((doctor, index) => {

@@ -23,6 +23,7 @@ const ProjectSection = ({ data }) => {
       "haldwani, uttarakhand",
       "muzaffarpur, bihar",
       "patna, bihar",
+      "kolkata, west bengal",
       "kitwe, zambia, africa",
     ]);
 
@@ -152,7 +153,7 @@ const ProjectSection = ({ data }) => {
           <div className="col-lg-5 col-md-12">
             <div className="cs_locations_map_wrapper">
               {/* <LocationsMap locations={allLocationsForMap} /> */}
-              <Image src={getAssetPathClient("/assets/img/map.png")} alt="map" width={1500} height={1500} />
+              <Image src={getAssetPathClient("/assets/img/map.webp")} alt="map" width={1500} height={1500} />
             </div>
           </div>
         </div>
