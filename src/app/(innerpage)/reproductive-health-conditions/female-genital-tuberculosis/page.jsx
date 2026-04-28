@@ -2,7 +2,7 @@ import React from 'react';
 import ServicePage from '@/app/Components/ServicePage';
 
 const page = () => {
-  return <ServicePage serviceKey="tuberculosis" />;
+  return <ServicePage serviceKey="female-genital-tuberculosis" />;
 };
 
 export default page;

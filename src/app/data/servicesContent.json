@@ -6581,7 +6581,7 @@
       }
     }
   },
-  "tuberculosis": {
+  "female-genital-tuberculosis": {
     "uspTitle": "Female Genital   <span class=\"cs_accent_color\">Tuberculosis</span>",
     "title": "Female Genital Tuberculosis",
     "heroBackground": "/assets/img/Top-Header.webp",
@@ -6595,113 +6595,93 @@
         {
           "heading": "Female Genital Tuberculosis",
           "paragraphs": [
-            "Female Genital Tuberculosis, or FGTB is a bacterial infection of the female reproductive system that is often associated with infertility in women. A highly asymptomatic condition in its early stages of development, the most common cause of genital tuberculosis is the spread of the mycobacterium from the lungs to the reproductive tract of the female.",
-            "The tuberculosis in uterus first arrives into the fallopian tubes of the female reproductive system, from where it can either block the tubes, or spread to the uterus and/or to the ovaries. On rarer occasions, the disease also spreads to the cervix, vagina, and the vulva as well. Genital Tuberculosis is known to be a major cause of infertility in India, where the disease can stay up to 10 to 20 years without any major uterus tuberculosis symptoms showing up. It is only upon investigation for infertility do doctors arrive on the conclusion.",
-            "If you want to know more about what is genital tuberculosis, book an appointment at Seeds of Innocence."
-          ],
-          "sideImage": "/assets/img/Genital Tuberculosis.jpg"
+            "Infectious diseases are quite widespread today. But many of them are highly contagious because the bacterium can be transmitted from one individual to another. Tuberculosis is a result of a bacterium called Mycobacterium tuberculosis. However, if the bacterium is able to penetrate into your reproductive system, it can cause genital tuberculosis. Genital Tuberculosis is an extrapulmonary TB or TB outside the lungs."
+          ]
         },
         {
-          "heading": "Common Symptoms of Genital Tuberculosis",
+          "heading": "What causes it?",
           "paragraphs": [
-            "Symptoms of Genital Tuberculosis may include:"
+            "FGTB occurs as a result of a primary infection in the genitals. In general, it can be said that FGTB usually comes from a previous tuberculosis infection which is often acquired from the lungs. Bacteria may reach the genital tract via the blood stream or lymphatics or even from nearby infected organs, such as the intestines."
+          ]
+        },
+        {
+          "heading": "Who is at risk?",
+          "paragraphs": [
+            "Women who are between 15 and 45 years old and of reproductive age are at higher risk. Besides, FGTB can occur at any age including postmenopausal women. In addition, it is also prevalent in countries with higher incidence of TB."
+          ]
+        },
+        {
+          "heading": "Symptoms of Female Genital Tuberculosis",
+          "paragraphs": [
+            "FGTB is considered a silent disease since its symptoms can be mild, vague or absent. Most cases have been diagnosed when undergoing examination for infertility issues. Here are some common symptoms:"
           ],
           "listItems": [
-            "Pelvic Pain, painful menstrual cycles, pain during intercourse",
-            "Pain in lower abdomen, discomfort, and back pain",
-            "Rarely, but local tuberculous lesions appear on external parts of genitalia, cervix, or vagina."
+            "Period Problems: Can include heavy menstrual bleeding, irregular periods, or even no periods at all.",
+            "Pain in the Pelvis: Reoccurring or chronic pain in the lower abdomen or pelvis that only occurs in women.",
+            "Abnormal Vaginal Secretion: There can be a secretion that is thick and foul smelling.",
+            "Symptoms: Fever, weight loss, fatigue",
+            "Other Symptoms: Bleeding after menopause, lumps in the pelvic or abdominal area, chronic pelvic inflammation, symptoms that mimic other disorders like ovarian cysts or tumors."
           ]
         },
         {
-          "heading": "SOI Expertise in Genital Tuberculosis",
+          "heading": "Effect on Infertility",
           "paragraphs": [
-            "The team at SOI is well trained in looking for and eradicating the condition of Tuberculosis by focusing on the main problem; the infection. It must be understood that in a situation like this, it is highly unlikely to get pregnant through natural conception. This is why the doctors at SOI often direct the couples with this proble to try their luck with IVF as it bypasses the prime focus of the condition, the blocked or damaged fallopian tubes."
+            "Fertility problems are one of the most serious impacts of FGTB since the infection primarily affects the fallopian tubes (95-100% of cases). The disease causes scar tissue that blocks the tubes and forms adhesions. These scars prevent fertilization by hindering sperm and eggs from meeting. Also, the uterine wall is impacted, leading to poor fertilization or miscarriages. Even after treatment, fertility rates decrease, and there is an increased risk of ectopic pregnancy, where the fetus develops outside the uterus."
           ]
         },
         {
-          "heading": "Q. Can tuberculosis cause miscarriage?",
+          "heading": "Diagnosis",
           "paragraphs": [
-            "Although it is highly unlikely, one of the severe obstetric complication of Tuberculosis does include spontaneous miscarriage."
+            "The diagnosis of FGTB is complicated because the symptoms may look like those of other gynecological disorders. Diagnosis is performed using:"
+          ],
+          "listItems": [
+            "Lab tests: Specimens like endometrial, menstrual fluid, or blood samples are taken and analyzed for TB bacteria.",
+            "Imaging and Endoscopy: Ultrasound, X-ray, MRI or laparo"
           ]
         },
         {
-          "heading": "Q. Can latent TB affect pregnancy?",
+          "heading": "",
           "paragraphs": [
-            "The answer to this question is not straightforward. A latent tuberculosis is just an underlying condition that is waiting to be woken up. It might or might not \"wake up\" during the pregnancy. If you wish to know more about the effects and consequences of latent tuberculosis with pregnancy, book an appointment with one of our experts right now."
+            "FGTB is often mistaken for other gynecological conditions and is therefore difficult to diagnose. The methods include:"
+          ],
+          "listItems": [
+            "History and Examination: The patient’s history with TB infection, symptom description, and physical examination are done.",
+            "Laboratory Tests: Tissue or fluid samples from the reproductive system are obtained and analyzed for signs of TB infection.",
+            "Imaging and Endoscopy: Imaging procedures or surgical inspection are carried out to show damaged reproductive organs."
           ]
         },
         {
-          "heading": "Q. What happens if you are pregnant and exposed to TB?",
+          "heading": "Management",
           "paragraphs": [
-            "First of all, if you have a hunch that you have been exposed to TB while you are pregnant, get yourself checked. An untreated TB can result in low birth weight and the child may even get TB at birth. For the mother, the stress can even kill her. It is better to understand the actual condition before treating, as treatment is possible. The time of treatment depends on whether it is latent or active TB."
+            "Anti-tuberculosis drug therapy (ATT) is administered for six months, depending on drug resistance. Surgery is required in few advanced cases that have abscesses, scars, and severe organ infections. Proper and adequate treatment will eliminate the infection, but infertility is not always reversed."
           ]
         },
         {
-          "heading": "Q. Is TB testing safe during pregnancy?",
+          "heading": "Preventive Measures",
           "paragraphs": [
-            "Yes. A skin test for TB is completely safe for Expecting Mothers."
+            "The prevention measures involve primary prevention through control of common tuberculosis through immunization. Methods of prevention include:"
+          ],
+          "listItems": [
+            "BCG Vaccination: Given routinely in regions with high prevalence to protect against serious TB infection.",
+            "Sexual Safeguard: Though TB is a relatively uncommon sexual infection, using protection lowers chances of contracting it.",
+            "Tuberculosis Treatment: People with pulmonary TB need to undergo full treatment along with good hygiene practices.",
+            "Awareness Campaign: This ensures that people are educated about the symptoms and the need for seeking medical attention for proper diagnosis and treatment."
+          ]
+        },
+        {
+          "heading": "Social and Psychological Effects",
+          "paragraphs": [
+            "Women suffering from female genital TB experience a lot of social stigma. They also feel a sense of emotional stress, which could lead to depression and anxiety. In some cases, marital problems are experienced. Therefore, the medical and psychological aspects of the disease should be addressed for the well-being of the affected."
+          ]
+        },
+        {
+          "heading": "Final Thought",
+          "paragraphs": [
+            "FGTB poses a serious problem for women's reproductive health and well-being. It is particularly problematic when there are high cases of TB in an area. Because FGTB can remain asymptomatic for long periods of time and is confused with other reproductive problems, it requires early diagnosis and treatment. Proper awareness can help achieve that.",
+            "There are many kinds of bacterial infections. Bacteria cause infections, and as such, most bacterial infections are contagious because they are capable of spreading from one individual to another."
           ]
         }
       ]
-    },
-    "womenHealthContent": {
-      "symptoms": {
-        "paragraphs": [
-          "Female genital tuberculosis is often asymptomatic for years; it may be found during infertility workup."
-        ],
-        "listItems": [
-          "Pelvic pain",
-          "Painful periods or intercourse",
-          "Lower abdominal discomfort",
-          "Rarely: lesions on cervix or vagina"
-        ]
-      },
-      "causes": {
-        "paragraphs": [
-          "Genital TB is usually caused by spread of Mycobacterium tuberculosis from the lungs to the reproductive tract."
-        ],
-        "listItems": [
-          "Spread from pulmonary TB",
-          "Can block fallopian tubes and damage uterus",
-          "Common cause of infertility in endemic regions"
-        ]
-      },
-      "diagnosis": {
-        "paragraphs": [
-          "Diagnosis may include imaging, culture, PCR, or histology."
-        ],
-        "listItems": [
-          "History of TB or exposure",
-          "HSG (tubal damage)",
-          "Endometrial biopsy or culture",
-          "PCR or other TB tests"
-        ]
-      },
-      "treatmentOptions": {
-        "paragraphs": [
-          "Antibiotic treatment for TB is required. IVF is often recommended as tubes may remain damaged."
-        ],
-        "listItems": [
-          "Anti-tuberculosis medication",
-          "IVF to bypass damaged tubes",
-          "Surgery in selected cases"
-        ]
-      },
-      "impactOnFertility": {
-        "paragraphs": [
-          "Genital TB often damages fallopian tubes and endometrium, making natural conception unlikely. IVF bypasses the tubes and offers many women a chance at pregnancy after TB treatment."
-        ]
-      },
-      "management": {
-        "paragraphs": [
-          "Complete TB treatment as advised. Seek fertility care; IVF is often the preferred option after treatment."
-        ],
-        "listItems": [
-          "Full course of anti-TB drugs",
-          "Fertility evaluation after treatment",
-          "IVF when tubes are damaged"
-        ]
-      }
     }
   },
   "recurrent-miscarriages": {
@@ -6716,94 +6696,71 @@
     "ivfContentData": {
       "sections": [
         {
-          "heading": "Recurrent Pregnancy Loss",
+          "heading": "Recurrent miscarriages: causes, signs, and treatment",
           "paragraphs": [
-            "Clinically, recurrent miscarriages are defined as losing 3 or more pregnancies in a row, irrespective of the cause behind it. However, be it 3 pregnancies or just 1, a miscarriage is a huge blow to the mother's mental state and structure. Therefore, it has always been in our interests to help mothers, whether they are facing clinical recurrent miscarriages or not, to help prevent another miscarriage and give them the happiness of being a parent."
+            "Pregnancy failure has become one of the most commonly experienced complications among women around the world. There is a topic that has never been openly discussed for a long time, namely recurrent miscarriages, which bring pain and suffering and have an impact on emotional well-being for those who want to have children.",
+            "At Seeds of Innocens IVF, we recognize the importance of various fertility journeys, and one of them is associated with recurrent miscarriage, which is hard both physically and emotionally, and our staff is always there to guide you along your way."
+          ]
+        },
+        {
+          "heading": "recurrent miscarriage ?",
+          "paragraphs": [
+            "According to the definition, recurrent miscarriage occurs when there have been three pregnancy losses within 24 weeks of pregnancy. It can be a tough journey to take, but remember, you are not the only one to face such difficulties."
+          ]
+        },
+        {
+          "heading": "What causes recurrent miscarriages?",
+          "paragraphs": [
+            "The factors responsible for recurrent miscarriages are multifarious and may comprise hormonal imbalance, uterine structure anomalies, infections, genetic anomalies, autoimmune diseases, and older age.",
+            "Often, no cause is evident, which might itself be a source of despair.",
+            "The following are some of the factors behind recurrent miscarriages:"
           ],
-          "sideImage": "/assets/img/genetic.jpg"
-        },
-        {
-          "heading": "What can cause a Recurrent Miscarriage?",
-          "paragraphs": [
-            "About 20-30% of all pregnancies end in an unfortunate miscarriage. Heavy bleeding can be an early pregnancy miscarriage symptom. In most of these cases of fetal loss, about 50-60% miscarriages in the first trimester happen due to chromosomal abnormalities. These are diseases that are caused due to the errors that may happen as the embryo divided and grew in its initial stages. The incidence and likelihood of these errors occurring increases with the age of the mother as it affects the health of the egg."
+          "listItems": [
+            "Genetics: With increasing age, the eggs become less competent; hence, embryos with chromosomal abnormalities will be more. In addition, about 2-5% of couples might have congenital genetic disorders leading to anomalous embryos.",
+            "Clotting problems (thrombophilia): The most common thrombophilia condition found among women experiencing recurrent miscarriages is antiphospholipid syndrome (APS). It affects the flow of blood in the uterus, and thus, it affects the embedding of the embryo.",
+            "Abnormalities of the uterus: The physical structure of the uterus (for example, septate or bicornuate uterus) might affect the shape of the womb where the fetus develops.",
+            "Incompetent cervix: Incompetent cervix leads to dilation and rupture of the amniotic membranes and mid-trimester miscarriages.",
+            "Endocrine disorders: Poorly regulated diabetes and hypo- or hyperthyroidism might lead to recurrent miscarriages.",
+            "Causes of miscarriage related to immunity :There is a group of women who suffer from recurrent miscarriages, and they have high or low NK cells in their womb. But there is no standard level that can be considered normal, nor is there any standard way of treating this condition.",
+            "A lack of healthy bacteria (Lactobacillus) or having unhealthy bacteria in the womb can also cause miscarriages."
           ]
         },
         {
-          "heading": "Prevention of Miscarriage",
           "paragraphs": [
-            "Owing to the fact that most miscarriages are caused by chromosomal abnormalities, the most effective way of solving this problem would be to opt for genetic testing through Comprehensive Chromosomal Screening (CCS). It is a test of the embryo to check for abnormalities in the set of chromosomes. The presence of an extra or the absence of an important chromosome is what results in an chromosomal abnormality, which then either causes birth defects or miscarriages in a pregnancy."
+            "Sometimes finding the cause of a miscarriage can be difficult, as the cause remains unknown in roughly half the cases. It is vital that you consult a specialist if you suffer from recurrent miscarriages.",
+            "Your doctor will run tests like a blood test, genetic tests, and even ultrasounds to find the cause of your miscarriage and design a course of action."
           ]
         },
         {
-          "heading": "Knowing the Cause of Miscarriage",
+          "heading": "What are the symptoms of recurrent miscarriages?",
           "paragraphs": [
-            "How do we know that a miscarriage was caused by a chromosomal abnormality? Through tests like Products of Conception, the exact cause of a miscarriage can be known. SOI specialises in all these tests, and is one of the leading fertility centers in India with high-end technology at the helm. It helps in not only getting the results that our patients want, but it also helps us in converging our efforts to provide more specific results."
+            "The symptoms experienced during a miscarriage depend on the point during pregnancy where the miscarriage occurred. Some might only experience minor cramps and light bleeding, while others might experience severe symptoms like excessive bleeding and severe cramps."
+          ]
+        },
+        {
+          "heading": "How do you treat recurrent miscarriage?",
+          "paragraphs": [
+            "The treatment for recurrent miscarriage would depend on the cause of the problem. You might be offered blood thinners if your recurrent miscarriage has something to do with clotting disorders or drugs for endocrine problems. Or, your doctor may opt for simply monitoring and intervention.",
+            "In case the cause remains unknown, your practitioner may advise taking progesterone supplements and monitoring during pregnancy."
+          ]
+        },
+        {
+          "heading": "How does progesterone help with recurrent miscarriage?",
+          "paragraphs": [
+            "One of the methods to deal with recurrent miscarriage is taking progesterone – a hormone that can significantly increase the chances for successful pregnancy.",
+            "According to the results of the PRISM trial, which involved women with recurrent miscarriages who bled and took progesterone, the live birth rates became higher.",
+            "In particular, in women who previously miscarried at least three times.",
+            "In case you've ever had a miscarriage before and have begun to bleed, you should talk to your doctor about the possibility of receiving progesterone therapy."
+          ]
+        },
+        {
+          "heading": "Coping strategies for dealing with repeated miscarriages",
+          "paragraphs": [
+            "It's not only physically demanding; it's emotionally demanding too. The grief, sadness, and anxiety you may be feeling are all normal reactions to your loss, and you shouldn't deny yourself permission to process your emotions.",
+            "You're not on this journey alone, and there's always help for you at Seeds of Innocens IVF."
           ]
         }
       ]
-    },
-    "womenHealthContent": {
-      "symptoms": {
-        "paragraphs": [
-          "Recurrent miscarriage is defined as 3 or more consecutive pregnancy losses. Symptoms are those of pregnancy loss (e.g. bleeding, cramping)."
-        ],
-        "listItems": [
-          "Repeated pregnancy loss",
-          "Vaginal bleeding and cramping with each loss",
-          "Emotional distress"
-        ]
-      },
-      "causes": {
-        "paragraphs": [
-          "About 50–60% of first-trimester miscarriages are due to chromosomal abnormalities in the embryo. Other causes include uterine, hormonal, and immune factors."
-        ],
-        "listItems": [
-          "Chromosomal abnormalities in the embryo",
-          "Uterine abnormalities (septum, fibroids)",
-          "Hormonal or thyroid disorders",
-          "Thrombophilia",
-          "Immunological factors",
-          "Infections"
-        ]
-      },
-      "diagnosis": {
-        "paragraphs": [
-          "Workup aims to find treatable causes."
-        ],
-        "listItems": [
-          "Products of conception (POC) testing",
-          "Parental karyotype",
-          "Ultrasound or hysteroscopy (uterine anatomy)",
-          "Thyroid and hormonal tests",
-          "Thrombophilia screening when indicated"
-        ]
-      },
-      "treatmentOptions": {
-        "paragraphs": [
-          "Treatment depends on the cause. PGT (CCS) can select euploid embryos and reduce loss from chromosomal errors."
-        ],
-        "listItems": [
-          "IVF with PGT-A (comprehensive chromosomal screening)",
-          "Surgery for uterine abnormalities",
-          "Thyroid or hormonal correction",
-          "Anticoagulation when indicated"
-        ]
-      },
-      "impactOnFertility": {
-        "paragraphs": [
-          "Recurrent miscarriage does not mean you cannot have a healthy pregnancy. Identifying and treating the cause (e.g. chromosomal, uterine, hormonal) improves the chance of a successful birth."
-        ]
-      },
-      "management": {
-        "paragraphs": [
-          "Seek a specialist evaluation after 2 or more losses. Emotional support and a clear plan help many couples achieve a healthy pregnancy."
-        ],
-        "listItems": [
-          "Fertility specialist and recurrent loss workup",
-          "Genetic counseling",
-          "Support and follow-up care"
-        ]
-      }
     }
   },
   "reasons-for-delayed-periods-but-not-pregnant": {
@@ -7853,124 +7810,56 @@
     "ivfContentData": {
       "sections": [
         {
-          "heading": "How to Boost Up Fertility With The Colours Of Food",
+          "heading": "How to Boost Fertility With The Colours Of Food",
           "paragraphs": [
-            "Fertility in women is a direct reflection of the overall health of their bodies. If everything is correct and running in perfect condition, there is usually nothing that they need to be worried about. However, as fertility is connected to the overall health, the instant coffee and fast food lifestyle is bound to take a toll on both them in the current world.",
-            "While lifestyle changes are not the only way of keeping factors of infertility at bay, they are certainly an important step taken towards creating a healthier body. The body from which the baby will also take shape, completing the family. If you feed the body a lot of junk, it will indirectly feed all that unhealthy food to your baby as well, irrespective of whether you are pregnant or not. This is true in the sense that an unhealthy will never respond positively to any thing, even if it is an attempt to get pregnant successfully.",
-            "That is why it is not only important to get rid of all the toxins in your body before attempting pregnancy but it is also necessary to eat food that may boost your fertility factors to get the best results. Here are some fertility boosting food tips, based on their colours."
-          ],
-          "sideImage": "/assets/img/fertility-foods.jpg"
-        },
-        {
-          "heading": "How to Improve Fertility?",
-          "paragraphs": [
-            "Eating a colorful, nutrient-rich diet can significantly improve fertility. Here are fertility-boosting foods organized by color:"
+            "The path towards becoming a mother starts with taking care of your body. This does not only mean eating in a balanced way for good physical condition, but also laying the ground to conceive successfully. Consider it as an exercise for the body that is going to happen in the future.",
+            "No need to wait for confirmation from your pregnancy test to start living a healthier life. You need to know that there is a close relationship between nutrition and the reproductive system, and knowing it will empower you throughout your fertility experience. In this article, we are going to introduce ten fertility foods for women."
           ]
         },
         {
-          "heading": "Yellow - Bananas",
+          "heading": "1. Salmon",
           "paragraphs": [
-            "Yellow is for Bananas, a rich source of phosphorus and Vitamin B6, both of which improve the quality of both, sperms and the eggs. Not only will this keep you both healthy, but will also improve the likelihood of getting pregnant. Bananas have no fat and also improve the body's metabolism."
+            "Salmon offers essential omega-3 fatty acids, which benefit the fertility of both females and males. Salmon provides vitamin D in substantial amounts because research shows that low vitamin D levels serve as an indicator for potential fertility problems. Salmon provides selenium, which supports the reproductive health of both genders. ",
+            "Top tip: choose wild salmon over farmed because wild salmon has a lower probability of containing hazardous substances like mercury, antibiotics and food dye."
           ]
         },
         {
-          "heading": "Brown - Whole Grains",
+          "heading": "2. Lentils",
           "paragraphs": [
-            "Brown is for whole grains, a perfect source of antioxidants. These antioxidants remove all toxins from the body, while helping in the production of healthy sperms and eggs. Consider whole wheat, pulses, and beans in your diet."
+            "Women who want to conceive a baby should take folic acid supplements because this vitamin plays a vital role in maintaining their baby's health. The American Centers for Disease Control recommends that women consume 400 micrograms of folic acid daily for a period of one month prior to attempting pregnancy. The body needs certain vitamins that can be obtained from food sources, but supplements should still be taken. Lentils contain high amounts of folic acid, which people should use to obtain their daily vitamin requirements. The reproductive system needs polyamine spermidine, which exists in legumes that include lentils. Get those recipe books ready!"
           ]
         },
         {
-          "heading": "Green - Green Vegetables",
+          "heading": "3. Kale and other antioxidant-rich foods",
           "paragraphs": [
-            "Green is for all the green vegetables. They are not only great for your overall health, but green vegetables also contain a lot of folate and iron that are both important in increasing the fertility in both men and women. Folate, especially increases ovulation. So introducing more of cabbage, broccoli, spinach, peas, beans, and capsicum will be especially beneficial."
+            "Studies have shown that oxidative stress contributes to male infertility problems. Oxidative stress occurs when body systems become unbalanced due to excessive production of free radicals beyond the limits of antioxidant defense systems. Antioxidants exist as natural substances created by the human body, yet they can be found in various food products. Blueberries, artichokes, kale, and red cabbage represent foods with high antioxidant content."
           ]
         },
         {
-          "heading": "Red - Fatty Fish and Meat",
+          "heading": "4. Maca",
           "paragraphs": [
-            "Red is for all the fatty fish and meat rich in omega-3 fatty acids. Omega-3 is considered good for the body to produce estrogen, which in turn increases your likelihood of successful pregnancy. Apart from this, fishes like mackerel and salmon are also good sources of Vitamin D."
+            "The Peruvian superfood Maca boosts sperm count and sperm motility while being available to purchase online and at select supermarket locations. Maca powder has a slightly bitter taste, so you should mix it into your smoothie or sprinkle it on your fruit and yogurt for breakfast."
           ]
         },
         {
-          "heading": "White - Eggs",
+          "heading": "5. Greek Yogurt",
           "paragraphs": [
-            "White is for the eggs, which are themselves known to be a fertility boosting food. It has proteins, vitamin D, and is a great source of energy. Eggs also improve the quality of the eggs and sperms, both."
+            "Greek yogurt provides essential nutrients for fertility through its vitamin D and calcium content, which makes it an ideal breakfast choice. The study suggests that calcium plays an essential role in women's readiness for pregnancy. Greek yogurt provides a fast, convenient breakfast solution that people can eat together with fertility-boosting berries that contain antioxidants. Happy days!"
           ]
         },
         {
-          "heading": "Orange - Citrus Foods",
+          "heading": "6. Sweet Potatoes",
           "paragraphs": [
-            "Orange is for the citrussy foods, which are always highly recommended for improving fertility. Lime, oranges, and tangerines are rich in antioxidants and vitamin C. The overall effect is that of regulating menstrual cycles, aiding ovulation, and improving sperm health."
+            "Research demonstrates that sweet potatoes contain beta carotene, which helps to boost progesterone levels, a key hormone for pregnancy. Sweet potatoes can be used to create various dishes, including baking, frying or roasting or creating curries or using them as a sandwich alternative. Yum! Cartenes are also essential for good sperm parameters to improve male fertility potential."
           ]
         },
         {
-          "heading": "The Power of Healthy Eating",
+          "heading": "7. Beetroot",
           "paragraphs": [
-            "What you eat defines what you become. Eating healthy is the first step towards becoming healthy, something that will go a long way in staying fertile. If you are looking for any assistance in conceiving, visit the best fertility center in Delhi, Seeds of Innocence, today. With a wide variety treatments and counseling services for couples, Seeds of Innocence has a presence in 7 states, and has successfully served 12,000+ couples. Join the family to complete your family today."
+            "Beetroot contains nitric oxide, which expands blood vessels to improve oxygen-rich nutrient-filled blood circulation that researchers believe helps embryos attach to the uterus. Beetroot contains many antioxidants and folate, which support fertility. Start by grating beetroot onto salad and combining it with a fat-based dressing if you dislike its plain taste."
           ]
         }
       ]
-    },
-    "lifestyleBlogContent": {
-      "whyItMatters": {
-        "paragraphs": [
-          "Nutrition directly affects reproductive health. A colourful, nutrient-rich diet supports hormonal balance, egg and sperm quality, and overall fertility. Reducing toxins and eating fertility-friendly foods can improve your body's response to conception and pregnancy."
-        ],
-        "listItems": [
-          "Nutritional impact on fertility and hormone production",
-          "Hormonal balance through vitamins and minerals (e.g. folate, iron, vitamin D)",
-          "Lifestyle and diet influence on egg and sperm quality"
-        ]
-      },
-      "benefits": {
-        "paragraphs": [
-          "Eating a variety of colourful, whole foods can benefit fertility in many ways:"
-        ],
-        "listItems": [
-          "Improves reproductive health and ovulation",
-          "Enhances hormonal balance (e.g. folate, omega-3)",
-          "Supports egg and sperm quality",
-          "Provides antioxidants that protect cells",
-          "Helps maintain a healthy weight and metabolism",
-          "Supports menstrual cycle regularity"
-        ]
-      },
-      "practicalTips": {
-        "paragraphs": [
-          "Use the colours of food to guide your fertility diet:"
-        ],
-        "listItems": [
-          "Yellow: Bananas (vitamin B6, phosphorus) for egg and sperm quality",
-          "Green: Leafy vegetables (folate, iron) for ovulation and health",
-          "Red: Fatty fish and lean meat (omega-3, vitamin D) for hormone support",
-          "White: Eggs (protein, vitamin D) for energy and quality",
-          "Orange: Citrus (vitamin C, antioxidants) for cycle regulation and sperm health",
-          "Brown: Whole grains, pulses, beans (antioxidants, fibre)"
-        ]
-      },
-      "expertAdvice": {
-        "paragraphs": [
-          "Fertility specialists emphasise the importance of balanced nutrition before and during treatment. A healthy diet can improve response to fertility treatments and support a healthy pregnancy. Avoid excessive junk food and caffeine; focus on whole, colourful foods and stay hydrated."
-        ],
-        "listItems": [
-          "Importance of balanced nutrition for fertility",
-          "Reducing toxins and processed foods",
-          "Maintaining a healthy lifestyle alongside medical care"
-        ]
-      },
-      "lifestyleRecommendations": {
-        "paragraphs": [
-          "Combine a colourful diet with these healthy lifestyle habits:"
-        ],
-        "listItems": [
-          "Balanced diet with a variety of fruits, vegetables, whole grains, and lean protein",
-          "Regular exercise",
-          "Stress reduction and adequate sleep",
-          "Limit alcohol and avoid smoking",
-          "Maintain a healthy weight",
-          "Consult a fertility specialist for personalised advice"
-        ]
-      }
     }
   },
   "pregnancy-and-coronavirus-insights-from-experts": {

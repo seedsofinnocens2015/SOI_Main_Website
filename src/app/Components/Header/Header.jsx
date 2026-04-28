@@ -248,10 +248,10 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Endometrial and Ovarian', href: '/reproductive-health-conditions/endometrial-and-ovarian' },
               { label: 'Endometriosis', href: '/reproductive-health-conditions/endometriosis' },
               { label: 'Fibroids, Polyps and Adenomyosis', href: '/reproductive-health-conditions/fibroids-polyps-and-adenomyosis' },
-              { label: 'Tuberculosis', href: '/reproductive-health-conditions/tuberculosis' },
+              { label: 'Female Genital Tuberculosis', href: '/reproductive-health-conditions/female-genital-tuberculosis' },
               { label: 'Recurrent Miscarriages', href: '/reproductive-health-conditions/recurrent-miscarriages' },
-              { label: 'Why Delayed Periods But Not Pregnant', href: '/reproductive-health-conditions/reasons-for-delayed-periods-but-not-pregnant' },
-              { label: 'What is Ovarian Hyperstimulation', href: '/reproductive-health-conditions/what-is-ovarian-hyperstimulation' },
+              { label: 'Delayed Periods ', href: '/reproductive-health-conditions/reasons-for-delayed-periods-but-not-pregnant' },
+              { label: 'Ovarian Hyperstimulation', href: '/reproductive-health-conditions/what-is-ovarian-hyperstimulation' },
             ],
           },
           {

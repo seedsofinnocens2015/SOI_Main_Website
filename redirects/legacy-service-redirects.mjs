@@ -258,7 +258,12 @@ const legacyServiceRedirects = [
   },
   {
     source: '/tuberculosis/',
-    destination: '/reproductive-health-conditions/tuberculosis/',
+    destination: '/reproductive-health-conditions/female-genital-tuberculosis/',
+    permanent: true,
+  },
+  {
+    source: '/reproductive-health-conditions/tuberculosis/',
+    destination: '/reproductive-health-conditions/female-genital-tuberculosis/',
     permanent: true,
   },
   {
