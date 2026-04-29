@@ -9,69 +9,149 @@ import TestimonialSection from '../Components/TestimonialSection';
 import BlogSection from '../Components/BlogsSection';
 import NewsMediaSection from '../Components/NewsMediaSection';
 import WhyChooseUsSection from '../Components/WhyChooseUsSection';
-import GeneticsSection from '../Components/GeneticsSection';
-import CredibilitySection from '../Components/CredibilitySection';
 import FAQSection from '../Components/FAQSection';
 import blogsDataJson from '../data/blogs.json';
 
-export const metadata = {
-  title: {
-    absolute: 'Fertility Clinic: Fertility Hospital in India | Seeds Of Innocens IVF',
-  },
-  description:
-    'Seeds of Innocens IVF is a leading fertility clinic offering IVF, ICSI, IUI and test tube baby treatments. Find trusted care and high success rates.',
-  keywords: [
-    'fertility clinic',
-    'ivf center',
-    'best ivf center in india',
-    'best ivf centre',
-    'Seeds Of Innocens IVF',
-  ],
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.seedsofinnocens.com',
-  },
-  openGraph: {
-    siteName: 'Seeds Of Innocens IVF',
-    type: 'website',
-    url: 'https://seedsofinnocens.com/',
-    title: 'Fertility Clinic: Fertility Hospital in India | Seeds Of Innocens IVF',
-    description:
-      'Seeds of Innocens IVF is a leading fertility clinic offering IVF, ICSI, IUI and test tube baby treatments. Find trusted care and high success rates.',
-    locale: 'en_IN',
-    images: [
+export const dynamic = 'force-dynamic';
+
+function resolveSeoApiBaseUrl() {
+  return (
+    process.env.SEO_API_BASE_URL ||
+    process.env.NEXT_PUBLIC_SEO_API_BASE_URL ||
+    'http://localhost:4000'
+  );
+}
+
+function toKeywords(metaKeyword = '') {
+  return String(metaKeyword)
+    .split(',')
+    .map(keyword => keyword.trim())
+    .filter(Boolean);
+}
+
+function toRobots(robotValue = '') {
+  const normalized = String(robotValue).toLowerCase();
+  if (!normalized) return undefined;
+
+  return {
+    index: !normalized.includes('noindex'),
+    follow: !normalized.includes('nofollow'),
+  };
+}
+
+async function fetchHomeSeo() {
+  const apiBaseUrl = resolveSeoApiBaseUrl();
+  const hierarchyCandidates = [['Home'], []];
+
+  for (const hierarchyPath of hierarchyCandidates) {
+    const response = await fetch(
+      `${apiBaseUrl}/api/seo?pageUrl=${encodeURIComponent('/')}&hierarchyPath=${encodeURIComponent(
+        JSON.stringify(hierarchyPath)
+      )}`,
       {
-        url: 'https://seedsofinnocens.com/assets/img/Banner-2.png',
-        alt: 'Seeds Of Innocens IVF',
-      },
-      {
-        url: 'https://seedsofinnocens.com/assets/img/banner.png',
-        alt: 'Seeds Of Innocens IVF',
-      },
-      {
-        url: 'https://seedsofinnocens.com/assets/img/Header%20Logo.svg',
-        alt: 'Seeds Of Innocens IVF',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Fertility Clinic: Fertility Hospital in India | Seeds Of Innocens IVF',
-    description:
-      'Seeds of Innocens IVF is a leading fertility clinic offering IVF, ICSI, IUI and test tube baby treatments. Find trusted care and high success rates.',
-    images: ['https://seedsofinnocens.com/assets/img/Header%20Logo.svg'],
-    site: 'Seeds Of Innocens IVF',
-  },
-  other: {
-    Generator: 'Drupal 10 (https://www.drupal.org)',
-    MobileOptimized: 'width',
-    HandheldFriendly: 'true',
-    shortlink: 'https://www.seedsofinnocens.com/',
-  },
-};
+        method: 'GET',
+        cache: 'no-store',
+      }
+    );
+
+    if (!response.ok) continue;
+
+    const payload = await response.json().catch(() => null);
+    if (!payload?.ok || !payload?.data) continue;
+
+    const seo = payload.data;
+    const hasConfiguredSeo =
+      seo.pageTitle ||
+      seo.metaDescription ||
+      seo.metaKeyword ||
+      seo.ogTitle ||
+      seo.twitterTitle;
+
+    if (hasConfiguredSeo) {
+      return seo;
+    }
+  }
+
+  return null;
+}
+
+function sanitizeOpenGraphType(value = '') {
+  const normalized = String(value || '').trim().toLowerCase();
+  const allowedTypes = new Set([
+    'website',
+    'article',
+    'book',
+    'profile',
+    'music.song',
+    'music.album',
+    'music.playlist',
+    'music.radio_station',
+    'video.movie',
+    'video.episode',
+    'video.tv_show',
+    'video.other',
+  ]);
+
+  return allowedTypes.has(normalized) ? normalized : undefined;
+}
+
+export async function generateMetadata() {
+  const seo = await fetchHomeSeo().catch(() => null);
+  if (!seo) return {};
+
+  const keywords = toKeywords(seo.metaKeyword);
+  const robots = toRobots(seo.robot);
+  const ogImage = seo.ogImage || seo.itemImage || seo.twitterImageSrc || '';
+  const openGraphType = sanitizeOpenGraphType(seo.ogType);
+  const openGraph = {
+    title: seo.ogTitle || seo.pageTitle || undefined,
+    description: seo.ogDescription || seo.metaDescription || undefined,
+    url: seo.ogUrl || seo.canonical || undefined,
+    siteName: seo.ogSiteName || undefined,
+    locale: seo.ogLocale || undefined,
+    images: ogImage ? [{ url: ogImage }] : undefined,
+    ...(openGraphType ? { type: openGraphType } : {}),
+  };
+
+  return {
+    title: seo.pageTitle || undefined,
+    description: seo.metaDescription || undefined,
+    keywords: keywords.length ? keywords : undefined,
+    robots,
+    alternates: {
+      canonical: seo.canonical || undefined,
+    },
+    authors: seo.author ? [{ name: seo.author }] : undefined,
+    openGraph,
+    twitter: {
+      card: seo.twitterCard || undefined,
+      site: seo.twitterSite || undefined,
+      creator: seo.twitterCreator || undefined,
+      title: seo.twitterTitle || seo.ogTitle || seo.pageTitle || undefined,
+      description: seo.twitterDescription || seo.ogDescription || seo.metaDescription || undefined,
+      images: seo.twitterImageSrc ? [seo.twitterImageSrc] : ogImage ? [ogImage] : undefined,
+    },
+    other: {
+      news_keywords: seo.newsKeywords || undefined,
+      abstract: seo.abstract || undefined,
+      dc_source: seo.dcSource || undefined,
+      dc_title: seo.dcTitle || undefined,
+      dc_keywords: seo.dcKeywords || undefined,
+      dc_description: seo.dcDescription || undefined,
+      alternate: seo.alternate || undefined,
+      copyright: seo.copyright || undefined,
+      fb_admins: seo.fbAdmins || undefined,
+      twitter_canonical: seo.twitterCanonical || undefined,
+      item_type: seo.itemType || undefined,
+      item_name: seo.itemName || undefined,
+      item_description: seo.itemDescription || undefined,
+      item_url: seo.itemUrl || undefined,
+      item_image: seo.itemImage || undefined,
+      item_author: seo.itemAuthor || undefined,
+      item_organization: seo.itemOrganization || undefined,
+    },
+  };
+}
 
 
 const heroData = {

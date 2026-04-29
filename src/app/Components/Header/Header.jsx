@@ -357,7 +357,7 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'International',
-            href: '/ivf-centres/international',
+            href: '',
             subItems: [
               // { label: 'Lusaka, Zambia, Africa', href: '/best-ivf-centre-in-lusaka-zambia' },
               // { label: 'Kitwe, Zambia, Africa', href: '/best-ivf-centre-in-kitwe-zambia' },
@@ -395,7 +395,7 @@ const Header = ({ isTopBar, variant }) => {
       },
       {
         label: 'Resources',
-        href: '/resources',
+        href: '',
         isMegaMenu: true,
         megaMenuCategories: [
           {
@@ -454,7 +454,7 @@ const Header = ({ isTopBar, variant }) => {
       },
       {
         label: 'About us',
-        href: '/about',
+        href: '',
         isMegaMenu: true,
         megaMenuCategories: [
           {
@@ -493,7 +493,7 @@ const Header = ({ isTopBar, variant }) => {
       },
       {
         label: 'Doctors',
-        href: '/ivf-doctor',
+        href: '',
         isMegaMenu: true,
         megaMenuCategories: [
           {
@@ -512,7 +512,7 @@ const Header = ({ isTopBar, variant }) => {
       },
       {
         label: 'Contact us',
-        href: '/contact',
+        href: '',
         isMegaMenu: false,
         subItems: [
           { label: 'Book Appointment', href: '/contact/book-appointment' },

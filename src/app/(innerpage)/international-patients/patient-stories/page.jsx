@@ -2,6 +2,16 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export const dynamic = 'force-dynamic';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/international-patients/patient-stories',
+    hierarchyCandidates: [['International Patients'], []],
+  });
+}
 
 const headingData = {
   title: 'Patient Stories',

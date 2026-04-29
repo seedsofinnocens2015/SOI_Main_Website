@@ -18,8 +18,6 @@ const faviconUrl = `${basePath}/favicon.ico`;
 export const metadata = {
   title: {
     absolute: '',
-    default: 'Seeds of Innocens: Best IVF Centre & Fertility Hospital in India',
-    template: '%s | Seeds of Innocens: Best IVF Centre & Fertility Hospital in India',
   },
   description: 'Seeds of Innocens: Best IVF Centre & Fertility Hospital in India',
   openGraph: {
