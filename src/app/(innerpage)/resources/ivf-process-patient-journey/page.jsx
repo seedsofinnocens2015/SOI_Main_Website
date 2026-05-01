@@ -2,6 +2,16 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export const dynamic = 'force-static';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/resources/ivf-process-patient-journey',
+    hierarchyCandidates: [['Resources'], []],
+  });
+}
 
 const headingData = {
  uspTitle: 'IVF Process / <span class="cs_accent_color">Patient Journey </span>',

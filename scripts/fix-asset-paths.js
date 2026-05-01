@@ -4,6 +4,9 @@ const path = require('path');
 // No basePath needed for root domain deployment
 const basePath = '';
 const outDir = path.join(__dirname, '..', 'out');
+const projectRoot = path.join(__dirname, '..');
+const htaccessSource = path.join(projectRoot, '.htaccess');
+const htaccessTarget = path.join(outDir, '.htaccess');
 
 // Function to recursively find all CSS, JS, and HTML files
 function findFiles(dir, fileList = []) {
@@ -38,6 +41,18 @@ function fixAssetPaths() {
   files.forEach(filePath => {
     checkedCount++;
   });
+
+  if (fs.existsSync(htaccessSource)) {
+    fs.copyFileSync(htaccessSource, htaccessTarget);
+    console.log('✅ Copied .htaccess to out/.htaccess');
+  } else {
+    console.log('⚠️ .htaccess not found at project root, skipping copy.');
+  }
+
+  const homeRoute = path.join(outDir, 'index.html');
+  if (!fs.existsSync(homeRoute)) {
+    console.log('⚠️ out/index.html missing. Build output looks incomplete.');
+  }
 
   console.log(`\n✨ Checked ${checkedCount} file(s).`);
   console.log('📦 Build is ready for deployment to root domain!');

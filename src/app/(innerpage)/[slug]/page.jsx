@@ -10,6 +10,7 @@ const stateServicesWithIcons = centerContentConfig.default.servicesWithIcons || 
 import doctorsData from '@/app/data/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import BestIVFCentre from '@/app/Components/BestIVFCentre';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
@@ -52,6 +53,15 @@ export async function generateMetadata({ params }) {
     // 1. Check if it's an international centre slug
     const internationalCenter = centresData.find(c => c.isInternational && c.slug === slug);
     if (internationalCenter) {
+        const seoMetadata = await getSeoMetadata({
+            pageUrl: `/${slug}`,
+            pageUrlCandidates: [`/${slug}/`],
+            hierarchyCandidates: [['IVF Centres', 'International'], ['IVF Centres'], []],
+        });
+        if (seoMetadata?.title || seoMetadata?.description) {
+            return seoMetadata;
+        }
+
         const defaultDesc = internationalCenter.description
             ? internationalCenter.description[0]
             : `Best IVF Centre in ${internationalCenter.name}.`;
@@ -98,6 +108,20 @@ export async function generateMetadata({ params }) {
     }
 
     const stateName = filteredCentres[0].state;
+    const seoMetadata = await getSeoMetadata({
+        pageUrl: `/${slug}`,
+        pageUrlCandidates: [`/${slug}/`],
+        hierarchyCandidates: [
+            ['IVF Centres', 'India', stateName],
+            ['IVF Centres', 'India'],
+            ['IVF Centres'],
+            [],
+        ],
+    });
+    if (seoMetadata?.title || seoMetadata?.description) {
+        return seoMetadata;
+    }
+
     const rawStateContent = stateContentConfig[stateSlug] || stateContentConfig.default || {};
     const replaceStateName = (text) =>
         typeof text === 'string' ? text.replace(/{{stateName}}/g, stateName) : text;

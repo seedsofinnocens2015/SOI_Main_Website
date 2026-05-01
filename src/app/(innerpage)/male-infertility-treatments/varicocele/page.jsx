@@ -3,6 +3,14 @@ import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
 import servicesContent from '@/app/data/servicesContent.json';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/male-infertility-treatments/varicocele',
+    hierarchyCandidates: [['Infertility Treatment', 'Male Infertility Treatments'], ['Infertility Treatment'], []],
+  });
+}
 
 const varicoceleData = servicesContent.varicocele || {};
 const varicoceleContentData = varicoceleData.ivfContentData || { sections: [] };

@@ -4,6 +4,7 @@ import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import { notFound } from 'next/navigation';
 import doctorsData from '@/app/data/doctors-data.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
 const GENETIC_EXPERT_SLUGS = new Set([
   'dr-alpana-razadan',
@@ -14,6 +15,14 @@ const isGeneticExpertDoctor = (doctor) => GENETIC_EXPERT_SLUGS.has(doctor?.newSl
 
 export async function generateMetadata({ params }) {
   const { doctorSlug } = await params;
+  const seoMetadata = await getSeoMetadata({
+    pageUrl: `/genetic-expert/${doctorSlug}`,
+    hierarchyCandidates: [['Doctors', 'All IVF Specialists - Profiles'], ['Doctors'], []],
+  });
+  if (seoMetadata?.title || seoMetadata?.description) {
+    return seoMetadata;
+  }
+
   const doctor = doctorsData.find((d) => d.newSlug === doctorSlug && isGeneticExpertDoctor(d));
   if (!doctor) return { title: 'Not Found' };
 

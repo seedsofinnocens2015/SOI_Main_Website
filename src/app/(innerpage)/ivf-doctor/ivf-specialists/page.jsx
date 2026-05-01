@@ -2,6 +2,16 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import TeamSection from '@/app/Components/TeamSection';
 import React from 'react';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export const dynamic = 'force-static';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/ivf-doctor/ivf-specialists',
+    hierarchyCandidates: [['Doctors'], []],
+  });
+}
 
 const page = () => {
   const headingData = {

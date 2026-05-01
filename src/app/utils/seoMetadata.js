@@ -1,10 +1,5 @@
-function resolveSeoApiBaseUrl() {
-  return (
-    process.env.SEO_API_BASE_URL ||
-    process.env.NEXT_PUBLIC_SEO_API_BASE_URL ||
-    'http://localhost:4000'
-  );
-}
+const SEO_API_BASE_URL = 'http://localhost:4000';
+const SEO_METADATA_REVALIDATE_SECONDS = 300;
 
 function toKeywords(metaKeyword = '') {
   return String(metaKeyword)
@@ -54,17 +49,20 @@ function hasConfiguredSeo(seo = {}) {
 }
 
 async function fetchSeoByCandidates(pageUrl, hierarchyCandidates = [[]]) {
-  const apiBaseUrl = resolveSeoApiBaseUrl();
-
   for (const hierarchyPath of hierarchyCandidates) {
     const response = await fetch(
-      `${apiBaseUrl}/api/seo?pageUrl=${encodeURIComponent(pageUrl)}&hierarchyPath=${encodeURIComponent(
+      `${SEO_API_BASE_URL}/api/seo?pageUrl=${encodeURIComponent(pageUrl)}&hierarchyPath=${encodeURIComponent(
         JSON.stringify(hierarchyPath)
       )}`,
-      {
-        method: 'GET',
-        cache: 'no-store',
-      }
+      IS_PRODUCTION
+        ? {
+            method: 'GET',
+            next: { revalidate: SEO_METADATA_REVALIDATE_SECONDS },
+          }
+        : {
+            method: 'GET',
+            cache: 'no-store',
+          }
     );
 
     if (!response.ok) continue;

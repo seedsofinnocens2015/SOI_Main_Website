@@ -5,6 +5,16 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
 import { getAssetPath } from '@/app/utils/assetPath';
 import LeadershipTeamCards from '@/app/Components/LeadershipTeamCards';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export const dynamic = 'force-static';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/about/leadership-team',
+    hierarchyCandidates: [['About Us'], []],
+  });
+}
 
 const headingData = {
   title: 'Our Leadership Team',

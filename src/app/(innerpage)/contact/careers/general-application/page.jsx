@@ -1,18 +1,11 @@
 "use client";
-import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { submitUnifiedFormMultipart, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
 import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
-
-const headingData = {
-  title: 'General Application',
-};
 
 const ivfContentData = {
   sections: [
@@ -53,13 +46,6 @@ const Page = () => {
 
   return (
     <div>
-      <Section
-        className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.webp"
-      >
-        <PageHeading data={headingData} />
-      </Section>
-
       {/* Content Section */}
       <Section
         topSpaceLg="50"

@@ -3,6 +3,7 @@ import ServicePage from '@/app/Components/ServicePage';
 import ServiceSchema from '@/app/Components/ServiceSchema';
 import servicesContent from '@/app/data/servicesContent.json';
 import { getDefaultDescription, getSchemaType } from '@/app/utils/serviceSeo';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.seedsofinnocence.com';
 
@@ -15,6 +16,15 @@ export async function generateMetadata({ params }) {
   const config = servicesContent[slug];
   if (!config) {
     return { title: 'Service | Seeds of Innocence' };
+  }
+
+  const seoMetadata = await getSeoMetadata({
+    pageUrl: `/services/${slug}`,
+    hierarchyCandidates: [[]],
+  }).catch(() => ({}));
+
+  if (Object.keys(seoMetadata || {}).length) {
+    return seoMetadata;
   }
 
   const title = config.title || slug;

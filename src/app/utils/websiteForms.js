@@ -1,17 +1,14 @@
 /**
  * Central SOI website form API: one base URL and one place to change paths.
  *
- * - Set NEXT_PUBLIC_SOI_API_URL in .env.local if the API host changes (no trailing slash).
  * - Legacy JSON endpoints: book-appointment, call-back-form (unchanged payloads).
  * - All other forms POST to unified: /api/website/form-submit
  *   Body: { formType, ...fields } or multipart + formType field (implement on server).
  */
+const WEBSITE_API_BASE_URL = 'http://localhost:4000';
 
 export function getWebsiteApiBaseUrl() {
-  if (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_SOI_API_URL) {
-    return `${process.env.NEXT_PUBLIC_SOI_API_URL}`.replace(/\/$/, '');
-  }
-  return 'https://soi.seedsofinnocens.com';
+  return WEBSITE_API_BASE_URL;
 }
 
 export const WEBSITE_FORM_PATHS = {

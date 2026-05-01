@@ -11,146 +11,15 @@ import NewsMediaSection from '../Components/NewsMediaSection';
 import WhyChooseUsSection from '../Components/WhyChooseUsSection';
 import FAQSection from '../Components/FAQSection';
 import blogsDataJson from '../data/blogs.json';
+import { getSeoMetadata } from '../utils/seoMetadata';
 
-export const dynamic = 'force-dynamic';
-
-function resolveSeoApiBaseUrl() {
-  return (
-    process.env.SEO_API_BASE_URL ||
-    process.env.NEXT_PUBLIC_SEO_API_BASE_URL ||
-    'http://localhost:4000'
-  );
-}
-
-function toKeywords(metaKeyword = '') {
-  return String(metaKeyword)
-    .split(',')
-    .map(keyword => keyword.trim())
-    .filter(Boolean);
-}
-
-function toRobots(robotValue = '') {
-  const normalized = String(robotValue).toLowerCase();
-  if (!normalized) return undefined;
-
-  return {
-    index: !normalized.includes('noindex'),
-    follow: !normalized.includes('nofollow'),
-  };
-}
-
-async function fetchHomeSeo() {
-  const apiBaseUrl = resolveSeoApiBaseUrl();
-  const hierarchyCandidates = [['Home'], []];
-
-  for (const hierarchyPath of hierarchyCandidates) {
-    const response = await fetch(
-      `${apiBaseUrl}/api/seo?pageUrl=${encodeURIComponent('/')}&hierarchyPath=${encodeURIComponent(
-        JSON.stringify(hierarchyPath)
-      )}`,
-      {
-        method: 'GET',
-        cache: 'no-store',
-      }
-    );
-
-    if (!response.ok) continue;
-
-    const payload = await response.json().catch(() => null);
-    if (!payload?.ok || !payload?.data) continue;
-
-    const seo = payload.data;
-    const hasConfiguredSeo =
-      seo.pageTitle ||
-      seo.metaDescription ||
-      seo.metaKeyword ||
-      seo.ogTitle ||
-      seo.twitterTitle;
-
-    if (hasConfiguredSeo) {
-      return seo;
-    }
-  }
-
-  return null;
-}
-
-function sanitizeOpenGraphType(value = '') {
-  const normalized = String(value || '').trim().toLowerCase();
-  const allowedTypes = new Set([
-    'website',
-    'article',
-    'book',
-    'profile',
-    'music.song',
-    'music.album',
-    'music.playlist',
-    'music.radio_station',
-    'video.movie',
-    'video.episode',
-    'video.tv_show',
-    'video.other',
-  ]);
-
-  return allowedTypes.has(normalized) ? normalized : undefined;
-}
+export const dynamic = 'force-static';
 
 export async function generateMetadata() {
-  const seo = await fetchHomeSeo().catch(() => null);
-  if (!seo) return {};
-
-  const keywords = toKeywords(seo.metaKeyword);
-  const robots = toRobots(seo.robot);
-  const ogImage = seo.ogImage || seo.itemImage || seo.twitterImageSrc || '';
-  const openGraphType = sanitizeOpenGraphType(seo.ogType);
-  const openGraph = {
-    title: seo.ogTitle || seo.pageTitle || undefined,
-    description: seo.ogDescription || seo.metaDescription || undefined,
-    url: seo.ogUrl || seo.canonical || undefined,
-    siteName: seo.ogSiteName || undefined,
-    locale: seo.ogLocale || undefined,
-    images: ogImage ? [{ url: ogImage }] : undefined,
-    ...(openGraphType ? { type: openGraphType } : {}),
-  };
-
-  return {
-    title: seo.pageTitle || undefined,
-    description: seo.metaDescription || undefined,
-    keywords: keywords.length ? keywords : undefined,
-    robots,
-    alternates: {
-      canonical: seo.canonical || undefined,
-    },
-    authors: seo.author ? [{ name: seo.author }] : undefined,
-    openGraph,
-    twitter: {
-      card: seo.twitterCard || undefined,
-      site: seo.twitterSite || undefined,
-      creator: seo.twitterCreator || undefined,
-      title: seo.twitterTitle || seo.ogTitle || seo.pageTitle || undefined,
-      description: seo.twitterDescription || seo.ogDescription || seo.metaDescription || undefined,
-      images: seo.twitterImageSrc ? [seo.twitterImageSrc] : ogImage ? [ogImage] : undefined,
-    },
-    other: {
-      news_keywords: seo.newsKeywords || undefined,
-      abstract: seo.abstract || undefined,
-      dc_source: seo.dcSource || undefined,
-      dc_title: seo.dcTitle || undefined,
-      dc_keywords: seo.dcKeywords || undefined,
-      dc_description: seo.dcDescription || undefined,
-      alternate: seo.alternate || undefined,
-      copyright: seo.copyright || undefined,
-      fb_admins: seo.fbAdmins || undefined,
-      twitter_canonical: seo.twitterCanonical || undefined,
-      item_type: seo.itemType || undefined,
-      item_name: seo.itemName || undefined,
-      item_description: seo.itemDescription || undefined,
-      item_url: seo.itemUrl || undefined,
-      item_image: seo.itemImage || undefined,
-      item_author: seo.itemAuthor || undefined,
-      item_organization: seo.itemOrganization || undefined,
-    },
-  };
+  return getSeoMetadata({
+    pageUrl: '/',
+    hierarchyCandidates: [['Home'], []],
+  });
 }
 
 

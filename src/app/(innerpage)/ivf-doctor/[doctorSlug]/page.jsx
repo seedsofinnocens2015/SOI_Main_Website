@@ -4,9 +4,18 @@ import DoctorDetailsSection from '@/app/Components/DoctorDetailsSection';
 import { notFound } from 'next/navigation';
 import doctorsData from '@/app/data/doctors-data.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
 export async function generateMetadata({ params }) {
   const { doctorSlug } = await params;
+  const seoMetadata = await getSeoMetadata({
+    pageUrl: `/ivf-doctor/${doctorSlug}`,
+    hierarchyCandidates: [['Doctors', 'All IVF Specialists - Profiles'], ['Doctors'], []],
+  });
+  if (seoMetadata?.title || seoMetadata?.description) {
+    return seoMetadata;
+  }
+
   const doctor = doctorsData.find(
     (d) => d.newSlug === doctorSlug || doctorSlug === d.slug + '-ivf-specialist'
   );

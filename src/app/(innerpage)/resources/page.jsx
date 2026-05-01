@@ -4,6 +4,16 @@ import Section from '@/app/Components/Section';
 import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export const dynamic = 'force-static';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/resources',
+    hierarchyCandidates: [['Resources'], []],
+  });
+}
 
 const headingData = {
   title: 'Resources',

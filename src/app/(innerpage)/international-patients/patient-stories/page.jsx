@@ -4,7 +4,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata() {
   return getSeoMetadata({

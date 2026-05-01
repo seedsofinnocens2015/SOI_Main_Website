@@ -1,4 +1,3 @@
-"use client";
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
@@ -6,6 +5,16 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
 import Image from 'next/image';
 import { getAssetPathClient } from '@/app/utils/assetPath';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export const dynamic = 'force-static';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/about/awards-accreditations',
+    hierarchyCandidates: [['About Us'], []],
+  });
+}
 
 const headingData = {
   uspTitle: 'Heading- Remarkable <br /> <span class="cs_accent_color"> IVF Chain of India </span>',

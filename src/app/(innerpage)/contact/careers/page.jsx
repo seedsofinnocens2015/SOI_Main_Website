@@ -1,5 +1,4 @@
 "use client";
-import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import AccentHeading from '@/app/Components/AccentHeading';
 import Link from 'next/link';
@@ -8,8 +7,6 @@ import {
   FaClock, FaUserTie, FaFlask, FaHeartbeat, FaChartLine,
   FaLaptopMedical, FaBullhorn,
 } from 'react-icons/fa';
-
-const headingData = { title: 'Careers' };
 
 const whyJoinUs = [
   {
@@ -129,13 +126,6 @@ const stats = [
 const Page = () => {
   return (
     <div>
-      <Section
-        className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.webp"
-      >
-        <PageHeading data={headingData} />
-      </Section>
-
       {/* Intro Content */}
       <Section topSpaceLg="50" topSpaceMd="60" bottomSpaceLg="50" bottomSpaceMd="60">
         <div className="container">
@@ -431,7 +421,6 @@ const Page = () => {
               </Link>
             </div>
           </div>
-
         </div>
       </Section>
     </div>

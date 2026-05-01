@@ -2,6 +2,16 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import CounterSection from '@/app/Components/FunSection/CounterSection';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export const dynamic = 'force-static';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/about/success-rates',
+    hierarchyCandidates: [['About Us'], []],
+  });
+}
 
 const headingData = {
   uspTitle: 'Success <span class="cs_accent_color">Rates </span>',

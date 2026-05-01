@@ -2,6 +2,14 @@ import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/training-academy/embryologist-training-program',
+    hierarchyCandidates: [['Training Academy'], []],
+  });
+}
 
 const headingData = {
   title: 'Embryologist Training Program',

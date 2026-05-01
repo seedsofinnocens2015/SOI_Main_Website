@@ -6,6 +6,16 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import React from 'react';
 import doctorsData from '@/app/data/doctors-data.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+
+export const dynamic = 'force-static';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/ivf-doctor/maternal-fetal-medicine',
+    hierarchyCandidates: [['Doctors'], []],
+  });
+}
 
 const page = () => {
   const headingData = {

@@ -4,6 +4,7 @@ const centerContentConfig = centresAllData.centerContent;
 import doctorsData from '@/app/data/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
 import BestIVFCentre from '@/app/Components/BestIVFCentre';
 import { cityNameToSlug, resolveIndiaCenterFromCenterSlug } from '@/app/utils/resolveCenterFromRoute';
 
@@ -58,6 +59,19 @@ export async function generateMetadata({ params }) {
     const center = resolveIndiaCenterFromCenterSlug(cleanSlug, indiaCentresData);
     if (!center) {
         return { title: 'Not Found' };
+    }
+    const seoMetadata = await getSeoMetadata({
+        pageUrl: `/${stateSlug}/${cleanSlug}`,
+        pageUrlCandidates: [`/${stateSlug}/${cleanSlug}/`],
+        hierarchyCandidates: [
+            ['IVF Centres', 'India', center.state],
+            ['IVF Centres', 'India'],
+            ['IVF Centres'],
+            [],
+        ],
+    });
+    if (seoMetadata?.title || seoMetadata?.description) {
+        return seoMetadata;
     }
 
     const cityName = center.name.split(',')[0].trim();
