@@ -4,7 +4,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import CounterSection from '@/app/Components/FunSection/CounterSection';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
   return getSeoMetadata({

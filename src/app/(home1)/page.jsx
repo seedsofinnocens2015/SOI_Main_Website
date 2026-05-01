@@ -13,7 +13,7 @@ import FAQSection from '../Components/FAQSection';
 import blogsDataJson from '../data/blogs.json';
 import { getSeoMetadata } from '../utils/seoMetadata';
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
   return getSeoMetadata({

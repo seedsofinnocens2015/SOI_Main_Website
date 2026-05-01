@@ -14,6 +14,7 @@ const inter = Inter({
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const faviconUrl = `${basePath}/favicon.ico`;
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: {

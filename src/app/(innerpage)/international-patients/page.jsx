@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
   return getSeoMetadata({
