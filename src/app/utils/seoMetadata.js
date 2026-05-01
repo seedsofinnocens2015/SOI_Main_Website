@@ -1,4 +1,4 @@
-const SEO_API_BASE_URL = 'https://soi.seedsofinnocens.com';
+const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
 function toKeywords(metaKeyword = '') {
   return String(metaKeyword)
