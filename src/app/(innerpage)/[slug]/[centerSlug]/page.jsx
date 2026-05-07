@@ -1,6 +1,7 @@
 import centresAllData from '@/app/data/centres-data.json';
 const indiaCentresData = centresAllData.centres;
 const centerContentConfig = centresAllData.centerContent;
+const stateContentConfig = centresAllData.stateContent;
 import doctorsData from '@/app/data/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
@@ -175,8 +176,17 @@ const page = async ({ params }) => {
         _benefitImages: [processedCenterImage, processedCenterImage]
     };
 
-    // FAQ: centre-specific or default, with {{cityName}} replaced (for FAQ accordion)
-    const rawFaqs = (centerContentConfig[center.slug] && centerContentConfig[center.slug].faqs) || centerContentConfig.default?.faqs || [];
+    // FAQ priority: centre object -> centre config -> state config -> defaults
+    const centerFaqsFromCentreObject = Array.isArray(center.faqs) && center.faqs.length > 0 ? center.faqs : null;
+    const centerFaqsFromCenterConfig = centerContentConfig[center.slug]?.faqs;
+    const centerFaqsFromStateConfig = stateContentConfig?.[center.stateSlug]?.faqs;
+    const rawFaqs =
+        centerFaqsFromCentreObject ||
+        centerFaqsFromCenterConfig ||
+        centerFaqsFromStateConfig ||
+        centerContentConfig.default?.faqs ||
+        stateContentConfig?.default?.faqs ||
+        [];
     const centerFaqs = rawFaqs.map((faq) => ({
         question: replaceCityName(faq.question),
         answer: replaceCityName(faq.answer),

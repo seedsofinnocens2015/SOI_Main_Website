@@ -206,7 +206,13 @@ const DynamicPage = async ({ params }) => {
             typeof text === 'string' ? text.replace(/{{cityName}}/g, cityName) : text;
 
         // FAQ Content Data
-        const rawFaqs = (centerContentConfig[center.slug] && centerContentConfig[center.slug].faqs) || centerContentConfig.default.faqs || [];
+        const centerFaqsFromCentreObject = Array.isArray(center.faqs) && center.faqs.length > 0 ? center.faqs : null;
+        const centerFaqsFromCenterConfig = centerContentConfig[center.slug]?.faqs;
+        const rawFaqs =
+            centerFaqsFromCentreObject ||
+            centerFaqsFromCenterConfig ||
+            centerContentConfig.default.faqs ||
+            [];
         const faqContentData = rawFaqs.length > 0 ? {
             sections: [
                 {
