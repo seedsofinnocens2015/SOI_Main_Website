@@ -7,7 +7,7 @@
     "build": "next build",
     "postbuild": "node scripts/fix-asset-paths.js",
     "export": "next build",
-    "start": "node server.js",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
