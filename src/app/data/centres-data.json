@@ -109,7 +109,37 @@
         "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.2246332573263!2d77.20100627528524!3d28.532967075719295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce20320e1d805%3A0x7d88d4bcd484e5ec!2sSeeds%20of%20Innocens%20IVF%20Centre%20-%20Best%20IVF%20Centre%20in%20Delhi%20%7C%20Fertility%20Clinics!5e0!3m2!1sen!2sin!4v1773123385736!5m2!1sen!2sin",
         "phone": "+919810350512"
       },
-      "bestIvfHeading": "Best IVF Centre in Malviya Nagar, Delhi"
+      "bestIvfHeading": "Best IVF Centre in Malviya Nagar, Delhi",
+      "faqs": [
+        {
+          "question": "What is the cost of IVF treatment in Malviya Nagar?",
+          "answer": "The average cost of an IVF treatment in Malviya Nagar ranges between \u20b990,000 to \u20b92,50,000 per cycle, relying on the factors such as medications, medical condition and additional procedures. Also we offer transparent pricing with no hidden charges at our IVF centre in Malviya Nagar."
+        },
+        {
+          "question": "How many IVF cycles are needed for a successful pregnancy?",
+          "answer": "The number of IVF cycles varies for each couple and while some achieve success in the initial cycle and others might need 2-3 cycles relying on fertility condition, age and overall health."
+        },
+        {
+          "question": "What is the IVF success rate in Malviya Nagar at your centre?",
+          "answer": "Our best IVF Centre in Malviya Nagar maintains a high success rate due to an advanced technology, experienced fertility specialists and customized treatment plans. Success rates may vary based on age and medical history."
+        },
+        {
+          "question": "How long does IVF treatment take in Malviya Nagar?",
+          "answer": "A whole IVF cycle takes about 4-6 weeks, which includes ovarian stimulation, egg retrieval, fertilization and embryo transfer. Our Infertility Clinic in Malviya Nagar, Delhi offers several infertility treatments such as IVF, ICSI, IUI and many others."
+        },
+        {
+          "question": "Why choose Seeds of Innocens IVF clinic in Malviya Nagar?",
+          "answer": "Our IVF clinic in Malviya Nagar is equipped with experienced doctors, advanced labs and patient-centric care. We also focus on personalized treatment plans to maximize success rates while ensuring emotional and the medical support."
+        },
+        {
+          "question": "Is IVF treatment painful or risky?",
+          "answer": "IVF is safe and minimally invasive and some steps such as injections or the egg retrieval might cause mild discomfort but they can all well-managed under the specialist supervision."
+        },
+        {
+          "question": "What fertility treatments in Malviya Nagar are available at your IVF centre?",
+          "answer": "We provide a wide range of fertility treatments in Malviya Nagar which includes IVF, IUI, ICSI, Egg Freezing, Embryo Freezing and the treatment for the both male and female infertility."
+        }
+      ]
     },
     {
       "slug": "ghaziabad-uttar-pradesh",
@@ -334,7 +364,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Drosia+Tower+5/5+Park+Rd+Raj+Bhavan+Colony+Hazratganj+Lucknow+Uttar+Pradesh+226001&output=embed",
         "phone": "+919459023333"
       },
-      "bestIvfHeading": "Best IVF Centre in Lucknow, Uttar Pradesh"
+      "bestIvfHeading": "Best IVF Centre in Lucknow, Uttar Pradesh",
+      "faqs": [
+        {
+          "question": "What is the success rate of IVF treatment in Lucknow?",
+          "answer": "The success rate of IVF treatment in Lucknow varies between 55-75% according to age, fertility problems, and the quality of treatment provided by the IVF center."
+        },
+        {
+          "question": "How much does IVF cost in Lucknow?",
+          "answer": "The IVF cost in Lucknow can be anywhere between \u20b990,000 and \u20b92,30,000 for each cycle. The cost might be more if special treatments such as ICSI, donor program, or freezing procedure need to be undertaken."
+        },
+        {
+          "question": "In what scenario should IVF treatment be considered by the IVF Hospital ?",
+          "answer": "IVF Hospital in Lucknow should be taken into consideration when couples have been unsuccessful in their conception efforts after trying for over a year. Known conditions that cause infertility in women include PCOD, blocked tubes, endometriosis etc., and male infertility includes cases of low sperm count."
+        },
+        {
+          "question": "Is IVF treatment painful for the patients?",
+          "answer": "IVF procedures are usually painless, and egg collection is done under sedation, which means that patients feel minimal discomfort during the procedure."
+        },
+        {
+          "question": "What are the tests that need to be done prior to undergoing IVF?",
+          "answer": "Initial tests involve taking blood samples, conducting ultrasounds, checking semen, and analyzing hormones to determine the underlying infertility problem prior to therapy."
+        },
+        {
+          "question": "Is IVF risky?",
+          "answer": "IVF is considered safe; however, slight complications such as ovarian hyperstimulation, multiple pregnancies, or reactions to drugs might be possible and are handled by experts."
+        },
+        {
+          "question": "Does IVF ensure conception?",
+          "answer": "IVF greatly enhances the probability of conception, although it does not ensure success."
+        }
+      ]
     },
     {
       "slug": "agra-uttar-pradesh",
@@ -672,7 +732,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Jagmano+Shree+Complex+Pillar+No+–+38+Khajpura+Bailey+Road+Patna+Bihar&output=embed",
         "phone": "+918276004040"
       },
-      "bestIvfHeading": "Best IVF Centre in Patna, Bihar"
+      "bestIvfHeading": "Best IVF Centre in Patna, Bihar",
+      "faqs": [
+        {
+          "question": "What kind of fertility treatments are provided at fertility centres in Patna?",
+          "answer": "Seeds of Innocens IVF Fertility Centre in Patna offers IVF, IUI, ICSI, fertility preservation, ovulation induction, and advanced infertility management services."
+        },
+        {
+          "question": "Can fertility treatment in Patna help with unexplained infertility?",
+          "answer": "Yes, fertility treatment in Patna, such as IUI and IVF, is commonly recommended for couples with unexplained infertility."
+        },
+        {
+          "question": "Are advanced fertility procedures available in Patna?",
+          "answer": "Yes, the fertility hospital in Patna uses advanced procedures such as ICSI and blastocyst transfer to improve success rates."
+        },
+        {
+          "question": "Is fertility treatment in Patna suitable for couples from nearby districts?",
+          "answer": "Yes, Patna serves as a major fertility treatment clinic for patients across Bihar and nearby regions."
+        },
+        {
+          "question": "Can fertility treatments in Patna help with irregular menstrual cycles?",
+          "answer": "Yes, at Seeds of Innocens IVF Patna, our fertility doctors help in managing hormonal treatments and ovulation induction, which are commonly used to manage irregular cycles and improve fertility."
+        },
+        {
+          "question": "Are fertility preservation options available in Patna?",
+          "answer": "Yes, egg and embryo freezing services in Patna are available for individuals planning pregnancy later."
+        },
+        {
+          "question": "Do fertility centres in Patna provide complete support throughout treatment?",
+          "answer": "Yes, patients receive continuous medical guidance, monitoring, and counselling during the treatment journey."
+        }
+      ]
     },
     {
       "slug": "faridabad-haryana",
@@ -765,7 +855,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+A-6/A+Neelam+Bata+Road+Above+ICICI+Bank+NIT+Faridabad+Haryana&output=embed",
         "phone": "+918276003737"
       },
-      "bestIvfHeading": "Best IVF Centre in Faridabad, Haryana"
+      "bestIvfHeading": "Best IVF Centre in Faridabad, Haryana",
+      "faqs": [
+        {
+          "question": "What fertility treatments are available in Faridabad?",
+          "answer": "Fertility centres in Faridabad provide various treatments such as IVF, IUI, ICSI, Ovulation induction and fertility preservation based on individual requirements."
+        },
+        {
+          "question": "Can IUI treatment in Faridabad help couples with mild infertility issues?",
+          "answer": "Yes,IUI is recommended for the couples struggling with mild male infertility, unexplained infertility."
+        },
+        {
+          "question": "When is IVF recommended over other fertility treatments in Faridabad?",
+          "answer": "IVF is advised when simple treatments are unsuccessful or in the case such as severe male infertility, blocked tubes or even advanced maternal age."
+        },
+        {
+          "question": "Are fertility treatments in Faridabad suitable for women with PCOS?",
+          "answer": "Yes, fertility expert in Faridabad offer personalized treatment plans for women with PCOS to improve conception chances."
+        },
+        {
+          "question": "Is fertility preservation available in Faridabad?",
+          "answer": "Yes, embryo freezing and egg freezing are available for the individuals who are planning pregnancy later."
+        },
+        {
+          "question": "Can male infertility be treated at fertility centres in Faridabad?",
+          "answer": "Yes, fertility treatments such as ICSI, semen analysis, and advanced male fertility procedures are available in Seeds of Innocens IVF in Faridabad."
+        },
+        {
+          "question": "How do fertility specialists in Faridabad personalize treatment plans?",
+          "answer": "Firstly fertility experts assess age, hormone levels and fertility reports before suggesting the suitable treatment."
+        }
+      ]
     },
     {
       "slug": "gurugram-haryana",
@@ -989,7 +1109,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+4th+Floor+Maru+Tower+Kanke+Road+Ranchi+Jharkhand&output=embed",
         "phone": "+918276004545"
       },
-      "bestIvfHeading": "Best IVF Centre in Ranchi, Jharkhand"
+      "bestIvfHeading": "Best IVF Centre in Ranchi, Jharkhand",
+      "faqs": [
+        {
+          "question": "Do Seeds of Innocens IVF Ranchi offer Gynecological and Obstetrics treatment as well?",
+          "answer": "Seeds of Innocens IVF offers a wide range of Gynecological and Obstetrics treatment to increase the chances of fertility."
+        },
+        {
+          "question": "What are the common fertility problems that women face?",
+          "answer": "Women experience common infertility problems such as endometriosis, uterine fibroids, and premature ovarian failure. At Seeds of Innocens IVF, patients can get treated for many problems at an affordable rate."
+        },
+        {
+          "question": "What kind of fertility treatments are available at Seeds of Innocens IVF?",
+          "answer": "Seeds of Innocens IVF offers various treatments such as IVF, IUI, Blastocyst Transfer, ICSI, and many more."
+        },
+        {
+          "question": "Can men face infertility Issues?",
+          "answer": "Infertility issues such as Azoospermia, motility, morphology, and low sperm production can happen in men. However, if a couple is unable to conceive, then it is important to check for male infertility problems as well."
+        },
+        {
+          "question": "What happens in an ICSI procedure?",
+          "answer": "In ICSI, a healthy sperm is chosen, and it is directly injected into the egg retrieved from the female's body. It aids the fertilisation procedure."
+        },
+        {
+          "question": "Can IVF treatment in Ranchi be started quickly after diagnosis?",
+          "answer": "Yes, once initial tests are completed, treatment can start without delays."
+        },
+        {
+          "question": "Do Seeds of Innocens IVF in Ranchi equipped with modern medical facilities?",
+          "answer": "Yes, Seeds of Innocens IVF Ranchi uses the latest ART Technology and updated treatment protocols."
+        }
+      ]
     },
     {
       "slug": "haldwani-uttarakhand",
@@ -1081,7 +1231,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Laxmi+Mohan+Towers+2nd+Floor+Mukhani+Chauraha+Bamori+Talli+Haldwani+Uttarakhand&output=embed",
         "phone": "+918448180800"
       },
-      "bestIvfHeading": "Best IVF Centre in Haldwani, Uttarakhand"
+      "bestIvfHeading": "Best IVF Centre in Haldwani, Uttarakhand",
+      "faqs": [
+        {
+          "question": "Is IVF treatment in Haldwani appropriate for people living in the hills of Uttarakhand?",
+          "answer": "Yes, our fertility clinic in Haldwani, Seeds of Innocens IVF Haldwani, is easily accessible to those living in the hills."
+        },
+        {
+          "question": "Is IVF treatment useful for irregular ovulation?",
+          "answer": "Yes, the IVF procedure will benefit couples in conceiving when the female partner suffers from irregular ovulation."
+        },
+        {
+          "question": "Are you capable of managing high-risk fertility cases at your facility in Haldwani?",
+          "answer": "Yes, we have highly qualified fertility specialists in Haldwani who can treat complicated infertility problems."
+        },
+        {
+          "question": "Is the cost of IVF in Haldwani affordable as compared to metro cities?",
+          "answer": "Yes, our fertility clinic is cost-effective as compared to other metro cities like Delhi and Mumbai."
+        },
+        {
+          "question": "Are you offering full fertility diagnostic tests in your IVF clinic?",
+          "answer": "Yes, all fertility tests in Haldwani that include hormonal analysis and scanning are offered by our fertility clinic."
+        },
+        {
+          "question": "Does your clinic advise IVF treatment if natural conception fails repeatedly?",
+          "answer": "Yes, in cases where natural conception is unsuccessful, we recommend IVF treatment."
+        },
+        {
+          "question": "Are you providing aftercare to the patient after IVF treatment?",
+          "answer": "Yes, the monitoring and post-treatment facilities are available in our clinic."
+        }
+      ]
     },
     {
       "slug": "guwahati-assam",
@@ -1305,7 +1485,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Wintouch+Multi+Speciality+Hospital+Bank+Road+Kasaragod+Kerala+671121&output=embed",
         "phone": "+919459083333"
       },
-      "bestIvfHeading": "Best IVF Centre in Kasaragod, Kerala"
+      "bestIvfHeading": "Best IVF Centre in Kasaragod, Kerala",
+      "faqs": [
+        {
+          "question": "Is there availability of IVF procedure in Kasaragod for locals?",
+          "answer": "Yes, IVF is accessible in Kasaragod or surrounding cities along with proper medical assistance."
+        },
+        {
+          "question": "Can IVF treatment in Kasaragod aid in couples with conception delays?",
+          "answer": "Yes, IVF proves to be an excellent choice for couples having problems in conceiving."
+        },
+        {
+          "question": "Are there IVF facilities in Kasaragod that can benefit people living in rural areas?",
+          "answer": "Yes, there are possibilities of IVF treatment for people staying in nearby towns as well as in rural areas."
+        },
+        {
+          "question": "Are there IVF facilities available near Kasaragod at reasonable costs?",
+          "answer": "Yes, there are cost-effective IVF facilities near Kasaragod."
+        },
+        {
+          "question": "Is fertility assessment part of IVF procedure in nearby Kasaragod?",
+          "answer": "Yes, fertility assessment is done before treatment."
+        },
+        {
+          "question": "Is it possible to treat male infertility cases through IVF near Kasaragod?",
+          "answer": "Yes, IVF helps in treating male infertility problems."
+        },
+        {
+          "question": "Does follow-up care come along with IVF procedures near Kasaragod?",
+          "answer": "Yes, follow-up care is also available in IVF treatment near Kasaragod."
+        }
+      ]
     },
     {
       "slug": "kanpur-uttar-pradesh",
@@ -1492,7 +1702,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Opp.+Royal+Drive+Showroom+Kannadikadu+Upasana+Road+Kundannoor+Maradu+Kochi+682304&output=embed",
         "phone": "+919958885242"
       },
-      "bestIvfHeading": "Best IVF Centre in Kochi, Kerala"
+      "bestIvfHeading": "Best IVF Centre in Kochi, Kerala",
+      "faqs": [
+        {
+          "question": "Is IVF treatment in Kochi suited for couples looking for advanced fertility treatment in Kerala?",
+          "answer": "Kochi has a number of state-of-the-art IVF centers with advanced technologies and fertility experts."
+        },
+        {
+          "question": "Will couples suffering from infertility due to PCOS be able to conceive with IVF treatment in Kochi?",
+          "answer": "IVF is very effective when it comes to conceiving by women who have PCOS. IVF treatment in Kochi offers various treatments which includes IVF, IUI, ICSI and others."
+        },
+        {
+          "question": "Are IVF centers in Kochi globally reputed?",
+          "answer": "IVF clinics in Kochi maintain international standards and cater to patients across India and outside the country."
+        },
+        {
+          "question": "Is IVF treatment in Kochi ideal for professionals?",
+          "answer": "Yes, IVF hospital in Kochi allow easy access to appointments for professionals."
+        },
+        {
+          "question": "Is it possible to freeze embryos in IVF clinics in Kochi?",
+          "answer": "Yes, there are many advanced procedures to freeze eggs and embryos at IVF clinics in Kochi."
+        },
+        {
+          "question": "Will couples facing multiple failures in IVF treatments find help at IVF hospital in Kochi?",
+          "answer": "There are specialized programs to overcome multiple failures."
+        },
+        {
+          "question": "Can couples from nearby cities undergo IVF treatments in Kochi?",
+          "answer": "IVF treatments in Kochi is well connected with many neighboring cities where you will get all the fertility treatments."
+        }
+      ]
     },
     {
       "slug": "pitampura-new-delhi",
@@ -1585,7 +1825,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Plot+no+1+First+floor+Shiva+Enclave+Near+Harsh+Vihar+Chowk+Pitampura+Delhi-110034&output=embed",
         "phone": "+919266300157"
       },
-      "bestIvfHeading": "Best IVF Centre in Pitampura, New Delhi"
+      "bestIvfHeading": "Best IVF Centre in Pitampura, New Delhi",
+      "faqs": [
+        {
+          "question": "What factors affect IVF success rates in Pitampura?",
+          "answer": "There are some key factors which will include the woman's age, sperm health, egg quality and underlying medical conditions such as PCOS and Endometriosis."
+        },
+        {
+          "question": "Do you offer affordable IVF treatment in Pitampura?",
+          "answer": "Yes, we offer cost-effective IVF packages with flexible payment options to make fertility treatment in Pitampura accessible for everyone."
+        },
+        {
+          "question": "Can I get a second opinion at your IVF centre in Pitampura?",
+          "answer": "Absolutely, At our best IVF centre in Pitampura we also encourage patients to seek second opinions aned offer complete guidance and clarity regarding diagnosis and treatment options."
+        },
+        {
+          "question": "Is your IVF clinic in Pitampura easily accessible?",
+          "answer": "Yes, Seeds of Innocens IVF clinic in Pitampura is conveniently located with easy access to metro, transportation and parking facilities."
+        },
+        {
+          "question": "What tests are required before IVF treatment?",
+          "answer": "Some of the common tests which includes blood tests, semen analysis, ultrasound scans and hormone evaluation to determine the best fertility treatment in Pitampura."
+        },
+        {
+          "question": "Can women with PCOS undergo IVF in Pitampura?",
+          "answer": "Yes, IVF is an effective treatment option for women with PCOS, and our fertility specialists in Pitampura tailor the protocol to improve success chances."
+        },
+        {
+          "question": "Do you provide online consultation for IVF in Pitampura?",
+          "answer": "Yes, we offer both in-clinic and online consultations for the patients who want intial guidance before the visiting our fertility hospital in Pitampura."
+        }
+      ]
     },
     {
       "slug": "meerut-uttar-pradesh",
@@ -1677,7 +1947,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+303/305+Mangal+Pandey+Nagar+Opp+CCS+University+Garh+Road+Meerut+UP&output=embed",
         "phone": "+918276008484"
       },
-      "bestIvfHeading": "Best IVF Centre in Meerut, Uttar Pradesh"
+      "bestIvfHeading": "Best IVF Centre in Meerut, Uttar Pradesh",
+      "faqs": [
+        {
+          "question": "Is IVF treatment in Seeds of Innocens IVF Meerut suitable for first-time patients?",
+          "answer": "Yes, Seeds of Innocens IVF in Meerut offers comprehensive guidance and support for the first-time patients who are undergoing fertility treatment."
+        },
+        {
+          "question": "Can IVF in Meerut treat both male and female infertility?",
+          "answer": "Yes, IVF treatment in Meerut addresses both male and female infertility problems by using advanced techniques."
+        },
+        {
+          "question": "Are advanced fertility tests available in Meerut?",
+          "answer": "Yes, all advanced fertility tests are available in Seeds of Innocens IVF who will help to identify the root cause of infertility."
+        },
+        {
+          "question": "Is IVF in Meerut a good option after long years of infertility?",
+          "answer": "Yes, IVF treatment in Meerut is highly recommended for those couples who are struggling with an infertility problems for many years at Seeds of Innocens IVF."
+        },
+        {
+          "question": "Do IVF centres in Meerut provide personalized care?",
+          "answer": "Yes, IVF centre in Meerut provides several fertility treatment plans tailored according to an individual health conditions and fertility needs."
+        },
+        {
+          "question": "Is IVF treatment in Meerut accessible for nearby towns?",
+          "answer": "Yes, Meerut is well-connected, making IVF hospital in Meerut accessible for patients from nearby areas."
+        },
+        {
+          "question": "Can IVF in Meerut improve chances after miscarriage?",
+          "answer": "Yes, IVF in Meerut can help improve pregnancy outcomes for couples with a history of miscarriage."
+        }
+      ]
     },
     {
       "slug": "muzaffarpur-bihar",
@@ -1759,7 +2059,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Hansa+Complex+Maripur+Main+Road+Muzaffarpur+Bihar&output=embed",
         "phone": "+918276006565"
       },
-      "bestIvfHeading": "Best IVF Centre in Muzaffarpur, Bihar"
+      "bestIvfHeading": "Best IVF Centre in Muzaffarpur, Bihar",
+      "faqs": [
+        {
+          "question": "Is it possible to receive treatment for IVF in Muzaffarpur if couples have problems with infertility?",
+          "answer": "It is possible because Seeds of Innocens is best fertility clinic in Muzaffarpur are providing advanced treatments for infertility issues to couples."
+        },
+        {
+          "question": "Is it possible for couples to receive help with miscarriage issues using IVF in Muzaffarpur?",
+          "answer": "Couples with miscarriage issues will find help through IVF procedures in Muzaffarpur."
+        },
+        {
+          "question": "Is it easy for first-timers to receive assistance with fertility issues in IVF hospital in Muzaffarpur?",
+          "answer": "First-timers will find it easy to receive proper guidance in IVF hospital in Muzaffarpur."
+        },
+        {
+          "question": "Can patients residing in the rural areas seek help for IVF treatments in Muzaffarpur?",
+          "answer": "Patients residing in rural areas can seek help with their fertility treatments in Muzaffarpur."
+        },
+        {
+          "question": "Does IVF clinics in Muzaffarpur offer personalized fertility treatments?",
+          "answer": "IVF clinics in Muzaffarpur provide customized treatments to their clients based on their health status and fertility issues."
+        },
+        {
+          "question": "Does the treatment process of IVF take place immediately after consultations in Muzaffarpur?",
+          "answer": "Yes, IVF Centre in Muzaffarpur will begin treatment right after performing some tests."
+        },
+        {
+          "question": "Are IVF clinics in Muzaffarpur still concerned about patients after embryo transfer?",
+          "answer": "IVF Clinics in Muzaffarpur will guide you through the entire process including pregnancy period."
+        }
+      ]
     },
     {
       "slug": "srinagar-jk",
@@ -1840,7 +2170,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+The+Apollo+Clinic+Karan+Nagar+Near+National+School+Srinagar&output=embed",
         "phone": "+919459073333"
       },
-      "bestIvfHeading": "Best IVF Centre in Srinagar, J&K"
+      "bestIvfHeading": "Best IVF Centre in Srinagar, J&K",
+      "faqs": [
+        {
+          "question": "Is it possible to undergo IVF treatment in Srinagar?",
+          "answer": "Yes, there are IVF clinics in Srinagar that offer fertility treatment to patients from all over the region."
+        },
+        {
+          "question": "Will IVF treatment in Srinagar work with unexplained infertility?",
+          "answer": "Yes, IVF treatment is the most efficient treatment option for unexplained infertility."
+        },
+        {
+          "question": "Does Srinagar have modern IVF clinics?",
+          "answer": "Yes, the best clinics in Srinagar use modern equipment and advanced treatment techniques."
+        },
+        {
+          "question": "Are IVF treatment costs in Srinagar reasonable?",
+          "answer": "Yes, treatment prices are moderate, yet high-quality care is assured."
+        },
+        {
+          "question": "Will IVF help women older than 35 conceive in Srinagar?",
+          "answer": "Yes, IVF treatment is a common procedure, and individualised programmes are developed."
+        },
+        {
+          "question": "Do clinics in Srinagar offer complete diagnostics to patients?",
+          "answer": "Yes, all the needed tests are conducted before treatment begins."
+        },
+        {
+          "question": "Are IVF clinics in Srinagar offering supportive care for patients?",
+          "answer": "Yes, patients receive comprehensive consultations and support during treatment."
+        }
+      ]
     },
     {
       "slug": "janakpuri-new-delhi",
@@ -1924,7 +2284,37 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+C1A/50A+Pankha+Road+Janakpuri+New+Delhi&output=embed",
         "phone": "+919459043333"
       },
-      "bestIvfHeading": "Best IVF Centre in Janakpuri, New Delhi"
+      "bestIvfHeading": "Best IVF Centre in Janakpuri, New Delhi",
+      "faqs": [
+        {
+          "question": "How can I improve my chances of IVF success?",
+          "answer": "By maintaining a healthy lifestyle and lowering down the stress and regular treatment can significantly improve IVF success rates in Janakpuri."
+        },
+        {
+          "question": "Is IVF safe for women above 35 in Janakpuri?",
+          "answer": "Yes, IVF centre in Janakpuri is commonly suggested for the women above 35 although success rates may differ. However, our fertility experts offer personalized treatment plans for the better outcomes."
+        },
+        {
+          "question": "Do you offer egg freezing services in Janakpuri?",
+          "answer": "Yes, we provide egg freezing services in Janakpuri for the women who wish to plan pregnancy later."
+        },
+        {
+          "question": "How do I book an appointment at Seeds of Innocens IVF hospital in Janakpuri?",
+          "answer": "You can book appointment through our website,call or even visit our IVF hospital in Janakpuri."
+        },
+        {
+          "question": "What makes Seeds of Innocens IVF clinic in Janakpuri the best IVF centre?",
+          "answer": "Our commitment to an advanced fertility care, high success rates and compassionate support makes us one of the best IVF clinic in Janakpuri."
+        },
+        {
+          "question": "Can IVF help with male infertility treatment in Janakpuri?",
+          "answer": "Yes, IVF combined with an advanced techniques such as ICSI is highly effective in providing help with male infertility treatment in Janakpuri."
+        },
+        {
+          "question": "Is IVF effective for women above 35 in Janakpuri?",
+          "answer": "Yes, IVF is still effective for the women above 35 in Janakpuri. However the success rate is slightly lower as compared to the younger women due to natural age-related decline in egg quality."
+        }
+      ]
     },
     {
       "slug": "kolkata",
@@ -2025,7 +2415,37 @@
         "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.4754564257853!2d88.45934147596245!3d22.626544931908487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89fd528a95cf9%3A0x52c81a2c4b48ed8b!2sSeeds%20of%20Innocence%20IVF%20Centre%20Kolkata!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
         "phone": "+919810350512"
       },
-      "bestIvfHeading": "Best IVF Centre in Kolkata"
+      "bestIvfHeading": "Best IVF Centre in Kolkata",
+      "faqs": [
+        {
+          "question": "What is the success rate of IVF treatment in Kolkata?",
+          "answer": "The success rate of IVF in Kolkata ranges from 55% to 75%, depending on the patient's age and specific fertility problems, and their medical history."
+        },
+        {
+          "question": "What is the cost of IVF treatment in Kolkata?",
+          "answer": "The cost of IVF treatment in Kolkata ranges from \u20b980,000 to \u20b92,20,000 per cycle, which depends on the actual expenses for necessary medications, testing, ICSI procedures, and embryo cryopreservation."
+        },
+        {
+          "question": "Who is eligible for IVF in Kolkata?",
+          "answer": "IVF treatment serves as a necessary solution for patients who experience infertility problems, which include blocked fallopian tubes, PCOS, low sperm count, and unexplained infertility."
+        },
+        {
+          "question": "How many IVF cycles do you need to conceive?",
+          "answer": "Some individuals become pregnant after their initial IVF cycle, while others require between two and three IVF cycles to achieve pregnancy."
+        },
+        {
+          "question": "Is IVF treatment safe for women?",
+          "answer": "IVF treatment functions as an established, safe method that experts consider to be highly effective based on their deep understanding of fertility procedures."
+        },
+        {
+          "question": "What is the duration of IVF procedures in Kolkata?",
+          "answer": "For successful IVF cycles it need four to six weeks to complete, which starts with ovarian stimulation and continues through egg collection and fertilization, and ends with embryo transfer."
+        },
+        {
+          "question": "Is it easy for working ladies to have IVF procedures done?",
+          "answer": "The schedule can be arranged to suit the needs of working professionals. At Seeds of Innocens IVF in Kolkata we believe in providing best fertility support for every working professional."
+        }
+      ]
     },
     {
       "slug": "best-ivf-centre-in-lusaka-zambia",

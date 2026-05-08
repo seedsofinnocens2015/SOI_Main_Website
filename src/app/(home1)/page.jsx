@@ -727,7 +727,7 @@ const heroData = {
         link: '/female-faqs',
       },
       {
-        icon: '/assets/img/icons/mfc.svg',
+        icon: '/assets/img/icons/malefc.svg',
         title: 'Male Frequently Asked Questions',
         description: 'Insights into male reproductive health, semen analysis, diagnostic tests, and care.',
         link: '/male-faqs',

@@ -8,7 +8,7 @@ const CtaSection = ({ data = {} }) => {
 
     // Same 4-color palette mapping by icon URL
     if (normalized.endsWith("/ffc.svg") || normalized.includes("ffc.svg")) return "#df3655";
-    if (normalized.endsWith("/mfc.svg") || normalized.includes("mfc.svg")) return "#4cacae";
+    if (normalized.endsWith("/malefc.svg") || normalized.includes("malefc.svg")) return "#4cacae";
     if (normalized.endsWith("/cgt.svg") || normalized.includes("cgt.svg")) return "#fcca1d";
     if (normalized.endsWith("/fa.svg") || normalized.includes("fa.svg")) return "#45536e";
 
@@ -22,7 +22,7 @@ const CtaSection = ({ data = {} }) => {
       link: "/fertility-treatments/ivf",
     },
     {
-      imageUrl: "/assets/img/icons/mfc.svg",
+      imageUrl: "/assets/img/icons/malefc.svg",
       title: "Male fertility care",
       link: "/male-infertility-treatments/male-infertility-treatment-in-india",
     },
