@@ -4,6 +4,7 @@ const path = require('path');
 // No basePath needed for root domain deployment
 const basePath = '';
 const outDir = path.join(__dirname, '..', 'out');
+const nextDir = path.join(__dirname, '..', '.next');
 const projectRoot = path.join(__dirname, '..');
 const htaccessSource = path.join(projectRoot, '.htaccess');
 const htaccessTarget = path.join(outDir, '.htaccess');
@@ -28,8 +29,18 @@ function findFiles(dir, fileList = []) {
 
 // Function to fix asset paths in files
 function fixAssetPaths() {
-  if (!fs.existsSync(outDir)) {
-    console.log('❌ out directory not found. Please run "npm run build" first.');
+  const hasOutDir = fs.existsSync(outDir);
+  const hasNextDir = fs.existsSync(nextDir);
+
+  if (!hasOutDir && !hasNextDir) {
+    console.log('❌ No build output found. Please run "npm run build" first.');
+    return;
+  }
+
+  // For default Next.js builds, output is `.next` and there is nothing to rewrite.
+  if (!hasOutDir && hasNextDir) {
+    console.log('ℹ️ Detected `.next` build output (server/dynamic build).');
+    console.log('ℹ️ Skipping static-export post-processing (`out` directory not used).');
     return;
   }
 
