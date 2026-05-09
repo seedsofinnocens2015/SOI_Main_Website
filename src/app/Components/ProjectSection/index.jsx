@@ -16,7 +16,6 @@ const ProjectSection = ({ data }) => {
       "pitampura, delhi",
       "ranchi, jharkhand",
       "mabela, muscat, oman",
-      "lusaka, zambia, africa",
     ]);
 
     const group53A7A7 = new Set([
@@ -24,7 +23,6 @@ const ProjectSection = ({ data }) => {
       "muzaffarpur, bihar",
       "patna, bihar",
       "kolkata, west bengal",
-      "kitwe, zambia, africa",
     ]);
 
     const groupE1B41A = new Set([
