@@ -8,7 +8,7 @@ export function getSeoApiBaseUrl() {
     return String(fromEnv).trim().replace(/\/+$/, '');
   }
   if (process.env.NODE_ENV === 'development') {
-    return 'http://localhost:4000';
+    return 'https://seeds.seedsofinnocens.com';
   }
   return 'https://seeds.seedsofinnocens.com';
 }
