@@ -1,6 +1,4 @@
-import { getSeoApiBaseUrl } from './seoApiBaseUrl';
-
-const SEO_API_BASE_URL = getSeoApiBaseUrl();
+const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
 function toKeywords(metaKeyword = '') {
   return String(metaKeyword)
@@ -45,8 +43,7 @@ function hasConfiguredSeo(seo = {}) {
       seo.metaDescription ||
       seo.metaKeyword ||
       seo.ogTitle ||
-      seo.twitterTitle ||
-      (seo.rawHeadTags && String(seo.rawHeadTags).trim())
+      seo.twitterTitle
   );
 }
 

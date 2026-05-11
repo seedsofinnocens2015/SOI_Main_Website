@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import GlobalJsonLd from "./Components/GlobalJsonLd";
-import SeoRawHeadTags from "./Components/SeoRawHeadTags";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -162,7 +161,6 @@ fbq('track', 'PageView');`}
   });
 })();`}
         </Script>
-        <SeoRawHeadTags />
       </head>
       <body className={`${inter.variable}`}>
         <noscript>
