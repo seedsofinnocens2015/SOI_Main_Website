@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { headers } from "next/headers";
 import GlobalJsonLd from "./Components/GlobalJsonLd";
+import { getParsedRawHeadTagsForPath } from "./Components/DynamicRawHeadTags";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -35,11 +37,35 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const headerStore = await headers();
+  const headerPath =
+    headerStore.get('x-current-path') ||
+    headerStore.get('next-url') ||
+    headerStore.get('x-invoke-path') ||
+    '/';
+  const currentPathname = headerPath.startsWith('http')
+    ? new URL(headerPath).pathname || '/'
+    : headerPath;
+  const rawHeadTags = await getParsedRawHeadTagsForPath(currentPathname);
+
   return (
     <html lang="en">
       <head>
         <GlobalJsonLd />
+        {rawHeadTags.map((tag, index) => {
+          const key = `${tag.type}-${index}`;
+          if (tag.type === 'script') {
+            return <script key={key} {...tag.attrs} dangerouslySetInnerHTML={{ __html: tag.content }} />;
+          }
+          if (tag.type === 'meta') {
+            return <meta key={key} {...tag.attrs} />;
+          }
+          if (tag.type === 'link') {
+            return <link key={key} {...tag.attrs} />;
+          }
+          return null;
+        })}
         <meta name="author" content="Themeservices" />
         <meta
           name="google-site-verification"

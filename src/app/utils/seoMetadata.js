@@ -1,3 +1,4 @@
+// const SEO_API_BASE_URL = 'http://localhost:4000';
 const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
 function toKeywords(metaKeyword = '') {
