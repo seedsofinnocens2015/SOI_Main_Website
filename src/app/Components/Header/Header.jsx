@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { useRouter, usePathname } from 'next/navigation';
 import { useEffect, useState, useCallback, useMemo } from 'react';
 import {
@@ -12,12 +13,15 @@ import { IoCall } from "react-icons/io5";
 import { FaAnglesRight } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
 import { getAssetPathClient } from '@/app/utils/assetPath';
-import FloatingButton from '@/app/Components/FloatingButton';
 import doctorsData from '@/app/data/doctors-data.json';
 import blogsData from '@/app/data/blogs.json';
 import centresData from '@/app/data/centres-data.json';
 import servicesContent from '@/app/data/servicesContent.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
+
+const FloatingButton = dynamic(() => import('@/app/Components/FloatingButton'), {
+  ssr: false,
+});
 
 // Collect all hrefs under a nav item (for active state matching)
 const getNavItemHrefs = (item) => {
@@ -129,6 +133,7 @@ const Header = ({ isTopBar, variant }) => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
   const [openMobileSubmenuIndex, setOpenMobileSubmenuIndex] = useState([]);
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const [shouldRenderFloatingButton, setShouldRenderFloatingButton] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isSticky, setIsSticky] = useState();
   const [hoveredCategoryIndex, setHoveredCategoryIndex] = useState(null);
@@ -136,7 +141,7 @@ const Header = ({ isTopBar, variant }) => {
   const [openMegaCategories, setOpenMegaCategories] = useState({});
   const [isMobileView, setIsMobileView] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const menu = {
+  const menu = useMemo(() => ({
     email: 'info@seedsofinnocens.com',
     location: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
     logoUrl: '/assets/img/Header Logo.svg',
@@ -538,9 +543,13 @@ const Header = ({ isTopBar, variant }) => {
     ],
     btnUrl: '/contact/book-appointment',
     btnText: 'Book a Visit',
-  };
+  }), []);
 
   const searchItems = useMemo(() => {
+    // Search index generation is expensive (large JSON datasets). Build it only
+    // when search UI is actually used to keep initial main-thread work lower.
+    if (!isSearchActive && !searchQuery.trim()) return [];
+
     const navItems = flattenNavSearchEntries(menu.navItems);
     const doctorItems = (Array.isArray(doctorsData) ? doctorsData : []).map((doctor) => ({
       label: doctor.name,
@@ -580,7 +589,7 @@ const Header = ({ isTopBar, variant }) => {
       if (!deduped.has(key)) deduped.set(key, item);
     });
     return Array.from(deduped.values());
-  }, [menu.navItems]);
+  }, [isSearchActive, menu.navItems, searchQuery]);
 
   const filteredSearchItems = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -702,6 +711,13 @@ const Header = ({ isTopBar, variant }) => {
       setOpenMegaCategories({});
     }
   }, [isShowMobileMenu]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldRenderFloatingButton(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Disable all prefetching in static export to avoid .txt file requests
   // Prefetching is disabled for static export builds
@@ -1415,7 +1431,7 @@ const Header = ({ isTopBar, variant }) => {
           </div>
         )}
       </header>
-      <FloatingButton />
+      {shouldRenderFloatingButton ? <FloatingButton /> : null}
       {isTopBar && <div className="cs_site_header_spacing_150" />}
     </>
   );

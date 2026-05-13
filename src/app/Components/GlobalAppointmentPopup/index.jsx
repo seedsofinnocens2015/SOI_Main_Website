@@ -28,27 +28,31 @@ const GlobalAppointmentPopup = () => {
       return;
     }
 
-    // Defer the popup until the browser is idle so it does not compete with
-    // the LCP/CLS critical work on the home page.
-    let timerId;
-    const schedule = (cb) => {
+    // Keep initial layout stable for Lighthouse + real users by waiting longer
+    // before opening the popup. It still appears automatically, just after the
+    // critical rendering path settles.
+    let startTimer;
+    let idleTimer;
+
+    const openWhenIdle = () => {
       if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-        return window.requestIdleCallback(cb, { timeout: 4000 });
-      }
-      return setTimeout(cb, 2500);
-    };
-    const cancel = (id) => {
-      if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
-        window.cancelIdleCallback(id);
+        idleTimer = window.requestIdleCallback(() => setIsOpen(true), { timeout: 5000 });
       } else {
-        clearTimeout(id);
+        idleTimer = setTimeout(() => setIsOpen(true), 1200);
       }
     };
 
-    timerId = schedule(() => setIsOpen(true));
+    startTimer = setTimeout(openWhenIdle, 8000);
 
     return () => {
-      if (timerId !== undefined) cancel(timerId);
+      if (startTimer) clearTimeout(startTimer);
+      if (idleTimer) {
+        if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
+          window.cancelIdleCallback(idleTimer);
+        } else {
+          clearTimeout(idleTimer);
+        }
+      }
     };
   }, [pathname]);
 
