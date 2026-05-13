@@ -225,8 +225,14 @@ const DynamicPage = async ({ params }) => {
             ],
         } : null;
 
-        // About Us: centre-specific or default, with {{cityName}} replaced
-        const rawAboutUs = (centerContentConfig[center.slug] && centerContentConfig[center.slug].aboutUs) || centerContentConfig.default?.aboutUs;
+        // About Us resolution order:
+        // 1) Per-centre object in `centres[].aboutUs` (unique content per centre)
+        // 2) Slug-specific override in `centerContent[slug].aboutUs`
+        // 3) Fallback to `centerContent.default.aboutUs`
+        const rawAboutUs =
+            center.aboutUs ||
+            (centerContentConfig[center.slug] && centerContentConfig[center.slug].aboutUs) ||
+            centerContentConfig.default?.aboutUs;
         const aboutUs = rawAboutUs ? {
             title: replaceCityName(rawAboutUs.title),
             image: rawAboutUs.image,
