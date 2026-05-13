@@ -1,6 +1,22 @@
 // const SEO_API_BASE_URL = 'http://localhost:4000';
 const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
+// Same caching/timeout discipline as utils/seoMetadata.js. The previous
+// `cache: 'no-store'` made every page render block on a remote API call.
+const SEO_REVALIDATE_SECONDS = 300;
+const SEO_FETCH_TIMEOUT_MS = 2500;
+
+function fetchWithTimeout(url, options = {}, timeoutMs = SEO_FETCH_TIMEOUT_MS) {
+  if (typeof AbortController === 'undefined') {
+    return fetch(url, options);
+  }
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  return fetch(url, { ...options, signal: controller.signal }).finally(() => {
+    clearTimeout(timer);
+  });
+}
+
 function normalizePageUrl(value = '') {
   const trimmed = String(value || '').trim();
   if (!trimmed || trimmed === '/') return '/';
@@ -56,11 +72,11 @@ function parseRawHeadTags(rawHeadTags = '') {
 }
 
 async function fetchRawHeadTagsForPath(pageUrl) {
-  const response = await fetch(
+  const response = await fetchWithTimeout(
     `${SEO_API_BASE_URL}/api/seo/resolved?pageUrl=${encodeURIComponent(pageUrl)}`,
     {
       method: 'GET',
-      cache: 'no-store',
+      next: { revalidate: SEO_REVALIDATE_SECONDS, tags: ['seo'] },
     }
   ).catch(() => null);
 

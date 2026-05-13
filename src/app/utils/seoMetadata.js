@@ -1,6 +1,23 @@
 // const SEO_API_BASE_URL = 'http://localhost:4000';
 const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
+// Cache SEO responses on the server for 5 minutes to dramatically reduce TTFB.
+// Without this, every page render performs a slow external API call and kills FCP/LCP.
+const SEO_REVALIDATE_SECONDS = 300;
+// Hard timeout so a slow SEO API cannot stall the page render.
+const SEO_FETCH_TIMEOUT_MS = 2500;
+
+function fetchWithTimeout(url, options = {}, timeoutMs = SEO_FETCH_TIMEOUT_MS) {
+  if (typeof AbortController === 'undefined') {
+    return fetch(url, options);
+  }
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  return fetch(url, { ...options, signal: controller.signal }).finally(() => {
+    clearTimeout(timer);
+  });
+}
+
 function toKeywords(metaKeyword = '') {
   return String(metaKeyword)
     .split(',')
@@ -50,17 +67,17 @@ function hasConfiguredSeo(seo = {}) {
 
 async function fetchSeoByCandidates(pageUrl, hierarchyCandidates = [[]]) {
   for (const hierarchyPath of hierarchyCandidates) {
-    const response = await fetch(
+    const response = await fetchWithTimeout(
       `${SEO_API_BASE_URL}/api/seo?pageUrl=${encodeURIComponent(pageUrl)}&hierarchyPath=${encodeURIComponent(
         JSON.stringify(hierarchyPath)
       )}`,
       {
         method: 'GET',
-        cache: 'no-store',
+        next: { revalidate: SEO_REVALIDATE_SECONDS, tags: ['seo'] },
       }
-    );
+    ).catch(() => null);
 
-    if (!response.ok) continue;
+    if (!response || !response.ok) continue;
 
     const payload = await response.json().catch(() => null);
     if (!payload?.ok || !payload?.data) continue;

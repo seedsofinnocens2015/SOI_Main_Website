@@ -23,7 +23,33 @@ const GlobalAppointmentPopup = () => {
     }
 
     const alreadySubmitted = typeof window !== 'undefined' && localStorage.getItem(APPOINTMENT_SUBMITTED_KEY) === 'true';
-    setIsOpen(!alreadySubmitted);
+    if (alreadySubmitted) {
+      setIsOpen(false);
+      return;
+    }
+
+    // Defer the popup until the browser is idle so it does not compete with
+    // the LCP/CLS critical work on the home page.
+    let timerId;
+    const schedule = (cb) => {
+      if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+        return window.requestIdleCallback(cb, { timeout: 4000 });
+      }
+      return setTimeout(cb, 2500);
+    };
+    const cancel = (id) => {
+      if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
+        window.cancelIdleCallback(id);
+      } else {
+        clearTimeout(id);
+      }
+    };
+
+    timerId = schedule(() => setIsOpen(true));
+
+    return () => {
+      if (timerId !== undefined) cancel(timerId);
+    };
   }, [pathname]);
 
   const handleClose = () => {

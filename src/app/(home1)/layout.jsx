@@ -1,7 +1,14 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Header from '../Components/Header/Header';
 import Footer from '../Components/Footer/Footer';
-import GlobalAppointmentPopup from '../Components/GlobalAppointmentPopup';
+
+// Popup is only relevant after the page is interactive – defer it out of the
+// initial JS bundle so it does not block FCP/LCP or cause early CLS.
+const GlobalAppointmentPopup = dynamic(
+    () => import('../Components/GlobalAppointmentPopup'),
+    { ssr: false }
+);
 
 const DefalultLayout = ({ children }) => {
     return (

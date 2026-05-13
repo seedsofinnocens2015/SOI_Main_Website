@@ -16,7 +16,11 @@ const inter = Inter({
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const faviconUrl = `${basePath}/favicon.ico`;
-export const dynamic = 'force-dynamic';
+
+// Use ISR-style revalidation instead of force-dynamic so the rendered HTML can
+// be cached for a short window. Dynamic SEO data is still fetched fresh after
+// the revalidation window (see Components/DynamicRawHeadTags.jsx).
+export const revalidate = 300;
 
 export const metadata = {
   title: {
@@ -71,13 +75,33 @@ export default async function RootLayout({ children }) {
           name="google-site-verification"
           content="iAd3RUa8JayEre7QPIc6iin9VYOKrIzF1E5DMyhrzv0"
         />
-        <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+        {/* Preconnect to origins that gate the LCP/critical path */}
+        <link rel="preconnect" href="https://fonts.cdnfonts.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.cdnfonts.com" />
-        {/* Lemon Milk Font - Load from CDN or local file */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        {/* Preload the LCP hero image so it starts downloading before JS hydrates */}
         <link
-          rel="stylesheet"
+          rel="preload"
+          as="image"
+          href={`${basePath}/assets/img/banner.webp`}
+          fetchpriority="high"
+        />
+        {/* Lemon Milk font is decorative; load non-render-blocking via inline script */}
+        <link
+          rel="preload"
+          as="style"
           href="https://fonts.cdnfonts.com/css/lemon-milk"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.cdnfonts.com/css/lemon-milk';l.media='print';l.onload=function(){this.media='all'};document.head.appendChild(l);})();`,
+          }}
+        />
+        <noscript>
+          <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/lemon-milk" />
+        </noscript>
+        {/* All marketing/analytics tags are deferred until the page is interactive */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-719316761"
           strategy="lazyOnload"
@@ -88,7 +112,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-719316761');`}
         </Script>
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=

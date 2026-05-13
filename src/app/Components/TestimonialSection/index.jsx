@@ -87,12 +87,13 @@ const TestimonialSection = ({ data }) => {
                   {/* Profile Picture */}
                   <div className="cs_testimonial_avatar_wrapper">
                     <div className="cs_testimonial_avatar">
-                      <Image 
-                        src={getAssetPathClient(testimonial.avatar)} 
-                        alt={testimonial.name} 
-                        width={80} 
-                        height={80} 
-                        loading="eager"
+                      <Image
+                        src={getAssetPathClient(testimonial.avatar)}
+                        alt={testimonial.name}
+                        width={80}
+                        height={80}
+                        sizes="80px"
+                        loading="lazy"
                       />
                     </div>
                   </div>

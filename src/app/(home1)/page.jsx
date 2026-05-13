@@ -1,19 +1,23 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import HeroSection from '../Components/HeroSection';
 import Section from '../Components/Section';
 import CtaSection from '../Components/CtaSection';
 import CounterSection from '../Components/FunSection/CounterSection';
-import Service from '../Components/Service';
-import ProjectSection from '../Components/ProjectSection';
-import TestimonialSection from '../Components/TestimonialSection';
-import BlogSection from '../Components/BlogsSection';
-import NewsMediaSection from '../Components/NewsMediaSection';
 import WhyChooseUsSection from '../Components/WhyChooseUsSection';
-import FAQSection from '../Components/FAQSection';
+import Service from '../Components/Service';
 import blogsDataJson from '../data/blogs.json';
 import { getSeoMetadata } from '../utils/seoMetadata';
 
-export const dynamic = 'force-dynamic';
+// Below-the-fold sections are dynamically imported so their JS does not block
+// the first paint or contribute to TBT before the user scrolls.
+const BlogSection = dynamic(() => import('../Components/BlogsSection'));
+const NewsMediaSection = dynamic(() => import('../Components/NewsMediaSection'));
+const TestimonialSection = dynamic(() => import('../Components/TestimonialSection'));
+const ProjectSection = dynamic(() => import('../Components/ProjectSection'));
+const FAQSection = dynamic(() => import('../Components/FAQSection'));
+
+export const revalidate = 300;
 
 export async function generateMetadata() {
   return getSeoMetadata({

@@ -12,129 +12,38 @@ const HeroSection = ({ data }) => {
   const [isMobile, setIsMobile] = useState(false);
   const hasSecondarySlider = Array.isArray(data?.secondarySlider) && data.secondarySlider.length > 0;
 
-  // Detect mobile view
+  // Detect mobile view (passive listener + debounce skipped – this fires rarely)
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 767);
     };
-    
+
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
+    window.addEventListener('resize', checkMobile, { passive: true });
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Ensure slider is visible and playing on mount
-  useEffect(() => {
-    const initializeSlider = () => {
-      if (sliderRef1.current) {
-        // Force slider to show first slide and start playing
-        setTimeout(() => {
-          if (sliderRef1.current && typeof sliderRef1.current.slickGoTo === 'function') {
-            sliderRef1.current.slickGoTo(0);
-          }
-          if (sliderRef1.current && typeof sliderRef1.current.slickPlay === 'function') {
-            sliderRef1.current.slickPlay();
-          }
-        }, 200);
-      }
-      if (sliderRef2.current) {
-        setTimeout(() => {
-          if (sliderRef2.current && typeof sliderRef2.current.slickGoTo === 'function') {
-            sliderRef2.current.slickGoTo(0);
-          }
-          if (sliderRef2.current && typeof sliderRef2.current.slickPlay === 'function') {
-            sliderRef2.current.slickPlay();
-          }
-        }, 200);
-      }
-    };
-
-    // Initialize after a short delay to ensure DOM is ready
-    const timer = setTimeout(initializeSlider, 300);
-    
-    return () => clearTimeout(timer);
-  }, [data]);
-
-  // Handle page visibility changes to resume slider when page becomes active
+  // Resume the slider only when the tab actually becomes visible again. The
+  // previous implementation also re-played on focus and via an IntersectionObserver
+  // which fired many times during initial layout and contributed to TBT.
   useEffect(() => {
     const resumeSliders = () => {
-      // Resume slider autoplay
-      if (sliderRef1.current && typeof sliderRef1.current.slickPlay === 'function') {
-        try {
-          sliderRef1.current.slickPlay();
-        } catch (e) {
-          // no-op
-        }
-      }
-      if (sliderRef2.current && typeof sliderRef2.current.slickPlay === 'function') {
-        try {
-          sliderRef2.current.slickPlay();
-        } catch (e) {
-          // no-op
-        }
+      try {
+        sliderRef1.current?.slickPlay?.();
+        sliderRef2.current?.slickPlay?.();
+      } catch (_) {
+        // no-op
       }
     };
 
     const handleVisibilityChange = () => {
-      if (!document.hidden) {
-        // Page became visible - resume everything
-        setTimeout(() => {
-          resumeSliders();
-        }, 100);
-      }
+      if (!document.hidden) resumeSliders();
     };
 
-    // Add visibility change listener
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    // Also check when window gains focus
-    const handleFocus = () => {
-      setTimeout(() => {
-        resumeSliders();
-      }, 100);
-    };
-
-    window.addEventListener("focus", handleFocus);
-
-    // IntersectionObserver to detect when hero section comes back into view
-    let intersectionObserver = null;
-    
-    const setupIntersectionObserver = () => {
-      const heroSection = document.querySelector('.cs_hero_slider_thumb');
-      if (heroSection && typeof window !== 'undefined' && window.IntersectionObserver) {
-        intersectionObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                // Hero section is visible - ensure slider keeps playing
-                setTimeout(() => {
-                  resumeSliders();
-                }, 300);
-              }
-            });
-          },
-          { threshold: 0.1 }
-        );
-        
-        intersectionObserver.observe(heroSection);
-      }
-    };
-    
-    // Setup observer after a delay to ensure DOM is ready
-    const observerTimer = setTimeout(setupIntersectionObserver, 500);
-
-    // Cleanup
+    document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-      window.removeEventListener("focus", handleFocus);
-      clearTimeout(observerTimer);
-      if (intersectionObserver) {
-        const heroSection = document.querySelector('.cs_hero_slider_thumb');
-        if (heroSection) {
-          intersectionObserver.unobserve(heroSection);
-        }
-      }
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 
