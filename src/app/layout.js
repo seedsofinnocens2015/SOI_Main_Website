@@ -41,6 +41,31 @@ export const metadata = {
   },
 };
 
+const MAX_PRECONNECT_HINTS = 4;
+
+/** De-dupe SEO-injected link hints (e.g. repeated i.ytimg.com preconnect) and cap preconnect count. */
+function dedupeHeadLinkTags(tags) {
+  if (!Array.isArray(tags)) return [];
+  const seen = new Set();
+  let preconnectCount = 0;
+  return tags.filter((tag) => {
+    if (tag.type !== 'link' || !tag.attrs) return true;
+    const rel = String(tag.attrs.rel || '').toLowerCase().trim();
+    const href = String(tag.attrs.href || '').trim();
+    if (!href) return true;
+    if (rel === 'preconnect' || rel === 'dns-prefetch') {
+      const key = `${rel}:${href.toLowerCase()}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      if (rel === 'preconnect') {
+        if (preconnectCount >= MAX_PRECONNECT_HINTS) return false;
+        preconnectCount += 1;
+      }
+    }
+    return true;
+  });
+}
+
 export default async function RootLayout({ children }) {
   const headerStore = await headers();
   const headerPath =
@@ -51,7 +76,7 @@ export default async function RootLayout({ children }) {
   const currentPathname = headerPath.startsWith('http')
     ? new URL(headerPath).pathname || '/'
     : headerPath;
-  const rawHeadTags = await getParsedRawHeadTagsForPath(currentPathname);
+  const rawHeadTags = dedupeHeadLinkTags(await getParsedRawHeadTagsForPath(currentPathname));
 
   return (
     <html lang="en">
@@ -85,7 +110,14 @@ export default async function RootLayout({ children }) {
           href={`${basePath}/assets/img/banner.webp`}
           fetchpriority="high"
         />
-        {/* Lemon Milk font removed in favour of Inter stack to avoid extra blocking font loads */}
+        <link
+          rel="preload"
+          href={`${basePath}/fonts/lemon-milk/LemonMilkMedium.woff`}
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        {/* Lemon Milk is self-hosted in /fonts/lemon-milk (see sass/default/_typography.scss). */}
         {/* All marketing/analytics tags are loaded after a small delay or on the
             first meaningful user interaction to avoid hurting LCP/TBT. */}
         <Script id="soi-marketing-loader" strategy="afterInteractive">

@@ -1,0 +1,9 @@
+/* Override slick-carousel theme font-face so Lighthouse stops flagging
+   missing font-display (critical request chain includes slick.woff). */
+@font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../../../node_modules/slick-carousel/slick/fonts/slick.woff') format('woff');
+}

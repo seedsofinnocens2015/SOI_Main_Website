@@ -29,35 +29,13 @@
    render-blocking @import declarations here so Lighthouse does not flag
    additional font downloads. */
 
-/* Lemon Milk USP font
-   Self-hosted (WOFF) so Lighthouse doesn't penalize CDN @import and we can
-   force `font-display: swap` for better CLS/FCP stability. */
-@font-face {
-  font-family: 'LEMON MILK';
-  font-style: normal;
-  font-weight: 300;
-  src: url('/fonts/lemon-milk/LemonMilkLight.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'LEMON MILK';
-  font-style: italic;
-  font-weight: 300;
-  src: url('/fonts/lemon-milk/LemonMilkLightItalic.woff') format('woff');
-  font-display: swap;
-}
+/* Lemon Milk USP font — self-hosted WOFF + font-display: swap.
+   Only ship weights used in UI (400/500/700 normal) to cut parallel requests. */
 @font-face {
   font-family: 'LEMON MILK';
   font-style: normal;
   font-weight: 400;
   src: url('/fonts/lemon-milk/LemonMilkRegular.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'LEMON MILK';
-  font-style: italic;
-  font-weight: 400;
-  src: url('/fonts/lemon-milk/LemonMilkRegularItalic.woff') format('woff');
   font-display: swap;
 }
 @font-face {
@@ -69,23 +47,9 @@
 }
 @font-face {
   font-family: 'LEMON MILK';
-  font-style: italic;
-  font-weight: 500;
-  src: url('/fonts/lemon-milk/LemonMilkMediumItalic.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'LEMON MILK';
   font-style: normal;
   font-weight: 700;
   src: url('/fonts/lemon-milk/LemonMilkBold.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'LEMON MILK';
-  font-style: italic;
-  font-weight: 700;
-  src: url('/fonts/lemon-milk/LemonMilkBoldItalic.woff') format('woff');
   font-display: swap;
 }
 

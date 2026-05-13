@@ -11,6 +11,12 @@
   background-color: #FFFCFB;
   border-bottom:3px solid #FCE8DD;
   border-top:3px solid #FCE8DD;
+  /* Reserve vertical space to reduce CLS when badge/heading/fonts settle */
+  min-height: 280px;
+
+  @media (max-width: 575px) {
+    min-height: 320px;
+  }
 
   &::after {
     content: '';
@@ -71,6 +77,7 @@
     margin-bottom: 60px;
     text-transform: uppercase;
     font-family: var(--heading-font, sans-serif);
+    min-height: 2.6em;
 
     @media (max-width: 991px) {
       margin-bottom: 50px;
@@ -167,7 +174,10 @@
     color: var(--counter-color, #df3655);
     font-family: var(--heading-font, sans-serif);
     line-height: 1.2;
-    
+    font-variant-numeric: tabular-nums;
+    min-width: 5.5ch;
+    display: inline-block;
+
     @media (max-width: 991px) {
       font-size: clamp(32px, 4vw, 48px);
     }
