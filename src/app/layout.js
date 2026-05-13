@@ -76,8 +76,6 @@ export default async function RootLayout({ children }) {
           content="iAd3RUa8JayEre7QPIc6iin9VYOKrIzF1E5DMyhrzv0"
         />
         {/* Preconnect to origins that gate the LCP/critical path */}
-        <link rel="preconnect" href="https://fonts.cdnfonts.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.cdnfonts.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
         {/* Preload the LCP hero image so it starts downloading before JS hydrates */}
@@ -87,52 +85,63 @@ export default async function RootLayout({ children }) {
           href={`${basePath}/assets/img/banner.webp`}
           fetchpriority="high"
         />
-        {/* Lemon Milk font is decorative; load non-render-blocking via inline script */}
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.cdnfonts.com/css/lemon-milk"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.cdnfonts.com/css/lemon-milk';l.media='print';l.onload=function(){this.media='all'};document.head.appendChild(l);})();`,
-          }}
-        />
-        <noscript>
-          <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/lemon-milk" />
-        </noscript>
-        {/* All marketing/analytics tags are deferred until the page is interactive */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-719316761"
-          strategy="lazyOnload"
-        />
-        <Script id="google-ads-gtag" strategy="lazyOnload">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-719316761');`}
-        </Script>
-        <Script id="google-tag-manager" strategy="lazyOnload">
-          {`setTimeout(function(){
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K68L3V8');
-}, 2500);`}
-        </Script>
-        <Script id="meta-pixel" strategy="lazyOnload">
-          {`!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1526747694884464');
-fbq('init', '2130475664040983');
-setTimeout(function(){fbq('track', 'PageView');}, 4000);`}
+        {/* Lemon Milk font removed in favour of Inter stack to avoid extra blocking font loads */}
+        {/* All marketing/analytics tags are loaded after a small delay or on the
+            first meaningful user interaction to avoid hurting LCP/TBT. */}
+        <Script id="soi-marketing-loader" strategy="afterInteractive">
+          {`(function () {
+  var started = false;
+  function loadScript(src, id) {
+    if (id && document.getElementById(id)) return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = src;
+    if (id) s.id = id;
+    document.head.appendChild(s);
+  }
+
+  function start() {
+    if (started) return;
+    started = true;
+
+    // Google Ads / gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'AW-719316761');
+    loadScript('https://www.googletagmanager.com/gtag/js?id=AW-719316761', 'soi-gtag');
+
+    // Google Tag Manager
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K68L3V8');
+
+    // Meta Pixel
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1526747694884464');
+    fbq('init', '2130475664040983');
+    fbq('track', 'PageView');
+  }
+
+  // Start after 10s or on first user interaction, whichever comes first
+  var timer = setTimeout(start, 10000);
+  ['click','scroll','keydown','pointerdown'].forEach(function (evt) {
+    window.addEventListener(evt, function () {
+      clearTimeout(timer);
+      start();
+    }, { once: true, passive: true });
+  });
+})();`}
         </Script>
         <Script id="phone-input-limit" strategy="lazyOnload">
           {`(function () {

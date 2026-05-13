@@ -25,10 +25,69 @@
 22. Card
 --------------------------------------------------------------*/
 
-/* Google Fonts (fallback for environments without Next.js font pipeline) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-/* Lemon Milk Font - CDN fallback */
-@import url('https://fonts.cdnfonts.com/css/lemon-milk');
+/* Next.js Inter font is loaded via `next/font` in layout.js. Avoid extra
+   render-blocking @import declarations here so Lighthouse does not flag
+   additional font downloads. */
+
+/* Lemon Milk USP font
+   Self-hosted (WOFF) so Lighthouse doesn't penalize CDN @import and we can
+   force `font-display: swap` for better CLS/FCP stability. */
+@font-face {
+  font-family: 'LEMON MILK';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/lemon-milk/LemonMilkLight.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LEMON MILK';
+  font-style: italic;
+  font-weight: 300;
+  src: url('/fonts/lemon-milk/LemonMilkLightItalic.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LEMON MILK';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/lemon-milk/LemonMilkRegular.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LEMON MILK';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/lemon-milk/LemonMilkRegularItalic.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LEMON MILK';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/lemon-milk/LemonMilkMedium.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LEMON MILK';
+  font-style: italic;
+  font-weight: 500;
+  src: url('/fonts/lemon-milk/LemonMilkMediumItalic.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LEMON MILK';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/lemon-milk/LemonMilkBold.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LEMON MILK';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/fonts/lemon-milk/LemonMilkBoldItalic.woff') format('woff');
+  font-display: swap;
+}
 
 /*--------------------------------------------------------------
 1. Typography
