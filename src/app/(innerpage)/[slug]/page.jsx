@@ -302,6 +302,17 @@ const DynamicPage = async ({ params }) => {
     }));
     const hasStateFaqs = stateFaqs.length > 0;
 
+    // About Us: only when this state's own `stateContent[stateSlug].aboutUs` exists (never from `default`)
+    const rawStateAboutUs = stateContentConfig[stateSlug]?.aboutUs;
+    const stateAboutUs =
+        rawStateAboutUs &&
+        Array.isArray(rawStateAboutUs.paragraphs) &&
+        rawStateAboutUs.paragraphs.length > 0
+            ? {
+                  paragraphs: rawStateAboutUs.paragraphs.map(replaceStateName),
+              }
+            : null;
+
     return (
         <div className="cs_center_page_template">
             <Section
@@ -321,9 +332,11 @@ const DynamicPage = async ({ params }) => {
                         </h1>
 
                         {/* Description Paragraph from JSON */}
-                        <div className="cs_best_ivf_description">
+                        <div className="cs_best_ivf_description cs_best_ivf_description--state-intro">
                             {stateContentData.sections[0]?.paragraphs?.map((paragraph, index) => (
-                                <p key={index}>{paragraph}</p>
+                                <p key={index} className="text-center">
+                                    {paragraph}
+                                </p>
                             ))}
                         </div>
 
@@ -619,6 +632,35 @@ const DynamicPage = async ({ params }) => {
 
                 </div>
             </section>
+
+            {stateAboutUs && (
+                <section className="cs_about_us_section_v2">
+                    <div className="cs_about_v2_container">
+                        <div className="cs_service_title_section mb-10 text-center">
+                            <h1 className="cs_service_main_title">
+                                <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                    About Seeds of Innocens IVF
+                                </span>{' '}
+                                <span style={{ color: '#000000' }}>in {stateName}</span>
+                            </h1>
+                        </div>
+                        <div className="cs_about_v2_wrapper cs_about_v2_wrapper--text-only">
+                            <div className="cs_about_v2_text_col text-center">
+                                {stateAboutUs.paragraphs.map((para, i) => (
+                                    <p key={i} className="cs_about_v2_para text-center">
+                                        {para}
+                                    </p>
+                                ))}
+                                <div className="cs_best_ivf_cta">
+                                    <a href="/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
+                                        Get Free Consultation
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {hasStateFaqs && (
                 <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="80" bottomSpaceMd="50">

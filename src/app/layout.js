@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import { headers } from "next/headers";
-import GlobalJsonLd from "./Components/GlobalJsonLd";
 import { getParsedRawHeadTagsForPath } from "./Components/DynamicRawHeadTags";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -81,7 +80,6 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <GlobalJsonLd />
         {rawHeadTags.map((tag, index) => {
           const key = `${tag.type}-${index}`;
           if (tag.type === 'script') {

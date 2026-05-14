@@ -157,7 +157,7 @@ const BestIVFCentre = ({
 
                         {/* Description Paragraph */}
                         {description && (
-                            <p className="cs_best_ivf_description">
+                            <p className="cs_best_ivf_description cs_best_ivf_description--center-intro text-center">
                                 {description}
                             </p>
                         )}
@@ -259,7 +259,7 @@ const BestIVFCentre = ({
                     <div className="container">
                         <div className="cs_section_heading cs_style_1 text-center mb-5">
                             <h2 className="cs_section_title">Our Expert  <span style={{ color: '#000000' }}>Team of Doctors</span></h2>
-                            <p className="cs_best_ivf_description">
+                            <p className="cs_best_ivf_description cs_best_ivf_description--center-intro text-center">
                                 {expertTeamDescription}
                             </p>
                         </div>

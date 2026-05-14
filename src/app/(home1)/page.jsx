@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import GlobalJsonLd from '../Components/GlobalJsonLd';
 import HeroSection from '../Components/HeroSection';
 import Section from '../Components/Section';
 import CtaSection from '../Components/CtaSection';
@@ -753,6 +754,8 @@ const heroData = {
 
 const page = () => {
     return (
+        <>
+        <GlobalJsonLd />
         <div>
         {/* 1. Hero Banner */}
         <HeroSection data={heroData} />
@@ -891,6 +894,7 @@ const page = () => {
      
 
         </div>
+        </>
     );
 };
 

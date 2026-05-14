@@ -78,6 +78,23 @@
             max-width: 100%;
         }
     }
+
+    // State hub pages (`[slug]/page.jsx`): JSON intro paragraphs — full width of
+    // container, centred (override global `p` max-width / alignment).
+    .cs_best_ivf_description.cs_best_ivf_description--state-intro {
+        max-width: 100%;
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+
+        p {
+            max-width: none;
+            text-align: center !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
     
     .cs_best_ivf_services_mobile {
         display: none;
@@ -254,5 +271,20 @@
                 background-color: #c93d3c; // hover:bg-red-700 equivalent
             }
         }
+    }
+}
+
+// Centre & international centre pages (`BestIVFCentre`): hero `<p>` description —
+// full container width, centred (root selector so it wins over nested `max-width: 800px`
+// and works regardless of parent section).
+.cs_best_ivf_description.cs_best_ivf_description--center-intro {
+    max-width: 100%;
+    width: 100%;
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 991px) {
+        max-width: 100%;
     }
 }
