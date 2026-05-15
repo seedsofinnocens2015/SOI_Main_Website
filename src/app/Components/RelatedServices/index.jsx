@@ -27,6 +27,7 @@ const RelatedServices = ({
                 title={service.title || service.slug}
                 description={service.description || ''}
                 slug={service.slug}
+                href={service.href}
                 hideImage
               />
             </div>

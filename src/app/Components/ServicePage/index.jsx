@@ -4,6 +4,7 @@ import PageHeading from '../PageHeading';
 import IVFContentSection from '../IVFContentSection';
 import servicesContent from '@/app/data/servicesContent.json';
 import { getRelatedSlugs, getDefaultDescription } from '@/app/utils/serviceSeo';
+import { getServicePath } from '@/app/utils/serviceRoutes';
 
 const ServicePage = ({ serviceKey }) => {
   const config = servicesContent[serviceKey];
@@ -23,6 +24,7 @@ const ServicePage = ({ serviceKey }) => {
     if (!relatedConfig) return null;
     return {
       slug,
+      href: getServicePath(slug),
       title: relatedConfig.title || slug,
       description: getDefaultDescription(relatedConfig),
     };

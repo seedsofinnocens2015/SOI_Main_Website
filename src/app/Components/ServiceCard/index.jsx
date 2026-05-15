@@ -9,13 +9,13 @@ import { getAssetPathClient } from '@/app/utils/assetPath';
  * Reusable service card for related services and listings.
  * Uses existing SCSS; card layout is responsive grid-friendly.
  */
-const ServiceCard = ({ title, description, image, slug, className = '', hideImage = false }) => {
-  const href = slug ? `/${slug}` : '#';
+const ServiceCard = ({ title, description, image, slug, href, className = '', hideImage = false }) => {
+  const linkHref = href || (slug ? `/${slug}` : '#');
   const imgSrc = image || '/assets/img/recent_post2webp';
 
   return (
     <div className={`cs_service_card ${className}`}>
-      <Link href={href} className="cs_service_card_link">
+      <Link href={linkHref} className="cs_service_card_link">
         {!hideImage && (
           <div className="cs_service_card_image_wrapper">
             <Image
