@@ -256,7 +256,7 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Female Genital Tuberculosis', href: '/reproductive-health-conditions/female-genital-tuberculosis' },
               { label: 'Recurrent Miscarriages', href: '/reproductive-health-conditions/recurrent-miscarriages' },
               { label: 'Delayed Periods ', href: '/reproductive-health-conditions/reasons-for-delayed-periods-but-not-pregnant' },
-              { label: 'Ovarian Hyperstimulation', href: '/reproductive-health-conditions/what-is-ovarian-hyperstimulation' },
+              { label: 'Ovarian Hyperstimulation', href: '/reproductive-health-conditions/ovarian-hyperstimulation-syndrome-ohss' },
             ],
           },
           {

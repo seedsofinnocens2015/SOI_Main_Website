@@ -278,7 +278,12 @@ const legacyServiceRedirects = [
   },
   {
     source: '/what-is-ovarian-hyperstimulation/',
-    destination: '/reproductive-health-conditions/what-is-ovarian-hyperstimulation/',
+    destination: '/reproductive-health-conditions/ovarian-hyperstimulation-syndrome-ohss/',
+    permanent: true,
+  },
+  {
+    source: '/reproductive-health-conditions/what-is-ovarian-hyperstimulation/',
+    destination: '/reproductive-health-conditions/ovarian-hyperstimulation-syndrome-ohss/',
     permanent: true,
   },
   {

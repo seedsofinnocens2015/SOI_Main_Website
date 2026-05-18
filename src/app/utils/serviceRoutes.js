@@ -72,7 +72,8 @@ const SERVICE_PATH_BY_KEY = {
   'recurrent-miscarriages': '/reproductive-health-conditions/recurrent-miscarriages',
   'reasons-for-delayed-periods-but-not-pregnant':
     '/reproductive-health-conditions/reasons-for-delayed-periods-but-not-pregnant',
-  'what-is-ovarian-hyperstimulation': '/reproductive-health-conditions/what-is-ovarian-hyperstimulation',
+  'ovarian-hyperstimulation-syndrome-ohss':
+    '/reproductive-health-conditions/ovarian-hyperstimulation-syndrome-ohss',
   // Fertility Wellness
   'how-to-boost-up-fertility-with-the-colours-of-food':
     '/fertility-wellness/how-to-boost-up-fertility-with-the-colours-of-food',

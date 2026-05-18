@@ -41,7 +41,7 @@ const WOMEN_HEALTH_PAGE_KEYS = [
   'blocked-fallopian-tubes', 'pcos-polycystic-ovarian-syndrome', 'irregular-menstrual-cycle',
   'diabetes-thyroid-and-obesity', 'endometrial-and-ovarian', 'endometriosis',
   'fibroids-polyps-and-adenomyosis', 'female-genital-tuberculosis', 'recurrent-miscarriages',
-  'reasons-for-delayed-periods-but-not-pregnant', 'what-is-ovarian-hyperstimulation',
+  'reasons-for-delayed-periods-but-not-pregnant', 'ovarian-hyperstimulation-syndrome-ohss',
 ];
 
 const LIFESTYLE_BLOG_PAGE_KEYS = [
