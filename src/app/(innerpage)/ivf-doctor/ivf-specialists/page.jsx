@@ -196,7 +196,7 @@ const page = () => {
         name: 'Dr. Pratik Kakani',
         profession: 'IVF Specialist',
         imageUrl: '/assets/img/Doctors/pratik.jpg',
-        link: '/ivf-doctor/dr-pratik-kakani-ivf-specialists',
+        link: '/ivf-doctor/dr-pratik-kakani-gynae-endoscopy',
         facebook: '/',
         pinterest: '/',
         twitter: '/',

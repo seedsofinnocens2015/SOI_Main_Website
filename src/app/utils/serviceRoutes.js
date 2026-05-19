@@ -77,8 +77,7 @@ const SERVICE_PATH_BY_KEY = {
   // Fertility Wellness
   'how-to-boost-up-fertility-with-the-colours-of-food':
     '/fertility-wellness/how-to-boost-up-fertility-with-the-colours-of-food',
-  'yoga-and-fertility-heres-how-yoga-can-support-fertility':
-    '/fertility-wellness/yoga-and-fertility-heres-how-yoga-can-support-fertility',
+  'yoga-for-fertility': '/fertility-wellness/yoga-for-fertility',
 };
 
 function getServicePath(serviceKey) {

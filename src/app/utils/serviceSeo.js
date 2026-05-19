@@ -33,7 +33,7 @@ const WOMEN_HEALTH_KEYS = [
 ];
 
 const LIFESTYLE_KEYS = [
-  'yoga-and-fertility-heres-how-yoga-can-support-fertility',
+  'yoga-for-fertility',
   'how-to-boost-up-fertility-with-the-colours-of-food',
 ];
 

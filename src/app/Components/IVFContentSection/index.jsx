@@ -45,7 +45,7 @@ const WOMEN_HEALTH_PAGE_KEYS = [
 ];
 
 const LIFESTYLE_BLOG_PAGE_KEYS = [
-  'yoga-and-fertility-heres-how-yoga-can-support-fertility',
+  'yoga-for-fertility',
   'how-to-boost-up-fertility-with-the-colours-of-food',
 ];
 

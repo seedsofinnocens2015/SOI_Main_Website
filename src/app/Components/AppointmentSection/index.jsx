@@ -3,6 +3,7 @@ import SectionHeading from "../SectionHeading";
 import Image from "next/image";
 import { FaSuitcase, FaLocationDot } from "react-icons/fa6";
 import { getAssetPathClient } from "@/app/utils/assetPath";
+import DoctorSubtitle from "@/app/Components/DoctorSubtitle";
 
 const AppointmentSection = ({ data }) => {
   return (
@@ -31,7 +32,7 @@ const AppointmentSection = ({ data }) => {
                 <h3 className="cs_team_title cs_extra_bold mb-0">
                   <Link href={doctor.profileLink}>{doctor.name}</Link>
                 </h3>
-                <p className="cs_team_subtitle">{doctor.specialty}</p>
+                <DoctorSubtitle text={doctor.specialty} />
                 <div className="cs_team_info_items">
                   {doctor.experience && (
                     <div className="cs_team_info_item">

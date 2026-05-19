@@ -4,13 +4,13 @@ import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
 export async function generateMetadata() {
   return getSeoMetadata({
-    pageUrl: '/fertility-wellness/yoga-and-fertility-heres-how-yoga-can-support-fertility',
+    pageUrl: '/fertility-wellness/yoga-for-fertility',
     hierarchyCandidates: [['Infertility Treatment', 'Fertility Wellness'], ['Infertility Treatment'], []],
   });
 }
 
 const page = () => {
-  return <ServicePage serviceKey="yoga-and-fertility-heres-how-yoga-can-support-fertility" />;
+  return <ServicePage serviceKey="yoga-for-fertility" />;
 };
 
 export default page;

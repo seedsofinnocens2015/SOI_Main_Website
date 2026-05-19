@@ -5,6 +5,7 @@ import Link from "next/link";
 import Slider from 'react-slick';
 import { getAssetPath } from "@/app/utils/assetPath";
 import AccentHeading from '@/app/Components/AccentHeading';
+import DoctorSubtitle from '@/app/Components/DoctorSubtitle';
 import {
   FaLocationDot,
   FaSuitcase,
@@ -99,7 +100,7 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
                 <div className="col-md-8 order-1 order-md-2">
                   <div className="cs_doctor_info_header">
                     <AccentHeading level={2} className="cs_doctor_title">{data.name}</AccentHeading>
-                    <p className="cs_doctor_subtitle">{data.subtitle}</p>
+                    <DoctorSubtitle text={data.subtitle} className="cs_doctor_subtitle" />
                   </div>
                   
                   {/* 4 Info Items in 2x2 Grid */}

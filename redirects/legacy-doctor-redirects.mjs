@@ -134,7 +134,12 @@ const legacyDoctorRedirects = [
   {
     source: '/doctors/dr-pratik-kakani-ivf-specialists/',
     source: '/dr-pratik-kakani-ivf-specialists/',
-    destination: '/ivf-doctor/dr-pratik-kakani-ivf-specialists/',
+    destination: '/ivf-doctor/dr-pratik-kakani-gynae-endoscopy/',
+    permanent: true,
+  },
+  {
+    source: '/ivf-doctor/dr-pratik-kakani-ivf-specialists/',
+    destination: '/ivf-doctor/dr-pratik-kakani-gynae-endoscopy/',
     permanent: true,
   },
   {

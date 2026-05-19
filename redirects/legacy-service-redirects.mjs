@@ -288,7 +288,12 @@ const legacyServiceRedirects = [
   },
   {
     source: '/yoga-and-fertility-heres-how-yoga-can-support-fertility/',
-    destination: '/fertility-wellness/yoga-and-fertility-heres-how-yoga-can-support-fertility/',
+    destination: '/fertility-wellness/yoga-for-fertility/',
+    permanent: true,
+  },
+  {
+    source: '/fertility-wellness/yoga-and-fertility-heres-how-yoga-can-support-fertility/',
+    destination: '/fertility-wellness/yoga-for-fertility/',
     permanent: true,
   },
   {

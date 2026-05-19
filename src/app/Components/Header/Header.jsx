@@ -264,7 +264,7 @@ const Header = ({ isTopBar, variant }) => {
             href: '',
             subItems: [
               { label: 'Boost Fertility With Colours Of Food', href: '/fertility-wellness/how-to-boost-up-fertility-with-the-colours-of-food' },
-              { label: 'Yoga and Fertility', href: '/fertility-wellness/yoga-and-fertility-heres-how-yoga-can-support-fertility' },
+              { label: 'Yoga For Fertility', href: '/fertility-wellness/yoga-for-fertility' },
             ],
           },
         ],

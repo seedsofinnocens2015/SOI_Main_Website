@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaSuitcase, FaLocationDot } from "react-icons/fa6";
 import { getAssetPathClient } from "@/app/utils/assetPath";
+import DoctorSubtitle from "@/app/Components/DoctorSubtitle";
 
 /** When true, cards match /doctors (AppointmentSection): blue panel, accent shape, experience + location. */
 const TeamSection = ({ data, bgColor, variant, hr, doctorsPageCardStyle = false }) => {
@@ -87,7 +88,7 @@ const TeamSection = ({ data, bgColor, variant, hr, doctorsPageCardStyle = false 
                           <h3 className="cs_team_title cs_extra_bold mb-0">
                             <Link href={item.link}>{item.name}</Link>
                           </h3>
-                          <p className="cs_team_subtitle">{item.profession}</p>
+                          <DoctorSubtitle text={item.profession} />
                           <div className="cs_team_info_items">
                             {item.experience && (
                               <div className="cs_team_info_item">
@@ -117,7 +118,7 @@ const TeamSection = ({ data, bgColor, variant, hr, doctorsPageCardStyle = false 
                           <h3 className="cs_team_title cs_extra_bold mb-0">
                             <Link href={item.link}>{item.name}</Link>
                           </h3>
-                          <p className="cs_team_subtitle">{item.profession}</p>
+                          <DoctorSubtitle text={item.profession} />
                           <p className="cs_team_experience">Experience: 12+ Years</p>
                           <Link href={item.link} className="cs_team_view_profile">
                             View Profile
