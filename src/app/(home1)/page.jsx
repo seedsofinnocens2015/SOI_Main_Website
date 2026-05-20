@@ -589,7 +589,6 @@ const heroData = {
 
   // Same Hindi detection as (innerpage)/hindi/[slug]/page.jsx — links use /hindi/ or /english/
   const isHindiBlog = (blog) =>
-    blog.category === 'प्रजनन क्षमता' ||
     /[\u0900-\u097F]/.test(blog.title || '') ||
     /[\u0900-\u097F]/.test(blog.content || '');
 

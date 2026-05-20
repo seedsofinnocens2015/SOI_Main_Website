@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-admin/admin-ajax.php
+Disallow: /*?utm_campaign=
+Disallow: / *_page=
+Disallow: / *?a5710cfa_page=
+Disallow: / *?9b551ee2_page=
+Disallow: / ?_page=
+Disallow: /*?
+
+Sitemap: https://seedsofinnocens.com/sitemap.xml

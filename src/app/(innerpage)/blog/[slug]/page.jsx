@@ -25,8 +25,7 @@ const getCategoryRoute = (category) => {
     'Success Stories': 'success-stories',
     'Doctor Insights': 'doctor-insights',
     'News & Press': 'news-press',
-    'प्रजनन क्षमता': 'fertility',
-    'आईवीएफ प्रक्रिया': 'ivf-process',
+    'Lifestyle & Fertility': 'fertility',
   };
 
   return categoryRouteMap[category] || category.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '');
