@@ -1,5 +1,26 @@
 import blogsData from '@/app/data/blogs.json';
 
+export const DEFAULT_BLOG_IMAGE = '/assets/img/Top-Header.webp';
+
+function parseBlogDate(dateStr) {
+  const parsed = Date.parse(dateStr || '');
+  return Number.isNaN(parsed) ? 0 : parsed;
+}
+
+export function getLatestBlogs(limit = 8, { preferWithImage = false } = {}) {
+  const sorted = [...(blogsData.blogs || [])].sort(
+    (a, b) => parseBlogDate(b.date) - parseBlogDate(a.date),
+  );
+
+  if (!preferWithImage) {
+    return sorted.slice(0, limit);
+  }
+
+  const withImage = sorted.filter((blog) => blog.image);
+  const withoutImage = sorted.filter((blog) => !blog.image);
+  return [...withImage, ...withoutImage].slice(0, limit);
+}
+
 const CATEGORY_FILTERS = {
   fertility: ['Fertility', 'Lifestyle & Fertility'],
   'ivf-process': ['IVF Process'],

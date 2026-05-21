@@ -7,7 +7,7 @@ import CtaSection from '../Components/CtaSection';
 import CounterSection from '../Components/FunSection/CounterSection';
 import WhyChooseUsSection from '../Components/WhyChooseUsSection';
 import Service from '../Components/Service';
-import blogsDataJson from '../data/blogs.json';
+import { DEFAULT_BLOG_IMAGE, getLatestBlogs } from '../utils/blogsData';
 import { getSeoMetadata } from '../utils/seoMetadata';
 
 // Below-the-fold sections are dynamically imported so their JS does not block
@@ -596,21 +596,17 @@ const heroData = {
     sectionTitle: 'LATEST BLOGS',
     sectionSubtitle: '',
     designImage: '/assets/img/leaf.png', // Design image for right side background
-    postsData: blogsDataJson.blogs
-      .slice()
-      .reverse()
-      .slice(0, 8)
-      .map((blog) => ({
+    postsData: getLatestBlogs(8, { preferWithImage: true }).map((blog) => ({
         title: blog.title,
         subtitle: blog.excerpt,
         date: blog.date,
         category: blog.category,
         author: blog.author,
-        thumbnail: blog.image,
+        thumbnail: blog.image || DEFAULT_BLOG_IMAGE,
         btnText: 'Read More',
         postLink: isHindiBlog(blog)
-          ? `/hindi/${blog.slug}`
-          : `/english/${blog.slug}`,
+          ? `/blog/${blog.slug}`
+          : `/blog/${blog.slug}`,
         authorIcon: '/assets/img/icons/post_user_icon.png',
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       })),

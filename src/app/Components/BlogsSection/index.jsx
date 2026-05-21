@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getAssetPathClient } from "../../utils/assetPath";
+import { DEFAULT_BLOG_IMAGE } from "../../utils/blogsData";
 
 const BlogSection = ({ data }) => {
   // Split the title to get first word and rest
@@ -47,25 +48,23 @@ const BlogSection = ({ data }) => {
           <div className="cs_blog_grid">
             {data.postsData.map((post, index) => (
               <article key={index} className="cs_blog_card_figma">
-                {post.thumbnail && (
-                  <Link
-                    href={post.postLink}
-                    className="cs_blog_card_image"
-                  >
-                    <Image 
-                      src={getAssetPathClient(post.thumbnail)} 
-                      alt={post.title} 
-                      width={396} 
-                      height={261}
-                      loading="eager"
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover'
-                      }}
-                    />
-                  </Link>
-                )}
+                <Link
+                  href={post.postLink}
+                  className="cs_blog_card_image"
+                >
+                  <Image
+                    src={getAssetPathClient(post.thumbnail || DEFAULT_BLOG_IMAGE)}
+                    alt={post.title}
+                    width={396}
+                    height={261}
+                    loading="eager"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover'
+                    }}
+                  />
+                </Link>
                 <div className="cs_blog_card_content">
                   <h3 className="cs_blog_card_title">
                     <Link href={post.postLink}>{post.title}</Link>

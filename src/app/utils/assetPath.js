@@ -3,6 +3,20 @@
  */
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
+function encodePathSegments(path) {
+  return path
+    .split('/')
+    .map((segment) => {
+      if (!segment) return segment;
+      try {
+        return encodeURIComponent(decodeURIComponent(segment));
+      } catch {
+        return encodeURIComponent(segment);
+      }
+    })
+    .join('/');
+}
+
 /**
  * Get the correct asset path
  * @param {string} path - The asset path (e.g., '/assets/img/image.jpg')
@@ -25,7 +39,7 @@ export function getAssetPath(path) {
   
   // Add basePath prefix if it's a relative path starting with '/'
   if (path.startsWith('/')) {
-    return `${BASE_PATH}${path}`;
+    return encodePathSegments(`${BASE_PATH}${path}`);
   }
   
   return path;
@@ -53,7 +67,7 @@ export function getAssetPathClient(path) {
   
   // Add basePath prefix if it's a relative path starting with '/'
   if (path.startsWith('/')) {
-    return `${BASE_PATH}${path}`;
+    return encodePathSegments(`${BASE_PATH}${path}`);
   }
   
   return path;
