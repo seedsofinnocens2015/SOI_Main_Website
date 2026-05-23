@@ -2472,7 +2472,7 @@ label {
 }
 
 .cs_blog_body {
-  text-align: center;
+  text-align: left;
 
   p,
   h2,
@@ -2481,7 +2481,7 @@ label {
   ul,
   ol,
   li {
-    text-align: center;
+    text-align: left;
   }
 
   /* remove dot/bullet list markers from single blog content */
@@ -2500,7 +2500,7 @@ label {
   .cs_blog_body_heading,
   h2.cs_ivf_content_heading,
   h3.cs_ivf_content_heading {
-    text-align: center;
+    text-align: left;
     font-size: 1.35rem;
     font-weight: 700;
     color: #000000;

@@ -200,7 +200,7 @@ const BlogDetailPage = async ({ params }) => {
                       lineHeight: '1.8',
                       color: '#333',
                       marginBottom: '30px',
-                      textAlign: 'center',
+                      textAlign: 'left',
                       maxWidth: '100%',
                     }}
                     dangerouslySetInnerHTML={{ __html: accentHeadingsInHtml(blog.content) }}
