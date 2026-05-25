@@ -1,5 +1,14 @@
 import BlogsCategoryPage from '@/app/Components/BlogsCategoryPage';
+import { getBlogCategoryMetadata } from '@/app/utils/blogSeo';
 import { getBlogsForCategory } from '@/app/utils/blogsData';
+
+export async function generateMetadata() {
+  return getBlogCategoryMetadata('news-press', {
+    title: 'News & Press',
+    description:
+      'Stay updated with the latest news, achievements, and press releases from Seeds of Innocens.',
+  });
+}
 
 const page = () => (
   <BlogsCategoryPage

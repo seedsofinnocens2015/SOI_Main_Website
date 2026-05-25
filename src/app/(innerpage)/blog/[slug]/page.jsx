@@ -7,11 +7,21 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import blogsData from '@/app/data/blogs.json';
 import { getAssetPath } from '@/app/utils/assetPath';
 import { accentHeadingsInHtml } from '@/app/utils/accentHeadingsInHtml';
+import { getBlogPostMetadata } from '@/app/utils/blogSeo';
 
 export async function generateStaticParams() {
   return blogsData.blogs.map((blog) => ({
     slug: blog.slug,
   }));
+}
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const blog = blogsData.blogs.find((item) => item.slug === slug);
+  if (!blog) {
+    return { title: 'Blog Not Found | Seeds of Innocence' };
+  }
+  return getBlogPostMetadata(blog);
 }
 
 const getCategoryRoute = (category) => {

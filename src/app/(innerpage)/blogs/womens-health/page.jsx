@@ -1,5 +1,14 @@
 import BlogsCategoryPage from '@/app/Components/BlogsCategoryPage';
+import { getBlogCategoryMetadata } from '@/app/utils/blogSeo';
 import { getBlogsForCategory } from '@/app/utils/blogsData';
+
+export async function generateMetadata() {
+  return getBlogCategoryMetadata('womens-health', {
+    title: "Women's Health Blogs",
+    description:
+      "Helpful information on women's reproductive health, hormonal balance, and fertility wellness.",
+  });
+}
 
 const page = () => (
   <BlogsCategoryPage

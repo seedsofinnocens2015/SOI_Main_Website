@@ -4,6 +4,11 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getAssetPath } from '@/app/utils/assetPath';
+import { getBlogsOverviewMetadata } from '@/app/utils/blogSeo';
+
+export async function generateMetadata() {
+  return getBlogsOverviewMetadata();
+}
 
 const headingData = {
   title: 'Blogs',

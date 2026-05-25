@@ -1,5 +1,13 @@
 import BlogsCategoryPage from '@/app/Components/BlogsCategoryPage';
+import { getBlogCategoryMetadata } from '@/app/utils/blogSeo';
 import { getBlogsForCategory } from '@/app/utils/blogsData';
+
+export async function generateMetadata() {
+  return getBlogCategoryMetadata('success-stories', {
+    title: 'Success Stories',
+    description: 'Real patient journeys and inspiring stories of hope, resilience, and parenthood.',
+  });
+}
 
 const page = () => (
   <BlogsCategoryPage

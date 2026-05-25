@@ -1,5 +1,13 @@
 import BlogsCategoryPage from '@/app/Components/BlogsCategoryPage';
+import { getBlogCategoryMetadata } from '@/app/utils/blogSeo';
 import { getBlogsForCategory } from '@/app/utils/blogsData';
+
+export async function generateMetadata() {
+  return getBlogCategoryMetadata('doctor-insights', {
+    title: 'Doctor Insights',
+    description: 'Expert perspectives and practical advice from experienced fertility specialists.',
+  });
+}
 
 const page = () => (
   <BlogsCategoryPage

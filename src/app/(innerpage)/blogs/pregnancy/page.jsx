@@ -1,5 +1,14 @@
 import BlogsCategoryPage from '@/app/Components/BlogsCategoryPage';
+import { getBlogCategoryMetadata } from '@/app/utils/blogSeo';
 import { getBlogsForCategory } from '@/app/utils/blogsData';
+
+export async function generateMetadata() {
+  return getBlogCategoryMetadata('pregnancy', {
+    title: 'Pregnancy Blogs',
+    description:
+      'Essential articles about pregnancy, prenatal care, and what to expect during your pregnancy journey.',
+  });
+}
 
 const page = () => (
   <BlogsCategoryPage
