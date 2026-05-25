@@ -1,5 +1,5 @@
-const SEO_API_BASE_URL = 'http://localhost:4000';
-// const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
+// const SEO_API_BASE_URL = 'http://localhost:4000';
+const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
 // Cache SEO responses on the server for 5 minutes to dramatically reduce TTFB.
 // Without this, every page render performs a slow external API call and kills FCP/LCP.
