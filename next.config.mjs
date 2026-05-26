@@ -3,6 +3,7 @@ import legacyServiceRedirects from './redirects/legacy-service-redirects.mjs';
 import legacyDoctorRedirects from './redirects/legacy-doctor-redirects.mjs';
 import legacyContactRedirects from './redirects/legacy-contact-redirects.mjs';
 import legacyBlogRedirects from './redirects/legacy-blog-redirects.mjs';
+
 /** @type {import('next').NextConfig} */
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -11,9 +12,11 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
+
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
+
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
@@ -30,6 +33,7 @@ const nextConfig = {
       },
     ],
   },
+
   experimental: {
     optimizePackageImports: [
       'react-icons',
@@ -41,6 +45,7 @@ const nextConfig = {
     ],
     optimizeCss: true,
   },
+
   async headers() {
     return [
       {
@@ -54,6 +59,7 @@ const nextConfig = {
       },
     ];
   },
+
   async redirects() {
     return [
       ...legacyCenterRedirects,
@@ -63,6 +69,20 @@ const nextConfig = {
       ...legacyBlogRedirects,
     ];
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/gads/:slug',
+        destination: '/gads/:slug/index.html',
+      },
+      {
+        source: '/gads/:slug/',
+        destination: '/gads/:slug/index.html',
+      },
+    ];
+  },
+
   trailingSlash: true,
   reactStrictMode: true,
 };

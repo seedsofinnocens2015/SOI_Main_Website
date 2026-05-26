@@ -1,0 +1,2 @@
+:HL["/gads/_next/static/chunks/1ee3ecef70eb027b.css","style"]
+0:{"buildId":"K0ltp7CAh6TjW01RW8CL0","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"advance-fertility-clinic-in-kochi","paramType":null,"paramKey":"advance-fertility-clinic-in-kochi","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
