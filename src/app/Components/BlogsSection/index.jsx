@@ -69,9 +69,13 @@ const BlogSection = ({ data }) => {
                   <h3 className="cs_blog_card_title">
                     <Link href={post.postLink}>{post.title}</Link>
                   </h3>
-                  <Link href={post.postLink} className="cs_blog_card_link">
-                    {post.btnText || "Explore Now"}
-                  </Link>
+                  <div className="cs_blog_card_meta">
+                  {post.date && <span className="cs_blog_card_date">{post.date}</span>}
+                    <Link href={post.postLink} className="cs_blog_card_link">
+                      {post.btnText || "Explore Now"}
+                    </Link>
+                    
+                  </div>
                 </div>
               </article>
             ))}
