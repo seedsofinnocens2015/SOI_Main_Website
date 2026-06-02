@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "hcg-levels-in-pregnancy-what-every-expecting-mother-should-know",
-    title: "HCG Levels in Pregnancy: What Every Expecting Mother Should Know",
-    excerpt: "Learn about the HCG levels in pregnancy, what they are and what they mean.",
+    id: "positive-signs-after-embryo-transfer-symptoms-of-successful-implantation",
+    title: "Positive Signs After Embryo Transfer: Symptoms of Successful Implantation",
+    excerpt: "Learn about the positive signs after embryo transfer and the symptoms of successful implantation.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/HCG Levels in Pregnancy.png",
-    date: "May 28, 2026",
+    image: "/assets/img/Blogs/Positive Signs After Embryo Transfer.png",
+    date: "June 01, 2026",
     author: "admin",
-    category: "Pregnancy",
+    category: "IVF Process",
     readTime: "10 min read",
-    slug: "hcg-levels-in-pregnancy-what-every-expecting-mother-should-know"
+    slug: "positive-signs-after-embryo-transfer-symptoms-of-successful-implantation"
   }
 ];
 
