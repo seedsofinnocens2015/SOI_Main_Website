@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "positive-signs-after-embryo-transfer-symptoms-of-successful-implantation",
-    title: "Positive Signs After Embryo Transfer: Symptoms of Successful Implantation",
+    id: "foods-that-can-cause-miscarriage-during-pregnancy",
+    title: "Foods That Can Cause Miscarriage During Pregnancy",
     excerpt: "Learn about the positive signs after embryo transfer and the symptoms of successful implantation.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Positive Signs After Embryo Transfer.png",
-    date: "June 01, 2026",
+    image: "/assets/img/Blogs/Foods That Can Cause Miscarriage During Pregnancy.png",
+    date: "June 02, 2026",
     author: "admin",
-    category: "IVF Process",
-    readTime: "10 min read",
-    slug: "positive-signs-after-embryo-transfer-symptoms-of-successful-implantation"
+    category: "Pregnancy",
+    readTime: "12 min read",
+    slug: "foods-that-can-cause-miscarriage-during-pregnancy"
   }
 ];
 
