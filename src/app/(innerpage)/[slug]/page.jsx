@@ -504,7 +504,7 @@ const DynamicPage = async ({ params }) => {
                                     icon: "/assets/img/icons/IVF Centres.svg",
                                 },
                                 {
-                                    title: '20,000+ Healthy Babies',
+                                    title: '21000+ Healthy Babies',
                                     desc: 'At Seeds of Innocens IVF we have helped and fulfilled the dream of many couples who were struggling with infertility. Our commitment to quality fertility care and personalised treatment.',
                                     icon: "/assets/img/icons/Healthy Babies.svg",
                                 },
@@ -580,7 +580,7 @@ const DynamicPage = async ({ params }) => {
                                 icon: "/assets/img/icons/IVF Centres.svg",
                             },
                             {
-                                title: '20,000+ Healthy Babies',
+                                title: '21000+ Healthy Babies',
                                 desc: 'At Seeds of Innocens IVF we have helped and fulfilled the dream of many couples who were struggling with infertility. Our commitment to quality fertility care and personalised treatment.',
                                 icon: "/assets/img/icons/Healthy Babies.svg",
                             },

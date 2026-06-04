@@ -71,7 +71,7 @@ const PageHeading = ({ data }) => {
               <div className="cs_header_stats_grid">
                 <div className="cs_header_stat_item">
                   <div className="cs_stat_number cs_stat_1">
-                    <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="Healthy Babies+" className="cs_stat_icon cs_stat_1" width={24} height={24} loading="eager" /> 20,000+
+                    <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="Healthy Babies+" className="cs_stat_icon cs_stat_1" width={24} height={24} loading="eager" /> 21000+
                   </div>
                   <div className="cs_stat_text">Healthy Babies, Countless <br /> Smiles</div>
                 </div>

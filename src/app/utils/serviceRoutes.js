@@ -67,6 +67,8 @@ const SERVICE_PATH_BY_KEY = {
   'diabetes-thyroid-and-obesity': '/reproductive-health-conditions/diabetes-thyroid-and-obesity',
   'endometrial-and-ovarian': '/reproductive-health-conditions/endometrial-and-ovarian',
   endometriosis: '/reproductive-health-conditions/endometriosis',
+  'silent-endometriosis-unexplained-infertility':
+    '/reproductive-health-conditions/silent-endometriosis-unexplained-infertility',
   'fibroids-polyps-and-adenomyosis': '/reproductive-health-conditions/fibroids-polyps-and-adenomyosis',
   'female-genital-tuberculosis': '/reproductive-health-conditions/female-genital-tuberculosis',
   'recurrent-miscarriages': '/reproductive-health-conditions/recurrent-miscarriages',

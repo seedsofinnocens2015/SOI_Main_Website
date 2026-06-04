@@ -148,12 +148,12 @@ const heroData = {
   const countersData = {
     badgeText: 'Outstanding Success Rates',
     heading: {
-      highlighted: '20,000+',
+      highlighted: '21000+',
       rest: 'SUCCESS STORIES AND THE JOURNEY CONTINUES.'
     },
     counters: [
       {
-        number: '20,000+',
+        number: '21000+',
         title: (
           <>
             Healthy Babies,<br />Countless Smiles

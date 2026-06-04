@@ -20,7 +20,7 @@ const headingData = {
 /** Home jaisi counter line (rang + typography); badge/heading / peach band nahi */
 const countersData = {
   counters: [
-    { number: '20,000+', title: 'Healthy Babies' },
+    { number: '21000+', title: 'Healthy Babies' },
     { number: '78%', title: 'Up to Success Rate*' },
     { number: '30+', title: 'Certified Trained Clinicians' },
     { number: '35+', title: 'IVF Centres' },

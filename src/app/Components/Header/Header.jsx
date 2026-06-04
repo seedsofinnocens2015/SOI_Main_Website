@@ -252,6 +252,7 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Diabetes, Thyroid and Obesity', href: '/reproductive-health-conditions/diabetes-thyroid-and-obesity' },
               { label: 'Endometrial and Ovarian', href: '/reproductive-health-conditions/endometrial-and-ovarian' },
               { label: 'Endometriosis', href: '/reproductive-health-conditions/endometriosis' },
+              { label: 'Silent Endometriosis', href: '/reproductive-health-conditions/silent-endometriosis-unexplained-infertility' },
               { label: 'Fibroids, Polyps and Adenomyosis', href: '/reproductive-health-conditions/fibroids-polyps-and-adenomyosis' },
               { label: 'Female Genital Tuberculosis', href: '/reproductive-health-conditions/female-genital-tuberculosis' },
               { label: 'Recurrent Miscarriages', href: '/reproductive-health-conditions/recurrent-miscarriages' },

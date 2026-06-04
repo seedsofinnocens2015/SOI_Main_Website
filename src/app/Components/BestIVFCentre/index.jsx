@@ -442,9 +442,9 @@ const BestIVFCentre = ({
                                     icon: <Image src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
-                                    title: '20,000+ Healthy Babies',
+                                    title: '21000+ Healthy Babies',
                                     desc: 'At Seeds of Innocens IVF we have helped and fulfilled the dream of many couples who were struggling with infertility. Our commitment to quality fertility care and personalised treatment.',
-                                    icon: <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
+                                    icon: <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="21000+ Healthy Babies" width={45} height={45} style={{ width: '45px', height: '45px', objectFit: 'contain' }} loading="lazy" />,
                                 },
                                 {
                                     title: 'Upto 78% Success Rate',
@@ -518,9 +518,9 @@ const BestIVFCentre = ({
                                 icon: <Image src={getAssetPathClient("/assets/img/icons/IVF Centres.svg")} alt="35+ IVF Centres" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
-                                title: '20,000+ Healthy Babies',
+                                title: '21000+ Healthy Babies',
                                 desc: 'At Seeds of Innocens IVF we have helped and fulfilled the dream of many couples who were struggling with infertility.  Our commitment to quality fertility care and personalised treatment.',
-                                icon: <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="20,000+ Healthy Babies" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
+                                icon: <Image src={getAssetPathClient("/assets/img/icons/Healthy Babies.svg")} alt="21000+ Healthy Babies" width={60} height={60} style={{ width: '60px', height: '60px', objectFit: 'contain' }} loading="lazy" />,
                             },
                             {
                                 title: 'Upto 78% Success Rate',

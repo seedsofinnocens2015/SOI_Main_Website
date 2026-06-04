@@ -10,7 +10,7 @@ const CounterSection = ({ data, inline = false }) => {
   const animationCompletedRef = useRef(false);
   const isPageVisibleRef = useRef(true);
 
-  // Parse number from string like "20,000+", "35+", "78%"
+  // Parse number from string like "21000+", "35+", "78%"
   const parseNumber = (str) => {
     if (!str) return 0;
     // Remove commas, +, % and extract numeric value
@@ -51,11 +51,11 @@ const CounterSection = ({ data, inline = false }) => {
     const normalized = (original || '').toString().replace(/\s+/g, '');
 
     // Requested mapping:
-    // 20,000 => #df3655
+    // 21000 => #df3655
     // 35+    => #4cacae
     // 78%    => #fcca1d
     // 30+    => #45536e
-    if (normalized.startsWith('20,000') || normalized.startsWith('20000')) return '#df3655';
+    if (normalized.startsWith('21000') || normalized.startsWith('20000')) return '#df3655';
     if ((normalized.startsWith('35') || normalized === '35+') && normalized.includes('+')) return '#4cacae';
     if ((normalized.startsWith('78') || normalized === '78%') && normalized.includes('%')) return '#fcca1d';
     if ((normalized.startsWith('30') || normalized === '30+') && normalized.includes('+')) return '#45536e';

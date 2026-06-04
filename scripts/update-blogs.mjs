@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "foods-that-can-cause-miscarriage-during-pregnancy",
-    title: "Foods That Can Cause Miscarriage During Pregnancy",
+    id: "how-to-increase-progesterone-naturally-foods-and-fertility-tips",
+    title: "How to Increase Progesterone Naturally: Foods & Fertility Tips",
     excerpt: "Learn about the positive signs after embryo transfer and the symptoms of successful implantation.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Foods That Can Cause Miscarriage During Pregnancy.png",
-    date: "June 02, 2026",
+    image: "/assets/img/Blogs/How to Increase Progesterone Naturally: Foods & Fertility Tips.png",
+    date: "June 03, 2026",
     author: "admin",
-    category: "Pregnancy",
-    readTime: "12 min read",
-    slug: "foods-that-can-cause-miscarriage-during-pregnancy"
+    category: "Women's Health",
+    readTime: "15 min read",
+    slug: "how-to-increase-progesterone-naturally-foods-and-fertility-tips"
   }
 ];
 

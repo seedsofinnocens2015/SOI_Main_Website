@@ -100,7 +100,7 @@ const pricingContentData = {
         'How our prices compare with Western countries:',
       ],
       listItems: [
-        'USA/UK: Average IVF cost ranges from $12,000 to $20,000',
+        'USA/UK: Average IVF cost ranges from $12,000 to $21000',
         'Seeds of Innocens: Same quality treatment at $2,500 to $6,500',
         'Savings: Up to 70% cost savings without compromising on quality',
         'Quality: World-class facilities and experienced specialists',
