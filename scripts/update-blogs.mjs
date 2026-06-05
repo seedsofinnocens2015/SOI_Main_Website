@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "how-to-increase-progesterone-naturally-foods-and-fertility-tips",
-    title: "How to Increase Progesterone Naturally: Foods & Fertility Tips",
-    excerpt: "Learn about the positive signs after embryo transfer and the symptoms of successful implantation.",
+    id: "uterus-infection-causes-symptoms-treatment",
+    title: "Uterus Infection: Causes, Symptoms, Treatment, and Prevention",
+    excerpt: "Learn about the causes, symptoms, treatment, and prevention of uterus infection.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/How to Increase Progesterone Naturally: Foods & Fertility Tips.png",
-    date: "June 03, 2026",
+    image: "/assets/img/Blogs/Uterus Infection.png",
+    date: "June 04, 2026",
     author: "admin",
     category: "Women's Health",
     readTime: "15 min read",
-    slug: "how-to-increase-progesterone-naturally-foods-and-fertility-tips"
+    slug: "uterus-infection-causes-symptoms-treatment"
   }
 ];
 
