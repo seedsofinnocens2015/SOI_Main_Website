@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "uterus-infection-causes-symptoms-treatment",
-    title: "Uterus Infection: Causes, Symptoms, Treatment, and Prevention",
-    excerpt: "Learn about the causes, symptoms, treatment, and prevention of uterus infection.",
+    id: "does-sexual-position-affect-chances-of-pregnancy",
+    title: "Does Sexual Position Affect Chances of Pregnancy?",
+    excerpt: "Dr. Sneha Narayan explains whether sexual position affects pregnancy, what truly matters for conception, and when to see a fertility specialist.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Uterus Infection.png",
-    date: "June 04, 2026",
-    author: "admin",
-    category: "Women's Health",
+    image: "/assets/img/Blogs/Does Sexual Position Affect.png",
+    date: "June 6, 2025",
+    author: "Dr. Sneha Narayan",
+    category: "Fertility",
     readTime: "15 min read",
-    slug: "uterus-infection-causes-symptoms-treatment"
+    slug: "does-sexual-position-affect-chances-of-pregnancy"
   }
 ];
 
