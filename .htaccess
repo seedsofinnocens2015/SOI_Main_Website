@@ -119,6 +119,11 @@
   RewriteRule ^yoga-and-fertility-heres-how-yoga-can-support-fertility/?$ /fertility-wellness/yoga-for-fertility/ [R=301,L,NC]
   RewriteRule ^fertility-wellness/yoga-and-fertility-heres-how-yoga-can-support-fertility/?$ /fertility-wellness/yoga-for-fertility/ [R=301,L,NC]
   RewriteRule ^how-to-boost-up-fertility-with-the-colours-of-food/?$ /fertility-wellness/how-to-boost-up-fertility-with-the-colours-of-food/ [R=301,L,NC]
+  RewriteRule ^gynecologic-surgical-training-program/?$ /training-academy/gynecologic-surgical-training-program/ [R=301,L,NC]
+  RewriteRule ^embryologist-training-program/?$ /training-academy/embryologist-training-program/ [R=301,L,NC]
+  RewriteRule ^embryo-biopsy-training-program/?$ /training-academy/embryo-biopsy-training-program/ [R=301,L,NC]
+  RewriteRule ^andrology-technician-training-program/?$ /training-academy/andrology-technician-training-program/ [R=301,L,NC]
+  RewriteRule ^training-academy/?$ /training-academy/training-registration/ [R=301,L,NC]
   RewriteRule ^contact/?$ /contact/book-appointment/ [R=301,L,NC]
   
   # Legacy blog redirects

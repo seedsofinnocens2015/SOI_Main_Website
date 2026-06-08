@@ -3,6 +3,7 @@ import legacyServiceRedirects from './redirects/legacy-service-redirects.mjs';
 import legacyDoctorRedirects from './redirects/legacy-doctor-redirects.mjs';
 import legacyContactRedirects from './redirects/legacy-contact-redirects.mjs';
 import legacyBlogRedirects from './redirects/legacy-blog-redirects.mjs';
+import legacyTrainingRedirects from './redirects/legacy-training-redirects.mjs';
 
 /** @type {import('next').NextConfig} */
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -67,6 +68,7 @@ const nextConfig = {
       ...legacyDoctorRedirects,
       ...legacyContactRedirects,
       ...legacyBlogRedirects,
+      ...legacyTrainingRedirects,
     ];
   },
 

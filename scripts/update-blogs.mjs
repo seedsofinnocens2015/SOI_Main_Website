@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "does-sexual-position-affect-chances-of-pregnancy",
-    title: "Does Sexual Position Affect Chances of Pregnancy?",
-    excerpt: "Dr. Sneha Narayan explains whether sexual position affects pregnancy, what truly matters for conception, and when to see a fertility specialist.",
+    id: "unexplained-infertility-causes-challenges-effective-treatment-option",
+    title: "Unexplained Infertility: Causes, Challenges, and Effective Treatment Options",
+    excerpt: "Learn about the Causes, Challenges, and Effective Treatment Options.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Does Sexual Position Affect.png",
+    image: "/assets/img/Blogs/Unexplained Infertility.png",
     date: "June 6, 2025",
-    author: "Dr. Sneha Narayan",
-    category: "Fertility",
-    readTime: "15 min read",
-    slug: "does-sexual-position-affect-chances-of-pregnancy"
+    author: "admin",
+    category: "Treatment Guides",
+    readTime: "8 min read",
+    slug: "unexplained-infertility-causes-challenges-effective-treatment-option"
   }
 ];
 
