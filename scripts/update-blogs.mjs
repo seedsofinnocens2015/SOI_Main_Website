@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "unexplained-infertility-causes-challenges-effective-treatment-option",
-    title: "Unexplained Infertility: Causes, Challenges, and Effective Treatment Options",
-    excerpt: "Learn about the Causes, Challenges, and Effective Treatment Options.",
+    id: "age-35-fertility-understanding-your-chances-and-improving-outcomes",
+    title: "Age 35+ Fertility: Understanding Your Chances and Improving Outcomes",
+    excerpt: "Learn about the Age 35+ Fertility: Understanding Your Chances and Improving Outcomes",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Unexplained Infertility.png",
-    date: "June 6, 2025",
+    image: "/assets/img/Blogs/Age 35+ Fertility.png",
+    date: "May 23, 2026",
     author: "admin",
-    category: "Treatment Guides",
+    category: "Women's Health",
     readTime: "8 min read",
-    slug: "unexplained-infertility-causes-challenges-effective-treatment-option"
+    slug: "age-35-fertility-understanding-your-chances-and-improving-outcomes"
   }
 ];
 

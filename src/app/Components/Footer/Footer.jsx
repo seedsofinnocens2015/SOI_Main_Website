@@ -147,7 +147,8 @@ const Footer = () => {
       <div className="cs_footer_bottom">
         <div className="container">
           <div className="cs_footer_bottom_in">
-            <p className="cs_footer_copyright mb-0">{data.copyrightText}</p>
+            <p className="cs_footer_copyright mb-0">Copyright © 2026 Seeds of Innocens IVF. All Rights Reserved.</p>
+            {/* <p className="cs_footer_copyright mb-0">Copyright <Link href="https://amit1999-portfolio.vercel.app/" className="cs_footer_copyright mb-0">©</Link> 2026 Seeds of Innocens IVF. All Rights Reserved.</p> */}
           </div>
         </div>
       </div>
