@@ -43,6 +43,7 @@ const Page = () => {
   const validateForm = () => {
     if (!formData.name.trim()) return 'Please enter your full name.';
     if (!formData.phone.trim()) return 'Please enter your phone number.';
+    if (!formData.center.trim()) return 'Please select your nearest centre.';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (formData.email.trim() && !emailRegex.test(formData.email)) return 'Please enter a valid email address.';
     return '';
@@ -188,13 +189,14 @@ const Page = () => {
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Select Centre <span style={{ fontSize: '12px', color: '#999' }}>(Optional)</span>
+                        Select Centre <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <select
                         name="center"
                         value={formData.center}
                         onChange={handleChange}
                         className="cs_form_field"
+                        required
                       >
                         <option value="">Select nearest centre</option>
                         <optgroup label="India Centres">

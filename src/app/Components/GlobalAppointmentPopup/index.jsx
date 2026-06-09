@@ -69,9 +69,15 @@ const GlobalAppointmentPopup = () => {
       name: formData.get('name'),
       phone: formData.get('phone'),
       email: '',
-      center: formData.get('center') || 'Popup Form',
+      center: formData.get('center'),
       message: 'Appointment requested from popup form',
     };
+
+    if (!dataObj.center) {
+      alert('Please select your nearest centre.');
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const { ok, data: result } = await submitBookAppointment(dataObj);
@@ -131,6 +137,7 @@ const GlobalAppointmentPopup = () => {
             <div className="cs_form_group">
               <select
                 name="center"
+                required
                 className="cs_form_field"
                 defaultValue=""
               >
