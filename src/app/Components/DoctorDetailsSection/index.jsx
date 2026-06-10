@@ -1,8 +1,6 @@
 'use client';
-import { useMemo, useRef } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import Slider from 'react-slick';
 import { getAssetPath } from "@/app/utils/assetPath";
 import AccentHeading from '@/app/Components/AccentHeading';
 import DoctorSubtitle from '@/app/Components/DoctorSubtitle';
@@ -13,64 +11,31 @@ import {
   FaGlobe,
 } from 'react-icons/fa6';
 
-function getEmbedUrl(url) {
+function getYoutubeVideoId(url) {
   if (!url) return '';
-  if (url.includes('youtube.com/embed/')) return url;
-  let videoId = '';
-  if (url.includes('youtube.com/watch?v=')) {
-    videoId = url.split('v=')[1]?.split('&')[0];
-  } else if (url.includes('youtu.be/')) {
-    videoId = url.split('youtu.be/')[1]?.split('?')[0];
-  }
-  if (videoId) {
-    return `https://www.youtube.com/embed/${videoId}`;
-  }
-  return url;
+  if (url.includes('youtube.com/embed/')) return url.split('youtube.com/embed/')[1]?.split(/[?&]/)[0] || '';
+  if (url.includes('youtube.com/watch?v=')) return url.split('v=')[1]?.split('&')[0] || '';
+  if (url.includes('youtu.be/')) return url.split('youtu.be/')[1]?.split(/[?&]/)[0] || '';
+  return '';
 }
 
-const DoctorDetailsSection = ({ data, otherDoctors }) => {
-  const youtubeSliderRef = useRef(null);
-  const youtubeVideos = data.youtubeVideos || [];
+function getVideoSource(video) {
+  if (!video) return '';
+  if (typeof video === 'string') return video;
+  if (video.videoId) return `https://www.youtube.com/embed/${video.videoId}`;
+  return video.url || video.link || video.videoUrl || '';
+}
 
-  const youtubeSliderSettings = useMemo(() => {
-    const n = youtubeVideos.length;
-    return {
-      dots: n > 1,
-      infinite: n > 2,
-      speed: 1000,
-      slidesToShow: n >= 2 ? 2 : 1,
-      slidesToScroll: 1,
-      fade: false,
-      swipeToSlide: true,
-      autoplay: n > 2,
-      autoplaySpeed: 4000,
-      pauseOnHover: true,
-      pauseOnFocus: true,
-      pauseOnDotsHover: true,
-      appendDots: (dots) => (
-        <div>
-          <ul>{dots}</ul>
-        </div>
-      ),
-      dotsClass: 'cs_pagination cs_style_2',
-      responsive: [
-        {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: Math.min(2, n),
-            slidesToScroll: 1,
-          },
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
-        },
-      ],
-    };
-  }, [youtubeVideos.length]);
+function getYoutubeWatchUrl(video) {
+  if (!video) return '#';
+  if (typeof video === 'string') return video;
+  if (video.link || video.url || video.videoUrl) return video.link || video.url || video.videoUrl;
+  if (video.videoId) return `https://www.youtube.com/watch?v=${video.videoId}`;
+  return '#';
+}
+
+const DoctorDetailsSection = ({ data }) => {
+  const youtubeVideos = data.youtubeVideos || [];
 
   return (
     <div className="container">
@@ -234,43 +199,6 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
               </div>
             )}
 
-            {/* YouTube videos — react-slick autoplay, same pattern as home / centre */}
-            {youtubeVideos.length > 0 && (
-              <div className="cs_youtube_video">
-                <AccentHeading level={3} className="cs_section_title_small">
-                  {youtubeVideos.length > 1 ? 'YouTube Videos' : 'YouTube Video'}
-                </AccentHeading>
-                <div className="cs_slider cs_style_1 cs_slider_gap_24">
-                  <div className="cs_slider_container">
-                    <div className="cs_slider_wrapper">
-                      <Slider ref={youtubeSliderRef} {...youtubeSliderSettings}>
-                        {youtubeVideos.map((video, index) => (
-                          <div
-                            key={index}
-                            className="cs_slide"
-                            onMouseEnter={() => youtubeSliderRef.current?.slickPause()}
-                            onMouseLeave={() => youtubeSliderRef.current?.slickPlay()}
-                          >
-                            <div className="cs_news_media_item">
-                              <div className="cs_news_media_video">
-                                <iframe
-                                  src={getEmbedUrl(video.url)}
-                                  title={video.title || `Video ${index + 1}`}
-                                  frameBorder={0}
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                  allowFullScreen
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-                      </Slider>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
 
           {/* Right Sidebar */}
@@ -290,31 +218,43 @@ const DoctorDetailsSection = ({ data, otherDoctors }) => {
                 </Link>
               </div>
 
-              {/* Other Doctors Section */}
-              {otherDoctors && otherDoctors.length > 0 && (
+              {/* Doctor YouTube Videos Section */}
+              {youtubeVideos.length > 0 && (
                 <div className="cs_other_doctors">
-                  <AccentHeading level={3} className="cs_sidebar_title">Other Doctors</AccentHeading>
+                  <AccentHeading level={3} className="cs_sidebar_title">Happy Patients</AccentHeading>
                   <div className="cs_other_doctors_list">
-                    {otherDoctors.map((doctor, index) => (
-                      <Link 
-                        key={index} 
-                        href={doctor.link}
-                        className="cs_other_doctor_item"
-                      >
-                        <Image 
-                          src={getAssetPath(doctor.imageUrl)} 
-                          alt={doctor.name} 
-                          width={80} 
-                          height={80}
-                          className="cs_other_doctor_image"
-                        />
-                        <div className="cs_other_doctor_info">
-                          <h4>{doctor.name}</h4>
-                          <p className="cs_other_doctor_profession">{doctor.profession}</p>
-                          <p className="cs_other_doctor_experience">{doctor.experience || 'Experience'}</p>
-                        </div>
-                      </Link>
-                    ))}
+                    {youtubeVideos.map((video, index) => {
+                      const videoSource = getVideoSource(video);
+                      const videoLink = getYoutubeWatchUrl(video);
+                      const videoId = getYoutubeVideoId(videoSource);
+                      const thumbnailUrl = video.thumbnail || video.image || (videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : '');
+                      const thumbnailSrc = thumbnailUrl && thumbnailUrl.startsWith('/') ? getAssetPath(thumbnailUrl) : thumbnailUrl;
+                      const videoTitle = video.title || `Video ${index + 1}`;
+
+                      return (
+                        <a
+                          href={videoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          key={`${videoTitle}-${index}`}
+                          className="cs_other_doctor_item"
+                        >
+                          {thumbnailSrc && (
+                            <Image
+                              src={thumbnailSrc}
+                              alt={videoTitle}
+                              width={80}
+                              height={80}
+                              className="cs_other_doctor_image"
+                              loading="lazy"
+                            />
+                          )}
+                          <div className="cs_other_doctor_info">
+                            <h4>{videoTitle}</h4>
+                          </div>
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
               )}

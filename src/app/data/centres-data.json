@@ -2844,7 +2844,7 @@
       }
     },
     "uttar-pradesh": {
-      "headerImage": "/assets/img/State-Headers/Uttar-Pradesh.png",
+      "headerImage": "/assets/img/State-Headers/Uttar-Pradesh.webp",
       "sections": [
         {
           "heading": "Best IVF Centres in Uttar Pradesh",
@@ -2857,6 +2857,7 @@
       ]
     },
     "bihar": {
+      "headerImage": "/assets/img/State-Headers/Bihar.webp",
       "sections": [
         {
           "heading": "Best IVF Centres in Bihar",
@@ -2868,6 +2869,7 @@
       ]
     },
     "haryana": {
+      "headerImage": "/assets/img/State-Headers/Haryana.webp",
       "sections": [
         {
           "heading": "Best IVF Centres in Haryana",
@@ -2879,6 +2881,7 @@
       ]
     },
     "jharkhand": {
+      "headerImage": "/assets/img/State-Headers/Jharkhand.webp",
       "sections": [
         {
           "heading": "Best IVF Centres in Jharkhand",
@@ -2889,6 +2892,7 @@
       ]
     },
     "uttarakhand": {
+      "headerImage": "/assets/img/State-Headers/Uttarakhand.webp",
       "sections": [
         {
           "heading": "Best IVF Centres in Uttarakhand",
@@ -2900,6 +2904,7 @@
       ]
     },
     "assam": {
+      "headerImage": "/assets/img/State-Headers/Assam.webp",
       "sections": [
         {
           "heading": "Best IVF Centres in Assam",
@@ -2911,6 +2916,7 @@
       ]
     },
     "kerala": {
+      "headerImage": "/assets/img/State-Headers/Kerala.webp",
       "sections": [
         {
           "heading": "Best IVF Centres in Kerala",
@@ -2922,6 +2928,7 @@
       ]
     },
     "jammu-kashmir": {
+      "headerImage": "/assets/img/State-Headers/Jamu-Kashmir.webp",
       "sections": [
         {
           "heading": "Best IVF Centres in Jammu and Kashmir",
@@ -2933,6 +2940,7 @@
       ]
     },
     "west-bengal": {
+      "headerImage": "/assets/img/State-Headers/Kolkata.webp",
       "sections": [
         {
           "heading": "Best IVF Centres in West Bengal",

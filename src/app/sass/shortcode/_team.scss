@@ -855,7 +855,9 @@
   }
 
   .cs_other_doctor_image {
-    border-radius: 10%;
+    width: 120px;
+    height: 80px;
+    border-radius: 8%;
     object-fit: cover;
     flex-shrink: 0;
     border: 3px solid #f0f0f0;
@@ -865,13 +867,14 @@
   &:hover .cs_other_doctor_image {
     border-color: #df3655;
   }
+
 }
 
 .cs_other_doctor_info {
   flex: 1;
 
   h4 {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--heading-color);
     margin-bottom: 5px;

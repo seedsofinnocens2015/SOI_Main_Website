@@ -34,22 +34,14 @@
       "The prestigious Times 40 under 40 Healthcare Leaders in India 2022",
       "The ET Healthworld: Induction into the Hall of Fame as the IVF Virtuoso of 2022"
     ],
-    "progressBars": [
+    "youtubeVideos": [
       {
-        "label": "IVF Procedures",
-        "percentage": 95
+        "title": "How Genetic Testing Helped This Patient Conceive After IVF Failure",
+        "url": "https://www.youtube.com/watch?v=3rAUvo-rPZA"
       },
       {
-        "label": "Patient Satisfaction",
-        "percentage": 98
-      },
-      {
-        "label": "Success Rate",
-        "percentage": 85
-      },
-      {
-        "label": "Clinical Expertise",
-        "percentage": 92
+        "title": "From 5 years of heartbreak and failed IUIs to holding our miracle baby.",
+        "url": "https://www.youtube.com/watch?v=gSEHplF4oC8"
       }
     ],
     "newSlug": "dr-gauri-agarwal-ivf-specialist"

@@ -33,10 +33,12 @@ const Page = () => {
     phone: '',
     email: '',
     center: '',
+    captchaAccepted: false,
   });
 
   const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
     setFormError('');
   };
 
@@ -44,6 +46,7 @@ const Page = () => {
     if (!formData.name.trim()) return 'Please enter your full name.';
     if (!formData.phone.trim()) return 'Please enter your phone number.';
     if (!formData.center.trim()) return 'Please select your nearest centre.';
+    if (!formData.captchaAccepted) return 'Please confirm that you are not a robot.';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (formData.email.trim() && !emailRegex.test(formData.email)) return 'Please enter a valid email address.';
     return '';
@@ -66,11 +69,13 @@ const Page = () => {
         router.push(getThankYouUrl(THANK_YOU_TYPE.appointment));
       } else {
         setError(result.error || 'Something went wrong. Please try again.');
+        setFormData((prev) => ({ ...prev, captchaAccepted: false }));
         setIsSubmitting(false);
       }
     } catch (err) {
       console.error('Form submission error:', err);
       setError('Network error. Please check your connection and try again.');
+      setFormData((prev) => ({ ...prev, captchaAccepted: false }));
       setIsSubmitting(false);
     }
   };
@@ -214,6 +219,31 @@ const Page = () => {
                             ))}
                         </optgroup>
                       </select>
+                    </div>
+                    <div className="col-md-12">
+                      <label
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px',
+                          width: 'fit-content',
+                          cursor: 'pointer',
+                          fontSize: '13px',
+                          lineHeight: '1.3',
+                          fontWeight: '500',
+                          color: '#1f2b3a',
+                        }}
+                      >
+                        <input
+                          type="checkbox"
+                          name="captchaAccepted"
+                          checked={formData.captchaAccepted}
+                          onChange={handleChange}
+                          required
+                          style={{ width: '14px', height: '14px', accentColor: '#df3655', margin: 0 }}
+                        />
+                        <span>By clicking "Book Appointment", you agree to our Privacy Policy and T&C <span style={{ color: '#df3655' }}>*</span></span>
+                      </label>
                     </div>
                     <div className="col-md-12">
                       <div style={{

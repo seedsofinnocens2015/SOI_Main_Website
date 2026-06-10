@@ -70,11 +70,18 @@ const GlobalAppointmentPopup = () => {
       phone: formData.get('phone'),
       email: '',
       center: formData.get('center'),
+      captchaAccepted: formData.get('captchaAccepted') === 'on',
       message: 'Appointment requested from popup form',
     };
 
     if (!dataObj.center) {
       alert('Please select your nearest centre.');
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!dataObj.captchaAccepted) {
+      alert('Please confirm that you are not a robot.');
       setIsSubmitting(false);
       return;
     }
@@ -89,11 +96,13 @@ const GlobalAppointmentPopup = () => {
         router.push(getThankYouUrl(THANK_YOU_TYPE.appointment));
       } else {
         alert(result.error || 'Something went wrong.');
+        e.target.captchaAccepted.checked = false;
         setIsSubmitting(false);
       }
     } catch (err) {
       console.error('Submission error:', err);
       alert('Network error.');
+      e.target.captchaAccepted.checked = false;
       setIsSubmitting(false);
     }
   };
@@ -157,6 +166,16 @@ const GlobalAppointmentPopup = () => {
                     ))}
                 </optgroup>
               </select>
+            </div>
+            <div className="cs_form_group">
+              <label className="soi_popup_robot_check">
+                <input
+                  type="checkbox"
+                  name="captchaAccepted"
+                  required
+                />
+                <span>By clicking "Book Appointment", you agree to our Privacy Policy and T&C *</span>
+              </label>
             </div>
             <button
               type="submit"
@@ -226,6 +245,18 @@ const GlobalAppointmentPopup = () => {
           border-radius: 8px;
         }
 
+        .soi_popup_robot_check {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: fit-content;
+          color: #1f2b3a;
+          font-size: 13px;
+          line-height: 1.3;
+          font-weight: 500;
+          cursor: pointer;
+        }
+
         .soi_popup_submit_btn {
           border: none !important;
           box-shadow: none !important;
@@ -284,6 +315,13 @@ const GlobalAppointmentPopup = () => {
           .cs_blink_soft {
             animation: none;
           }
+        }
+
+        .soi_popup_robot_check input {
+          width: 14px;
+          height: 14px;
+          margin: 0;
+          accent-color: #df3655;
         }
       `}</style>
     </div>
