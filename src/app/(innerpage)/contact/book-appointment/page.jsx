@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { submitBookAppointment } from '@/app/utils/websiteForms';
 import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
@@ -35,6 +35,19 @@ const Page = () => {
     center: '',
     captchaAccepted: false,
   });
+  const [utmParams, setUtmParams] = useState({ utm_source: '', utm_medium: '', utm_campaign: '' });
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const source = params.get('utm_source') || '';
+    const campaign = params.get('utm_campaign') || '';
+    let medium = params.get('utm_medium') || '';
+    if (!medium) {
+      if (source.toLowerCase().includes('youtube')) medium = 'youtube';
+      else if (source.toLowerCase().includes('google')) medium = 'cpc';
+    }
+    setUtmParams({ utm_source: source, utm_medium: medium, utm_campaign: campaign });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -63,7 +76,12 @@ const Page = () => {
     setError('');
 
     try {
-      const { ok, data: result } = await submitBookAppointment(formData);
+      const { ok, data: result } = await submitBookAppointment({
+        ...formData,
+        utm_source: utmParams.utm_source,
+        utm_medium: utmParams.utm_medium,
+        utm_campaign: utmParams.utm_campaign,
+      });
 
       if (ok) {
         router.push(getThankYouUrl(THANK_YOU_TYPE.appointment));
