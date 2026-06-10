@@ -174,7 +174,7 @@ const GlobalAppointmentPopup = () => {
                   name="captchaAccepted"
                   required
                 />
-                <span>By clicking "Book Appointment", you agree to our Privacy Policy and T&C *</span>
+                <span>By clicking &quot;Book Appointment&quot;, you agree to our Privacy Policy and T&C *</span>
               </label>
             </div>
             <button
