@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "thin-endometrium-meaning-causes-and-its-impact-on-fertility",
-    title: "Thin Endometrium: Meaning, Causes, and Its Impact on Fertility",
-    excerpt: "Learn about the Thin Endometrium: Meaning, Causes, and Its Impact on Fertility",
+    id: "false-positive-pregnancy-test",
+    title: "False Positive Pregnancy Test: Causes, Chances, and What to Do Next ",
+    excerpt: "Learn about the False Positive Pregnancy Test: Causes, Chances, and What to Do Next ",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Thin Endometrium.png",
-    date: "June 09, 2026",
+    image: "/assets/img/Blogs/False Positive Pregnancy Test.png",
+    date: "June 10, 2026",
     author: "admin",
-    category: "Treatment Guides",
-    readTime: "12 min read",
-    slug: "thin-endometrium-meaning-causes-and-its-impact-on-fertility"
+    category: "Pregnancy",
+    readTime: "10 min read",
+    slug: "false-positive-pregnancy-test"
   }
 ];
 
