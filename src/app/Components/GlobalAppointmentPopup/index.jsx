@@ -71,7 +71,7 @@ const GlobalAppointmentPopup = () => {
       email: '',
       center: formData.get('center'),
       captchaAccepted: formData.get('captchaAccepted') === 'on',
-      message: 'Appointment requested from popup form',
+      message: '',
     };
 
     if (!dataObj.center) {

@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "false-positive-pregnancy-test",
-    title: "False Positive Pregnancy Test: Causes, Chances, and What to Do Next ",
-    excerpt: "Learn about the False Positive Pregnancy Test: Causes, Chances, and What to Do Next ",
+    id: "amh-test-leaning-normal-range-and-its-role-in-fertility",
+    title: "AMH Test: Meaning, Normal Range, and Its Role in Fertility",
+    excerpt: "Learn about the AMH Test: Meaning, Normal Range, and Its Role in Fertility ",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/False Positive Pregnancy Test.png",
-    date: "June 10, 2026",
+    image: "/assets/img/Blogs/AMH Test.png",
+    date: "June 11, 2026",
     author: "admin",
-    category: "Pregnancy",
+    category: "Treatment Guides",
     readTime: "10 min read",
-    slug: "false-positive-pregnancy-test"
+    slug: "amh-test-leaning-normal-range-and-its-role-in-fertility"
   }
 ];
 
