@@ -260,7 +260,7 @@ const Page = () => {
                           required
                           style={{ width: '14px', height: '14px', accentColor: '#df3655', margin: 0 }}
                         />
-                        <span>By clicking &quot;Book Appointment&quot;, you agree to our Privacy Policy and T&C <span style={{ color: '#df3655' }}>*</span></span>
+                        <span>By clicking &quot;Book Appointment&quot;, you agree to our <Link href="/privacy-policy">Privacy Policy</Link> and <Link href="/terms-and-conditions">T&C</Link> <span style={{ color: '#df3655' }}>*</span></span>
                       </label>
                     </div>
                     <div className="col-md-12">

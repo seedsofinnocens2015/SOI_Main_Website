@@ -29,6 +29,154 @@
 /*--------------------------------
  Extra css
  -------------------------------*/
+.cs_legal_content {
+  background: #ffffff;
+  border: 1px solid #edf0f5;
+  border-radius: 10px;
+  box-shadow: 0 10px 35px rgba(69, 83, 110, 0.08);
+  padding: 42px;
+}
+
+.cs_legal_updated {
+  display: inline-flex;
+  margin: 0 0 20px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: rgba(76, 172, 174, 0.12);
+  color: #4cacae;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cs_legal_intro,
+.cs_legal_text,
+.cs_legal_list,
+.cs_legal_raw {
+  color: #5c6675;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.cs_legal_raw {
+  white-space: pre-wrap;
+}
+
+.cs_legal_raw_line {
+  white-space: pre-wrap;
+}
+
+.cs_legal_line_gap {
+  height: 14px;
+}
+
+.cs_legal_intro {
+  margin-bottom: 34px;
+}
+
+.cs_legal_section {
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #edf0f5;
+}
+
+.cs_legal_section:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 0;
+}
+
+.cs_legal_heading {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.cs_legal_text {
+  margin-bottom: 12px;
+}
+
+.cs_legal_list {
+  margin: 0 0 12px;
+  padding-left: 20px;
+}
+
+.cs_legal_list li {
+  margin-bottom: 8px;
+}
+
+.cs_legal_sidebar {
+  position: sticky;
+  top: 110px;
+  background: #f8fafc;
+  border: 1px solid #edf0f5;
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.cs_legal_sidebar h3,
+.cs_legal_help h4 {
+  color: #1f2b3a;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.cs_legal_links {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.cs_legal_links a {
+  display: block;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #45536e;
+  font-weight: 600;
+  padding: 13px 16px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cs_legal_links a:hover {
+  color: #df3655;
+  transform: translateX(4px);
+}
+
+.cs_legal_help {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 24px;
+}
+
+.cs_legal_help p {
+  color: #5c6675;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.cs_legal_help a {
+  display: block;
+  color: #df3655;
+  font-weight: 700;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .cs_legal_sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_legal_content,
+  .cs_legal_sidebar {
+    padding: 24px;
+  }
+
+  .cs_legal_heading {
+    font-size: 21px;
+  }
+}
+
 .cs_hero.cs_style_1 .cs_hero_text {
   background-color: inherit;
   padding: inherit;

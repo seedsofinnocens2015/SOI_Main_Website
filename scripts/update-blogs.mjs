@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "amh-test-leaning-normal-range-and-its-role-in-fertility",
-    title: "AMH Test: Meaning, Normal Range, and Its Role in Fertility",
-    excerpt: "Learn about the AMH Test: Meaning, Normal Range, and Its Role in Fertility ",
+    id: "menstrual-disorders",
+    title: "Menstrual Disorders: Understanding the Causes, Symptoms, and Treatment Options",
+    excerpt: "Learn about the Menstrual Disorders: Understanding the Causes, Symptoms, and Treatment Options ",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/AMH Test.png",
-    date: "June 11, 2026",
+    image: "/assets/img/Blogs/Menstrual Disorders.png",
+    date: "June 12, 2026",
     author: "admin",
-    category: "Treatment Guides",
-    readTime: "10 min read",
-    slug: "amh-test-leaning-normal-range-and-its-role-in-fertility"
+    category: "Women's Health",
+    readTime: "11 min read",
+    slug: "menstrual-disorders"
   }
 ];
 

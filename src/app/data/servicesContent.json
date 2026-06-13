@@ -523,7 +523,7 @@
   "monitoring-in-an-iui-cycle-steps": {
     "uspTitle": "Monitoring in an <span class=\"cs_accent_color\">IUI Cycle</span>",
     "title": "Monitoring in an IUI Cycle",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/Monitoring.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -650,7 +650,7 @@
   "secondary-infertility": {
     "uspTitle": "Secondary Infertility  <span class=\"cs_accent_color\">Causes & Treatment</span>",
     "title": "Secondary Infertility Causes & Treatment",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/SecondaryInfertility.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -793,7 +793,7 @@
   "egg-freezing": {
     "uspTitle": "Egg  <span class=\"cs_accent_color\">Freezing</span>",
     "title": "Egg Freezing",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/EggFreezing.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/egg.jpg",
@@ -1225,7 +1225,7 @@
   "ovulation-induction": {
     "uspTitle": "Ovulation  <span class=\"cs_accent_color\">Induction</span>",
     "title": "Ovulation Induction",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/OvulationInduction.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/ovarian.jpg",
@@ -1684,7 +1684,7 @@
   "surrogacy": {
     "uspTitle": "Surrogacy: A Journey to <span class=\"cs_accent_color\">Parenthood</span>",
     "title": "Surrogacy: A Journey to Parenthood",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/Surrogacy.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",

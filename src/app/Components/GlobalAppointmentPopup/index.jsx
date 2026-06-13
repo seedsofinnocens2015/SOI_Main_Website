@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import centresAllData from '@/app/data/centres-data.json';
 import { submitBookAppointment } from '@/app/utils/websiteForms';
 import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
+import Link from 'next/link';
 
 const APPOINTMENT_SUBMITTED_KEY = 'soi_appointment_submitted';
 const centresData = centresAllData.centres;
@@ -174,7 +175,7 @@ const GlobalAppointmentPopup = () => {
                   name="captchaAccepted"
                   required
                 />
-                <span>By clicking &quot;Book Appointment&quot;, you agree to our Privacy Policy and T&C *</span>
+                <span>By clicking &quot;Book Appointment&quot;, you agree to our <Link href="/privacy-policy">Privacy Policy</Link> and <Link href="/terms-and-conditions">T&C</Link> *</span>
               </label>
             </div>
             <button
