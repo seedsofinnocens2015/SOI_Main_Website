@@ -9,27 +9,25 @@ import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaSearch } from 'react-icons/fa';
 import centresAllData from '@/app/data/centres-data.json';
 import { getAssetPathClient } from '@/app/utils/assetPath';
-import agraImage from '../../../../../public/assets/img/centres/agra.jpg';
-import faridabadImage from '../../../../../public/assets/img/centres/faridabad.jpg';
-import ghaziabadImage from '../../../../../public/assets/img/centres/ghaziabad.jpg';
-import gorakhpurImage from '../../../../../public/assets/img/centres/gorakhpur.jpg';
-import gurgaonImage from '../../../../../public/assets/img/centres/gurgaon.jpg';
-import guwahatiImage from '../../../../../public/assets/img/centres/guwahati.jpg';
-import haldwaniImage from '../../../../../public/assets/img/centres/haldwani.jpg';
-import jankpuriImage from '../../../../../public/assets/img/centres/jankpuri.jpg';
-import kanpurImage from '../../../../../public/assets/img/centres/kanpur.jpg';
-import kasaragodImage from '../../../../../public/assets/img/centres/kasaragod.jpg';
-import kochiImage from '../../../../../public/assets/img/centres/kochi.jpg';
-import kolkataImage from '../../../../../public/assets/img/centres/kolkata.webp';
-import lucknowImage from '../../../../../public/assets/img/centres/lucknow.jpg';
-import mabelaImage from '../../../../../public/assets/img/centres/mabela.jpeg';
-import malviyanagarImage from '../../../../../public/assets/img/centres/malviyanagar.webp';
-import meerutImage from '../../../../../public/assets/img/centres/meerut.jpg';
-import muzaffarpurImage from '../../../../../public/assets/img/centres/muzaffarpur.jpg';
-import patnaImage from '../../../../../public/assets/img/centres/patna.jpg';
-import pitampuraImage from '../../../../../public/assets/img/centres/pitampura.jpg';
-import ranchiImage from '../../../../../public/assets/img/centres/ranchi.jpg';
-import srinagarImage from '../../../../../public/assets/img/centres/srinagar.png';
+import agraImage from '../../../../../public/gads/assets/image/center/agra1.webp';
+import faridabadImage from '../../../../../public/gads/assets/image/center/faridabad.webp';
+import ghaziabadImage from '../../../../../public/gads/assets/image/center/yashoda1.webp';
+import gorakhpurImage from '../../../../../public/gads/assets/image/center/gorakhpur1.webp';
+import gurgaonImage from '../../../../../public/gads/assets/image/center/gurugram.webp';
+import guwahatiImage from '../../../../../public/gads/assets/image/center/guwahati.webp';
+import haldwaniImage from '../../../../../public/gads/assets/image/center/haldwani.webp';
+import jankpuriImage from '../../../../../public/gads/assets/image/center/janakpuri.webp';
+import kanpurImage from '../../../../../public/gads/assets/image/center/kanpur1.webp';
+import kasaragodImage from '../../../../../public/gads/assets/image/center/kasaragod.webp';
+import kochiImage from '../../../../../public/gads/assets/image/center/kochi.webp';
+import kolkataImage from '../../../../../public/gads/assets/image/center/kolkata.webp';
+import lucknowImage from '../../../../../public/gads/assets/image/center/lucknow.webp';
+import malviyanagarImage from '../../../../../public/gads/assets/image/center/malviyanagar.webp';
+import meerutImage from '../../../../../public/gads/assets/image/center/meerut1.webp';
+import muzaffarpurImage from '../../../../../public/gads/assets/image/center/muzaffarpur.webp';
+import patnaImage from '../../../../../public/gads/assets/image/center/patna1.webp';
+import pitampuraImage from '../../../../../public/gads/assets/image/center/pitampura.webp';
+import ranchiImage from '../../../../../public/gads/assets/image/center/ranchi1.webp';
 const allCentresRaw = centresAllData.centres;
 
 const headingData = { uspTitle: 'Centre <span class="cs_accent_color">Locator </span>' };
@@ -48,14 +46,14 @@ const centreImages = {
   '/assets/img/centres/kochi.jpg': kochiImage,
   '/assets/img/centres/kolkata.webp': kolkataImage,
   '/assets/img/centres/lucknow.jpg': lucknowImage,
-  '/assets/img/centres/mabela.jpeg': mabelaImage,
+  '/assets/img/centres/mabela.jpeg': malviyanagarImage,
   '/assets/img/centres/malviyanagar.webp': malviyanagarImage,
   '/assets/img/centres/meerut.jpg': meerutImage,
   '/assets/img/centres/muzaffarpur.jpg': muzaffarpurImage,
   '/assets/img/centres/patna.jpg': patnaImage,
   '/assets/img/centres/pitampura.jpg': pitampuraImage,
   '/assets/img/centres/ranchi.jpg': ranchiImage,
-  '/assets/img/centres/srinagar.png': srinagarImage,
+  '/assets/img/centres/srinagar.png': pitampuraImage,
 };
 
 function getCentreImage(imagePath) {
