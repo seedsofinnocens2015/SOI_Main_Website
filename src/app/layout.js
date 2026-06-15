@@ -22,6 +22,7 @@ const faviconUrl = `${basePath}/favicon.ico`;
 export const revalidate = 300;
 
 export const metadata = {
+  metadataBase: new URL('https://www.seedsofinnocens.com'),
   title: {
     absolute: '',
   },
