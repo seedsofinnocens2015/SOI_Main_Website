@@ -464,10 +464,10 @@ const Header = ({ isTopBar, variant }) => {
             label: 'Our Story',
             href: '/about/our-story',
           },
-          {
-            label: 'Dr. Gauri Agrawal – Founder',
-            href: '/ivf-doctor/dr-gauri-agarwal-ivf-specialist/',
-          },
+          // {
+          //   label: 'Dr. Gauri Agrawal – Founder',
+          //   href: '/ivf-doctor/dr-gauri-agarwal-ivf-specialist/',
+          // },
           {
             label: 'Leadership Team',
             href: '/about/leadership-team',

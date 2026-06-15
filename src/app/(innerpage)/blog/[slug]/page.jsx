@@ -54,7 +54,7 @@ const BlogDetailPage = async ({ params }) => {
           <div className="container">
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h2>Blog Not Found</h2>
+                <h1>Blog Not Found</h1>
                 <p>The blog you&apos;re looking for doesn&apos;t exist.</p>
                 <Link
                   href="/resources/blogs"
@@ -149,8 +149,7 @@ const BlogDetailPage = async ({ params }) => {
                   >
                     {blog.category}
                   </div>
-
-                  <AccentHeading level={2} className="cs_ivf_content_heading cs_blog_title" style={{ marginBottom: '20px' }}>
+                  <AccentHeading level={1} className="cs_ivf_content_heading cs_blog_title" style={{ marginBottom: '20px' }}>
                     {blog.title}
                   </AccentHeading>
 

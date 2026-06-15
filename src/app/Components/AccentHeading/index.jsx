@@ -34,7 +34,7 @@ const AccentHeading = ({
         ? String(children)
         : getPlainTextFromChildren(children);
   const headingStr = text.trim();
-  const Tag = level === 3 ? 'h3' : 'h2';
+  const Tag = level === 1 ? 'h1' : level === 3 ? 'h3' : 'h2';
   const baseClass = 'cs_ivf_content_heading';
 
   if (forcePlain || !headingStr) {

@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "menstrual-disorders",
-    title: "Menstrual Disorders: Understanding the Causes, Symptoms, and Treatment Options",
-    excerpt: "Learn about the Menstrual Disorders: Understanding the Causes, Symptoms, and Treatment Options ",
+    id: "how-long-does-semen-stay-in-a-woman",
+    title: "How long does semen stay in a woman?",
+    excerpt: "Learn about the How long does semen stay in a woman?",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Menstrual Disorders.png",
-    date: "June 12, 2026",
+    image: "/assets/img/Blogs/How long does semen stay in a woman.png",
+    date: "June 13, 2026",
     author: "admin",
-    category: "Women's Health",
-    readTime: "11 min read",
-    slug: "menstrual-disorders"
+    category: "Pregnancy",
+    readTime: "12 min read",
+    slug: "how-long-does-semen-stay-in-a-woman"
   }
 ];
 
