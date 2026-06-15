@@ -9,9 +9,58 @@ import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaSearch } from 'react-icons/fa';
 import centresAllData from '@/app/data/centres-data.json';
 import { getAssetPathClient } from '@/app/utils/assetPath';
+import agraImage from '../../../../../public/assets/img/centres/agra.jpg';
+import faridabadImage from '../../../../../public/assets/img/centres/faridabad.jpg';
+import ghaziabadImage from '../../../../../public/assets/img/centres/ghaziabad.jpg';
+import gorakhpurImage from '../../../../../public/assets/img/centres/gorakhpur.jpg';
+import gurgaonImage from '../../../../../public/assets/img/centres/gurgaon.jpg';
+import guwahatiImage from '../../../../../public/assets/img/centres/guwahati.jpg';
+import haldwaniImage from '../../../../../public/assets/img/centres/haldwani.jpg';
+import jankpuriImage from '../../../../../public/assets/img/centres/jankpuri.jpg';
+import kanpurImage from '../../../../../public/assets/img/centres/kanpur.jpg';
+import kasaragodImage from '../../../../../public/assets/img/centres/kasaragod.jpg';
+import kochiImage from '../../../../../public/assets/img/centres/kochi.jpg';
+import kolkataImage from '../../../../../public/assets/img/centres/kolkata.webp';
+import lucknowImage from '../../../../../public/assets/img/centres/lucknow.jpg';
+import mabelaImage from '../../../../../public/assets/img/centres/mabela.jpeg';
+import malviyanagarImage from '../../../../../public/assets/img/centres/malviyanagar.webp';
+import meerutImage from '../../../../../public/assets/img/centres/meerut.jpg';
+import muzaffarpurImage from '../../../../../public/assets/img/centres/muzaffarpur.jpg';
+import patnaImage from '../../../../../public/assets/img/centres/patna.jpg';
+import pitampuraImage from '../../../../../public/assets/img/centres/pitampura.jpg';
+import ranchiImage from '../../../../../public/assets/img/centres/ranchi.jpg';
+import srinagarImage from '../../../../../public/assets/img/centres/srinagar.png';
 const allCentresRaw = centresAllData.centres;
 
 const headingData = { uspTitle: 'Centre <span class="cs_accent_color">Locator </span>' };
+
+const centreImages = {
+  '/assets/img/centres/agra.jpg': agraImage,
+  '/assets/img/centres/faridabad.jpg': faridabadImage,
+  '/assets/img/centres/ghaziabad.jpg': ghaziabadImage,
+  '/assets/img/centres/gorakhpur.jpg': gorakhpurImage,
+  '/assets/img/centres/gurgaon.jpg': gurgaonImage,
+  '/assets/img/centres/guwahati.jpg': guwahatiImage,
+  '/assets/img/centres/haldwani.jpg': haldwaniImage,
+  '/assets/img/centres/jankpuri.jpg': jankpuriImage,
+  '/assets/img/centres/kanpur.jpg': kanpurImage,
+  '/assets/img/centres/kasaragod.jpg': kasaragodImage,
+  '/assets/img/centres/kochi.jpg': kochiImage,
+  '/assets/img/centres/kolkata.webp': kolkataImage,
+  '/assets/img/centres/lucknow.jpg': lucknowImage,
+  '/assets/img/centres/mabela.jpeg': mabelaImage,
+  '/assets/img/centres/malviyanagar.webp': malviyanagarImage,
+  '/assets/img/centres/meerut.jpg': meerutImage,
+  '/assets/img/centres/muzaffarpur.jpg': muzaffarpurImage,
+  '/assets/img/centres/patna.jpg': patnaImage,
+  '/assets/img/centres/pitampura.jpg': pitampuraImage,
+  '/assets/img/centres/ranchi.jpg': ranchiImage,
+  '/assets/img/centres/srinagar.png': srinagarImage,
+};
+
+function getCentreImage(imagePath) {
+  return centreImages[imagePath] || getAssetPathClient(imagePath || '/assets/img/recent_post2webp');
+}
 
 function cityNameToSlug(cityName) {
   return cityName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
@@ -30,7 +79,7 @@ const indiaCentres = allCentresRaw.filter(c => !c.isInternational).map(c => ({
   phone: c.phone,
   email: c.email,
   timing: c.timing,
-  image: c.image || '/assets/img/recent_post2webp',
+  image: getCentreImage(c.image),
   link: getCenterLink(c),
   state: c.state,
   isInternational: false,
@@ -42,7 +91,7 @@ const internationalCentres = allCentresRaw.filter(c => c.isInternational).map(c 
   phone: c.phone,
   email: c.email,
   timing: c.timing,
-  image: c.image || '/assets/img/recent_post2webp',
+  image: getCentreImage(c.image),
   link: `/${c.slug}/`,
   state: c.state,
   isInternational: true,
@@ -81,7 +130,7 @@ const CenterCard = ({ center }) => (
     {/* Centre Image */}
     <div style={{ position: 'relative', width: '100%', height: '200px', overflow: 'hidden' }}>
       <Image
-        src={getAssetPathClient(center.image)}
+        src={center.image}
         alt={center.name}
         fill
         style={{ objectFit: 'cover' }}
