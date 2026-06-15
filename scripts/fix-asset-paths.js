@@ -65,17 +65,6 @@ function fixAssetPaths() {
     console.log('⚠️ out/index.html missing. Build output looks incomplete.');
   }
 
-  const gadsDir = path.join(outDir, 'gads');
-  const gadsSamplePage = path.join(gadsDir, 'best-ivf-clinic-in-india', 'index.html');
-  if (!fs.existsSync(gadsDir)) {
-    console.log('⚠️ out/gads/ missing. Google Ads landing pages will return errors on Hostinger.');
-    console.log('   Copy public/gads/ into out/gads/ before uploading to public_html.');
-  } else if (!fs.existsSync(gadsSamplePage)) {
-    console.log('⚠️ out/gads/best-ivf-clinic-in-india/index.html missing. gads deploy looks incomplete.');
-  } else {
-    console.log('✅ gads landing pages found in out/gads/');
-  }
-
   console.log(`\n✨ Checked ${checkedCount} file(s).`);
   console.log('📦 Build is ready for deployment to root domain!');
 }
