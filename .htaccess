@@ -1,6 +1,14 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+  DirectoryIndex index.html
+
+  # Google Ads landing pages (static HTML in /gads/) — serve directly on Apache/Hostinger.
+  # Next.js rewrites only apply in dev/Node; production static hosting needs these rules.
+  RewriteRule ^gads/_next/ - [L]
+  RewriteRule ^gads/assets/ - [L]
+  RewriteRule ^gads/[^/]+\.(html|png|jpe?g|webp|svg|ico|css|js|txt|xml)$ - [L]
+  RewriteRule ^gads/([^/]+)/?$ gads/$1/index.html [L]
 
   # Legacy redirects for static export deployments (Apache/Hostinger)
   # Keep order: service-specific overrides first, then generic doctor mappings.
