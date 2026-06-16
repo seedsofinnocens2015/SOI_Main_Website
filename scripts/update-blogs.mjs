@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "foods-for-erectile-dysfunction",
-    title: "Foods for Erectile Dysfunction: What to Eat for Better Sexual Health",
-    excerpt: "Learn about the Foods for Erectile Dysfunction: What to Eat for Better Sexual Health",
+    id: "period-cramps-vs-early-pregnancy-cramps",
+    title: "Period Cramps vs Early Pregnancy Cramps: How to Tell the Difference",
+    excerpt: "Period cramps and early pregnancy cramps can be similar, but there are some key differences. Learn how to tell the difference between the two.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/How long does semen stay in a woman.png",
+    image: "/assets/img/Blogs/Period Cramps vs Early Pregnancy Cramps.png",
     date: "June 13, 2026",
     author: "admin",
-    category: "Men's Health",
-    readTime: "12 min read",
-    slug: "foods-for-erectile-dysfunction"
+    category: "Women's Health",
+    readTime: "7 min read",
+    slug: "period-cramps-vs-early-pregnancy-cramps"
   }
 ];
 
