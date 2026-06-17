@@ -6,6 +6,390 @@
   font-weight: 300;
 }
 
+/* Training academy program pages */
+.cs_training_intro {
+  margin-bottom: 58px;
+  padding-bottom: 46px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.cs_training_eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-left: 3px solid #df3655;
+  background-color: #fff5f7;
+  color: #df3655;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.cs_training_intro_title {
+  max-width: 680px;
+  margin-bottom: 16px !important;
+  text-align: left !important;
+}
+
+.cs_training_intro_text {
+  max-width: 620px;
+  margin: 0;
+  color: #60646c;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.cs_training_highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.cs_training_highlight {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  min-height: 92px;
+  padding: 18px;
+  border: 1px solid #edf0f2;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.cs_training_highlight_icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 8px;
+  background-color: #fff5f7;
+  color: #df3655;
+  font-size: 18px;
+}
+
+.cs_training_highlight strong,
+.cs_training_highlight small {
+  display: block;
+}
+
+.cs_training_highlight strong {
+  margin-bottom: 5px;
+  color: #172038;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.cs_training_highlight small {
+  color: #60646c;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.cs_training_intro_image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f6f8fb;
+}
+
+.cs_training_intro_image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 390px;
+  object-fit: cover;
+}
+
+.cs_training_image_note {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  padding: 16px 18px;
+  border-left: 4px solid #df3655;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 16px 36px rgba(23, 32, 56, 0.12);
+}
+
+.cs_training_image_note strong,
+.cs_training_image_note span {
+  display: block;
+}
+
+.cs_training_image_note strong {
+  margin-bottom: 4px;
+  color: #172038;
+  font-size: 17px;
+}
+
+.cs_training_image_note span {
+  color: #60646c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cs_training_content_panel .cs_ivf_content_wrapper {
+  text-align: left;
+}
+
+.cs_training_content_panel .cs_ivf_content_heading {
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+  text-align: left !important;
+}
+
+.cs_training_content_panel .cs_ivf_content_section {
+  margin-bottom: 44px;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.cs_training_content_panel .cs_ivf_content_section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.cs_training_content_panel .cs_list_boxes {
+  margin-top: 22px;
+}
+
+.cs_training_content_panel .cs_list_box {
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.cs_training_sidebar {
+  position: sticky;
+  top: 110px;
+}
+
+.cs_training_sidebar_note {
+  margin-bottom: 18px;
+  padding: 18px 20px;
+  border-radius: 8px;
+  background-color: #172038;
+}
+
+.cs_training_sidebar_note span {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.cs_training_sidebar_note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.cs_training_form_card {
+  overflow: hidden;
+  border: 1px solid #edf0f2;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 14px 35px rgba(23, 32, 56, 0.08);
+}
+
+.cs_training_form_header {
+  padding: 24px 24px 20px;
+  border-top: 4px solid #df3655;
+  border-bottom: 1px solid #edf0f2;
+  background-color: #ffffff;
+}
+
+.cs_training_form_badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #df3655;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.cs_training_form_title {
+  margin-bottom: 9px !important;
+  font-size: 25px !important;
+  line-height: 1.25 !important;
+  text-align: left !important;
+}
+
+.cs_training_form_intro {
+  margin: 0;
+  color: #60646c;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.cs_training_form_program {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 13px 14px;
+  border-radius: 8px;
+  background-color: #fff7f9;
+}
+
+.cs_training_form_program span {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #172038;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.cs_training_form_program svg {
+  margin-top: 3px;
+  color: #df3655;
+  flex: 0 0 auto;
+}
+
+.cs_training_form_body {
+  padding: 24px;
+}
+
+.cs_training_form_body .cs_contact_form .cs_form_label {
+  margin-bottom: 8px;
+  color: #172038;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cs_training_form_body .cs_contact_form .cs_form_field {
+  height: 48px;
+  border: 1px solid #e3e7ec;
+  border-radius: 8px;
+  background-color: #fbfcfd;
+  font-size: 14px;
+}
+
+.cs_training_form_body .cs_contact_form .cs_form_field:focus {
+  border-color: #df3655;
+  background-color: #ffffff;
+}
+
+.cs_training_terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px 14px;
+  border: 1px solid #edf0f2;
+  border-radius: 8px;
+  background-color: #fbfcfd;
+  cursor: pointer;
+}
+
+.cs_training_terms input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.cs_training_terms span {
+  color: #60646c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.cs_training_form_body .cs_btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.cs_training_form_footer {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 18px;
+  color: #60646c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.cs_training_form_footer svg {
+  margin-top: 2px;
+  color: #df3655;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 1199px) {
+  .cs_training_highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_training_intro {
+    margin-bottom: 42px;
+    padding-bottom: 38px;
+  }
+
+  .cs_training_sidebar {
+    position: static;
+  }
+
+  .cs_training_intro_title,
+  .cs_training_content_panel .cs_ivf_content_heading,
+  .cs_training_form_title {
+    text-align: center !important;
+  }
+
+  .cs_training_eyebrow {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cs_training_intro_text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_training_highlights {
+    gap: 12px;
+  }
+
+  .cs_training_highlight {
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .cs_training_intro_image img {
+    min-height: 280px;
+  }
+
+  .cs_training_image_note {
+    position: static;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .cs_training_form_header,
+  .cs_training_form_body {
+    padding: 20px;
+  }
+}
+
 .cs_normal {
   font-weight: 400;
 }
@@ -4492,5 +4876,4 @@ i {
     }
   }
 }
-
 

@@ -958,7 +958,7 @@
   "embryo-freezing": {
     "uspTitle": "Embryo  <span class=\"cs_accent_color\">Freezing</span>",
     "title": "Embryo Freezing",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/EmbryoFreezing.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -1837,7 +1837,7 @@
   "varicocele": {
     "uspTitle": "Varicocele  <span class=\"cs_accent_color\">Symptoms & Treatment</span>",
     "title": "Varicocele Symptoms & Treatment",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/VaricoceleSymptoms&Treatment.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -4420,7 +4420,7 @@
   "semen-analysis": {
     "uspTitle": "Semen   <span class=\"cs_accent_color\">Analysis</span>",
     "title": "Semen Analysis",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/SemenAnalysis.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -4509,7 +4509,7 @@
   "semen-analysis-at-home": {
     "uspTitle": "Semen Analysis  <span class=\"cs_accent_color\"> at Home</span>",
     "title": "Semen Analysis at Home",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/SemenAnalysisatHome.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -4595,7 +4595,7 @@
   "microtese": {
     "uspTitle": "MicroTESE  <span class=\"cs_accent_color\">Testing</span>",
     "title": "MicroTESE",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/MicroTESETesting.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -4689,7 +4689,7 @@
   "tesa": {
     "uspTitle": "TESA / PESA  <span class=\"cs_accent_color\">Sperm Retrieval</span>",
     "title": "TESA / PESA",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/TESAPESA.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/TESA-PESA.jpg",

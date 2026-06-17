@@ -1,8 +1,8 @@
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
-import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
+import TrainingProgramPageContent from '../TrainingProgramPageContent';
 
 export async function generateMetadata() {
   return getSeoMetadata({
@@ -13,20 +13,6 @@ export async function generateMetadata() {
 
 const headingData = {
   title: 'Embryo Biopsy Training Program',
-};
-
-const serviceData = {
-  serviceHeading: '',
-  services: [],
-  mainImage: '',
-  serviceDetails: [],
-  footerText: '',
-  additionalImages: '',
-  iconBoxes: [],
-  subtitle: '',
-  readMoreUrl: '/contact/book-appointment',
-  readMoreText: 'Book Appointment',
-  benefitImages: [],
 };
 
 const embryoBiopsyContentData = {
@@ -104,22 +90,10 @@ const page = () => {
         <PageHeading data={headingData} />
       </Section>
 
-      {/* Main Content Section */}
-      <Section
-        topSpaceLg="50"
-        topSpaceMd="60"
-        bottomSpaceLg="50"
-        bottomSpaceMd="60"
-      >
-        <div className="container">
-          {/* Content Section - Centered and Full Width */}
-          <div className="row">
-            <div className="col-12">
-              <IVFContentSection data={embryoBiopsyContentData} />
-            </div>
-          </div>
-        </div>
-      </Section>
+      <TrainingProgramPageContent
+        contentData={embryoBiopsyContentData}
+        defaultProgram="embryo-biopsy"
+      />
     </div>
   );
 };
