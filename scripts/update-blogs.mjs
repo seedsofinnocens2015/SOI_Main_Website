@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "period-cramps-vs-early-pregnancy-cramps",
-    title: "Period Cramps vs Early Pregnancy Cramps: How to Tell the Difference",
-    excerpt: "Period cramps and early pregnancy cramps can be similar, but there are some key differences. Learn how to tell the difference between the two.",
+    id: "vaginal-discharge-during-pregnancy",
+    title: "Vaginal Discharge During Pregnancy: What’s Normal and When to Worry",
+    excerpt: "Vaginal Discharge During Pregnancy: What’s Normal and When to Worry is normal, but there are some key differences.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Period Cramps vs Early Pregnancy Cramps.png",
-    date: "June 13, 2026",
+    image: "/assets/img/Blogs/Vaginal Discharge During Pregnancy.png",
+    date: "June 17, 2026",
     author: "admin",
-    category: "Women's Health",
+    category: "Pregnancy",
     readTime: "7 min read",
-    slug: "period-cramps-vs-early-pregnancy-cramps"
+    slug: "vaginal-discharge-during-pregnancy"
   }
 ];
 

@@ -242,6 +242,16 @@ const page = () => {
         twitter: '/',
         instagram: '/',
       },
+      {
+        name: 'Dr. Manisha',
+        profession: 'IVF Consultant',
+        imageUrl: '/assets/img/Doctors/aditi.jpg',
+        link: '/ivf-doctor/dr-manisha-ivf-specialist',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
     ],
   };
 

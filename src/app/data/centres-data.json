@@ -2239,7 +2239,16 @@
         "Blastocyst Transfer",
         "Fertility Assessment"
       ],
-      "doctors": [],
+      "doctors": [
+        {
+          "name": "Dr. Manisha",
+          "subtitle": "IVF Consultant",
+          "image": "/assets/img/Doctors/manisha.png",
+          "experience": "15+ Years",
+          "location": "Janakpuri, New Delhi",
+          "slug": "dr-manisha"
+        }
+      ],
       "timing": "9:00 AM to 6:00 PM",
       "testimonials": [
         {

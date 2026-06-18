@@ -1180,5 +1180,53 @@
       }
     ],
     "newSlug": "dr-mangla-kawade-ivf-specialist"
+  },
+  {
+    "slug": "dr-manisha",
+    "uspTitle": "Best IVF Consultant in Janakpuri <span class=\"cs_accent_color\">Dr. Manisha</span>",
+    "headerImage": "/assets/img/Doctor-Headers/manisha.webp",
+    "name": "Dr. Manisha",
+    "subtitle": "IVF Consultant",
+    "image": "/assets/img/Doctors/manisha.png",
+    "description": [
+      "Dr. Manisha is an experienced IVF Consultant at Seeds of Innocens IVF, stationed at Janakpuri, New Delhi. She brings over 15 years of experience in Obstetrics, Gynaecology, and Reproductive Medicine, with a strong focus on helping couples achieve their dream of parenthood.",
+      "She has extensive expertise in infertility evaluation and management, couple counselling, ART procedures, ovum pick-up, embryo transfer, and hysteroscopy.",
+      "Before joining Seeds of Innocens IVF, Dr. Manisha served as an IVF Consultant with Indira IVF, where she was associated with their Jaipur and New Delhi centres. She has also worked with various prestigious institutions across India, gaining valuable experience in high-risk pregnancy management, gynaecological care, and assisted reproductive technologies."
+    ],
+    "location": "Janakpuri, New Delhi",
+    "email": "info@seedsofinnocence.com",
+    "qualification": "DNB (Obstetrics & Gynaecology), Fellowship in Reproductive Medicine",
+    "specialization": "IVF, Reproductive Medicine, Infertility Evaluation and Management, ART Procedures, Ovum Pick-Up, Embryo Transfer, Hysteroscopy",
+    "experience": "15+ years",
+    "workExperience": [
+      "IVF Consultant at Seeds of Innocens IVF, Janakpuri, New Delhi.",
+      "Previously served as an IVF Consultant with Indira IVF at Jaipur and New Delhi centres.",
+      "Worked with various prestigious institutions across India with experience in high-risk pregnancy management, gynaecological care, and assisted reproductive technologies.",
+      "Experienced in couple counselling, infertility evaluation and management, ART procedures, ovum pick-up, embryo transfer, and hysteroscopy."
+    ],
+    "education": [
+      "DNB in Obstetrics & Gynaecology from Bokaro General Hospital, Bokaro Steel City, Jharkhand.",
+      "Fellowship in Reproductive Medicine from DY Patil University, Navi Mumbai."
+    ],
+    "awards": [],
+    "progressBars": [
+      {
+        "label": "IVF Procedures",
+        "percentage": 88
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 94
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 78
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 86
+      }
+    ],
+    "newSlug": "dr-manisha-ivf-specialist"
   }
 ]
