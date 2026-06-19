@@ -1389,7 +1389,7 @@
   "follicular-monitoring": {
     "uspTitle": "Follicular  <span class=\"cs_accent_color\">Monitoring</span>",
     "title": "Follicular Monitoring",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/FollicularMonitoring.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/ovarian.jpg",
@@ -1998,7 +1998,7 @@
   "vasectomy-reversal": {
     "uspTitle": "Vasectomy  <span class=\"cs_accent_color\">Reversal</span>",
     "title": "Vasectomy Reversal",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/VasectomyReversal.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -3138,7 +3138,7 @@
   "pgt-a": {
     "uspTitle": "PGT-A  <span class=\"cs_accent_color\">Testing</span>",
     "title": "PGT-A",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/PGT-A.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -3709,7 +3709,7 @@
   "pgt-m": {
     "uspTitle": "PGT-M  <span class=\"cs_accent_color\">Testing</span>",
     "title": "PGT-M",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/PGT-M.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -3874,7 +3874,7 @@
     "slug": "pgt-sr",
     "category": "diagnostic",
     "description": "PGT-SR screens embryos for chromosomal structural rearrangements (translocations, inversions) before IVF transfer. Expert PGT-SR testing at Seeds of Innocence for couples with balanced rearrangements.",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/PGT-SR.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",

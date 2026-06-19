@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "vaginal-discharge-during-pregnancy",
-    title: "Vaginal Discharge During Pregnancy: What’s Normal and When to Worry",
-    excerpt: "Vaginal Discharge During Pregnancy: What’s Normal and When to Worry is normal, but there are some key differences.",
+    id: "vaginal-discharge-before-period-vs-early-pregnancy",
+    title: "Vaginal Discharge Before Period vs Early Pregnancy",
+    excerpt: "Vaginal Discharge Before Period vs Early Pregnancy is normal, but there are some key differences.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Vaginal Discharge During Pregnancy.png",
-    date: "June 17, 2026",
+    image: "/assets/img/Blogs/Vaginal Discharge Before Period.png",
+    date: "June 18, 2026",
     author: "admin",
     category: "Pregnancy",
-    readTime: "7 min read",
-    slug: "vaginal-discharge-during-pregnancy"
+    readTime: "10 min read",
+    slug: "vaginal-discharge-before-period-vs-early-pregnancy"
   }
 ];
 
