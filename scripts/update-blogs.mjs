@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "vaginal-discharge-before-period-vs-early-pregnancy",
-    title: "Vaginal Discharge Before Period vs Early Pregnancy",
-    excerpt: "Vaginal Discharge Before Period vs Early Pregnancy is normal, but there are some key differences.",
+    id: "right-and-left-ovary-normal-size-in-cm",
+    title: "Normal Ovary Size in Women: Right and Left Ovary Guide",
+    excerpt: "Right and Left Ovary Normal Size in Cm is normal, but there are some key differences. The normal size of the ovary is between 2.5 to 4.5 cm in length and 1.5 to 2.5 cm in width. The ovary is located on the side of the uterus and is responsible for producing eggs and hormones.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Vaginal Discharge Before Period.png",
-    date: "June 18, 2026",
+    image: "/assets/img/Blogs/Right and Left Ovary Normal Size in Cm.png",
+    date: "June 19, 2026",
     author: "admin",
-    category: "Pregnancy",
-    readTime: "10 min read",
-    slug: "vaginal-discharge-before-period-vs-early-pregnancy"
+    category: "Treatment Guides",
+    readTime: "15 min read",
+    slug: "right-and-left-ovary-normal-size-in-cm"
   }
 ];
 

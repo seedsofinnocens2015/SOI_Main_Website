@@ -3504,7 +3504,7 @@
   "chorionic-villus-sampling-cvs": {
     "uspTitle": "Chorionic Villus Sampling  <span class=\"cs_accent_color\">(CVS)</span>",
     "title": "Chorionic Villus Sampling (CVS)",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/ChorionicVillusSampling.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -4060,7 +4060,7 @@
   "amniocentesis": {
     "uspTitle": "Amniocentesis  <span class=\"cs_accent_color\">Testing</span>",
     "title": "Amniocentesis",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/AmniocentesisTesting.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -4149,7 +4149,7 @@
   "karyotyping": {
     "uspTitle": "Karyotyping  <span class=\"cs_accent_color\">Testing</span>",
     "title": "Karyotyping",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/Karyotyping.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -4223,7 +4223,7 @@
   "microarray": {
     "uspTitle": "Microarray  <span class=\"cs_accent_color\">Testing</span>",
     "title": "Microarray",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/MicroarrayTesting.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -4285,7 +4285,7 @@
   "hla-matching": {
     "uspTitle": "HLA   <span class=\"cs_accent_color\">Matching in IVF</span>",
     "title": "HLA Matching in IVF",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/HLAMatching.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
