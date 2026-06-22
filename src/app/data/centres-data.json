@@ -1550,12 +1550,12 @@
       ],
       "doctors": [
         {
-          "name": "Dr. Preeti",
+          "name": "Dr. Adrija Ghosal",
           "subtitle": "IVF Specialist",
-          "image": "/assets/img/Doctors/preeti.jpg",
+          "image": "/assets/img/Doctors/adrija.png",
           "experience": "8+ Years",
-          "location": "Kanpur-Uttarpradesh",
-          "slug": "dr-preeti"
+          "location": "Kanpur-UttarPradesh",
+          "slug": "dr-adrija-ghosal"
         }
       ],
       "timing": "9:00 AM to 6:00 PM",

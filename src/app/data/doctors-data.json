@@ -436,54 +436,7 @@
     ],
     "newSlug": "dr-britika-prakash-ivf-specialist"
   },
-  {
-    "slug": "dr-preeti",
-    "uspTitle": "Best IVF Specialist in Kanpur <span class=\"cs_accent_color\">Dr. Preeti</span>",
-    "headerImage": "/assets/img/Doctor-Headers/preeti.webp",
-    "name": "Dr. Preeti",
-    "subtitle": "Advanced IVF & Fertility Specialist",
-    "image": "/assets/img/Doctors/preeti.jpg",
-    "description": [
-      "Dr. Preeti is a skilled and compassionate Gynaecologist & Obstetrician with more than 6 years of clinical experience, who specializes in high-risk pregnancies, laparoscopic & infertility gynaecological surgery. She is a gold medalist in MS obstetrics & Gynaecology as she combines scientific precision with a patient-centric, empathetic approach. Her professional journey includes successful tenures at well-reputed government medical colleges and hospitals across Uttar Pradesh, where she consistently delivered great surgical and patient care outcomes."
-    ],
-    "location": "Kanpur, Uttarpradesh",
-    "email": "drpreeti@seedsofinnocens.com",
-    "qualification": "MBBS, MS (Obstetrics & Gynecology), Certificate in Laparoscopic Surgery",
-    "specialization": "IVF, Ovulatory Disorders, PCOS Management",
-    "experience": "6+ Years",
-    "workExperience": [
-      "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine, Diploma and Training in Ultrasonography (USG), and Fellowship in Laparoscopy."
-    ],
-    "education": [
-      "MS – Obstetrics & Gynaecology (Gold Medalist) – UPUMS, Saifai",
-      "MBBS – GSVM Medical College, Kanpur",
-      "Diploma in Ultrasound Imaging – Bilmed, New Delhi",
-      "Certificate in Laparoscopic Surgery – Saidham Academy, Maharashtra",
-      "Critical Care in Obstetrics – Medvarsity"
-    ],
-    "awards": [
-      "Gold Medalist in MS Obstetrics and Gynaecology"
-    ],
-    "progressBars": [
-      {
-        "label": "IVF Procedures",
-        "percentage": 85
-      },
-      {
-        "label": "Patient Satisfaction",
-        "percentage": 92
-      },
-      {
-        "label": "Success Rate",
-        "percentage": 75
-      },
-      {
-        "label": "Clinical Expertise",
-        "percentage": 83
-      }
-    ],
-    "newSlug": "dr-preeti-ivf-specialist"
-  },
+ 
   {
     "slug": "dr-varkha-chandra",
     "uspTitle": "Best IVF Specialist in Meerut <br /> <span class=\"cs_accent_color\">Dr. Varkha Chandra</span>",
@@ -1063,7 +1016,7 @@
   },
   {
     "slug": "dr-adrija-ghosal",
-    "uspTitle": " Best IVF Specialist in Kolkata <br /> <span class=\"cs_accent_color\">Dr. Adrija Ghosal</span>",
+    "uspTitle": " Best IVF Specialist in Kolkata & Kanpur <span class=\"cs_accent_color\">Dr. Adrija Ghosal</span>",
     "headerImage": "/assets/img/Doctor-Headers/adrija.webp",
     "name": "Dr. Adrija Ghosal",
     "subtitle": "Holistic Fertility Care Expert",
@@ -1071,7 +1024,7 @@
     "description": [
       "Dedicated and highly experienced gynaecologist & infertility specialist with good expertise in reproductive medicine & women’s health, Dr. Adrija Ghosal has experience in guiding couples in achieving their parenthood dreams with the right blend of medical knowledge & care.  She is passionate about breaking the myths associated with infertility & spreading more awareness & offering patient-centric solutions that would surely bring positive results. Also, she is well known for her empathetic & caring nature & efficiency in work. She believes in the importance of continuous learning & contributing to the field of gynaecology & infertility by creating more awareness & conducting infertility camps."
     ],
-    "location": "Kolkata-Westbengal",
+    "location": "Kolkata-Westbengal, Kanpur-Uttar Pradesh",
     "email": "dradrijaghosal@seedsofinnocens.com",
     "qualification": "MBBS (Honours), DNB (Obstetrics & Gynecology), FMAS",
     "specialization": "IVF, Complex Infertility Cases, Advanced Reproductive Techniques",

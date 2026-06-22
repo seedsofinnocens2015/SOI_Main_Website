@@ -214,6 +214,19 @@ const BlogDetailPage = async ({ params }) => {
                     }}
                     dangerouslySetInnerHTML={{ __html: accentHeadingsInHtml(blog.content) }}
                   />
+                  <style>
+                    {`
+                      
+                      .cs_blog_body a {
+                        color: #072f92;
+                        font-weight: 700;
+                      }
+
+                      .cs_blog_body a:hover {
+                        color: #df3655;
+                      }
+                    `}
+                  </style>
                 </div>
               </article>
             </div>

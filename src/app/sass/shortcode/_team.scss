@@ -1,3 +1,930 @@
+// /*--------------------------------------------------------------
+//   19. Team
+// ----------------------------------------------------------------*/
+// .cs_team.cs_style_1 {
+//   width: 100%;
+//   max-width: 320px;
+//   height: 415px;
+//   margin: 0 auto;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 24px;
+//   position: relative;
+//   border-radius: 10px;
+//   overflow: hidden;
+
+//   @media (max-width: 1400px) {
+//     height: 360px;
+//   }
+
+//   @media (max-width: 1199px) {
+//     height: 400px;
+//   }
+
+//   @media (max-width: 991px) {
+//     height: 415px;
+//   }
+
+//   .cs_team_thumbnail {
+//     position: relative;
+//     z-index: 1;
+//     transition: all 0.6s ease;
+//     display: block;
+
+//     img {
+//       width: 100%;
+//       height: auto;
+//       object-fit: cover;
+//     }
+//   }
+
+//   .cs_team_bio {
+//     width: 100%;
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     transform: translateY(20px);
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     opacity: 0;
+//     transition: all 0.4s ease;
+//   }
+
+//   .cs_team_title a {
+//     font-size: 20px;
+//     color: var(--white);
+//   }
+
+//   .cs_team_title button {
+//     font-size: 20px;
+//     color: var(--white);
+//   }
+
+//   .cs_team_subtitle {
+//     margin-bottom: 10px;
+//     color: var(--white);
+//     width: 100%;
+//     text-align: center;
+//     padding: 0 10px;
+//     line-height: 1.35;
+
+//     &_line {
+//       display: block;
+//     }
+
+//     &--long {
+//       font-size: 12px;
+//       line-height: 1.3;
+//     }
+//   }
+
+//   .cs_team_info_items {
+//     margin-top: 12px;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 8px;
+//     align-items: center;
+//     width: 100%;
+//   }
+
+//   .cs_team_info_item {
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+//     justify-content: center;
+    
+//     i {
+//       color: var(--white);
+//       font-size: 14px;
+//       opacity: 0.9;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//     }
+
+//     span {
+//       font-size: 14px;
+//       color: var(--white);
+//       font-weight: 400;
+//       line-height: 1.4;
+//       opacity: 0.95;
+//     }
+//   }
+
+//   .cs_social_btns.cs_style_1 a {
+//     background-color: var(--white);
+//     color: var(--blue-color);
+
+//     &:hover {
+//       background-color: var(--accent-color);
+//       color: var(--white);
+
+//       &.cs_blue_hover {
+//         background-color: var(--blue-color);
+//       }
+//     }
+//   }
+
+//   .cs_team_shape {
+//     width: 330px;
+//     height: 270px;
+//     position: absolute;
+//     top: -250px;
+//     right: -240px;
+//     transform: rotate(-30deg);
+//     transition: all 0.6s ease;
+
+//     &.cs_blue_bg {
+//       width: 160px;
+//       height: 330px;
+//       top: -125px;
+//       left: -100px;
+//       transform: rotate(-48deg);
+//     }
+//   }
+
+//   &:hover {
+//     .cs_team_thumbnail {
+//       width: 178px;
+//       height: 178px;
+//       border-radius: 50%;
+//       overflow: hidden;
+//     }
+
+//     .cs_team_bio {
+//       position: initial;
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+
+//     .cs_team_shape {
+//       top: -170px;
+//       right: -110px;
+
+//       &.cs_blue_bg {
+//         top: -135px;
+//         left: -50px;
+//       }
+//     }
+//   }
+
+//   // Minimalistic Doctor Card Style
+//   &.cs_team_minimalistic {
+//     width: 280px;
+//     max-width: 280px;
+//     height: auto;
+//     min-height: 400px;
+//     background-color: #ffffff;
+//     border: 1px solid #eaeaea;
+//     border-radius: 14px;
+//     padding: 0;
+//     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.01);
+//     overflow: hidden;
+//     gap: 0;
+//     display: flex;
+//     flex-direction: column;
+
+//     @media (max-width: 1400px) {
+//       width: 260px;
+//       max-width: 260px;
+//     }
+
+//     @media (max-width: 1199px) {
+//       width: 260px;
+//       max-width: 260px;
+//     }
+
+//     @media (max-width: 991px) {
+//       width: 280px;
+//       max-width: 280px;
+//     }
+
+//     @media (max-width: 575px) {
+//       width: 100%;
+//       max-width: 100%;
+//     }
+
+//     .cs_team_thumbnail {
+//       width: 100%;
+//       height: 300px;
+//       display: block;
+//       overflow: hidden;
+//       border-radius: 14px 14px 0 0;
+//       position: relative;
+//       background-color: #f5f5f5;
+
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         object-position: center top;
+//         border-radius: 14px 14px 0 0;
+//         transition: transform 0.4s ease;
+//       }
+//     }
+
+//     .cs_team_bio {
+//       width: 100%;
+//       position: static;
+//       transform: none;
+//       opacity: 1;
+//       padding: 22px 20px 20px;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       gap: 6px;
+//       text-align: center;
+//       flex: 1;
+//       justify-content: flex-start;
+//     }
+
+//     .cs_team_title {
+//       margin-bottom: 6px;
+
+//       a {
+//         font-size: 19px;
+//         font-weight: 600;
+//         color: #1a1a1a;
+//         text-decoration: none;
+//         transition: color 0.3s ease;
+//         line-height: 1.3;
+
+//         &:hover {
+//           color: var(--accent-color);
+//         }
+//       }
+//     }
+
+//     .cs_team_subtitle {
+//       font-size: 14px;
+//       color: #666666;
+//       margin-bottom: 6px;
+//       line-height: 1.4;
+//       width: 100%;
+//       text-align: center;
+
+//       &_line {
+//         display: block;
+//       }
+
+//       &--long {
+//         font-size: 12px;
+//         line-height: 1.3;
+//       }
+//     }
+
+//     .cs_team_experience {
+//       font-size: 13px;
+//       color: #888888;
+//       margin: 0 0 14px 0;
+//       line-height: 1.4;
+//     }
+
+//     .cs_team_view_profile {
+//       display: inline-block;
+//       padding: 10px 24px;
+//       border: 1.5px solid #eaeaea;
+//       border-radius: 6px;
+//       font-size: 13px;
+//       font-weight: 500;
+//       color: #1a1a1a;
+//       text-decoration: none;
+//       transition: all 0.3s ease;
+//       margin-top: auto;
+//       width: fit-content;
+
+//       &:hover {
+//         border-color: var(--accent-color);
+//         color: var(--accent-color);
+//         background-color: #fff5f5;
+//         transform: translateY(-1px);
+//       }
+//     }
+
+//     // Hide red shapes
+//     .cs_team_shape {
+//       display: none;
+//     }
+
+//     &:hover {
+//       transform: translateY(-4px) scale(1.02);
+//       box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+//       border-color: #d0d0d0;
+
+//       .cs_team_thumbnail {
+//         img {
+//           transform: scale(1.08);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .cs_team_bg_dark {
+//   width: 100%;
+//   height: 45%;
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   display: flex;
+//   justify-content: center;
+
+//   .cs_team_bg_white {
+//     width: 100%;
+//     max-width: 1400px;
+//     height: 170px;
+//     position: absolute;
+//     top: -85px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+// }
+
+// .cs_doctors_grid.cs_style_1 {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   gap: 30px;
+
+//   .cs_team_subtitle {
+//     text-align: center;
+//     width: 100%;
+//   }
+
+//   .cs_team.cs_style_1 {
+//     width: calc(25% - 22.5px);
+//     max-width: 302px;
+//     margin: 0;
+
+//     @media (max-width: 1199px) {
+//       width: calc(33.333% - 20px);
+//     }
+
+//     @media (max-width: 991px) {
+//       width: calc(50% - 15px);
+//     }
+
+//     @media (max-width: 767px) {
+//       width: 100%;
+//       max-width: 100%;
+//     }
+//   }
+// }
+
+// /*-------------------------------------------
+//  Doctor Details Page Styling
+// ----------------------------------------------*/
+// .cs_doctor_details_wrapper {
+//   width: 100%;
+
+//   .cs_progress_bar_wrapper {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: 20px 70px;
+//     .cs_progress_head,
+//     .cs_progress {
+//       max-width: 100%;
+//     }
+
+//     @media (max-width: 767px) {
+//       grid-template-columns: repeat(1, 1fr);
+//     }
+//   }
+// }
+
+// .cs_doctor_details_thumbnail {
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 15px;
+//   overflow: hidden;
+
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+
+//   .cs_doctor_thumbnail_shape1,
+//   .cs_doctor_thumbnail_shape2 {
+//     width: 160px;
+//     height: 160px;
+//     border-radius: 50%;
+//     transform: scale(0.7);
+//     opacity: 0.5;
+//     animation: scale-shape 5s linear infinite;
+//   }
+
+//   .cs_doctor_thumbnail_shape1 {
+//     left: -70px;
+//     top: -100px;
+//     z-index: 1;
+//   }
+
+//   .cs_doctor_thumbnail_shape2 {
+//     left: -100px;
+//     top: -40px;
+//     animation-delay: 2s;
+//   }
+// }
+
+// .cs_doctor_details {
+//   width: 100%;
+//   padding-left: 60px;
+
+//   @media (max-width: 1199px) {
+//     padding-left: 0;
+//   }
+//   @media (max-width: 991px) {
+//     max-width: 100%;
+//   }
+
+//   .cs_doctor_info_header {
+//     margin-bottom: 17px;
+//   }
+
+//   .cs_doctor_title {
+//     font-size: 22px;
+//     margin-bottom: 3px;
+//   }
+
+//   .cs_doctor_info_wrapper {
+//     width: 100%;
+//     border: 1px solid var(--border-color);
+
+//     @media (max-width: 991px) {
+//       max-width: 100%;
+//     }
+//   }
+
+//   .cs_doctor_info_row {
+//     position: relative;
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     border-bottom: 1px solid var(--border-color);
+
+//     @media (max-width: 575px) {
+//       grid-template-columns: repeat(1, 1fr);
+//     }
+
+//     &:last-child {
+//       border-bottom: 0;
+//     }
+
+//     &::after {
+//       content: '';
+//       width: 1px;
+//       height: 100%;
+//       background-color: var(--border-color);
+//       position: absolute;
+//       left: 50%;
+//       top: 0;
+//       transform: translateX(-50%);
+
+//       @media (max-width: 575px) {
+//         display: none;
+//       }
+//     }
+//   }
+
+//   .cs_doctor_info_col {
+//     padding: 5px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     @media (max-width: 575px) {
+//       &:first-child {
+//         border-bottom: 1px solid var(--border-color);
+//       }
+//     }
+//   }
+// }
+
+// @keyframes scale-shape {
+//   50% {
+//     transform: scale(1);
+//     opacity: 1;
+//   }
+// }
+
+// /* New Doctor Details Layout Styles */
+// .cs_back_link {
+//   display: inline-block;
+//   margin-bottom: 30px;
+//   color: #df3655;
+//   text-decoration: none;
+//   font-size: 16px;
+//   font-weight: 500;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     color: var(--accent-color);
+//     text-decoration: underline;
+//   }
+// }
+
+// .cs_doctor_info_card {
+//   background-color: #ffffff;
+//   border-radius: 14px;
+//   padding: 30px;
+//   margin-bottom: 40px;
+
+//   @media (max-width: 991px) {
+//     padding: 20px;
+//   }
+// }
+
+// .cs_doctor_info_header {
+//   margin-bottom: 25px;
+//   text-align: center;
+
+//   .cs_doctor_title {
+//     font-size: clamp(28px, 3vw, 36px);
+//     font-weight: 700;
+//     color: #000000;
+//     margin-bottom: 8px;
+//     line-height: 1.3;
+//   }
+
+//   .cs_doctor_subtitle {
+//     font-size: 18px;
+//     color: #666;
+//     margin-bottom: 0;
+//     font-weight: 500;
+//     width: 100%;
+//     text-align: center;
+//     line-height: 1.4;
+
+//     &_line {
+//       display: block;
+//     }
+
+//     &--long {
+//       font-size: 15px;
+//       line-height: 1.35;
+//     }
+//   }
+// }
+
+// .cs_doctor_info_wrapper {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   gap: 20px;
+
+//   @media (max-width: 575px) {
+//     grid-template-columns: repeat(1, 1fr);
+//   }
+
+//   .cs_iconbox {
+//     padding: 15px;
+//     background-color: #f8f9fa;
+//     border-radius: 10px;
+//     transition: all 0.3s ease;
+
+//     &:hover {
+//       color: #df3655;
+//       transform: translateY(-2px);
+//     }
+
+//     .cs_iconbox_icon {
+//       color: #000000;
+//       font-size: 22px;
+//       margin-bottom: 8px;
+//     }
+
+//     .cs_iconbox_title {
+//       font-size: 13px;
+//       font-weight: 600;
+//       color: #666;
+//       margin-bottom: 5px;
+//       text-transform: uppercase;
+//       letter-spacing: 0.5px;
+//     }
+
+//     .cs_iconbox_subtitle {
+//       font-size: 15px;
+//       color: var(--heading-color);
+//       font-weight: 500;
+//       line-height: 1.5;
+//     }
+//   }
+// }
+
+// .cs_about_section,
+// .cs_performance_stats,
+// .cs_work_experience,
+// .cs_education {
+//   background-color: #ffffff;
+//   border-radius: 14px;
+//   padding: 30px;
+//   margin-bottom: 30px;
+
+//   @media (max-width: 991px) {
+//     padding: 20px;
+//   }
+// }
+
+// .cs_section_title_small {
+//   font-size: 28px;
+//   font-weight: 700;
+//   color: #000000;
+//   margin-bottom: 20px;
+//   position: relative;
+//   padding-bottom: 15px;
+// }
+
+// .cs_section_header {
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
+//   margin-bottom: 20px;
+
+//   .cs_section_icon {
+//     color: #df3655;
+//     font-size: 22px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
+
+// .cs_progress_bar_wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 25px;
+// }
+
+// .cs_progress_item {
+//   .cs_progress_head {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 10px;
+
+//     span {
+//       font-size: 15px;
+//       font-weight: 600;
+//       color: var(--heading-color);
+
+//       &:last-child {
+//         color: #df3655;
+//         font-size: 16px;
+//       }
+//     }
+//   }
+
+//   .cs_progress {
+//     width: 100%;
+//     height: 10px;
+//     background-color: #e8e8e8;
+//     border-radius: 10px;
+//     overflow: hidden;
+//     position: relative;
+//   }
+
+//   .cs_progress_in {
+//     height: 100%;
+//     background: linear-gradient(90deg, #df3655 0%, #ff6b6b 100%);
+//     border-radius: 10px;
+//     transition: width 0.6s ease;
+//     position: relative;
+
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       right: 0;
+//       bottom: 0;
+//       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+//       animation: shimmer 2s infinite;
+//     }
+//   }
+// }
+
+// @keyframes shimmer {
+//   0% {
+//     transform: translateX(-100%);
+//   }
+//   100% {
+//     transform: translateX(100%);
+//   }
+// }
+
+// .cs_education_list {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+
+//   li {
+//     margin-bottom: 15px;
+//     padding-left: 25px;
+//     position: relative;
+//     line-height: 1.8;
+//     color: var(--body-color);
+//     font-size: 15px;
+
+//     .cs_education_number {
+//       position: absolute;
+//       left: 0;
+//       color: #df3655;
+//       font-weight: 700;
+//       font-size: 16px;
+//     }
+//   }
+// }
+
+// /* Sidebar Styles */
+// .cs_sidebar_sticky_wrapper {
+//   position: sticky;
+//   top: 100px;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 30px;
+
+//   @media (max-width: 991px) {
+//     position: static;
+//   }
+// }
+
+// .cs_appointment_card {
+//   background: #ffffff;
+//   color: var(--body-color, #1a1a1a);
+//   padding: 35px;
+//   border-radius: 14px;
+//   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+//   border: 1px solid #e8e8e8;
+
+//   @media (max-width: 991px) {
+//     margin-bottom: 0;
+//   }
+
+//   h3 {
+//     font-size: 26px;
+//     font-weight: 700;
+//     margin-bottom: 15px;
+//     color: #000000;
+//   }
+
+//   p {
+//     margin-bottom: 25px;
+//     line-height: 1.7;
+//     font-size: 15px;
+//     color: var(--body-color, #1a1a1a);
+//   }
+
+//   .cs_appointment_btn {
+//     display: block;
+//     padding: 14px 30px;
+//     background-color: #df3655;
+//     color: #ffffff;
+//     text-decoration: none;
+//     border-radius: 8px;
+//     font-weight: 600;
+//     text-align: center;
+//     width: 100%;
+//     transition: all 0.3s ease;
+//     font-size: 16px;
+//     border: 2px solid #df3655;
+
+//     &:hover {
+//       background-color: #c92d4b;
+//       color: #ffffff;
+//       border-color: #c92d4b;
+//       transform: translateY(-2px);
+//       box-shadow: 0px 6px 20px rgba(223, 54, 85, 0.35);
+//     }
+//   }
+// }
+
+// .cs_other_doctors {
+//   background-color: #ffffff;
+//   border-radius: 14px;
+//   padding: 30px;
+//   border: 1px solid #e8e8e8;
+//   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+//   flex-shrink: 0;
+
+//   .cs_sidebar_title {
+//     font-size: 24px;
+//     font-weight: 700;
+//     color: #000000;
+//     margin-bottom: 25px;
+//     position: relative;
+//     padding-bottom: 15px;
+//   }
+// }
+// .cs_doctor_name {
+//   color: #000000;
+//   font-weight: 600;
+//   font-size: 16px;
+//   cursor: pointer;
+
+//   &:hover {
+//     text-decoration: underline;
+//   }
+  
+// }
+
+// .cs_other_doctors_list {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+// }
+
+// .cs_other_doctor_item {
+//   display: flex;
+//   align-items: center;
+//   gap: 15px;
+//   text-decoration: none;
+//   color: inherit;
+//   padding: 15px;
+//   border-radius: 12px;
+//   transition: all 0.3s ease;
+//   border: 1px solid transparent;
+
+//   &:hover {
+//     background-color: #f8f9fa;
+//     border-color: #e8e8e8;
+//     transform: translateX(5px);
+//     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+//   }
+
+//   .cs_other_doctor_image {
+//     width: 120px;
+//     height: 80px;
+//     border-radius: 8%;
+//     object-fit: cover;
+//     flex-shrink: 0;
+//     border: 3px solid #f0f0f0;
+//     transition: all 0.3s ease;
+//   }
+
+//   &:hover .cs_other_doctor_image {
+//     border-color: #df3655;
+//   }
+
+// }
+
+// .cs_other_doctor_info {
+//   flex: 1;
+
+//   h4 {
+//     font-size: 12px;
+//     font-weight: 600;
+//     color: var(--heading-color);
+//     margin-bottom: 5px;
+//     transition: color 0.3s ease;
+//   }
+
+//   .cs_other_doctor_item:hover h4 {
+//     color: #df3655;
+//   }
+
+//   .cs_other_doctor_profession {
+//     font-size: 14px;
+//     color: #666;
+//     margin-bottom: 4px;
+//     font-weight: 500;
+//   }
+
+//   .cs_other_doctor_experience {
+//     font-size: 12px;
+//     color: #999;
+//     margin: 0;
+//   }
+// }
+
+// .cs_doctor_details_thumbnail {
+//   width: 100%;
+//   border-radius: 14px;
+//   overflow: hidden;
+
+//   img {
+//     width: 100%;
+//     height: auto;
+//     display: block;
+//     border-radius: 14px;
+//   }
+// }
+
+// .cs_youtube_video {
+//   margin-top: 40px;
+
+//   .cs_section_title_small {
+//     margin-bottom: 20px;
+//   }
+
+//   /* Slider layout + dots match NewsMedia / BestIVFCentre (see _slider.scss, _post.scss) */
+//   .cs_slider {
+//     margin-bottom: 8px;
+//   }
+// }
+
 /*--------------------------------------------------------------
   19. Team
 ----------------------------------------------------------------*/
@@ -855,9 +1782,7 @@
   }
 
   .cs_other_doctor_image {
-    width: 120px;
-    height: 80px;
-    border-radius: 8%;
+    border-radius: 10%;
     object-fit: cover;
     flex-shrink: 0;
     border: 3px solid #f0f0f0;
@@ -867,14 +1792,13 @@
   &:hover .cs_other_doctor_image {
     border-color: #df3655;
   }
-
 }
 
 .cs_other_doctor_info {
   flex: 1;
 
   h4 {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--heading-color);
     margin-bottom: 5px;

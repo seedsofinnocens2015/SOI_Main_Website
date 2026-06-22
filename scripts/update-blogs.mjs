@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "right-and-left-ovary-normal-size-in-cm",
-    title: "Normal Ovary Size in Women: Right and Left Ovary Guide",
-    excerpt: "Right and Left Ovary Normal Size in Cm is normal, but there are some key differences. The normal size of the ovary is between 2.5 to 4.5 cm in length and 1.5 to 2.5 cm in width. The ovary is located on the side of the uterus and is responsible for producing eggs and hormones.",
+    id: "bicornate-uterus",
+    title: "Bicornuate Uterus: Symptoms, Diagnosis, Treatment & Fertility Outcomes",
+    excerpt: "A bicornuate uterus, commonly referred to as a heart-shaped uterus, occurs when the upper part of the uterus, namely the uterine horns, forms as a two-horned structure despite having a single united uterine cavity.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Right and Left Ovary Normal Size in Cm.png",
-    date: "June 19, 2026",
+    image: "/assets/img/Blogs/Bicornuate Uterus.png",
+    date: "June 20, 2026",
     author: "admin",
-    category: "Treatment Guides",
+    category: "Women's Health",
     readTime: "15 min read",
-    slug: "right-and-left-ovary-normal-size-in-cm"
+    slug: "bicornate-uterus"
   }
 ];
 
@@ -167,3 +167,69 @@ function main() {
 }
 
 main();
+
+
+
+
+
+
+
+// {
+
+//   "slug": "dr-preeti",
+//   "uspTitle": "Best IVF Specialist in Kanpur <span class=\"cs_accent_color\">Dr. Preeti</span>",
+//   "headerImage": "/assets/img/Doctor-Headers/preeti.webp",
+//   "name": "Dr. Preeti",
+//   "subtitle": "Advanced IVF & Fertility Specialist",
+//   "image": "/assets/img/Doctors/preeti.jpg",
+//   "description": [
+//     "Dr. Preeti is a skilled and compassionate Gynaecologist & Obstetrician with more than 6 years of clinical experience, who specializes in high-risk pregnancies, laparoscopic & infertility gynaecological surgery. She is a gold medalist in MS obstetrics & Gynaecology as she combines scientific precision with a patient-centric, empathetic approach. Her professional journey includes successful tenures at well-reputed government medical colleges and hospitals across Uttar Pradesh, where she consistently delivered great surgical and patient care outcomes."
+//   ],
+//   "location": "Kanpur, Uttarpradesh",
+//   "email": "drpreeti@seedsofinnocens.com",
+//   "qualification": "MBBS, MS (Obstetrics & Gynecology), Certificate in Laparoscopic Surgery",
+//   "specialization": "IVF, Ovulatory Disorders, PCOS Management",
+//   "experience": "6+ Years",
+//   "workExperience": [
+//     "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine, Diploma and Training in Ultrasonography (USG), and Fellowship in Laparoscopy."
+//   ],
+//   "education": [
+//     "MS – Obstetrics & Gynaecology (Gold Medalist) – UPUMS, Saifai",
+//     "MBBS – GSVM Medical College, Kanpur",
+//     "Diploma in Ultrasound Imaging – Bilmed, New Delhi",
+//     "Certificate in Laparoscopic Surgery – Saidham Academy, Maharashtra",
+//     "Critical Care in Obstetrics – Medvarsity"
+//   ],
+//   "awards": [
+//     "Gold Medalist in MS Obstetrics and Gynaecology"
+//   ],
+//   "progressBars": [
+//     {
+//       "label": "IVF Procedures",
+//       "percentage": 85
+//     },
+//     {
+//       "label": "Patient Satisfaction",
+//       "percentage": 92
+//     },
+//     {
+//       "label": "Success Rate",
+//       "percentage": 75
+//     },
+//     {
+//       "label": "Clinical Expertise",
+//       "percentage": 83
+//     }
+//   ],
+//   "newSlug": "dr-preeti-ivf-specialist"
+// },
+
+
+// {
+//   "name": "Dr. Preeti",
+//   "subtitle": "IVF Specialist",
+//   "image": "/assets/img/Doctors/preeti.jpg",
+//   "experience": "8+ Years",
+//   "location": "Kanpur-Uttarpradesh",
+//   "slug": "dr-preeti"
+// }
