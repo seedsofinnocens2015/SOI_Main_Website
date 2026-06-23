@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "bicornate-uterus",
-    title: "Bicornuate Uterus: Symptoms, Diagnosis, Treatment & Fertility Outcomes",
-    excerpt: "A bicornuate uterus, commonly referred to as a heart-shaped uterus, occurs when the upper part of the uterus, namely the uterine horns, forms as a two-horned structure despite having a single united uterine cavity.",
+    id: "implantation-bleeding-vs-period",
+    title: "Implantation Bleeding vs. Period? Symptoms & Key Differences",
+    excerpt: "Implantation bleeding is normally the earliest indication that you are pregnant, and it happens when a fertilized egg implants itself into the wall of the uterus. How does implantation bleeding occur? During the process of embedding the embryo into the wall of the uterus, the rupture of minor blood vessels may result in bleeding.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Bicornuate Uterus.png",
-    date: "June 20, 2026",
+    image: "/assets/img/Blogs/Implantation Bleeding.png",
+    date: "June 22, 2026",
     author: "admin",
-    category: "Women's Health",
-    readTime: "15 min read",
-    slug: "bicornate-uterus"
+    category: "Pregnancy",
+    readTime: "12 min read",
+    slug: "implantation-bleeding-vs-period"
   }
 ];
 

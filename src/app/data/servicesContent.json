@@ -2905,8 +2905,7 @@
           "paragraphs": [
             "Genetic testing plays a crucial role in modern fertility treatment, helping to identify genetic abnormalities that may affect embryo development, pregnancy outcomes, and the health of future children.",
             "At Seeds of Innocence, we offer comprehensive genetic testing services to help couples make informed decisions about their fertility journey."
-          ],
-          "sideImage": "/assets/img/recent_post2webp"
+          ]
         },
         {
           "heading": "Types of Genetic Testing",
@@ -3021,7 +3020,7 @@
   "genetic-factors": {
     "uspTitle": "Genetic  <span class=\"cs_accent_color\">Factors in Infertility</span>",
     "title": "Genetic Factors in Infertility",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/GeneticFactorsInfertility.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -3992,7 +3991,7 @@
   "difference-between-pgt-a-and-pgt-m": {
     "uspTitle": "Difference between <span class=\"cs_accent_color\">PGT A & PGT-M/SR</span>",
     "title": "Difference between PGT A & PGT-M/SR",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/DifferencebetweenPGTA&PGT.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -4784,7 +4783,7 @@
   "high-risk-pregnancy": {
     "uspTitle": "High-Risk   <span class=\"cs_accent_color\">Pregnancy</span>",
     "title": "High-Risk Pregnancy",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/High-RiskPregnancy.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -4985,7 +4984,7 @@
   "fetal-reduction": {
     "uspTitle": "Fetal   <span class=\"cs_accent_color\">Reduction</span>",
     "title": "Fetal Reduction",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/FetalReduction.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -7240,7 +7239,7 @@
     "slug": "maternal-and-fetal-medicine",
     "category": "diagnostic-test",
     "description": "Maternal and Fetal Medicine (MFM) at Seeds of Innocence provides expert care for high-risk pregnancies, prenatal diagnosis, and fetal therapy. Comprehensive MFM services for mother and baby.",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/MaternalandFetalMedicine.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/MFM Scans & Diagnostics1.png",
