@@ -177,7 +177,8 @@ export default async function RootLayout({ children }) {
         <Script id="phone-input-limit" strategy="lazyOnload">
           {`(function () {
   var phoneFields = ['phone', 'mobile', 'contact', 'contactno', 'contact_no', 'contactnumber'];
-  var phoneErrorMessage = 'Phone number must be exactly 10 digits.';
+  var phoneLengthErrorMessage = 'Phone number must be exactly 10 digits.';
+  var phoneStartErrorMessage = 'Invalid number';
 
   function isPhoneInput(target) {
     if (!(target instanceof HTMLInputElement)) return false;
@@ -195,7 +196,6 @@ export default async function RootLayout({ children }) {
     errorEl.style.fontSize = '12px';
     errorEl.style.marginTop = '6px';
     errorEl.style.display = 'none';
-    errorEl.textContent = phoneErrorMessage;
     input.insertAdjacentElement('afterend', errorEl);
     return errorEl;
   }
@@ -203,7 +203,14 @@ export default async function RootLayout({ children }) {
   function syncPhoneError(input) {
     var errorEl = getOrCreateErrorEl(input);
     var digits = input.value.replace(/\\D/g, '');
-    var shouldShow = digits.length > 0 && digits.length !== 10;
+    var errorMessage = '';
+    if (digits.length > 0 && !/^[6-9]/.test(digits)) {
+      errorMessage = phoneStartErrorMessage;
+    } else if (digits.length > 0 && digits.length !== 10) {
+      errorMessage = phoneLengthErrorMessage;
+    }
+    errorEl.textContent = errorMessage;
+    var shouldShow = errorMessage !== '';
     errorEl.style.display = shouldShow ? 'block' : 'none';
     return shouldShow;
   }
@@ -214,7 +221,7 @@ export default async function RootLayout({ children }) {
 
     target.maxLength = 10;
     target.inputMode = 'numeric';
-    target.setAttribute('pattern', '[0-9]{10}');
+    target.setAttribute('pattern', '[6-9][0-9]{9}');
 
     var digits = target.value.replace(/\\D/g, '').slice(0, 10);
     if (target.value !== digits) {
@@ -253,6 +260,15 @@ export default async function RootLayout({ children }) {
   });
 })();`}
         </Script>
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+  {`
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xbictqalyk");
+  `}
+</Script>
       </head>
       <body className={`${inter.variable}`}>
         <noscript>

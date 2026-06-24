@@ -9,12 +9,21 @@ import Link from 'next/link';
 
 const APPOINTMENT_SUBMITTED_KEY = 'soi_appointment_submitted';
 const centresData = centresAllData.centres;
+const INVALID_PHONE_MESSAGE = 'Invalid number';
+
+const getPhoneError = (phone) => {
+  const digits = String(phone || '').replace(/\D/g, '');
+  if (!digits) return '';
+  if (!/^[6-9]/.test(digits)) return INVALID_PHONE_MESSAGE;
+  return '';
+};
 
 const GlobalAppointmentPopup = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [phoneError, setPhoneError] = useState('');
 
   useEffect(() => {
     if (!pathname) return;
@@ -63,9 +72,16 @@ const GlobalAppointmentPopup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
     const formData = new FormData(e.target);
+    const nextPhoneError = getPhoneError(formData.get('phone'));
+    setPhoneError(nextPhoneError);
+    if (nextPhoneError) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
     const dataObj = {
       name: formData.get('name'),
       phone: formData.get('phone'),
@@ -142,7 +158,11 @@ const GlobalAppointmentPopup = () => {
                 placeholder="Phone Number *"
                 required
                 className="cs_form_field"
+                onChange={(e) => setPhoneError(getPhoneError(e.target.value))}
+                onBlur={(e) => setPhoneError(getPhoneError(e.target.value))}
+                pattern="[6-9][0-9]{9}"
               />
+              {/* {phoneError && <div className="soi_popup_phone_error">{phoneError}</div>} */}
             </div>
             <div className="cs_form_group">
               <select
@@ -239,6 +259,12 @@ const GlobalAppointmentPopup = () => {
 
         .soi_popup_content .cs_form_group {
           margin-bottom: 14px;
+        }
+
+        .soi_popup_phone_error {
+          color: #c33;
+          font-size: 12px;
+          margin-top: 6px;
         }
 
         .soi_popup_content .cs_form_field {

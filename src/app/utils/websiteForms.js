@@ -37,6 +37,9 @@ function getInvalidPhoneError(payload = {}) {
   if (!phoneKey) return '';
 
   const phoneValue = payload[phoneKey].replace(/\D/g, '');
+  if (phoneValue.length > 0 && !/^[6-9]/.test(phoneValue)) {
+    return 'Invalid number';
+  }
   if (phoneValue.length !== 10) {
     return 'Phone number must be exactly 10 digits.';
   }

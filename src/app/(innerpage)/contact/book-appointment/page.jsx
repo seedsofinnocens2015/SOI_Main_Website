@@ -10,6 +10,14 @@ import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 import centresAllData from '@/app/data/centres-data.json';
 const centresData = centresAllData.centres;
+const INVALID_PHONE_MESSAGE = 'Invalid number';
+
+const getPhoneError = (phone) => {
+  const digits = String(phone || '').replace(/\D/g, '');
+  if (!digits) return '';
+  if (!/^[6-9]/.test(digits)) return INVALID_PHONE_MESSAGE;
+  return '';
+};
 
 // const ivfContentData = {
 //   sections: [
@@ -27,6 +35,7 @@ const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [formError, setFormError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
 
   const [formData, setFormData] = useState({
     name: '',
@@ -52,12 +61,17 @@ const Page = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
+    if (name === 'phone') {
+      setPhoneError(getPhoneError(value));
+    }
     setFormError('');
   };
 
   const validateForm = () => {
     if (!formData.name.trim()) return 'Please enter your full name.';
     if (!formData.phone.trim()) return 'Please enter your phone number.';
+    const nextPhoneError = getPhoneError(formData.phone);
+    if (nextPhoneError) return nextPhoneError;
     if (!formData.center.trim()) return 'Please select your nearest centre.';
     if (!formData.captchaAccepted) return 'Please confirm that you are not a robot.';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -195,7 +209,13 @@ const Page = () => {
                         onChange={handleChange}
                         placeholder="Enter your phone number"
                         className="cs_form_field"
+                        pattern="[6-9][0-9]{9}"
                       />
+                      {/* {phoneError && (
+                        <div style={{ color: '#c33', fontSize: '12px', marginTop: '6px' }}>
+                          {phoneError}
+                        </div>
+                      )} */}
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">

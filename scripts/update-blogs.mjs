@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "implantation-bleeding-vs-period",
-    title: "Implantation Bleeding vs. Period? Symptoms & Key Differences",
-    excerpt: "Implantation bleeding is normally the earliest indication that you are pregnant, and it happens when a fertilized egg implants itself into the wall of the uterus. How does implantation bleeding occur? During the process of embedding the embryo into the wall of the uterus, the rupture of minor blood vessels may result in bleeding.",
+    id: "best-ivf-centre-in-janakpuri-delhi-seeds-of-innocens-ivf",
+    title: "Best IVF Centre in Janakpuri – Seeds of Innocens IVF",
+    excerpt: "Infertility feels like this long, difficult road when couples really just want to start a family. At Seeds of Innocens IVF, we try to stay steady with advanced fertility treatments, caring support, and solutions that are not generic, like honestly, they’re tailored for each couple.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Implantation Bleeding.png",
-    date: "June 22, 2026",
+    image: "/assets/img/Blogs/Best IVF Centre in Janakpuri.png",
+    date: "June 23, 2026",
     author: "admin",
-    category: "Pregnancy",
+    category: "Treatment Guides",
     readTime: "12 min read",
-    slug: "implantation-bleeding-vs-period"
+    slug: "best-ivf-centre-in-janakpuri-delhi-seeds-of-innocens-ivf"
   }
 ];
 

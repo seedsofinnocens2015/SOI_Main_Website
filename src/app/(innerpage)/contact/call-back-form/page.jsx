@@ -21,12 +21,21 @@ const ivfContentData = {
 };
 
 const today = new Date().toISOString().split('T')[0];
+const INVALID_PHONE_MESSAGE = 'Invalid number';
+
+const getPhoneError = (phone) => {
+  const digits = String(phone || '').replace(/\D/g, '');
+  if (!digits) return '';
+  if (!/^[6-9]/.test(digits)) return INVALID_PHONE_MESSAGE;
+  return '';
+};
 
 const Page = () => {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [formError, setFormError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
 
   const [formData, setFormData] = useState({
     name: '',
@@ -40,12 +49,17 @@ const Page = () => {
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    if (e.target.name === 'phone') {
+      setPhoneError(getPhoneError(e.target.value));
+    }
     setFormError('');
   };
 
   const validateForm = () => {
     if (!formData.name.trim()) return 'Please enter your name.';
     if (!formData.phone.trim()) return 'Please enter your phone number.';
+    const nextPhoneError = getPhoneError(formData.phone);
+    if (nextPhoneError) return nextPhoneError;
     if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
       return 'Please enter a valid email address.';
     if (!formData.callTime) return 'Please select your preferred call time.';
@@ -164,7 +178,13 @@ const Page = () => {
                         onChange={handleChange}
                         placeholder="Enter your phone number"
                         className="cs_form_field"
+                        pattern="[6-9][0-9]{9}"
                       />
+                      {/* {phoneError && (
+                        <div style={{ color: '#c33', fontSize: '12px', marginTop: '6px' }}>
+                          {phoneError}
+                        </div>
+                      )} */}
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">Email Address <span style={{ fontSize: '12px', color: '#999' }}>(Optional)</span></label>

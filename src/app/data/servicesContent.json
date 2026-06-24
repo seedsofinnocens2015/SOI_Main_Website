@@ -5345,7 +5345,7 @@
   "laparoscopy": {
     "uspTitle": "Laparoscopy  <span class=\"cs_accent_color\">Procedure</span>",
     "title": "Laparoscopy",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/Laparoscopy.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -5536,7 +5536,7 @@
   "open-surgery": {
     "uspTitle": "Open   <span class=\"cs_accent_color\">Surgery</span>",
     "title": "Open Surgery",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/OpenSurgery.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -6707,7 +6707,7 @@
   "hysteroscopy": {
     "uspTitle": "Hysteroscopy  <span class=\"cs_accent_color\">Understanding the Procedure & Benefits</span>",
     "title": "Hysteroscopy",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/Hysteroscopy.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -7318,7 +7318,7 @@
   "yoga-for-fertility": {
     "uspTitle": "Yoga For   <span class=\"cs_accent_color\">Fertility</span>",
     "title": "Yoga For Fertility - How Yoga Can Support Fertility",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/YogaForFertility.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -7430,7 +7430,7 @@
   "how-to-boost-up-fertility-with-the-colours-of-food": {
     "uspTitle": "How To Boost Up   <span class=\"cs_accent_color\">Fertility With The Colours Of Food</span>",
     "title": "How To Boost Up Fertility With The Colours Of Food",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/BoostFertility.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
