@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-ivf-centre-in-janakpuri-delhi-seeds-of-innocens-ivf",
-    title: "Best IVF Centre in Janakpuri – Seeds of Innocens IVF",
-    excerpt: "Infertility feels like this long, difficult road when couples really just want to start a family. At Seeds of Innocens IVF, we try to stay steady with advanced fertility treatments, caring support, and solutions that are not generic, like honestly, they’re tailored for each couple.",
+    id: "best-ivf-centre-in-pitampura-comprehensive-fertility-solutions",
+    title: "Best IVF Centre in Pitampura: Comprehensive Fertility Solutions for Every Couple",
+    excerpt: "Infertility is this kinda growing concern that is affecting many couples globally. And while not being able to conceive naturally can feel emotionally brutal, today’s reproductive medicine still brings real hope, mainly through advanced fertility treatments.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best IVF Centre in Janakpuri.png",
-    date: "June 23, 2026",
+    image: "/assets/img/Blogs/Best IVF Centre in Pitampura.png",
+    date: "June 24, 2026",
     author: "admin",
     category: "Treatment Guides",
-    readTime: "12 min read",
-    slug: "best-ivf-centre-in-janakpuri-delhi-seeds-of-innocens-ivf"
+    readTime: "14 min read",
+    slug: "best-ivf-centre-in-pitampura-comprehensive-fertility-solutions"
   }
 ];
 

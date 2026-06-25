@@ -5741,7 +5741,7 @@
   "pcos-polycystic-ovarian-syndrome": {
     "uspTitle": "PCOS   <span class=\"cs_accent_color\">Polycystic Ovarian Syndrome</span>",
     "title": "PCOS (Polycystic Ovarian Syndrome)",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/PCOS.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -5797,7 +5797,7 @@
   "irregular-menstrual-cycle": {
     "uspTitle": "Irregular   <span class=\"cs_accent_color\">Menstrual Cycle</span>",
     "title": "Irregular Menstrual Cycle",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/IrregularMenstrualCycle.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -5868,7 +5868,7 @@
   "diabetes-thyroid-and-obesity": {
     "uspTitle": "Diabetes, Thyroid and   <span class=\"cs_accent_color\">Obesity</span>",
     "title": "Diabetes, Thyroid and Obesity",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/DiabetesThyroidObesity.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
@@ -6145,7 +6145,7 @@
   "endometriosis": {
     "uspTitle": "Endometriosis  <span class=\"cs_accent_color\">Understanding the Condition & Finding Hope</span>",
     "title": "Endometriosis",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/Endometriosis.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -6886,7 +6886,7 @@
   "blocked-fallopian-tubes": {
     "uspTitle": "Blocked   <span class=\"cs_accent_color\">Fallopian Tubes</span>",
     "title": "Blocked Fallopian Tubes",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/BlockedFallopianTubes.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",
