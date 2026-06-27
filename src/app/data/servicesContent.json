@@ -5998,7 +5998,7 @@
   "endometrial-and-ovarian": {
     "uspTitle": "Endometrial and   <span class=\"cs_accent_color\">Ovarian Health</span>",
     "title": "Endometrial and Ovarian Health",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/EndometrialandOvarianHealth.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -6319,7 +6319,7 @@
   "fibroids-polyps-and-adenomyosis": {
     "uspTitle": "Fibroids, Uterine Polyps and   <span class=\"cs_accent_color\">Adenomyosis Treatments</span>",
     "title": "Fibroids, Uterine Polyps and Adenomyosis Treatments",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/FibroidsUterinePolypsandAdenomyosis.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -6394,7 +6394,7 @@
   "female-genital-tuberculosis": {
     "uspTitle": "Female Genital   <span class=\"cs_accent_color\">Tuberculosis</span>",
     "title": "Female Genital Tuberculosis",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/FemaleGenitalTuberculosis.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -6497,7 +6497,7 @@
   "recurrent-miscarriages": {
     "uspTitle": "Recurrent   <span class=\"cs_accent_color\">Miscarriages</span>",
     "title": "Recurrent Miscarriages",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/RecurrentMiscarriages.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -6576,7 +6576,7 @@
   "reasons-for-delayed-periods-but-not-pregnant": {
     "uspTitle": "Reasons For   <span class=\"cs_accent_color\">Delayed Periods But Not Pregnant</span>",
     "title": "Reasons For Delayed Periods But Not Pregnant",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/DelayedPeriods.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/genetic.jpg",
@@ -6628,7 +6628,7 @@
   "ovarian-hyperstimulation-syndrome-ohss": {
     "uspTitle": "Ovarian   <span class=\"cs_accent_color\"> Hyperstimulation?</span>",
     "title": "What is Ovarian Hyperstimulation?",
-    "heroBackground": "/assets/img/Top-Header.webp",
+    "heroBackground": "/assets/img/Services/OvarianHyperstimulation.webp",
     "layoutType": "ivfContent",
     "benefitImages": [
       "/assets/img/recent_post2webp",

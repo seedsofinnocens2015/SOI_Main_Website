@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-ivf-centre-in-ghaziabad-advanced-fertility-care",
-    title: "Best IVF Centre in Ghaziabad – Advanced Fertility Care for Your Parenthood Journey",
-    excerpt: "Starting a family is a cherished dream for so many couples, yet infertility sometimes makes it… complicated, like really. Still, with all the reproductive medicine advancements today, parenthood is becoming possible for many people and couples who have trouble conceiving.",
+    id: "best-ivf-centre-in-gorakhpur-advanced-fertility-care",
+    title: "Best IVF Centre in Gorakhpur: Why More Couples Are Choosing Advanced Fertility Care",
+    excerpt: "Every couple kind of dreams about that moment, when someone says, Congratulations, you’re expecting,but for many people the path to parenthood is not straight or clear at all; it feels full of uncertainty, repeated letdowns, and those questions that just don’t get answered. If you have been trying to conceive for over a year and it still hasn’t worked, you’re really not by yourself.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best IVF Centre in Ghaziabad.png",
-    date: "June 25, 2026",
+    image: "/assets/img/Blogs/Best IVF Centre in Gorakhpur.png",
+    date: "June 26, 2026",
     author: "admin",
     category: "Treatment Guides",
-    readTime: "18 min read",
-    slug: "best-ivf-centre-in-ghaziabad-advanced-fertility-care"
+    readTime: "19 min read",
+    slug: "best-ivf-centre-in-gorakhpur-advanced-fertility-care"
   }
 ];
 
