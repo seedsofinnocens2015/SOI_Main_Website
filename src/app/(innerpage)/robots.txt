@@ -9,4 +9,4 @@ Disallow: / *?9b551ee2_page=
 Disallow: / ?_page=
 Disallow: /*?
 
-Sitemap: https://seedsofinnocens.com/sitemap.xml
+Sitemap: https://www.seedsofinnocens.com/sitemap.xml

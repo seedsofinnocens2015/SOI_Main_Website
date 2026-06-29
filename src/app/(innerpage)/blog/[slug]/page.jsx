@@ -91,6 +91,7 @@ const BlogDetailPage = async ({ params }) => {
             <div className="row">
               <div className="col-12" style={{ marginBottom: '28px' }}>
                 <div
+                  className="cs_blog_banner_image"
                   style={{
                     position: 'relative',
                     width: '100%',
@@ -224,6 +225,12 @@ const BlogDetailPage = async ({ params }) => {
 
                       .cs_blog_body a:hover {
                         color: #df3655;
+                      }
+
+                      @media (max-width: 575px) {
+                        .cs_blog_banner_image {
+                          height: 220px !important;
+                        }
                       }
                     `}
                   </style>

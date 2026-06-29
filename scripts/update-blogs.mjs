@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-ivf-centre-in-gorakhpur-advanced-fertility-care",
-    title: "Best IVF Centre in Gorakhpur: Why More Couples Are Choosing Advanced Fertility Care",
-    excerpt: "Every couple kind of dreams about that moment, when someone says, Congratulations, you’re expecting,but for many people the path to parenthood is not straight or clear at all; it feels full of uncertainty, repeated letdowns, and those questions that just don’t get answered. If you have been trying to conceive for over a year and it still hasn’t worked, you’re really not by yourself.",
+    id: "best-ivf-centre-in-meerut-helping-you-turn-hope-into-parenthood",
+    title: "Best IVF Centre in Meerut: Helping You Turn Hope into Parenthood",
+    excerpt: "It is quite natural to have mixed feelings when you are ready to become parents. However, in many cases, becoming pregnant turns out to be difficult, not because of insufficient attempts but because of biological factors. There can be some underlying medical issues or lifestyle-related reasons, as well as advanced age or even unexplained infertility, that make it very important to receive specialized assistance.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best IVF Centre in Gorakhpur.png",
-    date: "June 26, 2026",
+    image: "/assets/img/Blogs/Best IVF Centre in Meerut.png",
+    date: "June 27, 2026",
     author: "admin",
     category: "Treatment Guides",
-    readTime: "19 min read",
-    slug: "best-ivf-centre-in-gorakhpur-advanced-fertility-care"
+    readTime: "17 min read",
+    slug: "best-ivf-centre-in-meerut-helping-you-turn-hope-into-parenthood"
   }
 ];
 
