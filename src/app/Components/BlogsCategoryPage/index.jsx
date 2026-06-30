@@ -32,6 +32,7 @@ export default function BlogsCategoryPage({
   sectionDescription,
   selectedCategory,
   blogs = [],
+  backgroundImage = '/assets/img/Top-Header.webp',
   showMediaInquiry = false,
 }) {
   const router = useRouter();
@@ -46,7 +47,7 @@ export default function BlogsCategoryPage({
 
   return (
     <div>
-      <Section className={'cs_page_heading cs_bg_filed cs_center'} backgroundImage="/assets/img/Top-Header.webp">
+      <Section className={'cs_page_heading cs_bg_filed cs_center'} backgroundImage={backgroundImage}>
         <PageHeading data={{ title: pageTitle }} />
       </Section>
 

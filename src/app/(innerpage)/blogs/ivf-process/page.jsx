@@ -17,6 +17,7 @@ const page = () => (
     sectionDescription="Detailed guides and articles about the IVF treatment process, procedures, and what to expect at each stage of your journey."
     selectedCategory="ivf-process"
     blogs={getBlogsForCategory('ivf-process')}
+    backgroundImage="/assets/img/IVFProcessBlogs.webp"
   />
 );
 

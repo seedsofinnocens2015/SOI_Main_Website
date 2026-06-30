@@ -17,6 +17,7 @@ const page = () => (
     sectionDescription="Comprehensive articles about fertility, conception, reproductive health, and everything you need to know about your fertility journey."
     selectedCategory="fertility"
     blogs={getBlogsForCategory('fertility')}
+    backgroundImage="/assets/img/FertilityBlogs.webp"
   />
 );
 

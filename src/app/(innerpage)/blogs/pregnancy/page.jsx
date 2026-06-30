@@ -17,6 +17,7 @@ const page = () => (
     sectionDescription="Trusted guidance on pregnancy, prenatal care, and healthy motherhood from fertility experts."
     selectedCategory="pregnancy"
     blogs={getBlogsForCategory('pregnancy')}
+    backgroundImage="/assets/img/PregnancyBlogs.webp"
   />
 );
 

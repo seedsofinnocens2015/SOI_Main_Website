@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-ivf-centre-in-meerut-helping-you-turn-hope-into-parenthood",
-    title: "Best IVF Centre in Meerut: Helping You Turn Hope into Parenthood",
-    excerpt: "It is quite natural to have mixed feelings when you are ready to become parents. However, in many cases, becoming pregnant turns out to be difficult, not because of insufficient attempts but because of biological factors. There can be some underlying medical issues or lifestyle-related reasons, as well as advanced age or even unexplained infertility, that make it very important to receive specialized assistance.",
+    id: "best-ivf-centre-in-haldwani-trusted-fertility-care",
+    title: "Best IVF Centre in Haldwani: Trusted Fertility Care to Begin Your Parenthood Journey",
+    excerpt: "Starting a family is one of life's biggest dreams, but for some couples, infertility kind of turns everything into a harder path. Still, because of reproductive medicine advances, parenthood feels possible through IVF, IUI, ICSI, fertility preservation, and even advanced reproductive genetics.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best IVF Centre in Meerut.png",
-    date: "June 27, 2026",
+    image: "/assets/img/Blogs/Best IVF Centre in Kanpur.png",
+    date: "June 29, 2026",
     author: "admin",
     category: "Treatment Guides",
-    readTime: "17 min read",
-    slug: "best-ivf-centre-in-meerut-helping-you-turn-hope-into-parenthood"
+    readTime: "13 min read",
+    slug: "best-ivf-centre-in-haldwani-trusted-fertility-care"
   }
 ];
 
