@@ -141,7 +141,7 @@ const Page = () => {
       </Section>
 
       {/* Stats Bar */}
-      <Section topSpaceLg="0" topSpaceMd="0" bottomSpaceLg="50" bottomSpaceMd="60">
+      {/* <Section topSpaceLg="0" topSpaceMd="0" bottomSpaceLg="50" bottomSpaceMd="60">
         <div className="container">
           <div style={{
             background: 'linear-gradient(135deg, #de3554 0%, #de3554 100%)',
@@ -168,14 +168,14 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* Why Join Us */}
       <Section topSpaceLg="0" topSpaceMd="0" bottomSpaceLg="50" bottomSpaceMd="60">
         <div className="container">
           <div style={{ marginBottom: '40px' }}>
             <AccentHeading>Why Join Seeds of Innocens?</AccentHeading>
-            <p style={{ fontSize: '16px', color: 'var(--body-color)', marginTop: '8px', maxWidth: '600px' }}>
+            <p style={{ fontSize: '16px', lineHeight: '1.8', color: 'var(--body-color)', textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
               Be part of a mission-driven organization that values its people as much as its patients.
             </p>
           </div>
