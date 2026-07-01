@@ -16,6 +16,7 @@ const page = () => (
     sectionDescription="Expert perspectives and practical advice from experienced fertility specialists."
     selectedCategory="doctor-insights"
     blogs={getBlogsForCategory('doctor-insights')}
+    backgroundImage="/assets/img/DoctorInsightsBlog.webp"
   />
 );
 

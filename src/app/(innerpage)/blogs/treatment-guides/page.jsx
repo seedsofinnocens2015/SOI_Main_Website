@@ -17,6 +17,7 @@ const page = () => (
     sectionDescription="Step-by-step fertility treatment guides to help you understand procedures, timelines, and outcomes."
     selectedCategory="treatment-guides"
     blogs={getBlogsForCategory('treatment-guides')}
+    backgroundImage="/assets/img/TreatmentGuidesBlog.webp"
   />
 );
 

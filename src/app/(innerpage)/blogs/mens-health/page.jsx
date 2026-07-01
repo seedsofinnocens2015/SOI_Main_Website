@@ -16,6 +16,7 @@ const page = () => (
     sectionDescription="Practical insights on male fertility, reproductive health, and treatment pathways."
     selectedCategory="mens-health"
     blogs={getBlogsForCategory('mens-health')}
+    backgroundImage="/assets/img/MenHealthBlogs.webp"
   />
 );
 

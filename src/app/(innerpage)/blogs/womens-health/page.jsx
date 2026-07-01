@@ -17,6 +17,7 @@ const page = () => (
     sectionDescription="Helpful information on women's reproductive health, hormonal balance, and fertility wellness."
     selectedCategory="womens-health"
     blogs={getBlogsForCategory('womens-health')}
+    backgroundImage="/assets/img/WomenHealthBlogs.webp"
   />
 );
 
