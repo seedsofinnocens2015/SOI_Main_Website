@@ -99,7 +99,7 @@
     "uspTitle": "Best IVF Specialist In Delhi <br /> <span class=\"cs_accent_color\">Dr. Lisha Singh</span>",
     "headerImage": "/assets/img/Doctor-Headers/lisha.webp",
     "name": "Dr. Lisha Singh",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/lisha.jpg",
     "description": [
       "Dr. Lisha Singh is a highly skilled IVF specialist with more than 7+ years of dedicated practice in reproductive medicine. She is also dedicated to providing compassionate, customized care to her patients, helping them navigate their fertility journey with understanding and expertise. Furthermore, she is also working as an IVF specialist at Seeds of Innocens IVF in New Delhi."
@@ -145,12 +145,12 @@
     "uspTitle": "Centre Head – Pitampura Delhi NCR <span class=\"cs_accent_color\">Dr. Monika Maan</span>",
     "headerImage": "/assets/img/Doctor-Headers/monika.webp",
     "name": "Dr. Monika Maan",
-    "subtitle": "Centre Head & IVF Specialist",
+    "subtitle": "Centre Head & IVF Consultant",
     "image": "/assets/img/Doctors/monika.jpg",
     "description": [
       "Highly accomplished and forward-thinking IVF Specialist & Obstetrician-Gynecologist with substantial experience in the best fertility care facilities. Presently working as Centre Head at Seeds of Innocens IVF, focusing on clinical excellence, patient success, and operational leadership in the field of reproductive medicine. Dr. Monika Maan Sharma is well-known for exceptional skills in Assisted Reproductive Technology (IVF/IUI), high-risk obstetrics, and minimally invasive gynecology, with a solid academic & research background. Renowned for exceptional skills in fertility medicine, combining precision, ethics, and strategic leadership."
     ],
-    "location": "Pitampura, Delhi",
+    "location": "Pitampura - Delhi",
     "email": "drmonikamaan@seedsofinnocens.com",
     "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in ART",
     "specialization": "Assisted Reproductive Technology (IVF/IUI), High-Risk Obstetrics, Minimally Invasive Gynecology",
@@ -204,7 +204,7 @@
       "Challenging Cases: Specializes in 'large uterine fibroids' and cases of stage IV endometriosis, which other surgeons would consider challenging.",
       "Philosophy: People first – We do not treat patients' scans, we treat them!"
     ],
-    "location": "Ghaziabad, Uttarpradesh",
+    "location": "Ghaziabad - Uttarpradesh",
     "email": "drpratikkakani@seedsofinnocens.com",
     "qualification": "MBBS, MS (Obstetrics & Gynecology), FMAS",
     "specialization": "IVF, Advanced Fertility Treatments, Complex Cases",
@@ -256,12 +256,12 @@
     "uspTitle": "Best IVF Specialist in Lucknow <br /> <span class=\"cs_accent_color\">Dr. Disha Datta</span>",
     "headerImage": "/assets/img/Doctor-Headers/disha.webp",
     "name": "Dr. Disha Datta",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/disha.jpg",
     "description": [
       "Dr. Disha Datta Choudhary is one of the best IVF specialists in gynecology and obstetrics. Also, she is an expert in her field and brings a profound wealth of knowledge. She is working as an IVF specialist at Seeds of Innocens IVF in Lucknow."
     ],
-    "location": "Lucknow, Uttar Pradesh",
+    "location": "Lucknow - Uttar Pradesh",
     "email": "drdishadatta@seedsofinnocens.com",
     "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
     "specialization": "IVF, Advanced Fertility Treatments, Complex Cases",
@@ -349,7 +349,7 @@
     "uspTitle": "Best IVF Specialist in Gorakhpur <span class=\"cs_accent_color\">Dr. Nivedita Nehal</span>",
     "headerImage": "/assets/img/Doctor-Headers/nivedita.webp",
     "name": "Dr. Nivedita Nehal",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/nivedita.jpg",
     "description": [
       "Dr. Nivedita Nehal is an experienced IVF specialist. She is highly skilled and very passionate and dedicated in creating awareness to women’s health and treating them. She is working as senior IVF specialist and centre head  at Seeds of Innocens IVF in Gorakhpur."
@@ -397,7 +397,7 @@
     "description": [
       "Dr Britika Prakash is a fertility specialist renowned for her expertise in advanced IVF treatment and fertility enhancing procedures.skill set encompasses fertility counseling,tailored stimulation protocol,USG guided pickup and embryo transfer and sperm preparation techniques like tesa/ pesa,prp , hysteroscopy and high risk obstetrics and gynaecology surgery."
     ],
-    "location": "Gorakhpur, Uttarpradesh",
+    "location": "Gorakhpur - Uttarpradesh",
     "email": "drbritikaprakash@seedsofinnocens.com",
     "qualification": "MBBS, MD, Fellowship in Reproductive Medicine",
     "specialization": "IVF, Fertility Enhancing Procedures, High Risk Obstetrics and Gynaecology Surgery",
@@ -436,18 +436,17 @@
     ],
     "newSlug": "dr-britika-prakash-ivf-specialist"
   },
- 
   {
     "slug": "dr-varkha-chandra",
     "uspTitle": "Best IVF Specialist in Meerut <br /> <span class=\"cs_accent_color\">Dr. Varkha Chandra</span>",
     "headerImage": "/assets/img/Doctor-Headers/varkha.webp",
     "name": "Dr. Varkha Chandra",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/varkha.jpg",
     "description": [
       "Dr. Varkha Chandra is a dedicated and compassionate fertility specialist. She works as an IVF specialist at Seeds of Innocens IVF, Meerut. Her main aim is to provide personalized, comprehensive, high-quality care to patients."
     ],
-    "location": "Meerut,Uttarpradesh",
+    "location": "Meerut - Uttarpradesh",
     "email": "drvarkhachandra@seedsofinnocens.com",
     "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
     "specialization": "IVF, Endometriosis, Gynecological Conditions",
@@ -491,7 +490,7 @@
     "description": [
       "Dr. Debilina Roy is a highly qualified and skilled gynecologist and obstetrician. She holds an MBBS and an MS (Gynae & Obs) degree, with MRCOG, EFOG-EBCOG, and FMAS and DMAS qualifications. Also, she is the Centre Head of Seeds of Innocens IVF Patna."
     ],
-    "location": "Patna,Bihar",
+    "location": "Patna - Bihar",
     "email": "drdebilinaroy@seedsofinnocens.com",
     "qualification": "MBBS, MS (Obstetrics & Gynecology), FMAS, DMAS",
     "specialization": "IVF, Personalized Treatment Protocols, Advanced Embryology",
@@ -542,7 +541,7 @@
     "description": [
       "Dr. Sanjana Singh is a highly experienced Gynecologist, Obstetrician, and Fertility expert with more than 7 years of experience in gynecology, reproductive medicine, infertility solutions, and patient counseling. Also, she specializes in treating difficult obstetric cases, performing surgeries, and coordinating multidisciplinary teams to improve patient care."
     ],
-    "location": "Patna, Bihar",
+    "location": "Patna - Bihar",
     "email": "drsanjanasingh@seedsofinnocens.com",
     "qualification": "MBBS, MS (Obstetrics & Gynecology)",
     "specialization": "IVF, Infertility Management, Advanced Reproductive Techniques",
@@ -585,12 +584,12 @@
     "uspTitle": "Best Fertility Expert in Gurugram  <span class=\"cs_accent_color\">Dr. Aditi <br />Bhatnagar</span>",
     "headerImage": "/assets/img/Doctor-Headers/aditi.webp",
     "name": "Dr. Aditi Bhatnagar",
-    "subtitle": "Senior IVF Specialist",
+    "subtitle": "Senior IVF Consultant",
     "image": "/assets/img/Doctors/aditi.jpg",
     "description": [
       "Dr. Aditi Bhatnagar is a fertility and IVF specialist with extensive and Voluminous experience of more than 10 years. Also, she has a special interest in recurrent IVF & Secondary Infertility failures. She has completed her MBBS degree from Mullana Medical College, Ambala. Post to that, she has also pursued her master's in obstetrics and gynaecology from DY Patil Medical College, Pune, receiving a Gold Medal. She further pursued her fellowship in reproductive medicine (infertility). Since then, she has been working with the established high-volume fertility centres of Delhi-NCR. She has extensive knowledge, a wide skill set, and vast experience."
     ],
-    "location": "Gurugram, Haryana",
+    "location": "Gurugram - Haryana",
     "email": "draditibhatnagar@seedsofinnocens.com",
     "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in Reproductive Medicine",
     "specialization": "IVF, ICSI, Advanced Reproductive Techniques",
@@ -634,12 +633,12 @@
     "uspTitle": " Best IVF Specialist in Faridabad<br /> <span class=\"cs_accent_color\">Dr. Beena Upadhyay</span>",
     "headerImage": "/assets/img/Doctor-Headers/beena.webp",
     "name": "Dr. Beena Upadhyay",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/beena.jpg",
     "description": [
       "Dr. Beena Upadhyay is a qualified MD (Gynecologist & Obstetrician) from Maulana Azad  Medical College, New Delhi. With more than 22 years of experience, she has worked with hospitals such as Lok Nayak Hospital and Batra Hospital. Also, she specializes in High-Risk Pregnancies, complicated labor, and complicated gynecological cases. She has even contributed towards Academics & Research. She is an expert in handling complex infertility cases, and with a deep understanding of reproductive medicine, she has helped numerous couples achieve their dream of parenthood."
     ],
-    "location": "Faridabad, Haryana",
+    "location": "Faridabad - Haryana",
     "email": "drbeenaupadhyay@seedsofinnocens.com",
     "qualification": "MBBS, MD (Obstetrics & Gynecology), FRM, FMAS",
     "specialization": "IVF, High-Risk Pregnancies, Age-Related Fertility",
@@ -684,7 +683,7 @@
     "uspTitle": "Best IVF Specialist in Ranchi <br /> <span class=\"cs_accent_color\">Dr. Kriti Prasad</span>",
     "headerImage": "/assets/img/Doctor-Headers/kriti.webp",
     "name": "Dr. Kriti Prasad",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/kriti.jpg",
     "description": [
       "Dr. Kriti Prasad is a highly skilled and dedicated specialist in the field of obstetrics & gynecology. She is an expert in her field and brings a profound wealth of knowledge. She is working as an IVF Specialist at Seeds of Innocens IVF in Ranchi."
@@ -727,7 +726,7 @@
     "uspTitle": " Best IVF Specialist in Haldwani <br /> <span class=\"cs_accent_color\">Dr. Pallavi Shrivastava</span>",
     "headerImage": "/assets/img/Doctor-Headers/pallavi.webp",
     "name": "Dr. Pallavi Shrivastava",
-    "subtitle": "Centre Head & IVF Specialist",
+    "subtitle": "Centre Head & IVF Consultant",
     "image": "/assets/img/Doctors/pallavi.jpg",
     "description": [
       "Dr. Pallavi Shrivastava is a dynamic IVF specialist with more than 5+ years of extensive experience. She serves as an IVF specialist at Seeds of Innocens IVF in Haldwani offering expert care to the couples struggling with infertility. Her expertise relies in treating all kinds of infertility. Dr. Pallavi Shrivastava is dedicated to providing customized fertility solutions."
@@ -775,7 +774,7 @@
     "uspTitle": " Best IVF Specialist in Guwahati <br /> <span class=\"cs_accent_color\">Dr. Julie Chhawchharia</span>",
     "headerImage": "/assets/img/Doctor-Headers/julie.webp",
     "name": "Dr. Julie Chhawchharia",
-    "subtitle": "IVF and fertility specialist",
+    "subtitle": "IVF and fertility Consultant",
     "image": "/assets/img/Doctors/julie.jpg",
     "description": [
       "Dedicated IVF and fertility specialist with extensive experience in managing complex infertility cases, including recurrent implantation failure, poor ovarian reserve, and advanced reproductive techniques. Skilled in tailoring stimulation protocols, embryo transfer strategies, and patient counseling with an evidence-based, compassionate approach. Passionate about combining cutting-edge science with personalized care to help couples achieve their dream of parenthood."
@@ -876,12 +875,12 @@
     "uspTitle": " Best IVF Specialist in Kochi <br /> <span class=\"cs_accent_color\">Dr. Sonia Raju</span>",
   "headerImage": "/assets/img/Doctor-Headers/sonia.webp",
     "name": "Dr. Sonia Raju ",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/sonia.jpg",
     "description": [
       "Dr. Sonia Raju Aluvilayil is a highly skilled fertility expert and IVF expert with more than 10 years of extensive experience in the field of obstetrics, gynecology, and reproductive medicine. Also, she brings deep understanding and global exposure of infertility treatment protocols, having worked across reputed institutions in India and abroad. She is well-known for her patient-centric approach and proficiency in treating high-risk pregnancies, difficult infertility cases, and recurrent IVF failures. Also, she is now a proud member of the Seeds of Innocens IVF family."
     ],
-    "location": "Kochi, Kerala",
+    "location": "Kochi - Kerala",
     "email": "drsoniaraju@seedsofinnocens.com",
     "qualification": "MBBS, MS (OBGYN), DNB, FRM, DRM",
     "specialization": "IVF, Unexplained Infertility, Recurrent Pregnancy Loss",
@@ -932,7 +931,7 @@
     "uspTitle": " Best IVF Specialist in Kasaragod <br /> <span class=\"cs_accent_color\">Dr. Jasna Mohammed</span>",
     "headerImage": "/assets/img/Doctor-Headers/jasna.webp",
     "name": "Dr. Jasna Mohammed",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/jasna.jpg",
     "description": [
       "Dr. Jasna Mohammed is a highly skilled and dedicated specialist in the field of obstetrics & gynecology. She is an expert in her field and brings a profound wealth of knowledge. She is working as an IVF Specialist at Seeds of Innocens IVF in Kasaragode."
@@ -974,7 +973,7 @@
     "uspTitle": "Best IVF Specialist IN Kolkata <br /> <span class=\"cs_accent_color\">Dr. Sneha Narayan</span>",
     "headerImage": "/assets/img/Doctor-Headers/sneha.webp",
     "name": "Dr. Sneha Narayan",
-    "subtitle": "Senior IVF Specialis",
+    "subtitle": "Senior IVF Consultant",
     "image": "/assets/img/Doctors/Dr Sneha Narayan.png",
     "description": [
       "Dr. Sneha Narayan is an experienced IVF specialist with over 12 years of experience in reproductive medicine and infertility management. She also specializes in treating PCOS, Ovulatory disorders, Endometriosis, recurrent pregnancy loss, and evidence-based care for every couple."
@@ -1019,7 +1018,7 @@
     "uspTitle": " Best IVF Specialist in Kolkata & Kanpur <span class=\"cs_accent_color\">Dr. Adrija Ghosal</span>",
     "headerImage": "/assets/img/Doctor-Headers/adrija.webp",
     "name": "Dr. Adrija Ghosal",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/adrija.png",
     "description": [
       "Dedicated and highly experienced gynaecologist & infertility specialist with good expertise in reproductive medicine & women’s health, Dr. Adrija Ghosal has experience in guiding couples in achieving their parenthood dreams with the right blend of medical knowledge & care.  She is passionate about breaking the myths associated with infertility & spreading more awareness & offering patient-centric solutions that would surely bring positive results. Also, she is well known for her empathetic & caring nature & efficiency in work. She believes in the importance of continuous learning & contributing to the field of gynaecology & infertility by creating more awareness & conducting infertility camps."
@@ -1065,7 +1064,7 @@
     "uspTitle": " Best IVF Specialist in Mabela, Oman <span class=\"cs_accent_color\">Dr. Rashmi Singh</span>",
     "headerImage": "/assets/img/Doctor-Headers/rashmi.webp",
     "name": "Dr. Rashmi Singh",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/rashmi.jpg",
     "description": [
       "Dr. Rashmi Singh is a dedicated IVF specialist with a passion for helping couples overcome fertility challenges. She has extensive experience in managing various infertility conditions and is skilled in advanced reproductive techniques.",
@@ -1102,7 +1101,7 @@
     "uspTitle": " Best IVF Specialist in Mabela, Oman  <span class=\"cs_accent_color\">Dr. Mangla Kawade</span>",
     "headerImage": "/assets/img/Doctor-Headers/mangla.webp",
     "name": "Dr. Mangla Kawade",
-    "subtitle": "IVF Specialist",
+    "subtitle": "IVF Consultant",
     "image": "/assets/img/Doctors/mangla.jpg",
     "description": [
       "Dr. Mangla Kawade is a dedicated IVF specialist with comprehensive expertise in reproductive medicine. She has a special focus on treating couples with tubal factor infertility and other structural issues.",
@@ -1153,7 +1152,7 @@
 
       "At Seeds of Innocens, Dr. Manisha is dedicated in delivering advanced fertility treatments and helping couples to build families through the state-of-the reproductive medicine and customized care."
     ],
-    "location": "Janakpuri, New Delhi",
+    "location": "Janakpuri - New Delhi",
     "email": "info@seedsofinnocence.com",
     "qualification": "DNB (Obstetrics & Gynaecology), Fellowship in Reproductive Medicine",
     "specialization": "IVF, Reproductive Medicine, Infertility Evaluation and Management, ART Procedures, Ovum Pick-Up, Embryo Transfer, Hysteroscopy",
