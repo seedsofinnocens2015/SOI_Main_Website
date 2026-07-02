@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-ivf-clinic-in-kasargod-fertility-care",
-    title: "Best IVF Clinic in Kasargod | High Success Fertility Care",
-    excerpt: "If you’ve searched for the best IVF centre in Kasaragod, chances are you’ve been stuck on these exact thoughts too. But the truth is, picking an IVF centre isn’t just about who’s closest or which package looks “cheaper” on the page.",
+    id: "best-ivf-centre-in-muzaffarpur-fertility-treatment",
+    title: "Best IVF Centre in Muzaffarpur: Fertility Treatment, IVF Cost, & Expert Care",
+    excerpt: "Infertility can feel like one of the most emotionally rough journeys for a couple. A lot of people still imagine having a baby the normal way, but sometimes health issues make conception hard.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best IVF Clinic in Kasargod.png",
-    date: "June 30, 2026",
+    image: "/assets/img/Blogs/Best IVF Centre in Muzaffarpur.png",
+    date: "July 01, 2026",
     author: "admin",
     category: "Treatment Guides",
     readTime: "10 min read",
-    slug: "best-ivf-clinic-in-kasargod-fertility-care"
+    slug: "best-ivf-centre-in-muzaffarpur-fertility-treatment"
   }
 ];
 
