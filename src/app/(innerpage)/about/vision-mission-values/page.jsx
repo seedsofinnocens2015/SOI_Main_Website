@@ -23,8 +23,7 @@ const ivfContentData = {
       heading: 'Our Mission',
       paragraphs: [
         'Seeds of Innocens IVF is dedicated to offer quality, and comprehensive IVF services to the community and assure the positive outcome through the continual quality improvement. ',
-      ],
-      sideImage: '/assets/img/Vision, Mission & Values.png',
+      ]
     },
     {
       heading: 'Our Vision',
@@ -77,7 +76,7 @@ const page = () => {
     <div>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/Top-Header.webp"
+        backgroundImage="/assets/img/VisionMissionValues.webp"
       >
         <PageHeading data={headingData} />
       </Section>

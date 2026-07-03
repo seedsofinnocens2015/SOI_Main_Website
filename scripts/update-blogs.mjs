@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-ivf-centre-in-muzaffarpur-fertility-treatment",
-    title: "Best IVF Centre in Muzaffarpur: Fertility Treatment, IVF Cost, & Expert Care",
-    excerpt: "Infertility can feel like one of the most emotionally rough journeys for a couple. A lot of people still imagine having a baby the normal way, but sometimes health issues make conception hard.",
+    id: "best-ivf-centre-in-ranchi-Advanced-fertility-treatment",
+    title: "Best IVF Centre in Ranchi for Advanced Fertility Treatment",
+    excerpt: "For a lot of couples, deciding to start fertility treatment is not that simple, and it doesn’t usually feel like a clean yes right away. It comes after months or even years of trying naturally, trying different medicines, or handling that real, raw pain that shows up with pregnancy loss.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best IVF Centre in Muzaffarpur.png",
-    date: "July 01, 2026",
+    image: "/assets/img/Blogs/Best IVF Centre in Ranchi.png",
+    date: "July 02, 2026",
     author: "admin",
     category: "Treatment Guides",
     readTime: "10 min read",
-    slug: "best-ivf-centre-in-muzaffarpur-fertility-treatment"
+    slug: "best-ivf-centre-in-ranchi-Advanced-fertility-treatment"
   }
 ];
 

@@ -18,8 +18,7 @@ const ivfContentData = {
         'Seeds of Innocens has been featured in various media outlets, highlighting our innovative treatments, success stories, and contributions to the field of reproductive medicine.',
         'Our commitment to excellence and patient care has earned recognition from leading healthcare publications, news channels, and medical journals across India and internationally.',
         'We are proud to share our achievements, research breakthroughs, and patient success stories through various media platforms, helping to raise awareness about fertility treatments and reproductive health.',
-      ],
-      sideImage: '/assets/img/Media & Press.jpg',
+      ]
     },
   ],
 };
@@ -130,7 +129,7 @@ const MediaPressClient = () => {
 
   return (
     <div>
-      <Section className={'cs_page_heading cs_bg_filed cs_center'} backgroundImage="/assets/img/Top-Header.webp">
+      <Section className={'cs_page_heading cs_bg_filed cs_center'} backgroundImage="/assets/img/MediaPress.webp">
         <PageHeading data={headingData} />
       </Section>
 
