@@ -26,15 +26,16 @@ const ivfContentData = {
 const page = () => {
   return (
     <div>
-      <Section
+      {/* <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
         backgroundImage="/assets/img/Top-Header.webp"
       >
         <PageHeading data={headingData} />
-      </Section>
+      </Section> */}
 
       {/* Content Section */}
       <Section
+      className="cs_clear_fixed_header"
         topSpaceLg="50"
         topSpaceMd="60"
         bottomSpaceLg="50"

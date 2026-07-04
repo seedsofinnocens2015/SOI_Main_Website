@@ -38,7 +38,7 @@ const SURGERY_PAGE_KEYS = ['hysteroscopy', 'laparoscopy', 'open-surgery'];
 
 const WOMEN_HEALTH_PAGE_KEYS = [
   'secondary-infertility', 'high-risk-pregnancy', 'fetal-reduction', 'pregnancy-and-coronavirus',
-  'blocked-fallopian-tubes', 'pcos-polycystic-ovarian-syndrome', 'irregular-menstrual-cycle',
+  'blocked-fallopian-tubes', 'pcos-vs-pmos', 'irregular-menstrual-cycle',
   'diabetes-thyroid-and-obesity', 'endometrial-and-ovarian', 'endometriosis',
   'fibroids-polyps-and-adenomyosis', 'female-genital-tuberculosis', 'recurrent-miscarriages',
   'reasons-for-delayed-periods-but-not-pregnant', 'ovarian-hyperstimulation-syndrome-ohss',
@@ -849,17 +849,17 @@ const IVFContentSection = ({
         })
       )}
 
-      {/* 4b. RELATED SERVICES (above FAQ) */}
-      {relatedServices && relatedServices.length > 0 && (
-        <RelatedServices relatedServices={relatedServices} />
-      )}
-
-      {/* 5. FAQ SECTION (accordion) */}
+      {/* 4b. FAQ SECTION (accordion) */}
       {faqItems && faqItems.length > 0 && (
         <div className="cs_ivf_content_section cs_service_faq_section">
-          {/* {renderHeading('Frequently Asked Questions')} */}
+          {renderHeading('Frequently Asked Questions (FAQs)')}
           <FAQAccordion faqs={faqItems} />
         </div>
+      )}
+
+      {/* 5. RELATED SERVICES */}
+      {relatedServices && relatedServices.length > 0 && (
+        <RelatedServices relatedServices={relatedServices} />
       )}
 
       {/* 6. FINAL CTA SECTION */}

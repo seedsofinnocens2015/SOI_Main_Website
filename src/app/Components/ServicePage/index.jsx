@@ -19,6 +19,7 @@ const ServicePage = ({ serviceKey }) => {
   };
 
   const bannerImage = config.headerImage ?? config.heroBackground ?? '/assets/img/Top-Header.webp';
+  const serviceFaqs = Array.isArray(config.faqs) ? config.faqs : config.faq;
   const relatedServices = getRelatedSlugs(serviceKey, servicesContent, 6).map((slug) => {
     const relatedConfig = servicesContent[slug];
     if (!relatedConfig) return null;
@@ -54,7 +55,7 @@ const ServicePage = ({ serviceKey }) => {
                   benefitImages={config.benefitImages}
                   accentHeadingStyle
                   serviceName={config.title}
-                  faq={config.faq}
+                  faq={serviceFaqs}
                   keyHighlights={config.keyHighlights}
                   serviceKey={serviceKey}
                   treatmentContent={config.treatmentContent}

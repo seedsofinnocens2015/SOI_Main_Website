@@ -228,7 +228,7 @@ const legacyServiceRedirects = [
   },
   {
     source: '/pcos-polycystic-ovarian-syndrome/',
-    destination: '/reproductive-health-conditions/pcos-polycystic-ovarian-syndrome/',
+    destination: '/reproductive-health-conditions/pcos-vs-pmos/',
     permanent: true,
   },
   {

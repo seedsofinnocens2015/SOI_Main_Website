@@ -62,7 +62,7 @@ const SERVICE_PATH_BY_KEY = {
   'open-surgery': '/surgeries/open-surgery',
   // Reproductive Health Conditions
   'blocked-fallopian-tubes': '/reproductive-health-conditions/blocked-fallopian-tubes',
-  'pcos-polycystic-ovarian-syndrome': '/reproductive-health-conditions/pcos-polycystic-ovarian-syndrome',
+  'pcos-vs-pmos': '/reproductive-health-conditions/pcos-vs-pmos',
   'irregular-menstrual-cycle': '/reproductive-health-conditions/irregular-menstrual-cycle',
   'diabetes-thyroid-and-obesity': '/reproductive-health-conditions/diabetes-thyroid-and-obesity',
   'endometrial-and-ovarian': '/reproductive-health-conditions/endometrial-and-ovarian',

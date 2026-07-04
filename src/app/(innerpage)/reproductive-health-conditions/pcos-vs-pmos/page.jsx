@@ -4,13 +4,13 @@ import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
 export async function generateMetadata() {
   return getSeoMetadata({
-    pageUrl: '/reproductive-health-conditions/pcos-polycystic-ovarian-syndrome',
+    pageUrl: '/reproductive-health-conditions/pcos-vs-pmos',
     hierarchyCandidates: [['Infertility Treatment', 'Reproductive Health Conditions'], ['Infertility Treatment'], []],
   });
 }
 
 const page = () => {
-  return <ServicePage serviceKey="pcos-polycystic-ovarian-syndrome" />;
+  return <ServicePage serviceKey="pcos-vs-pmos" />;
 };
 
 export default page;

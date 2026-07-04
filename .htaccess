@@ -105,7 +105,7 @@
   RewriteRule ^laparoscopy/?$ /surgeries/laparoscopy/ [R=301,L,NC]
   RewriteRule ^open-surgery/?$ /surgeries/open-surgery/ [R=301,L,NC]
   RewriteRule ^blocked-fallopian-tubes/?$ /reproductive-health-conditions/blocked-fallopian-tubes/ [R=301,L,NC]
-  RewriteRule ^pcos-polycystic-ovarian-syndrome/?$ /reproductive-health-conditions/pcos-polycystic-ovarian-syndrome/ [R=301,L,NC]
+  RewriteRule ^pcos-polycystic-ovarian-syndrome/?$ /reproductive-health-conditions/pcos-vs-pmos/ [R=301,L,NC]
   RewriteRule ^irregular-menstrual-cycle/?$ /reproductive-health-conditions/irregular-menstrual-cycle/ [R=301,L,NC]
   RewriteRule ^diabetes-thyroid-and-obesity/?$ /reproductive-health-conditions/diabetes-thyroid-and-obesity/ [R=301,L,NC]
   RewriteRule ^endometrial-and-ovarian/?$ /reproductive-health-conditions/endometrial-and-ovarian/ [R=301,L,NC]
