@@ -137,5 +137,11 @@ By phone number: +91 98103 50512
 `;
 
 export default function PrivacyPolicyPage() {
-  return <LegalPage title="Privacy Policy" rawContent={rawContent} />;
+  return (
+    <LegalPage
+      title="Privacy Policy"
+      rawContent={rawContent}
+      backgroundImage="/assets/img/PrivacyPolicy.webp"
+    />
+  );
 }

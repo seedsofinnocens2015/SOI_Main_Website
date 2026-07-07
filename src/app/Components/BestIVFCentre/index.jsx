@@ -134,6 +134,36 @@ const BestIVFCentre = ({
     const featuresRow1Ref = useRef(null);
     const featuresRow2Ref = useRef(null);
     const [isContactOpen, setIsContactOpen] = React.useState(false);
+    const treatmentProcessSteps = [
+        {
+            title: 'First Consultation',
+            desc: 'Your journey to fertility starts with a detailed consultation, where our fertility specialist will look into your health history, prior treatments, lifestyle and reproductive intentions.',
+        },
+        {
+            title: 'Assessment of Fertility',
+            desc: 'A range of diagnostic tests will be done to find out the root of the problem. These include hormone testing, ultrasound, and others.',
+        },
+        {
+            title: 'Treatment Plan',
+            desc: `Our Best IVF Specialist in ${cityName} creates a customized treatment plan depending on your diagnosis.`,
+        },
+        {
+            title: 'Ovarian Stimulation and Egg Harvesting',
+            desc: 'With the help of fertility drugs, the ovaries are stimulated to produce multiple mature eggs that are collected by performing a small procedure under anesthesia.',
+        },
+        {
+            title: 'Fertilization and Embryo Growth',
+            desc: 'Eggs that have been collected are fertilized either through traditional IVF or ICSI in an advanced embryology lab.',
+        },
+        {
+            title: 'Embryo Transfer',
+            desc: 'Healthy embryos are selected and transferred into the uterus through a straightforward and painless procedure.',
+        },
+        {
+            title: 'Pregnancy Test & Further Care',
+            desc: 'Two weeks post-embryo transfer, a pregnancy test through a blood sample determines if you are pregnant. We continue to give you further medical support and monitoring during your early-stage pregnancy.',
+        },
+    ];
 
     return (
         <div className="cs_center_page_template">
@@ -248,6 +278,53 @@ const BestIVFCentre = ({
                 </div>
             </section>
 
+            {/* Treatment Process Section */}
+            <section className="w-full py-8 sm:py-12 lg:py-16" style={{ backgroundColor: '#fff7f9' }}>
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="cs_service_title_section mb-10">
+                        <h2 className="cs_service_main_title">
+                            <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                            How Treatment
+                            </span>{' '}
+                            <span style={{ color: '#000000' }}>Process Works?</span>
+                        </h2>
+                        <p
+                            className="cs_best_ivf_description cs_best_ivf_description--center-intro text-center"
+                            style={{ marginTop: '12px' }}
+                        >
+                            A systematic approach to the entire treatment process ensures that patients get complete attention and care.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+                        {treatmentProcessSteps.map((step, index) => (
+                            <div
+                                key={step.title}
+                                className={`bg-white border border-gray-200 rounded-lg p-4 sm:p-5 h-full ${index === treatmentProcessSteps.length - 1 ? 'sm:col-span-2 lg:col-span-1 lg:col-start-2' : ''}`}
+                                style={{ boxShadow: '0 10px 24px rgba(223, 54, 85, 0.08)' }}
+                            >
+                                <div className="flex items-start gap-3">
+                                    <div
+                                        className="flex-shrink-0 flex items-center justify-center rounded-full text-white font-semibold"
+                                        style={{ width: '42px', height: '42px', backgroundColor: '#df3655', fontSize: '15px' }}
+                                    >
+                                        {String(index + 1).padStart(2, '0')}
+                                    </div>
+                                    <div>
+                                        <h3 className="font-semibold mb-2" style={{ color: '#000000', fontSize: '18px', lineHeight: '1.35' }}>
+                                            {step.title}
+                                        </h3>
+                                        <p className="mb-0" style={{ color: '#555555', fontSize: '14px', lineHeight: '1.7' }}>
+                                            {step.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Doctor Information Section */}
             {centerDoctors.length > 0 && (
                 <Section
@@ -260,7 +337,8 @@ const BestIVFCentre = ({
                         <div className="cs_section_heading cs_style_1 text-center mb-5">
                             <h2 className="cs_section_title">Our Expert  <span style={{ color: '#000000' }}>Team of Doctors</span></h2>
                             <p className="cs_best_ivf_description cs_best_ivf_description--center-intro text-center">
-                                {expertTeamDescription}
+                                {/* {expertTeamDescription} */}
+                                The fertility specialists, embryologists, genetic experts, counselors, nurses, and lab technicians at Seeds of Innocens IVF Dhanbad are one of the best IVF centre in Dhanbad that work as a multi-disciplinary team to bring quality fertility services to their patients. Our team believes that good communication, transparency, support, and personal attention are crucial in order to ensure a good fertility experience.
                             </p>
                         </div>
                         <div className="cs_doctors_grid cs_style_1">

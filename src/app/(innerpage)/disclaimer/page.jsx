@@ -50,5 +50,11 @@ All consultation fees, medical procedures, and associated charges are strictly n
 `;
 
 export default function DisclaimerPage() {
-  return <LegalPage title="General Disclaimer" rawContent={rawContent} />;
+  return (
+    <LegalPage
+      title="General Disclaimer"
+      rawContent={rawContent}
+      backgroundImage="/assets/img/GeneralDisclaimer.webp"
+    />
+  );
 }

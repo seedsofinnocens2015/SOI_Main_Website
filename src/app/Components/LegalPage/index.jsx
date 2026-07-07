@@ -21,7 +21,14 @@ function isLegalHeading(line) {
   );
 }
 
-export default function LegalPage({ title, intro, effectiveDate, sections = [], rawContent }) {
+export default function LegalPage({
+  title,
+  intro,
+  effectiveDate,
+  sections = [],
+  rawContent,
+  backgroundImage = '/assets/img/Top-Header.webp',
+}) {
   const headingData = {
     uspTitle: `${title.replace('&', '<span class="cs_accent_color">&</span>')}`,
   };
@@ -30,7 +37,7 @@ export default function LegalPage({ title, intro, effectiveDate, sections = [], 
     <div>
       <Section
         className="cs_page_heading cs_bg_filed cs_center"
-        backgroundImage="/assets/img/Top-Header.webp"
+        backgroundImage={backgroundImage}
       >
         <PageHeading data={headingData} />
       </Section>

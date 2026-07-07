@@ -320,6 +320,7 @@ const Header = ({ isTopBar, variant }) => {
                 href: '/best-ivf-centre-in-jharkhand',
                 subItems: [
                   { label: 'Ranchi, Jharkhand', href: '/jharkhand/best-ivf-centre-in-ranchi/' },
+                  { label: 'Dhanbad, Jharkhand', href: '/jharkhand/best-ivf-centre-in-dhanbad/' },
                 ],
               },
               {

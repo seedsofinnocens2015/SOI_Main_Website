@@ -33,5 +33,11 @@ The Video Content has been made available for informational and awareness purpos
 `;
 
 export default function TermsAndConditionsPage() {
-  return <LegalPage title="Terms & Conditions" rawContent={rawContent} />;
+  return (
+    <LegalPage
+      title="Terms & Conditions"
+      rawContent={rawContent}
+      backgroundImage="/assets/img/TermsandConditions.webp"
+    />
+  );
 }
