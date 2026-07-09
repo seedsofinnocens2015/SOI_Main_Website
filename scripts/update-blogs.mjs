@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-ivf-centre-in-ranchi-Advanced-fertility-treatment",
-    title: "Best IVF Centre in Ranchi for Advanced Fertility Treatment",
-    excerpt: "For a lot of couples, deciding to start fertility treatment is not that simple, and it doesn’t usually feel like a clean yes right away. It comes after months or even years of trying naturally, trying different medicines, or handling that real, raw pain that shows up with pregnancy loss.",
+    id: "1st-week-pregnancy-symptoms",
+    title: "1st Week Pregnancy Symptoms: All That You Must Know",
+    excerpt: "It is not easy to get pregnant, and when a couple is trying to conceive, everything that happens in the body is important. Although women generally think that pregnancy symptoms appear after missing periods, some may experience very slight 1st Week Pregnancy Symptoms even before this happens.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best IVF Centre in Ranchi.png",
-    date: "July 02, 2026",
+    image: "/assets/img/Blogs/1st Week Pregnancy Symptoms.png",
+    date: "July 08, 2026",
     author: "admin",
-    category: "Treatment Guides",
-    readTime: "10 min read",
-    slug: "best-ivf-centre-in-ranchi-Advanced-fertility-treatment"
+    category: "Pregnancy",
+    readTime: "11 min read",
+    slug: "1st-week-pregnancy-symptoms"
   }
 ];
 
