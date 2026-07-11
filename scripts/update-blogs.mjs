@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "bulky-cervix",
-    title: "Bulky Cervix: Causes, Symptoms & Treatment Options",
-    excerpt: "It's scary when your ultrasound scan result shows bulky uterus or bulky cervix, particularly when you want to conceive. But not all times is the condition linked to a serious problem. For some women, it's a case of a slightly bulky uterus or cervix due to hormones, pregnancy, and age.",
+    id: "can-you-get-pregnant-when-youre-not-ovulating",
+    title: "Can You Get Pregnant When You Aren’t Ovulating?",
+    excerpt: "The most frequent question that comes up in the process of conceiving is, “Can you get pregnant when you’re not ovulating?” Well, the short answer to that question is no, it’s impossible to conceive without ovulation. During ovulation, a mature egg cell is released by the ovaries, which enables fertilization to occur.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Bulky Cervix.png",
-    date: "July 09, 2026",
+    image: "/assets/img/Blogs/Can You Get Pregnant.png",
+    date: "July 10, 2026",
     author: "admin",
     category: "Women's Health",
-    readTime: "12 min read",
-    slug: "bulky-cervix"
+    readTime: "10 min read",
+    slug: "can-you-get-pregnant-when-youre-not-ovulating"
   }
 ];
 

@@ -25,18 +25,19 @@ const ivfContentData = {
 const TrainingRegistrationClient = () => {
   return (
     <div>
-      <Section
+      {/* <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
         backgroundImage="/assets/img/Top-Header.webp"
       >
         <PageHeading data={headingData} />
-      </Section>
+      </Section> */}
 
       <Section
         topSpaceLg="50"
         topSpaceMd="60"
         bottomSpaceLg="80"
         bottomSpaceMd="90"
+        className="cs_clear_fixed_header"
       >
         <div className="container">
           <div className="row cs_gap_y_40 align-items-start">
