@@ -276,7 +276,8 @@ const Header = ({ isTopBar, variant }) => {
         megaMenuCategories: [
           {
             label: 'India',
-            href: '',
+            href: '/best-ivf-centre-in-india',
+            allowNavigationWithSubItems: true,
             subItems: [
               {
                 label: 'Delhi',
@@ -364,7 +365,8 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'International',
-            href: '',
+            href: '/best-ivf-centre-in-international',
+            allowNavigationWithSubItems: true,
             subItems: [
               { label: 'Mabela, Muscat, Oman', href: '/best-ivf-centre-in-mabela-muscat' },
             ],
@@ -984,7 +986,7 @@ const Header = ({ isTopBar, variant }) => {
                                           prefetch={false}
                                           onClick={(e) => {
                                             // Only prevent navigation if category has subItems
-                                            if (hasSubItems) {
+                                            if (hasSubItems && !category.allowNavigationWithSubItems) {
                                               e.preventDefault();
                                             } else {
                                               // If no subItems, allow navigation and close menu
@@ -1177,7 +1179,7 @@ const Header = ({ isTopBar, variant }) => {
                                             prefetch={false}
                                             onClick={(e) => {
                                               // Only prevent navigation if category has subItems
-                                              if (hasSubItems) {
+                                              if (hasSubItems && !category.allowNavigationWithSubItems) {
                                                 e.preventDefault();
                                               }
                                             }}

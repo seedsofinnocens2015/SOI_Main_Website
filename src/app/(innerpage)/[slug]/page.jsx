@@ -11,7 +11,7 @@ import doctorsData from '@/app/data/doctors-data.json';
 import { notFound } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/assetPath';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
-import IVFContentSection from '@/app/Components/IVFContentSection';
+import FAQAccordion from '@/app/Components/FAQAccordion';
 import BestIVFCentre from '@/app/Components/BestIVFCentre';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 
@@ -26,6 +26,10 @@ function cityNameToSlug(cityName) {
 }
 
 function getCenterLink(center) {
+    if (center.isInternational) {
+        return `/${center.slug}/`;
+    }
+
     const isMalviyaDelhi =
         center.name === 'Malviya Nagar, Delhi' && center.stateSlug === 'delhi';
 
@@ -93,13 +97,19 @@ export async function generateMetadata({ params }) {
         };
     }
 
-    // 2. Otherwise treat as state page
+    // 2. Otherwise treat as a state or all-centres landing page
     if (!slug.startsWith('best-ivf-centre-in-')) {
         return { title: 'Not Found' };
     }
 
     const stateSlug = slug.replace('best-ivf-centre-in-', '');
-    const filteredCentres = centresData.filter(c => c.stateSlug === stateSlug);
+    const isIndiaLanding = stateSlug === 'india';
+    const isInternationalLanding = stateSlug === 'international';
+    const filteredCentres = isIndiaLanding
+        ? centresData.filter(c => !c.isInternational)
+        : isInternationalLanding
+            ? centresData.filter(c => c.isInternational)
+            : centresData.filter(c => c.stateSlug === stateSlug);
 
     if (filteredCentres.length === 0) {
         return {
@@ -107,13 +117,21 @@ export async function generateMetadata({ params }) {
         };
     }
 
-    const stateName = filteredCentres[0].state;
+    const stateName = isIndiaLanding
+        ? 'India'
+        : isInternationalLanding
+            ? 'International'
+            : filteredCentres[0].state;
     const seoMetadata = await getSeoMetadata({
         pageUrl: `/${slug}`,
         pageUrlCandidates: [`/${slug}/`],
         hierarchyCandidates: [
-            ['IVF Centres', 'India', stateName],
-            ['IVF Centres', 'India'],
+            isInternationalLanding
+                ? ['IVF Centres', 'International']
+                : isIndiaLanding
+                    ? ['IVF Centres', 'India']
+                    : ['IVF Centres', 'India', stateName],
+            isInternationalLanding ? ['IVF Centres'] : ['IVF Centres', 'India'],
             ['IVF Centres'],
             [],
         ],
@@ -177,7 +195,12 @@ export async function generateStaticParams() {
                 slug: c.slug
             }));
 
-        return [...stateParams, ...internationalParams];
+        const centresLandingParams = [
+            { slug: 'best-ivf-centre-in-india' },
+            { slug: 'best-ivf-centre-in-international' },
+        ];
+
+        return [...stateParams, ...centresLandingParams, ...internationalParams];
     } catch (error) {
         console.error('Error in generateStaticParams:', error);
         return [];
@@ -259,19 +282,29 @@ const DynamicPage = async ({ params }) => {
         );
     }
 
-    // 2. Otherwise handle as State Page
+    // 2. Otherwise handle as a state or all-centres landing page
     if (!slug.startsWith('best-ivf-centre-in-')) {
         notFound();
     }
 
     const stateSlug = slug.replace('best-ivf-centre-in-', '');
-    const filteredCentres = centresData.filter(c => c.stateSlug === stateSlug);
+    const isIndiaLanding = stateSlug === 'india';
+    const isInternationalLanding = stateSlug === 'international';
+    const filteredCentres = isIndiaLanding
+        ? centresData.filter(c => !c.isInternational)
+        : isInternationalLanding
+            ? centresData.filter(c => c.isInternational)
+            : centresData.filter(c => c.stateSlug === stateSlug);
 
     if (filteredCentres.length === 0) {
         notFound();
     }
 
-    const stateName = filteredCentres[0].state;
+    const stateName = isIndiaLanding
+        ? 'India'
+        : isInternationalLanding
+            ? 'International'
+            : filteredCentres[0].state;
     const rawStateContent =
         stateContentConfig[stateSlug] || stateContentConfig.default;
 
@@ -675,7 +708,7 @@ const DynamicPage = async ({ params }) => {
                         </div>
                         <div className="row">
                             <div className="col-12">
-                                <IVFContentSection data={{ sections: [] }} faq={stateFaqs} />
+                                <FAQAccordion faqs={stateFaqs} />
                             </div>
                         </div>
                     </div>

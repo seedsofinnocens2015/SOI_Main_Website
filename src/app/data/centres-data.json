@@ -3189,6 +3189,94 @@
           ]
         }
       ]
+    },
+    "india": {
+      "metaTitle": "Best IVF Centres in India | Seeds of Innocens IVF",
+      "metaDescription": "Explore Seeds of Innocens IVF centres across India for advanced fertility treatment, experienced IVF specialists, transparent care, and personalized support.",
+      "headerImage": "/assets/img/Top-Header.webp",
+      "uspTitle": "Best IVF Centres in India <br /> <span class=\"cs_accent_color\">Advanced Fertility Care Across India</span>",
+      "sections": [
+        {
+          "heading": "Best IVF Centres in India",
+          "paragraphs": [
+            "Seeds of Innocens IVF brings advanced and compassionate fertility care closer to couples across India. Our network of IVF centres combines experienced fertility specialists, modern embryology laboratories, evidence-based treatment, and personalized support to help patients move confidently towards parenthood.",
+            "From initial fertility assessment to IVF, IUI, ICSI, fertility preservation, genetic testing, and advanced reproductive procedures, our teams provide coordinated care with transparent guidance at every stage. Select your nearest centre below to view its doctors, services, address, and appointment details."
+          ]
+        }
+      ],
+      "aboutUs": {
+        "paragraphs": [
+          "Seeds of Innocens IVF is a trusted fertility-care network serving patients across multiple states and cities in India. Every centre follows patient-focused clinical protocols and offers access to skilled fertility specialists, embryologists, counsellors, nurses, and support teams.",
+          "Our goal is to make quality fertility treatment accessible without losing the personal attention every journey deserves. Treatment plans are created according to each patient's medical needs, reproductive goals, and clinical assessment.",
+          "Whether you are beginning your first consultation or seeking guidance after an unsuccessful treatment, our teams provide clear communication, ethical care, and continued support throughout your fertility journey."
+        ]
+      },
+      "faqs": [
+        {
+          "question": "How can I find the nearest Seeds of Innocens IVF centre in India?",
+          "answer": "Use the centre list on this page to select your preferred city. Each centre page includes its complete address, directions, contact details, doctors, and available services."
+        },
+        {
+          "question": "Which fertility treatments are available at Seeds of Innocens IVF centres in India?",
+          "answer": "Depending on the centre and your medical needs, services may include fertility evaluation, IVF, IUI, ICSI, blastocyst transfer, egg or embryo freezing, genetic testing, and male infertility treatment."
+        },
+        {
+          "question": "How is an IVF treatment plan selected?",
+          "answer": "A fertility specialist reviews both partners' medical history, diagnostic reports, age, reproductive goals, and previous treatment before recommending a personalized plan."
+        },
+        {
+          "question": "Can I book a fertility consultation at any India centre?",
+          "answer": "Yes. You can choose the most convenient centre and use the appointment option to request a consultation with the local fertility team."
+        },
+        {
+          "question": "Do IVF success rates remain the same for every patient?",
+          "answer": "No. IVF outcomes vary according to factors such as age, ovarian reserve, sperm and embryo quality, diagnosis, lifestyle, and the treatment protocol recommended for the individual patient."
+        }
+      ]
+    },
+    "international": {
+      "metaTitle": "Best International IVF Centres | Seeds of Innocens IVF",
+      "metaDescription": "Explore Seeds of Innocens IVF centres outside India for advanced fertility treatment, personalized care, experienced specialists, and international patient support.",
+      "headerImage": "/assets/img/Top-Header.webp",
+      "uspTitle": "Best International IVF Centres <br /> <span class=\"cs_accent_color\">Trusted Fertility Care Beyond Borders</span>",
+      "sections": [
+        {
+          "heading": "Best IVF Centres in International",
+          "paragraphs": [
+            "Seeds of Innocens IVF extends trusted fertility care beyond India through centres designed to serve local and international patients. Our international teams combine advanced reproductive technology, experienced specialists, and compassionate guidance in a comfortable and patient-friendly environment.",
+            "Patients receive support from consultation and fertility assessment through personalized treatment planning and follow-up care. Explore our international centre below to view its location, fertility services, doctors, contact information, and appointment options."
+          ]
+        }
+      ],
+      "aboutUs": {
+        "paragraphs": [
+          "Seeds of Innocens IVF is committed to making advanced fertility care accessible to patients across borders. Our international centres follow the same patient-first approach, with a focus on ethical treatment, clear communication, privacy, and personalized clinical guidance.",
+          "Our fertility teams support patients through evaluation, treatment planning, assisted reproductive procedures, and follow-up care. Each plan is based on the patient's medical condition, reproductive goals, and specialist assessment.",
+          "For patients travelling for treatment, our teams help simplify coordination so appointments, investigations, and next steps are easier to understand and manage."
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Where are Seeds of Innocens international IVF centres located?",
+          "answer": "Our current international centre listing is available on this page. Select a centre card to view its complete address, directions, doctors, services, and contact information."
+        },
+        {
+          "question": "Can international patients request a consultation before travelling?",
+          "answer": "Yes. Patients can contact the selected centre to discuss their case, available reports, appointment options, and the next steps before planning travel."
+        },
+        {
+          "question": "Which fertility services are available at international centres?",
+          "answer": "Services vary by location and may include fertility evaluation, IVF, ICSI, IUI, fertility preservation, genetic testing, and other advanced reproductive treatments."
+        },
+        {
+          "question": "What documents should I keep ready for a fertility consultation?",
+          "answer": "Keep previous fertility reports, ultrasound and hormone test results, semen analysis reports, details of earlier treatments, current prescriptions, and relevant medical history ready for review."
+        },
+        {
+          "question": "How do I book an appointment at an international centre?",
+          "answer": "Open the centre page from the listing and use its phone, appointment, or contact options to connect with the local fertility team."
+        }
+      ]
     }
   }
 }

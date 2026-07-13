@@ -8,6 +8,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaStar, FaCheckCircle, FaClock, FaHeart } from 'react-icons/fa';
 import { submitUnifiedForm, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
+import centresAllData from '@/app/data/centres-data.json';
+
+const centresData = centresAllData.centres;
 
 const headingData = {
   title: 'Feedback',
@@ -49,6 +52,7 @@ const Page = () => {
       feedbackType: fd.get('feedbackType'),
       rating: String(rating),
       feedback: fd.get('feedback'),
+      agree: fd.get('agree'),
     };
     try {
       const { ok, data } = await submitUnifiedForm(WEBSITE_FORM_TYPES.FEEDBACK, payload);
@@ -131,36 +135,52 @@ const Page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Email Address <span style={{ fontSize: '12px', color: '#999' }}>(Optional)</span>
+                        Email Address <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="email"
                         name="email"
+                        required
                         placeholder="Enter your email"
                         className="cs_form_field"
                       />
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Phone Number
+                        Phone Number <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="tel"
                         name="phone"
-                        placeholder="Enter your phone (optional)"
+                        required
+                        placeholder="Enter your phone"
                         className="cs_form_field"
                       />
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
-                        Centre Visited
+                        Centre Visited <span style={{ color: '#df3655' }}>*</span>
                       </label>
-                      <select name="center" className="cs_form_field">
-                        <option value="">Select center (optional)</option>
-                        <option value="delhi">Malviya Nagar, Delhi</option>
-                        <option value="gurugram">Gurugram, Haryana</option>
-                        <option value="kolkata">Kolkata, West Bengal</option>
-                        <option value="other">Other</option>
+                      <select name="center" required className="cs_form_field">
+                        <option value="">Select centre</option>
+                        <optgroup label="India Centres">
+                          {centresData
+                            .filter((centre) => !centre.isInternational)
+                            .map((centre) => (
+                              <option key={centre.slug} value={centre.name}>
+                                {centre.name}
+                              </option>
+                            ))}
+                        </optgroup>
+                        <optgroup label="International Centres">
+                          {centresData
+                            .filter((centre) => centre.isInternational)
+                            .map((centre) => (
+                              <option key={centre.slug} value={centre.name}>
+                                {centre.name}
+                              </option>
+                            ))}
+                        </optgroup>
                       </select>
                     </div>
                     <div className="col-md-12">
@@ -239,7 +259,8 @@ const Page = () => {
                           style={{ marginTop: '4px', width: '18px', height: '18px', flexShrink: 0 }}
                         />
                         <span style={{ fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
-                          I agree to share my feedback and allow Seeds of Innocens to use it for improvement purposes.
+                          I agree to share my feedback and allow Seeds of Innocens to use it for improvement purposes.{' '}
+                          <span style={{ color: '#df3655' }}>*</span>
                         </span>
                       </label>
                     </div>
@@ -391,4 +412,3 @@ const Page = () => {
 };
 
 export default Page;
-
