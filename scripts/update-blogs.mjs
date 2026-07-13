@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "can-you-get-pregnant-when-youre-not-ovulating",
-    title: "Can You Get Pregnant When You Aren’t Ovulating?",
-    excerpt: "The most frequent question that comes up in the process of conceiving is, “Can you get pregnant when you’re not ovulating?” Well, the short answer to that question is no, it’s impossible to conceive without ovulation. During ovulation, a mature egg cell is released by the ovaries, which enables fertilization to occur.",
+    id: "trigger-shot-in-ivf",
+    title: "Trigger Shot for IVF: All You Should Know Before Egg Collection",
+    excerpt: "For couples undergoing IVF, every step in the process is extremely important to guarantee its success. One of the crucial procedures during IVF is the IVF Trigger Shot procedure. Even though it is a simple injection process, it plays a very important role in the collection of eggs and the development of embryos.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Can You Get Pregnant.png",
-    date: "July 10, 2026",
+    image: "/assets/img/Blogs/Trigger Shot for IVF.png",
+    date: "July 11, 2026",
     author: "admin",
-    category: "Women's Health",
-    readTime: "10 min read",
-    slug: "can-you-get-pregnant-when-youre-not-ovulating"
+    category: "IVF Process",
+    readTime: "15 min read",
+    slug: "trigger-shot-in-ivf"
   }
 ];
 
