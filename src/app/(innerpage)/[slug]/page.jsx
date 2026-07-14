@@ -131,6 +131,7 @@ export async function generateMetadata({ params }) {
                 : isIndiaLanding
                     ? ['IVF Centres', 'India']
                     : ['IVF Centres', 'India', stateName],
+            ...(isIndiaLanding ? [['IVF Centres', 'India', 'Delhi']] : []),
             isInternationalLanding ? ['IVF Centres'] : ['IVF Centres', 'India'],
             ['IVF Centres'],
             [],
