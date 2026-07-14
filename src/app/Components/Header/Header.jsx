@@ -351,7 +351,8 @@ const Header = ({ isTopBar, variant }) => {
                 label: 'Jammu & Kashmir',
                 href: '/best-ivf-centre-in-jammu-kashmir',
                 subItems: [
-                  { label: 'Srinagar, J&K', href: '/jammu-kashmir/best-ivf-centre-in-srinagar/' },
+                  { label: 'Srinagar', href: '/jammu-kashmir/best-ivf-centre-in-srinagar/' },
+                  { label: 'Jammu', href: '/jammu-kashmir/best-ivf-centre-in-jammu/' }
                 ],
               },
               {
