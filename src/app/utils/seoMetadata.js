@@ -3,7 +3,7 @@ const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
 // Cache SEO responses on the server for 5 minutes to dramatically reduce TTFB.
 // Without this, every page render performs a slow external API call and kills FCP/LCP.
-const SEO_REVALIDATE_SECONDS = 300;
+const SEO_REVALIDATE_SECONDS = 3600;
 // Hard timeout so a slow SEO API cannot stall the page render.
 const SEO_FETCH_TIMEOUT_MS = 2500;
 

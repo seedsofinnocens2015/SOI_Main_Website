@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { FaAnglesRight } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import Slider from "react-slick";
@@ -9,20 +9,7 @@ import { getAssetPathClient } from "../../utils/assetPath";
 const HeroSection = ({ data }) => {
   const sliderRef1 = useRef(null);
   const sliderRef2 = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
   const hasSecondarySlider = Array.isArray(data?.secondarySlider) && data.secondarySlider.length > 0;
-
-  // Detect mobile view (passive listener + debounce skipped – this fires rarely)
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 767);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile, { passive: true });
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   // Resume the slider only when the tab actually becomes visible again. The
   // previous implementation also re-played on focus and via an IntersectionObserver
@@ -113,9 +100,8 @@ const HeroSection = ({ data }) => {
             }}
           >
             {data?.primarySlider.map((items, index) => {
-              // Use mobile image if available and on mobile, otherwise use desktop image
-              const imageUrl = (isMobile && items.mobileBgImageUrl) ? items.mobileBgImageUrl : items.bgImageUrl;
-              const bgImagePath = getAssetPathClient(imageUrl);
+              const desktopImagePath = getAssetPathClient(items.bgImageUrl);
+              const mobileImagePath = getAssetPathClient(items.mobileBgImageUrl || items.bgImageUrl);
               const iconImagePath = getAssetPathClient(items.iconImgUrl);
               
               return (
@@ -124,18 +110,18 @@ const HeroSection = ({ data }) => {
                     className={`cs_hero cs_style_1 cs_center cs_bg_filed${items.isCenterLayout ? " cs_has_bg_image" : ""}`}
                     style={{ position: 'relative' }}
                   >
-                    <Image
-                      src={bgImagePath}
-                      alt={items.title ? String(items.title).replace(/<[^>]*>/g, ' ').trim() : 'Hero background'}
-                      fill
-                      priority={index === 0}
-                      fetchPriority={index === 0 ? 'high' : 'auto'}
-                      sizes="100vw"
-                      style={{
-                        objectFit: 'cover',
-                        objectPosition: 'center',
-                      }}
-                    />
+                    <picture className="cs_hero_picture">
+                      <source media="(max-width: 767px)" srcSet={mobileImagePath} />
+                      <img
+                        src={desktopImagePath}
+                        alt=""
+                        width="1920"
+                        height="903"
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        fetchPriority={index === 0 ? 'high' : 'low'}
+                        decoding={index === 0 ? 'sync' : 'async'}
+                      />
+                    </picture>
                     {items.isCenterLayout && (
                       <div className="cs_hero_overlay_dark"></div>
                     )}

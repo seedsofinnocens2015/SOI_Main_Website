@@ -32,7 +32,7 @@ const heroData = {
     primarySlider: [
       {
         bgImageUrl: '/assets/img/banner.webp',
-        mobileBgImageUrl: '/assets/img/banner.webp', // Add mobile image path here
+        mobileBgImageUrl: '/assets/img/banner-mobile.webp',
         title: 'YOUR JOURNEY TO<br/>PARENTHOOD STARTS HERE.',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -65,7 +65,7 @@ const heroData = {
       },
       {
         bgImageUrl: '/assets/img/Banner-2.webp',
-        mobileBgImageUrl: '/assets/img/Banner-2.webp', // Add mobile image path here
+        mobileBgImageUrl: '/assets/img/Banner-2-mobile.webp',
         title: 'Experience the Bliss of Parenthood.',
         titleClass: 'cs_single_line_title',
         titleStyle: {
@@ -98,7 +98,7 @@ const heroData = {
       },
       {
         bgImageUrl: '/assets/img/Banner-3.webp',
-        mobileBgImageUrl: '/assets/img/Banner-3.webp', // Add mobile image path here
+        mobileBgImageUrl: '/assets/img/Banner-3-mobile.webp',
         title: 'One of Asia\'s Leading<br/>Fertility Chain',
         titleClass: 'cs_single_line_title',
         titleStyle: {

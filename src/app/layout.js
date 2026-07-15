@@ -1,7 +1,5 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import { headers } from "next/headers";
-import { getParsedRawHeadTagsForPath } from "./Components/DynamicRawHeadTags";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,9 +14,8 @@ const inter = Inter({
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const faviconUrl = `${basePath}/favicon.ico`;
 
-// Use ISR-style revalidation instead of force-dynamic so the rendered HTML can
-// be cached for a short window. Dynamic SEO data is still fetched fresh after
-// the revalidation window (see Components/DynamicRawHeadTags.jsx).
+// Keep the shared layout cacheable. Page-level generateMetadata functions fetch
+// and revalidate SEO data without making every request wait on the SEO service.
 export const revalidate = 300;
 
 export const metadata = {
@@ -41,59 +38,10 @@ export const metadata = {
   },
 };
 
-const MAX_PRECONNECT_HINTS = 4;
-
-/** De-dupe SEO-injected link hints (e.g. repeated i.ytimg.com preconnect) and cap preconnect count. */
-function dedupeHeadLinkTags(tags) {
-  if (!Array.isArray(tags)) return [];
-  const seen = new Set();
-  let preconnectCount = 0;
-  return tags.filter((tag) => {
-    if (tag.type !== 'link' || !tag.attrs) return true;
-    const rel = String(tag.attrs.rel || '').toLowerCase().trim();
-    const href = String(tag.attrs.href || '').trim();
-    if (!href) return true;
-    if (rel === 'preconnect' || rel === 'dns-prefetch') {
-      const key = `${rel}:${href.toLowerCase()}`;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      if (rel === 'preconnect') {
-        if (preconnectCount >= MAX_PRECONNECT_HINTS) return false;
-        preconnectCount += 1;
-      }
-    }
-    return true;
-  });
-}
-
-export default async function RootLayout({ children }) {
-  const headerStore = await headers();
-  const headerPath =
-    headerStore.get('x-current-path') ||
-    headerStore.get('next-url') ||
-    headerStore.get('x-invoke-path') ||
-    '/';
-  const currentPathname = headerPath.startsWith('http')
-    ? new URL(headerPath).pathname || '/'
-    : headerPath;
-  const rawHeadTags = dedupeHeadLinkTags(await getParsedRawHeadTagsForPath(currentPathname));
-
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {rawHeadTags.map((tag, index) => {
-          const key = `${tag.type}-${index}`;
-          if (tag.type === 'script') {
-            return <script key={key} {...tag.attrs} dangerouslySetInnerHTML={{ __html: tag.content }} />;
-          }
-          if (tag.type === 'meta') {
-            return <meta key={key} {...tag.attrs} />;
-          }
-          if (tag.type === 'link') {
-            return <link key={key} {...tag.attrs} />;
-          }
-          return null;
-        })}
         <meta name="author" content="Themeservices" />
         <meta
           name="google-site-verification"
@@ -102,12 +50,20 @@ export default async function RootLayout({ children }) {
         {/* Preconnect to origins that gate the LCP/critical path */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
-        {/* Preload the LCP hero image so it starts downloading before JS hydrates */}
+        {/* Preload only the appropriate LCP asset for the current viewport. */}
         <link
           rel="preload"
           as="image"
           href={`${basePath}/assets/img/banner.webp`}
-          fetchpriority="high"
+          media="(min-width: 768px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href={`${basePath}/assets/img/banner-mobile.webp`}
+          media="(max-width: 767px)"
+          fetchPriority="high"
         />
         <link
           rel="preload"
@@ -260,7 +216,7 @@ export default async function RootLayout({ children }) {
   });
 })();`}
         </Script>
-        <Script id="microsoft-clarity" strategy="afterInteractive">
+        <Script id="microsoft-clarity" strategy="lazyOnload">
   {`
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

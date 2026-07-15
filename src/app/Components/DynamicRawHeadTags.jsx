@@ -3,7 +3,7 @@ const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
 // Same caching/timeout discipline as utils/seoMetadata.js. The previous
 // `cache: 'no-store'` made every page render block on a remote API call.
-const SEO_REVALIDATE_SECONDS = 300;
+const SEO_REVALIDATE_SECONDS = 3600;
 const SEO_FETCH_TIMEOUT_MS = 2500;
 
 function fetchWithTimeout(url, options = {}, timeoutMs = SEO_FETCH_TIMEOUT_MS) {
