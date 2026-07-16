@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "trigger-shot-in-ivf",
-    title: "Trigger Shot for IVF: All You Should Know Before Egg Collection",
+    id: "anterior-vs-posterior-placenta",
+    title: "Anterior vs Posterior Placenta: Understanding Placental Position During Pregnancy",
     excerpt: "For couples undergoing IVF, every step in the process is extremely important to guarantee its success. One of the crucial procedures during IVF is the IVF Trigger Shot procedure. Even though it is a simple injection process, it plays a very important role in the collection of eggs and the development of embryos.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Trigger Shot for IVF.png",
-    date: "July 11, 2026",
+    image: "/assets/img/Blogs/Anterior vs Posterior Placenta.png",
+    date: "July 15, 2026",
     author: "admin",
-    category: "IVF Process",
-    readTime: "15 min read",
-    slug: "trigger-shot-in-ivf"
+    category: "Pregnancy",
+    readTime: "12 min read",
+    slug: "anterior-vs-posterior-placenta"
   }
 ];
 

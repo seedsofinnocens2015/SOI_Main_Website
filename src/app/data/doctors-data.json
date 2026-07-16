@@ -1196,5 +1196,54 @@
       }
     ],
     "newSlug": "dr-manisha-ivf-specialist"
+  },
+  {
+    "slug": "dr-sunita-jamwal",
+    "uspTitle": "Best IVF Specialist in Jammu <br/><span class=\"cs_accent_color\">Dr Sunita Jamwal (Sanaita)</span>",
+    "headerImage": "/assets/img/Doctor-Headers/sunita.webp",
+    "name": "Dr Sunita Jamwal",
+    "subtitle": " Gynaecologist, Laparoscopic Surgeon",
+    "image": "/assets/img/Doctors/sunita.png",
+    "description": [
+        "Dr Sunita Jamwal( Sanaita) is a highly skilled Gynaecologist, Laparoscopic Surgeon, and Infertility Specialist with over 12 years of clinical experience in women’s health and reproductive medicine. With expertise in infertility management, reproductive endocrinology, assisted reproductive techniques (IUI and IVF), and gynaecological ultrasound, she has helped numerous couples achieve their dream of parenthood through evidence-based, individualized treatment approaches.",
+
+      "An accomplished surgeon with experience of over 7,000 surgeries, Dr Sunita Jamwal (Sanaita)is proficient in advanced laparoscopic and gynaecological procedures. She combines strong clinical expertise with compassionate patient care, ensuring that every patient receives personalized attention and treatment tailored to their unique needs."
+    ],
+    "location": "Jammu - Jammu & Kashmir",
+    "email": "info@seedsofinnocence.com",
+    "qualification": " MBBS, MD (Obstetrics & Gynaecology), Fellowship in Reproductive Medicine",
+    "specialization": "Inpatient and outpatient services, high-risk pregnancies, reproductive disorders, and independently performed complex deliveries, caesarean sections, and gynaecological surgeries",
+    "experience": "12+ years",
+    "workExperience": [
+      "She began her career at Government Medical College, Jammu, where she managed inpatient and outpatient services, high-risk pregnancies, reproductive disorders, and independently performed complex deliveries, caesarean sections, and gynaecological surgeries. During this period, she was actively involved in academics, teaching, and clinical research.",
+      "She subsequently completed her Senior Residency at PGIMER, Chandigarh, followed by a prestigious Fellowship in Infertility and Reproductive Endocrinology from the same institute.",
+      "Her professional journey includes serving as Consultant at Cloudnine Hospital, Chandigarh, IVF Consultant at Medicover Fertility Centre, Chandigarh , Freelance obstetrician & surgeon across leading hospitals in Himachal Pradesh, and Senior Consultant at Grace Fertility Centre, KD Multispeciality Hospital, Jammu."
+    ],
+    "education": [
+      "Dr. Sunita Jamwal ( Sanaita) holds an MBBS degree from SKIMS Medical College, Srinagar, and an MD in Obstetrics and Gynaecology from Government Medical College, Jammu. She further strengthened her expertise through a Fellowship in Infertility & Reproductive Endocrinology at PGIMER, Chandigarh (Rank 1), a Fellowship in Minimal Access Surgery, and certification in Gynaecological Ultrasound. In 2025, she earned the prestigious MRCOG (London, UK) qualification with an outstanding score of 79%.",
+      "A meritorious student throughout her academic journey, she secured 4th position in Jammu & Kashmir State Board (Class 10), and consistently ranked among the top candidates in competitive medical entrance examinations.",
+      "Her academic contributions include six published research papers, three national and international paper presentations, and First Prize in the Award Paper Session at IAGE Punjab 2022. She remains committed to continuous learning, clinical excellence, and advancing the field of reproductive medicine."
+    ],
+    "awards": [
+    ],
+    "progressBars": [
+      {
+        "label": "IVF Procedures",
+        "percentage": 88
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 94
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 78
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 86
+      }
+    ],
+    "newSlug": "dr-sunita-ivf-specialist"
   }
 ]

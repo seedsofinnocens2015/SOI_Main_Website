@@ -2580,7 +2580,16 @@
         "Fertility Assessment",
         "Egg Freezing"
       ],
-      "doctors": [],
+      "doctors": [
+        {
+          "name": "Dr Sunita Jamwal",
+          "subtitle": "Gynaecologist, Laparoscopic Surgeon",
+          "image": "/assets/img/Doctors/sunita.png",
+          "experience": "12+ Years",
+          "location": "Jammu - Jammu & Kashmir",
+          "slug": "dr-sunita-jamwal"
+        }
+      ],
       "timing": "9:00 AM to 6:00 PM",
       "testimonials": [
         {

@@ -183,6 +183,25 @@ const IVFContentSection = ({
   const renderParagraphs = (section, extraClass = '') => {
     if (!section.paragraphs) return null;
     return section.paragraphs.map((paragraph, pIndex) => {
+      if (paragraph && typeof paragraph === 'object') {
+        const { before = '', linkText = '', href = '', after = '' } = paragraph;
+        return (
+          <p key={pIndex} className={`cs_ivf_content_paragraph ${extraClass}`}>
+            {before}
+            {href && linkText ? (
+              <a
+                href={getAssetPathClient(href)}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontWeight: '700', color: '#df3655', textDecoration: 'underline' }}
+              >
+                {linkText}
+              </a>
+            ) : linkText}
+            {after}
+          </p>
+        );
+      }
       const labelMatch = paragraph.match(/^([^:]+):\s*(.+)$/);
       if (labelMatch) {
         const [, label, value] = labelMatch;

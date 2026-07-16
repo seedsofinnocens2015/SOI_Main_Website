@@ -31,6 +31,12 @@ const travelContentData = {
       paragraphs: [
         'We understand that traveling to a new country for medical treatment can be overwhelming. Our Travel Support team ensures a hassle-free experience by handling all travel-related arrangements, from visa assistance to local transportation. Our goal is to make your journey to India as smooth and stress-free as possible.',
         'Whether you are coming from Europe, Americas, Middle East, or anywhere else in the world, our dedicated travel support team will guide you through every step of your journey, ensuring you feel comfortable and confident throughout your stay in India.',
+        {
+          before: 'Discover why India is a preferred healthcare destination for global patients. Read our guide: ',
+          linkText: 'Medical Tourism Today - Why Global Patients Choose India for Affordable, World-Class Healthcare',
+          href: '/assets/pdf/medical-tourism-today.pdf',
+          after: '.',
+        },
       ],
       sideImage: '/assets/img/Travel Support.jpg',
     },
