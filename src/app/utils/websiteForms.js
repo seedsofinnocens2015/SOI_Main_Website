@@ -16,6 +16,7 @@ export const WEBSITE_FORM_PATHS = {
   bookAppointment: '/api/new-website/book-appointment',
   callBack: '/api/new-website/call-back-form',
   unified: '/api/new-website/form-submit',
+  jobApplications: '/api/job-applications',
 };
 
 /** Use for unified submissions; helps backend route / filter leads */
@@ -95,6 +96,19 @@ export async function submitUnifiedFormMultipart(formData) {
 
   const base = getWebsiteApiBaseUrl();
   const res = await fetch(`${base}${WEBSITE_FORM_PATHS.unified}`, {
+    method: 'POST',
+    body: formData,
+  });
+  const data = await parseJsonResponse(res);
+  return { response: res, data, ok: res.ok && data.ok === true };
+}
+
+export async function submitJobApplicationMultipart(formData) {
+  const phoneError = getInvalidPhoneError({ phone: formData.get('phone') });
+  if (phoneError) return { response: null, data: { ok: false, error: phoneError }, ok: false };
+
+  const base = getWebsiteApiBaseUrl();
+  const res = await fetch(`${base}${WEBSITE_FORM_PATHS.jobApplications}`, {
     method: 'POST',
     body: formData,
   });

@@ -98,21 +98,21 @@ const TYPE_CONFIG = {
   [THANK_YOU_TYPE.careersApply]: {
     label: 'Job application',
     icon: FaBriefcase,
-    headline: 'Application received',
+    headline: 'Thank You for Applying',
     subline:
-      'Thank you for applying to Seeds of Innocence. Our HR team will review your profile and get back to you if your profile matches the role.',
+      'Your application has been submitted successfully. Our HR team will carefully review your profile and contact you if your experience matches the role.',
     steps: [
       {
         title: 'Review',
-        description: 'Applications are typically screened within a few business days.',
+        description: 'Our HR team will review your application, experience, and resume within a few business days.',
       },
       {
         title: 'Shortlist',
-        description: 'If shortlisted, we will invite you for the next round of discussion.',
+        description: 'If your profile is shortlisted, we will contact you for the next stage of the hiring process.',
       },
       {
         title: 'Updates',
-        description: 'We will contact you using the email or phone you provided.',
+        description: 'Please keep your phone and email accessible for application updates.',
       },
     ],
   },

@@ -2,9 +2,9 @@
 import Section from '@/app/Components/Section';
 import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { submitUnifiedFormMultipart, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
+import { getWebsiteApiBaseUrl, submitJobApplicationMultipart } from '@/app/utils/websiteForms';
 import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 
 const ivfContentData = {
@@ -19,70 +19,49 @@ const ivfContentData = {
   ],
 };
 
-const jobOpenings = [
-  {
-    id: 'fertility-specialist',
-    title: 'Fertility Specialist / IVF Doctor',
-    department: 'Medical',
-    location: 'Delhi, Mumbai, Bangalore',
-    type: 'Full-time',
-    experience: '5+ years',
-  },
-  {
-    id: 'embryologist',
-    title: 'Embryologist',
-    department: 'Laboratory',
-    location: 'Delhi, Gurugram',
-    type: 'Full-time',
-    experience: '3+ years',
-  },
-  {
-    id: 'nurse-medical-assistant',
-    title: 'Nurse / Medical Assistant',
-    department: 'Nursing',
-    location: 'Multiple Locations',
-    type: 'Full-time',
-    experience: '2+ years',
-  },
-  {
-    id: 'patient-care-coordinator',
-    title: 'Patient Care Coordinator',
-    department: 'Administration',
-    location: 'All Centres',
-    type: 'Full-time',
-    experience: '1+ years',
-  },
-  {
-    id: 'lab-technician',
-    title: 'Lab Technician',
-    department: 'Laboratory',
-    location: 'Delhi, Kolkata',
-    type: 'Full-time',
-    experience: '2+ years',
-  },
-  {
-    id: 'marketing-executive',
-    title: 'Marketing Executive',
-    department: 'Marketing',
-    location: 'Delhi',
-    type: 'Full-time',
-    experience: '3+ years',
-  },
-];
+const JOBS_API_URL = `${getWebsiteApiBaseUrl()}/api/jobs`;
 
 const Page = () => {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [jobOpenings, setJobOpenings] = useState([]);
+  const [selectedJobId, setSelectedJobId] = useState('');
+  const [jobsLoading, setJobsLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    const requestedJobId = new URLSearchParams(window.location.search).get('jobId');
+    fetch(JOBS_API_URL, { cache: 'no-store' })
+      .then(async (response) => {
+        const payload = await response.json().catch(() => null);
+        if (!response.ok || !payload?.ok) throw new Error('Unable to load positions');
+        return Array.isArray(payload.data) ? payload.data : [];
+      })
+      .then((jobs) => {
+        if (cancelled) return;
+        setJobOpenings(jobs);
+        const requestedJob = jobs.find((job) => job._id === requestedJobId);
+        if (requestedJob) setSelectedJobId(requestedJob._id);
+      })
+      .catch(() => {
+        if (!cancelled) setError('Current positions could not be loaded. Please return to the careers page and try again.');
+      })
+      .finally(() => {
+        if (!cancelled) setJobsLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
     const fd = new FormData(e.target);
-    fd.append('formType', WEBSITE_FORM_TYPES.CAREERS_APPLY);
     try {
-      const { ok, data } = await submitUnifiedFormMultipart(fd);
+      const { ok, data } = await submitJobApplicationMultipart(fd);
       if (ok) {
         router.push(getThankYouUrl(THANK_YOU_TYPE.careersApply));
       } else {
@@ -141,13 +120,16 @@ const Page = () => {
                       </label>
                       <select
                         required
-                        name="position"
+                        name="jobOpeningId"
                         className="cs_form_field"
+                        value={selectedJobId}
+                        onChange={(event) => setSelectedJobId(event.target.value)}
+                        disabled={jobsLoading || jobOpenings.length === 0}
                       >
-                        <option value="">Select Position</option>
+                        <option value="">{jobsLoading ? 'Loading positions...' : 'Select Position'}</option>
                         {jobOpenings.map((job) => (
-                          <option key={job.id} value={job.id}>
-                            {job.title} - {job.location} ({job.department})
+                          <option key={job._id} value={job._id}>
+                            {job.title} - {job.location} ({job.jobField})
                           </option>
                         ))}
                       </select>
@@ -251,6 +233,30 @@ const Page = () => {
                         type="text"
                         name="currentOrg"
                         placeholder="Enter your current or last organization name"
+                        className="cs_form_field"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Current CTC <span style={{ color: '#df3655' }}>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        name="currentCtc"
+                        placeholder="e.g., ₹6 LPA or Not Applicable"
+                        className="cs_form_field"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Expected CTC <span style={{ color: '#df3655' }}>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        name="expectedCtc"
+                        placeholder="e.g., ₹8 LPA"
                         className="cs_form_field"
                       />
                     </div>

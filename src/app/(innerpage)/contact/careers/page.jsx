@@ -2,6 +2,8 @@
 import Section from '@/app/Components/Section';
 import AccentHeading from '@/app/Components/AccentHeading';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { getWebsiteApiBaseUrl } from '@/app/utils/websiteForms';
 import {
   FaTrophy, FaUsers, FaBriefcase, FaMapMarkerAlt,
   FaClock, FaUserTie, FaFlask, FaHeartbeat, FaChartLine,
@@ -53,68 +55,20 @@ const whyJoinUs = [
   },
 ];
 
-const jobOpenings = [
-  {
-    title: 'Fertility Specialist / IVF Doctor',
-    department: 'Medical',
-    departmentColor: { bg: '#fff4f4', color: '#c62828' },
-    icon: FaHeartbeat,
-    location: 'Delhi, Mumbai, Bangalore',
-    type: 'Full-time',
-    experience: '5+ years',
-    description: 'We are looking for experienced fertility specialists to join our team. Candidates should have expertise in IVF, ICSI, and reproductive medicine.',
-  },
-  {
-    title: 'Embryologist',
-    department: 'Laboratory',
-    departmentColor: { bg: '#e3f2fd', color: '#1565c0' },
-    icon: FaFlask,
-    location: 'Delhi, Gurugram',
-    type: 'Full-time',
-    experience: '3+ years',
-    description: 'Join our state-of-the-art embryology lab. Experience in IVF lab procedures, embryo culture, and quality control required.',
-  },
-  {
-    title: 'Nurse / Medical Assistant',
-    department: 'Nursing',
-    departmentColor: { bg: '#e8f5e9', color: '#2e7d32' },
-    icon: FaUserTie,
-    location: 'Multiple Locations',
-    type: 'Full-time',
-    experience: '2+ years',
-    description: 'Support our medical team in providing excellent patient care. Experience in fertility clinics preferred.',
-  },
-  {
-    title: 'Patient Care Coordinator',
-    department: 'Administration',
-    departmentColor: { bg: '#fff3cd', color: '#856404' },
-    icon: FaUsers,
-    location: 'All Centres',
-    type: 'Full-time',
-    experience: '1+ years',
-    description: 'Help patients navigate their fertility journey. Excellent communication skills and empathy required.',
-  },
-  {
-    title: 'Lab Technician',
-    department: 'Laboratory',
-    departmentColor: { bg: '#e3f2fd', color: '#1565c0' },
-    icon: FaFlask,
-    location: 'Delhi, Kolkata',
-    type: 'Full-time',
-    experience: '2+ years',
-    description: 'Support our laboratory operations. Experience in medical lab procedures and quality assurance.',
-  },
-  {
-    title: 'Marketing Executive',
-    department: 'Marketing',
-    departmentColor: { bg: '#f5f0ff', color: '#6a1b9a' },
-    icon: FaBullhorn,
-    location: 'Delhi',
-    type: 'Full-time',
-    experience: '3+ years',
-    description: 'Drive our marketing initiatives and patient outreach programs. Experience in healthcare marketing preferred.',
-  },
-];
+const JOBS_API_URL = `${getWebsiteApiBaseUrl()}/api/jobs`;
+
+const JOB_PRESENTATION = {
+  Medical: { icon: FaHeartbeat, bg: '#fff4f4', color: '#c62828' },
+  Laboratory: { icon: FaFlask, bg: '#e3f2fd', color: '#1565c0' },
+  Nursing: { icon: FaUserTie, bg: '#e8f5e9', color: '#2e7d32' },
+  Admin: { icon: FaUsers, bg: '#fff3cd', color: '#856404' },
+  Marketing: { icon: FaBullhorn, bg: '#f5f0ff', color: '#6a1b9a' },
+  Calling: { icon: FaUsers, bg: '#fff3e0', color: '#e65100' },
+  Counsellor: { icon: FaHeartbeat, bg: '#e0f7fa', color: '#00796b' },
+  Finance: { icon: FaBriefcase, bg: '#f3e5f5', color: '#6a1b9a' },
+  IT: { icon: FaLaptopMedical, bg: '#e8eaf6', color: '#3949ab' },
+  Other: { icon: FaBriefcase, bg: '#f5f5f5', color: '#555' },
+};
 
 const stats = [
   { value: '20+', label: 'Centres Across India' },
@@ -124,6 +78,32 @@ const stats = [
 ];
 
 const Page = () => {
+  const [jobOpenings, setJobOpenings] = useState([]);
+  const [jobsLoading, setJobsLoading] = useState(true);
+  const [jobsError, setJobsError] = useState('');
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(JOBS_API_URL, { cache: 'no-store' })
+      .then(async (response) => {
+        const payload = await response.json().catch(() => null);
+        if (!response.ok || !payload?.ok) throw new Error(payload?.error || 'Unable to load openings');
+        return payload.data;
+      })
+      .then((rows) => {
+        if (!cancelled) setJobOpenings(Array.isArray(rows) ? rows : []);
+      })
+      .catch(() => {
+        if (!cancelled) setJobsError('Current openings could not be loaded. Please try again shortly.');
+      })
+      .finally(() => {
+        if (!cancelled) setJobsLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <div>
       {/* Intro Content */}
@@ -237,27 +217,49 @@ const Page = () => {
       <Section topSpaceLg="0" topSpaceMd="0" bottomSpaceLg="80" bottomSpaceMd="120">
         <div className="container">
 
-          <div style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
-            <AccentHeading style={{ margin: 0 }}>Current Openings</AccentHeading>
-            <span style={{
-              backgroundColor: '#fff4f4',
-              color: '#de3554',
-              borderRadius: '20px',
-              padding: '4px 18px',
-              fontSize: '13px',
-              fontWeight: '600',
-              whiteSpace: 'nowrap',
-              display: 'inline-block',
-            }}>
-              {jobOpenings.length} Positions
-            </span>
-          </div>
+          {!jobsLoading && !jobsError && jobOpenings.length > 0 ? (
+            <div style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <AccentHeading style={{ margin: 0 }}>Current Openings</AccentHeading>
+              <span style={{
+                backgroundColor: '#fff4f4',
+                color: '#de3554',
+                borderRadius: '20px',
+                padding: '4px 18px',
+                fontSize: '13px',
+                fontWeight: '600',
+                whiteSpace: 'nowrap',
+                display: 'inline-block',
+              }}>
+                {jobOpenings.length} {jobOpenings.length === 1 ? 'Position' : 'Positions'}
+              </span>
+            </div>
+          ) : null}
 
+          {jobsLoading ? (
+            <div style={{ padding: '36px', textAlign: 'center', background: '#fff', border: '1px solid #ebedf0', borderRadius: '16px', color: '#666' }}>
+              Loading current openings...
+            </div>
+          ) : jobsError ? (
+            <div style={{ padding: '36px', textAlign: 'center', background: '#fff4f4', border: '1px solid #f1d5da', borderRadius: '16px', color: '#a5283f' }}>
+              {jobsError}
+            </div>
+          ) : jobOpenings.length === 0 ? (
+            <div style={{ padding: '50px 30px', textAlign: 'center', background: 'linear-gradient(135deg, #fff7f8 0%, #f7fbff 100%)', border: '1px solid #f0e3e6', borderRadius: '20px', color: '#666' }}>
+              <div style={{ width: '62px', height: '62px', margin: '0 auto 18px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#fff', boxShadow: '0 6px 20px rgba(222, 53, 84, 0.1)' }}>
+                <FaBriefcase style={{ fontSize: '27px', color: '#de3554' }} />
+              </div>
+              <strong style={{ display: 'block', color: '#222', fontSize: '22px', marginBottom: '10px' }}>No Job Openings at the Moment</strong>
+              <p style={{ maxWidth: '590px', margin: '0 auto', fontSize: '15px', lineHeight: '1.7' }}>
+                We don&apos;t have any active vacancies right now. Please check back soon for future opportunities to join the Seeds of Innocens team.
+              </p>
+            </div>
+          ) : (
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
-            {jobOpenings.map((job, i) => {
-              const Icon = job.icon;
+            {jobOpenings.map((job) => {
+              const presentation = JOB_PRESENTATION[job.jobField] || JOB_PRESENTATION.Other;
+              const Icon = presentation.icon;
               return (
-                <div key={i} className="col-lg-6">
+                <div key={job._id} className="col-lg-6">
                   <div style={{
                     backgroundColor: '#fff',
                     borderRadius: '16px',
@@ -288,13 +290,13 @@ const Page = () => {
                           width: '46px',
                           height: '46px',
                           borderRadius: '10px',
-                          backgroundColor: job.departmentColor.bg,
+                          backgroundColor: presentation.bg,
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           flexShrink: 0,
                         }}>
-                          <Icon style={{ fontSize: '20px', color: job.departmentColor.color }} />
+                          <Icon style={{ fontSize: '20px', color: presentation.color }} />
                         </div>
                         <div>
                           <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#000000', marginBottom: '4px', lineHeight: '1.3' }}>
@@ -303,13 +305,13 @@ const Page = () => {
                           <span style={{
                             display: 'inline-block',
                             padding: '3px 10px',
-                            backgroundColor: job.departmentColor.bg,
-                            color: job.departmentColor.color,
+                            backgroundColor: presentation.bg,
+                            color: presentation.color,
                             borderRadius: '20px',
                             fontSize: '11px',
                             fontWeight: '600',
                           }}>
-                            {job.department}
+                            {job.jobField}
                           </span>
                         </div>
                       </div>
@@ -330,7 +332,7 @@ const Page = () => {
                           color: '#444', borderRadius: '6px', fontSize: '12px', fontWeight: '500',
                         }}>
                           <FaClock style={{ color: '#de3554', fontSize: '11px' }} />
-                          {job.type}
+                          {job.employmentType}
                         </span>
                         <span style={{
                           display: 'inline-flex', alignItems: 'center', gap: '5px',
@@ -349,7 +351,7 @@ const Page = () => {
 
                       {/* Apply Button */}
                       <Link
-                        href="/contact/careers/apply"
+                        href={`/contact/careers/apply?jobId=${encodeURIComponent(job._id)}`}
                         style={{
                           display: 'block',
                           textAlign: 'center',
@@ -374,6 +376,7 @@ const Page = () => {
               );
             })}
           </div>
+          )}
 
           {/* General Application Banner */}
           <div style={{ marginTop: '60px' }}>
