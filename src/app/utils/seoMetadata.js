@@ -1,11 +1,11 @@
 // const SEO_API_BASE_URL = 'http://localhost:4000';
 const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
-// Cache SEO responses on the server for 5 minutes to dramatically reduce TTFB.
-// Without this, every page render performs a slow external API call and kills FCP/LCP.
-const SEO_REVALIDATE_SECONDS = 3600;
+// Hostinger caches the Next.js output. Refresh SEO every two minutes so panel
+// edits appear automatically without forcing every page to render dynamically.
+const SEO_REVALIDATE_SECONDS = 120;
 // Hard timeout so a slow SEO API cannot stall the page render.
-const SEO_FETCH_TIMEOUT_MS = 2500;
+const SEO_FETCH_TIMEOUT_MS = 5000;
 
 function fetchWithTimeout(url, options = {}, timeoutMs = SEO_FETCH_TIMEOUT_MS) {
   if (typeof AbortController === 'undefined') {
@@ -55,38 +55,24 @@ function sanitizeOpenGraphType(value = '') {
   return allowedTypes.has(normalized) ? normalized : undefined;
 }
 
-function hasConfiguredSeo(seo = {}) {
-  return Boolean(
-    seo.pageTitle ||
-      seo.metaDescription ||
-      seo.metaKeyword ||
-      seo.ogTitle ||
-      seo.twitterTitle
-  );
+async function fetchResolvedSeo(pageUrl) {
+  const response = await fetchWithTimeout(
+    `${SEO_API_BASE_URL}/api/seo/resolved?pageUrl=${encodeURIComponent(pageUrl)}`,
+    {
+      method: 'GET',
+      next: { revalidate: SEO_REVALIDATE_SECONDS, tags: ['seo'] },
+    }
+  ).catch(() => null);
+
+  if (!response?.ok) return null;
+  const payload = await response.json().catch(() => null);
+  return payload?.ok && payload?.data ? payload.data : null;
 }
 
-async function fetchSeoByCandidates(pageUrl, hierarchyCandidates = [[]]) {
-  for (const hierarchyPath of hierarchyCandidates) {
-    const response = await fetchWithTimeout(
-      `${SEO_API_BASE_URL}/api/seo?pageUrl=${encodeURIComponent(pageUrl)}&hierarchyPath=${encodeURIComponent(
-        JSON.stringify(hierarchyPath)
-      )}`,
-      {
-        method: 'GET',
-        next: { revalidate: SEO_REVALIDATE_SECONDS, tags: ['seo'] },
-      }
-    ).catch(() => null);
-
-    if (!response || !response.ok) continue;
-
-    const payload = await response.json().catch(() => null);
-    if (!payload?.ok || !payload?.data) continue;
-    if (hasConfiguredSeo(payload.data)) {
-      return payload.data;
-    }
-  }
-
-  return null;
+function withoutEmptyValues(values = {}) {
+  return Object.fromEntries(
+    Object.entries(values).filter(([, value]) => value !== undefined && value !== null && value !== '')
+  );
 }
 
 function buildMetadataFromSeo(seo) {
@@ -111,9 +97,10 @@ function buildMetadataFromSeo(seo) {
     description: seo.metaDescription || undefined,
     keywords: keywords.length ? keywords : undefined,
     robots,
-    alternates: {
+    alternates: withoutEmptyValues({
       canonical: seo.canonical || undefined,
-    },
+      languages: seo.alternate ? { 'x-default': seo.alternate } : undefined,
+    }),
     authors: seo.author ? [{ name: seo.author }] : undefined,
     openGraph,
     twitter: {
@@ -124,31 +111,24 @@ function buildMetadataFromSeo(seo) {
       description: seo.twitterDescription || seo.ogDescription || seo.metaDescription || undefined,
       images: seo.twitterImageSrc ? [seo.twitterImageSrc] : ogImage ? [ogImage] : undefined,
     },
-    other: {
+    other: withoutEmptyValues({
       news_keywords: seo.newsKeywords || undefined,
       abstract: seo.abstract || undefined,
-      dc_source: seo.dcSource || undefined,
-      dc_title: seo.dcTitle || undefined,
-      dc_keywords: seo.dcKeywords || undefined,
-      dc_description: seo.dcDescription || undefined,
-      alternate: seo.alternate || undefined,
+      'DC.source': seo.dcSource || undefined,
+      'DC.title': seo.dcTitle || undefined,
+      'DC.subject': seo.dcKeywords || undefined,
+      'DC.description': seo.dcDescription || undefined,
       copyright: seo.copyright || undefined,
-      fb_admins: seo.fbAdmins || undefined,
-      twitter_canonical: seo.twitterCanonical || undefined,
-      item_type: seo.itemType || undefined,
-      item_name: seo.itemName || undefined,
-      item_description: seo.itemDescription || undefined,
-      item_url: seo.itemUrl || undefined,
-      item_image: seo.itemImage || undefined,
-      item_author: seo.itemAuthor || undefined,
-      item_organization: seo.itemOrganization || undefined,
-    },
+    }),
   };
 }
 
 async function getSeoMetadata({ pageUrl, hierarchyCandidates = [[]] }) {
-  const seo = await fetchSeoByCandidates(pageUrl, hierarchyCandidates).catch(() => null);
+  // Keep the argument for existing page callers; the resolved API safely finds
+  // the latest row even if a panel hierarchy label changes.
+  void hierarchyCandidates;
+  const seo = await fetchResolvedSeo(pageUrl).catch(() => null);
   return buildMetadataFromSeo(seo);
 }
 
-export { getSeoMetadata };
+export { getSeoMetadata, fetchResolvedSeo };

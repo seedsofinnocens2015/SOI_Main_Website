@@ -14,9 +14,8 @@ const inter = Inter({
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const faviconUrl = `${basePath}/favicon.ico`;
 
-// Keep the shared layout cacheable. Page-level generateMetadata functions fetch
-// and revalidate SEO data without making every request wait on the SEO service.
-export const revalidate = 300;
+// Hostinger ISR cache: SEO edits become visible automatically in about 2 minutes.
+export const revalidate = 120;
 
 export const metadata = {
   metadataBase: new URL('https://www.seedsofinnocens.com'),

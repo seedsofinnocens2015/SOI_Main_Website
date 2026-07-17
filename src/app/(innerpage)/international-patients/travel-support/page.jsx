@@ -4,7 +4,6 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import React from 'react';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
   return getSeoMetadata({
@@ -37,8 +36,7 @@ const travelContentData = {
           href: '/assets/pdf/medical-tourism-today.pdf',
           after: '.',
         },
-      ],
-      sideImage: '/assets/img/Travel Support.jpg',
+      ]
     },
     {
       heading: 'Visa Assistance',

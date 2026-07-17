@@ -7,7 +7,6 @@ import doctorsData from '@/app/data/doctors-data.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
   return getSeoMetadata({

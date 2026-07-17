@@ -13,6 +13,7 @@ import { getAssetPath } from '@/app/utils/assetPath';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 import FAQAccordion from '@/app/Components/FAQAccordion';
 import BestIVFCentre from '@/app/Components/BestIVFCentre';
+import SeoRawHead from '@/app/Components/SeoRawHead';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.seedsofinnocence.com';
@@ -271,15 +272,18 @@ const DynamicPage = async ({ params }) => {
         }, {});
 
         return (
-            <BestIVFCentre 
-                center={center}
-                cityName={cityName} 
-                description={Array.isArray(center.description) ? center.description.join(' ') : center.description} 
-                services={servicesWithIcons}
-                doctorSlugMap={doctorSlugMap}
-                faqContentData={faqContentData}
-                aboutUs={aboutUs}
-            />
+            <>
+                <SeoRawHead pageUrl={`/${slug}`} />
+                <BestIVFCentre
+                    center={center}
+                    cityName={cityName}
+                    description={Array.isArray(center.description) ? center.description.join(' ') : center.description}
+                    services={servicesWithIcons}
+                    doctorSlugMap={doctorSlugMap}
+                    faqContentData={faqContentData}
+                    aboutUs={aboutUs}
+                />
+            </>
         );
     }
 
@@ -348,6 +352,8 @@ const DynamicPage = async ({ params }) => {
             : null;
 
     return (
+        <>
+        <SeoRawHead pageUrl={`/${slug}`} />
         <div className="cs_center_page_template">
             <Section
                 className={'cs_page_heading cs_bg_filed cs_center'}
@@ -716,6 +722,7 @@ const DynamicPage = async ({ params }) => {
                 </Section>
             )}
         </div>
+        </>
     );
 
 };
