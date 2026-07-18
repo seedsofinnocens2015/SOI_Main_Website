@@ -4,7 +4,7 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { submitUnifiedFormMultipart, WEBSITE_FORM_TYPES } from '@/app/utils/websiteForms';
+import { submitGeneralJobApplicationMultipart } from '@/app/utils/websiteForms';
 import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 
 const ivfContentData = {
@@ -29,9 +29,8 @@ const Page = () => {
     setIsSubmitting(true);
     setError('');
     const fd = new FormData(e.target);
-    fd.append('formType', WEBSITE_FORM_TYPES.CAREERS_GENERAL);
     try {
-      const { ok, data } = await submitUnifiedFormMultipart(fd);
+      const { ok, data } = await submitGeneralJobApplicationMultipart(fd);
       if (ok) {
         router.push(getThankYouUrl(THANK_YOU_TYPE.careersGeneral));
       } else {

@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "anterior-vs-posterior-placenta",
-    title: "Anterior vs Posterior Placenta: Understanding Placental Position During Pregnancy",
-    excerpt: "For couples undergoing IVF, every step in the process is extremely important to guarantee its success. One of the crucial procedures during IVF is the IVF Trigger Shot procedure. Even though it is a simple injection process, it plays a very important role in the collection of eggs and the development of embryos.",
+    id: "placenta-previa",
+    title: "Placenta Previa: Causes, Symptoms and Diagnosis",
+    excerpt: "Placenta previa is amongst the more important complications of the second and third trimesters in obstetrics. The condition is quite unnerving to expectant mothers and families alike. This blog is all about what placenta previa is, types of placenta previa, how it is diagnosed and managed, and how the delivery plan is undertaken if present.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Anterior vs Posterior Placenta.png",
-    date: "July 15, 2026",
+    image: "/assets/img/Blogs/Placenta Previa.png",
+    date: "July 17, 2026",
     author: "admin",
     category: "Pregnancy",
-    readTime: "12 min read",
-    slug: "anterior-vs-posterior-placenta"
+    readTime: "13 min read",
+    slug: "placenta-previa"
   }
 ];
 

@@ -5,8 +5,8 @@
  * - All other forms POST to unified: /api/website/form-submit
  *   Body: { formType, ...fields } or multipart + formType field (implement on server).
  */
-const WEBSITE_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
-// const WEBSITE_API_BASE_URL = 'http://localhost:4000';
+// const WEBSITE_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
+const WEBSITE_API_BASE_URL = 'http://localhost:4000';
 
 export function getWebsiteApiBaseUrl() {
   return WEBSITE_API_BASE_URL;
@@ -17,6 +17,7 @@ export const WEBSITE_FORM_PATHS = {
   callBack: '/api/new-website/call-back-form',
   unified: '/api/new-website/form-submit',
   jobApplications: '/api/job-applications',
+  generalJobApplications: '/api/job-applications/general',
 };
 
 /** Use for unified submissions; helps backend route / filter leads */
@@ -109,6 +110,19 @@ export async function submitJobApplicationMultipart(formData) {
 
   const base = getWebsiteApiBaseUrl();
   const res = await fetch(`${base}${WEBSITE_FORM_PATHS.jobApplications}`, {
+    method: 'POST',
+    body: formData,
+  });
+  const data = await parseJsonResponse(res);
+  return { response: res, data, ok: res.ok && data.ok === true };
+}
+
+export async function submitGeneralJobApplicationMultipart(formData) {
+  const phoneError = getInvalidPhoneError({ phone: formData.get('phone') });
+  if (phoneError) return { response: null, data: { ok: false, error: phoneError }, ok: false };
+
+  const base = getWebsiteApiBaseUrl();
+  const res = await fetch(`${base}${WEBSITE_FORM_PATHS.generalJobApplications}`, {
     method: 'POST',
     body: formData,
   });

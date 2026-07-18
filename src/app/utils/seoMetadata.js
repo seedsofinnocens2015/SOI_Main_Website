@@ -1,5 +1,5 @@
-// const SEO_API_BASE_URL = 'http://localhost:4000';
-const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
+const SEO_API_BASE_URL = 'http://localhost:4000';
+// const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
 // Hostinger caches the Next.js output. Refresh SEO every two minutes so panel
 // edits appear automatically without forcing every page to render dynamically.

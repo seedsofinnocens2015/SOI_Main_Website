@@ -368,7 +368,7 @@ const DynamicPage = async ({ params }) => {
                     <div className="cs_best_ivf_content">
                         {/* Main Heading from JSON with Partial Coloring */}
                         <h1 className="cs_best_ivf_title">
-                            Best IVF Centres in <span className='cs_best_ivf_title_span'>{stateContentData.sections[0]?.heading.replace(/Best IVF Centres in/i, '').trim()}</span>
+                            Best IVF Centre in <span className='cs_best_ivf_title_span'>{stateContentData.sections[0]?.heading.replace(/Best IVF Centres? in/i, '').trim()}</span>
                         </h1>
 
                         {/* Description Paragraph from JSON */}

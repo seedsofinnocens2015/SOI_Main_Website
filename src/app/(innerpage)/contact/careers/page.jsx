@@ -345,9 +345,17 @@ const Page = () => {
                       </div>
 
                       {/* Description */}
-                      <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', flex: 1, marginBottom: '20px' }}>
+                      <div style={{
+                        fontSize: '14px',
+                        lineHeight: '1.7',
+                        color: '#666',
+                        flex: 1,
+                        marginBottom: '20px',
+                        whiteSpace: 'pre-wrap',
+                        overflowWrap: 'anywhere',
+                      }}>
                         {job.description}
-                      </p>
+                      </div>
 
                       {/* Apply Button */}
                       <Link

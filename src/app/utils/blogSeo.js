@@ -1,7 +1,7 @@
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
-// const SITE_URL =  'http://localhost:4000';
-const SITE_URL = 'https://seeds.seedsofinnocens.com';
+const SITE_URL =  'http://localhost:4000';
+// const SITE_URL = 'https://seeds.seedsofinnocens.com';
 
 const CATEGORY_ROUTE_MAP = {
   'Treatment Guides': 'treatment-guides',
