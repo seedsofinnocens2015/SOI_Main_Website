@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "placenta-previa",
-    title: "Placenta Previa: Causes, Symptoms and Diagnosis",
-    excerpt: "Placenta previa is amongst the more important complications of the second and third trimesters in obstetrics. The condition is quite unnerving to expectant mothers and families alike. This blog is all about what placenta previa is, types of placenta previa, how it is diagnosed and managed, and how the delivery plan is undertaken if present.",
+    id: "ivf-treatment-in-india",
+    title: "IVF Treatment in India | High Success Rates & Expert Care",
+    excerpt: "Parenthood is considered to be one of the most beautiful things in the world. However, in case it turns out to be unattainable, it can cause stress, anxiety, and even pain both physically and psychologically. The thing is that nowadays medicine is highly developed, which means that in vitro fertilization in India has helped many families become happy parents.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Placenta Previa.png",
-    date: "July 17, 2026",
+    image: "/assets/img/Blogs/IVF Treatment in India.png",
+    date: "July 18, 2026",
     author: "admin",
-    category: "Pregnancy",
+    category: "IVF Process",
     readTime: "13 min read",
-    slug: "placenta-previa"
+    slug: "ivf-treatment-in-india"
   }
 ];
 

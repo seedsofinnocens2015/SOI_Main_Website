@@ -13,6 +13,7 @@ import { getAssetPath } from '@/app/utils/assetPath';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 import FAQAccordion from '@/app/Components/FAQAccordion';
 import BestIVFCentre from '@/app/Components/BestIVFCentre';
+import CentresSlider from '@/app/Components/CentresSlider';
 import SeoRawHead from '@/app/Components/SeoRawHead';
 import { FaSuitcase, FaLocationDot } from 'react-icons/fa6';
 
@@ -477,6 +478,14 @@ const DynamicPage = async ({ params }) => {
                             <span style={{ color: '#000000' }}>IN {stateName.toUpperCase()}</span>
                         </h1>
                     </div>
+                    {isIndiaLanding ? (
+                        <CentresSlider
+                            centres={filteredCentres.map(centre => ({
+                                ...centre,
+                                href: getCenterLink(centre),
+                            }))}
+                        />
+                    ) : (
                     <div className="row cs_gap_y_40">
                         {filteredCentres.map((centre, index) => (
                             <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
@@ -518,6 +527,7 @@ const DynamicPage = async ({ params }) => {
                             </div>
                         ))}
                     </div>
+                    )}
                 </div>
             </Section>
 

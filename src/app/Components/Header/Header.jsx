@@ -18,6 +18,7 @@ import blogsData from '@/app/data/blogs.json';
 import centresData from '@/app/data/centres-data.json';
 import servicesContent from '@/app/data/servicesContent.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
+import { getServicePath } from '@/app/utils/serviceRoutes.mjs';
 
 const FloatingButton = dynamic(() => import('@/app/Components/FloatingButton'), {
   ssr: false,
@@ -573,7 +574,7 @@ const Header = ({ isTopBar, variant }) => {
     }));
     const serviceItems = Object.keys(servicesContent || {}).map((key) => ({
       label: servicesContent[key]?.title || key,
-      href: `/services/${servicesContent[key]?.slug || key}`,
+      href: getServicePath(key),
       type: 'Service',
     }));
     const contactItems = (centresData?.centres || [])

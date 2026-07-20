@@ -4,6 +4,15 @@ import legacyDoctorRedirects from './redirects/legacy-doctor-redirects.mjs';
 import legacyContactRedirects from './redirects/legacy-contact-redirects.mjs';
 import legacyBlogRedirects from './redirects/legacy-blog-redirects.mjs';
 import legacyTrainingRedirects from './redirects/legacy-training-redirects.mjs';
+import { SERVICE_PATH_BY_KEY } from './src/app/utils/serviceRoutes.mjs';
+
+const legacyPrefixedServiceRedirects = Object.entries(SERVICE_PATH_BY_KEY).map(
+  ([serviceKey, destination]) => ({
+    source: `/services/${serviceKey}/`,
+    destination: `${destination}/`,
+    permanent: true,
+  })
+);
 
 /** @type {import('next').NextConfig} */
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -64,6 +73,7 @@ const nextConfig = {
 
   async redirects() {
     return [
+      ...legacyPrefixedServiceRedirects,
       ...legacyCenterRedirects,
       ...legacyServiceRedirects,
       ...legacyDoctorRedirects,

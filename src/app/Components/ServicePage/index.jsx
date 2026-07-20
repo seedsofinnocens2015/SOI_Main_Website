@@ -4,7 +4,7 @@ import PageHeading from '../PageHeading';
 import IVFContentSection from '../IVFContentSection';
 import servicesContent from '@/app/data/servicesContent.json';
 import { getRelatedSlugs, getDefaultDescription } from '@/app/utils/serviceSeo';
-import { getServicePath } from '@/app/utils/serviceRoutes';
+import { getServicePath } from '@/app/utils/serviceRoutes.mjs';
 
 const ServicePage = ({ serviceKey }) => {
   const config = servicesContent[serviceKey];
