@@ -136,14 +136,14 @@ const PageHeading = ({ data }) => {
                         {centresData
                           .filter((c) => !c.isInternational)
                           .map((c) => (
-                            <option key={c.slug} value={c.slug}>{c.name}</option>
+                            <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
                           ))}
                       </optgroup>
                       <optgroup label="International Centres">
                         {centresData
                           .filter((c) => c.isInternational)
                           .map((c) => (
-                            <option key={c.slug} value={c.slug}>{c.name}</option>
+                            <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
                           ))}
                       </optgroup>
                     </select>

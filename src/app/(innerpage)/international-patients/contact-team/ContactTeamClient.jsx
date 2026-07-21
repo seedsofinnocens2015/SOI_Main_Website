@@ -250,7 +250,7 @@ const Page = () => {
                           {centresData
                             .filter((c) => !c.isInternational)
                             .map((c) => (
-                              <option key={c.slug} value={c.slug}>
+                              <option key={c.slug} value={c.name.split(',')[0].trim()}>
                                 {c.name}
                               </option>
                             ))}
@@ -259,7 +259,7 @@ const Page = () => {
                           {centresData
                             .filter((c) => c.isInternational)
                             .map((c) => (
-                              <option key={c.slug} value={c.slug}>
+                              <option key={c.slug} value={c.name.split(',')[0].trim()}>
                                 {c.name}
                               </option>
                             ))}

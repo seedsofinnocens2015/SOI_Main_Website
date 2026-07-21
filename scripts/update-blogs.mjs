@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-treatment-in-india",
-    title: "IVF Treatment in India | High Success Rates & Expert Care",
-    excerpt: "Parenthood is considered to be one of the most beautiful things in the world. However, in case it turns out to be unattainable, it can cause stress, anxiety, and even pain both physically and psychologically. The thing is that nowadays medicine is highly developed, which means that in vitro fertilization in India has helped many families become happy parents.",
+    id: "pcod-kya-hai-karan-lakshan-janch-upchar",
+    title: "PCOD क्या है? इसके कारण, लक्षण, जांच और उपचार",
+    excerpt: "PCOD, जिसका पूरा नाम पॉलीसिस्टिक ओवेरियन डिसीज है, आजकल कई महिलाओं के लिए एक सामान्य चिंता का विषय बन गया है। बदलती जीवनशैली, तनाव, अस्वस्थ आहार और हार्मोनल असंतुलन के कारण PCOD की समस्या तेजी से बढ़ रही है। यदि इसे समय पर पहचान कर सही तरीके से उपचारित किया जाए और जीवनशैली में आवश्यक परिवर्तन किए जाएं, तो इसे प्रभावी ढंग से प्रबंधित किया जा सकता है। यदि आप यह जानने के इच्छुक हैं कि PCOD क्या है, इसके लक्षण क्या हैं, इसकी जांच कैसे होती है और उपचार के विकल्प क्या हैं, तो यह लेख आपके सभी प्रश्नों का उत्तर देने में मदद करेगा।",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Treatment in India.png",
-    date: "July 18, 2026",
+    image: "/assets/img/Blogs/PCOD क्या है.png",
+    date: "July 20, 2026",
     author: "admin",
-    category: "IVF Process",
-    readTime: "13 min read",
-    slug: "ivf-treatment-in-india"
+    category: "Women's Health",
+    readTime: "14 min read",
+    slug: "pcod-kya-hai-karan-lakshan-janch-upchar"
   }
 ];
 
