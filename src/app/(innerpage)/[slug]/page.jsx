@@ -341,6 +341,12 @@ const DynamicPage = async ({ params }) => {
     }));
     const hasStateFaqs = stateFaqs.length > 0;
 
+    const additionalSections = (rawStateContent.additionalSections || []).map((section) => ({
+        ...section,
+        heading: replaceStateName(section.heading),
+        paragraphs: (section.paragraphs || []).map(replaceStateName),
+    }));
+
     // About Us: only when this state's own `stateContent[stateSlug].aboutUs` exists (never from `default`)
     const rawStateAboutUs = stateContentConfig[stateSlug]?.aboutUs;
     const stateAboutUs =
@@ -380,6 +386,30 @@ const DynamicPage = async ({ params }) => {
                                 </p>
                             ))}
                         </div>
+
+                        {additionalSections[0] && (
+                            <div className="mt-5 mb-5">
+                                <h2 className="cs_service_main_title mb-3 text-center">
+                                    <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                        {additionalSections[0].headingHighlight}
+                                    </span>{' '}
+                                    <span style={{ color: '#000000' }}>
+                                        {additionalSections[0].heading
+                                            .replace(additionalSections[0].headingHighlight || '', '')
+                                            .trim()}
+                                    </span>
+                                </h2>
+                                {additionalSections[0].paragraphs.map((paragraph, paragraphIndex) => (
+                                    <p
+                                        key={paragraphIndex}
+                                        className="cs_about_v2_para text-center"
+                                        style={{ width: '100%', maxWidth: 'none', marginLeft: 'auto', marginRight: 'auto' }}
+                                    >
+                                        {paragraph}
+                                    </p>
+                                ))}
+                            </div>
+                        )}
 
                         {/* Service Cards - Mobile 2 Rows */}
                         <div className="cs_best_ivf_services_mobile">
@@ -466,6 +496,39 @@ const DynamicPage = async ({ params }) => {
                     </div>
                 </div>
             </section>
+
+            {additionalSections.length > 1 && (
+                <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="30" bottomSpaceMd="20">
+                    <div className="container">
+                        <div className="cs_about_v2_wrapper cs_about_v2_wrapper--text-only">
+                            <div className="cs_about_v2_text_col">
+                                {additionalSections.slice(1).map((contentSection, sectionIndex) => {
+                                    const HeadingTag = contentSection.headingLevel === 3 ? 'h3' : 'h2';
+                                    const headingRemainder = contentSection.heading
+                                        .replace(contentSection.headingHighlight || '', '')
+                                        .trim();
+
+                                    return (
+                                        <div key={sectionIndex} className="mb-5">
+                                            <HeadingTag className="cs_service_main_title mb-3">
+                                                <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                                                    {contentSection.headingHighlight}
+                                                </span>{' '}
+                                                <span style={{ color: '#000000' }}>{headingRemainder}</span>
+                                            </HeadingTag>
+                                            {contentSection.paragraphs.map((paragraph, paragraphIndex) => (
+                                                <p key={paragraphIndex} className="cs_about_v2_para">
+                                                    {paragraph}
+                                                </p>
+                                            ))}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </Section>
+            )}
 
             {/* Centres List Section */}
             <Section topSpaceLg="30" topSpaceMd="30" bottomSpaceLg="80" bottomSpaceMd="50">
