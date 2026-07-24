@@ -38,7 +38,7 @@ const SURGERY_PAGE_KEYS = ['hysteroscopy', 'laparoscopy', 'open-surgery'];
 
 const WOMEN_HEALTH_PAGE_KEYS = [
   'secondary-infertility', 'high-risk-pregnancy', 'fetal-reduction', 'pregnancy-and-coronavirus',
-  'blocked-fallopian-tubes', 'pcos-vs-pmos', 'irregular-menstrual-cycle',
+  'blocked-fallopian-tubes', 'pcos-vs-pmos', 'polycystic-ovary-disease-pcod', 'irregular-menstrual-cycle',
   'diabetes-thyroid-and-obesity', 'endometrial-and-ovarian', 'endometriosis',
   'fibroids-polyps-and-adenomyosis', 'female-genital-tuberculosis', 'recurrent-miscarriages',
   'reasons-for-delayed-periods-but-not-pregnant', 'ovarian-hyperstimulation-syndrome-ohss',
@@ -67,6 +67,7 @@ function isIntroHeading(heading) {
 function isWhyHeading(heading) {
   if (!heading || typeof heading !== 'string') return false;
   const h = heading.trim().toLowerCase();
+  if (h.startsWith('why opt for seeds of innocens')) return false;
   return /^why is .+ (done|recommended|suggested)\??$/i.test(h) || /^why (is|do|freeze|opt)/i.test(h) || h.startsWith('when is ') && h.includes('recommended');
 }
 
@@ -98,21 +99,32 @@ const IVFContentSection = ({
   const whySection = sections.find(s => isWhyHeading(s.heading));
   const mainSections = sections.filter(s => s !== introSection && s !== whySection);
 
-  const renderHeading = (heading, forcePlain = false) => {
+  const renderHeading = (heading, forcePlain = false, options = {}) => {
     if (heading == null) return null;
     const headingStr = typeof heading === 'string' ? heading : String(heading);
+    const HeadingTag = options.level === 'h3' ? 'h3' : 'h2';
+    const headingClass = options.level === 'h3'
+      ? 'cs_ivf_content_heading cs_ivf_content_subheading'
+      : 'cs_ivf_content_heading';
+    const wrapWithLink = (content) => options.href ? (
+      <a href={options.href} className="cs_ivf_content_heading_link">{content}</a>
+    ) : content;
     if (forcePlain || !accentHeadingStyle) {
-      return <h2 className="cs_ivf_content_heading">{headingStr}</h2>;
+      return <HeadingTag className={headingClass}>{wrapWithLink(headingStr)}</HeadingTag>;
     }
     const words = headingStr.trim().split(/\s+/);
     const mid = Math.ceil(words.length / 2);
     const firstPart = words.slice(0, mid).join(' ');
     const restPart = words.slice(mid).join(' ');
     return (
-      <h2 className="cs_ivf_content_heading">
-        <span className="cs_heading_accent_start">{firstPart}</span>
-        {restPart ? <span> {restPart}</span> : null}
-      </h2>
+      <HeadingTag className={headingClass}>
+        {wrapWithLink(
+          <>
+            <span className="cs_heading_accent_start">{firstPart}</span>
+            {restPart ? <span> {restPart}</span> : null}
+          </>
+        )}
+      </HeadingTag>
     );
   };
 
@@ -267,11 +279,44 @@ const IVFContentSection = ({
 
   const renderContentBlock = (section, options = {}) => {
     const { showHeading = true, headingForcePlain = false } = options;
+    if (section.inlineHeading && section.heading) {
+      return (
+        <>
+          <p className="cs_ivf_content_paragraph cs_ivf_inline_heading_paragraph">
+            <strong>
+              {section.headingHref ? (
+                <a href={section.headingHref} className="cs_ivf_inline_heading_link">
+                  {section.heading}
+                </a>
+              ) : section.heading}
+              :
+            </strong>{' '}
+            {(section.paragraphs || [])[0] || ''}
+          </p>
+          {(section.paragraphs || []).length > 1 && renderParagraphs(
+            { paragraphs: section.paragraphs.slice(1) },
+            options.paragraphClass || ''
+          )}
+          {renderList(section, options.listClass || '')}
+          {section.afterParagraphs && renderParagraphs(
+            { paragraphs: section.afterParagraphs },
+            options.paragraphClass || ''
+          )}
+        </>
+      );
+    }
     return (
       <>
-        {showHeading && section.heading && renderHeading(section.heading, headingForcePlain)}
+        {showHeading && section.heading && renderHeading(section.heading, headingForcePlain, {
+          level: section.headingLevel,
+          href: section.headingHref,
+        })}
         {renderParagraphs(section, options.paragraphClass || '')}
         {renderList(section, options.listClass || '')}
+        {section.afterParagraphs && renderParagraphs(
+          { paragraphs: section.afterParagraphs },
+          options.paragraphClass || ''
+        )}
         {section.steps && renderSteps(section.steps)}
       </>
     );
@@ -280,7 +325,7 @@ const IVFContentSection = ({
   const renderSectionWithLayout = (section, isTwoColWithImage) => {
     if (!section.sideImage || !isTwoColWithImage) {
       return (
-        <div className="cs_ivf_content_section">
+        <div className={`cs_ivf_content_section${section.inlineHeading ? ' cs_ivf_inline_heading_section' : ''}`}>
           {renderContentBlock(section)}
           {section.bottomImage && (
             <div className="cs_ivf_content_bottom_image_wrapper" style={{ marginTop: '30px' }}>

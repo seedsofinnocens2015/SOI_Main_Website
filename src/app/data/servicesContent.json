@@ -5738,6 +5738,391 @@
       }
     }
   },
+  "polycystic-ovary-disease-pcod": {
+    "uspTitle": "Polycystic Ovarian Disease <span class=\"cs_accent_color\">(PCOD)</span>",
+    "title": "Polycystic Ovarian Disease (PCOD)",
+    "slug": "polycystic-ovary-disease-pcod",
+    "category": "women-health",
+    "description": "Polycystic Ovarian Disease (PCOD) is a common hormonal condition affecting menstruation, ovulation, fertility, and overall health.",
+    "heroBackground": "/assets/img/Services/PCOD.webp",
+    "layoutType": "ivfContent",
+    "benefitImages": [
+      "/assets/img/recent_post2webp",
+      "/assets/img/recent_post2webp"
+    ],
+    "ivfContentData": {
+      "sections": [
+        {
+          "heading": "About PCOD",
+          "paragraphs": [
+            "Polycystic Ovarian Disease (PCOD) is one of the most common hormonal diseases that affect women of reproductive age. These conditions affect menstruation, ovulation, fertility, and overall health. Even though women often treat the disease with lifestyle correction and medication, it is important to detect PCOD early to avoid complications.",
+            "Specialists of the Seeds of Innocens IVF clinic will help you deal with PCOD and provide you with individual infertility treatment if necessary."
+          ]
+        },
+        {
+          "heading": "PCOD Full Form",
+          "paragraphs": [
+            "PCOD full form is Polycystic Ovarian Disease. The PCOD full form in medical terminology is Polycystic Ovarian Disease – a disease in which multiple immature follicles develop in the ovaries due to a hormonal disorder."
+          ]
+        },
+        {
+          "heading": "What Is PCOD?",
+          "paragraphs": [
+            "To answer the question of what is PCOD, or what is PCOD problem, it should be noted that this is a hormonal disorder in which the ovaries produce increased amounts of male hormones (androgens), which prevents the development of the egg and causes disorders in the process of ovulation and the appearance of multiple small cysts in the ovaries.",
+            "The PCOD problem occurs more frequently because of a sedentary lifestyle, bad nutrition, stress, obesity, and hereditary factors."
+          ]
+        },
+        {
+          "heading": "Symptoms of PCOD",
+          "paragraphs": [
+            "Knowing the symptoms of PCOD early can help avoid complications. The most common symptoms of PCOD are:"
+          ],
+          "listItems": [
+            "Irregular menstruation",
+            "Weight gain or inability to lose weight",
+            "Acne and greasy skin",
+            "Extra facial and body hair (Hirsutism)",
+            "Loss of hair",
+            "Inability to conceive",
+            "Dark patches on the neck and armpits",
+            "Mood changes"
+          ],
+          "afterParagraphs": [
+            "These symptoms do not affect all women, and they differ for everyone."
+          ]
+        },
+        {
+          "heading": "What are the Effects of PCOD on a Woman’s Health?",
+          "paragraphs": [
+            "Polycystic Ovarian Disease (PCOD) is not limited to being a problem related to menstrual cycles. In reality, this disease has various effects on the reproductive system, hormonal levels, metabolism, and emotions of a female. Though in some cases the symptoms might be rather mild, in others they can bring about serious problems in terms of a woman's health.",
+            "When ovaries generate immature eggs that do not mature and are not released, the follicles begin to turn into small cysts. This hormonal disorder not only causes problems with menstrual cycles but also hurts fertility, body weight, skin, and emotions of a woman. Untreated PCOD can result in various complications that include:"
+          ],
+          "listItems": [
+            "Type 2 diabetes",
+            "Hypertension",
+            "High level of cholesterol",
+            "Obesity",
+            "Disorders with sleep",
+            "Anxiety and depression",
+            "Infertility",
+            "Endometrial hyperplasia due to irregular menstrual cycles"
+          ]
+        },
+        {
+          "heading": "Causes of PCOD",
+          "paragraphs": [
+            "Even though the causes of PCOD aren’t known yet, some factors lead to PCOD, such as:"
+          ],
+          "listItems": [
+            "Hormonal Imbalance",
+            "Insulin Resistance",
+            "Genetics",
+            "Obesity",
+            "Sedentary lifestyle",
+            "Stress"
+          ],
+          "afterParagraphs": [
+            "Handling these factors can make a huge impact on the symptoms."
+          ]
+        },
+        {
+          "heading": "Difference between PCOS and PCOD",
+          "paragraphs": [
+            "Women often get confused about these diseases. It’s vital to know the difference between PCOS and PCOD."
+          ],
+          "listItems": [
+            "PCOD: It is a common hormonal disorder",
+            "PCOS: It is a more complex endocrine disorder",
+            "PCOD: Occasionally Ovulation occurs",
+            "PCOS: Ovulation is often severely impacted",
+            "PCOD: It is manageable with lifestyle changes",
+            "PCOS: It requires long-term medical treatment",
+            "PCOD: Fertility can get affected, but many women conceive naturally",
+            "PCOS: More risk of infertility and pregnancy complications",
+            "PCOD: It is less severe",
+            "PCOS: It is more serious due to metabolic complications"
+          ]
+        },
+        {
+          "heading": "PCOS or PCOD: Which is Dangerous?",
+          "paragraphs": [
+            "Another frequently asked question is: PCOS or PCOD, which is more dangerous?",
+            "Both conditions need treatment, but PCOS is regarded as more dangerous since PCOS is related to increased chances of having diabetes, heart diseases, metabolic syndrome, and infertility. PCOD, however, if left untreated, leads to fertility problems, menstrual irregularity, obesity, and stress.",
+            "Diagnosis and treatment of both PCOS and PCOD on time will help you cope with them properly."
+          ]
+        },
+        {
+          "heading": "Risk Factors for PCOD",
+          "paragraphs": [
+            "While PCOD is a condition that affects women irrespective of their age, some risk factors increase its chances of occurrence in individuals. Some common risk factors are:"
+          ]
+        },
+        {
+          "heading": "Family History",
+          "inlineHeading": true,
+          "paragraphs": [
+            "Having a history of PCOD or PCOS among either of your relatives increases your risk of having the condition."
+          ]
+        },
+        {
+          "heading": "Obesity",
+          "inlineHeading": true,
+          "paragraphs": [
+            "Being obese leads to insulin resistance that directly impacts your hormone production as well as ovulation."
+          ]
+        },
+        {
+          "heading": "Unhealthy Lifestyle",
+          "inlineHeading": true,
+          "paragraphs": [
+            "Lack of exercise, poor dietary intake, consuming a lot of processed food products, and an irregular sleep schedule result in hormonal imbalance."
+          ]
+        },
+        {
+          "heading": "PCOD and Pregnancy",
+          "paragraphs": [
+            "When women get diagnosed with PCOD, one of their major worries is whether they can conceive or not.",
+            "The answer is yes.",
+            "Many women get pregnant naturally by making some positive changes in their lifestyles and undergoing proper treatment for PCOD. But, as the ovulation cycle of PCOD patients becomes irregular, conception can take more time than usual. In case pregnancy does not happen, then fertility specialists can recommend:"
+          ],
+          "listItems": [
+            "Medications for Ovulation Induction",
+            "Follicular Monitoring",
+            "Timing Intercourse",
+            "Intrauterine Insemination (IUI)"
+          ]
+        },
+        {
+          "heading": "In Vitro Fertilization (IVF)",
+          "paragraphs": [
+            "At Seeds Of Innocens IVF, our experts assess your ovarian reserve, hormones, ovulation cycle, and overall reproductive well-being to suggest the best fertility treatment for you.",
+            "Our tailor-made fertility treatments increase your chances of conception with the least intervention possible."
+          ]
+        },
+        {
+          "heading": "Steps You Can Take to Control Your PCOD Through Lifestyle Modification",
+          "paragraphs": [
+            "Lifestyle modifications are recommended as the first step towards PCOD management. Even minor lifestyle changes help in hormonal equilibrium and fertility improvement."
+          ]
+        },
+        {
+          "heading": "Follow a Healthy Diet",
+          "paragraphs": [
+            "Include food that is high in:"
+          ],
+          "listItems": [
+            "Fresh fruits",
+            "Green veggies",
+            "Whole grains",
+            "Protein sources",
+            "Fat sources"
+          ]
+        },
+        {
+          "heading": "High-fiber foods",
+          "paragraphs": [
+            "Reduce the intake of:"
+          ],
+          "listItems": [
+            "Sweetened beverages",
+            "Refined carbs",
+            "Processed food items",
+            "Fried food",
+            "Sweets"
+          ],
+          "afterParagraphs": [
+            "A healthy diet regulates your insulin levels and ovulation."
+          ]
+        },
+        {
+          "heading": "Exercise Regularly",
+          "paragraphs": [
+            "Being physically active can help enhance the body’s sensitivity to insulin and manage weight.",
+            "Try to engage in:"
+          ],
+          "listItems": [
+            "30-45 minutes of walking",
+            "Yoga",
+            "Biking",
+            "Swimming",
+            "Weight lifting",
+            "Most days of the week."
+          ]
+        },
+        {
+          "heading": "Keep Your Body Weight In Check",
+          "paragraphs": [
+            "Losing just 5-10% of body weight is enough to restore proper hormone balances, regulate periods, and even increase fertility in many cases."
+          ]
+        },
+        {
+          "heading": "Manage Stress",
+          "paragraphs": [
+            "Methods of managing stress involve:"
+          ],
+          "listItems": [
+            "Meditation",
+            "Deep breathing exercises",
+            "Mindfulness",
+            "Sleeping well",
+            "Relaxing activities"
+          ],
+          "afterParagraphs": [
+            "Controlling stress positively affects the hormonal balance."
+          ]
+        },
+        {
+          "heading": "Diagnostic Tests For PCOD",
+          "paragraphs": [
+            "An accurate diagnosis will help the doctor understand the extent of the problem and develop a proper treatment regimen.",
+            "Some of the common tests include:"
+          ]
+        },
+        {
+          "heading": "Hormonal Blood Tests",
+          "inlineHeading": true,
+          "paragraphs": [
+            "Testing can be done for:"
+          ],
+          "listItems": [
+            "LH",
+            "FSH",
+            "Testosterone",
+            "Prolactin",
+            "Thyroid Profile (TSH)",
+            "AMH",
+            "Blood Sugar Levels"
+          ]
+        },
+        {
+          "heading": "Pelvic Ultrasound",
+          "inlineHeading": true,
+          "paragraphs": [
+            "Ultrasound scan is useful in identifying enlarged ovaries and the presence of multiple immature follicles."
+          ]
+        },
+        {
+          "heading": "Blood Sugar Test",
+          "inlineHeading": true,
+          "paragraphs": [
+            "In women with PCOD, the presence of insulin resistance means that a blood sugar test will help diagnose diabetes or pre-diabetes."
+          ]
+        },
+        {
+          "heading": "Lipid Profile",
+          "inlineHeading": true,
+          "paragraphs": [
+            "Due to high cholesterol levels in women with PCOD, a lipid profile becomes necessary.",
+            "At Seeds Of Innocens IVF, the state-of-the-art diagnostic center offers an accurate diagnosis and efficient treatment plan development."
+          ]
+        },
+        {
+          "heading": "Treatment Of PCOD At Seeds Of Innocens IVF",
+          "paragraphs": [
+            "Women have PCOD in different ways. This is why treatment should be personalized and not standardized.",
+            "The factors our fertility experts consider when recommending treatments include:"
+          ],
+          "listItems": [
+            "Age",
+            "Duration of infertility",
+            "Ovulation problems",
+            "Ovarian reserve",
+            "Hormone profile",
+            "Evaluation of fertility of partner",
+            "Previous pregnancy history"
+          ],
+          "afterParagraphs": [
+            "Depending on your condition, possible treatment methods may include:"
+          ]
+        },
+        {
+          "heading": "Ovulation Induction",
+          "headingLevel": "h3",
+          "headingHref": "https://www.seedsofinnocens.com/fertility-treatments/ovulation-induction/",
+          "inlineHeading": true,
+          "paragraphs": [
+            "Medications help in stimulating the ovaries to produce mature eggs."
+          ]
+        },
+        {
+          "heading": "Follicular Monitoring",
+          "headingLevel": "h3",
+          "inlineHeading": true,
+          "paragraphs": [
+            "Ultrasound scans are done periodically for monitoring follicle development to determine the ideal time for conceiving."
+          ]
+        },
+        {
+          "heading": "Intrauterine Insemination (IUI)",
+          "headingLevel": "h3",
+          "headingHref": "https://www.seedsofinnocens.com/fertility-treatments/iui/",
+          "inlineHeading": true,
+          "paragraphs": [
+            "IUI helps in placing healthy sperm inside the uterus at the time of ovulation to improve the odds of fertilization."
+          ]
+        },
+        {
+          "heading": "In-Vitro Fertilization (IVF)",
+          "headingLevel": "h3",
+          "headingHref": "https://www.seedsofinnocens.com/fertility-treatments/ivf/",
+          "inlineHeading": true,
+          "paragraphs": [
+            "IVF is suggested if other fertility procedures have not worked or there are other issues of infertility.",
+            "Seeds Of Innocens IVF has state-of-the-art fertility services with the expertise of specialist doctors, embryology labs, and effective treatment methods."
+          ]
+        },
+        {
+          "heading": "Can PCOD Cause Infertility?",
+          "paragraphs": [
+            "Yes, because PCOD influences ovulation, it might cause difficulties in conceiving. Nevertheless, Infertility due to PCOD is curable in most cases. Lots of women have children due to changes in their lifestyle, special medications that induce ovulation, or advanced procedures in case of severe infertility, such as In Vitro Fertilization.",
+            "At Seeds Of Innocens IVF, Infertility specialists examine each woman individually and give individual recommendations according to her health problems."
+          ]
+        },
+        {
+          "heading": "PCOD Treatment",
+          "paragraphs": [
+            "The treatment of PCOD depends on your symptoms and wishes to conceive or not. Some methods of treatment are as follows:"
+          ],
+          "listItems": [
+            "Healthy eating habits and exercises",
+            "Weight control",
+            "Medications that influence hormones",
+            "Medications that induce ovulation",
+            "Medications that affect insulin",
+            "Infertility treatment (IUI/IVF) in case of problems with conceiving."
+          ]
+        },
+        {
+          "heading": "Why Opt For Seeds Of Innocens IVF?",
+          "paragraphs": [
+            "In case PCOD is making it difficult to conceive, Seeds Of Innocens IVF will offer you comprehensive Fertility evaluation, advanced diagnostic facilities, fertility specialists, and treatment plans. Timely intervention will go a long way in improving fertility results and general reproductive health."
+          ]
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "1. What Is PCOD?",
+        "answer": "PCOD is a hormone-related condition whereby the ovaries develop several immature follicles due to an imbalance in hormones."
+      },
+      {
+        "question": "2. What Is The Full Form Of PCOD?",
+        "answer": "The full form of PCOD is Polycystic Ovary Disease."
+      },
+      {
+        "question": "3. Can Women With PCOD Conceive?",
+        "answer": "Yes, Women with PCOD can conceive either normally or with the assistance of fertility treatments."
+      },
+      {
+        "question": "4. What Is The Difference Between PCOS And PCOD?",
+        "answer": "PCOD is less serious than PCOS and therefore easier to manage through lifestyle modifications."
+      },
+      {
+        "question": "5. When Should I Visit a Fertility Specialist?",
+        "answer": "If you experience irregular menstrual cycles, PCOD symptoms, and have not conceived despite one year of trying (six months if above 35)."
+      }
+    ]
+  },
   "pcos-vs-pmos": {
     "uspTitle": "PCOS vs PMOS:<span class=\"cs_accent_color\"> Understanding the New Name & Treatment</span>",
     "title": "PCOS (Polycystic Ovarian Syndrome)",
@@ -5849,7 +6234,7 @@
       }
       
     ]
-  },
+  }, 
   "irregular-menstrual-cycle": {
     "uspTitle": "Irregular   <span class=\"cs_accent_color\">Menstrual Cycle</span>",
     "title": "Irregular Menstrual Cycle",

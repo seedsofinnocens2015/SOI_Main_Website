@@ -19,6 +19,33 @@ const ivfContentData = {
   ],
 };
 
+const JOB_FIELDS = [
+  'Accounts & Finance',
+  'Admin & Operations',
+  'Billing',
+  'Business Development',
+  'Call Center',
+  'Clinical Operations',
+  'Digital Marketing',
+  'Embryology',
+  'Facility & Maintenance',
+  'Field Operations',
+  'Human Resources',
+  'IT',
+  'IVF',
+  'Lab Operations',
+  'Management',
+  'Molecular Biology',
+  'Nursing',
+  'OT Operations',
+  'Pathology',
+  'Patient Coordination',
+  'Pharmacy',
+  'Purchase & Procurement',
+  'Quality & Compliances',
+  'Sales & Marketing',
+];
+
 const Page = () => {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -164,16 +191,12 @@ const Page = () => {
                         name="department"
                         className="cs_form_field"
                       >
-                        <option value="">Select department</option>
-                        <option value="medical">Medical (Doctors, Specialists)</option>
-                        <option value="laboratory">Laboratory (Embryologists, Lab Technicians)</option>
-                        <option value="nursing">Nursing</option>
-                        <option value="administration">Administration</option>
-                        <option value="marketing">Marketing</option>
-                        <option value="finance">Finance</option>
-                        <option value="hr">Human Resources</option>
-                        <option value="it">IT / Technology</option>
-                        <option value="other">Other</option>
+                        <option value="">Select job field</option>
+                        {JOB_FIELDS.map(jobField => (
+                          <option key={jobField} value={jobField}>
+                            {jobField}
+                          </option>
+                        ))}
                       </select>
                     </div>
                     <div className="col-md-12">

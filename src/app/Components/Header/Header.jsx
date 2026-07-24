@@ -249,6 +249,7 @@ const Header = ({ isTopBar, variant }) => {
             subItems: [
               { label: 'Blocked Fallopian Tubes', href: '/reproductive-health-conditions/blocked-fallopian-tubes' },
               { label: 'PCOS vs PMOS', href: '/reproductive-health-conditions/pcos-vs-pmos' },
+              { label: 'PCOD', href: '/reproductive-health-conditions/polycystic-ovary-disease-pcod' },
               { label: 'Irregular Menstrual Cycle', href: '/reproductive-health-conditions/irregular-menstrual-cycle' },
               { label: 'Diabetes, Thyroid and Obesity', href: '/reproductive-health-conditions/diabetes-thyroid-and-obesity' },
               { label: 'Endometrial and Ovarian', href: '/reproductive-health-conditions/endometrial-and-ovarian' },

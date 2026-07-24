@@ -63,6 +63,7 @@ const SERVICE_PATH_BY_KEY = {
   // Reproductive Health Conditions
   'blocked-fallopian-tubes': '/reproductive-health-conditions/blocked-fallopian-tubes',
   'pcos-vs-pmos': '/reproductive-health-conditions/pcos-vs-pmos',
+  'polycystic-ovary-disease-pcod': '/reproductive-health-conditions/polycystic-ovary-disease-pcod',
   'irregular-menstrual-cycle': '/reproductive-health-conditions/irregular-menstrual-cycle',
   'diabetes-thyroid-and-obesity': '/reproductive-health-conditions/diabetes-thyroid-and-obesity',
   'endometrial-and-ovarian': '/reproductive-health-conditions/endometrial-and-ovarian',

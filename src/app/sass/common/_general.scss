@@ -2814,8 +2814,40 @@ label {
   }
 }
 
+.cs_service_page_content .cs_ivf_content_subheading {
+  font-size: 23px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.cs_ivf_content_heading_link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cs_ivf_content_heading_link:hover {
+  color: #df3655;
+}
+
+.cs_ivf_inline_heading_paragraph {
+  margin-bottom: 14px;
+}
+
+.cs_ivf_inline_heading_link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cs_ivf_inline_heading_link:hover {
+  color: #df3655;
+}
+
 .cs_service_page_content .cs_ivf_content_section {
   margin-bottom: 56px;
+}
+
+.cs_service_page_content .cs_ivf_inline_heading_section {
+  margin-bottom: 14px;
 }
 
 .cs_service_page_content .cs_ivf_content_section:last-child {
@@ -4876,4 +4908,3 @@ i {
     }
   }
 }
-
