@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "pregnancy-test-kab-kare",
-    title: "प्रेगनेंसी टेस्ट कब करें? सही समय, सही तरीका और सटीक परिणाम",
-    excerpt: "यदि आप अपने परिवार को बढ़ाने की योजना बना रहे हैं, तो सबसे पहला सवाल जो आपके मन में आता है, वह है – प्रेगनेंसी टेस्ट कब करें? सही समय पर परीक्षण करना बेहद महत्वपूर्ण है, क्योंकि जल्दी जांच करने पर गलत (false negative) परिणाम मिलने की संभावना बढ़ जाती है। अगर आपने अपने पीरियड मिस कर दिए हैं या प्रेगनेंसी के प्रारंभिक संकेत महसूस कर रहे हैं, तो चलिए जानते हैं कि प्रेगनेंसी टेस्ट कब करना चाहिए, सही तरीका क्या है और किस स्थिति में डॉक्टर से परामर्श लेना आवश्यक है।",
+    id: "ivf-success-rates-in-india-age-and-fertility",
+    title: "IVF Success Rates in India: Age & Fertility Guide",
+    excerpt: "Infertility issues plague many couples in the world today, but modern reproductive medicine has helped many couples conceive through In Vitro Fertilization (IVF). When couples decide to undergo this procedure, one of the questions they are likely to ask is",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/प्रेगनेंसी टेस्ट कब करें.png",
-    date: "July 21, 2026",
+    image: "/assets/img/Blogs/IVF Success Rates in India.png",
+    date: "July 24, 2026",
     author: "admin",
-    category: "Pregnancy",
-    readTime: "7 min read",
-    slug: "pregnancy-test-kab-kare"
+    category: "IVF Process",
+    readTime: "12 min read",
+    slug: "ivf-success-rates-in-india-age-and-fertility"
   }
 ];
 

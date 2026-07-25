@@ -27,7 +27,7 @@ const leadershipTeamData = [
     name: 'Dr. Gauri Agarwal',
     profession: 'Founder & Chief Fertility Specialist',
     imageUrl: getAssetPath('/assets/img/Doctors/Dr%20Gauri%20maam.jpg'),
-    experience: '15+ Years',
+    experience: '16+ Years',
     location: 'Delhi/NCR',
     bio: [
       'Dr. Gauri Agarwal is Founder and Director of Seeds of Innocens IVF & Genestring Labs, with 15+ years in advanced fertility and reproductive genetics.',
@@ -40,7 +40,7 @@ const leadershipTeamData = [
     name: 'Dr. Rajat Arora',
     profession: 'Co-Founder & Director',
     imageUrl: getAssetPath('/assets/img/Doctors/rajat.png'),
-    experience: '15+ Years',
+    experience: '16+ Years',
     location: 'Delhi/NCR',
     bio: [
       'Dr. Rajat Arora is the Managing Director(MD) of Yashoda Group of Hospitals, Uttar Pradesh, as well as the Co-Founder of Seeds of Innocence (Infertility & IVF Centres) and Genestrings Diagnostic Centre (Genetic Testing Lab) in Delhi NCR. Dr. Rajat Arora has exceptional educational qualifications, starting from M.B.B.S. and M.D. in India to MRCP & FRCP in internal medicine from the UK. Dr. Rajat Arora has also been a fellow in Non-Interventional Cardiology at KLE University and completed his D.M. in cardiology from KLE’s Hospital.',
@@ -50,12 +50,12 @@ const leadershipTeamData = [
   {
     id: 'yashpal',
     name: 'Yashpal Singh Rao',
-    profession: 'Chief Growth Officer',
+    profession: 'Chief Executive Officer',
     imageUrl: getAssetPath('/assets/img/Doctors/yashpal.png'),
-    experience: '17+ Years',
+    experience: '18+ Years',
     location: 'Delhi/NCR',
     bio: [
-      'Yashpal Singh is a seasoned healthcare leader with over 17 years of experience in scaling multi-location healthcare and fertility businesses. As Chief Growth Officer at Seeds of Innocence IVF & Home IVF, he leads national growth strategy across patient acquisition, digital ecosystems, and network expansion.',
+      'Yashpal Singh is a seasoned healthcare leader with over 18 years of experience in scaling multi-location healthcare and fertility businesses. As Chief Executive Officer at Seeds of Innocence IVF & Home IVF, he leads national growth strategy across patient acquisition, digital ecosystems, and network expansion.',
       'He brings deep expertise in driving operational excellence, strengthening patient conversion systems, and building scalable growth platforms across clinic networks. Prior to this, he has held leadership roles at leading organizations such as Indira IVF and ART Fertility Clinics, contributing to large-scale business transformation and expansion initiatives.',
     ],
   },
