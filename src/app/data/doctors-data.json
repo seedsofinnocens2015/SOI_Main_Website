@@ -1245,5 +1245,53 @@
       }
     ],
     "newSlug": "dr-sunita-ivf-specialist"
+  },
+  {
+    "slug": "dr-ayushi-agarwal",
+    "uspTitle": "Best IVF Consultant in Kanpur <br/><span class=\"cs_accent_color\">Dr Ayushi Agarwal</span>",
+    "headerImage": "/assets/img/Doctor-Headers/auyshi.webp",
+    "name": "Dr. Ayushi Agarwal",
+    "subtitle": "IVF Consultant",
+    "image": "/assets/img/Doctors/auyshi.png",
+    "description": [
+        "Dr. Ayushi Agarwal has become a part of Seeds of Innocens IVF as an IVF Consultant and will be spearheading the fertility practice at our Kanpur Centre. She comes in with a wonderful combination of excellent academics, high clinical skills, and compassion towards reproductive medicine. A gold medalist in MCh Reproductive Medicine & Surgery from Kasturba Medical College, Manipal, Dr. Ayushi has chosen to serve infertile couples with her career by providing evidence-based personalized fertility treatments to them. She is the first MCh Superspecialist in Fertility in the state of Uttar Pradesh. Her wealth of experience includes infertility assessment, assisted reproductive technology (ART), IVF, IUI, reproductive endocrinology, and advanced reproductive surgeries.",
+      "Following a patient-centric approach with a dedication to providing the best possible clinical practice, Dr. Ayushi offers personalized treatment plans for couples that increase the probability of conception, along with compassionate care at each step of the way. Her skills in advanced laparoscopic and hysteroscopic reproductive surgeries give her the advantage of being able to offer comprehensive fertility services under one roof. As a member of Seeds of Innocens family, Dr. Ayushi Agarwal commits to providing the best fertility care services to couples who aspire to become parents."
+    ],
+    "location": "Kanpur - Uttar Pradesh",
+    "email": "info@seedsofinnocence.com",
+    "qualification": " MBBS, AIIMS Jodhpur, MS ObGy, GMC Bhopal, DNB ObGy from NBA, FMAS, MCh Reproductive Medicine and Surgery, KMC Manipal",
+    "specialization": "Reproductive Medicine, Fertility, Laparoscopic and Hysteroscopic Surgery",
+    "experience": "4+ years",
+    "workExperience": [
+      "Presently, she is working as an IVF Consultant at Seeds of Innocens IVF, Kanpur, and provides fertility care with a focus on patients' well-being. She specializes in treating infertility, and she does evaluations, diagnoses, and treatment plans for infertility to conceive successfully.",
+      "Her specialization area includes Reproductive Medicine and ART, which involves IVF, IUI, Controlled Ovarian Stimulation, Oocyte Retrieval, and Embryo Transfer. Her goal is to provide evidence-based fertility treatment while upholding the high standards of practice in her field.",
+      "Moreover, she is competent in handling recurrent miscarriages, reproductive endocrinology, and laparoscopic and hysteroscopic reproductive surgeries."
+    ],
+    "education": [
+      "MBBS - AIIMS Jodhpur",
+      "MS (Obstetrics & Gynecology) - Gandhi Medical College, Bhopal",
+      "DNB (Obstetrics & Gynecology),MCh (Reproductive Medicine & Surgery) – KMC, Manipal (Gold Medalist) "
+    ],
+    "awards": [
+    ],
+    "progressBars": [
+      {
+        "label": "IVF Procedures",
+        "percentage": 88
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 94
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 78
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 86
+      }
+    ],
+    "newSlug": "dr-ayushi-agarwal-ivf-specialist"
   }
 ]

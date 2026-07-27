@@ -28,8 +28,9 @@ import muzaffarpurImage from '../../../../../public/gads/assets/image/center/muz
 import patnaImage from '../../../../../public/gads/assets/image/center/patna1.webp';
 import pitampuraImage from '../../../../../public/gads/assets/image/center/pitampura.webp';
 import ranchiImage from '../../../../../public/gads/assets/image/center/ranchi1.webp';
+import mabelaImage from '../../../../../public/assets/img/centres/mabela.jpeg';
 const allCentresRaw = centresAllData.centres;
-
+j
 const headingData = { uspTitle: 'Centre <span class="cs_accent_color">Locator </span>' };
 
 const centreImages = {
@@ -46,7 +47,7 @@ const centreImages = {
   '/assets/img/Centres/kochi.jpg': kochiImage,
   '/assets/img/Centres/kolkata.webp': kolkataImage,
   '/assets/img/Centres/lucknow.jpg': lucknowImage,
-  '/assets/img/Centres/mabela.jpeg': malviyanagarImage,
+  '/assets/img/Centres/mabela.jpeg': mabelaImage,
   '/assets/img/Centres/malviyanagar.webp': malviyanagarImage,
   '/assets/img/Centres/meerut.jpg': meerutImage,
   '/assets/img/Centres/muzaffarpur.jpg': muzaffarpurImage,

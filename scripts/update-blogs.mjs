@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-success-rates-in-india-age-and-fertility",
-    title: "IVF Success Rates in India: Age & Fertility Guide",
-    excerpt: "Infertility issues plague many couples in the world today, but modern reproductive medicine has helped many couples conceive through In Vitro Fertilization (IVF). When couples decide to undergo this procedure, one of the questions they are likely to ask is",
+    id: "iui-procedure-step-by-step-guide",
+    title: "IUI Procedure Step by Step: Complete IUI Treatment Guide",
+    excerpt: "While infertility could be a taxing experience, modern-day fertility treatments allow millions of couples to become parents. One of the easiest fertility treatments is the IUI procedure step by step. In case your doctor recommends this, having an idea of the IUI treatment would certainly be helpful.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Success Rates in India.png",
-    date: "July 24, 2026",
+    image: "/assets/img/Blogs/IUI Procedure Step by Step.png",
+    date: "July 25, 2026",
     author: "admin",
-    category: "IVF Process",
-    readTime: "12 min read",
-    slug: "ivf-success-rates-in-india-age-and-fertility"
+    category: "Treatment Guides",
+    readTime: "16 min read",
+    slug: "iui-procedure-step-by-step-guide"
   }
 ];
 

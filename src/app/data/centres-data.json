@@ -920,12 +920,12 @@
       ],
       "doctors": [
         {
-          "name": "Dr. Adrija Ghosal",
-          "subtitle": "IVF Specialist",
-          "image": "/assets/img/Doctors/adrija.png",
-          "experience": "8+ Years",
+          "name": "Dr. Ayushi Agarwal",
+          "subtitle": "IVF Consultant",
+          "image": "/assets/img/Doctors/auyshi.png",
+          "experience": "4+ Years",
           "location": "Kanpur-UttarPradesh",
-          "slug": "dr-adrija-ghosal"
+          "slug": "dr-ayushi-agarwal"
         }
       ],
       "timing": "9:00 AM to 6:00 PM",
