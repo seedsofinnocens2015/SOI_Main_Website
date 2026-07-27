@@ -28,7 +28,7 @@ import muzaffarpurImage from '../../../../../public/gads/assets/image/center/muz
 import patnaImage from '../../../../../public/gads/assets/image/center/patna1.webp';
 import pitampuraImage from '../../../../../public/gads/assets/image/center/pitampura.webp';
 import ranchiImage from '../../../../../public/gads/assets/image/center/ranchi1.webp';
-import mabelaImage from '../../../../../public/assets/img/centres/mabela.jpeg';
+import mabelaImage from '../../../../../public/assets/img/Centres/mabela.jpeg';
 const allCentresRaw = centresAllData.centres;
 
 const headingData = { uspTitle: 'Centre <span class="cs_accent_color">Locator </span>' };
