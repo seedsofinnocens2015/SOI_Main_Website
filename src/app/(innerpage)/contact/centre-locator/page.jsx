@@ -30,7 +30,7 @@ import pitampuraImage from '../../../../../public/gads/assets/image/center/pitam
 import ranchiImage from '../../../../../public/gads/assets/image/center/ranchi1.webp';
 import mabelaImage from '../../../../../public/assets/img/centres/mabela.jpeg';
 const allCentresRaw = centresAllData.centres;
-j
+
 const headingData = { uspTitle: 'Centre <span class="cs_accent_color">Locator </span>' };
 
 const centreImages = {
