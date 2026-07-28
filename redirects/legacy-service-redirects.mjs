@@ -213,11 +213,6 @@ const legacyServiceRedirects = [
     destination: '/maternal-fetal-medicine/maternal-and-fetal-medicine/',
     permanent: true,
   },
-  {
-    source: '/pregnancy-and-coronavirus-insights-from-experts/',
-    destination: '/maternal-fetal-medicine/pregnancy-and-coronavirus-insights-from-experts/',
-    permanent: true,
-  },
   { source: '/hysteroscopy/', destination: '/surgeries/hysteroscopy/', permanent: true },
   { source: '/laparoscopy/', destination: '/surgeries/laparoscopy/', permanent: true },
   { source: '/open-surgery/', destination: '/surgeries/open-surgery/', permanent: true },

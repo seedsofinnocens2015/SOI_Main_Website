@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "iui-procedure-step-by-step-guide",
-    title: "IUI Procedure Step by Step: Complete IUI Treatment Guide",
-    excerpt: "While infertility could be a taxing experience, modern-day fertility treatments allow millions of couples to become parents. One of the easiest fertility treatments is the IUI procedure step by step. In case your doctor recommends this, having an idea of the IUI treatment would certainly be helpful.",
+    id: "how-to-find-the-best-ivf-centre-in-delhi",
+    title: "How to Find the Best IVF Centre in India for Your Fertility Needs",
+    excerpt: "Infertility is a challenging journey; however, with the proper guidance and medical treatment can make all the difference. With the advancements in reproductive medicine, IVF treatment in India has helped several couples to achieve their parenthood dream. Furthermore, choosing the best IVF centre in India is the most crucial decision you will make.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IUI Procedure Step by Step.png",
-    date: "July 25, 2026",
+    image: "/assets/img/Blogs/How to Find the Best IVF Centre in India for Your Fertility Needs.png",
+    date: "July 27, 2026",
     author: "admin",
-    category: "Treatment Guides",
+    category: "IVF Process",
     readTime: "16 min read",
-    slug: "iui-procedure-step-by-step-guide"
+    slug: "how-to-find-the-best-ivf-centre-in-delhi"
   }
 ];
 

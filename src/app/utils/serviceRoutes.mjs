@@ -53,9 +53,6 @@ const SERVICE_PATH_BY_KEY = {
   'high-risk-pregnancy': '/maternal-fetal-medicine/high-risk-pregnancy',
   'fetal-reduction': '/maternal-fetal-medicine/fetal-reduction',
   'maternal-and-fetal-medicine': '/maternal-fetal-medicine/maternal-and-fetal-medicine',
-  'pregnancy-and-coronavirus': '/maternal-fetal-medicine/pregnancy-and-coronavirus-insights-from-experts',
-  'pregnancy-and-coronavirus-insights-from-experts':
-    '/maternal-fetal-medicine/pregnancy-and-coronavirus-insights-from-experts',
   // Surgeries
   hysteroscopy: '/surgeries/hysteroscopy',
   laparoscopy: '/surgeries/laparoscopy',
@@ -68,8 +65,6 @@ const SERVICE_PATH_BY_KEY = {
   'diabetes-thyroid-and-obesity': '/reproductive-health-conditions/diabetes-thyroid-and-obesity',
   'endometrial-and-ovarian': '/reproductive-health-conditions/endometrial-and-ovarian',
   endometriosis: '/reproductive-health-conditions/endometriosis',
-  'silent-endometriosis-unexplained-infertility':
-    '/reproductive-health-conditions/silent-endometriosis-unexplained-infertility',
   'fibroids-polyps-and-adenomyosis': '/reproductive-health-conditions/fibroids-polyps-and-adenomyosis',
   'female-genital-tuberculosis': '/reproductive-health-conditions/female-genital-tuberculosis',
   'recurrent-miscarriages': '/reproductive-health-conditions/recurrent-miscarriages',

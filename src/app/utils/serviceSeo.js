@@ -25,10 +25,9 @@ const DIAGNOSTIC_KEYS = [
 const SURGERY_KEYS = ['hysteroscopy', 'laparoscopy', 'open-surgery'];
 
 const WOMEN_HEALTH_KEYS = [
-  'secondary-infertility', 'high-risk-pregnancy', 'fetal-reduction', 'pregnancy-and-coronavirus',
+  'secondary-infertility', 'high-risk-pregnancy', 'fetal-reduction',
   'blocked-fallopian-tubes', 'pcos-vs-pmos', 'polycystic-ovary-disease-pcod', 'irregular-menstrual-cycle',
   'diabetes-thyroid-and-obesity', 'endometrial-and-ovarian', 'endometriosis',
-  'silent-endometriosis-unexplained-infertility',
   'fibroids-polyps-and-adenomyosis', 'female-genital-tuberculosis', 'recurrent-miscarriages',
   'reasons-for-delayed-periods-but-not-pregnant', 'ovarian-hyperstimulation-syndrome-ohss',
 ];
