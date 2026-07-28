@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "how-to-find-the-best-ivf-centre-in-delhi",
-    title: "How to Find the Best IVF Centre in India for Your Fertility Needs",
+    id: "period-ke-kitne-din-baad-pregnancy",
+    title: "पीरियड्स के कितने दिन बाद प्रेग्नेंसी हो सकती है? ओव्यूलेशन गाइड (periods ke kitne din baad pregnancy ho sakti hai ovulation guide)",
     excerpt: "Infertility is a challenging journey; however, with the proper guidance and medical treatment can make all the difference. With the advancements in reproductive medicine, IVF treatment in India has helped several couples to achieve their parenthood dream. Furthermore, choosing the best IVF centre in India is the most crucial decision you will make.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/How to Find the Best IVF Centre in India for Your Fertility Needs.png",
-    date: "July 27, 2026",
+    image: "/assets/img/Blogs/पीरियड्स के कितने दिन बाद प्रेग्नेंसी हो सकती है.png",
+    date: "July 28, 2026",
     author: "admin",
-    category: "IVF Process",
-    readTime: "16 min read",
-    slug: "how-to-find-the-best-ivf-centre-in-delhi"
+    category: "Pregnancy",
+    readTime: "10 min read",
+    slug: "period-ke-kitne-din-baad-pregnancy"
   }
 ];
 
