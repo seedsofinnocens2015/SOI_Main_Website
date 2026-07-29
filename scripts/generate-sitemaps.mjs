@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -8,8 +9,21 @@ const publicDir = path.join(projectRoot, 'public');
 const siteOrigin = 'https://www.seedsofinnocens.com';
 const lastModified = new Date().toISOString().slice(0, 10);
 
+console.log('Creating a fresh production build before updating sitemaps...');
+if (process.platform === 'win32') {
+  execFileSync(process.env.ComSpec || 'C:\\Windows\\System32\\cmd.exe', ['/d', '/s', '/c', 'npm.cmd run build'], {
+    cwd: projectRoot,
+    stdio: 'inherit',
+  });
+} else {
+  execFileSync('npm', ['run', 'build'], {
+    cwd: projectRoot,
+    stdio: 'inherit',
+  });
+}
+
 if (!fs.existsSync(manifestPath)) {
-  throw new Error('Build manifest not found. Run the production build before generating sitemaps.');
+  throw new Error('Production build completed, but the route manifest was not created.');
 }
 
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));

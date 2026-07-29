@@ -282,6 +282,7 @@ const DynamicPage = async ({ params }) => {
                     services={servicesWithIcons}
                     doctorSlugMap={doctorSlugMap}
                     faqContentData={faqContentData}
+                    faq={rawFaqs}
                     aboutUs={aboutUs}
                 />
             </>

@@ -371,6 +371,7 @@ const Header = ({ isTopBar, variant }) => {
             href: '/best-ivf-centre-in-international',
             allowNavigationWithSubItems: true,
             subItems: [
+              { label: 'Cameroon, Central Africa', href: '/best-ivf-centre-in-cameroon' },
               { label: 'Mabela, Muscat, Oman', href: '/best-ivf-centre-in-mabela-muscat' },
             ],
           },
