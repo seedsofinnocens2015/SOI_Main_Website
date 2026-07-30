@@ -98,12 +98,15 @@ const IVFContentSection = ({
   const introSection = sections.find(s => isIntroHeading(s.heading)) || sections[0];
   const whySection = sections.find(s => isWhyHeading(s.heading));
   const mainSections = sections.filter(s => s !== introSection && s !== whySection);
+  let seoContentHeadingCount = 0;
 
   const renderHeading = (heading, forcePlain = false, options = {}) => {
     if (heading == null) return null;
     const headingStr = typeof heading === 'string' ? heading : String(heading);
-    const HeadingTag = options.level === 'h3' ? 'h3' : 'h2';
-    const headingClass = options.level === 'h3'
+    const headingIndex = seoContentHeadingCount++;
+    const headingLevel = headingIndex < 3 ? 'h2' : headingIndex < 5 ? 'h3' : 'div';
+    const HeadingTag = headingLevel;
+    const headingClass = headingLevel === 'h3'
       ? 'cs_ivf_content_heading cs_ivf_content_subheading'
       : 'cs_ivf_content_heading';
     const wrapWithLink = (content) => options.href ? (
@@ -136,7 +139,7 @@ const IVFContentSection = ({
           <div key={stepIndex} className="col-lg-4 col-md-6 col-12">
             <div className="cs_treatment_procedure_box">
               <span className="cs_treatment_procedure_number">{stepIndex + 1}</span>
-              <h3 className="cs_treatment_procedure_title">{step.title}</h3>
+              <div className="cs_treatment_procedure_title">{step.title}</div>
               <p className="cs_treatment_procedure_description">{step.description}</p>
             </div>
           </div>
@@ -168,7 +171,7 @@ const IVFContentSection = ({
           >
             <div className="cs_ivf_step_header">
               <span className="cs_ivf_step_number">{stepIndex + 1}</span>
-              <h3 className="cs_ivf_step_title">{step.title}</h3>
+              <div className="cs_ivf_step_title">{step.title}</div>
               <span className="cs_ivf_step_toggle">
                 <span className="cs_ivf_step_toggle_line"></span>
               </span>
@@ -448,7 +451,7 @@ const IVFContentSection = ({
                   <div key={idx} className="col-lg-3 col-md-6 col-12">
                     <div className="cs_treatment_benefit_card">
                       <span className="cs_treatment_benefit_icon"><Icon /></span>
-                      <h3 className="cs_treatment_benefit_title">{title}</h3>
+                      <div className="cs_treatment_benefit_title">{title}</div>
                     </div>
                   </div>
                 );

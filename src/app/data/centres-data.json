@@ -2092,7 +2092,7 @@
       "stateSlug": "kerala",
       "metaTitle": "Best IVF Centre In Kochi | Fertility Clinic Near Me, Kerala",
       "metaDescription": "Looking for the best IVF centre in Kochi? Seeds of Innocens IVF Centre offers IVF, IUI, ICSI, and treatment for male &amp; female infertility.",
-      "image": "/assets/img/Centres/kochi.jpg",
+      "image": "/assets/img/Centres/kochi.png",
       "headerImage": "/assets/img/Headers/kochi.webp",
       "uspTitle": "ADVANCED FERTILITY SCIENCE <br /> <span class=\"cs_accent_color\">NOW IN KOCHI</span>",
       "description": [
@@ -2160,7 +2160,7 @@
       ],
       "aboutUs": {
         "title": "About Seeds of Innocens IVF Centre Kochi",
-        "image": "/assets/img/Centres/kochi.jpg",
+        "image": "/assets/img/Centres/kochi.png",
         "paragraphs": [
           "Our Kochi centre brings world-class fertility care to the beautiful state of Kerala. We offer comprehensive IVF services with state-of-the-art facilities.",
           "The centre provides personalized care and support throughout your fertility journey. Our experienced team ensures high-quality treatment and excellent outcomes.",
@@ -2176,7 +2176,7 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Opp.+Royal+Drive+Showroom+Kannadikadu+Upasana+Road+Kundannoor+Maradu+Kochi+682304&output=embed",
         "phone": "+919958885242"
       },
-      "bestIvfHeading": "Best IVF Centre in Kochi, Kerala",
+      "bestIvfHeading": "Best IVF Centre in <span class=\"cs_accent_color\">Kochi, Kerala",
       "faqs": [
         {
           "question": "Is IVF treatment in Kochi suited for couples looking for advanced fertility treatment in Kerala?",
@@ -2810,7 +2810,7 @@
       "metaTitle": "Best IVF Centre in Cameroon | Seeds of Innocens",
       "metaDescription": "Seeds of Innocens IVF Centre in Cameroon offers advanced fertility treatments, personalised care and international-standard reproductive medicine.",
       "image": "/assets/img/Centres/gurgaon.jpg",
-      "headerImage": "/assets/img/Headers/gurugram.webp",
+      "headerImage": "/assets/img/Headers/cameroon.webp",
       "uspTitle": "ADVANCED FERTILITY CARE <br /> <span class=\"cs_accent_color\">NOW IN CAMEROON</span>",
       "description": [
         "IVF and surrogacy are the ultimate option as far as fertility procedures are concerned. The prices of undergoing treatment through the IVF procedure in Cameroon vary according to the ages and the health status of the patients. Of course. In Vitro Fertilisation (IVF), which is a technique used in treating infertility, can be found in designated fertility clinics in Best IVF Centre in Cameroon.",
@@ -2869,6 +2869,78 @@
         {
           "question": "5. What is the length of an IVF cycle?",
           "answer": "One IVF cycle normally takes 4 to 6 weeks, which includes ovarian stimulation, egg collection, fertilization, growth of embryos, and their transplantation."
+        }
+      ]
+    },
+    {
+      "slug": "best-ivf-centre-in-sri-lanka",
+      "name": "Sri Lanka",
+      "location": "Seeds of Innocens IVF Centre, Sri Lanka",
+      "state": "Sri Lanka",
+      "stateSlug": "sri-lanka",
+      "metaTitle": "Best IVF Centre in Sri Lanka | Seeds of Innocens",
+      "metaDescription": "Seeds of Innocens IVF Centre in Sri Lanka offers advanced fertility treatments, personalised care and international-standard reproductive medicine.",
+      "image": "/assets/img/Centres/kochi.png",
+      "headerImage": "/assets/img/Headers/srilanka.webp",
+      "uspTitle": "ADVANCED FERTILITY CARE <br /> <span class=\"cs_accent_color\">NOW IN SRI LANKA</span>",
+      "description": [
+        "IVF and other advanced fertility treatments have brought hope for many couples facing infertility problems. The cost of IVF treatment in Sri Lanka depends on certain factors such as the age of the patient, fertility condition, type of procedure, and any other procedures required. There are many well-equipped best ivf centre in Sri Lanka providing advanced fertility treatments with skilled fertility experts and modern labs.",
+        "The Best IVF Centre in Sri Lanka provides complete solutions for fertility issues such as IVF, ICSI, IUI, donor program, fertility preservation, and advanced diagnostic tests. All treatment plans are custom-made after carefully analyzing the health and fertility of the couple to increase chances of success.",
+        "With patient-focused care, coordinated treatment and international-standard clinical practices, our Sri Lanka centre is committed to delivering a comfortable and supportive fertility-care experience."
+      ],
+      "phone": "+91 98103 50512",
+      "email": "info@seedsofinnocence.com",
+      "services": [
+        "IVF/ICSI",
+        "IUI",
+        "Fertility Assessment",
+        "Egg and Embryo Freezing",
+        "Male Infertility Treatment",
+        "Genetic Testing (PGT)",
+        "Fertility Counselling"
+      ],
+      "doctors": [],
+      "timing": "9:00 AM to 6:00 PM",
+      "isInternational": true,
+      "aboutUs": {
+        "title": "About Seeds of Innocens IVF Centre Sri Lanka",
+        "image": "/assets/img/Centres/kochi.png",
+        "paragraphs": [
+          "There are some top fertility clinics and hospitals in Sri Lanka that provide complete reproductive health care facilities for their patients. These hospitals provide expert fertility specialists, modern embryology laboratories, ICSI, embryo freezing, fertility preservation, donor programmes, and customized treatment plans.",
+          "When choosing an IVF centre, one should pay attention to: Success rate, Doctor’s experience, Laboratory standards, Technologies used, Patiens reviews, Cost of the treatment",
+          "There have been many reasons why Sri Lanka has gained popularity in fertility treatment due to their specialist experts, reproductive technologies used in infertility procedures, state-of-the-art IVF labs, and affordable cost of treatments. Individual treatment is given to each patient, where patients can enjoy services like IVF, ICSI, embryo freezing, donor program, and fertility preservation. The cost of IVF Treatment in Sri Lanka provides great value for money in fertility treatment."
+        ]
+      },
+      "contactInfo": {
+        "title": "Seeds of Innocens - Best IVF Centre in Sri Lanka",
+        "openDays": "Monday to Saturday",
+        "timings": "9:00 AM to 6:00 PM",
+        "address": "Seeds of Innocens IVF, Opp. Royal Drive Showroom, Kannadikadu, Upasana Road, Kundannoor, Maradu, Kochi, 682304",
+        "direction": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Opp.+Royal+Drive+Showroom+Kannadikadu+Upasana+Road+Kundannoor+Maradu+Kochi+682304",
+        "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Opp.+Royal+Drive+Showroom+Kannadikadu+Upasana+Road+Kundannoor+Maradu+Kochi+682304&output=embed",
+        "phone": "+91 98103 50512"
+      },
+      "bestIvfHeading": "Best IVF Centre in <span class=\"cs_accent_color\">Sri Lanka",
+      "faqs": [
+        {
+          "question": "1. How can I select the best IVF centre in Sri Lanka?",
+          "answer": "Selecting an infertility treatment centre depends on factors like success rates, specialists’ experience, lab quality, feedback from previous patients, treatment methods, and clear prices."
+        },
+        {
+          "question": "2. Which examinations should be done before starting IVF treatment?",
+          "answer": "Some of the common exams done before the start of the treatment are a hormone exam, an ultrasound exam, a semen exam, a test of ovarian reserve, infectious diseases, and others."
+        },
+        {
+          "question": "3. Are there any international patients who can get IVF treatment in Sri Lanka?",
+          "answer": "Yes. A lot of the infertility centres in Sri Lanka accept international patients."
+        },
+        {
+          "question": "4. Is IVF treatment safe?",
+          "answer": "Yes, IVF treatment is considered as safe when done by specialists. It is customized according to the medical condition of a particular patient."
+        },
+        {
+          "question": "5. How many days does one IVF cycle need?",
+          "answer": "A complete IVF cycle generally takes 4 to 6 weeks, including ovarian stimulation, egg retrieval, fertilization, embryo development, and embryo transfer."
         }
       ]
     },

@@ -27,14 +27,14 @@ import { fileURLToPath } from "url";
 const NEW_BLOGS = [
   {
     id: "period-ke-kitne-din-baad-pregnancy",
-    title: "पीरियड्स के कितने दिन बाद प्रेग्नेंसी हो सकती है? ओव्यूलेशन गाइड (periods ke kitne din baad pregnancy ho sakti hai ovulation guide)",
-    excerpt: "Infertility is a challenging journey; however, with the proper guidance and medical treatment can make all the difference. With the advancements in reproductive medicine, IVF treatment in India has helped several couples to achieve their parenthood dream. Furthermore, choosing the best IVF centre in India is the most crucial decision you will make.",
+    title: "पीरियड्स के कितने दिन बाद प्रेग्नेंसी हो सकती है? ओव्यूलेशन गाइड",
+    excerpt: "यदि आप यह जानना चाहते हैं कि मासिक धर्म के कितने दिन बाद गर्भधारण संभव है, तो इसका सीधा संबंध हर महिला के मासिक चक्र से है। बहुत से लोग मानते हैं कि जैसे ही पीरियड समाप्त होते हैं, गर्भवती होना संभव नहीं होता, लेकिन यह धारणा हमेशा सही नहीं होती है। इस लेख में हम यह विस्तार से समझेंगे कि पीरियड्स के कितने दिन बाद प्रेग्नेंसी  होती है?",
     contentFile: "scripts/blog-content/dummy-blog.html",
     image: "/assets/img/Blogs/पीरियड्स के कितने दिन बाद प्रेग्नेंसी हो सकती है.png",
     date: "July 28, 2026",
     author: "admin",
     category: "Pregnancy",
-    readTime: "10 min read",
+    readTime: "14 min read",
     slug: "period-ke-kitne-din-baad-pregnancy"
   }
 ];

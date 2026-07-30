@@ -372,6 +372,7 @@ const Header = ({ isTopBar, variant }) => {
             allowNavigationWithSubItems: true,
             subItems: [
               { label: 'Cameroon, Central Africa', href: '/best-ivf-centre-in-cameroon' },
+              { label: 'Sri Lanka', href: '/best-ivf-centre-in-sri-lanka' },
               { label: 'Mabela, Muscat, Oman', href: '/best-ivf-centre-in-mabela-muscat' },
             ],
           },
