@@ -23,13 +23,27 @@ function AnswerContent({ answer, listItems }) {
   const hasAnswer = answer != null && answer !== "";
   const hasList = listItems && listItems.length > 0;
   if (!hasAnswer && !hasList) return null;
+
+  const renderTextWithLinks = (text) => {
+    const parts = String(text).split(/(\[[^\]]+\]\(https?:\/\/[^)]+\))/g);
+    return parts.map((part, index) => {
+      const linkMatch = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)]+)\)$/);
+      if (!linkMatch) return part;
+      return (
+        <a key={`${linkMatch[2]}-${index}`} href={linkMatch[2]}>
+          {linkMatch[1]}
+        </a>
+      );
+    });
+  };
+
   return (
     <>
       {hasAnswer &&
         (Array.isArray(answer) ? (
-          answer.map((para, i) => <p key={i}>{para}</p>)
+          answer.map((para, i) => <p key={i}>{renderTextWithLinks(para)}</p>)
         ) : (
-          <p>{String(answer)}</p>
+          <p>{renderTextWithLinks(answer)}</p>
         ))}
       {hasList && (
         <ul>
