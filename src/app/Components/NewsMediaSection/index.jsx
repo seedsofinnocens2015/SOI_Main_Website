@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import Slider from "react-slick";
 
 /** Extract YouTube video id from common URL shapes */
@@ -28,10 +28,50 @@ function getEmbedUrl(url) {
   return url || "";
 }
 
-const NewsMediaSection = ({ data }) => {
+const NewsMediaSection = ({ data, sectionId }) => {
   const sliderRef = useRef(null);
   /** Keys like "0-abc123" — iframe only mounts after user taps Play */
   const [activatedKeys, setActivatedKeys] = useState(() => new Set());
+
+  useEffect(() => {
+    if (!sectionId || window.location.hash !== `#${sectionId}`) return;
+
+    const target = document.getElementById(sectionId);
+    if (!target) return;
+
+    let animationFrame;
+    let hasStopped = false;
+
+    const alignTarget = () => {
+      if (hasStopped) return;
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(() => {
+        target.scrollIntoView({ block: "start" });
+      });
+    };
+
+    alignTarget();
+
+    const resizeObserver = new ResizeObserver(alignTarget);
+    resizeObserver.observe(document.body);
+
+    const alignmentTimers = [150, 400, 900, 1600, 2600, 3800].map((delay) =>
+      window.setTimeout(alignTarget, delay),
+    );
+
+    const stopTimer = window.setTimeout(() => {
+      hasStopped = true;
+      resizeObserver.disconnect();
+    }, 4200);
+
+    return () => {
+      hasStopped = true;
+      resizeObserver.disconnect();
+      window.cancelAnimationFrame(animationFrame);
+      alignmentTimers.forEach(window.clearTimeout);
+      window.clearTimeout(stopTimer);
+    };
+  }, [sectionId]);
 
   const activate = useCallback((key) => {
     setActivatedKeys((prev) => {
@@ -79,7 +119,11 @@ const NewsMediaSection = ({ data }) => {
     <>
       <div className="container">
         {data.sectionTitle && (
-          <div className="cs_service_title_section">
+          <div
+            id={sectionId}
+            className="cs_service_title_section"
+            style={{ scrollMarginTop: "120px" }}
+          >
             <h3 className="cs_service_main_title">
               {typeof data.sectionTitle === "object" && data.sectionTitle.part1 ? (
                 <>

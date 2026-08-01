@@ -818,7 +818,10 @@ const page = () => {
         bottomSpaceLg="40"
         bottomSpaceMd="50"
       >
-        <NewsMediaSection data={newsMediaData} />
+        <NewsMediaSection
+          data={newsMediaData}
+          sectionId="fertility-expert-videos"
+        />
       </Section>
 
        {/* 7. Testimonials Preview */}

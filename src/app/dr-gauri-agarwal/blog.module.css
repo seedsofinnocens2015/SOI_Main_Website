@@ -1,0 +1,162 @@
+.blogSection {
+  padding: 200px 10.2vw 200px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.blogSection h2 {
+  margin: 0;
+  color: #2c2a29;
+  font-family: var(--font-heading);
+  font-size: clamp(54px, 4vw, 66px);
+  font-weight: 200;
+  line-height: 1.08;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 36px;
+  margin-top: 66px;
+  text-align: left;
+}
+
+.blogCard {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.blogImage {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 360 / 234;
+  overflow: hidden;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.blogImage img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.blogMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 21px;
+}
+
+.blogCategory {
+  margin: 0;
+  color: #b39263;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.blogDate {
+  flex: 0 0 auto;
+  color: #746f69;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.blogCard h3 {
+  display: -webkit-box;
+  min-height: 2.44em;
+  margin: 21px 0 0;
+  overflow: hidden;
+  color: #302e2d;
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 2.15vw, 34px);
+  font-weight: 200;
+  line-height: 1.22;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.blogExcerpt {
+  display: -webkit-box;
+  min-height: 4.8em;
+  margin: 22px 0 0;
+  overflow: hidden;
+  color: #746f69;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.blogReadMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 19px;
+  color: #302e2d;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.blogReadMore span {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #c19b6b;
+  border-radius: 7px;
+  color: #b39263;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.blogButton {
+  display: inline-flex;
+  min-width: 143px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  border-radius: 5px;
+  background: #ffc996;
+  color: #211f1e;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .blogSection {
+    padding: 56px 24px 68px;
+  }
+
+  .blogGrid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .blogSection h2 {
+    font-size: 42px;
+  }
+
+  .blogGrid {
+    margin-top: 42px;
+  }
+}

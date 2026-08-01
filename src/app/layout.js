@@ -49,21 +49,6 @@ export default function RootLayout({ children }) {
         {/* Preconnect to origins that gate the LCP/critical path */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
-        {/* Preload only the appropriate LCP asset for the current viewport. */}
-        <link
-          rel="preload"
-          as="image"
-          href={`${basePath}/assets/img/banner.webp`}
-          media="(min-width: 768px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href={`${basePath}/assets/img/banner-mobile.webp`}
-          media="(max-width: 767px)"
-          fetchPriority="high"
-        />
         <link
           rel="preload"
           href={`${basePath}/fonts/lemon-milk/LemonMilkMedium.woff`}
@@ -119,13 +104,19 @@ export default function RootLayout({ children }) {
     fbq('track', 'PageView');
   }
 
-  // Start after 10s or on first user interaction, whichever comes first
+  // Start after 10s or shortly after the first user interaction. Scheduling
+  // third-party work in an idle period keeps the interaction itself responsive.
   var timer = setTimeout(start, 10000);
+  function scheduleStart() {
+    clearTimeout(timer);
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(start, { timeout: 2000 });
+    } else {
+      setTimeout(start, 250);
+    }
+  }
   ['click','scroll','keydown','pointerdown'].forEach(function (evt) {
-    window.addEventListener(evt, function () {
-      clearTimeout(timer);
-      start();
-    }, { once: true, passive: true });
+    window.addEventListener(evt, scheduleStart, { once: true, passive: true });
   });
 })();`}
         </Script>

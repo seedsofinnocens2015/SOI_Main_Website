@@ -373,6 +373,7 @@ const Header = ({ isTopBar, variant }) => {
             subItems: [
               { label: 'Cameroon, Central Africa', href: '/best-ivf-centre-in-cameroon' },
               { label: 'Sri Lanka', href: '/best-ivf-centre-in-sri-lanka' },
+              { label: 'Bangladesh', href: '/best-ivf-centre-in-bangladesh' },
               { label: 'Mabela, Muscat, Oman', href: '/best-ivf-centre-in-mabela-muscat' },
             ],
           },
@@ -756,7 +757,7 @@ const Header = ({ isTopBar, variant }) => {
                 </div>
               </div>
               <div className="cs_top_bar_right">
-                <Link href="/ivf-doctor/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
+                <Link href="/dr-gauri-agarwal" className="cs_top_bar_doctor_link">
                   Dr. Gauri Agarwal
                 </Link>
                 <div className="cs_social_icons">
@@ -812,7 +813,7 @@ const Header = ({ isTopBar, variant }) => {
                   </div>
                 </div>
                 <div className="cs_top_bar_right">
-                  <Link href="/ivf-doctor/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
+                  <Link href="/dr-gauri-agarwal" className="cs_top_bar_doctor_link">
                     Dr. Gauri Agarwal
                   </Link>
                   <div className="cs_social_icons">
@@ -867,7 +868,7 @@ const Header = ({ isTopBar, variant }) => {
                   </div>
                 </div>
                 <div className="cs_top_bar_right">
-                  <Link href="/ivf-doctor/dr-gauri-agarwal-ivf-specialist" className="cs_top_bar_doctor_link">
+                  <Link href="/dr-gauri-agarwal" className="cs_top_bar_doctor_link">
                     Dr. Gauri Agarwal
                   </Link>
                   <div className="cs_social_icons">

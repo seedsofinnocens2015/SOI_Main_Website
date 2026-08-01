@@ -1,0 +1,36 @@
+.gauri-site {
+  --background: #ffffff;
+  --foreground: #252923;
+  --hero-height: 53vw;
+  --reference-width: 100vw;
+  --style-version: "ivf-info-v2";
+  --font-heading: "Butler", serif;
+  --font-body: "DM Sans", Arial, Helvetica, sans-serif;
+
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  @import "./gauri-legacy";
+}

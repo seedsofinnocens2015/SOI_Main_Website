@@ -1,0 +1,119 @@
+.bookingSection {
+  min-height: 760px;
+  padding: 126px 9.3vw 92px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.bookingHeader h2 {
+  margin: 0;
+  color: #2b2a29;
+  font-family: var(--font-heading);
+  font-size: clamp(56px, 4.35vw, 70px);
+  font-weight: 200;
+  line-height: 1.05;
+}
+
+.bookingHeader p {
+  max-width: 700px;
+  margin: 25px auto 0;
+  color: #756f6a;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 104px;
+}
+
+.bookingCard {
+  position: relative;
+  min-height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 34px 34px;
+  border: 1px solid #e8ded4;
+  border-radius: 17px;
+  background: #ffffff;
+}
+
+.stepNumber {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #29484c;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.bookingCard h3 {
+  max-width: 230px;
+  margin: 0;
+  color: #302f2e;
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.bookingButton {
+  display: inline-flex;
+  min-width: 176px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  border-radius: 5px;
+  background: #ffc996;
+  color: #1d1c1b;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .bookingSection {
+    padding: 96px 24px 82px;
+  }
+
+  .bookingGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 58px;
+  }
+}
+
+@media (max-width: 620px) {
+  .bookingHeader h2 {
+    font-size: 42px;
+  }
+
+  .bookingHeader p {
+    font-size: 16px;
+  }
+
+  .bookingGrid {
+    grid-template-columns: 1fr;
+    gap: 54px;
+    margin-top: 82px;
+  }
+
+  .bookingCard {
+    min-height: 150px;
+  }
+}

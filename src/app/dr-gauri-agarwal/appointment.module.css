@@ -1,0 +1,207 @@
+.appointmentSection {
+  display: grid;
+  min-height: 740px;
+  grid-template-columns: 43% 57%;
+  align-items: center;
+  padding: 72px 2.4vw 70px 0;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(223, 243, 225, 0.88) 0%, rgba(239, 248, 237, 0.72) 30%, rgba(255, 247, 236, 0) 62%),
+    linear-gradient(90deg, #fff1e8 0%, #fbf5e9 50%, #edf9ec 100%);
+  overflow: hidden;
+}
+
+.appointmentImage {
+  position: relative;
+  width: min(560px, 42vw);
+  height: 560px;
+  margin-left: 54px;
+  filter: drop-shadow(0 28px 34px rgba(45, 44, 42, 0.18));
+}
+
+.appointmentImage:global(.reveal-from-left) {
+  opacity: 0;
+  translate: -80px 0;
+  transition:
+    opacity 1.35s ease,
+    translate 1.35s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, translate;
+}
+
+.appointmentImage:global(.reveal-from-left.is-revealed) {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.appointmentImage img {
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 24px;
+}
+
+.appointmentCopy {
+  max-width: 785px;
+  justify-self: center;
+  text-align: center;
+}
+
+.appointmentEyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 0 0 43px;
+  color: #b39263;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.appointmentEyebrow span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.appointmentCopy h2 {
+  margin: 0;
+  color: #2b2928;
+  font-family: var(--font-heading);
+  font-size: clamp(62px, 4.7vw, 76px);
+  font-weight: 200;
+  line-height: 1.05;
+}
+
+.appointmentCopy > p {
+  max-width: 760px;
+  margin: 42px auto 0;
+  color: #746f69;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.appointmentForm {
+  display: grid;
+  gap: 9px;
+  margin-top: 54px;
+}
+
+.appointmentForm input,
+.appointmentForm select,
+.appointmentForm button {
+  width: 100%;
+  height: 55px;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+.appointmentForm input:not([type="checkbox"]),
+.appointmentForm select {
+  border: 1px solid #e1d9cf;
+  background: #ffffff;
+  color: #2b2928;
+  padding: 0 20px;
+}
+
+.appointmentForm input::placeholder {
+  color: #77706b;
+}
+
+.appointmentForm select {
+  cursor: pointer;
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 7px 0 5px;
+  color: #5f5a56;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.consent input {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  margin-top: 1px;
+  accent-color: #28494e;
+}
+
+.consent a {
+  color: #28494e !important;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.formError {
+  margin: -3px 0 2px;
+  color: #b42318;
+  font-family: var(--font-body);
+  font-size: 12px;
+  text-align: left;
+}
+
+.appointmentForm button {
+  border: 0;
+  background: #ffc996;
+  color: #1f1e1d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.appointmentForm button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+@media (max-width: 1100px) {
+  .appointmentSection {
+    grid-template-columns: 1fr;
+    padding: 78px 24px;
+  }
+
+  .appointmentImage {
+    width: min(78vw, 520px);
+    height: 500px;
+    margin: 0 auto 56px;
+  }
+}
+
+@media (max-width: 620px) {
+  .appointmentSection {
+    padding: 58px 18px;
+  }
+
+  .appointmentImage {
+    height: 390px;
+  }
+
+  .appointmentEyebrow {
+    font-size: 12px;
+    letter-spacing: 2.6px;
+  }
+
+  .appointmentCopy h2 {
+    font-size: 44px;
+  }
+
+  .appointmentCopy > p {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .appointmentImage:global(.reveal-from-left),
+  .appointmentImage:global(.reveal-from-left.is-revealed) {
+    opacity: 1;
+    translate: 0 0;
+    transition: none;
+  }
+}

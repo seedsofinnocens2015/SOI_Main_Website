@@ -1,0 +1,46 @@
+.ctaStats {
+  display: grid;
+  min-height: 240px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  padding: 44px 6.8vw 54px;
+  background: #fbf5e9;
+}
+
+.ctaStat {
+  text-align: center;
+}
+
+.ctaStat strong {
+  display: block;
+  color: #2e4b4c;
+  font-family: var(--font-heading);
+  font-size: clamp(54px, 4.1vw, 68px);
+  font-weight: 200;
+  line-height: 1;
+}
+
+.ctaStat span {
+  display: block;
+  margin-top: 16px;
+  color: #2c2b2a;
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 900px) {
+  .ctaStats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 44px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ctaStats {
+    grid-template-columns: 1fr;
+    padding: 56px 24px;
+  }
+}
