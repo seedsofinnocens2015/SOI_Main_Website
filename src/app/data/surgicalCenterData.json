@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "Precision & Compassionate Surgical Care for Advanced Gynecology | Seeds of Innocens",
+    "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility, wherever possible."
+  },
+  "hero": {
+    "title": "Seeds of Innocens <span class=\"cs_accent_color\">Surgical Center</span>",
+    "contentHeading": "Precision & Compassionate Surgical Care for Advanced Gynecology",
+    "backgroundImage": "/assets/img/Services/OpenSurgery.webp",
+    "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility, wherever possible. Seeds of Innocens Surgical Centre offers advanced technologies, expert surgeons, and compassionate patient care that ensures quick recovery and improved reproductive wellness."
+  },
+  "patientChoice": {
+    "heading": "Why Our Women Patients Choose Us",
+    "items": [
+      "Delivered 21,000+ Healthy Babies",
+      "Established More Than 35 Fertility and Surgical Centers Across India",
+      "Fertility Treatment Success Rate: 78%",
+      "More Than 30 Fertility Specialists",
+      "Specialized Surgical Procedures With a Patient-Centered Approach"
+    ]
+  },
+  "introduction": {
+    "heading": "Expert Surgical Procedures For Every Woman's Life Stage",
+    "paragraph": "Each woman requires a special approach to treatment, and we take into account all the nuances of her individual health issues at Seeds of Innocens Surgical Center. Our experienced laparoscopy surgeons make an exact assessment of your condition and recommend the best treatment procedure suitable for your diagnosis and reproductive needs. In cases such as endometriosis, fibroids, ovarian cysts, blocked fallopian tubes or unexplained infertility, our goal is to offer safe, effective, and fertility-preserving surgical treatment. Our laparoscopic surgery procedures have small incisions, decreased pain, minimal blood loss, and a quick recovery period.",
+    "image": "/assets/img/Laparoscopy1.jpg",
+    "imageAlt": "Expert surgical procedures for every woman's life stage"
+  },
+  "procedures": [
+    {
+      "title": "Fibroid & Polyp Surgery",
+      "description": "Expert surgical management of uterine fibroids and endometrial polyps that may cause heavy bleeding, infertility, recurrent miscarriages, or pelvic discomfort. Our surgeons recommend the most suitable procedure based on the size, number, and location of fibroids while preserving the uterus whenever possible."
+    },
+    {
+      "title": "Ovarian Cyst Surgery",
+      "description": "Advanced laparoscopic ovarian cyst removal performed with maximum preservation of healthy ovarian tissue to protect future fertility.",
+      "listHeading": "Suitable for women experiencing:",
+      "items": [
+        "Persistent ovarian cysts",
+        "Pelvic pain",
+        "Large ovarian cysts",
+        "Fertility concerns"
+      ]
+    },
+    {
+      "title": "Fertility-Preserving Surgery",
+      "description": "For women planning pregnancy in the future, our fertility-preserving procedures are designed to treat gynecological conditions while protecting reproductive potential. Our specialists prioritize conservative surgical techniques that maintain ovarian reserve and reproductive function whenever medically appropriate."
+    }
+  ],
+  "whyChoose": {
+    "heading": "Why Choose Seeds of Innocens Surgical Center?",
+    "subheading": "Expertise That Puts Women's Health First",
+    "items": [
+      {
+        "title": "Experienced Women's Health Specialists",
+        "description": "Our multidisciplinary team includes experienced laparoscopic surgeons, fertility experts, embryologists, and gynecologists committed to delivering evidence-based surgical care."
+      },
+      {
+        "title": "Advanced Minimally Invasive Surgical Techniques",
+        "description": "Our specialists perform the latest surgical techniques, including:",
+        "points": [
+          "Small cuts",
+          "Less postoperative pain",
+          "Quicker recovery",
+          "Reduced duration of hospital stay",
+          "Minimized scarring"
+        ]
+      },
+      {
+        "title": "Patient-centered Approach in Surgery",
+        "description": "All surgical decisions are made with due consideration of patients' future plans concerning their fertility. We always try to suggest those surgical interventions that will protect patients' reproductive health while curing the disease."
+      },
+      {
+        "title": "Personalized Treatment of Our Patients",
+        "description": "During consultations and throughout the entire treatment process, patients receive individual attention, compassionate care, and transparent communication."
+      }
+    ]
+  },
+  "journey": {
+    "heading": "Surgical Treatment Process for Our Patients",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Step 1 – Consultation and Diagnosis",
+        "description": "You visit specialists who conduct consultations, collect data regarding patients' medical history, perform examinations, and conduct ultrasound and diagnostic tests."
+      },
+      {
+        "number": "02",
+        "title": "Step 2 – Treatment Planning",
+        "description": "According to diagnosis results and reproductive goals of our patients, our specialists develop a unique treatment plan."
+      },
+      {
+        "number": "03",
+        "title": "Step 3 – Surgery",
+        "description": "The surgery takes place by means of advanced surgical techniques and monitoring of patients."
+      },
+      {
+        "number": "04",
+        "title": "Step 4 – Post-Surgery and Reproductive Health Protection",
+        "description": "Our specialists guide patients through the post-surgery period, prescribe necessary medicines, and hold follow-up consultations."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Take the First Step to Good Health for Women",
+    "description": "If you have pelvic pain, excessive bleeding during menstruation, fibroids, cysts in your ovaries, endometriosis, fallopian tube blockage, or infertility, excellent healthcare services can be only a few consultations away.",
+    "supportingText": "An experienced surgical team will diagnose, treat, and care for you personally.",
+    "buttonText": "Make a Consultation Appointment Now",
+    "buttonHref": "/contact/book-appointment/"
+  }
+}

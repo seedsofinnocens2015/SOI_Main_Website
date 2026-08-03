@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { getAssetPathClient } from '../../utils/assetPath';
-import { submitBookAppointment } from '../../utils/websiteForms';
+import { submitBookAppointment, submitSurgicalConsultation } from '../../utils/websiteForms';
 import { getThankYouUrl, THANK_YOU_TYPE } from '../../utils/thankYou';
 import centresAllData from '../../data/centres-data.json';
 
@@ -16,6 +16,7 @@ const PageHeading = ({ data }) => {
   const hideStatsGrid = Boolean(data?.hideStatsGrid);
   const hideAppointmentForm = Boolean(data?.hideAppointmentForm);
   const centerUspTitle = Boolean(data?.centerUspTitle);
+  const isSurgicalForm = data?.formType === 'surgical';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,7 +33,11 @@ const PageHeading = ({ data }) => {
     };
 
     try {
-      const { ok, data: result } = await submitBookAppointment(dataObj);
+      const submitForm = isSurgicalForm ? submitSurgicalConsultation : submitBookAppointment;
+      const { ok, data: result } = await submitForm({
+        ...dataObj,
+        ...(isSurgicalForm && { source: 'Surgical Center Banner' }),
+      });
       if (ok) {
         if (typeof window !== 'undefined') {
           localStorage.setItem(APPOINTMENT_SUBMITTED_KEY, 'true');
@@ -130,6 +135,7 @@ const PageHeading = ({ data }) => {
                       name="center"
                       className="cs_form_field"
                       defaultValue=""
+                      required={isSurgicalForm}
                     >
                       <option value="">Select Centre</option>
                       <optgroup label="India Centres">

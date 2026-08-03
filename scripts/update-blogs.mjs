@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "period-ke-kitne-din-baad-pregnancy",
-    title: "पीरियड्स के कितने दिन बाद प्रेग्नेंसी हो सकती है? ओव्यूलेशन गाइड",
-    excerpt: "यदि आप यह जानना चाहते हैं कि मासिक धर्म के कितने दिन बाद गर्भधारण संभव है, तो इसका सीधा संबंध हर महिला के मासिक चक्र से है। बहुत से लोग मानते हैं कि जैसे ही पीरियड समाप्त होते हैं, गर्भवती होना संभव नहीं होता, लेकिन यह धारणा हमेशा सही नहीं होती है। इस लेख में हम यह विस्तार से समझेंगे कि पीरियड्स के कितने दिन बाद प्रेग्नेंसी  होती है?",
+    id: "ivf-treatment-in-sri-lanka ",
+    title: "IVF Treatment in Sri Lanka – Begin Your Parenthood Journey with Seeds of Innocens IVF",
+    excerpt: "Parenthood is one of the most precious achievements of one’s life, but for many couples, getting there may not be an easy process. It often takes months and even years of unsuccessful efforts to achieve pregnancy, which results in emotional stress and uncertainty. However, thanks to modern reproductive medicine, millions of couples around the world have had an opportunity to become parents.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/पीरियड्स के कितने दिन बाद प्रेग्नेंसी हो सकती है.png",
-    date: "July 28, 2026",
+    image: "/assets/img/Blogs/IVF Treatment in Sri Lanka.png",
+    date: "August 02, 2026",
     author: "admin",
-    category: "Pregnancy",
-    readTime: "14 min read",
-    slug: "period-ke-kitne-din-baad-pregnancy"
+    category: "IVF Process",
+    readTime: "13 min read",
+    slug: "ivf-treatment-in-sri-lanka "
   }
 ];
 

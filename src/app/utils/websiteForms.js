@@ -5,8 +5,8 @@
  * - All other forms POST to unified: /api/website/form-submit
  *   Body: { formType, ...fields } or multipart + formType field (implement on server).
  */
-const WEBSITE_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
-// const WEBSITE_API_BASE_URL = 'http://localhost:4000';
+// const WEBSITE_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
+const WEBSITE_API_BASE_URL = 'http://localhost:4000';
 
 export function getWebsiteApiBaseUrl() {
   return WEBSITE_API_BASE_URL;
@@ -16,6 +16,7 @@ export const WEBSITE_FORM_PATHS = {
   bookAppointment: '/api/new-website/book-appointment',
   callBack: '/api/new-website/call-back-form',
   unified: '/api/new-website/form-submit',
+  surgical: '/api/new-website/surgical-form',
   jobApplications: '/api/job-applications',
   generalJobApplications: '/api/job-applications/general',
 };
@@ -71,6 +72,12 @@ export async function submitBookAppointment(payload) {
   const phoneError = getInvalidPhoneError(payload);
   if (phoneError) return { response: null, data: { ok: false, error: phoneError }, ok: false };
   return postWebsiteJson(WEBSITE_FORM_PATHS.bookAppointment, payload);
+}
+
+export async function submitSurgicalConsultation(payload) {
+  const phoneError = getInvalidPhoneError(payload);
+  if (phoneError) return { response: null, data: { ok: false, error: phoneError }, ok: false };
+  return postWebsiteJson(WEBSITE_FORM_PATHS.surgical, payload);
 }
 
 export async function submitCallBack(payload) {

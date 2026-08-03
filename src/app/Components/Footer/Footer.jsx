@@ -38,6 +38,7 @@ const Footer = () => {
         links: [
           { href: '/ivf-doctor', text: 'Our Doctors' },
           { href: '/contact/centre-locator/', text: 'Our Centres' },
+          { href: '/seeds-of-innocens-surgical-center/', text: 'Our Surgical Center' },
           { href: '/contact/careers/', text: 'Careers' },
           { href: '/contact/feedback/', text: 'Feedback' },
           { href: '/contact/call-back-form/', text: 'Contact' },
