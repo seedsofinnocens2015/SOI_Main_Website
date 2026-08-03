@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { getAssetPathClient } from '../../utils/assetPath';
 import { submitBookAppointment, submitSurgicalConsultation } from '../../utils/websiteForms';
 import { getThankYouUrl, THANK_YOU_TYPE } from '../../utils/thankYou';
@@ -9,6 +10,7 @@ import centresAllData from '../../data/centres-data.json';
 
 const centresData = centresAllData.centres;
 const APPOINTMENT_SUBMITTED_KEY = 'soi_appointment_submitted';
+const SURGICAL_CENTRES = ['Gurgaon', 'Lucknow', 'Delhi', 'Noida', 'Ghaziabad', 'Meerut', 'Kolkata'];
 
 const PageHeading = ({ data }) => {
   const router = useRouter();
@@ -29,7 +31,12 @@ const PageHeading = ({ data }) => {
       // so LSQ duplicate checks are not triggered by a fixed placeholder email.
       email: '',
       center: formData.get('center') || 'Header Common Form',
-      message: 'Appointment requested from header form',
+      message: isSurgicalForm
+        ? formData.get('message') || ''
+        : 'Appointment requested from header form',
+      ...(isSurgicalForm && {
+        captchaAccepted: formData.get('captchaAccepted') === 'on',
+      }),
     };
 
     try {
@@ -138,22 +145,52 @@ const PageHeading = ({ data }) => {
                       required={isSurgicalForm}
                     >
                       <option value="">Select Centre</option>
-                      <optgroup label="India Centres">
-                        {centresData
-                          .filter((c) => !c.isInternational)
-                          .map((c) => (
-                            <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
-                          ))}
-                      </optgroup>
-                      <optgroup label="International Centres">
-                        {centresData
-                          .filter((c) => c.isInternational)
-                          .map((c) => (
-                            <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
-                          ))}
-                      </optgroup>
+                      {isSurgicalForm ? (
+                        SURGICAL_CENTRES.map((center) => (
+                          <option key={center} value={center}>{center}</option>
+                        ))
+                      ) : (
+                        <>
+                          <optgroup label="India Centres">
+                            {centresData
+                              .filter((c) => !c.isInternational)
+                              .map((c) => (
+                                <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
+                              ))}
+                          </optgroup>
+                          <optgroup label="International Centres">
+                            {centresData
+                              .filter((c) => c.isInternational)
+                              .map((c) => (
+                                <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
+                              ))}
+                          </optgroup>
+                        </>
+                      )}
                     </select>
                   </div>
+                  {isSurgicalForm && (
+                    <>
+                      <div className="cs_form_group">
+                        <textarea
+                          name="message"
+                          placeholder="Message (Optional)"
+                          className="cs_form_field"
+                          rows={1}
+                        />
+                      </div>
+                      <div className="cs_form_group">
+                        <label className="soi_surgical_consent_check">
+                          <input type="checkbox" name="captchaAccepted" required />
+                          <span>
+                            By clicking &quot;Book Appointment&quot;, you agree to our{' '}
+                            <Link href="/privacy-policy/">Privacy Policy</Link> and{' '}
+                            <Link href="/terms-and-conditions/">T&amp;C</Link> *
+                          </span>
+                        </label>
+                      </div>
+                    </>
+                  )}
                   <button
                     type="submit"
                     disabled={isSubmitting}

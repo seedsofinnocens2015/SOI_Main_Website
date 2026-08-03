@@ -1,13 +1,16 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import centresAllData from '@/app/data/centres-data.json';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { submitSurgicalConsultation } from '@/app/utils/websiteForms';
+import { getThankYouUrl, THANK_YOU_TYPE } from '@/app/utils/thankYou';
 import styles from './surgicalCenter.module.scss';
 
-const centres = centresAllData.centres;
+const SURGICAL_CENTRES = ['Gurgaon', 'Lucknow', 'Delhi', 'Noida', 'Ghaziabad', 'Meerut', 'Kolkata'];
 
 export default function SurgicalConsultationModal({ buttonText }) {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
@@ -48,6 +51,8 @@ export default function SurgicalConsultationModal({ buttonText }) {
       name: formData.get('name'),
       phone: formData.get('phone'),
       center: formData.get('center'),
+      message: formData.get('message') || '',
+      captchaAccepted: formData.get('captchaAccepted') === 'on',
       source: 'Surgical Center Popup',
     });
 
@@ -55,6 +60,10 @@ export default function SurgicalConsultationModal({ buttonText }) {
       formElement.reset();
       setIsSuccess(true);
       setMessage('Your consultation request has been submitted successfully.');
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('soi_appointment_submitted', 'true');
+      }
+      router.push(getThankYouUrl(THANK_YOU_TYPE.appointment));
     } else {
       setMessage(result.data?.error || 'Something went wrong. Please try again.');
     }
@@ -93,22 +102,33 @@ export default function SurgicalConsultationModal({ buttonText }) {
                   <div className="cs_form_group">
                     <input type="tel" name="phone" placeholder="Phone Number *" required className="cs_form_field" />
                   </div>
-                  <div className="cs_form_group">
-                    <select name="center" className="cs_form_field" defaultValue="" required>
-                      <option value="" disabled>Select Centre *</option>
-                      <optgroup label="India Centres">
-                        {centres.filter((center) => !center.isInternational).map((center) => (
-                          <option key={center.slug} value={center.name.split(',')[0].trim()}>{center.name}</option>
-                        ))}
-                      </optgroup>
-                      <optgroup label="International Centres">
-                        {centres.filter((center) => center.isInternational).map((center) => (
-                          <option key={center.slug} value={center.name.split(',')[0].trim()}>{center.name}</option>
-                        ))}
-                      </optgroup>
-                    </select>
-                  </div>
-                  {message && (
+                <div className="cs_form_group">
+                  <select name="center" className="cs_form_field" defaultValue="" required>
+                    <option value="" disabled>Select Centre *</option>
+                    {SURGICAL_CENTRES.map((center) => (
+                      <option key={center} value={center}>{center}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="cs_form_group">
+                  <textarea
+                    name="message"
+                    placeholder="Message (Optional)"
+                    className="cs_form_field"
+                    rows={3}
+                  />
+                </div>
+                <div className="cs_form_group">
+                  <label className={styles.consentCheck}>
+                    <input type="checkbox" name="captchaAccepted" required />
+                    <span>
+                      By clicking &quot;Book Appointment&quot;, you agree to our{' '}
+                      <Link href="/privacy-policy/">Privacy Policy</Link> and{' '}
+                      <Link href="/terms-and-conditions/">T&amp;C</Link> *
+                    </span>
+                  </label>
+                </div>
+                {message && (
                     <p className={isSuccess ? styles.formSuccess : styles.formError} role="status">{message}</p>
                   )}
                   <button type="submit" disabled={isSubmitting} className="cs_btn cs_style_1 cs_color_1 cs_header_form_btn">

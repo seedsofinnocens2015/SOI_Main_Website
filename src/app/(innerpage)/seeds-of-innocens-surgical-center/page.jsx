@@ -19,7 +19,7 @@ export default function SurgicalCenterPage() {
   const { hero, patientChoice, introduction, procedures, whyChoose, journey, cta } = surgicalCenterData;
 
   return (
-    <main>
+    <main className={styles.page}>
       <Section
         className="cs_page_heading cs_bg_filed cs_center"
         backgroundImage={hero.backgroundImage}

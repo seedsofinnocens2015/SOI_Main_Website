@@ -10,6 +10,10 @@ import Link from 'next/link';
 const APPOINTMENT_SUBMITTED_KEY = 'soi_appointment_submitted';
 const centresData = centresAllData.centres;
 const INVALID_PHONE_MESSAGE = 'Invalid number';
+const POPUP_EXCLUDED_PATHS = new Set([
+  '/seeds-of-innocens-surgical-center',
+  '/contact/careers',
+]);
 
 const getPhoneError = (phone) => {
   const digits = String(phone || '').replace(/\D/g, '');
@@ -27,7 +31,12 @@ const GlobalAppointmentPopup = () => {
 
   useEffect(() => {
     if (!pathname) return;
-    if (pathname.includes('/thank-you')) {
+    const normalizedPathname = pathname !== '/' ? pathname.replace(/\/+$/, '') : pathname;
+
+    if (
+      pathname.includes('/thank-you') ||
+      POPUP_EXCLUDED_PATHS.has(normalizedPathname)
+    ) {
       setIsOpen(false);
       return;
     }

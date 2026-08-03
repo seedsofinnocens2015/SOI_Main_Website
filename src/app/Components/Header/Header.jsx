@@ -377,6 +377,17 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Mabela, Muscat, Oman', href: '/best-ivf-centre-in-mabela-muscat' },
             ],
           },
+          {
+            label: 'Surgical Center',
+            href: '/seeds-of-innocens-surgical-center',
+            // allowNavigationWithSubItems: true,
+            // subItems: [
+            //   { label: 'Cameroon, Central Africa', href: '/best-ivf-centre-in-cameroon' },
+            //   { label: 'Sri Lanka', href: '/best-ivf-centre-in-sri-lanka' },
+            //   { label: 'Bangladesh', href: '/best-ivf-centre-in-bangladesh' },
+            //   { label: 'Mabela, Muscat, Oman', href: '/best-ivf-centre-in-mabela-muscat' },
+            // ],
+          },
         ],
       },
       {

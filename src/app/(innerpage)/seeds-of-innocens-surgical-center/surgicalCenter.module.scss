@@ -390,6 +390,68 @@
   color: #c62828;
 }
 
+.consentCheck {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin: 0;
+  color: #111 !important;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+
+  input {
+    width: 13px;
+    min-width: 13px;
+    height: 13px;
+    margin-top: 1px;
+    accent-color: #df3655;
+  }
+
+  span,
+  a {
+    color: #111 !important;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.page :global(.soi_surgical_consent_check) {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin: 0;
+  color: #111 !important;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+
+  input {
+    width: 13px;
+    min-width: 13px;
+    height: 13px;
+    margin-top: 1px;
+    accent-color: #df3655;
+  }
+
+  span,
+  a {
+    color: #111 !important;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
 .medicalNote {
   max-width: 920px;
   margin: 18px auto 0;
