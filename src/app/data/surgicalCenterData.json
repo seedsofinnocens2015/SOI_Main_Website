@@ -1,13 +1,13 @@
 {
   "seo": {
     "title": "Seeds of Innocens Surgical Center",
-    "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility, wherever possible."
+    "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility."
   },
   "hero": {
     "title": "Seeds of Innocens <span class=\"cs_accent_color\">Surgical Center</span>",
     "contentHeading": "Precision & Compassionate Surgical Care for Advanced Gynecology",
     "backgroundImage": "/assets/img/Services/OpenSurgery.webp",
-    "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility, wherever possible. Seeds of Innocens Surgical Centre offers advanced technologies, expert surgeons, and compassionate patient care that ensures quick recovery and improved reproductive wellness."
+    "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility. Seeds of Innocens Surgical Centre offers advanced technologies, expert surgeons, and compassionate patient care that ensures quick recovery and improved reproductive wellness."
   },
   "patientChoice": {
     "heading": "Why Our Women Patients Choose Us",
@@ -104,7 +104,7 @@
     "heading": "Take the First Step to Good Health for Women",
     "description": "If you have pelvic pain, excessive bleeding during menstruation, fibroids, cysts in your ovaries, endometriosis, fallopian tube blockage, or infertility, excellent healthcare services can be only a few consultations away.",
     "supportingText": "An experienced surgical team will diagnose, treat, and care for you personally.",
-    "buttonText": "Make a Consultation Appointment Now",
+    "buttonText": "Book a Consultation Appointment Now",
     "buttonHref": "/contact/book-appointment/"
   }
 }

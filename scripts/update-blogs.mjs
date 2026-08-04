@@ -26,7 +26,7 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-treatment-in-sri-lanka ",
+    id: "ivf-treatment-in-sri-lanka",
     title: "IVF Treatment in Sri Lanka – Begin Your Parenthood Journey with Seeds of Innocens IVF",
     excerpt: "Parenthood is one of the most precious achievements of one’s life, but for many couples, getting there may not be an easy process. It often takes months and even years of unsuccessful efforts to achieve pregnancy, which results in emotional stress and uncertainty. However, thanks to modern reproductive medicine, millions of couples around the world have had an opportunity to become parents.",
     contentFile: "scripts/blog-content/dummy-blog.html",
@@ -35,7 +35,7 @@ const NEW_BLOGS = [
     author: "admin",
     category: "IVF Process",
     readTime: "13 min read",
-    slug: "ivf-treatment-in-sri-lanka "
+    slug: "ivf-treatment-in-sri-lanka"
   }
 ];
 
