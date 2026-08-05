@@ -467,8 +467,8 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Women\'s Health', href: '/blogs/womens-health' },
               { label: 'Treatment Guides', href: '/blogs/treatment-guides' },
               // { label: 'Success Stories', href: '/blogs/success-stories' },
-              // { label: 'Doctor Insights', href: '/blogs/doctor-insights' },
-              // { label: 'News & Press', href: '/blogs/news-press' },
+              { label: 'Doctor Insights', href: '/blogs/doctor-insights' },
+              { label: 'News & Press', href: '/blogs/news-press' },
             ],
           },
           // {

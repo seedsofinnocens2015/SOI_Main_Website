@@ -27,23 +27,28 @@
   },
   "procedures": [
     {
-      "title": "Fibroid & Polyp Surgery",
-      "description": "Expert surgical management of uterine fibroids and endometrial polyps that may cause heavy bleeding, infertility, recurrent miscarriages, or pelvic discomfort. Our surgeons recommend the most suitable procedure based on the size, number, and location of fibroids while preserving the uterus whenever possible."
+      "title": "POLYP SURGERY",
+      "description": "Endometrial and cervical polyps can cause abnormal uterine bleeding, infertility, or recurrent pregnancy loss. Our minimally invasive hysteroscopic procedures ensure precise removal while preserving the uterus's health and improving reproductive outcomes."
     },
     {
-      "title": "Ovarian Cyst Surgery",
-      "description": "Advanced laparoscopic ovarian cyst removal performed with maximum preservation of healthy ovarian tissue to protect future fertility.",
-      "listHeading": "Suitable for women experiencing:",
-      "items": [
-        "Persistent ovarian cysts",
-        "Pelvic pain",
-        "Large ovarian cysts",
-        "Fertility concerns"
-      ]
+      "title": "UTERINE MALFORMATION SURGERY",
+      "description": "Congenital uterine anomalies like a septate uterus might affect pregnancy and fertility outcomes. We also offer advanced hysteroscopic and laparoscopic corrective surgeries that are well designed to restore normal uterine anatomy and support successful conception."
     },
     {
-      "title": "Fertility-Preserving Surgery",
-      "description": "For women planning pregnancy in the future, our fertility-preserving procedures are designed to treat gynecological conditions while protecting reproductive potential. Our specialists prioritize conservative surgical techniques that maintain ovarian reserve and reproductive function whenever medically appropriate."
+      "title": "FIBROID SURGERY",
+      "description": "Uterine fibroids can lead to heavy menstrual bleeding, pelvic pain, and recurrent miscarriages. Our hysteroscopic and laparoscopic techniques remove fibroids while preserving the uterus whenever medically appropriate."
+    },
+    {
+      "title": "ENDOMETRIOSIS SURGERY",
+      "description": "Endometriosis is associated with pelvic pain, painful periods, and problems with fertility. The procedures that we use to treat this condition via laparoscopy will not only help to eliminate the tissue but also will assist in improving reproductive functions and maintaining fertility."
+    },
+    {
+      "title": "RECURRENT OVARIAN CYSTS SURGERY",
+      "description": "If you suffer from recurring ovarian cysts, the laparoscopic surgery performed by our specialists will be aimed at their elimination while preserving the healthy ovarian tissue."
+    },
+    {
+      "title": "ADENOMYOSIS SURGERY",
+      "description": "The symptoms of adenomyosis include heavy periods, painful cramps, and pelvic pain. The specialists of our clinic offer you an individually designed laparoscopy procedure that will preserve your fertility to the greatest extent possible."
     }
   ],
   "whyChoose": {

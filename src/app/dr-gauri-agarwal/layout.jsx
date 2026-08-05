@@ -1,10 +1,16 @@
 import "./gauri.scss";
+import { getSeoMetadata } from "@/app/utils/seoMetadata";
 
-export const metadata = {
-  title: "Dr. Gauri Agarwal | IVF & Fertility Specialist",
-  description:
-    "Learn about Dr. Gauri Agarwal's personalised IVF and fertility care, services, experience, and appointment options.",
-};
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: "/dr-gauri-agarwal",
+    hierarchyCandidates: [
+      ["Doctors", "All IVF Specialists - Profiles"],
+      ["Doctors"],
+      [],
+    ],
+  });
+}
 
 export default function DrGauriAgarwalLayout({ children }) {
   return children;

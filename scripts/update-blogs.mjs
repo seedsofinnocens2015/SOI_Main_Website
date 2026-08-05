@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-treatment-in-sri-lanka",
-    title: "IVF Treatment in Sri Lanka – Begin Your Parenthood Journey with Seeds of Innocens IVF",
-    excerpt: "Parenthood is one of the most precious achievements of one’s life, but for many couples, getting there may not be an easy process. It often takes months and even years of unsuccessful efforts to achieve pregnancy, which results in emotional stress and uncertainty. However, thanks to modern reproductive medicine, millions of couples around the world have had an opportunity to become parents.",
+    id: "ivf-doctor-in-delhi-ncr-experience-and-ethics",
+    title: "Inherited Cancer in India: Why Family History Alone Isn't Enough Anymore",
+    excerpt: "For those couples who suffer from fertility problems such as Infertility, the selection of the right fertility doctor becomes crucial in their quest for parenthood. Delhi is known to be one of the top cities in terms of reproductive technology in India, with the availability of excellent fertility doctors, advanced laboratories, and personalized treatment options. However, with so many fertility clinics and  infertility specialist in delhi NCR the selection of the best IVF Doctor becomes very important.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Treatment in Sri Lanka.png",
-    date: "August 02, 2026",
+    image: "/assets/img/Blogs/IVF Doctor in Delhi NCR.png",
+    date: "August 04, 2026",
     author: "admin",
-    category: "IVF Process",
-    readTime: "13 min read",
-    slug: "ivf-treatment-in-sri-lanka"
+    category: "Doctor Insights",
+    readTime: "10 min read",
+    slug: "ivf-doctor-in-delhi-ncr-experience-and-ethics"
   }
 ];
 
