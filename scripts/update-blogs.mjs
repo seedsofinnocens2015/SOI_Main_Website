@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-doctor-in-delhi-ncr-experience-and-ethics",
-    title: "Inherited Cancer in India: Why Family History Alone Isn't Enough Anymore",
-    excerpt: "For those couples who suffer from fertility problems such as Infertility, the selection of the right fertility doctor becomes crucial in their quest for parenthood. Delhi is known to be one of the top cities in terms of reproductive technology in India, with the availability of excellent fertility doctors, advanced laboratories, and personalized treatment options. However, with so many fertility clinics and  infertility specialist in delhi NCR the selection of the best IVF Doctor becomes very important.",
+    id: "best-ivf-treatment-in-mauritius",
+    title: "Best IVF Treatment in Mauritius: Start Your Parenthood Journey",
+    excerpt: "Having children is one of the most intimate dreams in the world, but unfortunately, the inability to conceive can complicate it both emotionally and physically. Fortunately, with the development of assisted reproduction technologies, fertility treatment has received its second breath, giving a chance for thousands of families to conceive.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Doctor in Delhi NCR.png",
-    date: "August 04, 2026",
+    image: "/assets/img/Blogs/Best IVF Treatment in Mauritius.png",
+    date: "August 05, 2026",
     author: "admin",
-    category: "Doctor Insights",
-    readTime: "10 min read",
-    slug: "ivf-doctor-in-delhi-ncr-experience-and-ethics"
+    category: "IVF Process",
+    readTime: "11 min read",
+    slug: "best-ivf-treatment-in-mauritius"
   }
 ];
 

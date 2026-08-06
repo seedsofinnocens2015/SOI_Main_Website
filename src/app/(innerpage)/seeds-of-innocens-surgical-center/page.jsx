@@ -3,17 +3,21 @@ import AccentHeading from '@/app/Components/AccentHeading';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import { getAssetPath } from '@/app/utils/assetPath';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
 import surgicalCenterData from '@/app/data/surgicalCenterData.json';
 import styles from './surgicalCenter.module.scss';
 import SurgicalConsultationModal from './SurgicalConsultationModal';
 
-export const metadata = {
-  title: surgicalCenterData.seo.title,
-  description: surgicalCenterData.seo.description,
-  alternates: {
-    canonical: '/seeds-of-innocens-surgical-center/',
-  },
-};
+// Keep SEO panel changes server-rendered for this page instead of freezing
+// whichever API response happened to be available during a large static build.
+export const dynamic = 'force-dynamic';
+
+export async function generateMetadata() {
+  return getSeoMetadata({
+    pageUrl: '/seeds-of-innocens-surgical-center',
+    hierarchyCandidates: [['Quick Links'], []],
+  });
+}
 
 export default function SurgicalCenterPage() {
   const { hero, patientChoice, introduction, procedures, whyChoose, journey, cta } = surgicalCenterData;

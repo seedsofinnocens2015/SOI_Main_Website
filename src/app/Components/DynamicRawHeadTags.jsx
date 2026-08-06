@@ -1,4 +1,4 @@
-// const SEO_API_BASE_URL = 'http://localhost:4000';
+// const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 const SEO_API_BASE_URL = 'https://seeds.seedsofinnocens.com';
 
 // Same caching/timeout discipline as utils/seoMetadata.js. The previous
