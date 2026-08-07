@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-ivf-treatment-in-mauritius",
-    title: "Best IVF Treatment in Mauritius: Start Your Parenthood Journey",
-    excerpt: "Having children is one of the most intimate dreams in the world, but unfortunately, the inability to conceive can complicate it both emotionally and physically. Fortunately, with the development of assisted reproduction technologies, fertility treatment has received its second breath, giving a chance for thousands of families to conceive.",
+    id: "top-10-best-ivf-doctors-in-delhi-ncr",
+    title: "Top 10 Best IVF Doctors in Delhi NCR : Trusted Fertility Specialists",
+    excerpt: "The dream of parenthood is one of the most wonderful milestones in one’s life. But sometimes this dream turns into a struggle for many couples because of numerous disappointments and emotional difficulties that they undergo. Fortunately, thanks to the latest advancements in fertility treatment, many people have been able to fulfill their dreams.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best IVF Treatment in Mauritius.png",
-    date: "August 05, 2026",
+    image: "/assets/img/Blogs/Top 10 Best IVF Doctors in Delhi NCR.png",
+    date: "August 06, 2026",
     author: "admin",
-    category: "IVF Process",
-    readTime: "11 min read",
-    slug: "best-ivf-treatment-in-mauritius"
+    category: "Doctor Insights",
+    readTime: "12 min read",
+    slug: "top-10-best-ivf-doctors-in-delhi-ncr"
   }
 ];
 
