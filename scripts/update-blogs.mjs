@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "top-10-best-ivf-doctors-in-delhi-ncr",
-    title: "Top 10 Best IVF Doctors in Delhi NCR : Trusted Fertility Specialists",
-    excerpt: "The dream of parenthood is one of the most wonderful milestones in one’s life. But sometimes this dream turns into a struggle for many couples because of numerous disappointments and emotional difficulties that they undergo. Fortunately, thanks to the latest advancements in fertility treatment, many people have been able to fulfill their dreams.",
+    id: "top-10-best-ivf-doctors-in-india",
+    title: "Top 10 Best IVF Doctors in India for Infertility Treatment",
+    excerpt: "While conception is an exciting experience for many couples, sometimes it can be full of uncertainties and repeated disappointments. Fertility and infertility are medical issues that have an enormous impact on people's emotions and lifestyle. But there is good news about advancements in IVF treatment in India, which helps couples from all over the world bring their hopes into reality and give birth to their kids.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Top 10 Best IVF Doctors in Delhi NCR.png",
-    date: "August 06, 2026",
+    image: "/assets/img/Blogs/Top 10 Best IVF Doctors in India for Infertility Treatment.png",
+    date: "August 07, 2026",
     author: "admin",
     category: "Doctor Insights",
-    readTime: "12 min read",
-    slug: "top-10-best-ivf-doctors-in-delhi-ncr"
+    readTime: "11 min read",
+    slug: "top-10-best-ivf-doctors-in-india"
   }
 ];
 
