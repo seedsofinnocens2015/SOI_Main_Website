@@ -12,30 +12,12 @@ const GlobalAppointmentPopup = dynamic(
 
 const DefalultLayout = ({ children }) => {
     return (
-        <>
-            <head>
-                <link
-                    rel="preload"
-                    as="image"
-                    href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/img/banner.webp`}
-                    media="(min-width: 768px)"
-                    fetchPriority="high"
-                />
-                <link
-                    rel="preload"
-                    as="image"
-                    href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/img/banner-mobile.webp`}
-                    media="(max-width: 767px)"
-                    fetchPriority="high"
-                />
-            </head>
-            <div className='main-page-area'>
-                <Header isTopBar={true}></Header>
-                {children}
-                <Footer></Footer>
-                <GlobalAppointmentPopup />
-            </div>
-        </>
+        <div className='main-page-area'>
+            <Header isTopBar={true}></Header>
+            {children}
+            <Footer></Footer>
+            <GlobalAppointmentPopup />
+        </div>
     );
 };
 

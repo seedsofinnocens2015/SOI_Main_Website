@@ -49,6 +49,7 @@ const PageHeading = ({ data }) => {
       const submitForm = isSurgicalForm ? submitSurgicalConsultation : submitBookAppointment;
       const { ok, data: result } = await submitForm({
         ...dataObj,
+        ...(centreRegion === 'international' && { source: 'International Centre Banner' }),
         ...(isSurgicalForm && { source: 'Surgical Center Banner' }),
       });
       if (ok) {

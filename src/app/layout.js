@@ -56,6 +56,20 @@ export default function RootLayout({ children }) {
           type="font/woff"
           crossOrigin="anonymous"
         />
+        <link
+          rel="preload"
+          as="image"
+          href={`${basePath}/assets/img/banner.webp`}
+          media="(min-width: 768px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href={`${basePath}/assets/img/banner-mobile.webp`}
+          media="(max-width: 767px)"
+          fetchPriority="high"
+        />
         {/* Lemon Milk is self-hosted in /fonts/lemon-milk (see sass/default/_typography.scss). */}
         {/* All marketing/analytics tags are loaded after a small delay or on the
             first meaningful user interaction to avoid hurting LCP/TBT. */}
