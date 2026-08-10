@@ -332,6 +332,7 @@ const DynamicPage = async ({ params }) => {
     const headingData = {
         title: `${stateName}`,
         uspTitle: rawStateContent.uspTitle,
+        centreRegion: isInternationalLanding ? 'international' : 'india',
     };
 
     const rawFaqs = rawStateContent.faqs || stateContentConfig.default.faqs || [];

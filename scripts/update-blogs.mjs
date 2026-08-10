@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "top-10-best-ivf-doctors-in-india",
-    title: "Top 10 Best IVF Doctors in India for Infertility Treatment",
-    excerpt: "While conception is an exciting experience for many couples, sometimes it can be full of uncertainties and repeated disappointments. Fertility and infertility are medical issues that have an enormous impact on people's emotions and lifestyle. But there is good news about advancements in IVF treatment in India, which helps couples from all over the world bring their hopes into reality and give birth to their kids.",
+    id: "home-remedies-to-get-pregnant-quickly",
+    title: "जल्दी प्रेग्नेंट होने के लिए घरेलू उपाय",
+    excerpt: "जब पीरियड्स लेट होते हैं, तो दिल में एक संभावना जागृत होती है—शायद इस बार खुशखबरी मिलेगी। लेकिन जब टेस्ट का परिणाम निगेटिव आता है, तो उस दुख को वही कपल समझ सकता है जो लंबे समय से बेबी प्लान बना रहा हो।",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Top 10 Best IVF Doctors in India for Infertility Treatment.png",
-    date: "August 07, 2026",
+    image: "/assets/img/Blogs/जल्दी प्रेग्नेंट होने के लिए घरेलू उपाय.png",
+    date: "August 08, 2026",
     author: "admin",
-    category: "Doctor Insights",
-    readTime: "11 min read",
-    slug: "top-10-best-ivf-doctors-in-india"
+    category: "Fertility",
+    readTime: "10 min read",
+    slug: "home-remedies-to-get-pregnant-quickly"
   }
 ];
 

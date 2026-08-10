@@ -19,6 +19,12 @@ const PageHeading = ({ data }) => {
   const hideAppointmentForm = Boolean(data?.hideAppointmentForm);
   const centerUspTitle = Boolean(data?.centerUspTitle);
   const isSurgicalForm = data?.formType === 'surgical';
+  const centreRegion = data?.centreRegion;
+  const appointmentCentres = centreRegion
+    ? centresData.filter((centre) =>
+        centreRegion === 'international' ? centre.isInternational : !centre.isInternational
+      )
+    : centresData;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -151,20 +157,24 @@ const PageHeading = ({ data }) => {
                         ))
                       ) : (
                         <>
-                          <optgroup label="India Centres">
-                            {centresData
+                          {centreRegion !== 'international' && (
+                            <optgroup label="India Centres">
+                              {appointmentCentres
                               .filter((c) => !c.isInternational)
                               .map((c) => (
                                 <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
                               ))}
-                          </optgroup>
-                          <optgroup label="International Centres">
-                            {centresData
+                            </optgroup>
+                          )}
+                          {centreRegion !== 'india' && (
+                            <optgroup label="International Centres">
+                              {appointmentCentres
                               .filter((c) => c.isInternational)
                               .map((c) => (
                                 <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
                               ))}
-                          </optgroup>
+                            </optgroup>
+                          )}
                         </>
                       )}
                     </select>

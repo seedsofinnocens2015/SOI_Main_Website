@@ -124,6 +124,7 @@ const BestIVFCentre = ({
     const headingData = {
         title: center?.name,
         uspTitle: center?.uspTitle,
+        centreRegion: center?.isInternational ? 'international' : 'india',
     };
 
     const testimonials = center?.testimonials || [];

@@ -131,6 +131,21 @@ const getCenterHref = (center) => {
 const Header = ({ isTopBar, variant }) => {
   const router = useRouter();
   const pathname = usePathname();
+  const normalizedPathname = (pathname || '').replace(/\/$/, '') || '/';
+  const isInternationalCentrePage =
+    normalizedPathname === '/best-ivf-centre-in-international' ||
+    (centresData?.centres || []).some(
+      (center) => center?.isInternational && normalizedPathname === `/${center.slug}`
+    );
+  const topBarPhoneHref = isInternationalCentrePage
+    ? 'tel:+919289311767'
+    : 'tel:+919810350512';
+  const topBarPhoneText = isInternationalCentrePage
+    ? '+91 92893 11767'
+    : '+91 98103 50512';
+  const mobileTopBarPhoneText = isInternationalCentrePage
+    ? '+91 92893 11767'
+    : '9810350 512';
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
   const [openMobileSubmenuIndex, setOpenMobileSubmenuIndex] = useState([]);
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -762,9 +777,9 @@ const Header = ({ isTopBar, variant }) => {
                     info@seedsofinnocence.com
                   </a>
                   <span className="cs_top_bar_separator">&nbsp;</span>
-                  <a href="tel:+91-9810350512" className="cs_timing_text">
+                  <a href={topBarPhoneHref} className="cs_timing_text">
                     <IoCall style={{ color: '#df3655', marginRight: '6px' }} />
-                    +91 98103 50512
+                    {topBarPhoneText}
                   </a>
                 </div>
               </div>
@@ -818,9 +833,9 @@ const Header = ({ isTopBar, variant }) => {
                       info@seedsofinnocence.com
                     </a>
                     <span className="cs_top_bar_separator">&nbsp;</span>
-                    <a href="tel:+91-9810350512" className="cs_timing_text">
+                    <a href={topBarPhoneHref} className="cs_timing_text">
                       <IoCall style={{ color: '#df3655', marginRight: '6px' }} />
-                      9810350 512
+                      {mobileTopBarPhoneText}
                     </a>
                   </div>
                 </div>
@@ -873,9 +888,9 @@ const Header = ({ isTopBar, variant }) => {
                       info@seedsofinnocence.com
                     </a>
                     <span className="cs_top_bar_separator">|</span>
-                    <a href="tel:+91-9810350512" className="cs_timing_text">
+                    <a href={topBarPhoneHref} className="cs_timing_text">
                       <IoCall style={{ color: '#df3655', marginRight: '6px' }} />
-                      9810350 512
+                      {mobileTopBarPhoneText}
                     </a>
                   </div>
                 </div>
