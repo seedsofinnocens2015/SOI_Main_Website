@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "home-remedies-to-get-pregnant-quickly",
-    title: "जल्दी प्रेग्नेंट होने के लिए घरेलू उपाय",
-    excerpt: "जब पीरियड्स लेट होते हैं, तो दिल में एक संभावना जागृत होती है—शायद इस बार खुशखबरी मिलेगी। लेकिन जब टेस्ट का परिणाम निगेटिव आता है, तो उस दुख को वही कपल समझ सकता है जो लंबे समय से बेबी प्लान बना रहा हो।",
+    id: "ovarian-cyst-meaning-in-hindi",
+    title: "Ovarian Cyst Meaning in Hindi: ओवरी में सिस्ट क्यों होती है, लक्षण, कारण और इलाज",
+    excerpt: "अगर आपकी ultrasound report में Ovarian Cyst लिखा है, तो पहली नजर में यह देखकर चिंता होना स्वाभाविक है। आखिर ओवरी में सिस्ट क्यों बनी? क्या यह कोई गंभीर समस्या है? क्या इसका मतलब कैंसर है? क्या यह अपने आप ठीक हो जाएगी? और सबसे जरूरी सवाल—क्या इसकी वजह से pregnancy में दिक्कत आ सकती है?",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/जल्दी प्रेग्नेंट होने के लिए घरेलू उपाय.png",
-    date: "August 08, 2026",
+    image: "/assets/img/Blogs/Ovarian Cyst Meaning in Hindi.png",
+    date: "August 10, 2026",
     author: "admin",
-    category: "Fertility",
-    readTime: "10 min read",
-    slug: "home-remedies-to-get-pregnant-quickly"
+    category: "Women's Health",
+    readTime: "12 min read",
+    slug: "ovarian-cyst-meaning-in-hindi"
   }
 ];
 
