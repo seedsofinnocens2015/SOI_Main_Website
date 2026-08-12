@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ovarian-cyst-meaning-in-hindi",
-    title: "Ovarian Cyst Meaning in Hindi: ओवरी में सिस्ट क्यों होती है, लक्षण, कारण और इलाज",
-    excerpt: "अगर आपकी ultrasound report में Ovarian Cyst लिखा है, तो पहली नजर में यह देखकर चिंता होना स्वाभाविक है। आखिर ओवरी में सिस्ट क्यों बनी? क्या यह कोई गंभीर समस्या है? क्या इसका मतलब कैंसर है? क्या यह अपने आप ठीक हो जाएगी? और सबसे जरूरी सवाल—क्या इसकी वजह से pregnancy में दिक्कत आ सकती है?",
+    id: "ivf-kya-hai-and-ivf-procedure",
+    title: "आईवीएफ क्या है (IVF Kya Hai)? जानिए IVF का मतलब, प्रक्रिया और कितने दिन लगते हैं",
+    excerpt: "अधिकांश जोड़े बच्चे होने के आनंद के बारे में कल्पना करते हैं। हर महीना उम्मीद का महीना होता है क्योंकि शायद इस बार ही वह अंतिम मौका होगा जब आप अपनी गर्भधारण की कोशिश कर रहे हैं। लेकिन अगर महीनों या यहाँ तक कि वर्षों की कोशिश के बाद भी कोई परिणाम नहीं मिलता, तो निराशा और चिंता बढ़ने लगती है। उन्हें पीरियड आते हैं, और उनके दिलों को लाखों चुभनें लगती हैं। जितना आनंद गर्भावस्था परीक्षण से पहले होता है, उतना ही भय—फिर से कहीं नतीजा नकारात्मक न आ जाए।और इस स्थिति में, उनके मन में विचारों का एक चक्र बन जाता है: IVF क्या है? इसका क्या अर्थ है?",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Ovarian Cyst Meaning in Hindi.png",
-    date: "August 10, 2026",
+    image: "/assets/img/Blogs/ivf-kya-hai-and-ivf-procedure.png",
+    date: "August 11, 2026",
     author: "admin",
-    category: "Women's Health",
-    readTime: "12 min read",
-    slug: "ovarian-cyst-meaning-in-hindi"
+    category: "IVF Process",
+    readTime: "13 min read",
+    slug: "ivf-kya-hai-and-ivf-procedure"
   }
 ];
 
