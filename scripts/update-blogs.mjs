@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-kya-hai-and-ivf-procedure",
-    title: "आईवीएफ क्या है (IVF Kya Hai)? जानिए IVF का मतलब, प्रक्रिया और कितने दिन लगते हैं",
-    excerpt: "अधिकांश जोड़े बच्चे होने के आनंद के बारे में कल्पना करते हैं। हर महीना उम्मीद का महीना होता है क्योंकि शायद इस बार ही वह अंतिम मौका होगा जब आप अपनी गर्भधारण की कोशिश कर रहे हैं। लेकिन अगर महीनों या यहाँ तक कि वर्षों की कोशिश के बाद भी कोई परिणाम नहीं मिलता, तो निराशा और चिंता बढ़ने लगती है। उन्हें पीरियड आते हैं, और उनके दिलों को लाखों चुभनें लगती हैं। जितना आनंद गर्भावस्था परीक्षण से पहले होता है, उतना ही भय—फिर से कहीं नतीजा नकारात्मक न आ जाए।और इस स्थिति में, उनके मन में विचारों का एक चक्र बन जाता है: IVF क्या है? इसका क्या अर्थ है?",
+    id: "ovulation-meaning-in-hindi",
+    title: "ओव्यूलेशन क्या है? (Ovulation Meaning in Hindi), इसके लक्षण और प्रेग्नेंसी से संबंध",
+    excerpt: "जब एक परिपक्व अंडा अंडाशय से बाहर निकलता है, यह ओव्यूलेशन नामक एक महत्वपूर्ण जैविक प्रक्रिया है। यदि आप गर्भधारण करने की योजना बना रहे हैं, तो आप इस प्रक्रिया के बारे में बहुत कुछ जानना चाहिए। जब आप ओव्यूलेशन का समय और उसके लक्षणों को जानते हैं, तो आप ठीक समय जान सकती हैं जब अंडा और शुक्राणु मिलकर फर्टिलाइजेशन कर सकते हैं, जो प्रेग्नेंसी का कारण बनता है। ",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/ivf-kya-hai-and-ivf-procedure.png",
-    date: "August 11, 2026",
+    image: "/assets/img/Blogs/ovulation-meaning-in-hindi.png",
+    date: "August 12, 2026",
     author: "admin",
-    category: "IVF Process",
-    readTime: "13 min read",
-    slug: "ivf-kya-hai-and-ivf-procedure"
+    category: "Fertility",
+    readTime: "15 min read",
+    slug: "ovulation-meaning-in-hindi"
   }
 ];
 
