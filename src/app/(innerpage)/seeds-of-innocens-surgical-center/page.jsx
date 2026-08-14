@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { FaLocationDot, FaSuitcase } from 'react-icons/fa6';
 import AccentHeading from '@/app/Components/AccentHeading';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
@@ -116,6 +118,49 @@ export default function SurgicalCenterPage() {
                 </article>
               </div>
             ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="50" bottomSpaceMd="60">
+        <div className="container">
+          <div className="cs_section_heading cs_style_1 text-center mb-5">
+            <h2 className="cs_section_title">
+              Our Expert <span style={{ color: '#000000' }}>Team of Doctors</span>
+            </h2>
+          </div>
+          <div className="cs_doctors_grid cs_style_1">
+            <div className="cs_team cs_style_1 cs_blue_bg">
+              <div className="cs_team_shape cs_accent_bg" />
+              <Link
+                href="/ivf-doctor/dr-pratik-kakani-gynae-endoscopy/"
+                className="cs_team_thumbnail"
+              >
+                <Image
+                  src={getAssetPath('/assets/img/Doctors/pratik.jpg')}
+                  alt="Dr. Pratik Kakani"
+                  width={302}
+                  height={423}
+                  loading="lazy"
+                />
+              </Link>
+              <div className="cs_team_bio">
+                <h3 className="cs_team_title cs_extra_bold mb-0">
+                  <Link href="/ivf-doctor/dr-pratik-kakani-gynae-endoscopy/">
+                    Dr. Pratik Kakani
+                  </Link>
+                </h3>
+                <p className="cs_team_subtitle">Gynecological Endoscopy Surgeon</p>
+                <p className="cs_team_experience">
+                  <FaSuitcase aria-hidden="true" />
+                  <span>10+ Years Experience</span>
+                </p>
+                <p className="cs_team_location">
+                  <FaLocationDot aria-hidden="true" />
+                  <span>Ghaziabad - Uttar Pradesh</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Section>

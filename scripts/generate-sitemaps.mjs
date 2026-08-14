@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifestPath = path.join(projectRoot, '.next', 'prerender-manifest.json');
+const appPathsManifestPath = path.join(projectRoot, '.next', 'server', 'app-paths-manifest.json');
 const publicDir = path.join(projectRoot, 'public');
 const siteOrigin = 'https://www.seedsofinnocens.com';
 const lastModified = new Date().toISOString().slice(0, 10);
@@ -26,10 +27,19 @@ if (!fs.existsSync(manifestPath)) {
   throw new Error('Production build completed, but the route manifest was not created.');
 }
 
+if (!fs.existsSync(appPathsManifestPath)) {
+  throw new Error('Production build completed, but the App Router manifest was not created.');
+}
+
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+const appPathsManifest = JSON.parse(fs.readFileSync(appPathsManifestPath, 'utf8'));
 const excludedRoutes = new Set(['/favicon.ico', '/_not-found']);
 
-const routes = Object.keys(manifest.routes)
+const appRoutes = Object.keys(appPathsManifest)
+  .filter((route) => route.endsWith('/page'))
+  .map((route) => route.replace(/\/\([^/]+\)/g, '').replace(/\/page$/, '') || '/');
+
+const routes = [...Object.keys(manifest.routes), ...appRoutes]
   .filter((route) => !excludedRoutes.has(route))
   .filter((route) => !route.endsWith('.xml'))
   .filter((route) => !route.includes('['))

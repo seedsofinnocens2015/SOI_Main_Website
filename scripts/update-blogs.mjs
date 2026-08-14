@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ovulation-meaning-in-hindi",
-    title: "ओव्यूलेशन क्या है? (Ovulation Meaning in Hindi), इसके लक्षण और प्रेग्नेंसी से संबंध",
-    excerpt: "जब एक परिपक्व अंडा अंडाशय से बाहर निकलता है, यह ओव्यूलेशन नामक एक महत्वपूर्ण जैविक प्रक्रिया है। यदि आप गर्भधारण करने की योजना बना रहे हैं, तो आप इस प्रक्रिया के बारे में बहुत कुछ जानना चाहिए। जब आप ओव्यूलेशन का समय और उसके लक्षणों को जानते हैं, तो आप ठीक समय जान सकती हैं जब अंडा और शुक्राणु मिलकर फर्टिलाइजेशन कर सकते हैं, जो प्रेग्नेंसी का कारण बनता है। ",
+    id: "i-pill-side-effects",
+    title: "I-Pill Side Effects: Common Symptoms, Period Changes & Precautions",
+    excerpt: "Emergency contraception might become a good choice if one had unprotected intercourse or if the regular contraception was not effective. One of the well-known types of emergency contraception is the i-Pill; it consists of levonorgestrel, which is a hormonal compound that helps prevent conception if taken correctly and as fast as possible after unprotected intercourse.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/ovulation-meaning-in-hindi.png",
-    date: "August 12, 2026",
+    image: "/assets/img/Blogs/I-Pill Side Effects.png",
+    date: "August 13, 2026",
     author: "admin",
-    category: "Fertility",
-    readTime: "15 min read",
-    slug: "ovulation-meaning-in-hindi"
+    category: "Women's Health",
+    readTime: "13 min read",
+    slug: "i-pill-side-effects"
   }
 ];
 
