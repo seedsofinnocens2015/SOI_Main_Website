@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "Seeds of Innocence Surgical Center",
+    "title": "Seeds of Innocence Surgical Centre",
     "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility."
   },
   "hero": {
-    "title": "Seeds of Innocence <span class=\"cs_accent_color\">Surgical Center</span>",
+    "title": "Seeds of Innocence <span class=\"cs_accent_color\">Surgical Centre</span>",
     "contentHeading": "Precision & Compassionate Surgical Care for Advanced Gynecology",
     "backgroundImage": "/assets/img/Services/OpenSurgery.webp",
     "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility. Seeds of Innocence Surgical Centre offers advanced technologies, expert surgeons, and compassionate patient care that ensures quick recovery and improved reproductive wellness."
@@ -13,15 +13,15 @@
     "heading": "Why Our Women Patients Choose Us",
     "items": [
       "Delivered 21,000+ Healthy Babies",
-      "Established More Than 35 Fertility and Surgical Centers Across India",
+      "Established More Than 35 Fertility and Surgical Centres Across India",
       "Fertility Treatment Success Rate: 78%",
       "More Than 30 Fertility Specialists",
-      "Specialized Surgical Procedures With a Patient-Centered Approach"
+      "Specialized Surgical Procedures With a Patient-Centred Approach"
     ]
   },
   "introduction": {
     "heading": "Expert Surgical Procedures For Every Woman's Life Stage",
-    "paragraph": "Each woman requires a special approach to treatment, and we take into account all the nuances of her individual health issues at Seeds of Innocence Surgical Center. Our experienced laparoscopy surgeons make an exact assessment of your condition and recommend the best treatment procedure suitable for your diagnosis and reproductive needs. In cases such as endometriosis, fibroids, ovarian cysts, blocked fallopian tubes or unexplained infertility, our goal is to offer safe, effective, and fertility-preserving surgical treatment. Our laparoscopic surgery procedures have small incisions, decreased pain, minimal blood loss, and a quick recovery period.",
+    "paragraph": "Each woman requires a special approach to treatment, and we take into account all the nuances of her individual health issues at Seeds of Innocence Surgical Centre. Our experienced laparoscopy surgeons make an exact assessment of your condition and recommend the best treatment procedure suitable for your diagnosis and reproductive needs. In cases such as endometriosis, fibroids, ovarian cysts, blocked fallopian tubes or unexplained infertility, our goal is to offer safe, effective, and fertility-preserving surgical treatment. Our laparoscopic surgery procedures have small incisions, decreased pain, minimal blood loss, and a quick recovery period.",
     "image": "/assets/img/surgical.png",
     "imageAlt": "Expert surgical procedures for every woman's life stage"
   },
@@ -71,7 +71,7 @@
         ]
       },
       {
-        "title": "Patient-centered Approach in Surgery",
+        "title": "Patient-Centred Approach in Surgery",
         "description": "All surgical decisions are made with due consideration of patients' future plans concerning their fertility. We always try to suggest those surgical interventions that will protect patients' reproductive health while curing the disease."
       },
       {

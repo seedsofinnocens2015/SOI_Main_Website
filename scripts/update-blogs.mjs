@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "i-pill-side-effects",
-    title: "I-Pill Side Effects: Common Symptoms, Period Changes & Precautions",
-    excerpt: "Emergency contraception might become a good choice if one had unprotected intercourse or if the regular contraception was not effective. One of the well-known types of emergency contraception is the i-Pill; it consists of levonorgestrel, which is a hormonal compound that helps prevent conception if taken correctly and as fast as possible after unprotected intercourse.",
+    id: "what-is-fertility",
+    title: "Fertility Kya Hai? जानिए Fertility का Meaning, Fertility Rate और बढ़ाने के उपाय",
+    excerpt: "फर्टिलिटी क्या है, यह उन लोगों के अक्सर पूछे जाने वाले सवालों में से एक है जो बच्चा पैदा करने की योजना बना रहे हैं या बस अपनी फर्टिलिटी के बारे में और जानना चाहते हैं। सीधे शब्दों में कहें तो, फर्टिलिटी किसी व्यक्ति की प्रेग्नेंट होने की एक नैचुरल क्षमता है। कंसीव करने के लिए दोनों पार्टनर की फर्टिलिटी बहुत ज़रूरी है।",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/I-Pill Side Effects.png",
-    date: "August 13, 2026",
+    image: "/assets/img/Blogs/Fertility Kya Hai.png",
+    date: "August 14, 2026",
     author: "admin",
-    category: "Women's Health",
-    readTime: "13 min read",
-    slug: "i-pill-side-effects"
+    category: "Fertility",
+    readTime: "7 min read",
+    slug: "what-is-fertility"
   }
 ];
 
