@@ -22,7 +22,7 @@ export async function generateMetadata() {
 }
 
 export default function SurgicalCenterPage() {
-  const { hero, patientChoice, introduction, procedures, whyChoose, journey, cta } = surgicalCenterData;
+  const { hero, patientChoice, introduction, procedures, whyChoose, expertTeam, journey, cta } = surgicalCenterData;
 
   return (
     <main className={styles.page}>
@@ -122,48 +122,63 @@ export default function SurgicalCenterPage() {
         </div>
       </Section>
 
-      <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="50" bottomSpaceMd="60">
-        <div className="container">
-          <div className="cs_section_heading cs_style_1 text-center mb-5">
+      {expertTeam?.doctors?.length > 0 && (
+        <Section topSpaceLg="50" topSpaceMd="40" bottomSpaceLg="50" bottomSpaceMd="60">
+          <div className="container">
+            <div className="cs_section_heading cs_style_1 text-center mb-5">
             <h2 className="cs_section_title">
               Our Expert <span style={{ color: '#000000' }}>Team of Doctors</span>
             </h2>
-          </div>
-          <div className="cs_doctors_grid cs_style_1">
-            <div className="cs_team cs_style_1 cs_blue_bg">
-              <div className="cs_team_shape cs_accent_bg" />
-              <Link
-                href="/ivf-doctor/dr-pratik-kakani-gynae-endoscopy/"
-                className="cs_team_thumbnail"
-              >
-                <Image
-                  src={getAssetPath('/assets/img/Doctors/pratik.jpg')}
-                  alt="Dr. Pratik Kakani"
-                  width={302}
-                  height={423}
-                  loading="lazy"
-                />
-              </Link>
-              <div className="cs_team_bio">
-                <h3 className="cs_team_title cs_extra_bold mb-0">
-                  <Link href="/ivf-doctor/dr-pratik-kakani-gynae-endoscopy/">
-                    Dr. Pratik Kakani
-                  </Link>
-                </h3>
-                <p className="cs_team_subtitle">Gynecological Endoscopy Surgeon</p>
-                <p className="cs_team_experience">
-                  <FaSuitcase aria-hidden="true" />
-                  <span>10+ Years Experience</span>
-                </p>
-                <p className="cs_team_location">
-                  <FaLocationDot aria-hidden="true" />
-                  <span>Ghaziabad - Uttar Pradesh</span>
-                </p>
-              </div>
+            </div>
+            <div className="cs_doctors_grid cs_style_1">
+              {expertTeam.doctors.map((doctor) => (
+                <div className="cs_team cs_style_1 cs_blue_bg" key={doctor.name}>
+                  <div className="cs_team_shape cs_accent_bg" />
+                  {doctor.profileUrl ? (
+                    <Link href={doctor.profileUrl} className="cs_team_thumbnail">
+                      <Image
+                        src={getAssetPath(doctor.image)}
+                        alt={doctor.imageAlt || doctor.name}
+                        width={302}
+                        height={423}
+                        loading="lazy"
+                      />
+                    </Link>
+                  ) : (
+                    <div className="cs_team_thumbnail">
+                      <Image
+                        src={getAssetPath(doctor.image)}
+                        alt={doctor.imageAlt || doctor.name}
+                        width={302}
+                        height={423}
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <div className="cs_team_bio">
+                    <h3 className="cs_team_title cs_extra_bold mb-0">
+                      {doctor.profileUrl ? <Link href={doctor.profileUrl}>{doctor.name}</Link> : doctor.name}
+                    </h3>
+                    {doctor.subtitle && <p className="cs_team_subtitle">{doctor.subtitle}</p>}
+                    {doctor.experience && (
+                      <p className="cs_team_experience">
+                        <FaSuitcase aria-hidden="true" />
+                        <span>{doctor.experience} Experience</span>
+                      </p>
+                    )}
+                    {doctor.location && (
+                      <p className="cs_team_location">
+                        <FaLocationDot aria-hidden="true" />
+                        <span>{doctor.location}</span>
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      )}
 
       <Section className={styles.journeySection} topSpaceLg="70" topSpaceMd="90" bottomSpaceLg="70" bottomSpaceMd="90">
         <div className="container">

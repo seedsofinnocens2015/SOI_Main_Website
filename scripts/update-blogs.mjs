@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "pcos-symptoms-in-hindi",
-    title: "PCOS Symptoms in Hindi:जानिए PCOS के प्रमुख लक्षण और संकेत",
-    excerpt: "PCOS का मतलब है  पॉलीसिस्टिक ओवरी सिंड्रोम, जो महिलाओं की सेहत पर असर डालने वाली एक आम समस्या है। यह सिंड्रोम महिलाओं के ओव्यूलेशन (अंडे बनने की प्रक्रिया) पर असर डाल सकता है और इसके साथ अनियमित पीरियड्स, एंड्रोजन का बढ़ा हुआ लेवल, मुँहासे, हिर्सुटिज़्म (शरीर पर ज़्यादा बाल उगना) और बांझपन जैसी समस्याएं हो सकती हैं।",
+    id: "bachchedani-mein-gaanth",
+    title: "बच्चेदानी में गांठ (bachchedani mein gaanth): कारण, लक्षण, इलाज और डॉक्टर को कब दिखाएं",
+    excerpt: "अल्ट्रासाउंड स्कैन के दौरान जब कई महिलाओं को बच्चेदानी में गांठ (bachedani me ganth) (uterus lump/growth) के बारे में पता चलता है, तो वे अक्सर डर और उलझन महसूस करती हैं। उनके मन में कई सवाल आते हैं, जैसे: क्या यह खतरनाक है? क्या मैं माँ बन पाऊँगी? क्या सर्जरी की ज़रूरत होगी? ठीक होने में कितना समय लगेगा?",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/PCOS Symptoms in Hindi.png",
-    date: "August 17, 2026",
+    image: "/assets/img/Blogs/bachchedani mein gaanth.png",
+    date: "August 18, 2026",
     author: "admin",
     category: "Women's Health",
-    readTime: "6 min read",
-    slug: "pcos-symptoms-in-hindi"
+    readTime: "10 min read",
+    slug: "bachchedani-mein-gaanth"
   }
 ];
 

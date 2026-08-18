@@ -80,6 +80,29 @@
       }
     ]
   },
+  "expertTeam": {
+    "heading": "Our Expert <span>Team of Doctors</span>",
+    "doctors": [
+      {
+        "name": "Dr. Pratik Kakani",
+        "subtitle": "Gynecological Endoscopy Surgeon",
+        "image": "/assets/img/Doctors/pratik.jpg",
+        "imageAlt": "Dr. Pratik Kakani",
+        "experience": "10+ Years",
+        "location": "Ghaziabad - Uttar Pradesh",
+        "profileUrl": "/ivf-doctor/dr-pratik-kakani-gynae-endoscopy/"
+      },
+      {
+        "name": "Dr. Garima Sinha",
+        "subtitle": "Laparoscopic & Hysteroscopic Surgeon",
+        "image": "/assets/img/Doctors/garima.png",
+        "imageAlt": "Dr. Garima Sinha",
+        "experience": "8+ Years",
+        "location": "Ghaziabad - Uttar Pradesh",
+        "profileUrl": "/ivf-doctor/dr-garima-sinha-gynae-endoscopy/"
+      }
+    ]
+  },
   "journey": {
     "heading": "Surgical Treatment Process for Our Patients",
     "steps": [

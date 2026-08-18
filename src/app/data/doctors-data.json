@@ -1680,5 +1680,62 @@
       }
     ],
     "newSlug": "dr-ayushi-agarwal-ivf-specialist"
+  },
+  {
+    "slug": "dr-garima-sinha",
+    "uspTitle": "Best IVF Consultant in Ghaziabad <span class=\"cs_accent_color\">Dr Garima Sinha</span>",
+    "headerImage": "/assets/img/Doctor-Headers/garima.webp",
+    "name": "Dr. Garima Sinha",
+    "subtitle": "Laparoscopic & Hysteroscopic Surgeon",
+    "image": "/assets/img/Doctors/garima.png",
+    "description": [
+      "Dr. Garima Sinha is an experienced Obstetrician & Gynaecologist with over 8 years of experience post her post-graduation, specializing in advanced gynaecological laparoscopy and hysteroscopy. Clinical practice of Dr. Garima integrates minimally invasive surgical procedures with obstetric and gynaecological care.",
+      "Being an expert at various corporate and government healthcare organizations, Dr. Garima specializes in treating complex gynaecological cases, high-risk pregnancies, emergencies, and minimally invasive procedures. Her practice is based on evidence-based treatment and clinical precision.",
+      "Why choose Dr. Garima Sinha?",
+      "Surgical Expertise: Specialist in advanced gynaecological laparoscopy and hysteroscopy (diagnostic and operative).",
+      "Gynaecological Care: Specialist in managing various gynaecological cases using minimally invasive and open surgery procedures.",
+      "Obstetrics for High-Risk Cases: Expert in handling high-risk cases of pregnancy and emergencies in obstetrics."
+    ],
+    "location": "Ghaziabad - Uttar Pradesh",
+    "email": "info@seedsofinnocence.com",
+    "qualification": " MBBS, MS (Obstetrics & Gynaecology)",
+    "specialization": "Advanced Laparoscopic & Hysteroscopic Surgeon",
+    "experience": "8+ years",
+    "workExperience": [
+      "Dr. Garima has undergone specialized training in advanced gynaecological endoscopy such as:",
+      "Hands-on Training in Advanced Gynae Laparoscopy & Hysteroscopy - Rejoice Hospital, New Delhi",
+      "Basic Hands-on Training in Gynae Laparoscopy & Hysteroscopy - Rejoice Hospital & Gynae Laparoscopy Training Center, New Delhi",
+      "Fellowship in Gynae Laparoscopy & Hysteroscopy - Jaypee Hospital, Noida"
+    ],
+    "education": [
+      "MS (Obstetrics & Gynaecology) - Dr. DY Patil Medical College & Hospital, Pune",
+      "MBBS - Dr. DY Patil Medical College & Hospital, Pune",
+      "Fellowship in Gynae Laparoscopy & Hysteroscopy - Jaypee Hospital, Noida",
+      "Advanced and basic hands-on training in Gynae Laparoscopy & Hysteroscopy at Rejoice Hospital, New Delhi"
+    ],
+    "awards": [
+      "Dr. Garima has been involved in conducting clinical research in Obstetrics & Gynaecology.",
+      "Post graduate thesis in maternal and fetal outcomes in pregnancy induced hypertension and published research article on effect of pregnancy induced hypertension on maternal and fetal outcomes in Indian Journal of Obstetrics & Gynaecology.",
+      "Also involved in conducting a retrospective study on clinical presentation and feto-maternal outcomes in eclampsia and HELLP syndrome which is under publication."
+    ],
+    "progressBars": [
+      {
+        "label": "IVF Procedures",
+        "percentage": 88
+      },
+      {
+        "label": "Patient Satisfaction",
+        "percentage": 94
+      },
+      {
+        "label": "Success Rate",
+        "percentage": 78
+      },
+      {
+        "label": "Clinical Expertise",
+        "percentage": 86
+      }
+    ],
+    "newSlug": "dr-garima-sinha-gynae-endoscopy"
   }
 ]

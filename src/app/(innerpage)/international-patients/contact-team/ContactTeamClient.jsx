@@ -44,6 +44,8 @@ const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [formError, setFormError] = useState('');
+  const [selectedReport, setSelectedReport] = useState(null);
+  const [reportError, setReportError] = useState('');
 
   const [formData, setFormData] = useState({
     name: '',
@@ -60,6 +62,26 @@ const Page = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setFormError('');
+  };
+
+  const handleReportChange = (e) => {
+    const report = e.target.files?.[0] || null;
+    if (!report) {
+      setSelectedReport(null);
+      setReportError('');
+      return;
+    }
+
+    const isPdf = report.type === 'application/pdf' || /\.pdf$/i.test(report.name);
+    if (!isPdf) {
+      setSelectedReport(null);
+      setReportError('Please select a PDF report.');
+      e.target.value = '';
+      return;
+    }
+
+    setSelectedReport(report);
+    setReportError('');
   };
 
   const validateForm = () => {
@@ -282,6 +304,28 @@ const Page = () => {
                         className="cs_form_field"
                         style={{ resize: 'vertical' }}
                       />
+                    </div>
+                    <div className="col-md-12">
+                      <label className="cs_form_label">
+                        Attach Medical Report <span style={{ fontSize: '12px', color: '#999' }}>(Optional, PDF only)</span>
+                      </label>
+                      <input
+                        type="file"
+                        name="report"
+                        accept="application/pdf,.pdf"
+                        onChange={handleReportChange}
+                        className="cs_form_field"
+                      />
+                      {selectedReport && !reportError && (
+                        <p style={{ margin: '8px 0 0', fontSize: '13px', color: '#2e7d32' }}>
+                          PDF selected: {selectedReport.name}.
+                        </p>
+                      )}
+                      {reportError && (
+                        <p style={{ margin: '8px 0 0', fontSize: '13px', color: '#c33' }}>
+                          {reportError}
+                        </p>
+                      )}
                     </div>
                     <div className="col-md-12">
                       <div
