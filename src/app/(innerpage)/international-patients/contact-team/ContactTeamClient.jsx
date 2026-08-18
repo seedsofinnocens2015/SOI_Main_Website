@@ -8,9 +8,13 @@ import IVFContentSection from '@/app/Components/IVFContentSection';
 import AccentHeading from '@/app/Components/AccentHeading';
 import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaClock, FaGlobe } from 'react-icons/fa';
-import centresAllData from '@/app/data/centres-data.json';
 
-const centresData = centresAllData.centres;
+const INTERNATIONAL_FORM_CENTRES = [
+  'Malviya Nagar, Delhi, India',
+  'Ghaziabad, Uttar Pradesh, India',
+  'Gurugram, Haryana, India',
+  'Mabela, Muscat, Oman',
+];
 
 const ivfContentData = {
   sections: [
@@ -25,10 +29,13 @@ const ivfContentData = {
 
 function buildAppointmentMessage(formData) {
   const parts = [];
-  parts.push(
-    `[International patient] Country: ${formData.country.trim()}${formData.city ? ` | City: ${formData.city.trim()}` : ''}${formData.visaStatus ? ` | Visa: ${formData.visaStatus}` : ''}`
-  );
-  parts.push(formData.message.trim());
+  const travelDetails = [
+    formData.country.trim() && `Country: ${formData.country.trim()}`,
+    formData.city.trim() && `City: ${formData.city.trim()}`,
+    formData.visaStatus && `Visa: ${formData.visaStatus}`,
+  ].filter(Boolean);
+  if (travelDetails.length) parts.push(`[International patient] ${travelDetails.join(' | ')}`);
+  if (formData.message.trim()) parts.push(`Reason for contact / visit: ${formData.message.trim()}`);
   return parts.join(' | ');
 }
 
@@ -59,8 +66,9 @@ const Page = () => {
     if (!formData.name.trim()) return 'Please enter your full name.';
     if (!formData.phone.trim()) return 'Please enter your phone number.';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (formData.email.trim() && !emailRegex.test(formData.email)) return 'Please enter a valid email address.';
-    if (!formData.country.trim()) return 'Please enter your country.';
+    if (!formData.email.trim()) return 'Please enter your email address.';
+    if (!emailRegex.test(formData.email)) return 'Please enter a valid email address.';
+    if (!formData.center) return 'Please select a centre.';
     return '';
   };
 
@@ -80,6 +88,7 @@ const Page = () => {
       email: formData.email.trim(),
       center: formData.center,
       message: buildAppointmentMessage(formData),
+      source: 'International Contact Team',
     };
 
     try {
@@ -191,13 +200,17 @@ const Page = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="Include country code if applicable"
+                        placeholder="Phone number with country code"
                         className="cs_form_field"
+                        data-allow-international-phone="true"
+                        maxLength={16}
+                        inputMode="tel"
+                        pattern="[+]?[0-9]{7,15}"
                       />
                     </div>
                     <div className="col-md-12">
                       <label className="cs_form_label">
-                        Email Address <span style={{ fontSize: '12px', color: '#999' }}>(Optional)</span>
+                        Email Address <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input
                         type="email"
@@ -206,12 +219,11 @@ const Page = () => {
                         onChange={handleChange}
                         placeholder="Enter your email address"
                         className="cs_form_field"
+                        required
                       />
                     </div>
                     <div className="col-md-6">
-                      <label className="cs_form_label">
-                        Country <span style={{ color: '#df3655' }}>*</span>
-                      </label>
+                      <label className="cs_form_label">Country</label>
                       <input
                         type="text"
                         name="country"
@@ -243,24 +255,15 @@ const Page = () => {
                       </select>
                     </div>
                     <div className="col-md-12">
-                      <label className="cs_form_label">Select Centre</label>
+                      <label className="cs_form_label">
+                        Select Centre <span style={{ color: '#df3655' }}>*</span>
+                      </label>
                       <select name="center" value={formData.center} onChange={handleChange} className="cs_form_field">
                         <option value="">Select nearest centre</option>
-                        <optgroup label="India Centres">
-                          {centresData
-                            .filter((c) => !c.isInternational)
-                            .map((c) => (
-                              <option key={c.slug} value={c.name.split(',')[0].trim()}>
-                                {c.name}
-                              </option>
-                            ))}
-                        </optgroup>
                         <optgroup label="International Centres">
-                          {centresData
-                            .filter((c) => c.isInternational)
-                            .map((c) => (
-                              <option key={c.slug} value={c.name.split(',')[0].trim()}>
-                                {c.name}
+                          {INTERNATIONAL_FORM_CENTRES.map((centre) => (
+                              <option key={centre} value={centre}>
+                                {centre}
                               </option>
                             ))}
                         </optgroup>
@@ -370,9 +373,9 @@ const Page = () => {
                   border: '1px solid #ebeef2',
                 }}
               >
-                <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}>
-                  <AccentHeading style={{ marginBottom: '6px' }}>What Happens Next</AccentHeading>
-                </h3>
+                <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>
+                  What Happens Next
+                </AccentHeading>
                 <ul className="cs_list cs_list_style_1">
                   <li>Our team reviews your details and preferred centre</li>
                   <li>You may receive confirmation by call, WhatsApp, or email</li>
@@ -394,9 +397,9 @@ const Page = () => {
                     backgroundColor: '#fff',
                   }}
                 >
-                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}>
-                    <AccentHeading style={{ marginBottom: '6px' }}>Quick Contact</AccentHeading>
-                  </h3>
+                  <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>
+                    Quick Contact
+                  </AccentHeading>
                   <p style={{ marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <FaPhoneAlt style={{ color: '#de3554', fontSize: '18px', flexShrink: 0 }} />
                     <a href="tel:+919289311767" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
@@ -425,9 +428,9 @@ const Page = () => {
                     backgroundColor: '#fff',
                   }}
                 >
-                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}>
-                    <AccentHeading style={{ marginBottom: '6px' }}>Office Hours</AccentHeading>
-                  </h3>
+                  <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>
+                    Office Hours
+                  </AccentHeading>
                   <ul className="cs_list cs_list_style_1">
                     <li>
                       <strong>Monday – Sunday:</strong>
@@ -447,9 +450,9 @@ const Page = () => {
                     backgroundColor: '#fff',
                   }}
                 >
-                  <h3 className="cs_widget_title" style={{ marginBottom: '20px' }}>
-                    <AccentHeading style={{ marginBottom: '6px' }}>More Options</AccentHeading>
-                  </h3>
+                  <AccentHeading level={3} className="cs_widget_title" style={{ marginBottom: '20px' }}>
+                    More Options
+                  </AccentHeading>
                   <ul className="cs_list cs_list_style_1">
                     <li>
                       <Link href="/contact/book-appointment" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>

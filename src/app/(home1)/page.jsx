@@ -7,7 +7,7 @@ import CtaSection from '../Components/CtaSection';
 import CounterSection from '../Components/FunSection/CounterSection';
 import WhyChooseUsSection from '../Components/WhyChooseUsSection';
 import Service from '../Components/Service';
-import { DEFAULT_BLOG_IMAGE, getLatestBlogs } from '../utils/blogsData';
+import { DEFAULT_BLOG_IMAGE, getAllBlogs, getLatestBlogs } from '../utils/blogsData';
 import { getSeoMetadata } from '../utils/seoMetadata';
 
 // Below-the-fold sections are dynamically imported so their JS does not block
@@ -610,6 +610,8 @@ const heroData = {
         authorIcon: '/assets/img/icons/post_user_icon.png',
         commentIcon: '/assets/img/icons/post_comment_icon.png',
       })),
+    totalBlogs: getAllBlogs().length,
+    viewMoreLink: '/blogs',
   };
 
 

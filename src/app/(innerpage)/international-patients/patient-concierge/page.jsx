@@ -14,6 +14,7 @@ export async function generateMetadata() {
 
 const headingData = {
   uspTitle: 'Patient <span class="cs_accent_color">Concierge </span>',
+  centreRegion: 'international',
 };
 
 const serviceData = {

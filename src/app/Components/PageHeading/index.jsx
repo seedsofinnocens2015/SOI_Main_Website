@@ -9,6 +9,12 @@ import { getThankYouUrl, THANK_YOU_TYPE } from '../../utils/thankYou';
 import centresAllData from '../../data/centres-data.json';
 
 const centresData = centresAllData.centres;
+const INTERNATIONAL_FORM_CENTRES = [
+  'Malviya Nagar, Delhi, India',
+  'Ghaziabad, Uttar Pradesh, India',
+  'Gurugram, Haryana, India',
+  'Mabela, Muscat, Oman',
+];
 const APPOINTMENT_SUBMITTED_KEY = 'soi_appointment_submitted';
 const SURGICAL_CENTRES = ['Gurgaon', 'Lucknow', 'Delhi', 'Noida', 'Ghaziabad', 'Meerut', 'Kolkata'];
 
@@ -33,9 +39,8 @@ const PageHeading = ({ data }) => {
     const dataObj = {
       name: formData.get('name'),
       phone: formData.get('phone'),
-      // Keep email blank for header quick form (no email input here),
-      // so LSQ duplicate checks are not triggered by a fixed placeholder email.
-      email: '',
+      // Only international banners collect an email address.
+      email: centreRegion === 'international' ? formData.get('email') : '',
       center: formData.get('center') || 'Header Common Form',
       message: isSurgicalForm
         ? formData.get('message') || ''
@@ -139,11 +144,26 @@ const PageHeading = ({ data }) => {
                     <input
                       type="tel"
                       name="phone"
-                      placeholder="Phone Number *"
+                      placeholder={centreRegion === 'international' ? 'Phone Number with Country Code *' : 'Phone Number *'}
                       required
                       className="cs_form_field"
+                      data-allow-international-phone={centreRegion === 'international' ? 'true' : undefined}
+                      maxLength={centreRegion === 'international' ? 16 : undefined}
+                      inputMode={centreRegion === 'international' ? 'tel' : undefined}
+                      pattern={centreRegion === 'international' ? '[+]?[0-9]{7,15}' : undefined}
                     />
                   </div>
+                  {centreRegion === 'international' && (
+                    <div className="cs_form_group">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address *"
+                        required
+                        className="cs_form_field"
+                      />
+                    </div>
+                  )}
                   <div className="cs_form_group">
                     <select
                       name="center"
@@ -169,11 +189,15 @@ const PageHeading = ({ data }) => {
                           )}
                           {centreRegion !== 'india' && (
                             <optgroup label="International Centres">
-                              {appointmentCentres
-                              .filter((c) => c.isInternational)
-                              .map((c) => (
-                                <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
-                              ))}
+                              {centreRegion === 'international'
+                                ? INTERNATIONAL_FORM_CENTRES.map((centre) => (
+                                    <option key={centre} value={centre}>{centre}</option>
+                                  ))
+                                : appointmentCentres
+                                    .filter((c) => c.isInternational)
+                                    .map((centre) => (
+                                      <option key={centre.slug} value={centre.name.split(',')[0].trim()}>{centre.name}</option>
+                                    ))}
                             </optgroup>
                           )}
                         </>

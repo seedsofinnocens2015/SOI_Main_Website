@@ -15,6 +15,18 @@ const POPUP_EXCLUDED_PATHS = new Set([
   '/contact/careers',
 ]);
 
+const isInternationalPage = (pathname) => {
+  const normalizedPathname = pathname !== '/' ? pathname.replace(/\/+$/, '') : pathname;
+
+  return (
+    normalizedPathname === '/best-ivf-centre-in-international' ||
+    normalizedPathname.startsWith('/international-patients') ||
+    centresData.some(
+      (center) => center?.isInternational && normalizedPathname === `/${center.slug}`
+    )
+  );
+};
+
 const getPhoneError = (phone) => {
   const digits = String(phone || '').replace(/\D/g, '');
   if (!digits) return '';
@@ -35,7 +47,8 @@ const GlobalAppointmentPopup = () => {
 
     if (
       pathname.includes('/thank-you') ||
-      POPUP_EXCLUDED_PATHS.has(normalizedPathname)
+      POPUP_EXCLUDED_PATHS.has(normalizedPathname) ||
+      isInternationalPage(pathname)
     ) {
       setIsOpen(false);
       return;

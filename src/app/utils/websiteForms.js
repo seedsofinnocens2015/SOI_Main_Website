@@ -40,6 +40,16 @@ function getInvalidPhoneError(payload = {}) {
   if (!phoneKey) return '';
 
   const phoneValue = payload[phoneKey].replace(/\D/g, '');
+  const allowsInternationalPhone = [
+    'International Centre Banner',
+    'International Contact Team',
+  ].includes(payload.source);
+  if (allowsInternationalPhone) {
+    if (!/^[1-9]\d{6,14}$/.test(phoneValue)) {
+      return 'Enter a valid international phone number with country code.';
+    }
+    return '';
+  }
   if (phoneValue.length > 0 && !/^[6-9]/.test(phoneValue)) {
     return 'Invalid number';
   }

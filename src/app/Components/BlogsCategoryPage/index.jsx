@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,8 +22,33 @@ const categoryRoutes = {
   'news-press': '/blogs/news-press',
 };
 
+const categoryFilters = {
+  fertility: ['Fertility', 'Lifestyle & Fertility'],
+  'ivf-process': ['IVF Process'],
+  pregnancy: ['Pregnancy'],
+  'mens-health': ["Men's Health"],
+  'womens-health': ["Women's Health"],
+  'treatment-guides': ['Treatment Guides', 'Treatment Guide'],
+  'doctor-insights': ['Doctor Insights', 'Doctor Insight'],
+  'news-press': ['News & Press'],
+};
+
 function isHindi(item) {
   return /[\u0900-\u097F]/.test(String(item?.title || '')) || /[\u0900-\u097F]/.test(String(item?.category || ''));
+}
+
+function getPaginationItems(totalPages, currentPage) {
+  const pageNumbers = new Set([1, totalPages, currentPage - 1, currentPage, currentPage + 1]);
+  const orderedPages = [...pageNumbers]
+    .filter((pageNumber) => pageNumber >= 1 && pageNumber <= totalPages)
+    .sort((a, b) => a - b);
+
+  return orderedPages.flatMap((pageNumber, index) => {
+    const previousPage = orderedPages[index - 1];
+    return index > 0 && pageNumber - previousPage > 1
+      ? [`ellipsis-${previousPage}-${pageNumber}`, pageNumber]
+      : [pageNumber];
+  });
 }
 
 export default function BlogsCategoryPage({
@@ -34,16 +59,33 @@ export default function BlogsCategoryPage({
   blogs = [],
   backgroundImage = '/assets/img/Top-Header.webp',
   showMediaInquiry = false,
+  showAllCategories = false,
+  enablePagination = false,
 }) {
   const router = useRouter();
   const [selectedLanguage, setSelectedLanguage] = useState('all');
-  const [currentCategory, setCurrentCategory] = useState(selectedCategory);
+  const [currentCategory, setCurrentCategory] = useState(selectedCategory || 'all');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredBlogs = useMemo(() => {
-    if (selectedLanguage === 'all') return blogs;
-    if (selectedLanguage === 'hindi') return blogs.filter((blog) => isHindi(blog));
-    return blogs.filter((blog) => !isHindi(blog));
-  }, [blogs, selectedLanguage]);
+    const categoryFilteredBlogs = currentCategory === 'all'
+      ? blogs
+      : blogs.filter((blog) => categoryFilters[currentCategory]?.includes(blog.category));
+    if (selectedLanguage === 'all') return categoryFilteredBlogs;
+    if (selectedLanguage === 'hindi') return categoryFilteredBlogs.filter((blog) => isHindi(blog));
+    return categoryFilteredBlogs.filter((blog) => !isHindi(blog));
+  }, [blogs, currentCategory, selectedLanguage]);
+
+  const blogsPerPage = 12;
+  const totalPages = Math.max(1, Math.ceil(filteredBlogs.length / blogsPerPage));
+  const visibleBlogs = enablePagination
+    ? filteredBlogs.slice((currentPage - 1) * blogsPerPage, currentPage * blogsPerPage)
+    : filteredBlogs;
+  const paginationItems = getPaginationItems(totalPages, currentPage);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [currentCategory, selectedLanguage]);
 
   return (
     <div>
@@ -68,10 +110,11 @@ export default function BlogsCategoryPage({
                       onChange={(e) => {
                         const category = e.target.value;
                         setCurrentCategory(category);
-                        if (categoryRoutes[category]) router.push(categoryRoutes[category]);
+                        if (!showAllCategories && categoryRoutes[category]) router.push(categoryRoutes[category]);
                       }}
                       style={{ width: '100%', padding: '10px 15px', border: '1px solid #e8e8e8', borderRadius: '8px', fontSize: '15px', backgroundColor: '#fff', cursor: 'pointer' }}
                     >
+                      {showAllCategories && <option value="all">All Categories</option>}
                       <option value="fertility">Fertility</option>
                       <option value="ivf-process">IVF Process</option>
                       <option value="pregnancy">Pregnancy</option>
@@ -101,7 +144,7 @@ export default function BlogsCategoryPage({
           </div>
 
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
-            {filteredBlogs.map((blog, index) => (
+            {visibleBlogs.map((blog, index) => (
               <div key={index} className="col-lg-4 col-md-6">
                 <Link href={blog.link} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
                   <div className="cs_blog_card cs_style_1" style={{ height: '100%', backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e8e8e8', boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)', display: 'flex', flexDirection: 'column' }}>
@@ -132,6 +175,24 @@ export default function BlogsCategoryPage({
               </div>
             ))}
           </div>
+
+          {enablePagination && totalPages > 1 && (
+            <nav aria-label="Blog pagination" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginTop: '50px' }}>
+              {currentPage > 1 && (
+                <button type="button" onClick={() => setCurrentPage(currentPage - 1)} style={{ minWidth: '88px', height: '42px', padding: '0 17px', borderRadius: '21px', border: '1px solid #e8e8e8', color: '#555', backgroundColor: '#fff', fontWeight: '600' }}>Previous</button>
+              )}
+              {paginationItems.map((item) => (
+                typeof item === 'string' ? (
+                  <span key={item} aria-hidden="true" style={{ width: '28px', textAlign: 'center', color: '#999', letterSpacing: '2px' }}>•••</span>
+                ) : (
+                  <button key={item} type="button" onClick={() => setCurrentPage(item)} aria-current={item === currentPage ? 'page' : undefined} style={{ width: '42px', height: '42px', borderRadius: '50%', fontWeight: '600', border: item === currentPage ? '1px solid var(--accent-color)' : '1px solid #e8e8e8', backgroundColor: item === currentPage ? 'var(--accent-color)' : '#fff', color: item === currentPage ? '#fff' : '#555', boxShadow: item === currentPage ? '0 5px 12px rgba(223, 54, 85, 0.22)' : 'none' }}>{item}</button>
+                )
+              ))}
+              {currentPage < totalPages && (
+                <button type="button" onClick={() => setCurrentPage(currentPage + 1)} style={{ minWidth: '72px', height: '42px', padding: '0 17px', borderRadius: '21px', border: '1px solid #e8e8e8', color: '#555', backgroundColor: '#fff', fontWeight: '600' }}>Next</button>
+              )}
+            </nav>
+          )}
 
           {showMediaInquiry && (
             <div className="row" style={{ marginTop: '50px' }}>

@@ -80,6 +80,16 @@ const BlogSection = ({ data }) => {
               </article>
             ))}
           </div>
+          {data.viewMoreLink && (
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '38px', position: 'relative', zIndex: 1 }}>
+              <Link
+                href={data.viewMoreLink}
+                style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minWidth: '185px', padding: '13px 26px', borderRadius: '999px', backgroundColor: 'var(--accent-color)', color: '#fff', fontWeight: '600', textDecoration: 'none', boxShadow: '0 6px 16px rgba(223, 54, 85, 0.22)' }}
+              >
+                View More {data.totalBlogs || 0} Blogs
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </>

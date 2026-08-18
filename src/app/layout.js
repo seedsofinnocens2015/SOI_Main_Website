@@ -138,6 +138,7 @@ export default function RootLayout({ children }) {
           {`(function () {
   var phoneFields = ['phone', 'mobile', 'contact', 'contactno', 'contact_no', 'contactnumber'];
   var phoneLengthErrorMessage = 'Phone number must be exactly 10 digits.';
+  var internationalPhoneErrorMessage = 'Enter a valid international phone number with country code.';
   var phoneStartErrorMessage = 'Invalid number';
 
   function isPhoneInput(target) {
@@ -160,11 +161,19 @@ export default function RootLayout({ children }) {
     return errorEl;
   }
 
+  function allowsInternationalPhone(input) {
+    return input.hasAttribute('data-allow-international-phone');
+  }
+
   function syncPhoneError(input) {
     var errorEl = getOrCreateErrorEl(input);
     var digits = input.value.replace(/\\D/g, '');
     var errorMessage = '';
-    if (digits.length > 0 && !/^[6-9]/.test(digits)) {
+    if (allowsInternationalPhone(input)) {
+      if (digits.length > 0 && !/^[1-9]\\d{6,14}$/.test(digits)) {
+        errorMessage = internationalPhoneErrorMessage;
+      }
+    } else if (digits.length > 0 && !/^[6-9]/.test(digits)) {
       errorMessage = phoneStartErrorMessage;
     } else if (digits.length > 0 && digits.length !== 10) {
       errorMessage = phoneLengthErrorMessage;
@@ -178,6 +187,21 @@ export default function RootLayout({ children }) {
   document.addEventListener('input', function (event) {
     var target = event.target;
     if (!isPhoneInput(target)) return;
+
+    if (allowsInternationalPhone(target)) {
+      target.maxLength = 16;
+      target.inputMode = 'tel';
+      target.setAttribute('pattern', '\\+?[0-9]{7,15}');
+
+      var internationalDigits = target.value.replace(/\\D/g, '').slice(0, 15);
+      var internationalValue = (target.value.charAt(0) === '+' ? '+' : '') + internationalDigits;
+      if (target.value !== internationalValue) {
+        target.value = internationalValue;
+      }
+
+      syncPhoneError(target);
+      return;
+    }
 
     target.maxLength = 10;
     target.inputMode = 'numeric';

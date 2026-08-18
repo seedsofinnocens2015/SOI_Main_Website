@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "what-is-fertility",
-    title: "Fertility Kya Hai? जानिए Fertility का Meaning, Fertility Rate और बढ़ाने के उपाय",
-    excerpt: "फर्टिलिटी क्या है, यह उन लोगों के अक्सर पूछे जाने वाले सवालों में से एक है जो बच्चा पैदा करने की योजना बना रहे हैं या बस अपनी फर्टिलिटी के बारे में और जानना चाहते हैं। सीधे शब्दों में कहें तो, फर्टिलिटी किसी व्यक्ति की प्रेग्नेंट होने की एक नैचुरल क्षमता है। कंसीव करने के लिए दोनों पार्टनर की फर्टिलिटी बहुत ज़रूरी है।",
+    id: "pcos-symptoms-in-hindi",
+    title: "PCOS Symptoms in Hindi:जानिए PCOS के प्रमुख लक्षण और संकेत",
+    excerpt: "PCOS का मतलब है  पॉलीसिस्टिक ओवरी सिंड्रोम, जो महिलाओं की सेहत पर असर डालने वाली एक आम समस्या है। यह सिंड्रोम महिलाओं के ओव्यूलेशन (अंडे बनने की प्रक्रिया) पर असर डाल सकता है और इसके साथ अनियमित पीरियड्स, एंड्रोजन का बढ़ा हुआ लेवल, मुँहासे, हिर्सुटिज़्म (शरीर पर ज़्यादा बाल उगना) और बांझपन जैसी समस्याएं हो सकती हैं।",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Fertility Kya Hai.png",
-    date: "August 14, 2026",
+    image: "/assets/img/Blogs/PCOS Symptoms in Hindi.png",
+    date: "August 17, 2026",
     author: "admin",
-    category: "Fertility",
-    readTime: "7 min read",
-    slug: "what-is-fertility"
+    category: "Women's Health",
+    readTime: "6 min read",
+    slug: "pcos-symptoms-in-hindi"
   }
 ];
 

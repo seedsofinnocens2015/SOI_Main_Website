@@ -133,7 +133,12 @@ const Header = ({ isTopBar, variant }) => {
   const pathname = usePathname();
   const normalizedPathname = (pathname || '').replace(/\/$/, '') || '/';
   const isInternationalCentrePage =
-    normalizedPathname === '/best-ivf-centre-in-international' ||
+    [
+      '/best-ivf-centre-in-international',
+      '/international-patients/international-pricing',
+      '/international-patients/patient-concierge',
+      '/international-patients/travel-support',
+    ].includes(normalizedPathname) ||
     (centresData?.centres || []).some(
       (center) => center?.isInternational && normalizedPathname === `/${center.slug}`
     );
@@ -473,7 +478,8 @@ const Header = ({ isTopBar, variant }) => {
           },
           {
             label: 'Blogs',
-            href: '/resources/blogs',
+            href: '/blogs',
+            allowNavigationWithSubItems: true,
             subItems: [
               { label: 'Fertility', href: '/blogs/fertility' },
               { label: 'IVF Process', href: '/blogs/ivf-process' },
@@ -483,7 +489,7 @@ const Header = ({ isTopBar, variant }) => {
               { label: 'Treatment Guides', href: '/blogs/treatment-guides' },
               // { label: 'Success Stories', href: '/blogs/success-stories' },
               { label: 'Doctor Insights', href: '/blogs/doctor-insights' },
-              { label: 'News & Press', href: '/blogs/news-press' },
+              // { label: 'News & Press', href: '/blogs/news-press' },
             ],
           },
           // {

@@ -57,7 +57,7 @@ const BlogDetailPage = async ({ params }) => {
                 <h1>Blog Not Found</h1>
                 <p>The blog you&apos;re looking for doesn&apos;t exist.</p>
                 <Link
-                  href="/resources/blogs"
+                  href="/blogs"
                   style={{
                     display: 'inline-block',
                     marginTop: '20px',

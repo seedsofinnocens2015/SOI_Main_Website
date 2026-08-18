@@ -21,6 +21,12 @@ export function getLatestBlogs(limit = 8, { preferWithImage = false } = {}) {
   return [...withImage, ...withoutImage].slice(0, limit);
 }
 
+export function getAllBlogs() {
+  return [...(blogsData.blogs || [])]
+    .sort((a, b) => parseBlogDate(b.date) - parseBlogDate(a.date))
+    .map(mapBlogCard);
+}
+
 const CATEGORY_FILTERS = {
   fertility: ['Fertility', 'Lifestyle & Fertility'],
   'ivf-process': ['IVF Process'],
