@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "bachchedani-mein-gaanth",
-    title: "बच्चेदानी में गांठ (bachchedani mein gaanth): कारण, लक्षण, इलाज और डॉक्टर को कब दिखाएं",
-    excerpt: "अल्ट्रासाउंड स्कैन के दौरान जब कई महिलाओं को बच्चेदानी में गांठ (bachedani me ganth) (uterus lump/growth) के बारे में पता चलता है, तो वे अक्सर डर और उलझन महसूस करती हैं। उनके मन में कई सवाल आते हैं, जैसे: क्या यह खतरनाक है? क्या मैं माँ बन पाऊँगी? क्या सर्जरी की ज़रूरत होगी? ठीक होने में कितना समय लगेगा?",
+    id: "frozen-embryo-transfer-FET",
+    title: "Frozen Embryo Transfer (FET): Procedure, Timeline, Process",
+    excerpt: "The experience for many patients that undergoes IVF procedure usually doesn't end with embryo freezing. An FET is one more crucial stage in which an already cryopreserved embryo is thawed and transferred to the uterus with the purpose of pregnancy.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/bachchedani mein gaanth.png",
-    date: "August 18, 2026",
+    image: "/assets/img/Blogs/Frozen Embryo Transfer.png",
+    date: "August 22, 2026",
     author: "admin",
-    category: "Women's Health",
-    readTime: "10 min read",
-    slug: "bachchedani-mein-gaanth"
+    category: "IVF Process",
+    readTime: "12 min read",
+    slug: "frozen-embryo-transfer-FET"
   }
 ];
 
