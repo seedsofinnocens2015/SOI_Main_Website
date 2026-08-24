@@ -4449,6 +4449,39 @@ label {
       box-shadow: 0 4px 10px rgba(223, 54, 85, 0.3);
     }
 
+    .soi_surgical_consent_check {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin: 0;
+      color: #555;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.35;
+      text-align: left;
+      cursor: pointer;
+
+      input {
+        width: 12px;
+        min-width: 12px;
+        height: 12px;
+        margin-top: 1px;
+        flex-shrink: 0;
+        accent-color: #df3655;
+      }
+
+      span,
+      a {
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
     @media (max-width: 991px) {
       .cs_header_form_title {
         font-size: 18px;

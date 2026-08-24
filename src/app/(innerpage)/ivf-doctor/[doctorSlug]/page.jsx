@@ -6,6 +6,8 @@ import doctorsData from '@/app/data/doctors-data.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
+const SURGICAL_FORM_DOCTOR_SLUGS = new Set(['dr-pratik-kakani', 'dr-garima-sinha']);
+
 export async function generateMetadata({ params }) {
   const { doctorSlug } = await params;
   const seoMetadata = await getSeoMetadata({
@@ -62,6 +64,7 @@ const DoctorPage = async ({ params }) => {
           data={{
             title: doctor.name,
             ...(doctor.uspTitle ? { uspTitle: doctor.uspTitle } : {}),
+            ...(SURGICAL_FORM_DOCTOR_SLUGS.has(doctor.slug) ? { formType: 'surgical' } : {}),
           }}
         />
       </Section>

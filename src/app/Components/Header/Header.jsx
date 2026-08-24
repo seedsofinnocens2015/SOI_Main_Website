@@ -128,6 +128,12 @@ const getCenterHref = (center) => {
   return `/${center?.stateSlug}/${resolvedSlug}/`;
 };
 
+const SURGICAL_CONTACT_PATHS = new Set([
+  '/seeds-of-innocens-surgical-center',
+  '/ivf-doctor/dr-pratik-kakani-gynae-endoscopy',
+  '/ivf-doctor/dr-garima-sinha-gynae-endoscopy',
+]);
+
 const Header = ({ isTopBar, variant }) => {
   const router = useRouter();
   const pathname = usePathname();
@@ -138,19 +144,27 @@ const Header = ({ isTopBar, variant }) => {
       '/international-patients/international-pricing',
       '/international-patients/patient-concierge',
       '/international-patients/travel-support',
+      '/international-patients/contact-team',
     ].includes(normalizedPathname) ||
     (centresData?.centres || []).some(
       (center) => center?.isInternational && normalizedPathname === `/${center.slug}`
     );
+  const isSurgicalContactPage = SURGICAL_CONTACT_PATHS.has(normalizedPathname);
   const topBarPhoneHref = isInternationalCentrePage
     ? 'tel:+919289311767'
-    : 'tel:+919810350512';
+    : isSurgicalContactPage
+      ? 'tel:+919711585411'
+      : 'tel:+919810350512';
   const topBarPhoneText = isInternationalCentrePage
     ? '+91 92893 11767'
-    : '+91 98103 50512';
+    : isSurgicalContactPage
+      ? '+91 97115 85411'
+      : '+91 98103 50512';
   const mobileTopBarPhoneText = isInternationalCentrePage
     ? '+91 92893 11767'
-    : '9810350 512';
+    : isSurgicalContactPage
+      ? '+91 97115 85411'
+      : '9810350 512';
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
   const [openMobileSubmenuIndex, setOpenMobileSubmenuIndex] = useState([]);
   const [isSearchActive, setIsSearchActive] = useState(false);
