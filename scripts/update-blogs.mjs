@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "frozen-embryo-transfer-FET",
-    title: "Frozen Embryo Transfer (FET): Procedure, Timeline, Process",
-    excerpt: "The experience for many patients that undergoes IVF procedure usually doesn't end with embryo freezing. An FET is one more crucial stage in which an already cryopreserved embryo is thawed and transferred to the uterus with the purpose of pregnancy.",
+    id: "endometriosis-symptoms-causes-treatment",
+    title: "Endometriosis: Symptoms, Causes, Treatment and Its Impact on Fertility",
+    excerpt: "Have you ever wondered why your pain from menstrual periods is more excruciating compared to others' pain? Have you experienced continuous pain in the pelvic region, menstrual cramps, or fertility problems? Do not consider it as regular period pain anymore! One possible reason is endometriosis",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Frozen Embryo Transfer.png",
-    date: "August 22, 2026",
+    image: "/assets/img/Blogs/Endometriosis.png",
+    date: "August 24, 2026",
     author: "admin",
-    category: "IVF Process",
-    readTime: "12 min read",
-    slug: "frozen-embryo-transfer-FET"
+    category: "Women's Health",
+    readTime: "11 min read",
+    slug: "endometriosis-symptoms-causes-treatment"
   }
 ];
 
