@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "endometriosis-symptoms-causes-treatment",
-    title: "Endometriosis: Symptoms, Causes, Treatment and Its Impact on Fertility",
-    excerpt: "Have you ever wondered why your pain from menstrual periods is more excruciating compared to others' pain? Have you experienced continuous pain in the pelvic region, menstrual cramps, or fertility problems? Do not consider it as regular period pain anymore! One possible reason is endometriosis",
+    id: "test-tube-baby-treatment-in-india",
+    title: "Test Tube Baby Treatment in India: Process, Cost & IVF Facts",
+    excerpt: "Fertility treatments can be good news for couples experiencing difficulties in conceiving. In all fertility treatment procedures, there are a number of words that are often used. One of them is test tube baby. Even though this word might sound difficult to understand, the actual meaning of it is quite simple – a test tube baby is a baby conceived using the in vitro fertilisation procedure, during which an egg and sperm are united to conceive an embryo that will then be put inside the womb of a woman.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Endometriosis.png",
-    date: "August 24, 2026",
+    image: "/assets/img/Blogs/Test Tube Baby Treatment in India.png",
+    date: "August 25, 2026",
     author: "admin",
-    category: "Women's Health",
-    readTime: "11 min read",
-    slug: "endometriosis-symptoms-causes-treatment"
+    category: "VF Process",
+    readTime: "10 min read",
+    slug: "test-tube-baby-treatment-in-india"
   }
 ];
 
