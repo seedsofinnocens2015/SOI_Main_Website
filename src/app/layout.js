@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import AnalyticsPageView from "./Components/AnalyticsPageView";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -71,68 +73,43 @@ export default function RootLayout({ children }) {
           fetchPriority="high"
         />
         {/* Lemon Milk is self-hosted in /fonts/lemon-milk (see sass/default/_typography.scss). */}
-        {/* All marketing/analytics tags are loaded after a small delay or on the
-            first meaningful user interaction to avoid hurting LCP/TBT. */}
-        <Script id="soi-marketing-loader" strategy="afterInteractive">
+        {/* Google Ads + GA4 + GTM on every page (root layout). */}
+        <Script id="soi-gtag-init" strategy="afterInteractive">
           {`(function () {
-  var started = false;
-  function loadScript(src, id) {
-    if (id && document.getElementById(id)) return;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = src;
-    if (id) s.id = id;
-    document.head.appendChild(s);
-  }
-
-  function start() {
-    if (started) return;
-    started = true;
-
-    // Google Ads / gtag
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', 'AW-719316761');
-    loadScript('https://www.googletagmanager.com/gtag/js?id=AW-719316761', 'soi-gtag');
-
-    // Google Tag Manager
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K68L3V8');
-
-    // Meta Pixel
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1526747694884464');
-    fbq('init', '2130475664040983');
-    fbq('track', 'PageView');
-  }
-
-  // Start after 10s or shortly after the first user interaction. Scheduling
-  // third-party work in an idle period keeps the interaction itself responsive.
-  var timer = setTimeout(start, 10000);
-  function scheduleStart() {
-    clearTimeout(timer);
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(start, { timeout: 2000 });
-    } else {
-      setTimeout(start, 250);
-    }
-  }
-  ['click','scroll','keydown','pointerdown'].forEach(function (evt) {
-    window.addEventListener(evt, scheduleStart, { once: true, passive: true });
-  });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'AW-719316761');
+  gtag('config', 'G-EPNR7W4HYW');
+  gtag('config', 'G-TE12PW7T9Y');
+  gtag('config', 'G-3D97K1YYNV');
 })();`}
+        </Script>
+        <Script
+          id="soi-gtag"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-719316761"
+          strategy="afterInteractive"
+        />
+        <Script id="soi-gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K68L3V8');`}
+        </Script>
+        <Script id="soi-meta-pixel" strategy="afterInteractive">
+          {`!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1526747694884464');
+fbq('init', '2130475664040983');
+fbq('track', 'PageView');`}
         </Script>
         <Script id="phone-input-limit" strategy="lazyOnload">
           {`(function () {
@@ -281,6 +258,9 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <Suspense fallback={null}>
+          <AnalyticsPageView />
+        </Suspense>
         {children}
       </body>
     </html>

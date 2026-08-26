@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "test-tube-baby-treatment-in-india",
-    title: "Test Tube Baby Treatment in India: Process, Cost & IVF Facts",
-    excerpt: "Fertility treatments can be good news for couples experiencing difficulties in conceiving. In all fertility treatment procedures, there are a number of words that are often used. One of them is test tube baby. Even though this word might sound difficult to understand, the actual meaning of it is quite simple – a test tube baby is a baby conceived using the in vitro fertilisation procedure, during which an egg and sperm are united to conceive an embryo that will then be put inside the womb of a woman.",
+    id: "laparoscopy-procedure-benefits-recovery",
+    title: "Laparoscopy: Procedure, Benefits, Recovery & What to Know",
+    excerpt: "Laparoscopy is a type of minimally invasive surgical operation that is used in the diagnosis and treatment of certain diseases of the reproductive organs and abdomen. Keyhole surgery is another name for laparoscopy, which entails making several small cuts rather than one large surgical cut. The laparoscopic procedures done at Seeds of Innocens Surgical Centre utilize cutting-edge surgical methods that enable precise treatment and greater patient comfort.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Test Tube Baby Treatment in India.png",
-    date: "August 25, 2026",
+    image: "/assets/img/Blogs/Laparoscopy.png",
+    date: "August 26, 2026",
     author: "admin",
-    category: "VF Process",
-    readTime: "10 min read",
-    slug: "test-tube-baby-treatment-in-india"
+    category: "Treatment Guides",
+    readTime: "13 min read",
+    slug: "laparoscopy-procedure-benefits-recovery"
   }
 ];
 
