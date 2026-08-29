@@ -538,7 +538,7 @@ const DynamicPage = async ({ params }) => {
                     <div className="cs_service_title_section mb-10 text-center">
                         <h1 className="cs_service_main_title">
                             <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
-                                OUR CENTRES
+                                OUR IVF CENTRES
                             </span>{' '}
                             <span style={{ color: '#000000' }}>IN {stateName.toUpperCase()}</span>
                         </h1>
@@ -603,9 +603,9 @@ const DynamicPage = async ({ params }) => {
                     <div className="cs_service_title_section mb-10">
                         <h1 className="cs_service_main_title text-center">
                             <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
-                                WHY CHOOSE
+                                WHY CHOOSE SEEDS OF INNOCENS IVF
                             </span>{' '}
-                            <span style={{ color: '#000000' }}>SEEDS OF INNOCENS IVF</span>
+                            <span style={{ color: '#000000' }}>CENTER IN {stateName.toUpperCase()}</span>
                         </h1>
                     </div>
                     {/* Feature Grid - Mobile 2 Rows */}
@@ -756,7 +756,7 @@ const DynamicPage = async ({ params }) => {
                                 <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                     About Seeds of Innocens IVF
                                 </span>{' '}
-                                <span style={{ color: '#000000' }}>in {stateName}</span>
+                                <span style={{ color: '#000000' }}>Hospital in {stateName}</span>
                             </h1>
                         </div>
                         <div className="cs_about_v2_wrapper cs_about_v2_wrapper--text-only">

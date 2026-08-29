@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "laparoscopy-procedure-benefits-recovery",
-    title: "Laparoscopy: Procedure, Benefits, Recovery & What to Know",
-    excerpt: "Laparoscopy is a type of minimally invasive surgical operation that is used in the diagnosis and treatment of certain diseases of the reproductive organs and abdomen. Keyhole surgery is another name for laparoscopy, which entails making several small cuts rather than one large surgical cut. The laparoscopic procedures done at Seeds of Innocens Surgical Centre utilize cutting-edge surgical methods that enable precise treatment and greater patient comfort.",
+    id: "hysteroscopy-procedure-benefits-uses-and-recovery",
+    title: "Hysteroscopy: Understanding the Procedure, Benefits, Uses and Recovery",
+    excerpt: "In cases where fertility issues, unusual bleeding, or recurrent miscarriages are unexplained, the cause of the issue could be something internal. Hysteroscopy allows a physician to take a direct look at the interior of the uterus and, where necessary, treat some of the issues in the process.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Laparoscopy.png",
-    date: "August 26, 2026",
+    image: "/assets/img/Blogs/Hysteroscopy.png",
+    date: "August 27, 2026",
     author: "admin",
     category: "Treatment Guides",
-    readTime: "13 min read",
-    slug: "laparoscopy-procedure-benefits-recovery"
+    readTime: "12 min read",
+    slug: "hysteroscopy-procedure-benefits-uses-and-recovery"
   }
 ];
 
