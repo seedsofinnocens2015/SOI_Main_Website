@@ -13,10 +13,7 @@ import { IoCall } from "react-icons/io5";
 import { FaAnglesRight } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
 import { getAssetPathClient } from '@/app/utils/assetPath';
-import doctorsData from '@/app/data/doctors-data.json';
-import blogsData from '@/app/data/blogs.json';
 import centresData from '@/app/data/centres-data.json';
-import servicesContent from '@/app/data/servicesContent.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 import { getServicePath } from '@/app/utils/serviceRoutes.mjs';
 
@@ -176,6 +173,7 @@ const Header = ({ isTopBar, variant }) => {
   const [openMegaCategories, setOpenMegaCategories] = useState({});
   const [isMobileView, setIsMobileView] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchIndexData, setSearchIndexData] = useState(null);
   const menu = useMemo(() => ({
     email: 'info@seedsofinnocens.com',
     location: '3, opp. Aurbindo College, MMTC Colony, Malviya Nagar, New Delhi, Delhi 110017',
@@ -602,18 +600,43 @@ const Header = ({ isTopBar, variant }) => {
     btnText: 'Book a Visit',
   }), []);
 
+  useEffect(() => {
+    if (!isSearchActive && !searchQuery.trim()) return;
+    if (searchIndexData) return;
+
+    let cancelled = false;
+
+    Promise.all([
+      import('@/app/data/doctors-data.json'),
+      import('@/app/data/blogs.json'),
+      import('@/app/data/servicesContent.json'),
+    ]).then(([doctorsModule, blogsModule, servicesModule]) => {
+      if (cancelled) return;
+      setSearchIndexData({
+        doctors: doctorsModule.default,
+        blogs: blogsModule.default,
+        services: servicesModule.default,
+      });
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isSearchActive, searchQuery, searchIndexData]);
+
   const searchItems = useMemo(() => {
     // Search index generation is expensive (large JSON datasets). Build it only
     // when search UI is actually used to keep initial main-thread work lower.
     if (!isSearchActive && !searchQuery.trim()) return [];
+    if (!searchIndexData) return [];
 
     const navItems = flattenNavSearchEntries(menu.navItems);
-    const doctorItems = (Array.isArray(doctorsData) ? doctorsData : []).map((doctor) => ({
+    const doctorItems = (Array.isArray(searchIndexData.doctors) ? searchIndexData.doctors : []).map((doctor) => ({
       label: doctor.name,
       href: getDoctorProfilePath(doctor),
       type: 'Doctor',
     }));
-    const blogItems = (blogsData?.blogs || []).map((blog) => ({
+    const blogItems = (searchIndexData.blogs?.blogs || []).map((blog) => ({
       label: blog.title,
       href: `/blog/${blog.slug}`,
       type: 'Blog',
@@ -623,8 +646,8 @@ const Header = ({ isTopBar, variant }) => {
       href: getCenterHref(center),
       type: 'Centre',
     }));
-    const serviceItems = Object.keys(servicesContent || {}).map((key) => ({
-      label: servicesContent[key]?.title || key,
+    const serviceItems = Object.keys(searchIndexData.services || {}).map((key) => ({
+      label: searchIndexData.services[key]?.title || key,
       href: getServicePath(key),
       type: 'Service',
     }));
@@ -646,7 +669,7 @@ const Header = ({ isTopBar, variant }) => {
       if (!deduped.has(key)) deduped.set(key, item);
     });
     return Array.from(deduped.values());
-  }, [isSearchActive, menu.navItems, searchQuery]);
+  }, [isSearchActive, menu.navItems, searchIndexData, searchQuery]);
 
   const filteredSearchItems = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();

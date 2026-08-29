@@ -90,23 +90,16 @@ const BlogDetailPage = async ({ params }) => {
           {blog.image ? (
             <div className="row">
               <div className="col-12" style={{ marginBottom: '28px' }}>
-                <div
-                  className="cs_blog_banner_image"
-                  style={{
-                    position: 'relative',
-                    width: '100%',
-                    height: 'clamp(380px, 52vw, 620px)',
-                    borderRadius: '12px',
-                    overflow: 'hidden',
-                  }}
-                >
+                <div className="cs_blog_banner_image">
                   <Image
                     src={getAssetPath(blog.image)}
                     alt={blog.title}
-                    fill
-                    style={{ objectFit: 'cover' }}
+                    width={1600}
+                    height={800}
+                    style={{ width: '100%', height: 'auto', objectFit: 'contain', objectPosition: 'top center' }}
+                    className="cs_blog_banner_image_el"
                     priority
-                    sizes="(max-width: 1200px) 100vw, 1140px"
+                    sizes="(max-width: 767px) 100vw, (max-width: 1200px) 100vw, 1140px"
                   />
                 </div>
               </div>
@@ -227,11 +220,6 @@ const BlogDetailPage = async ({ params }) => {
                         color: #df3655;
                       }
 
-                      @media (max-width: 575px) {
-                        .cs_blog_banner_image {
-                          height: 220px !important;
-                        }
-                      }
                     `}
                   </style>
                 </div>

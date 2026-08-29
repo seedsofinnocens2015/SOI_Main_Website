@@ -1,329 +1,175 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from 'react';
 
+const parseNumber = (str) => {
+  if (!str) return 0;
+  const numStr = str.toString().replace(/[,\+%]/g, '');
+  const num = parseFloat(numStr);
+  return isNaN(num) ? 0 : num;
+};
+
+const formatNumber = (value, original) => {
+  if (!original) return value.toString();
+
+  const hasComma = original.includes(',');
+  const hasPlus = original.includes('+');
+  const hasPercent = original.includes('%');
+
+  let formatted = value.toFixed(0);
+
+  if (hasComma && value >= 1000) {
+    formatted = formatted.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  if (hasPercent) {
+    formatted += '%';
+  } else if (hasPlus) {
+    formatted += '+';
+  }
+
+  return formatted;
+};
+
+const getCounterColor = (original) => {
+  const normalized = (original || '').toString().replace(/\s+/g, '');
+
+  if (normalized.startsWith('21000') || normalized.startsWith('20000')) return '#df3655';
+  if ((normalized.startsWith('35') || normalized === '35+') && normalized.includes('+')) return '#4cacae';
+  if ((normalized.startsWith('78') || normalized === '78%') && normalized.includes('%')) return '#fcca1d';
+  if ((normalized.startsWith('30') || normalized === '30+') && normalized.includes('+')) return '#45536e';
+
+  return '#df3655';
+};
+
+const buildCounterState = (data) => {
+  const countersArray = data?.counters || data || [];
+  if (!countersArray.length) return [];
+
+  return countersArray.map((counter) => {
+    const targetValue = parseNumber(counter.number);
+    return {
+      ...counter,
+      displayValue: 0,
+      targetValue: targetValue || 0,
+      originalFormat: counter.number,
+    };
+  });
+};
+
 const CounterSection = ({ data, inline = false }) => {
-  const [counters, setCounters] = useState([]);
+  const countersArray = data?.counters || data || [];
+  const [counters, setCounters] = useState(() => buildCounterState(data));
   const [hasAnimated, setHasAnimated] = useState(false);
-  const [animationCompleted, setAnimationCompleted] = useState(false);
   const sectionRef = useRef(null);
-  const timersRef = useRef([]);
-  const animationCompletedRef = useRef(false);
-  const isPageVisibleRef = useRef(true);
-
-  // Parse number from string like "21000+", "35+", "78%"
-  const parseNumber = (str) => {
-    if (!str) return 0;
-    // Remove commas, +, % and extract numeric value
-    const numStr = str.toString().replace(/[,\+%]/g, '');
-    const num = parseFloat(numStr);
-    return isNaN(num) ? 0 : num;
-  };
-
-  // Format number back with original suffix
-  const formatNumber = (value, original) => {
-    if (!original) return value.toString();
-    
-    // Check if original had comma formatting
-    const hasComma = original.includes(',');
-    // Check for suffix
-    const hasPlus = original.includes('+');
-    const hasPercent = original.includes('%');
-    
-    let formatted = value.toFixed(0);
-    
-    // Add comma formatting for large numbers
-    if (hasComma && value >= 1000) {
-      formatted = formatted.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    }
-    
-    // Add suffix
-    if (hasPercent) {
-      formatted += '%';
-    } else if (hasPlus) {
-      formatted += '+';
-    }
-    
-    return formatted;
-  };
-
-  // Per-counter color mapping (based on original display string)
-  const getCounterColor = (original) => {
-    const normalized = (original || '').toString().replace(/\s+/g, '');
-
-    // Requested mapping:
-    // 21000 => #df3655
-    // 35+    => #4cacae
-    // 78%    => #fcca1d
-    // 30+    => #45536e
-    if (normalized.startsWith('21000') || normalized.startsWith('20000')) return '#df3655';
-    if ((normalized.startsWith('35') || normalized === '35+') && normalized.includes('+')) return '#4cacae';
-    if ((normalized.startsWith('78') || normalized === '78%') && normalized.includes('%')) return '#fcca1d';
-    if ((normalized.startsWith('30') || normalized === '30+') && normalized.includes('+')) return '#45536e';
-
-    return '#df3655';
-  };
+  const frameRef = useRef(null);
+  const startTimeRef = useRef(null);
 
   useEffect(() => {
-    // Handle both old format (array) and new format (object with counters array)
-    const countersArray = data?.counters || data || [];
-    if (!countersArray || countersArray.length === 0) return;
-
-    // Always initialize with 0 for animation, never skip animation on mount
-    const initialCounters = countersArray.map(counter => {
-      const targetValue = parseNumber(counter.number);
-      return {
-        ...counter,
-        displayValue: 0,
-        targetValue: targetValue || 0,
-        originalFormat: counter.number,
-      };
-    });
-    setCounters(initialCounters);
-    // Reset animation state on new data
+    setCounters(buildCounterState(data));
     setHasAnimated(false);
-    setAnimationCompleted(false);
-    animationCompletedRef.current = false;
+    startTimeRef.current = null;
+    if (frameRef.current) {
+      cancelAnimationFrame(frameRef.current);
+      frameRef.current = null;
+    }
   }, [data]);
 
   const animateCounters = useCallback(() => {
-    if (animationCompletedRef.current || !isPageVisibleRef.current) return;
-    
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
+    if (hasAnimated) return;
 
-    setCounters((prevCounters) => {
-      const newTimers = [];
-      let completedCount = 0;
-      
-      prevCounters.forEach((counter, index) => {
-        const targetValue = counter.targetValue;
-        const startValue = counter.displayValue || 0;
-        const increment = (targetValue - startValue) / steps;
-        let currentStep = 0;
+    const prefersReducedMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        const timer = setInterval(() => {
-          // Skip if page is not visible
-          if (!isPageVisibleRef.current) {
-            clearInterval(timer);
-            // Set to target value immediately when page is hidden
-            setCounters((prev) => {
-              const updated = [...prev];
-              if (updated[index]) {
-                updated[index] = {
-                  ...updated[index],
-                  displayValue: targetValue,
-                };
-              }
-              return updated;
-            });
-            return;
-          }
+    if (prefersReducedMotion) {
+      setCounters((prev) =>
+        prev.map((counter) => ({
+          ...counter,
+          displayValue: counter.targetValue,
+        }))
+      );
+      setHasAnimated(true);
+      return;
+    }
 
-          currentStep++;
-          const currentValue = Math.min(
-            startValue + increment * currentStep,
-            targetValue
-          );
+    const duration = 2000;
 
-          setCounters((prev) => {
-            const updated = [...prev];
-            if (updated[index]) {
-              updated[index] = {
-                ...updated[index],
-                displayValue: currentValue,
-              };
-            }
-            return updated;
-          });
+    const tick = (timestamp) => {
+      if (!startTimeRef.current) startTimeRef.current = timestamp;
+      const progress = Math.min((timestamp - startTimeRef.current) / duration, 1);
+      const eased = 1 - (1 - progress) ** 3;
 
-          if (currentStep >= steps) {
-            clearInterval(timer);
-            completedCount++;
-            
-            // Ensure final value is exact
-            setCounters((prev) => {
-              const updated = [...prev];
-              if (updated[index]) {
-                updated[index] = {
-                  ...updated[index],
-                  displayValue: targetValue,
-                };
-              }
-              
-              // Mark animation as completed when all counters are done
-              if (completedCount === prevCounters.length) {
-                animationCompletedRef.current = true;
-                setAnimationCompleted(true);
-              }
-              
-              return updated;
-            });
-          }
-        }, stepDuration);
+      setCounters((prev) =>
+        prev.map((counter) => ({
+          ...counter,
+          displayValue: counter.targetValue * eased,
+        }))
+      );
 
-        newTimers.push(timer);
-      });
-
-      timersRef.current = newTimers;
-      return prevCounters;
-    });
-  }, []);
-
-  // Handle page visibility changes
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      isPageVisibleRef.current = !document.hidden;
-      
-      // If page becomes visible and animation was completed, ensure values are set
-      if (!document.hidden && (animationCompletedRef.current || animationCompleted) && counters.length > 0) {
-        setCounters((prev) => {
-          return prev.map(counter => ({
+      if (progress < 1) {
+        frameRef.current = requestAnimationFrame(tick);
+      } else {
+        setCounters((prev) =>
+          prev.map((counter) => ({
             ...counter,
             displayValue: counter.targetValue,
-          }));
-        });
+          }))
+        );
+        setHasAnimated(true);
+        frameRef.current = null;
       }
     };
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, [counters.length, animationCompleted]);
+    frameRef.current = requestAnimationFrame(tick);
+  }, [hasAnimated]);
 
   useEffect(() => {
-    if (counters.length === 0) return;
+    if (!counters.length || hasAnimated) return undefined;
 
-    // Force animation to start after component mounts (production fallback)
-    const forceStartTimer = setTimeout(() => {
-      if (!hasAnimated && !animationCompleted && counters.length > 0) {
-        setHasAnimated(true);
-        animateCounters();
-      }
-    }, 500);
+    const node = sectionRef.current;
+    if (!node) return undefined;
 
-    // Check if IntersectionObserver is supported
     if (typeof window === 'undefined' || !window.IntersectionObserver) {
-      // Fallback: Start animation immediately if IntersectionObserver is not available
-      setTimeout(() => {
-        if (!hasAnimated && !animationCompleted) {
-          setHasAnimated(true);
-          animateCounters();
-        }
-      }, 300);
+      animateCounters();
       return () => {
-        clearTimeout(forceStartTimer);
-        timersRef.current.forEach(timer => clearInterval(timer));
-        timersRef.current = [];
+        if (frameRef.current) cancelAnimationFrame(frameRef.current);
       };
     }
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated && !animationCompleted) {
-            setHasAnimated(true);
-            animateCounters();
-          }
-        });
+        if (entries.some((entry) => entry.isIntersecting)) {
+          animateCounters();
+          observer.disconnect();
+        }
       },
-      { threshold: 0.1, rootMargin: '50px' }
+      { threshold: 0.15, rootMargin: '40px 0px' }
     );
 
-    const currentRef = sectionRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-      
-      // Fallback: If element is already visible, start animation immediately
-      const checkVisibility = () => {
-        if (currentRef) {
-          const rect = currentRef.getBoundingClientRect();
-          const isVisible = rect.top < window.innerHeight + 100 && rect.bottom > -100;
-          
-          if (isVisible && !hasAnimated && !animationCompleted) {
-            setTimeout(() => {
-              if (!hasAnimated && !animationCompleted) {
-                setHasAnimated(true);
-                animateCounters();
-              }
-            }, 200);
-          }
-        }
-      };
-      
-      // Check immediately and multiple times
-      checkVisibility();
-      setTimeout(checkVisibility, 100);
-      setTimeout(checkVisibility, 300);
-      
-      // Aggressive fallback: Always start animation after 1.5 seconds regardless
-      const aggressiveFallback = setTimeout(() => {
-        if (!hasAnimated && !animationCompleted && currentRef) {
-          setHasAnimated(true);
-          animateCounters();
-        }
-      }, 1500);
-      
-      return () => {
-        clearTimeout(forceStartTimer);
-        clearTimeout(aggressiveFallback);
-        if (currentRef) {
-          observer.unobserve(currentRef);
-        }
-        // Cleanup timers
-        timersRef.current.forEach(timer => clearInterval(timer));
-        timersRef.current = [];
-      };
-    }
+    observer.observe(node);
 
     return () => {
-      clearTimeout(forceStartTimer);
-      // Cleanup timers
-      timersRef.current.forEach(timer => clearInterval(timer));
-      timersRef.current = [];
+      observer.disconnect();
+      if (frameRef.current) cancelAnimationFrame(frameRef.current);
     };
-  }, [counters.length, hasAnimated, animationCompleted, animateCounters]);
+  }, [counters.length, hasAnimated, animateCounters]);
 
-  // Handle both old format (array) and new format (object with counters array)
-  const countersArray = data?.counters || data || [];
-  if (!countersArray || countersArray.length === 0) return null;
-  
-  // Ensure we always show the correct value
-  const displayCounters = counters.length > 0 
-    ? counters.map(counter => ({
-        ...counter,
-        // If animation completed, ensure displayValue is targetValue
-        displayValue: animationCompleted 
-          ? (counter.targetValue || parseNumber(counter.number))
-          : (counter.displayValue !== undefined ? counter.displayValue : 0),
-        targetValue: counter.targetValue || parseNumber(counter.number),
-        originalFormat: counter.originalFormat || counter.number,
-      }))
-    : countersArray.map(counter => {
-        const targetValue = parseNumber(counter.number);
-        return {
-          ...counter,
-          displayValue: animationCompleted ? targetValue : 0,
-          targetValue: targetValue || 0,
-          originalFormat: counter.number,
-        };
-      });
+  if (!countersArray.length) return null;
+
+  const displayCounters = counters.length ? counters : buildCounterState(data);
 
   return (
     <div
-      className={inline ? 'cs_counter_figma_wrapper cs_counter_inline' : 'cs_counter_figma_wrapper'}
+      className={`cs_counter_figma_wrapper${inline ? ' cs_counter_inline' : ''}`}
       ref={sectionRef}
     >
       <div className="container">
-        {/* Top Badge */}
         {data?.badgeText && (
           <div className="cs_counter_badge">
             {data.badgeText}
           </div>
         )}
 
-        {/* Main Heading */}
         {data?.heading && (
           <h2 className="cs_counter_heading">
             <span className="cs_counter_heading_highlighted">
@@ -335,37 +181,28 @@ const CounterSection = ({ data, inline = false }) => {
           </h2>
         )}
 
-        {/* Counter Items */}
         <div className="cs_counter_simple_line">
           {displayCounters.map((counter, index) => {
-            // Always use targetValue if animation is completed, otherwise use displayValue
-            // Fallback to targetValue if displayValue is 0 and we have a valid targetValue
-            let valueToDisplay = animationCompleted 
-              ? (counter.targetValue || parseNumber(counter.number))
-              : (counter.displayValue !== undefined ? counter.displayValue : 0);
-            
-            // Safety fallback: if valueToDisplay is 0 but we have a targetValue, use targetValue
-            if (valueToDisplay === 0 && counter.targetValue && counter.targetValue > 0) {
-              valueToDisplay = counter.targetValue;
-            }
-            
-            // Final fallback: parse from original number if still 0
-            if (valueToDisplay === 0 && counter.number) {
-              const parsed = parseNumber(counter.number);
-              if (parsed > 0) {
-                valueToDisplay = parsed;
-              }
-            }
-            
+            const originalFormat = counter.originalFormat || counter.number;
+            const finalText = formatNumber(counter.targetValue, originalFormat);
+            const valueToDisplay = hasAnimated
+              ? counter.targetValue
+              : counter.displayValue;
+
             return (
               <div
                 key={index}
                 className="cs_counter_item"
-                style={{ '--counter-color': getCounterColor(counter.originalFormat || counter.number) }}
+                style={{ '--counter-color': getCounterColor(originalFormat) }}
               >
                 <div className="cs_counter_content">
-                  <div className="cs_counter_number">
-                    {formatNumber(valueToDisplay, counter.originalFormat || counter.number)}
+                  <div className="cs_counter_number_wrap" aria-label={finalText}>
+                    <span className="cs_counter_number_sizer" aria-hidden="true">
+                      {finalText}
+                    </span>
+                    <span className="cs_counter_number">
+                      {formatNumber(valueToDisplay, originalFormat)}
+                    </span>
                   </div>
                   <div className="cs_counter_text">{counter.title}</div>
                 </div>

@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "hysteroscopy-procedure-benefits-uses-and-recovery",
-    title: "Hysteroscopy: Understanding the Procedure, Benefits, Uses and Recovery",
-    excerpt: "In cases where fertility issues, unusual bleeding, or recurrent miscarriages are unexplained, the cause of the issue could be something internal. Hysteroscopy allows a physician to take a direct look at the interior of the uterus and, where necessary, treat some of the issues in the process.",
+    id: "uterine-fibroids-symptoms-causes-diagnosis-and-treatment",
+    title: "Uterine Fibroids: Symptoms, Causes, Diagnosis and Treatment Options",
+    excerpt: "Uterine fibroids are among the most prevalent conditions faced by women in their reproductive period. Whereas some fibroids go symptomless and might be identified accidentally in an ultrasound test, other fibroids may become the source of painful, heavy menstruations, pelvic pains or infertility.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Hysteroscopy.png",
-    date: "August 27, 2026",
+    image: "/assets/img/Blogs/Uterine Fibroids.png",
+    date: "August 29, 2026",
     author: "admin",
-    category: "Treatment Guides",
-    readTime: "12 min read",
-    slug: "hysteroscopy-procedure-benefits-uses-and-recovery"
+    category: "Women's Health",
+    readTime: "7 min read",
+    slug: "uterine-fibroids-symptoms-causes-diagnosis-and-treatment"
   }
 ];
 

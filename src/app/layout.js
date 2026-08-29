@@ -60,6 +60,13 @@ export default function RootLayout({ children }) {
         />
         <link
           rel="preload"
+          href={`${basePath}/fonts/lemon-milk/LemonMilkBold.woff`}
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
           as="image"
           href={`${basePath}/assets/img/banner.webp`}
           media="(min-width: 768px)"
@@ -74,7 +81,7 @@ export default function RootLayout({ children }) {
         />
         {/* Lemon Milk is self-hosted in /fonts/lemon-milk (see sass/default/_typography.scss). */}
         {/* Google Ads + GA4 + GTM on every page (root layout). */}
-        <Script id="soi-gtag-init" strategy="afterInteractive">
+        <Script id="soi-gtag-init" strategy="lazyOnload">
           {`(function () {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -89,16 +96,16 @@ export default function RootLayout({ children }) {
         <Script
           id="soi-gtag"
           src="https://www.googletagmanager.com/gtag/js?id=AW-719316761"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="soi-gtm" strategy="afterInteractive">
+        <Script id="soi-gtm" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K68L3V8');`}
         </Script>
-        <Script id="soi-meta-pixel" strategy="afterInteractive">
+        <Script id="soi-meta-pixel" strategy="lazyOnload">
           {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};

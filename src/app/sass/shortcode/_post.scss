@@ -776,3 +776,62 @@
     font-size: 11px;
   }
 }
+
+/* Designed blog banners are wide (text + illustration). Never crop edges. */
+.cs_blog_img,
+.cs_blog_banner_image {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  overflow: visible;
+  background-color: transparent;
+  line-height: 0;
+}
+
+.cs_blog_banner_image {
+  border-radius: 12px;
+  margin-bottom: 0;
+}
+
+.cs_blog_img_el,
+.cs_blog_banner_image_el,
+.cs_blog_img img,
+.cs_blog_banner_image img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: top center !important;
+  position: relative !important;
+  inset: auto !important;
+}
+
+@media (max-width: 767px) {
+  .cs_blog_img,
+  .cs_blog_banner_image {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .cs_blog_img_el,
+  .cs_blog_banner_image_el,
+  .cs_blog_img img,
+  .cs_blog_banner_image img {
+    object-position: top center !important;
+  }
+
+  .cs_blog_card_image {
+    height: auto;
+    aspect-ratio: auto;
+    overflow: visible;
+
+    img {
+      object-fit: contain;
+      object-position: top center;
+      background-color: transparent;
+    }
+  }
+}

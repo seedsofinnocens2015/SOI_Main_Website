@@ -78,6 +78,7 @@
     text-transform: uppercase;
     font-family: var(--heading-font, sans-serif);
     min-height: 2.6em;
+    text-wrap: balance;
 
     @media (max-width: 991px) {
       margin-bottom: 50px;
@@ -168,23 +169,40 @@
     width: 100%;
   }
   
+  .cs_counter_number_wrap {
+    display: inline-grid;
+    justify-items: center;
+    align-items: end;
+    min-height: 1.2em;
+  }
+
+  .cs_counter_number_sizer,
   .cs_counter_number {
+    grid-area: 1 / 1;
     font-size: clamp(36px, 5vw, 64px);
     font-weight: 700;
-    color: var(--counter-color, #df3655);
     font-family: var(--heading-font, sans-serif);
     line-height: 1.2;
     font-variant-numeric: tabular-nums;
-    min-width: 5.5ch;
-    display: inline-block;
+    white-space: nowrap;
 
     @media (max-width: 991px) {
       font-size: clamp(32px, 4vw, 48px);
     }
-    
+
     @media (max-width: 575px) {
       font-size: clamp(28px, 5vw, 40px);
     }
+  }
+
+  .cs_counter_number_sizer {
+    visibility: hidden;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .cs_counter_number {
+    color: var(--counter-color, #df3655);
   }
   
   .cs_counter_text {

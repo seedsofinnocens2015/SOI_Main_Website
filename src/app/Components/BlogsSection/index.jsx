@@ -57,7 +57,8 @@ const BlogSection = ({ data }) => {
                     alt={post.title}
                     width={396}
                     height={261}
-                    loading="eager"
+                    loading="lazy"
+                    sizes="(max-width: 575px) 100vw, (max-width: 991px) 50vw, 33vw"
                     style={{
                       width: '100%',
                       height: '100%',

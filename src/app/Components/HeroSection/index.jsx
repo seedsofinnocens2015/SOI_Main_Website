@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaAnglesRight } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import Slider from "react-slick";
@@ -9,7 +9,36 @@ import { getAssetPathClient } from "../../utils/assetPath";
 const HeroSection = ({ data }) => {
   const sliderRef1 = useRef(null);
   const sliderRef2 = useRef(null);
+  const [autoplayEnabled, setAutoplayEnabled] = useState(false);
   const hasSecondarySlider = Array.isArray(data?.secondarySlider) && data.secondarySlider.length > 0;
+
+  // Delay autoplay until after LCP so the first hero slide stays the paint target.
+  useEffect(() => {
+    let timer;
+    const enableAutoplay = () => {
+      setAutoplayEnabled(true);
+      try {
+        sliderRef1.current?.slickPlay?.();
+        sliderRef2.current?.slickPlay?.();
+      } catch (_) {
+        // no-op
+      }
+    };
+
+    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+      timer = window.requestIdleCallback(enableAutoplay, { timeout: 6000 });
+    } else {
+      timer = setTimeout(enableAutoplay, 4000);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
+        window.cancelIdleCallback(timer);
+      } else {
+        clearTimeout(timer);
+      }
+    };
+  }, []);
 
   // Resume the slider only when the tab actually becomes visible again. The
   // previous implementation also re-played on focus and via an IntersectionObserver
@@ -41,26 +70,17 @@ const HeroSection = ({ data }) => {
     slidesToShow: 1,
     fade: false,
     swipeToSlide: true,
-    autoplay: true,
+    autoplay: autoplayEnabled,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     pauseOnFocus: false,
     pauseOnDotsHover: true,
     arrows: true,
     adaptiveHeight: false,
-    lazyLoad: 'progressive',
     afterChange: () => {
-      // Ensure slider keeps playing
+      if (!autoplayEnabled) return;
       if (sliderRef1.current && typeof sliderRef1.current.slickPlay === 'function') {
         sliderRef1.current.slickPlay();
-      }
-    },
-    onInit: () => {
-      // Ensure slider starts playing on init
-      if (sliderRef1.current && typeof sliderRef1.current.slickPlay === 'function') {
-        setTimeout(() => {
-          sliderRef1.current.slickPlay();
-        }, 100);
       }
     },
   };
@@ -114,11 +134,12 @@ const HeroSection = ({ data }) => {
                       <source media="(max-width: 767px)" srcSet={mobileImagePath} />
                       <img
                         src={desktopImagePath}
-                        alt=""
+                        alt={index === 0 ? items.title?.replace(/<[^>]*>/g, ' ') || 'Seeds of Innocens IVF' : ''}
                         width="1920"
                         height="903"
+                        sizes="100vw"
                         loading={index === 0 ? 'eager' : 'lazy'}
-                        fetchPriority={index === 0 ? 'high' : 'low'}
+                        fetchPriority={index === 0 ? 'high' : 'auto'}
                         decoding={index === 0 ? 'sync' : 'async'}
                       />
                     </picture>

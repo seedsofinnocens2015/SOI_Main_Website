@@ -1,8 +1,12 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Header from '../Components/Header/Header';
 import Footer from '../Components/Footer/Footer';
-import GlobalAppointmentPopup from '../Components/GlobalAppointmentPopup';
 
+const GlobalAppointmentPopup = dynamic(
+    () => import('../Components/GlobalAppointmentPopup'),
+    { ssr: false }
+);
 
 const DefalultLayout = ({ children }) => {
     return (
