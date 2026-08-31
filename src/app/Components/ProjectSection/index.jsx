@@ -1,10 +1,27 @@
 "use client"
 import { useMemo } from "react";
-import Spacing from "../Spacing";
-import LocationsMap from "../LocationsMap";
 import Image from "next/image";
 import Link from "next/link";
 import { getAssetPathClient } from "../../utils/assetPath";
+
+const INDIA_STATE_ORDER = [
+  "Delhi",
+  "Uttar Pradesh",
+  "Haryana",
+  "Bihar",
+  "Kerala",
+  "Assam",
+  "Uttarakhand",
+  "Jharkhand",
+  "West Bengal",
+  "Jammu and Kashmir",
+];
+
+const getLocationState = (title) => {
+  if (!title) return "Other";
+  const parts = title.split(",").map((part) => part.trim()).filter(Boolean);
+  return parts[parts.length - 1] || "Other";
+};
 
 const ProjectSection = ({ data }) => {
   const getCentreBorderColor = (title) => {
@@ -12,7 +29,7 @@ const ProjectSection = ({ data }) => {
 
     const groupCB3148 = new Set([
       "malviya nagar, delhi",
-      "jankpuri, delhi",
+      "janakpuri, delhi",
       "pitampura, delhi",
       "ranchi, jharkhand",
       "mabela, muscat, oman",
@@ -23,6 +40,7 @@ const ProjectSection = ({ data }) => {
       "muzaffarpur, bihar",
       "patna, bihar",
       "kolkata, west bengal",
+      "jammu, jammu and kashmir",
     ]);
 
     const groupE1B41A = new Set([
@@ -34,6 +52,7 @@ const ProjectSection = ({ data }) => {
     ]);
 
     const group38425B = new Set([
+      "ghaziabad, uttar pradesh",
       "gorakhpur, uttar pradesh",
       "lucknow, uttar pradesh",
       "kanpur, uttar pradesh",
@@ -53,8 +72,37 @@ const ProjectSection = ({ data }) => {
   const indiaTabs = useMemo(() => data?.tabData?.filter(tab => tab.id !== 'international') || [], [data?.tabData]);
   const internationalTab = useMemo(() => data?.tabData?.find(tab => tab.id === 'international') || null, [data?.tabData]);
   
-  const indiaLocations = useMemo(() => indiaTabs.flatMap(tab => tab.items) || [], [indiaTabs]);
+  const indiaLocations = useMemo(() => {
+    const items = indiaTabs.flatMap((tab) => tab.items) || [];
+    return [...items].sort((a, b) => {
+      const stateA = getLocationState(a.title);
+      const stateB = getLocationState(b.title);
+      const indexA = INDIA_STATE_ORDER.indexOf(stateA);
+      const indexB = INDIA_STATE_ORDER.indexOf(stateB);
+      const orderA = indexA === -1 ? INDIA_STATE_ORDER.length : indexA;
+      const orderB = indexB === -1 ? INDIA_STATE_ORDER.length : indexB;
+      return orderA - orderB;
+    });
+  }, [indiaTabs]);
   const internationalLocations = useMemo(() => internationalTab?.items || [], [internationalTab]);
+
+  const renderCentreCard = (item, index) => (
+    <div
+      key={`${item.title}-${index}`}
+      className="cs_centre_card"
+      style={{ "--centre-border-color": getCentreBorderColor(item.title) }}
+    >
+      {item.link ? (
+        <Link href={item.link} className="cs_centre_content">
+          <h3 className="cs_centre_title">{item.title}</h3>
+        </Link>
+      ) : (
+        <div className="cs_centre_content">
+          <h3 className="cs_centre_title">{item.title}</h3>
+        </div>
+      )}
+    </div>
+  );
 
   // Get all locations with coordinates for map
   const allLocationsForMap = useMemo(() => {
@@ -96,23 +144,7 @@ const ProjectSection = ({ data }) => {
                 <h3 className="cs_location_section_title">India</h3>
                 <div className="cs_locations_container">
                   <div className="cs_centres_grid">
-                    {indiaLocations.map((item, index) => (
-                      <div
-                        key={index}
-                        className="cs_centre_card"
-                        style={{ "--centre-border-color": getCentreBorderColor(item.title) }}
-                      >
-                        {item.link ? (
-                          <Link href={item.link} className="cs_centre_content">
-                            <h3 className="cs_centre_title">{item.title}</h3>
-                          </Link>
-                        ) : (
-                          <div className="cs_centre_content">
-                            <h3 className="cs_centre_title">{item.title}</h3>
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                    {indiaLocations.map((item, index) => renderCentreCard(item, index))}
                   </div>
                 </div>
               </div>
@@ -122,24 +154,8 @@ const ProjectSection = ({ data }) => {
                 <div className="cs_location_section">
                   <h3 className="cs_location_section_title">International</h3>
                   <div className="cs_locations_scroll_container">
-            <div className="cs_centres_grid">
-                      {internationalLocations.map((item, index) => (
-                        <div
-                          key={index}
-                          className="cs_centre_card"
-                          style={{ "--centre-border-color": getCentreBorderColor(item.title) }}
-                        >
-                          {item.link ? (
-                            <Link href={item.link} className="cs_centre_content">
-                              <h3 className="cs_centre_title">{item.title}</h3>
-                            </Link>
-                          ) : (
-                            <div className="cs_centre_content">
-                              <h3 className="cs_centre_title">{item.title}</h3>
-                            </div>
-                          )}
-                        </div>
-                      ))}
+                    <div className="cs_centres_grid">
+                      {internationalLocations.map((item, index) => renderCentreCard(item, index))}
                     </div>
                   </div>
                 </div>

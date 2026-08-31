@@ -322,8 +322,9 @@ const heroData = {
       },
     ],
     tabs: [
-      { id: 'dental', label: 'Delhi NCR' },
+      { id: 'delhi', label: 'Delhi' },
       { id: 'up', label: 'Uttar Pradesh' },
+      { id: 'haryana', label: 'Haryana' },
       { id: 'bihar', label: 'Bihar' },
       { id: 'kerala', label: 'Kerala' },
       { id: 'other', label: 'Other States' },
@@ -331,7 +332,7 @@ const heroData = {
     ],
     tabData: [
       {
-        id: 'dental',
+        id: 'delhi',
         items: [
           {
             imgUrl: '/assets/img/Centres/malviyanagar.jpg',
@@ -343,38 +344,11 @@ const heroData = {
             link: '/delhi/best-ivf-centre-in-malviyanagar',
           },
           {
-            imgUrl: '/assets/img/Centres/ghaziabad.jpg',
-            title: 'Ghaziabad, Uttar Pradesh',
-            subtitle:
-              'Seeds of Innocens IVF, Yashoda Hospital Opp. Nehru Stadium, Nehru Nagar, Ghaziabad, U.P.-201001',
-            index: 2,
-            coordinates: [28.6692, 77.4538], // Ghaziabad coordinates
-            link: '/uttar-pradesh/best-ivf-centre-in-ghaziabad',
-          },
-          {
-            imgUrl: '/assets/img/Centres/gurgaon.jpg',
-            title: 'Gurgaon, Haryana',
-            subtitle:
-              'Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar, Nigam Office Gurugram, Haryana-122001',
-            index: 3,
-            coordinates: [28.4089, 77.0378], // Gurgaon coordinates
-            link: '/haryana/best-ivf-centre-in-gurgaon',
-          },
-          {
-            imgUrl: '/assets/img/Centres/faridabad.jpg',
-            title: 'Faridabad, Haryana',
-            subtitle:
-              'Seeds of Innocens IVF, A-6/A Neelam Bata Road, Above ICICI Bank, NIT Faridabad, Haryana-121001',
-            index: 4,
-            coordinates: [28.4089, 77.3167], // Faridabad coordinates
-            link: '/haryana/best-ivf-centre-in-faridabad',
-          },
-          {
             imgUrl: '/assets/img/Centres/jankpuri.jpg',
             title: 'Janakpuri, Delhi',
             subtitle:
               'Seeds of Innocens IVF, C1A/50A, Pankha Road, Janakpuri, New Delhi-110058',
-            index: 5,
+            index: 2,
             coordinates: [28.6219, 77.0882], // Janakpuri coordinates
             link: '/delhi/best-ivf-centre-in-janakpuri',
           },
@@ -383,7 +357,7 @@ const heroData = {
             title: 'Pitampura, Delhi',
             subtitle:
               'Seeds of Innocens IVF, Plot no 1, First floor, Shiva Enclave, Near Harsh Vihar Chowk, Pitampura, Delhi-110034',
-            index: 6,
+            index: 3,
             coordinates: [28.6989, 77.1398], // Pitampura coordinates
             link: '/delhi/best-ivf-centre-in-pitampura',
           },
@@ -393,11 +367,20 @@ const heroData = {
         id: 'up',
         items: [
           {
+            imgUrl: '/assets/img/Centres/ghaziabad.jpg',
+            title: 'Ghaziabad, Uttar Pradesh',
+            subtitle:
+              'Seeds of Innocens IVF, Yashoda Hospital Opp. Nehru Stadium, Nehru Nagar, Ghaziabad, U.P.-201001',
+            index: 1,
+            coordinates: [28.6692, 77.4538], // Ghaziabad coordinates
+            link: '/uttar-pradesh/best-ivf-centre-in-ghaziabad',
+          },
+          {
             imgUrl: '/assets/img/Centres/gorakhpur.jpg',
             title: 'Gorakhpur, Uttar Pradesh',
             subtitle:
               '2nd Floor, 1076, Kamlesh Shopping Arcade, near Kalimandir, Golghar, Gorakhpur, U.P.-273001',
-            index: 1,
+            index: 2,
             coordinates: [26.7588, 83.3697], // Gorakhpur coordinates
             link: '/uttar-pradesh/best-ivf-centre-in-gorakhpur',
           },
@@ -406,7 +389,7 @@ const heroData = {
             title: 'Lucknow, Uttar Pradesh',
             subtitle:
               'Drosia Tower, 5/5, Park Rd, Raj Bhavan Colony, Hazratganj, Lucknow, Uttar Pradesh 226001',
-            index: 2,
+            index: 3,
             coordinates: [26.8467, 80.9462], // Lucknow coordinates
             link: '/uttar-pradesh/best-ivf-centre-in-lucknow',
           },
@@ -415,7 +398,7 @@ const heroData = {
             title: 'Kanpur, Uttar Pradesh',
             subtitle:
               '7/153, Kumhar Wali gali, Kanpur Vidya Mandir, Khalasi Line, Swaroop Nagar, Kanpur, Uttar Pradesh 208002',
-            index: 3,
+            index: 4,
             coordinates: [26.4499, 80.3319], // Kanpur coordinates
             link: '/uttar-pradesh/best-ivf-centre-in-kanpur',
           },
@@ -424,7 +407,7 @@ const heroData = {
             title: 'Meerut, Uttar Pradesh',
             subtitle:
               'building 303/305, 2nd floor, Mangal Pandey Nagar, Ramgarhi, Meerut, Uttar Pradesh 250004',
-            index: 4,
+            index: 5,
             coordinates: [28.9845, 77.7064], // Meerut coordinates
             link: '/uttar-pradesh/best-ivf-centre-in-meerut',
           },
@@ -433,13 +416,35 @@ const heroData = {
             title: 'Agra, Uttar Pradesh',
             subtitle:
               '1st Floor, Shankar Point, Block No.9/4, Sanjay Palace, Sanjay Place, Civil Lines, Agra, Uttar Pradesh 282002',
-            index: 5,
+            index: 6,
             coordinates: [27.1767, 78.0081], // Agra coordinates
             link: '/uttar-pradesh/best-ivf-centre-in-agra',
           },
         ],
       },
-      
+      {
+        id: 'haryana',
+        items: [
+          {
+            imgUrl: '/assets/img/Centres/gurgaon.jpg',
+            title: 'Gurgaon, Haryana',
+            subtitle:
+              'Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar, Nigam Office Gurugram, Haryana-122001',
+            index: 1,
+            coordinates: [28.4089, 77.0378], // Gurgaon coordinates
+            link: '/haryana/best-ivf-centre-in-gurgaon',
+          },
+          {
+            imgUrl: '/assets/img/Centres/faridabad.jpg',
+            title: 'Faridabad, Haryana',
+            subtitle:
+              'Seeds of Innocens IVF, A-6/A Neelam Bata Road, Above ICICI Bank, NIT Faridabad, Haryana-121001',
+            index: 2,
+            coordinates: [28.4089, 77.3167], // Faridabad coordinates
+            link: '/haryana/best-ivf-centre-in-faridabad',
+          },
+        ],
+      },
       {
         id: 'kerala',
         items: [
@@ -502,29 +507,20 @@ const heroData = {
             coordinates: [22.5726, 88.3639], // Kolkata coordinates
             link: '/west-bengal/best-ivf-centre-in-kolkata',
           },
-
-          // {
-          //   imgUrl: '/assets/img/Centres/srinagar.jpg',
-          //   title: 'Srinagar, Jammu and Kashmir',
-          //   subtitle:
-          //     'Karan Nagar Gole Market Rd, opposite Masjid, Karan Nagar, Srinagar, Jammu and Kashmir 190010',
-          //   index: 4,
-          // },
+          {
+            imgUrl: '/assets/img/Centres/jammu.webp',
+            title: 'Jammu, Jammu and Kashmir',
+            subtitle:
+              'Seeds of Innocens IVF, First floor, Raghbir Tower, near SDM office, Lower Gadigarh, Jammu, Jammu and Kashmir 181101',
+            index: 5,
+            coordinates: [32.6602, 74.8331],
+            link: '/jammu-kashmir/best-ivf-centre-in-jammu',
+          },
         ],
       },
       {
         id: 'bihar',
         items: [
-          
-          {
-            imgUrl: '/assets/img/Centres/muzaffarpur.jpg',
-            title: 'Muzaffarpur, Bihar',
-            subtitle:
-              '2nd Floor, Hansa Complex, Maripur Main Rd, Musahri, Muzaffarpur, Bihar 842001',
-            index: 2,
-            coordinates: [26.1210, 85.3655], // Muzaffarpur coordinates
-            link: '/bihar/best-ivf-centre-in-muzaffarpur',
-          },
           {
             imgUrl: '/assets/img/Centres/patna.jpg',
             title: 'Patna, Bihar',
@@ -533,6 +529,15 @@ const heroData = {
             index: 1,
             coordinates: [25.5941, 85.1376], // Patna coordinates
             link: '/bihar/best-ivf-centre-in-patna',
+          },
+          {
+            imgUrl: '/assets/img/Centres/muzaffarpur.jpg',
+            title: 'Muzaffarpur, Bihar',
+            subtitle:
+              '2nd Floor, Hansa Complex, Maripur Main Rd, Musahri, Muzaffarpur, Bihar 842001',
+            index: 2,
+            coordinates: [26.1210, 85.3655], // Muzaffarpur coordinates
+            link: '/bihar/best-ivf-centre-in-muzaffarpur',
           },
         ],
       },
