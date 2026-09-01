@@ -81,7 +81,7 @@ const TeamSection = ({ data, bgColor, variant, hr, doctorsPageCardStyle = false 
                             alt={`${item.name} Thumbnail`}
                             width={302}
                             height={423}
-                            loading="eager"
+                            loading="lazy"
                           />
                         </Link>
                         <div className="cs_team_bio">
@@ -112,7 +112,7 @@ const TeamSection = ({ data, bgColor, variant, hr, doctorsPageCardStyle = false 
                     ) : (
                       <div className="cs_team cs_style_1 cs_team_minimalistic">
                         <Link href={item.link} className="cs_team_thumbnail">
-                          <Image src={getAssetPathClient(item.imageUrl)} alt={item.name} width={280} height={300} loading="eager" />
+                          <Image src={getAssetPathClient(item.imageUrl)} alt={item.name} width={280} height={300} loading="lazy" />
                         </Link>
                         <div className="cs_team_bio">
                           <h3 className="cs_team_title cs_extra_bold mb-0">

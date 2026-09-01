@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ovarian-cysts-types-causes-symptoms-and-treatment",
-    title: "Ovarian Cysts: Types, Causes, Symptoms and Treatment Options",
-    excerpt: "Ovarian cysts are among the commonest disorders of gynaecological health experienced by women of various ages. An ovarian cyst is a relatively common occurrence in women’s reproductive life and occurs especially in the reproductive years of the woman. Although most of these cysts are harmless and resolve themselves, some may need professional attention.",
+    id: "adenomyosis-symptoms-causes-treatment",
+    title: "Adenomyosis: Symptoms, Causes, Treatment and When to See a Specialist",
+    excerpt: "In case your periods are painful, you suffer from heavy menstrual bleeding or constant pelvic pain, chances are that you might have heard about adenomyosis. However, what is adenomyosis? How does adenomyosis impact the uterus?",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Ovarian Cysts.png",
-    date: "August 31, 2026",
+    image: "/assets/img/Blogs/Adenomyosis.png",
+    date: "September 01, 2026",
     author: "admin",
     category: "Women's Health",
-    readTime: "9 min read",
-    slug: "ovarian-cysts-types-causes-symptoms-and-treatment"
+    readTime: "10 min read",
+    slug: "adenomyosis-symptoms-causes-treatment"
   }
 ];
 

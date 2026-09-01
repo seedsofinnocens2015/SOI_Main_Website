@@ -4,14 +4,14 @@ import GlobalJsonLd from '../Components/GlobalJsonLd';
 import HeroSection from '../Components/HeroSection';
 import Section from '../Components/Section';
 import CtaSection from '../Components/CtaSection';
-import CounterSection from '../Components/FunSection/CounterSection';
-import WhyChooseUsSection from '../Components/WhyChooseUsSection';
-import Service from '../Components/Service';
 import { DEFAULT_BLOG_IMAGE, getAllBlogs, getLatestBlogs } from '../utils/blogsData';
 import { getSeoMetadata } from '../utils/seoMetadata';
 
 // Below-the-fold sections are dynamically imported so their JS does not block
 // the first paint or contribute to TBT before the user scrolls.
+const CounterSection = dynamic(() => import('../Components/FunSection/CounterSection'));
+const WhyChooseUsSection = dynamic(() => import('../Components/WhyChooseUsSection'));
+const Service = dynamic(() => import('../Components/Service'));
 const BlogSection = dynamic(() => import('../Components/BlogsSection'));
 const NewsMediaSection = dynamic(() => import('../Components/NewsMediaSection'));
 const TestimonialSection = dynamic(() => import('../Components/TestimonialSection'));

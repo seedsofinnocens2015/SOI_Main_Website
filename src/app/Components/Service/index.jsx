@@ -162,7 +162,7 @@ const Service = ({ data, cardBg }) => {
                               alt={service.title} 
                               width={80} 
                               height={80}
-                              loading="eager"
+                              loading="lazy"
                             />
                           </div>
                           <h2 className="cs_service_simple_title">{service.title}</h2>
@@ -303,7 +303,7 @@ const Service = ({ data, cardBg }) => {
                               alt={service.title} 
                               width={80} 
                               height={80}
-                              loading="eager"
+                              loading="lazy"
                             />
                           </div>
                           <h4 className="cs_service_simple_title">{service.title}</h4>

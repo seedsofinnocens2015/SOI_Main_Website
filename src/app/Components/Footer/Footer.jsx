@@ -70,7 +70,7 @@ const Footer = () => {
                   alt="Seeds of Innocens IVF" 
                   width={305} 
                   height={63} 
-                  loading="eager" 
+                  loading="lazy" 
                 />
               </div>
               <div className="cs_footer_contact_info">

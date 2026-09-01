@@ -47,7 +47,7 @@ const WhyChooseUsSection = ({ data }) => {
               width={600}
               height={500}
               className="cs_why_choose_image"
-              loading="eager"
+              loading="lazy"
             />
           </div>
         </div>
@@ -148,7 +148,7 @@ const WhyChooseUsSection = ({ data }) => {
               width={600}
               height={500}
               className="cs_why_choose_image"
-              loading="eager"
+              loading="lazy"
             />
             {data.speechBubbleText && (
               <div className="cs_speech_bubble">
@@ -209,7 +209,7 @@ const WhyChooseUsSection = ({ data }) => {
               width={600}
               height={400}
               className="cs_why_choose_image"
-              loading="eager"
+              loading="lazy"
             />
           </div>
         </div>
@@ -280,7 +280,7 @@ const WhyChooseUsSection = ({ data }) => {
               width={600}
               height={400}
               className="cs_why_choose_image"
-              loading="eager"
+              loading="lazy"
             />
             {data.speechBubbleText && (
               <div className="cs_speech_bubble">
