@@ -808,6 +808,67 @@
   inset: auto !important;
 }
 
+.cs_related_blog_list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cs_related_blog_item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: #f3c5ce;
+    box-shadow: 0 6px 16px rgba(223, 54, 85, 0.08);
+  }
+}
+
+.cs_related_blog_banner {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  line-height: 0;
+  background-color: #f7f3ef;
+  border-radius: 8px;
+}
+
+.cs_related_blog_banner_el,
+.cs_related_blog_banner img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: top center !important;
+  position: relative !important;
+  inset: auto !important;
+}
+
+.cs_related_blog_copy {
+  h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 6px;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+  }
+}
+
 @media (max-width: 767px) {
   .cs_blog_img,
   .cs_blog_banner_image {

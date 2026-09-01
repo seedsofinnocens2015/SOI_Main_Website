@@ -260,69 +260,28 @@ const BlogDetailPage = async ({ params }) => {
                     >
                       Related Blogs
                     </AccentHeading>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                    <div className="cs_related_blog_list">
                       {relatedBlogs.map((relatedBlog) => (
                         <Link
                           key={relatedBlog.id}
                           href={`/blog/${relatedBlog.slug}/`}
-                          style={{ textDecoration: 'none', color: 'inherit' }}
+                          className="cs_related_blog_item"
                         >
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '15px',
-                              padding: '15px',
-                              borderRadius: '8px',
-                              transition: 'all 0.3s ease',
-                              cursor: 'pointer',
-                              border: '1px solid transparent',
-                            }}
-                          >
-                            {relatedBlog.image ? (
-                              <div
-                                style={{
-                                  position: 'relative',
-                                  width: '100px',
-                                  height: '80px',
-                                  borderRadius: '8px',
-                                  overflow: 'hidden',
-                                  flexShrink: 0,
-                                }}
-                              >
-                                <Image
-                                  src={getAssetPath(relatedBlog.image)}
-                                  alt={relatedBlog.title}
-                                  fill
-                                  style={{ objectFit: 'cover' }}
-                                />
-                              </div>
-                            ) : null}
-                            <div style={{ flex: 1 }}>
-                              <h4
-                                style={{
-                                  fontSize: '15px',
-                                  fontWeight: '600',
-                                  color: '#000000',
-                                  marginBottom: '8px',
-                                  lineHeight: '1.4',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                }}
-                              >
-                                {relatedBlog.title}
-                              </h4>
-                              <p
-                                style={{
-                                  fontSize: '12px',
-                                  color: '#999',
-                                  margin: 0,
-                                }}
-                              >
-                                {relatedBlog.date}
-                              </p>
+                          {relatedBlog.image ? (
+                            <div className="cs_related_blog_banner">
+                              <Image
+                                src={getAssetPath(relatedBlog.image)}
+                                alt={relatedBlog.title}
+                                width={640}
+                                height={320}
+                                className="cs_related_blog_banner_el"
+                                sizes="(max-width: 991px) 100vw, 360px"
+                              />
                             </div>
+                          ) : null}
+                          <div className="cs_related_blog_copy">
+                            <h4>{relatedBlog.title}</h4>
+                            <p>{relatedBlog.date}</p>
                           </div>
                         </Link>
                       ))}

@@ -504,7 +504,7 @@ const Page = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/contact/whatsapp" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
+                      <Link href="https://wa.me/919289311767" style={{ color: 'var(--body-color)', textDecoration: 'none' }}>
                         WhatsApp Us
                       </Link>
                     </li>

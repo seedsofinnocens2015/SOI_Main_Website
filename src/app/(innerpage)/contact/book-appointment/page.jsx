@@ -242,20 +242,11 @@ const Page = () => {
                         required
                       >
                         <option value="">Select nearest centre</option>
-                        <optgroup label="India Centres">
-                          {centresData
-                            .filter((c) => !c.isInternational)
-                            .map((c) => (
-                              <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
-                            ))}
-                        </optgroup>
-                        <optgroup label="International Centres">
-                          {centresData
-                            .filter((c) => c.isInternational)
-                            .map((c) => (
-                              <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
-                            ))}
-                        </optgroup>
+                        {centresData
+                          .filter((c) => !c.isInternational)
+                          .map((c) => (
+                            <option key={c.slug} value={c.name.split(',')[0].trim()}>{c.name}</option>
+                          ))}
                       </select>
                     </div>
                     <div className="col-md-12">

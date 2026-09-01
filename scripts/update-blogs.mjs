@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "uterine-fibroids-symptoms-causes-diagnosis-and-treatment",
-    title: "Uterine Fibroids: Symptoms, Causes, Diagnosis and Treatment Options",
-    excerpt: "Uterine fibroids are among the most prevalent conditions faced by women in their reproductive period. Whereas some fibroids go symptomless and might be identified accidentally in an ultrasound test, other fibroids may become the source of painful, heavy menstruations, pelvic pains or infertility.",
+    id: "ovarian-cysts-types-causes-symptoms-and-treatment",
+    title: "Ovarian Cysts: Types, Causes, Symptoms and Treatment Options",
+    excerpt: "Ovarian cysts are among the commonest disorders of gynaecological health experienced by women of various ages. An ovarian cyst is a relatively common occurrence in women’s reproductive life and occurs especially in the reproductive years of the woman. Although most of these cysts are harmless and resolve themselves, some may need professional attention.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Uterine Fibroids.png",
-    date: "August 29, 2026",
+    image: "/assets/img/Blogs/Ovarian Cysts.png",
+    date: "August 31, 2026",
     author: "admin",
     category: "Women's Health",
-    readTime: "7 min read",
-    slug: "uterine-fibroids-symptoms-causes-diagnosis-and-treatment"
+    readTime: "9 min read",
+    slug: "ovarian-cysts-types-causes-symptoms-and-treatment"
   }
 ];
 
