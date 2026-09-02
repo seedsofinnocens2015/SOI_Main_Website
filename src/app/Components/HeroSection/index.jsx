@@ -26,9 +26,9 @@ const HeroSection = ({ data }) => {
     };
 
     if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-      timer = window.requestIdleCallback(enableAutoplay, { timeout: 6000 });
+      timer = window.requestIdleCallback(enableAutoplay, { timeout: 12000 });
     } else {
-      timer = setTimeout(enableAutoplay, 4000);
+      timer = setTimeout(enableAutoplay, 12000);
     }
 
     return () => {
@@ -94,7 +94,7 @@ const HeroSection = ({ data }) => {
     swipeToSlide: true,
     vertical: true,
     arrows: false,
-    autoplay: true,
+    autoplay: autoplayEnabled,
     autoplaySpeed: 5000,
     pauseOnHover: false,
     pauseOnFocus: false,
