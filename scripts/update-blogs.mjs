@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "adenomyosis-symptoms-causes-treatment",
-    title: "Adenomyosis: Symptoms, Causes, Treatment and When to See a Specialist",
-    excerpt: "In case your periods are painful, you suffer from heavy menstrual bleeding or constant pelvic pain, chances are that you might have heard about adenomyosis. However, what is adenomyosis? How does adenomyosis impact the uterus?",
+    id: "best-gynae-laparoscopic-surgeon-in-delhi",
+    title: "Best Gynae Laparoscopic Surgeon in Delhi: Advanced Care for Women’s",
+    excerpt: "In case a woman faces problems such as chronic pelvic pain, menorrhagia, fibroids, ovarian cysts, endometriosis, or some other gynaecological disorders, surgery may become an essential part of her treatment process. But the choice of the correct surgical technique as well as a skilled surgeon can play a decisive role.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Adenomyosis.png",
-    date: "September 01, 2026",
+    image: "/assets/img/Blogs/Best Gynae Laparoscopic Surgeon in Delhi.png",
+    date: "September 02, 2026",
     author: "admin",
-    category: "Women's Health",
-    readTime: "10 min read",
-    slug: "adenomyosis-symptoms-causes-treatment"
+    category: "Doctor Insights",
+    readTime: "11 min read",
+    slug: "best-gynae-laparoscopic-surgeon-in-delhi"
   }
 ];
 
