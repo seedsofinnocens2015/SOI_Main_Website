@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-gynae-laparoscopic-surgeon-in-delhi",
-    title: "Best Gynae Laparoscopic Surgeon in Delhi: Advanced Care for Women’s",
-    excerpt: "In case a woman faces problems such as chronic pelvic pain, menorrhagia, fibroids, ovarian cysts, endometriosis, or some other gynaecological disorders, surgery may become an essential part of her treatment process. But the choice of the correct surgical technique as well as a skilled surgeon can play a decisive role.",
+    id: "hysteroscopy-cost-in-delhi",
+    title: "Hysteroscopy Cost in Delhi: Procedure, Benefits and Factors Affecting the Price",
+    excerpt: "If you have abnormal uterine bleeding, repeated miscarriages, infertility, or any other unexplained symptoms relating to the uterus, your physician may advise you to undergo a hysteroscopy. As more women become aware of minimally invasive gynecological procedures, there is increased interest in learning about the cost of hysteroscopy in Delhi, what hysteroscopy involves, its advantages, and where to meet with skilled specialists.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best Gynae Laparoscopic Surgeon in Delhi.png",
-    date: "September 02, 2026",
+    image: "/assets/img/Blogs/Hysteroscopy Cost in Delhi.png",
+    date: "September 03, 2026",
     author: "admin",
-    category: "Doctor Insights",
-    readTime: "11 min read",
-    slug: "best-gynae-laparoscopic-surgeon-in-delhi"
+    category: "Treatment Guides",
+    readTime: "12 min read",
+    slug: "hysteroscopy-cost-in-delhi"
   }
 ];
 
