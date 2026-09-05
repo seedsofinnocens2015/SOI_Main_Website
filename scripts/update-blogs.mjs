@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "hysteroscopy-cost-in-delhi",
-    title: "Hysteroscopy Cost in Delhi: Procedure, Benefits and Factors Affecting the Price",
-    excerpt: "If you have abnormal uterine bleeding, repeated miscarriages, infertility, or any other unexplained symptoms relating to the uterus, your physician may advise you to undergo a hysteroscopy. As more women become aware of minimally invasive gynecological procedures, there is increased interest in learning about the cost of hysteroscopy in Delhi, what hysteroscopy involves, its advantages, and where to meet with skilled specialists.",
+    id: "negative-pregnancy-test",
+    title: "Negative Pregnancy Test but No Period: What Does It Mean?",
+    excerpt: "Negative pregnancy test without a period may seem strange if your menstrual periods are normally timely, but the negative result does not always mean that you are not pregnant because sometimes you might have a false negative pregnancy test result, especially when taking the test too early.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Hysteroscopy Cost in Delhi.png",
-    date: "September 03, 2026",
+    image: "/assets/img/Blogs/Negative Pregnancy Test but No Period.png",
+    date: "September 04, 2026",
     author: "admin",
-    category: "Treatment Guides",
-    readTime: "12 min read",
-    slug: "hysteroscopy-cost-in-delhi"
+    category: "Pregnancy",
+    readTime: "13 min read",
+    slug: "negative-pregnancy-test"
   }
 ];
 
