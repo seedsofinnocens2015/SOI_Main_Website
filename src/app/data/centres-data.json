@@ -166,14 +166,7 @@
         "Fertility Assessment"
       ],
       "doctors": [
-        {
-          "name": "Dr. Manisha",
-          "subtitle": "IVF Consultant",
-          "image": "/assets/img/Doctors/manisha.png",
-          "experience": "15+ Years",
-          "location": "Janakpuri, New Delhi",
-          "slug": "dr-manisha"
-        }
+        
       ],
       "timing": "9:00 AM to 6:00 PM",
       "testimonials": [
@@ -2695,14 +2688,6 @@
         "Advanced Fertility Care"
       ],
       "doctors": [
-        {
-          "name": "Dr. Sneha Narayan",
-          "subtitle": "IVF Specialist",
-          "image": "/assets/img/Doctors/Dr Sneha Narayan.png",
-          "experience": "12+ Years",
-          "location": "Kolkata-Westbengal",
-          "slug": "dr-sneha-narayan"
-        },
         {
           "name": "Dr. Adrija Ghosal",
           "subtitle": "IVF Specialist",

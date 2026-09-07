@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "negative-pregnancy-test",
-    title: "Negative Pregnancy Test but No Period: What Does It Mean?",
-    excerpt: "Negative pregnancy test without a period may seem strange if your menstrual periods are normally timely, but the negative result does not always mean that you are not pregnant because sometimes you might have a false negative pregnancy test result, especially when taking the test too early.",
+    id: "pregnancy-me-pet-ke-nichle-hisse-me-dard",
+    title: "प्रेगनेंसी में पेट के निचले हिस्से में दर्द क्यों होता है? जानें कारण, और क्या करें",
+    excerpt: "गर्भावस्था एक महिला के जीवन में एक महत्वपूर्ण चरण है जहां उसके शरीर में कई हार्मोनल और शारीरिक परिवर्तन होते हैं।गर्भावस्था के दौरान पेट बड़ा होता है जैसे की मैदाना भी बढ़ जाता है लिगामेंट्स खिंचते है और बच्चे का पोजीशन बदलता है ।ये दर्द या असुविधा के कारण हो सकते हैं जो गर्भवती महिलाओं को निचले पेट में महसूस होते है। लेकिन निचले पेट में दर्द क्यों होता है गर्भावस्था के दौरान ? ऐसे सवाल अक्सर गर्भवती महिलाओं के मन में उठते हैं।",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Negative Pregnancy Test but No Period.png",
-    date: "September 04, 2026",
+    image: "/assets/img/Blogs/प्रेगनेंसी में पेट के निचले हिस्से में दर्द क्यों होता है.png",
+    date: "September 05, 2026",
     author: "admin",
     category: "Pregnancy",
-    readTime: "13 min read",
-    slug: "negative-pregnancy-test"
+    readTime: "10 min read",
+    slug: "pregnancy-me-pet-ke-nichle-hisse-me-dard"
   }
 ];
 
