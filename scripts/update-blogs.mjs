@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "pregnancy-me-pet-ke-nichle-hisse-me-dard",
-    title: "प्रेगनेंसी में पेट के निचले हिस्से में दर्द क्यों होता है? जानें कारण, और क्या करें",
-    excerpt: "गर्भावस्था एक महिला के जीवन में एक महत्वपूर्ण चरण है जहां उसके शरीर में कई हार्मोनल और शारीरिक परिवर्तन होते हैं।गर्भावस्था के दौरान पेट बड़ा होता है जैसे की मैदाना भी बढ़ जाता है लिगामेंट्स खिंचते है और बच्चे का पोजीशन बदलता है ।ये दर्द या असुविधा के कारण हो सकते हैं जो गर्भवती महिलाओं को निचले पेट में महसूस होते है। लेकिन निचले पेट में दर्द क्यों होता है गर्भावस्था के दौरान ? ऐसे सवाल अक्सर गर्भवती महिलाओं के मन में उठते हैं।",
+    id: "are-painful-periods-a-sign-of-good-fertility",
+    title: "Are Painful Periods a Sign of Good Fertility? What Does It Mean?",
+    excerpt: "Period pain is an experience that many women encounter regularly. While some may only experience mild pain, others can suffer from severe cramps to the extent that they affect their daily activities. This prompts the usual query: Is having painful periods a mark of good fertility?",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/प्रेगनेंसी में पेट के निचले हिस्से में दर्द क्यों होता है.png",
-    date: "September 05, 2026",
+    image: "/assets/img/Blogs/Are Painful Periods a Sign of Good Fertility.png",
+    date: "September 08, 2026",
     author: "admin",
-    category: "Pregnancy",
-    readTime: "10 min read",
-    slug: "pregnancy-me-pet-ke-nichle-hisse-me-dard"
+    category: "Fertility",
+    readTime: "11 min read",
+    slug: "are-painful-periods-a-sign-of-good-fertility"
   }
 ];
 
