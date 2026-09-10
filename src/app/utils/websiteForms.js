@@ -67,12 +67,57 @@ async function parseJsonResponse(res) {
   }
 }
 
+function getUtmParams() {
+  if (typeof window === 'undefined') return {};
+  
+  let utms = {
+    utm_source: null,
+    utm_medium: null,
+    utm_campaign: null
+  };
+  
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    let hasUtmInUrl = false;
+    
+    ['utm_source', 'utm_medium', 'utm_campaign'].forEach(key => {
+      const val = urlParams.get(key);
+      if (val) {
+        utms[key] = val;
+        sessionStorage.setItem(key, val);
+        hasUtmInUrl = true;
+      }
+    });
+
+    if (!hasUtmInUrl) {
+      ['utm_source', 'utm_medium', 'utm_campaign'].forEach(key => {
+        const storedVal = sessionStorage.getItem(key);
+        if (storedVal) {
+          utms[key] = storedVal;
+        }
+      });
+    }
+  } catch (e) {
+    // ignore
+  }
+  return utms;
+}
+
+function appendUtmParams(payload) {
+  const utms = getUtmParams();
+  if (utms.utm_source) payload.utm_source = utms.utm_source;
+  if (utms.utm_medium) payload.utm_medium = utms.utm_medium;
+  if (utms.utm_campaign) payload.utm_campaign = utms.utm_campaign;
+  return payload;
+}
+
 export async function postWebsiteJson(path, body) {
   const base = getWebsiteApiBaseUrl();
+  const finalBody = appendUtmParams(body);
   const res = await fetch(`${base}${path}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
+    body: JSON.stringify(finalBody),
   });
   const data = await parseJsonResponse(res);
   return { response: res, data, ok: res.ok && data.ok === true };
@@ -102,6 +147,14 @@ export async function submitUnifiedForm(formType, payload) {
   return postWebsiteJson(WEBSITE_FORM_PATHS.unified, { formType, ...payload });
 }
 
+function appendUtmParamsToFormData(formData) {
+  const utms = getUtmParams();
+  if (utms.utm_source && !formData.has('utm_source')) formData.append('utm_source', utms.utm_source);
+  if (utms.utm_medium && !formData.has('utm_medium')) formData.append('utm_medium', utms.utm_medium);
+  if (utms.utm_campaign && !formData.has('utm_campaign')) formData.append('utm_campaign', utms.utm_campaign);
+  return formData;
+}
+
 export async function submitUnifiedFormMultipart(formData) {
   const multipartPhone = PHONE_FIELD_KEYS.find((key) => {
     const value = formData.get(key);
@@ -113,9 +166,10 @@ export async function submitUnifiedFormMultipart(formData) {
   }
 
   const base = getWebsiteApiBaseUrl();
+  const finalFormData = appendUtmParamsToFormData(formData);
   const res = await fetch(`${base}${WEBSITE_FORM_PATHS.unified}`, {
     method: 'POST',
-    body: formData,
+    body: finalFormData,
   });
   const data = await parseJsonResponse(res);
   return { response: res, data, ok: res.ok && data.ok === true };
@@ -126,9 +180,10 @@ export async function submitJobApplicationMultipart(formData) {
   if (phoneError) return { response: null, data: { ok: false, error: phoneError }, ok: false };
 
   const base = getWebsiteApiBaseUrl();
+  const finalFormData = appendUtmParamsToFormData(formData);
   const res = await fetch(`${base}${WEBSITE_FORM_PATHS.jobApplications}`, {
     method: 'POST',
-    body: formData,
+    body: finalFormData,
   });
   const data = await parseJsonResponse(res);
   return { response: res, data, ok: res.ok && data.ok === true };
@@ -139,9 +194,10 @@ export async function submitGeneralJobApplicationMultipart(formData) {
   if (phoneError) return { response: null, data: { ok: false, error: phoneError }, ok: false };
 
   const base = getWebsiteApiBaseUrl();
+  const finalFormData = appendUtmParamsToFormData(formData);
   const res = await fetch(`${base}${WEBSITE_FORM_PATHS.generalJobApplications}`, {
     method: 'POST',
-    body: formData,
+    body: finalFormData,
   });
   const data = await parseJsonResponse(res);
   return { response: res, data, ok: res.ok && data.ok === true };
