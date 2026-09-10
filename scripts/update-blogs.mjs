@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "are-painful-periods-a-sign-of-good-fertility",
-    title: "Are Painful Periods a Sign of Good Fertility? What Does It Mean?",
-    excerpt: "Period pain is an experience that many women encounter regularly. While some may only experience mild pain, others can suffer from severe cramps to the extent that they affect their daily activities. This prompts the usual query: Is having painful periods a mark of good fertility?",
+    id: "pcos-diet-plan-to-get-pregnant",
+    title: "PCOS Diet Plan to Get Pregnant: What to Eat for Better Fertility",
+    excerpt: "PCOS, or polycystic ovary syndrome, is a typical hormone-related disorder that can affect ovulation, menstrual periods, insulin sensitivity, and fertility. Having PCOS may sometimes complicate conception, but it does not necessarily prevent pregnancy since many women with this diagnosis can conceive with appropriate management and fertility assistance.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Are Painful Periods a Sign of Good Fertility.png",
-    date: "September 08, 2026",
+    image: "/assets/img/Blogs/PCOS Diet Plan to Get Pregnant.png",
+    date: "September 09, 2026",
     author: "admin",
     category: "Fertility",
     readTime: "11 min read",
-    slug: "are-painful-periods-a-sign-of-good-fertility"
+    slug: "pcos-diet-plan-to-get-pregnant"
   }
 ];
 
