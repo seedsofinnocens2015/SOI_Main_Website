@@ -8,6 +8,8 @@ import blogsData from '@/app/data/blogs.json';
 import { getAssetPath } from '@/app/utils/assetPath';
 import { accentHeadingsInHtml } from '@/app/utils/accentHeadingsInHtml';
 import { getBlogPostMetadata } from '@/app/utils/blogSeo';
+import doctorsData from '@/app/data/doctors-data.json';
+import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 
 export async function generateStaticParams() {
   return blogsData.blogs.map((blog) => ({
@@ -46,6 +48,9 @@ const BlogDetailPage = async ({ params }) => {
   const slug = resolvedParams?.slug;
 
   const blog = blogsData.blogs.find((b) => b.slug === slug);
+  const doctor = blog && blog.author?.toLowerCase() !== 'admin'
+    ? doctorsData.find(d => d.name?.toLowerCase().trim() === blog.author?.toLowerCase().trim())
+    : null;
 
   if (!blog) {
     return (
@@ -146,55 +151,98 @@ const BlogDetailPage = async ({ params }) => {
                   <AccentHeading level={1} className="cs_ivf_content_heading cs_blog_title" style={{ marginBottom: '20px' }}>
                     {blog.title}
                   </AccentHeading>
-
-                  <div
-                    style={{
-                      display: 'flex',
-                      flexWrap: 'wrap',
-                      gap: '20px',
-                      marginBottom: '30px',
-                      paddingBottom: '20px',
-                      borderBottom: '1px solid #e8e8e8',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <span
+                  <div style={{
+                    marginBottom: '30px',
+                    paddingBottom: '10px',
+                    borderBottom: '1px solid #e8e8e8',
+                    }}>
+                    <div
                       style={{
                         display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        color: '#666',
-                        fontSize: '14px',
+                        flexWrap: 'wrap',
+                        gap: '20px',
+                        marginBottom: '10px',
+                        justifyContent: 'center',
                       }}
                     >
-                      <FaCalendarAlt style={{ fontSize: '14px', color: '#df3655' }} />
-                      {blog.date}
-                    </span>
-                    <span
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        color: '#666',
-                        fontSize: '14px',
-                      }}
-                    >
-                      <FaUser style={{ fontSize: '14px', color: '#df3655' }} />
-                      {blog.author}
-                    </span>
-                    <span
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        color: '#666',
-                        fontSize: '14px',
-                      }}
-                    >
-                      <FaClock style={{ fontSize: '14px', color: '#df3655' }} />
-                      {blog.readTime}
-                    </span>
+                      <span
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px',
+                          color: '#666',
+                          fontSize: '14px',
+                        }}
+                      >
+                        <FaCalendarAlt style={{ fontSize: '14px', color: '#df3655' }} />
+                        {blog.date}
+                      </span>
+                      <span
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px',
+                          color: '#666',
+                          fontSize: '14px',
+                        }}
+                      >
+                        <FaClock style={{ fontSize: '14px', color: '#df3655' }} />
+                        {blog.readTime}
+                      </span>
+                    </div>
+                    <div
+                        style={{
+                          backgroundColor: '#ffeaf0',
+                          borderRadius: '12px',
+                          padding: '20px',
+                          marginBottom: '30px',
+                          textAlign: 'left',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '20px'
+                        }}
+                      >
+                        {doctor && (
+                          <div style={{ flexShrink: 0 }}>
+                            <Link href={getDoctorProfilePath(doctor)}>
+                              <Image
+                                src={getAssetPath(doctor.image)}
+                                alt={doctor.name}
+                                width={80}
+                                height={80}
+                                style={{ borderRadius: '8px', objectFit: 'cover' }}
+                              />
+                            </Link>
+                          </div>
+                        )}
+                        <div>
+                          <div style={{ fontWeight: '700', color: '#df3655', fontSize: '16px', marginBottom: '8px' }}>
+                            Author
+                          </div>
+                          {doctor ? (
+                            <>
+                              <div style={{ marginBottom: '4px' }}>
+                                <Link href={getDoctorProfilePath(doctor)} style={{ color: '#072e91', fontWeight: '700', textDecoration: 'none', fontSize: '15px' }}>
+                                  {blog.author}
+                                </Link>
+                              </div>
+                              <div style={{ color: '#666', fontSize: '14px', lineHeight: '1.5' }}>
+                                {[
+                                  doctor.qualification,
+                                  doctor.experience ? doctor.experience + ' Experience' : null,
+                                ].filter(Boolean).join(' | ')}
+                              </div>
+                            </>
+                          ) : (
+                            <div style={{ color: '#072e91', fontWeight: '700', fontSize: '15px' }}>
+                              {blog.author}
+                            </div>
+                          )}
+                        </div>
+                      </div>
                   </div>
+
+
 
                   <div
                     className="blog-content cs_blog_body"

@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "pcos-diet-plan-to-get-pregnant",
-    title: "PCOS Diet Plan to Get Pregnant: What to Eat for Better Fertility",
-    excerpt: "PCOS, or polycystic ovary syndrome, is a typical hormone-related disorder that can affect ovulation, menstrual periods, insulin sensitivity, and fertility. Having PCOS may sometimes complicate conception, but it does not necessarily prevent pregnancy since many women with this diagnosis can conceive with appropriate management and fertility assistance.",
+    id: "ivf-and-test-tube-baby-difference",
+    title: "IVF and Test Tube Baby Difference: Are They the Same?",
+    excerpt: "When you are looking into fertility treatment, you must be familiar with terms such as IVF and test tube baby. People often use both terms as synonyms, but it’s natural for you to ask questions: Are IVF and test tube baby one and the same thing? Is there really any difference between IVF procedure and test tube baby?",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/PCOS Diet Plan to Get Pregnant.png",
-    date: "September 09, 2026",
-    author: "admin",
-    category: "Fertility",
-    readTime: "11 min read",
-    slug: "pcos-diet-plan-to-get-pregnant"
+    image: "/assets/img/Blogs/IVF and Test Tube Baby Difference.png",
+    date: "September 10, 2026",
+    author: "Dr. Lisha Singh",
+    category: "IVF Process",
+    readTime: "12 min read",
+    slug: "ivf-and-test-tube-baby-difference"
   }
 ];
 

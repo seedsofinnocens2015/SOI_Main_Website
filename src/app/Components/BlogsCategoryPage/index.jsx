@@ -9,6 +9,8 @@ import Section from '@/app/Components/Section';
 import AccentHeading from '@/app/Components/AccentHeading';
 import { FaArrowRight, FaCalendarAlt, FaClock, FaTag, FaUser } from 'react-icons/fa';
 import { getAssetPathClient } from '@/app/utils/assetPath';
+import doctorsData from '@/app/data/doctors-data.json';
+import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 
 const categoryRoutes = {
   fertility: '/blogs/fertility',
@@ -144,12 +146,17 @@ export default function BlogsCategoryPage({
           </div>
 
           <div className="row cs_gap_y_30" style={{ gap: '30px 0' }}>
-            {visibleBlogs.map((blog, index) => (
+            {visibleBlogs.map((blog, index) => {
+              const doctor = !showMediaInquiry && blog.author?.toLowerCase() !== 'admin'
+                ? doctorsData.find(d => d.name?.toLowerCase().trim() === blog.author?.toLowerCase().trim())
+                : null;
+                
+              return (
               <div key={index} className="col-lg-4 col-md-6">
-                <Link href={blog.link} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
+                <div style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
                   <div className="cs_blog_card cs_style_1" style={{ height: '100%', backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e8e8e8', boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.05)', display: 'flex', flexDirection: 'column' }}>
                     {blog.image ? (
-                      <div className="cs_blog_img">
+                      <Link href={blog.link} className="cs_blog_img">
                         <Image
                           src={getAssetPathClient(blog.image)}
                           alt={blog.title}
@@ -160,29 +167,68 @@ export default function BlogsCategoryPage({
                           loading="lazy"
                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 400px"
                         />
-                      </div>
+                      </Link>
                     ) : null}
                     <div className="cs_blog_info" style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div className="cs_blog_meta mb-3" style={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '13px', color: '#999', flexWrap: 'wrap' }}>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><FaCalendarAlt style={{ fontSize: '12px' }} />{blog.date}</span>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><FaClock style={{ fontSize: '12px' }} />{blog.readTime}</span>
                       </div>
-                      <h3 className="cs_blog_title" style={{ fontSize: '22px', marginBottom: '15px', color: '#1a1a1a', fontWeight: '600', lineHeight: '1.4', minHeight: '66px' }}>{blog.title}</h3>
+                      
+                      {!showMediaInquiry && (
+                        <div style={{ backgroundColor: '#ffeaf0', borderRadius: '8px', padding: '10px 15px', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '15px' }}>
+                          {doctor && (
+                            <div style={{ flexShrink: 0 }}>
+                              <Link href={getDoctorProfilePath(doctor)}>
+                                <Image 
+                                  src={getAssetPathClient(doctor.image)} 
+                                  alt={doctor.name} 
+                                  width={45} 
+                                  height={45} 
+                                  style={{ borderRadius: '6px', objectFit: 'cover' }} 
+                                />
+                              </Link>
+                            </div>
+                          )}
+                          <div>
+                            <div style={{ fontWeight: '700', color: '#1a1a1a', fontSize: '12px', marginBottom: '2px' }}>Author</div>
+                            {doctor ? (
+                              <>
+                                <Link href={getDoctorProfilePath(doctor)} style={{ color: '#008b8b', fontWeight: '700', textDecoration: 'none', fontSize: '13px', display: 'block' }}>
+                                  {blog.author}
+                                </Link>
+                                <div style={{ color: '#666', fontSize: '11px', lineHeight: '1.4', marginTop: '4px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                                  {[doctor.qualification, doctor.subtitle, doctor.experience ? doctor.experience + ' Experience' : null, doctor.location].filter(Boolean).join(' | ')}
+                                </div>
+                              </>
+                            ) : (
+                              <div style={{ color: '#008b8b', fontWeight: '700', fontSize: '13px' }}>{blog.author}</div>
+                            )}
+                          </div>
+                        </div>
+                      )}
+
+                      <Link href={blog.link} style={{ textDecoration: 'none' }}>
+                        <h3 className="cs_blog_title" style={{ fontSize: '22px', marginBottom: '15px', color: '#1a1a1a', fontWeight: '600', lineHeight: '1.4', minHeight: '66px' }}>{blog.title}</h3>
+                      </Link>
                       <p className="cs_blog_subtitle" style={{ lineHeight: '1.8', color: '#666', marginBottom: '20px', fontSize: '15px', flex: 1 }}>{blog.excerpt}</p>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '20px', borderTop: '1px solid #f0f0f0', marginTop: 'auto' }}>
-                        <span style={{ fontSize: '14px', color: '#999', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                          {showMediaInquiry ? <FaTag style={{ fontSize: '12px' }} /> : <FaUser style={{ fontSize: '12px' }} />}
-                          {showMediaInquiry ? (blog.type || blog.category) : blog.author}
-                        </span>
-                        <span style={{ color: 'var(--accent-color)', fontWeight: '600', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      
+                      <div style={{ display: 'flex', justifyContent: showMediaInquiry ? 'space-between' : 'flex-end', alignItems: 'center', paddingTop: '20px', borderTop: '1px solid #f0f0f0', marginTop: 'auto' }}>
+                        {showMediaInquiry && (
+                          <span style={{ fontSize: '14px', color: '#999', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                            <FaTag style={{ fontSize: '12px' }} />
+                            {blog.type || blog.category}
+                          </span>
+                        )}
+                        <Link href={blog.link} style={{ color: 'var(--accent-color)', fontWeight: '600', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }}>
                           Read More <FaArrowRight style={{ fontSize: '12px' }} />
-                        </span>
+                        </Link>
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
-            ))}
+            )})}
           </div>
 
           {enablePagination && totalPages > 1 && (
