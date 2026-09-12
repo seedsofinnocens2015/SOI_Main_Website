@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-and-test-tube-baby-difference",
-    title: "IVF and Test Tube Baby Difference: Are They the Same?",
-    excerpt: "When you are looking into fertility treatment, you must be familiar with terms such as IVF and test tube baby. People often use both terms as synonyms, but it’s natural for you to ask questions: Are IVF and test tube baby one and the same thing? Is there really any difference between IVF procedure and test tube baby?",
+    id: "endometriosis-specialist-in-delhi",
+    title: "Endometriosis Specialist in Delhi: Treatment, Diagnosis & When to Consult a Specialist",
+    excerpt: "Endometriosis is a chronic condition that may affect the pelvic health, menstruation, fertility, and general quality of life of a woman. Endometriosis develops when tissue similar to the uterine lining grows outside the uterus, such as in the ovaries, fallopian tubes, and pelvic tissues. Symptoms can vary greatly from one patient to another, so diagnosing and treating this condition is essential.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF and Test Tube Baby Difference.png",
-    date: "September 10, 2026",
-    author: "Dr. Lisha Singh",
-    category: "IVF Process",
-    readTime: "12 min read",
-    slug: "ivf-and-test-tube-baby-difference"
+    image: "/assets/img/Blogs/Endometriosis Specialist in Delhi.png",
+    date: "September 11, 2026",
+    author: "Dr. Pratik Kakani",
+    category: "Doctor Insights",
+    readTime: "13 min read",
+    slug: "endometriosis-specialist-in-delhi"
   }
 ];
 

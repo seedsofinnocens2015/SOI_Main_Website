@@ -1213,6 +1213,7 @@ const Header = ({ isTopBar, variant }) => {
                             >
                               {/* Left Column - States (Categories) */}
                               <li style={{
+                                flex: 1,
                                 borderRight: hoveredCategoryIndex !== null &&
                                   item.megaMenuCategories[hoveredCategoryIndex]?.subItems &&
                                   item.megaMenuCategories[hoveredCategoryIndex].subItems.length > 0
@@ -1270,6 +1271,7 @@ const Header = ({ isTopBar, variant }) => {
                               </li>
                               {/* Middle Column - Centres of hovered state */}
                               <li style={{
+                                flex: 1,
                                 opacity: hoveredCategoryIndex !== null &&
                                   item.megaMenuCategories[
                                     hoveredCategoryIndex
@@ -1282,6 +1284,12 @@ const Header = ({ isTopBar, variant }) => {
                                   ]?.subItems &&
                                   item.megaMenuCategories[hoveredCategoryIndex]
                                     .subItems.length > 0 ? 'visible' : 'hidden',
+                                display: hoveredCategoryIndex !== null &&
+                                  item.megaMenuCategories[
+                                    hoveredCategoryIndex
+                                  ]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex]
+                                    .subItems.length > 0 ? 'block' : 'none',
                                 pointerEvents: hoveredCategoryIndex !== null &&
                                   item.megaMenuCategories[
                                     hoveredCategoryIndex
@@ -1336,6 +1344,7 @@ const Header = ({ isTopBar, variant }) => {
                               </li>
                               {/* Right Column - Nested centres of hovered state */}
                               <li style={{
+                                flex: 1,
                                 opacity: hoveredCategoryIndex !== null &&
                                   hoveredStateIndex !== null &&
                                   item.megaMenuCategories[
@@ -1350,6 +1359,13 @@ const Header = ({ isTopBar, variant }) => {
                                   ]?.subItems?.[hoveredStateIndex]?.subItems &&
                                   item.megaMenuCategories[hoveredCategoryIndex]
                                     .subItems[hoveredStateIndex].subItems.length > 0 ? 'visible' : 'hidden',
+                                display: hoveredCategoryIndex !== null &&
+                                  hoveredStateIndex !== null &&
+                                  item.megaMenuCategories[
+                                    hoveredCategoryIndex
+                                  ]?.subItems?.[hoveredStateIndex]?.subItems &&
+                                  item.megaMenuCategories[hoveredCategoryIndex]
+                                    .subItems[hoveredStateIndex].subItems.length > 0 ? 'block' : 'none',
                                 pointerEvents: hoveredCategoryIndex !== null &&
                                   hoveredStateIndex !== null &&
                                   item.megaMenuCategories[

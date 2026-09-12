@@ -1389,15 +1389,66 @@
     }
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1450px) {
   .cs_nav {
-    .cs_nav_list {
-      .cs_mega_wrapper {
-        width: 1116px !important;
+    margin-left: -10px !important;
+    min-width: max-content;
+    flex-shrink: 0;
+    .cs_nav_list > li {
+      margin-right: 10px !important;
+      > a {
+        font-size: 12.5px !important;
+        padding: 5px 0 !important;
       }
     }
   }
-
+  .cs_site_branding {
+    flex-shrink: 1;
+    min-width: 150px;
+    margin-right: 0 !important;
+    img {
+      max-width: 220px !important;
+    }
+  }
+  .cs_main_header_right {
+    gap: 5px 8px !important;
+  }
+  .cs_book_visit_btn {
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    margin-left: 5px !important;
+  }
+  .cs_header_search_form.cs_header_search_form_static {
+    width: 160px !important;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .cs_nav {
+    margin-left: 0 !important;
+    .cs_nav_list > li {
+      margin-right: 8px !important;
+      > a {
+        font-size: 11.5px !important;
+      }
+    }
+  }
+  .cs_site_branding img {
+    max-width: 200px !important;
+  }
+  .cs_book_visit_btn {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    margin-right: 5px !important;
+  }
+  .cs_search_wrap {
+    margin-right: 5px !important;
+  }
+  .cs_header_search_form.cs_header_search_form_static {
+    width: 140px !important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  /* cs_mega_wrapper width scaling removed to allow default 280/600/900 widths */
   .cs_site_header_full_width {
     .container {
       max-width: 100%;
