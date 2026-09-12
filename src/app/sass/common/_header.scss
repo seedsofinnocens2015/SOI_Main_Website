@@ -1389,7 +1389,7 @@
     }
   }
 }
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1450px) and (min-width: 1200px) {
   .cs_nav {
     margin-left: -10px !important;
     min-width: max-content;
@@ -1422,7 +1422,7 @@
     width: 160px !important;
   }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1300px) and (min-width: 1200px) {
   .cs_nav {
     margin-left: 0 !important;
     .cs_nav_list > li {
