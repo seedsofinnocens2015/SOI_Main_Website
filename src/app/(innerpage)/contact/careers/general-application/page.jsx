@@ -172,6 +172,42 @@ const Page = () => {
                     </div>
                     <div className="col-md-6">
                       <label className="cs_form_label">
+                        Notice Period <span style={{ color: '#df3655' }}>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        name="noticePeriod"
+                        placeholder="e.g., 15 Days, 1 Month, Immediate"
+                        className="cs_form_field"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Current CTC <span style={{ color: '#df3655' }}>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        name="currentCtc"
+                        placeholder="e.g., 5 LPA, 50,000/month"
+                        className="cs_form_field"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="cs_form_label">
+                        Expected CTC <span style={{ color: '#df3655' }}>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        name="expectedCtc"
+                        placeholder="e.g., 7 LPA, Negotiable"
+                        className="cs_form_field"
+                      />
+                    </div>
+                    <div className="col-md-12">
+                      <label className="cs_form_label">
                         Educational Qualification <span style={{ color: '#df3655' }}>*</span>
                       </label>
                       <input

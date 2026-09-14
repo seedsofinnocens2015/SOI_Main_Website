@@ -41,7 +41,7 @@ const PageHeading = ({ data }) => {
       phone: formData.get('phone'),
       // Only international banners collect an email address.
       email: centreRegion === 'international' ? formData.get('email') : '',
-      center: formData.get('center') || 'Header Common Form',
+      center: formData.get('center'),
       message: isSurgicalForm
         ? formData.get('message') || ''
         : 'Appointment requested from header form',
@@ -49,6 +49,12 @@ const PageHeading = ({ data }) => {
         captchaAccepted: formData.get('captchaAccepted') === 'on',
       }),
     };
+
+    if (!dataObj.center) {
+      alert("Please select your nearest centre.");
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const submitForm = isSurgicalForm ? submitSurgicalConsultation : submitBookAppointment;
@@ -169,7 +175,7 @@ const PageHeading = ({ data }) => {
                       name="center"
                       className="cs_form_field"
                       defaultValue=""
-                      required={isSurgicalForm}
+                      required
                     >
                       <option value="">Select Centre</option>
                       {isSurgicalForm ? (

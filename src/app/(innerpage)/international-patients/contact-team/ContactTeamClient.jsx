@@ -280,7 +280,7 @@ const Page = () => {
                       <label className="cs_form_label">
                         Select Centre <span style={{ color: '#df3655' }}>*</span>
                       </label>
-                      <select name="center" value={formData.center} onChange={handleChange} className="cs_form_field">
+                      <select name="center" value={formData.center} onChange={handleChange} className="cs_form_field" required>
                         <option value="">Select nearest centre</option>
                         <optgroup label="International Centres">
                           {INTERNATIONAL_FORM_CENTRES.map((centre) => (

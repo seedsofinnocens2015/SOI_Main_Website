@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "endometriosis-specialist-in-delhi",
-    title: "Endometriosis Specialist in Delhi: Treatment, Diagnosis & When to Consult a Specialist",
-    excerpt: "Endometriosis is a chronic condition that may affect the pelvic health, menstruation, fertility, and general quality of life of a woman. Endometriosis develops when tissue similar to the uterine lining grows outside the uterus, such as in the ovaries, fallopian tubes, and pelvic tissues. Symptoms can vary greatly from one patient to another, so diagnosing and treating this condition is essential.",
+    id: "ivf-cost-in-gurgaon",
+    title: "IVF Cost in Gurgaon: Complete Guide to IVF Treatment Expenses",
+    excerpt: "Starting your journey of IVF treatment can be exciting and hopeful, but also full of many questions, such as, “How much does IVF cost in Gurgaon?” The cost of IVF treatment in Gurgaon mostly depends on the type of protocol used, fertility tests conducted, medications used, lab works, and other fertility treatments if any. Knowing the costs beforehand will enable you to understand your treatment better.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Endometriosis Specialist in Delhi.png",
-    date: "September 11, 2026",
-    author: "Dr. Pratik Kakani",
-    category: "Doctor Insights",
-    readTime: "13 min read",
-    slug: "endometriosis-specialist-in-delhi"
+    image: "/assets/img/Blogs/IVF Cost in Gurgaon.png",
+    date: "September 12, 2026",
+    author: "Dr. Aditi Bhatnagar",
+    category: "IVF Process",
+    readTime: "10 min read",
+    slug: "ivf-cost-in-gurgaon"
   }
 ];
 

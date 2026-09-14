@@ -30,7 +30,7 @@ const ivfContentData = {
     {
       heading: 'Our Media Coverage',
       paragraphs: [
-        'Seeds of Innocens has been featured in various media outlets, highlighting our innovative treatments, success stories, and contributions to the field of reproductive medicine.',
+        'From pioneering fertility solutions to aspiring success stories, Seeds of Innocens has been well recognized by leading media outlets for its contribution to the future of the reproductive medicine.',
       ]
     },
   ],
@@ -113,9 +113,15 @@ const MediaPressClient = () => {
 
                   {/* Bottom Content */}
                   <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
-                    <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#000000', marginBottom: '20px', lineHeight: '1.4' }}>
-                      {item.title}
-                    </h4>
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                      <h4 
+                        style={{ fontSize: '18px', fontWeight: '700', color: '#000000', marginBottom: '20px', lineHeight: '1.4', transition: 'color 0.3s ease' }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = '#df3655'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = '#000000'}
+                      >
+                        {item.title}
+                      </h4>
+                    </a>
                     
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
                       <span style={{ fontSize: '14px', color: '#888', fontWeight: '400' }}>
