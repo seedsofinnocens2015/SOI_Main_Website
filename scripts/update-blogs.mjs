@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-cost-in-gurgaon",
-    title: "IVF Cost in Gurgaon: Complete Guide to IVF Treatment Expenses",
-    excerpt: "Starting your journey of IVF treatment can be exciting and hopeful, but also full of many questions, such as, “How much does IVF cost in Gurgaon?” The cost of IVF treatment in Gurgaon mostly depends on the type of protocol used, fertility tests conducted, medications used, lab works, and other fertility treatments if any. Knowing the costs beforehand will enable you to understand your treatment better.",
+    id: "cervix-meaning-in-hindi",
+    title: "Cervix Meaning in Hindi: (सर्विक्स क्या होता है?) Pregnancy में Cervix की पूरी जानकारी",
+    excerpt: "Are you intrigued by the definition of the cervix, what is meant by cervix, or what the term cervical length means during pregnancy? If yes, then rest assured that you are not the only one. Women often have questions like What is cervix, cervical length or cervix length? after coming across these terms in their ultrasound report during pregnancy.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Cost in Gurgaon.png",
+    image: "/assets/img/Blogs/Cervix Meaning in Hindi.png",
     date: "September 12, 2026",
-    author: "Dr. Aditi Bhatnagar",
-    category: "IVF Process",
-    readTime: "10 min read",
-    slug: "ivf-cost-in-gurgaon"
+    author: "Dr. Monika Maan",
+    category: "Pregnancy",
+    readTime: "11 min read",
+    slug: "cervix-meaning-in-hindi"
   }
 ];
 

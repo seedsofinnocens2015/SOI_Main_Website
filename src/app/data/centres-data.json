@@ -2788,7 +2788,7 @@
     },
     {
       "slug": "best-ivf-centre-in-cameroon",
-      "name": "Cameroon, Central Africa",
+      "name": "Gurugram",
       "location": "Seeds of Innocens IVF Centre, Cameroon, Central Africa",
       "state": "Cameroon",
       "stateSlug": "cameroon",
@@ -2796,11 +2796,10 @@
       "metaDescription": "Seeds of Innocens IVF Centre in Cameroon offers advanced fertility treatments, personalised care and international-standard reproductive medicine.",
       "image": "/assets/img/Centres/gurgaon.jpg",
       "headerImage": "/assets/img/Headers/cameroon.webp",
-      "uspTitle": "ADVANCED FERTILITY CARE <br /> <span class=\"cs_accent_color\">NOW IN CAMEROON</span>",
+      "uspTitle": "IVF Treatment in India for <br /> <span class=\"cs_accent_color\">Patients from Cameroon</span>",
       "description": [
-        "IVF and surrogacy are the ultimate option as far as fertility procedures are concerned. The prices of undergoing treatment through the IVF procedure in Cameroon vary according to the ages and the health status of the patients. Of course. In Vitro Fertilisation (IVF), which is a technique used in treating infertility, can be found in designated fertility clinics in Best IVF Centre in Cameroon.",
-        "Different types of services are provided in the Best IVF Clinic In Cameroon, including regular IVF treatment, ICSI in case of male infertility, and even donor programs. The procedures of the treatment are conducted after analyzing the health complications experienced by the couples in terms of fertility.",
-        "At present time, Best IVF Centre in Cameroon, Seeds of Innocens IVF, has become the most popular destination to solve their fertility problems. Affordable and advanced fertility treatment can be provided there; many patients consider the Cost of IVF Treatment in Cameroon as quite reasonable because of relatively low prices in comparison with the prices in Western countries."
+        "Patients from Cameroon who are considering fertility treatment abroad can travel to India for consultation and assisted reproductive treatment. India has established itself as a medical tourism destination, including fertility care. At Seeds of Innocens Gurgaon,  patients from  Cameroon can discuss their fertility history with the fertility specialists before travelling and receive guidance regarding the treatment pathway that can be appropriate for them. However, the treatment plan will include IVF, ICSI, IUI, Embryo transfer, Embryo freezing, and other fertility procedures relying on the patient’s medical requirements.",
+        "The cost of an IVF treatment in India varies based on the patient’s medical condition and the treatment protocol recommended by the fertility specialist."
       ],
       "phone": "+91 98103 50512",
       "email": "info@seedsofinnocence.com",
@@ -2813,19 +2812,35 @@
         "Genetic Testing (PGT)",
         "Fertility Counselling"
       ],
-      "doctors": [],
+      "doctors": [
+        {
+          "name": "Dr. Gauri Agarwal",
+          "subtitle": "Founder & Chief IVF Specialist",
+          "image": "/assets/img/Doctors/Dr Gauri maam.jpg",
+          "experience": "15+ Years",
+          "location": "Delhi/NCR",
+          "slug": "dr-gauri-agarwal"
+        },
+        {
+          "name": "Dr. Aditi Bhatnagar",
+          "subtitle": "Senior IVF Specialist",
+          "image": "/assets/img/Doctors/aditi.jpg",
+          "experience": "12+ Years",
+          "location": "Gurugram-Haryana",
+          "slug": "dr-aditi-bhatnagar"
+        }
+      ],
       "timing": "9:00 AM to 6:00 PM",
       "isInternational": true,
       "aboutUs": {
-        "title": "About Seeds of Innocens IVF Centre Cameroon",
+        "title": "About Seeds of Innocens IVF Centre Gurugram",
         "image": "/assets/img/Centres/gurgaon.jpg",
         "paragraphs": [
-          "There are many best hospitals in Cameroon providing advanced assisted reproductive technology and services in terms of fertility. The hospitals have modern laboratories, experienced fertility specialists, and advanced technologies such as ICSI, frozen embryos, and laparoscopy. One can get a personalized consultation, care, and fertility services at the best prices. Before choosing any hospital or clinic, one should consider success rates, services, and the Cost of IVF Treatment in Cameroon.",
-          "Cameroon has become a very popular destination for fertility treatment in recent years because of advanced fertility centres, experienced specialists, and low prices. Hospitals and clinics located in Douala and Yaoundé provide individualised and personalised fertility services such as ICSI, frozen embryos, and donors. Patients receive modern laboratories and have a high chance of having a baby because of individualized success rates. Furthermore, the Cost of IVF Treatment in Cameroon is much lower than in other countries."
+          "Gurgaon, also known as Gurugram, has emerged as a leading healthcare destination in the Delhi-NCR region, which offers access to advanced assisted reproductive technologies and specialized fertility care. Seeds of Innocens fertility centre in Gurgaon will provide fertility treatment with a focus on individualized treatment planning and modern reproductive medicine as per your treatment requirements. Located in Gurugram, the centre provides fertility services including IVF, ICSI, IUI, Blastocyst transfer, and genetic testing. Patients from India as well as international patients, including those travelling from Cameroon, can look into several fertility treatments, laboratory facilities, and the overall cost of an IVF treatment in Gurgaon."
         ]
       },
       "contactInfo": {
-        "title": "Seeds of Innocens - Best IVF Centre in Cameroon",
+        "title": "Seeds of Innocens - Best IVF Centre in Gurugram",
         "openDays": "Monday to Saturday",
         "timings": "9:00 AM to 6:00 PM",
         "address": "Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar Nigam Office, Gurugram, Haryana",
@@ -2833,27 +2848,35 @@
         "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.580722071706!2d77.099569!3d28.462052899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d193adc6980c3%3A0xf93927ab31cdcf44!2sSeeds%20of%20Innocens%20IVF%20Centre%20Gurgaon%20%7C%20Fertility%20Hospital%20In%20Gurugram!5e0!3m2!1sen!2sin!4v1785225978166!5m2!1sen!2sin",
         "phone": "+91 98103 50512"
       },
-      "bestIvfHeading": "Best IVF Centre in <span class=\"cs_accent_color\"> Cameroon, Central Africa",
+      "bestIvfHeading": "Best IVF Centre in <span class=\"cs_accent_color\"> Gurugram",
       "faqs": [
         {
-          "question": "1. How should I select the best IVF centre in Cameroon?",
-          "answer": "In choosing the best IVF centre in Cameroon, take into account various aspects including the clinic's success rate, the expertise of the fertility specialists, the presence of advanced laboratories, customized treatment plans, patient testimonials, among others."
+          "question": "1. Do people from Cameroon come to India for IVF treatment?",
+          "answer": "Yes, they can. People from Cameroon can come to India for infertility treatment. They should discuss their medical history and needs with the fertility clinic before visiting."
         },
         {
-          "question": "2. What tests will be performed prior to my IVF treatment?",
-          "answer": "Prior to commencing IVF treatment, fertility specialists usually conduct some fertility tests, which include hormone test, ultrasound scan, semen analysis, and other fertility diagnostics in order to develop the best treatment plan for couples."
+          "question": "2. Why do people from Cameroon come to India for IVF?",
+          "answer": "People may decide to come to India due to their fertility experts, reproductive technologies, fertility treatments, and lower healthcare."
         },
         {
-          "question": "3. Are international patients able to undergo IVF in Cameroon?",
-          "answer": "Absolutely, as many IVF centres in Cameroon serve international patients by providing them with customized treatment plans."
+          "question": "3. What kind of fertility treatment could people from Cameroon receive in India?",
+          "answer": "It depends on the health condition of the patient, but treatment methods could be IUI, IVF, ICSI, Embryo Transfer, Freezing of Embryos, etc."
         },
         {
-          "question": "4. Is IVF treatment safe for women of various ages?",
-          "answer": "IVF is regarded as a safe and proven treatment method for infertility problems among eligible women. However, the chances of success usually become lower as you grow older, especially when you are above 35 years old. Your fertility doctor will analyze your condition and prescribe you the most suitable treatment."
+          "question": "4. How expensive is IVF treatment in India for people from Cameroon?",
+          "answer": "IVF cost is not the same for all as treatment needs will differ from person to person. Total cost may include medications, investigations, IVF protocol, ICSI, embryo freezing, and other procedures."
         },
         {
-          "question": "5. What is the length of an IVF cycle?",
-          "answer": "One IVF cycle normally takes 4 to 6 weeks, which includes ovarian stimulation, egg collection, fertilization, growth of embryos, and their transplantation."
+          "question": "5. Can I submit my reports from Cameroon before coming to India?",
+          "answer": "The patient can communicate with the fertility clinic and discuss his or her existing medical reports and history of treatment, and then the specialist will tell you what further evaluation you require."
+        },
+        {
+          "question": "6. How many days do the patients from Cameroon have to stay in India for IVF?",
+          "answer": "The number of days to stay in India will differ according to the IVF protocol, investigations, ovarian response, embryo development, and whether fresh or frozen embryo transfer will be done."
+        },
+        {
+          "question": "7. Can Seeds of Innocens assist foreign patients?",
+          "answer": "The process for foreign patients should be confirmed with Seeds of Innocens directly."
         }
       ]
     },
