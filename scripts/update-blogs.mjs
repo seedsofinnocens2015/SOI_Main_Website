@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "cervix-meaning-in-hindi",
-    title: "Cervix Meaning in Hindi: (सर्विक्स क्या होता है?) Pregnancy में Cervix की पूरी जानकारी",
-    excerpt: "Are you intrigued by the definition of the cervix, what is meant by cervix, or what the term cervical length means during pregnancy? If yes, then rest assured that you are not the only one. Women often have questions like What is cervix, cervical length or cervix length? after coming across these terms in their ultrasound report during pregnancy.",
+    id: "ivf-cost-in-kolkata",
+    title: "IVF Cost in Kolkata: A Complete Guide to IVF Treatment Expenses",
+    excerpt: "Among the initial concerns of couples who are going for fertility treatments is the cost of IVF treatment in Kolkata. Since in vitro fertilization has aided many couples in realizing their dream of becoming parents, knowledge about possible costs makes the process of the treatment easier.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Cervix Meaning in Hindi.png",
-    date: "September 12, 2026",
-    author: "Dr. Monika Maan",
-    category: "Pregnancy",
-    readTime: "11 min read",
-    slug: "cervix-meaning-in-hindi"
+    image: "/assets/img/Blogs/IVF Cost in Kolkata.png",
+    date: "September 15, 2026",
+    author: "Dr. Adrija Ghosal",
+    category: "IVF Process",
+    readTime: "12 min read",
+    slug: "ivf-cost-in-kolkata"
   }
 ];
 
