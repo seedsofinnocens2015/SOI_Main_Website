@@ -392,7 +392,7 @@
     "headerImage": "/assets/img/Doctor-Headers/gauri.webp",
     "name": "Dr. Gauri Agarwal",
     "subtitle": "Founder and Director of Seeds of Innocens IVF & Genestring Labs (Chain of Molecular, Genetic, and Pathology Labs).",
-    "image": "/assets/img/Doctors/Dr Gauri maam.jpg",
+    "image": "/assets/img/Doctors/gauri agarwal.jpg",
     "description": [
       "Dr. Gauri Agarwal, Founder and Director of Seeds of Innocens IVF & Genestring Labs (Chain of Molecular, Genetic, and Pathology Labs). With over 15 years of experience in the field, she has played a pivotal role in bringing innovative fertility solutions to India and beyond. Trained at the prestigious medical institutions in Belgium and Singapore, Dr. Gauri Agarwal has been at the forefront of introducing advanced reproductive technologies and evidence-based fertility treatments. Under the leadership, Seeds of Innocens IVF has expanded globally, establishing IVF centres in Muscat (Oman) and Lusaka (Zambia), which is a significant milestone as one of India’s leading homegrown IVF brands with an international presence.",
       "Seeds of Innocens IVF is recognized as one of the best IVF centres in India and internationally. It is also the FIRST IVF centre in India to be equipped with an in-house genetic testing laboratory, which has enabled comprehensive fertility care and improved treatment outcomes. It was her vision that led Genestring Labs to become India’s First and Largest Airport Covid-19 testing Lab situated at IGI International Airport, New Delhi.",
@@ -434,10 +434,10 @@
     "newSlug": "dr-gauri-agarwal-ivf-specialist"
   },
   {
-    "slug": "dr-alpana-razadan",
-    "uspTitle": "Director of Genomics & Molecular Biology <br /> <span class=\"cs_accent_color\">Dr. Alpana Razadan</span>",
+    "slug": "dr-alpana-razdan",
+    "uspTitle": "Director of Genomics & Molecular Biology <br /> <span class=\"cs_accent_color\">Dr. Alpana Razdan</span>",
     "headerImage": "/assets/img/Doctor-Headers/alpana.webp",
-    "name": "Dr. Alpana Razadan",
+    "name": "Dr. Alpana Razdan",
     "subtitle": "Director - Genomics and Molecular Biology",
     "image": "/assets/img/Doctors/alpana.jpg",
     "description": [
@@ -479,7 +479,7 @@
         "percentage": 86
       }
     ],
-    "newSlug": "dr-alpana-razadan"
+    "newSlug": "dr-alpana-razdan"
   },
   {
     "slug": "dr-lisha-singh",

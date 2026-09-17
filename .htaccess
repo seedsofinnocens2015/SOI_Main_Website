@@ -5,8 +5,8 @@
   # Legacy redirects for static export deployments (Apache/Hostinger)
   # Keep order: service-specific overrides first, then generic doctor mappings.
   RewriteRule ^ivf-doctor/dr-ranjana-mishra-ivf-specialist/?$ /genetic-expert/dr-ranjana-mishra-ivf-specialist/ [R=301,L,NC]
-  RewriteRule ^dr-alpana-razadan-ivf-specialist/?$ /genetic-expert/dr-alpana-razadan/ [R=301,L,NC]
-  RewriteRule ^doctors/dr-alpana-razadan-ivf-specialist/?$ /genetic-expert/dr-alpana-razadan/ [R=301,L,NC]
+  RewriteRule ^dr-alpana-razdan-ivf-specialist/?$ /genetic-expert/dr-alpana-razdan/ [R=301,L,NC]
+  RewriteRule ^doctors/dr-alpana-razdan-ivf-specialist/?$ /genetic-expert/dr-alpana-razdan/ [R=301,L,NC]
   RewriteRule ^doctors/?$ /ivf-doctor/ [R=301,L,NC]
   RewriteRule ^doctors/(.+)/?$ /ivf-doctor/$1/ [R=301,L,NC]
   RewriteRule ^ivf-doctors/?$ /ivf-doctor/ [R=301,L,NC]

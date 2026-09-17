@@ -7,7 +7,7 @@ import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 import { getSeoMetadata } from '@/app/utils/seoMetadata';
 
 const GENETIC_EXPERT_SLUGS = new Set([
-  'dr-alpana-razadan',
+  'dr-alpana-razdan',
   'dr-ranjana-mishra-ivf-specialist',
 ]);
 
