@@ -152,7 +152,7 @@ const HeroSection = ({ data }) => {
                     <div className="container">
                       <div className={`cs_hero_text ${items.isCenterLayout ? 'cs_hero_text_center' : ''}`}>
                         <div className={`cs_hero_text_in ${items.isCenterLayout ? 'cs_hero_text_in_center' : ''}`}>
-                          <h1
+                          <h2
                             className={`cs_hero_title ${
                               items.titleClass ?? ""
                             }`.trim()}
