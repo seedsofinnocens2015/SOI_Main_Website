@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-cost-in-lucknow",
-    title: "IVF Cost in Lucknow: Treatment Cost, Factors & What to Expect",
-    excerpt: "Understanding the cost of IVF in Lucknow is one of the essential steps that couples intending to pursue fertility treatment must take. In vitro fertilisation is an advanced assisted reproductive technique that can aid couples who have fertility issues. The total cost of treatment will depend on various things such as the procedure, medicines, tests, and other services. There are several advanced reproductive care centers in Lucknow, making it a popular place for people who want to undergo fertility treatment.",
+    id: "ivf-cost-in-ghaziabad",
+    title: "IVF Cost in Ghaziabad: Complete Guide to Treatment Expenses",
+    excerpt: "Having babies through fertility treatment is a significant step in one’s life. Being informed about the cost of IVF treatment helps people plan their finances properly. When planning assisted reproductive treatment, knowledge of the IVF cost in Ghaziabad will help you plan your finances and take other factors into account.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Cost in Lucknow.png",
-    date: "September 16, 2026",
-    author: "Dr. Disha Datta",
+    image: "/assets/img/Blogs/IVF Cost in Ghaziabad.png",
+    date: "September 17, 2026",
+    author: "Dr. Gauri Agarwal",
     category: "IVF Process",
     readTime: "13 min read",
-    slug: "ivf-cost-in-lucknow"
+    slug: "ivf-cost-in-ghaziabad"
   }
 ];
 

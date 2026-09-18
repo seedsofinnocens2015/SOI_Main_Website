@@ -454,7 +454,7 @@ const ThankYouInner = () => {
                       <FaHome /> Go to home
                     </span>
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/contact"
                     className="cs_btn cs_style_1"
                     style={{
@@ -465,7 +465,7 @@ const ThankYouInner = () => {
                     }}
                   >
                     <span>Contact us</span>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
