@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-cost-in-ghaziabad",
-    title: "IVF Cost in Ghaziabad: Complete Guide to Treatment Expenses",
-    excerpt: "Having babies through fertility treatment is a significant step in one’s life. Being informed about the cost of IVF treatment helps people plan their finances properly. When planning assisted reproductive treatment, knowledge of the IVF cost in Ghaziabad will help you plan your finances and take other factors into account.",
+    id: "ivf-cost-in-faridabad",
+    title: "IVF Cost in Faridabad: Complete Guide to IVF Treatment Expenses",
+    excerpt: "Having children with the help of reproductive treatments may be a crucial step for some individuals, and gaining knowledge about the costs can make a difference when planning their procedure. In case you are thinking about undergoing fertility treatment, it may be useful to know the cost of IVF in Faridabad to get an idea of possible expenses and preparation.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Cost in Ghaziabad.png",
-    date: "September 17, 2026",
-    author: "Dr. Gauri Agarwal",
+    image: "/assets/img/Blogs/IVF Cost in Faridabad.png",
+    date: "September 18, 2026",
+    author: "Dr. Beena Upadhyay",
     category: "IVF Process",
-    readTime: "13 min read",
-    slug: "ivf-cost-in-ghaziabad"
+    readTime: "10 min read",
+    slug: "ivf-cost-in-faridabad"
   }
 ];
 

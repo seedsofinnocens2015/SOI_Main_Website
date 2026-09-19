@@ -646,12 +646,15 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // transition: transform 0.3s ease;
   }
-    
-    // &:hover img {
-    //   transform: scale(1.05);
-    // }
+  
+  @media screen and (min-width: 1300px) and (max-width: 1450px) {
+    height: 125px; /* Proportional height to avoid cropping at 1366px */
+    img {
+      object-fit: contain; /* Ensure text isn't cut off */
+      background-color: #f8f9fa; /* Slight background if there are small gaps */
+    }
+  }
   
   @media (max-width: 767px) {
     height: 120px;
