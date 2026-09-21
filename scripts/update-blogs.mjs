@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-cost-in-faridabad",
-    title: "IVF Cost in Faridabad: Complete Guide to IVF Treatment Expenses",
-    excerpt: "Having children with the help of reproductive treatments may be a crucial step for some individuals, and gaining knowledge about the costs can make a difference when planning their procedure. In case you are thinking about undergoing fertility treatment, it may be useful to know the cost of IVF in Faridabad to get an idea of possible expenses and preparation.",
+    id: "best-foods-for-hormonal-balance",
+    title: "Best Foods for Hormonal Balance: What to Eat for Healthy Hormones",
+    excerpt: "Hormones influence numerous body functions such as metabolism, menstrual cycle, mood, sleep, and reproductive well-being. There are various factors affecting hormones, such as stress, poor sleep, an unbalanced diet, diseases, and lifestyle.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Cost in Faridabad.png",
-    date: "September 18, 2026",
-    author: "Dr. Beena Upadhyay",
-    category: "IVF Process",
-    readTime: "10 min read",
-    slug: "ivf-cost-in-faridabad"
+    image: "/assets/img/Blogs/Best Foods for Hormonal Balance.png",
+    date: "September 19, 2026",
+    author: "Dr. Kriti Prasad",
+    category: "Women's Health",
+    readTime: "11 min read",
+    slug: "best-foods-for-hormonal-balance"
   }
 ];
 

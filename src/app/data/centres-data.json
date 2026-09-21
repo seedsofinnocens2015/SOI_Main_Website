@@ -165,9 +165,7 @@
         "Blastocyst Transfer",
         "Fertility Assessment"
       ],
-      "doctors": [
-        
-      ],
+      "doctors": [],
       "timing": "9:00 AM to 6:00 PM",
       "testimonials": [
         {
@@ -3026,7 +3024,7 @@
     },
     {
       "slug": "best-ivf-centre-in-mauritius",
-      "name": "Mauritius",
+      "name": "Gurugram",
       "location": "Seeds of Innocens IVF Centre, Mauritius",
       "state": "Mauritius",
       "stateSlug": "mauritius",
@@ -3034,11 +3032,11 @@
       "metaDescription": "Seeds of Innocens IVF Centre in Mauritius offers advanced fertility treatments, personalised care and international-standard reproductive medicine.",
       "image": "/assets/img/Centres/gurgaon.jpg",
       "headerImage": "/assets/img/Headers/mauritius.webp",
-      "uspTitle": "ADVANCED FERTILITY CARE <br /> <span class=\"cs_accent_color\">NOW IN MAURITIUS</span>",
+      "uspTitle": "IVF Treatment in India for <br /> <span class=\"cs_accent_color\">Patients from Mauritius</span>",
       "description": [
-        "Infertility is an emotional journey and the most challenging one too that affects many couples globally, including those in Mauritius. While mostly couples look for the best IVF centre in Mauritius and they often discover that travelling to India provides access to the world-class fertility care, experienced specialists and an advanced reproductive technology with the cost-effective treatment options available.",
-        "Since India has become one of the major destinations for the fertility treatment, welcoming international patients with the customized care and consistently high success rates. So, if you are searching for the best IVF doctor in India, an experienced IVF fertility specialist in India or the comprehensive fertility treatment which meets international standards, Seeds of Innocens IVF is a trusted fertility centre for the couples in Mauritius who are seeking the joy of parenthood. ",
-        "For successful fertility treatment, not only the technology but also the experience of specialists is needed. At Seeds of Innocents IVF, couples receive individual fertility assessment before treatment. Our team consists of some of the best IVF specialist doctors in India. They collaborate with our embryologists, fertility counsellors and other specialists to develop an individual treatment plan."
+        "India is considered a medical tourism destination for fertility and reproductive care due to advanced fertility procedures and experienced fertility doctors. Patients from Mauritius who are looking for IVF centres in India should plan to visit Seeds of Innocens Gurgaon, where they can learn about their fertility history and the treatment process from fertility experts.",
+        "Depending on the treatment plan, IVF, ICSI, IUI, embryo transfer, embryo freezing, and other fertility procedures can be done for the patient based on their condition and requirements. Those patients looking for infertility treatment in Mauritius or even outside of Mauritius can opt for specialized infertility treatment from India.",
+        "The cost of IVF treatment in India depends on various parameters like the medical condition of the patient, the treatment procedure, diagnostics, drugs, etc."
       ],
       "phone": "+91 98103 50512",
       "email": "info@seedsofinnocence.com",
@@ -3051,22 +3049,38 @@
         "Genetic Testing (PGT)",
         "Fertility Counselling"
       ],
-      "doctors": [],
+      "doctors": [
+        {
+          "name": "Dr. Gauri Agarwal",
+          "subtitle": "Founder & Chief IVF Specialist",
+          "image": "/assets/img/Doctors/gauri agarwal.jpg",
+          "experience": "15+ Years",
+          "location": "Delhi/NCR",
+          "slug": "dr-gauri-agarwal"
+        },
+        {
+          "name": "Dr. Aditi Bhatnagar",
+          "subtitle": "Senior IVF Specialist",
+          "image": "/assets/img/Doctors/aditi.jpg",
+          "experience": "12+ Years",
+          "location": "Gurugram-Haryana",
+          "slug": "dr-aditi-bhatnagar"
+        }
+      ],
       "timing": "9:00 AM to 6:00 PM",
       "isInternational": true,
       "aboutUs": {
         "title": "About Seeds of Innocens IVF Centre Mauritius",
         "image": "/assets/img/Centres/gurgaon.jpg",
         "paragraphs": [
-          "One of the biggest factors behind patient attraction of Mauritians to India for treatment is the affordability of fertility treatment in India. India provides advanced IVF treatments at affordable costs, keeping up with the safety and quality standards as compared to many other international destinations.",
-          "Additionally, our staff helps international patients from Mauritius plan their appointments and treatments, and provides assistance regarding traveling, accommodation, and aftercare visits. When you are searching for the best IVF doctor in India or a professional IVF specialist in India, a choice of center with great expertise and advanced infrastructure can make a difference in your infertility treatment process.",
-          "Experience specialists, internationally accepted treatment protocol, advanced lab facilities, and comprehensive fertility services – all available in one place.",
-          "If you are looking for best IVF center in Mauritius, you should explore the benefits of fertility treatment in India. With experience specialists, advanced technology, personalized treatment, and dedicated international patient service, Seeds of Innocens IVF will help you to overcome infertility and become a parent.",
-          "Whether you need help from the best IVF specialist in India, consultations from an experienced IVF doctor in India, or services of the best gynecologist in India for your fertility issues, our expert team will assist you at every level. Get closer to parenthood through consultations with Seeds of Innocens IVF and find out why patients from Mauritius seek fertility treatments in India."
+          "Gurgaon or Gurugram is gaining recognition as an important destination for healthcare in the Delhi NCR area, offering assisted reproductive technology procedures as well as fertility services. Seeds of Innocens Fertility Center in Gurgaon is one of the best ivf center that is known for customized fertility treatments based on the individual fertility needs of the patient.",
+          "The center is one of the best IVF centers in Mauritius for patients who want to go for IVF in Mauritius, infertility treatment abroad, etc. The center offers various fertility services like IVF, ICSI, IUI, blastocyst transfer, embryo freezing, and genetic testing.",
+          "Travelers from Mauritius can visit this fertility center and get information about the various fertility services, treatment process, and cost of treatment in Gurgaon. The fertility lab facility in this center makes it convenient for international patients to plan their fertility treatment in India.",
+          "Patients can meet the best IVF doctors or fertility specialists according to their individual needs."
         ]
       },
       "contactInfo": {
-        "title": "Seeds of Innocens - Best IVF Centre in Mauritius",
+        "title": "Seeds of Innocens - Best IVF Centre in Gurugram",
         "openDays": "Monday to Saturday",
         "timings": "9:00 AM to 6:00 PM",
         "address": "Seeds of Innocens IVF, Plot No. -2, Sector-42, Gurgaon Near Nagar Nigam Office, Gurugram, Haryana",
@@ -3074,7 +3088,7 @@
         "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.580722876209!2d77.09699407549458!3d28.462052875758218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d193adc6980c3%3A0xf93927ab31cdcf44!2sSeeds%20of%20Innocens%20IVF%20Centre%20Gurgaon%20%7C%20Fertility%20Hospital%20In%20Gurugram!5e0!3m2!1sen!2sin!4v1785754377714!5m2!1sen!2sin",
         "phone": "+91 98103 50512"
       },
-      "bestIvfHeading": "Best IVF Centre <span class=\"cs_accent_color\">in Mauritius",
+      "bestIvfHeading": "Best IVF Centre <span class=\"cs_accent_color\">in Gurugram",
       "faqs": [
         {
           "question": "1. Why do patients from Mauritius prefer IVF treatment in India?",
