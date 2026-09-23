@@ -26,7 +26,7 @@ const leadershipTeamData = [
     id: 'gauri',
     name: 'Dr. Gauri Agarwal',
     profession: 'Founder & Chief Fertility Specialist',
-    imageUrl: getAssetPath('/assets/img/Doctors/Dr%20Gauri%20maam.jpg'),
+    imageUrl: getAssetPath('/assets/img/Doctors/gauri agarwal.jpg'),
     experience: '16+ Years',
     location: 'Delhi/NCR',
     bio: [

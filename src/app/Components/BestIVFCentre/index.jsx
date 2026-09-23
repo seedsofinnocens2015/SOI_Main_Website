@@ -287,7 +287,7 @@ const BestIVFCentre = ({
                             <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                             How Treatment
                             </span>{' '}
-                            <span style={{ color: '#000000' }}>Process Works?</span>
+                            <span style={{ color: '#000000' }}>IVF Process Works?</span>
                         </h2>
                         <p
                             className="cs_best_ivf_description cs_best_ivf_description--center-intro text-center"
@@ -336,7 +336,7 @@ const BestIVFCentre = ({
                 >
                     <div className="container">
                         <div className="cs_section_heading cs_style_1 text-center mb-5">
-                            <h2 className="cs_section_title">Our Expert  <span style={{ color: '#000000' }}>Team of Doctors</span></h2>
+                            <h2 className="cs_section_title">Our Expert Team <span style={{ color: '#000000' }}> of IVF Doctors</span></h2>
                             <p className="cs_best_ivf_description cs_best_ivf_description--center-intro text-center">
                                 {/* {expertTeamDescription} */}
                                 The fertility specialists, embryologists, genetic experts, counselors, nurses, and lab technicians at Seeds of Innocens IVF Dhanbad are one of the best IVF centre in Dhanbad that work as a multi-disciplinary team to bring quality fertility services to their patients. Our team believes that good communication, transparency, support, and personal attention are crucial in order to ensure a good fertility experience.
@@ -431,12 +431,12 @@ const BestIVFCentre = ({
                     <div className="container">
                         {/* Section Heading matching NewsMediaSection style */}
                         <div className="cs_service_title_section">
-                            <h1 className="cs_service_main_title">
+                            <h2 className="cs_service_main_title">
                                 <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                     WHAT OUR HAPPY
                                 </span>{' '}
                                 <span style={{ color: '#000000' }}>COUPLES ARE SAYING!</span>
-                            </h1>
+                            </h2>
                             <p
                                 style={{
                                     fontSize: 'clamp(14px, 2vw, 18px)',
@@ -503,12 +503,12 @@ const BestIVFCentre = ({
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     {/* Section Heading matching NewsMediaSection style */}
                     <div className="cs_service_title_section mb-10">
-                        <h1 className="cs_service_main_title">
+                        <h2 className="cs_service_main_title">
                             <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
-                                WHY CHOOSE
+                                WHY CHOOSE SEEDS OF INNOCENS IVF
                             </span>{' '}
-                            <span style={{ color: '#000000' }}>SEEDS OF INNOCENS IVF</span>
-                        </h1>
+                            <span style={{ color: '#000000' }}> Center in {cityName} </span>
+                        </h2>
                     </div>
                     {/* Feature Grid - Mobile 2 Rows */}
                     <div className="d-block d-sm-none mt-4">
@@ -656,12 +656,12 @@ const BestIVFCentre = ({
                     <div className="cs_about_v2_container">
                         {/* Main Heading */}
                         <div className="cs_service_title_section mb-10">
-                            <h1 className="cs_service_main_title">
+                            <h3 className="cs_service_main_title">
                                 <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                     About Seeds of Innocens IVF
                                 </span>{' '}
                                 <span style={{ color: '#000000' }}> Centre {cityName}</span>
-                            </h1>
+                            </h3>
                         </div>
                         <div className="cs_about_v2_wrapper">
                             {/* Building image */}
@@ -762,12 +762,12 @@ const BestIVFCentre = ({
                 >
                     <div className="container">
                         <div className="cs_service_title_section mb-10">
-                            <h1 className="cs_service_main_title">
+                            <h3 className="cs_service_main_title">
                                 <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
                                     FREQUENTLY ASKED
                                 </span>{' '}
                                 <span style={{ color: '#000000' }}>QUESTIONS</span>
-                            </h1>
+                            </h3>
                         </div>
                         <div className="row">
                             <div className="col-12">

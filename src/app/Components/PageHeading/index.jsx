@@ -85,7 +85,7 @@ const PageHeading = ({ data }) => {
         {/* USP Content Section */}
         <div className={centerUspTitle ? 'col-lg-12 col-md-12' : 'col-lg-8 col-md-12 mb-4 mb-lg-0'}>
           <div className={`cs_header_usp_wrapper ${hideAppointmentForm ? 'cs_header_usp_wrapper_no_form' : ''} ${centerUspTitle ? 'text-center cs_header_usp_wrapper_center_title' : ''}`}>
-            <h1 className={`cs_header_usp_topline ${centerUspTitle ? 'text-center' : ''}`}>
+            <h2 className={`cs_header_usp_topline ${centerUspTitle ? 'text-center' : ''}`}>
               {data?.uspTitle ? (
                 <span dangerouslySetInnerHTML={{ __html: data.uspTitle }} />
               ) : data?.title ? (
@@ -96,7 +96,7 @@ const PageHeading = ({ data }) => {
                   <span className="cs_accent_color">YOUR MIRACLE AWAITS</span>
                 </>
               )}
-            </h1>
+            </h2>
             {!hideStatsGrid && (
               <div className="cs_header_stats_grid">
                 <div className="cs_header_stat_item">

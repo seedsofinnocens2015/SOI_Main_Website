@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "best-foods-for-hormonal-balance",
-    title: "Best Foods for Hormonal Balance: What to Eat for Healthy Hormones",
-    excerpt: "Hormones influence numerous body functions such as metabolism, menstrual cycle, mood, sleep, and reproductive well-being. There are various factors affecting hormones, such as stress, poor sleep, an unbalanced diet, diseases, and lifestyle.",
+    id: "ivf-cost-in-kanpur",
+    title: "IVF Cost in Kanpur: Treatment Expenses, Factors, and What to Expect",
+    excerpt: "Knowing about the costs associated with fertility treatment is an important step for couples considering undergoing the process. The cost of IVF in Kanpur can depend on various factors, such as the type of fertility treatment, diagnostic tests, drugs, the number of IVF procedures needed, and other treatments.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/Best Foods for Hormonal Balance.png",
-    date: "September 19, 2026",
-    author: "Dr. Kriti Prasad",
-    category: "Women's Health",
-    readTime: "11 min read",
-    slug: "best-foods-for-hormonal-balance"
+    image: "/assets/img/Blogs/IVF Cost in Kanpur.png",
+    date: "September 22, 2026",
+    author: "Dr. Ayushi Agarwal",
+    category: "IVF Process",
+    readTime: "13 min read",
+    slug: "ivf-cost-in-kanpur"
   }
 ];
 

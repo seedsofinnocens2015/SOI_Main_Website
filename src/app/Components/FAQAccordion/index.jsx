@@ -95,9 +95,9 @@ export default function FAQAccordion({ faqs = [] }) {
               aria-controls={`faq-answer-${idx}`}
               id={`faq-question-${idx}`}
             >
-              <span className="faq_accordion_question_text">
+              <h3 className="faq_accordion_question_text">
                 {faq.question}
-              </span>
+              </h3>
               <span
                 className="faq_accordion_toggle"
                 aria-hidden
