@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-cost-in-kanpur",
-    title: "IVF Cost in Kanpur: Treatment Expenses, Factors, and What to Expect",
-    excerpt: "Knowing about the costs associated with fertility treatment is an important step for couples considering undergoing the process. The cost of IVF in Kanpur can depend on various factors, such as the type of fertility treatment, diagnostic tests, drugs, the number of IVF procedures needed, and other treatments.",
+    id: "ivf-cost-in-gorakhpur",
+    title: "IVF Cost in Gorakhpur Explained: A Step-by-Step Guide to IVF Expenses",
+    excerpt: "The cost of the treatment is one of the major considerations for couples opting for infertility treatment. The cost of IVF in Gorakhpur may vary based on a number of reasons such as the treatment cycle, diagnostic tests, medications, lab charges, and the number of IVF cycles needed. IVF is a procedure through which the eggs are harvested from the ovaries and fertilised by the sperm in a laboratory.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Cost in Kanpur.png",
-    date: "September 22, 2026",
-    author: "Dr. Ayushi Agarwal",
+    image: "/assets/img/Blogs/IVF Cost in Gorakhpur Explained.png",
+    date: "September 23, 2026",
+    author: "Dr. Nivedita Nehal",
     category: "IVF Process",
-    readTime: "13 min read",
-    slug: "ivf-cost-in-kanpur"
+    readTime: "9 min read",
+    slug: "ivf-cost-in-gorakhpur"
   }
 ];
 

@@ -304,16 +304,7 @@
         "Ovulation Monitoring",
         "Embryo Transfer"
       ],
-      "doctors": [
-        {
-          "name": "Dr. Monika Maan",
-          "subtitle": "IVF Specialist",
-          "image": "/assets/img/Doctors/monika.jpg",
-          "experience": "8+ Years",
-          "location": "Pitampura-Delhi",
-          "slug": "dr-monika-maan"
-        }
-      ],
+      "doctors": [],
       "timing": "9:00 AM to 6:00 PM",
       "testimonials": [
         {
@@ -708,7 +699,7 @@
       "metaDescription": "Best IVF Centre in Agra - Seeds Of Innocens IVF provides modern fertility treatments, experienced doctors, and high success rates.",
       "image": "/assets/img/Centres/agra.jpg",
       "headerImage": "/assets/img/Headers/agra.webp",
-      "uspTitle": "WORLD-CLASS FERTILITY CARE <br /> <span class=\"cs_accent_color\">SERVING FAMILIES ACROSS AGRA</span>",
+      "uspTitle": "Best IVF Centre in Agra for <span class=\"cs_accent_color\"> Advanced Fertility Solutions</span>",
       "description": [
         "If you are looking for the best IVF centre in Agra, then you are at the right place because Seeds of Innocens IVF is your trusted partner. As a leading ivf centre in Agra, we specialize in advanced fertility treatments (Assisted Reproductive Technology-ART) designed to guide couples to overcome the challenges of infertility and realize their dream of beginning a family.",
         "As our best IVF clinic in Agra, we define IVF (In Vitro Fertilization) as a clinical procedure where an egg is fertilized by the sperm outside the body in a specialized laboratory. However, this process is often referred to by patients who are looking for an IVF centre in Agra, which offers one of the best success rates for couples who are facing various reproductive hurdles. As an advanced fertility centre in Agra, Seeds of Innocens IVF combines clinical methods with personalized care to ensure you feel supported at each step."
@@ -790,35 +781,47 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+Block+No.9/4+1st+Floor+Shankar+Point+Sanjay+Place+Civil+Lines+Agra+U.P.&output=embed",
         "phone": "+918448180814"
       },
-      "bestIvfHeading": "Best IVF Centre in Agra, Uttar Pradesh",
+      "bestIvfHeading": "Best IVF Centre in <span class=\"cs_accent_color\">Agra, Uttar Pradesh",
       "faqs": [
         {
-          "question": "Which other fertility treatments can one consider in addition to IVF in Agra?",
-          "answer": "In Agra, the fertility centers provide a variety of other fertility treatments in Agra like IUI, ICSI, ovulation induction, egg freezing, and fertility preservation depending on the fertility condition of the individual."
+          "question": "1. What is the cost of IVF in Agra?",
+          "answer": "The cost of IVF in Agra depends on medicines, investigations, the actual procedures, and a few individual needs."
         },
         {
-          "question": "How is the process of IUI different from IVF in Agra?",
-          "answer": "While in IUI, the insemination is done directly in the uterus whereas in IVF, the fertilization is carried out in IVF. The type of procedure would depend upon the fertility condition of the couple."
+          "question": "2. How to select the best IVF clinic in Agra?",
+          "answer": "When you are choosing an IVF clinic, you should really look at fertility specialists, lab setup, treatment steps, and even the way patients are cared for."
         },
         {
-          "question": "In which fertility situation will one be advised to go for ICSI in Agra?",
-          "answer": "ICSI treatment is usually suggested when there is an infertility issue with the man, in case of low sperm count or motility."
+          "question": "3. What is the best IVF hospital in Agra?",
+          "answer": "For the best IVF hospital in Agra, focus on fertility services plus specialist experience."
         },
         {
-          "question": "Would fertility treatments in Agra help resolve the problem of hormonal imbalance in an individual?",
-          "answer": "Fertility problems related to hormonal imbalance could be solved by using fertility treatments in Agra like ovulation induction and hormone therapy."
+          "question": "4. How to select the best IVF center in Agra?",
+          "answer": "Compare the specialist’s track record, the fertility treatments offered, the lab equipment, and patient care services."
         },
         {
-          "question": "Is egg freezing available as a fertility solution in Agra?",
-          "answer": "Yes, egg freezing in Agra has become a common practice among fertility options in Agra."
+          "question": "5. How to select the best IVF specialist in Agra?",
+          "answer": "It helps to check the specialist’s qualifications, clinical experience, and their practical expertise in infertility care."
         },
         {
-          "question": "On what basis do doctors suggest fertility treatments in Agra?",
-          "answer": "On the basis of several factors like age, history of health issues, test reports, and the period of infertility, doctors recommend the best possible treatment in Agra."
+          "question": "6. How can I select the best IVF doctor in Agra?",
+          "answer": "You can decide based on how experienced the doctor is with IVF for infertility and related options."
         },
         {
-          "question": "Will the fertility treatments in Agra be effective for couples suffering from unexplained infertility?",
-          "answer": "Yes, various fertility treatments in Agra such as IUI and IVF have been used to treat cases of unexplained infertility."
+          "question": "7. How can I locate an IVF centre near me in Agra?",
+          "answer": "You can search for an IVF centre near you by checking location and closeness, plus the fertility services they offer."
+        },
+        {
+          "question": "8. What are the treatment methods used at an IVF centre in Agra?",
+          "answer": "At an IVF centre in Agra, you may find options like IVF, ICSI, IUI, fertility assessment, and embryo transfer."
+        },
+        {
+          "question": "9. How can I book a consultation at an IVF centre in Agra?",
+          "answer": "You can call or contact the IVF centre in Agra to set up an appointment with one of their fertility specialists."
+        },
+        {
+          "question": "10. What are the factors influencing the cost of IVF treatment in Agra?",
+          "answer": "IVF cost mainly comes from medications, testing, and procedures, plus a few other parts along the way."
         }
       ]
     },
@@ -832,7 +835,7 @@
       "metaDescription": "Best IVF Centre in Gorakhpur - Seeds Of Innocens IVF offers modern fertility treatments, experienced doctors, and advanced technology for infertility care.",
       "image": "/assets/img/Centres/gorakhpur.jpg",
       "headerImage": "/assets/img/Headers/gorakhpur.png",
-      "uspTitle": "ADVANCED IVF SOLUTIONS <br /> <span class=\"cs_accent_color\">FOR FAMILIES IN GORAKHPUR</span>",
+      "uspTitle": "Best IVF Centre in Gorakhpur <span class=\"cs_accent_color\">for Advanced Fertility Treatment</span>",
       "description": [
         "Parenthood path can be transformational and has an uplifting experience in the fertility therapy. Finding the Best IVF clinic in Gorakhpur, we understand that the dream of having a child is deeply personal. Our commitment to empowering individuals and couples with fertility challenges is reflected not only in our state-of-the-art facilities but also in our unwavering dedication to providing accessible and transparent IVF costs in Gorakhpur.",
         "This guide will take you on a journey through our world-class fertility centre, exploring the comprehensive range of services, and the experienced medical team. We believe in fulfilling the commitment to making the best IVF clinic in Gorakhpur, a journey that is filled with support,hope and success."
@@ -913,35 +916,47 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+2nd+Floor+1076+Kamlesh+Shopping+Arcade+Near+Kalimandir+Golghar+Gorakhpur+U.P.&output=embed",
         "phone": "+919459053333"
       },
-      "bestIvfHeading": "Best IVF Centre in Gorakhpur, Uttar Pradesh",
+      "bestIvfHeading": "Best IVF Centre in <span class=\"cs_accent_color\">Gorakhpur, Uttar Pradesh",
       "faqs": [
         {
-          "question": "Do Seeds of Innocens IVF in Gorakhpur offer fertility treatment with modern technology?",
-          "answer": "Yes, Seeds of Innocens IVF in Gorakhpur is well-equipped with an advanced technology and updated fertility treatments."
+          "question": "1. What’s the IVF cost in Gorakhpur?",
+          "answer": "The IVF cost in Gorakhpur really varies a lot; it depends on medication, diagnostic tests, procedures, and your own treatment needs."
         },
         {
-          "question": "Can IVF treatment in Gorakhpur help couples from eastern Uttar Pradesh?",
-          "answer": "Yes, IVF treatment in Gorakhpur offers a major fertility hub for the patients from the eastern Uttar Pradesh and nearby regions."
+          "question": "2. How do I find the best IVF clinic in Gorakhpur?",
+          "answer": "You can check for experienced fertility specialists and the kind of laboratory setup they use, like advanced embryo lab facilities."
         },
         {
-          "question": "Is IVF treatment in Gorakhpur suitable for unexplained infertility?",
-          "answer": "Yes, IVF is one of the effective treatments for an unexplained infertility cases. However, IVF hospital in Gorakhpur offer various fertility treatments."
+          "question": "3. Which is the best IVF hospital in Gorakhpur?",
+          "answer": "The best IVF hospital in Gorakhpur should focus on specialist fertility care and offer assisted reproductive treatments that actually match your case."
         },
         {
-          "question": "Are IVF specialists in Gorakhpur experienced?",
-          "answer": "Yes, majorly IVF clinic have qualified and highly experienced IVF specialists in Gorakhpur."
+          "question": "4. How do I choose the best IVF centre in Gorakhpur?",
+          "answer": "Compare doctors’ experience, the treatments they offer, embryology facilities, and how they support patients."
         },
         {
-          "question": "Do IVF centres in Gorakhpur offer affordable treatment plans?",
-          "answer": "Yes, IVF treatment in Seeds of Innocens IVF Gorakhpur is affordable with flexible payment options."
+          "question": "5. How can I find the best IVF specialist in Gorakhpur?",
+          "answer": "Focus on qualifications, overall experience, and infertility expertise. Try to find a doctor who explains your diagnosis plainly and then outlines treatment options step by step, maybe."
         },
         {
-          "question": "Can IVF treatment in Gorakhpur be started quickly after consultation?",
-          "answer": "Yes, after initial tests, IVF treatment in Gorakhpur can start within a short time frame."
+          "question": "6. How do I choose the best IVF doctor in Gorakhpur?",
+          "answer": "Check the doctor’s experience with IVF and other assisted reproductive techniques; that part matters a lot."
         },
         {
-          "question": "Do Seeds of Innocens IVF fertility centre in Gorakhpur provide emotional support during treatment?",
-          "answer": "Yes, patient support and counselling are often provided to help couples throughout the journey."
+          "question": "7. How can I find an IVF centre near me in Gorakhpur?",
+          "answer": "Search for an IVF centre near you that is easy to reach and provides the fertility services you need."
+        },
+        {
+          "question": "8. What treatments are available at an IVF centre in Gorakhpur?",
+          "answer": "An IVF centre in Gorakhpur may provide IVF, ICSI, IUI, fertility testing, embryo transfer, and fertility preservation."
+        },
+        {
+          "question": "9. How can I book a consultation at an IVF centre in Gorakhpur?",
+          "answer": "Just contact the fertility centre and schedule an appointment with a specialist. The doctor usually reviews your fertility history, and then suggests the right tests and next steps."
+        },
+        {
+          "question": "10. What factors affect IVF treatment cost in Gorakhpur?",
+          "answer": "The overall cost can depend on medicines, diagnostic tests, procedures, and also how many treatment cycles you end up needing."
         }
       ]
     },
@@ -955,7 +970,7 @@
       "metaDescription": "Seeds Of Innocens IVF, the best IVF centre in Kanpur, offers IVF, IUI, egg & embryo freezing with high success rates at affordable costs.",
       "image": "/assets/img/Centres/kanpur.jpg",
       "headerImage": "/assets/img/Headers/kanpur.webp",
-      "uspTitle": "ADVANCED REPRODUCTIVE CARE <br /> <span class=\"cs_accent_color\">FOR FAMILIES IN KANPUR</span>",
+      "uspTitle": "Best IVF Centre in Kanpur for <span class=\"cs_accent_color\"> Your Parenthood Journey</span>",
       "description": [
         "Couples searching for the best IVF Centre in Kanpur for infertility treatments might come across various options through social media platforms. However, due to the wide range of available options, it becomes difficult to decide on one place that will give you reliable fertility solutions at an affordable cost. If you, too, are going through this confusing phase, here is why you should choose the best IVF centre in Kanpur as your partner in parenthood dreams. Seeds of Innocens IVF is well-known for helping infertile couples to find the best treatment. With 21000+ happy deliverers and 35+ IVF centres pan-India and 30+ fertility specialists, we are spreading the joy of parenthood. ",
         "Seeds of Innocens IVF centre in Kanpur is a part of India’s fertility chain clinics and uses state-of-the-art technology at an economical cost for your treatment."
@@ -1036,7 +1051,49 @@
         "mapUrl": "https://www.google.com/maps?q=Seeds+of+Innocens+IVF+7/153+Kumhar+Wali+Gali+Near+Kanpur+Vidya+Mandir+Khalasi+Line+Swaroop+Nagar+Kanpur+Uttar+Pradesh+208002&output=embed",
         "phone": "+918276006464"
       },
-      "bestIvfHeading": "Best IVF Centre in Kanpur, Uttar Pradesh"
+      "bestIvfHeading": "Best IVF Centre in<span class=\"cs_accent_color\"> Kanpur, Uttar Pradesh",
+      "faqs": [
+        {
+          "question": "1. What is the IVF cost in Kanpur?",
+          "answer": "The cost of IVF treatment in Kanpur is dependent on the kind of medication, investigations, procedures, and personalized treatment that will be needed."
+        },
+        {
+          "question": "2. How do I identify the best IVF centre in Kanpur?",
+          "answer": "You should check out experts in fertility, the quality of the embryology laboratory, and the treatment options offered."
+        },
+        {
+          "question": "3. What is the best IVF centre in Kanpur?",
+          "answer": "The best IVF hospital in Kanpur would be one that specializes in fertility and offers suitable reproductive treatments."
+        },
+        {
+          "question": "4. How do I select the best IVF centre in Kanpur?",
+          "answer": "Look at the specialist's experience, treatment options, laboratory, and patient care services. It's also best to have a preliminary consultation with the doctor."
+        },
+        {
+          "question": "5. How can I find the best IVF specialist in Kanpur?",
+          "answer": "You should check out the qualifications, experience, and expertise of the specialist in fertility treatment."
+        },
+        {
+          "question": "6. How to choose the best IVF doctor in Kanpur?",
+          "answer": "Look into the expertise of the IVF doctor in IVF, ICSI, IUI, and infertility management. Tell about your fertility history prior to fixing a plan of action."
+        },
+        {
+          "question": "7. How to locate an IVF clinic near me in Kanpur?",
+          "answer": "Look for an IVF clinic near me considering the convenience, availability of treatments, and specialty services."
+        },
+        {
+          "question": "8. What treatment is offered by IVF clinics in Kanpur?",
+          "answer": "IVF clinics in Kanpur offer IVF, ICSI, IUI, fertility testing, embryo transfer, and fertility preservation. The type of treatment you need depends on your fertility analysis."
+        },
+        {
+          "question": "9. How to schedule a consultation in an IVF clinic in Kanpur?",
+          "answer": "Get in touch with the fertility center directly in order to set up a consultation with an IVF expert. You will be advised on fertility testing."
+        },
+        {
+          "question": "10. What are the factors that affect the cost of IVF treatment in Kanpur?",
+          "answer": "The cost of IVF treatment depends on medication, diagnosis, procedures, and cycles. The overall cost differs depending on your fertility needs."
+        }
+      ]
     },
     {
       "slug": "patna-bihar",

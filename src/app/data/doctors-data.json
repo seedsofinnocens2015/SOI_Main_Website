@@ -527,56 +527,7 @@
     ],
     "newSlug": "dr-lisha-singh-ivf-specialist"
   },
-  {
-    "slug": "dr-monika-maan",
-    "uspTitle": "Centre Head – Pitampura Delhi NCR <span class=\"cs_accent_color\">Dr. Monika Maan</span>",
-    "headerImage": "/assets/img/Doctor-Headers/monika.webp",
-    "name": "Dr. Monika Maan",
-    "subtitle": "Centre Head & IVF Consultant",
-    "image": "/assets/img/Doctors/monika.jpg",
-    "description": [
-      "Highly accomplished and forward-thinking IVF Specialist & Obstetrician-Gynecologist with substantial experience in the best fertility care facilities. Presently working as Centre Head at Seeds of Innocens IVF, focusing on clinical excellence, patient success, and operational leadership in the field of reproductive medicine. Dr. Monika Maan Sharma is well-known for exceptional skills in Assisted Reproductive Technology (IVF/IUI), high-risk obstetrics, and minimally invasive gynecology, with a solid academic & research background. Renowned for exceptional skills in fertility medicine, combining precision, ethics, and strategic leadership."
-    ],
-    "location": "Pitampura - Delhi",
-    "email": "drmonikamaan@seedsofinnocens.com",
-    "qualification": "MBBS, MS (Obstetrics & Gynecology), Fellowship in ART",
-    "specialization": "Assisted Reproductive Technology (IVF/IUI), High-Risk Obstetrics, Minimally Invasive Gynecology",
-    "experience": "10+ years",
-    "workExperience": [
-      "Dr. Monika Maan has worked with some of the most renowned healthcare organizations in India. She has worked as an Assistant Professor and Senior Resident in OBGY before establishing her practice in IVF. Her clinical profile reflects her association as an Associate Consultant at Fortis Shalimar Bagh and Cloudnine Hospital, Punjabi Bagh. She is currently practicing at Apollo Cradle, Moti Nagar. She has significant experience in laparoscopic procedures and ultrasound-guided fertility treatments. She is currently practicing as Clinical Head at Seeds of Innocens IVF Pitampura, New Delhi."
-    ],
-    "education": [
-      "MBBS – Santosh Medical College, Ghaziabad (2011)",
-      "MS (Obstetrics & Gynecology) – Dr. D. Y. Patil Medical College, Pune (2016)",
-      "Fellowship in ART and Ultrasound – Nadkarni Hospital, Gujarat",
-      "Fellowship in ART – RISAA IVF, New Delhi",
-      "FMAS – AMASI, February 2020",
-      "Laparoscopy Fellowship – Tulip Hospital, Sonipat",
-      "MRCOG Part 1 – Cleared"
-    ],
-    "awards": [
-      "Invited Faculty & Panelist (IUI) – ISAR Maharashtra Conference (2019)"
-    ],
-    "progressBars": [
-      {
-        "label": "IVF Procedures",
-        "percentage": 85
-      },
-      {
-        "label": "Patient Satisfaction",
-        "percentage": 92
-      },
-      {
-        "label": "Success Rate",
-        "percentage": 75
-      },
-      {
-        "label": "Clinical Expertise",
-        "percentage": 83
-      }
-    ],
-    "newSlug": "dr-monika-mann-ivf-specialist"
-  },
+ 
   {
     "slug": "dr-pratik-kakani",
     "uspTitle": "Surgery & Fertility Expert in Ghaziabad <span class=\"cs_accent_color\">Dr. Pratik Kakani</span>",
