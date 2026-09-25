@@ -869,54 +869,7 @@
     ],
     "newSlug": "dr-debilina-roy-ivf-specialist"
   },
-  {
-    "slug": "dr-sanjana-singh",
-    "uspTitle": "Best IVF Specialist in Patna <br /> <span class=\"cs_accent_color\">Dr. Sanjana Singh</span>",
-    "headerImage": "/assets/img/Doctor-Headers/sanjana.webp",
-    "name": "Dr. Sanjana Singh",
-    "subtitle": "Senior Fertility Consultant",
-    "image": "/assets/img/Doctors/sanjana.png",
-    "description": [
-      "Dr. Sanjana Singh is a highly experienced Gynecologist, Obstetrician, and Fertility expert with more than 7 years of experience in gynecology, reproductive medicine, infertility solutions, and patient counseling. Also, she specializes in treating difficult obstetric cases, performing surgeries, and coordinating multidisciplinary teams to improve patient care."
-    ],
-    "location": "Patna - Bihar",
-    "email": "drsanjanasingh@seedsofinnocens.com",
-    "qualification": "MBBS, MS (Obstetrics & Gynecology)",
-    "specialization": "IVF, Infertility Management, Advanced Reproductive Techniques",
-    "experience": "7+ years",
-    "workExperience": [
-      "Senior Consultant-IVF and infertility, Seeds of Innocens, Patna",
-      "Senior Resident-ESI hospital, Bihta (April 2022-April 2025)",
-      "Senior Resident -Netaji Subhash Medical College, Patna-(Jan 2022-April 2022)",
-      "Senior Resident -ESI Okhla, Delhi (June 2021 -Dec 2021)",
-      "Senior Resident (Max Hospital, Saket, New Delhi, Dec 2019-May 2021)",
-      "Registrar -Fortis Hospital, Gurgaon (Nov 2018-Nov 2019)"
-    ],
-    "education": [
-      "MS (Obstetrics and Gynecology) - Bankura Sammilani Medical College and Hospital, Bankura, West Bengal (2015-2018)",
-      "MBBS - Kempe Gowda Institute of Medical Sciences, Bangalore, Karnataka (2008-2013)"
-    ],
-    "awards": [],
-    "progressBars": [
-      {
-        "label": "IVF Procedures",
-        "percentage": 87
-      },
-      {
-        "label": "Patient Satisfaction",
-        "percentage": 93
-      },
-      {
-        "label": "Success Rate",
-        "percentage": 77
-      },
-      {
-        "label": "Clinical Expertise",
-        "percentage": 85
-      }
-    ],
-    "newSlug": "dr-sanjana-singh-ivf-specialist"
-  },
+ 
   {
     "slug": "dr-aditi-bhatnagar",
     "uspTitle": "Best Fertility Expert in Gurugram  <span class=\"cs_accent_color\">Dr. Aditi <br />Bhatnagar</span>",

@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-cost-in-gorakhpur",
-    title: "IVF Cost in Gorakhpur Explained: A Step-by-Step Guide to IVF Expenses",
-    excerpt: "The cost of the treatment is one of the major considerations for couples opting for infertility treatment. The cost of IVF in Gorakhpur may vary based on a number of reasons such as the treatment cycle, diagnostic tests, medications, lab charges, and the number of IVF cycles needed. IVF is a procedure through which the eggs are harvested from the ovaries and fertilised by the sperm in a laboratory.",
+    id: "ivf-treatment-cost-in-jammu",
+    title: "IVF Treatment Cost in Jammu: A Complete Guide to IVF Expenses",
+    excerpt: "When considering fertility treatments, the finances of the IVF treatment are one thing that couples must consider while planning their fertility journey. The cost of IVF treatment in Jammu is dependent on several factors, such as the type of fertility treatment chosen, diagnostic tests done, the medications required, fertility procedures involved, and the number of IVF treatment cycles needed.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Cost in Gorakhpur Explained.png",
-    date: "September 23, 2026",
-    author: "Dr. Nivedita Nehal",
+    image: "/assets/img/Blogs/IVF Treatment Cost in Jammu.png",
+    date: "September 24, 2026",
+    author: "Dr Sunita Jamwal",
     category: "IVF Process",
-    readTime: "9 min read",
-    slug: "ivf-cost-in-gorakhpur"
+    readTime: "8 min read",
+    slug: "ivf-treatment-cost-in-jammu"
   }
 ];
 
