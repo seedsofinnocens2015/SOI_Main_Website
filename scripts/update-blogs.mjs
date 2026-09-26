@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-treatment-cost-in-jammu",
-    title: "IVF Treatment Cost in Jammu: A Complete Guide to IVF Expenses",
-    excerpt: "When considering fertility treatments, the finances of the IVF treatment are one thing that couples must consider while planning their fertility journey. The cost of IVF treatment in Jammu is dependent on several factors, such as the type of fertility treatment chosen, diagnostic tests done, the medications required, fertility procedures involved, and the number of IVF treatment cycles needed.",
+    id: "26-year-old-man-found-with-a -uterus",
+    title: "26-Year-Old Man Found With a Uterus During Infertility Evaluation: What This Rare Case Teaches Us About Male Infertility",
+    excerpt: "A recent case of infertility in Delhi has shed light on a rare disease which had been detected in the course of an infertility diagnosis. A 26-year-old man who was suffering from infertility was found to have a uterus and fallopian-tube-like structure in his abdomen.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Treatment Cost in Jammu.png",
-    date: "September 24, 2026",
-    author: "Dr Sunita Jamwal",
-    category: "IVF Process",
-    readTime: "8 min read",
-    slug: "ivf-treatment-cost-in-jammu"
+    image: "/assets/img/Blogs/26-Year-Old Man Found With a Uterus.png",
+    date: "September 25, 2026",
+    author: "admin",
+    category: "Men's Health",
+    readTime: "15 min read",
+    slug: "26-year-old-man-found-with-a -uterus"
   }
 ];
 
