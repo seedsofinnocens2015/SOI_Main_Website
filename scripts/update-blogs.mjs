@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "26-year-old-man-found-with-a -uterus",
-    title: "26-Year-Old Man Found With a Uterus During Infertility Evaluation: What This Rare Case Teaches Us About Male Infertility",
+    id: "ivf-cost-in-kochi",
+    title: "IVF Cost in Kochi: A Complete Guide to IVF Treatment Expenses",
     excerpt: "A recent case of infertility in Delhi has shed light on a rare disease which had been detected in the course of an infertility diagnosis. A 26-year-old man who was suffering from infertility was found to have a uterus and fallopian-tube-like structure in his abdomen.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/26-Year-Old Man Found With a Uterus.png",
-    date: "September 25, 2026",
-    author: "admin",
-    category: "Men's Health",
-    readTime: "15 min read",
-    slug: "26-year-old-man-found-with-a -uterus"
+    image: "/assets/img/Blogs/IVF Cost in Kochi.png",
+    date: "September 26, 2026",
+    author: "Dr. Sonia Raju",
+    category: "IVF Process",
+    readTime: "10 min read",
+    slug: "ivf-cost-in-kochi"
   }
 ];
 
