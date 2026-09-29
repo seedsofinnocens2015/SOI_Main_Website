@@ -26,16 +26,16 @@ import { fileURLToPath } from "url";
 // You can still use `content` directly, but `contentFile` is safer.
 const NEW_BLOGS = [
   {
-    id: "ivf-cost-in-kochi",
-    title: "IVF Cost in Kochi: A Complete Guide to IVF Treatment Expenses",
+    id: "ivf-cost-in-agra",
+    title: "IVF Cost in Agra: Treatment, Factors, and What to Expect",
     excerpt: "A recent case of infertility in Delhi has shed light on a rare disease which had been detected in the course of an infertility diagnosis. A 26-year-old man who was suffering from infertility was found to have a uterus and fallopian-tube-like structure in his abdomen.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Cost in Kochi.png",
-    date: "September 26, 2026",
-    author: "Dr. Sonia Raju",
+    image: "/assets/img/Blogs/IVF Cost in Agra.png",
+    date: "September 28, 2026",
+    author: "Dr. Aiman Akram",
     category: "IVF Process",
-    readTime: "10 min read",
-    slug: "ivf-cost-in-kochi"
+    readTime: "11 min read",
+    slug: "ivf-cost-in-agra"
   }
 ];
 
