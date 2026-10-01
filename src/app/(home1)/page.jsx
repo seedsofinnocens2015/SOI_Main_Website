@@ -17,6 +17,7 @@ const NewsMediaSection = dynamic(() => import('../Components/NewsMediaSection'))
 const TestimonialSection = dynamic(() => import('../Components/TestimonialSection'));
 const ProjectSection = dynamic(() => import('../Components/ProjectSection'));
 const FAQSection = dynamic(() => import('../Components/FAQSection'));
+const IvfCostDropdown = dynamic(() => import('../Components/IvfCostDropdown'));
 
 export const revalidate = 300;
 
@@ -818,6 +819,8 @@ const page = () => {
         <BlogSection data={blogsData} />
       </Section>
 
+    
+
        {/* 10. News and Media */}
        <Section
         topSpaceLg="60"
@@ -855,6 +858,7 @@ const page = () => {
         <ProjectSection data={projectData} />
       </Section>
 
+
       {/* 8. FAQ Section */}
       <Section
         topSpaceLg="60"
@@ -865,6 +869,10 @@ const page = () => {
       >
         <FAQSection data={faqData} />
       </Section>
+
+
+      {/* IVF Cost in Popular Cities Dropdown Section */}
+      <IvfCostDropdown />
 
       {/* 5.5. Male Infertility & Egg Freezing Section */}
       {/* <Section

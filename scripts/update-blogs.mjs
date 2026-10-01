@@ -1,19 +1,24 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { execSync } from "child_process";
 
 /**
- * Add new blog objects to `src/app/data/blogs.json`.
+ * Add new items to `src/app/data/blogs.json` OR `src/app/data/ivfcost.json`.
  *
  * Run:
  *   node scripts/update-blogs.mjs
  *
- * What you edit:
- *   - Add blog objects in NEW_BLOGS array below.
+ * How it works:
+ *   - To add to IVF COST (`ivfcost.json`):
+ *     Set category: "IVF Cost" (or type: "cost") AND provide `hometitle: "IVF Cost in ..."`
+ *
+ *   - To add to BLOGS (`blogs.json`):
+ *     Set standard blog category (e.g. "IVF Process", "Fertility", "Women's Health", etc.)
  */
 
 // ==========================================
-// 1) ADD BLOGS (NO COPY/PASTE STRING ERRORS)
+// 1) ADD BLOGS / IVF COSTS HERE
 // ==========================================
 // IMPORTANT: HTML ko JS string me paste karne se quotes ki wajah se error aata hai.
 // Isliye `contentFile` use karo (recommended) — apna HTML bilkul same-to-same file me paste karo.
@@ -24,19 +29,36 @@ import { fileURLToPath } from "url";
 // - Then set: contentFile: "scripts/blog-content/<slug>.html"
 //
 // You can still use `content` directly, but `contentFile` is safer.
+
 const NEW_BLOGS = [
+  // --- EXAMPLE 1: IVF COST ENTRY (Goes to ivfcost.json) ---
   {
-    id: "ivf-cost-in-agra",
-    title: "IVF Cost in Agra: Treatment, Factors, and What to Expect",
-    excerpt: "A recent case of infertility in Delhi has shed light on a rare disease which had been detected in the course of an infertility diagnosis. A 26-year-old man who was suffering from infertility was found to have a uterus and fallopian-tube-like structure in his abdomen.",
-    contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Cost in Agra.png",
-    date: "September 28, 2026",
-    author: "Dr. Aiman Akram",
-    category: "IVF Process",
-    readTime: "11 min read",
-    slug: "ivf-cost-in-agra"
-  }
+    id: "ivf-cost-in-bhopal",
+    hometitle: "IVF Cost in Bhopal",           
+    title: "IVF Cost in Bhopal: Treatment, Factors, and What to Expect",
+    excerpt: "Comprehensive guide to IVF cost, packages and financing options in Bhopal.",
+    contentFile: "scripts/blog-content/ivf-cost-in-bhopal.html", 
+    image: "/assets/img/Blogs/IVF Cost in Bhopal.png",
+    date: "September 30, 2026",
+    author: "Dr. Gauri Agarwal",
+    category: "IVF Cost",                      
+    readTime: "10 min read",
+    slug: "ivf-cost-in-bhopal"
+  },
+
+  // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
+  // {
+  //   id: "my-fertility-guide",
+  //   title: "Complete Guide to Fertility Wellness",
+  //   excerpt: "Learn how lifestyle and diet influence fertility outcomes.",
+  //   contentFile: "scripts/blog-content/my-fertility-guide.html",
+  //   image: "/assets/img/Blogs/fertility-guide.png",
+  //   date: "September 30, 2026",
+  //   author: "Dr. Gauri Agarwal",
+  //   category: "Fertility",                     // Standard blog category
+  //   readTime: "8 min read",
+  //   slug: "my-fertility-guide"
+  // }
 ];
 
 // =======================
@@ -46,8 +68,9 @@ const NEW_BLOGS = [
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const blogsPath = path.join(__dirname, "../src/app/data/blogs.json");
+const ivfCostPath = path.join(__dirname, "../src/app/data/ivfcost.json");
 
-const REQUIRED_FIELDS = [
+const REQUIRED_COMMON_FIELDS = [
   "id",
   "title",
   "excerpt",
@@ -67,27 +90,58 @@ function isNonEmptyString(v) {
   return typeof v === "string" && v.trim().length > 0;
 }
 
-function assertBlogShape(blog, index) {
-  if (!blog || typeof blog !== "object" || Array.isArray(blog)) {
+/** Determines if an entry belongs to ivfcost.json or blogs.json */
+function isIvfCostEntry(entry) {
+  if (entry.type === "cost" || entry.target === "cost" || entry.target === "ivfcost") {
+    return true;
+  }
+  if (entry.type === "blog" || entry.target === "blog") {
+    return false;
+  }
+  if (typeof entry.category === "string") {
+    const cat = entry.category.toLowerCase().trim();
+    if (cat === "ivf cost" || cat === "ivf-cost" || cat === "cost") {
+      return true;
+    }
+  }
+  if (isNonEmptyString(entry.hometitle)) {
+    return true;
+  }
+  return false;
+}
+
+function assertEntryShape(entry, index) {
+  if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
     fail(`NEW_BLOGS[${index}] must be an object`);
   }
-  for (const key of REQUIRED_FIELDS) {
-    if (!isNonEmptyString(blog[key])) {
+
+  for (const key of REQUIRED_COMMON_FIELDS) {
+    if (!isNonEmptyString(entry[key])) {
       fail(`NEW_BLOGS[${index}].${key} is required and must be a non-empty string`);
     }
   }
-  const hasContent = isNonEmptyString(blog.content);
-  const hasContentFile = isNonEmptyString(blog.contentFile);
+
+  const isCost = isIvfCostEntry(entry);
+  if (isCost) {
+    if (!isNonEmptyString(entry.hometitle)) {
+      fail(
+        `NEW_BLOGS[${index}] is marked for IVF Cost, but is missing required field "hometitle" (e.g. hometitle: "IVF Cost in Agra")`
+      );
+    }
+  }
+
+  const hasContent = isNonEmptyString(entry.content);
+  const hasContentFile = isNonEmptyString(entry.contentFile);
   if (!hasContent && !hasContentFile) {
     fail(`NEW_BLOGS[${index}] must include either "content" OR "contentFile" (recommended)`);
   }
   if (hasContent && hasContentFile) {
     fail(`NEW_BLOGS[${index}] should include only one: "content" OR "contentFile"`);
   }
-  if ("image" in blog && blog.image !== undefined && blog.image !== null && !isNonEmptyString(blog.image)) {
+  if ("image" in entry && entry.image !== undefined && entry.image !== null && !isNonEmptyString(entry.image)) {
     fail(`NEW_BLOGS[${index}].image must be a non-empty string if provided`);
   }
-  if ("contentFile" in blog && blog.contentFile !== undefined && blog.contentFile !== null && !isNonEmptyString(blog.contentFile)) {
+  if ("contentFile" in entry && entry.contentFile !== undefined && entry.contentFile !== null && !isNonEmptyString(entry.contentFile)) {
     fail(`NEW_BLOGS[${index}].contentFile must be a non-empty string if provided`);
   }
 }
@@ -105,18 +159,29 @@ function saveBlogsJson(db) {
   fs.writeFileSync(blogsPath, JSON.stringify(db, null, 2), "utf8");
 }
 
+function loadIvfCostJson() {
+  const raw = fs.readFileSync(ivfCostPath, "utf8");
+  const parsed = JSON.parse(raw);
+  if (!parsed || typeof parsed !== "object" || !Array.isArray(parsed.ivfCosts)) {
+    fail(`Invalid ivfcost.json shape. Expected { "ivfCosts": [...] } at ${ivfCostPath}`);
+  }
+  return parsed;
+}
+
+function saveIvfCostJson(db) {
+  fs.writeFileSync(ivfCostPath, JSON.stringify(db, null, 2), "utf8");
+}
+
 function resolveFromProjectRoot(p) {
-  // scripts/update-blogs.mjs lives in <projectRoot>/scripts
-  // so projectRoot is one level up from __dirname
   const projectRoot = path.join(__dirname, "..");
   return path.isAbsolute(p) ? p : path.join(projectRoot, p);
 }
 
-function materializeContent(nb, index) {
-  if (isNonEmptyString(nb.content)) return nb.content;
-  const abs = resolveFromProjectRoot(nb.contentFile);
+function materializeContent(entry, index) {
+  if (isNonEmptyString(entry.content)) return entry.content;
+  const abs = resolveFromProjectRoot(entry.contentFile);
   if (!fs.existsSync(abs)) {
-    fail(`NEW_BLOGS[${index}].contentFile not found: "${nb.contentFile}" (resolved: ${abs})`);
+    fail(`NEW_BLOGS[${index}].contentFile not found: "${entry.contentFile}" (resolved: ${abs})`);
   }
   return fs.readFileSync(abs, "utf8");
 }
@@ -124,112 +189,86 @@ function materializeContent(nb, index) {
 function main() {
   if (!Array.isArray(NEW_BLOGS) || NEW_BLOGS.length === 0) {
     fail(
-      "No blogs to add. Paste your blog objects inside NEW_BLOGS array in scripts/update-blogs.mjs"
+      "No entries to add. Paste your blog or IVF cost objects inside NEW_BLOGS array in scripts/update-blogs.mjs"
     );
   }
 
-  NEW_BLOGS.forEach(assertBlogShape);
+  NEW_BLOGS.forEach(assertEntryShape);
 
-  const db = loadBlogsJson();
+  const blogsDb = loadBlogsJson();
+  const ivfCostDb = loadIvfCostJson();
 
-  const existingById = new Map();
-  const existingBySlug = new Map();
-  for (const b of db.blogs) {
-    if (b && typeof b === "object") {
-      if (typeof b.id === "string") existingById.set(b.id, true);
-      if (typeof b.slug === "string") existingBySlug.set(b.slug, true);
+  // Index existing items
+  const blogIds = new Set(blogsDb.blogs.map((b) => b.id));
+  const blogSlugs = new Set(blogsDb.blogs.map((b) => b.slug));
+  const costIds = new Set(ivfCostDb.ivfCosts.map((c) => c.id));
+  const costSlugs = new Set(ivfCostDb.ivfCosts.map((c) => c.slug));
+
+  const seenIds = new Set();
+  const seenSlugs = new Set();
+
+  const toAddBlogs = [];
+  const toAddCosts = [];
+
+  for (let i = 0; i < NEW_BLOGS.length; i++) {
+    const item = NEW_BLOGS[i];
+    const isCost = isIvfCostEntry(item);
+
+    if (seenIds.has(item.id)) fail(`Duplicate id inside NEW_BLOGS: "${item.id}"`);
+    if (seenSlugs.has(item.slug)) fail(`Duplicate slug inside NEW_BLOGS: "${item.slug}"`);
+    seenIds.add(item.id);
+    seenSlugs.add(item.slug);
+
+    if (isCost) {
+      if (costIds.has(item.id)) fail(`Duplicate id already exists in ivfcost.json: "${item.id}"`);
+      if (costSlugs.has(item.slug)) fail(`Duplicate slug already exists in ivfcost.json: "${item.slug}"`);
+      toAddCosts.push({ item, index: i });
+    } else {
+      if (blogIds.has(item.id)) fail(`Duplicate id already exists in blogs.json: "${item.id}"`);
+      if (blogSlugs.has(item.slug)) fail(`Duplicate slug already exists in blogs.json: "${item.slug}"`);
+      toAddBlogs.push({ item, index: i });
     }
   }
 
-  const seenNewId = new Map();
-  const seenNewSlug = new Map();
-
-  for (let i = 0; i < NEW_BLOGS.length; i++) {
-    const nb = NEW_BLOGS[i];
-    if (existingById.has(nb.id)) fail(`Duplicate id already exists in blogs.json: "${nb.id}"`);
-    if (existingBySlug.has(nb.slug)) fail(`Duplicate slug already exists in blogs.json: "${nb.slug}"`);
-    if (seenNewId.has(nb.id)) fail(`Duplicate id inside NEW_BLOGS: "${nb.id}"`);
-    if (seenNewSlug.has(nb.slug)) fail(`Duplicate slug inside NEW_BLOGS: "${nb.slug}"`);
-    seenNewId.set(nb.id, true);
-    seenNewSlug.set(nb.slug, true);
+  // Materialize and push blogs
+  if (toAddBlogs.length > 0) {
+    const formattedBlogs = toAddBlogs.map(({ item, index }) => {
+      const content = materializeContent(item, index);
+      const { contentFile, type, target, ...rest } = item;
+      return { ...rest, content };
+    });
+    blogsDb.blogs.push(...formattedBlogs);
+    saveBlogsJson(blogsDb);
+    console.log(`\n Added ${formattedBlogs.length} blog(s) to src/app/data/blogs.json successfully.`);
+    formattedBlogs.forEach((b) => console.log(`   - [Blog] ${b.title} (${b.slug})`));
   }
 
-  const blogsToAdd = NEW_BLOGS.map((nb, index) => {
-    const content = materializeContent(nb, index);
-    const { contentFile, ...rest } = nb;
-    return { ...rest, content };
-  });
+  // Materialize and push IVF costs
+  if (toAddCosts.length > 0) {
+    const formattedCosts = toAddCosts.map(({ item, index }) => {
+      const content = materializeContent(item, index);
+      const { contentFile, type, target, ...rest } = item;
+      return { ...rest, content };
+    });
+    ivfCostDb.ivfCosts.push(...formattedCosts);
+    saveIvfCostJson(ivfCostDb);
+    console.log(`\n Added ${formattedCosts.length} IVF cost guide(s) to src/app/data/ivfcost.json successfully.`);
+    formattedCosts.forEach((c) => console.log(`   - [IVF Cost] ${c.hometitle} - ${c.title} (${c.slug})`));
+  }
 
-  db.blogs.push(...blogsToAdd);
-  saveBlogsJson(db);
+  // Auto-sync SEO Panel trees if seo-panel directory exists
+  try {
+    const seoPanelGenCost = path.resolve(__dirname, "../../seo-panel/scripts/gen-cost-tree.mjs");
+    const seoPanelGenBlog = path.resolve(__dirname, "../../seo-panel/scripts/gen-blog-tree.mjs");
+    if (fs.existsSync(seoPanelGenCost) && fs.existsSync(seoPanelGenBlog)) {
+      execSync(`node "${seoPanelGenBlog}" && node "${seoPanelGenCost}"`, { stdio: "pipe" });
+      console.log(" Automatically synchronized SEO Panel tree (lib/blogPageTree.js & lib/ivfCostPageTree.js).");
+    }
+  } catch {
+    // Graceful fallback if seo-panel is not found or in different folder
+  }
 
-  console.log(`Added ${NEW_BLOGS.length} blog(s) successfully.`);
+  console.log("\nUpdate complete!\n");
 }
 
 main();
-
-
-
-
-
-
-
-// {
-
-//   "slug": "dr-preeti",
-//   "uspTitle": "Best IVF Specialist in Kanpur <span class=\"cs_accent_color\">Dr. Preeti</span>",
-//   "headerImage": "/assets/img/Doctor-Headers/preeti.webp",
-//   "name": "Dr. Preeti",
-//   "subtitle": "Advanced IVF & Fertility Specialist",
-//   "image": "/assets/img/Doctors/preeti.jpg",
-//   "description": [
-//     "Dr. Preeti is a skilled and compassionate Gynaecologist & Obstetrician with more than 6 years of clinical experience, who specializes in high-risk pregnancies, laparoscopic & infertility gynaecological surgery. She is a gold medalist in MS obstetrics & Gynaecology as she combines scientific precision with a patient-centric, empathetic approach. Her professional journey includes successful tenures at well-reputed government medical colleges and hospitals across Uttar Pradesh, where she consistently delivered great surgical and patient care outcomes."
-//   ],
-//   "location": "Kanpur, Uttarpradesh",
-//   "email": "drpreeti@seedsofinnocens.com",
-//   "qualification": "MBBS, MS (Obstetrics & Gynecology), Certificate in Laparoscopic Surgery",
-//   "specialization": "IVF, Ovulatory Disorders, PCOS Management",
-//   "experience": "6+ Years",
-//   "workExperience": [
-//     "MBBS, MD (Obstetrics & Gynecology), Fellowship in Reproductive Medicine, Diploma and Training in Ultrasonography (USG), and Fellowship in Laparoscopy."
-//   ],
-//   "education": [
-//     "MS – Obstetrics & Gynaecology (Gold Medalist) – UPUMS, Saifai",
-//     "MBBS – GSVM Medical College, Kanpur",
-//     "Diploma in Ultrasound Imaging – Bilmed, New Delhi",
-//     "Certificate in Laparoscopic Surgery – Saidham Academy, Maharashtra",
-//     "Critical Care in Obstetrics – Medvarsity"
-//   ],
-//   "awards": [
-//     "Gold Medalist in MS Obstetrics and Gynaecology"
-//   ],
-//   "progressBars": [
-//     {
-//       "label": "IVF Procedures",
-//       "percentage": 85
-//     },
-//     {
-//       "label": "Patient Satisfaction",
-//       "percentage": 92
-//     },
-//     {
-//       "label": "Success Rate",
-//       "percentage": 75
-//     },
-//     {
-//       "label": "Clinical Expertise",
-//       "percentage": 83
-//     }
-//   ],
-//   "newSlug": "dr-preeti-ivf-specialist"
-// },
-
-
-// {
-//   "name": "Dr. Preeti",
-//   "subtitle": "IVF Specialist",
-//   "image": "/assets/img/Doctors/preeti.jpg",
-//   "experience": "8+ Years",
-//   "location": "Kanpur-Uttarpradesh",
-//   "slug": "dr-preeti"
-// }

@@ -2,78 +2,93 @@ import Section from '@/app/Components/Section';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaCalendarAlt, FaClock, FaUser, FaArrowLeft } from 'react-icons/fa';
+import { FaCalendarAlt, FaClock, FaArrowLeft } from 'react-icons/fa';
 import AccentHeading from '@/app/Components/AccentHeading';
-import blogsData from '@/app/data/blogs.json';
 import { getAssetPath } from '@/app/utils/assetPath';
 import { accentHeadingsInHtml } from '@/app/utils/accentHeadingsInHtml';
-import { getBlogPostMetadata } from '@/app/utils/blogSeo';
 import doctorsData from '@/app/data/doctors-data.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
-import { permanentRedirect } from 'next/navigation';
-import { getIvfCostBySlug } from '@/app/utils/ivfCostData';
+import { getAllIvfCosts, getIvfCostBySlug } from '@/app/utils/ivfCostData';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.seedsofinnocens.com';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export async function generateStaticParams() {
-  return blogsData.blogs.map((blog) => ({
-    slug: blog.slug,
-  }));
+  const list = getAllIvfCosts();
+  const params = [];
+  list.forEach((item) => {
+    params.push({ slug: item.slug });
+    if (Array.isArray(item.aliases)) {
+      item.aliases.forEach((alias) => {
+        params.push({ slug: alias });
+      });
+    }
+  });
+  return params;
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const blog = blogsData.blogs.find((item) => item.slug === slug);
-  if (!blog) {
-    const costItem = getIvfCostBySlug(slug);
-    if (costItem) {
-      return { title: `${costItem.title} | Seeds of Innocens` };
-    }
-    return { title: 'Blog Not Found | Seeds of Innocence' };
+  const costItem = getIvfCostBySlug(slug);
+
+  if (!costItem) {
+    return { title: 'IVF Cost Page Not Found | Seeds of Innocens' };
   }
-  return getBlogPostMetadata(blog);
+
+  const title = `${costItem.title} | Seeds of Innocens`;
+  const cleanExcerpt = costItem.content
+    ? costItem.content.replace(/<[^>]*>?/gm, '').slice(0, 160)
+    : `Explore detailed IVF cost breakdown for ${costItem.title} at Seeds of Innocens.`;
+  const path = `${basePath}/cost/${costItem.slug}/`.replace(/\/{2,}/g, '/');
+  const canonicalUrl = `${SITE_URL}${path}`;
+  const ogImage = costItem.image || '/assets/img/Top-Header.webp';
+  const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${basePath}${ogImage}`;
+
+  return {
+    title,
+    description: cleanExcerpt,
+    openGraph: {
+      title,
+      description: cleanExcerpt,
+      url: canonicalUrl,
+      siteName: 'Seeds of Innocens',
+      images: [{ url: ogImageUrl }],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: cleanExcerpt,
+    },
+    alternates: { canonical: canonicalUrl },
+  };
 }
 
-const getCategoryRoute = (category) => {
-  const categoryRouteMap = {
-    'Treatment Guides': 'treatment-guides',
-    'Women\'s Health': 'womens-health',
-    'Men\'s Health': 'mens-health',
-    'Fertility': 'fertility',
-    'IVF Process': 'ivf-process',
-    'Pregnancy': 'pregnancy',
-    'Success Stories': 'success-stories',
-    'Doctor Insights': 'doctor-insights',
-    'News & Press': 'news-press',
-    'Lifestyle & Fertility': 'fertility',
-  };
-
-  return categoryRouteMap[category] || category.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '');
-};
-
-const BlogDetailPage = async ({ params }) => {
+const CostDetailPage = async ({ params }) => {
   const resolvedParams = await params;
   const slug = resolvedParams?.slug;
 
-  const blog = blogsData.blogs.find((b) => b.slug === slug);
-  const doctor = blog && blog.author?.toLowerCase() !== 'admin'
-    ? doctorsData.find(d => d.name?.toLowerCase().trim() === blog.author?.toLowerCase().trim())
-    : null;
+  const costItem = getIvfCostBySlug(slug);
+  const allCosts = getAllIvfCosts();
 
-  if (!blog) {
-    const costItem = getIvfCostBySlug(slug);
-    if (costItem) {
-      permanentRedirect(`/cost/${costItem.slug}/`);
-    }
+  const doctor =
+    costItem && costItem.author?.toLowerCase() !== 'admin'
+      ? doctorsData.find(
+          (d) => d.name?.toLowerCase().trim() === costItem.author?.toLowerCase().trim()
+        )
+      : null;
 
+  if (!costItem) {
     return (
       <div>
         <Section topSpaceLg="100" topSpaceMd="130" bottomSpaceLg="80">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h1>Blog Not Found</h1>
-                <p>The blog you&apos;re looking for doesn&apos;t exist.</p>
+                <h1>IVF Cost Page Not Found</h1>
+                <p>The cost guide you&apos;re looking for doesn&apos;t exist.</p>
                 <Link
-                  href="/blogs"
+                  href="/"
                   style={{
                     display: 'inline-block',
                     marginTop: '20px',
@@ -85,7 +100,7 @@ const BlogDetailPage = async ({ params }) => {
                     fontWeight: '600',
                   }}
                 >
-                  Back to Blogs
+                  Back to Home
                 </Link>
               </div>
             </div>
@@ -95,21 +110,21 @@ const BlogDetailPage = async ({ params }) => {
     );
   }
 
-  const relatedBlogs = blogsData.blogs
-    .filter((b) => b.category === blog.category && b.slug !== blog.slug)
+  const relatedCosts = allCosts
+    .filter((item) => item.slug !== costItem.slug)
     .slice(0, 3);
 
   return (
     <div>
       <Section topSpaceLg="100" topSpaceMd="130" bottomSpaceLg="80">
         <div className="container">
-          {blog.image ? (
+          {costItem.image ? (
             <div className="row">
               <div className="col-12" style={{ marginBottom: '28px' }}>
                 <div className="cs_blog_banner_image">
                   <Image
-                    src={getAssetPath(blog.image)}
-                    alt={blog.title}
+                    src={getAssetPath(costItem.image)}
+                    alt={costItem.title}
                     width={1600}
                     height={800}
                     style={{ width: '100%', height: 'auto', objectFit: 'contain', objectPosition: 'top center' }}
@@ -126,7 +141,7 @@ const BlogDetailPage = async ({ params }) => {
             <div className="col-lg-8">
               <div style={{ marginBottom: '24px', textAlign: 'left' }}>
                 <Link
-                  href={`/blogs/${getCategoryRoute(blog.category)}/`}
+                  href="/"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -139,34 +154,40 @@ const BlogDetailPage = async ({ params }) => {
                   }}
                 >
                   <FaArrowLeft style={{ fontSize: '14px' }} />
-                  Back to {blog.category} Blogs
+                  Back to Home
                 </Link>
               </div>
 
               <article className="cs_blog_detail_article" style={{ overflow: 'hidden' }}>
                 <div className="cs_blog_detail_content" style={{ padding: '0 0 40px', textAlign: 'center' }}>
+                  {costItem.category && (
+                    <div
+                      style={{
+                        display: 'inline-block',
+                        padding: '6px 16px',
+                        backgroundColor: '#df3655',
+                        color: '#fff',
+                        borderRadius: '20px',
+                        fontSize: '13px',
+                        fontWeight: '600',
+                        marginBottom: '20px',
+                      }}
+                    >
+                      {costItem.category}
+                    </div>
+                  )}
+
+                  <AccentHeading level={1} className="cs_ivf_content_heading cs_blog_title" style={{ marginBottom: '20px' }}>
+                    {costItem.title}
+                  </AccentHeading>
+
                   <div
                     style={{
-                      display: 'inline-block',
-                      padding: '6px 16px',
-                      backgroundColor: '#df3655',
-                      color: '#fff',
-                      borderRadius: '20px',
-                      fontSize: '13px',
-                      fontWeight: '600',
-                      marginBottom: '20px',
+                      marginBottom: '30px',
+                      paddingBottom: '10px',
+                      borderBottom: '1px solid #e8e8e8',
                     }}
                   >
-                    {blog.category}
-                  </div>
-                  <AccentHeading level={1} className="cs_ivf_content_heading cs_blog_title" style={{ marginBottom: '20px' }}>
-                    {blog.title}
-                  </AccentHeading>
-                  <div style={{
-                    marginBottom: '30px',
-                    paddingBottom: '10px',
-                    borderBottom: '1px solid #e8e8e8',
-                    }}>
                     <div
                       style={{
                         display: 'flex',
@@ -176,32 +197,38 @@ const BlogDetailPage = async ({ params }) => {
                         justifyContent: 'center',
                       }}
                     >
-                      <span
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '8px',
-                          color: '#666',
-                          fontSize: '14px',
-                        }}
-                      >
-                        <FaCalendarAlt style={{ fontSize: '14px', color: '#df3655' }} />
-                        {blog.date}
-                      </span>
-                      <span
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '8px',
-                          color: '#666',
-                          fontSize: '14px',
-                        }}
-                      >
-                        <FaClock style={{ fontSize: '14px', color: '#df3655' }} />
-                        {blog.readTime}
-                      </span>
+                      {costItem.date && (
+                        <span
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            color: '#666',
+                            fontSize: '14px',
+                          }}
+                        >
+                          <FaCalendarAlt style={{ fontSize: '14px', color: '#df3655' }} />
+                          {costItem.date}
+                        </span>
+                      )}
+                      {costItem.readTime && (
+                        <span
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            color: '#666',
+                            fontSize: '14px',
+                          }}
+                        >
+                          <FaClock style={{ fontSize: '14px', color: '#df3655' }} />
+                          {costItem.readTime}
+                        </span>
+                      )}
                     </div>
-                    <div
+
+                    {costItem.author && (
+                      <div
                         style={{
                           backgroundColor: '#ffeaf0',
                           borderRadius: '12px',
@@ -210,10 +237,10 @@ const BlogDetailPage = async ({ params }) => {
                           textAlign: 'left',
                           display: 'flex',
                           alignItems: 'center',
-                          gap: '20px'
+                          gap: '20px',
                         }}
                       >
-                        {doctor && (
+                        {doctor && doctor.image && (
                           <div style={{ flexShrink: 0 }}>
                             <Link href={getDoctorProfilePath(doctor)}>
                               <Image
@@ -233,27 +260,31 @@ const BlogDetailPage = async ({ params }) => {
                           {doctor ? (
                             <>
                               <div style={{ marginBottom: '4px' }}>
-                                <Link href={getDoctorProfilePath(doctor)} style={{ color: '#072e91', fontWeight: '700', textDecoration: 'none', fontSize: '15px' }}>
-                                  {blog.author}
+                                <Link
+                                  href={getDoctorProfilePath(doctor)}
+                                  style={{ color: '#072e91', fontWeight: '700', textDecoration: 'none', fontSize: '15px' }}
+                                >
+                                  {costItem.author}
                                 </Link>
                               </div>
                               <div style={{ color: '#666', fontSize: '14px', lineHeight: '1.5' }}>
                                 {[
                                   doctor.qualification,
                                   doctor.experience ? doctor.experience + ' Experience' : null,
-                                ].filter(Boolean).join(' | ')}
+                                ]
+                                  .filter(Boolean)
+                                  .join(' | ')}
                               </div>
                             </>
                           ) : (
                             <div style={{ color: '#072e91', fontWeight: '700', fontSize: '15px' }}>
-                              {blog.author}
+                              {costItem.author}
                             </div>
                           )}
                         </div>
                       </div>
+                    )}
                   </div>
-
-
 
                   <div
                     className="blog-content cs_blog_body"
@@ -265,20 +296,18 @@ const BlogDetailPage = async ({ params }) => {
                       textAlign: 'left',
                       maxWidth: '100%',
                     }}
-                    dangerouslySetInnerHTML={{ __html: accentHeadingsInHtml(blog.content) }}
+                    dangerouslySetInnerHTML={{ __html: accentHeadingsInHtml(costItem.content || '') }}
                   />
+
                   <style>
                     {`
-                      
                       .cs_blog_body a {
                         color: #072f92;
                         font-weight: 700;
                       }
-
                       .cs_blog_body a:hover {
                         color: #df3655;
                       }
-
                     `}
                   </style>
                 </div>
@@ -288,7 +317,9 @@ const BlogDetailPage = async ({ params }) => {
             <div className="col-lg-4">
               <div className="cs_sidebar_sticky_wrapper">
                 <div className="cs_appointment_card" style={{ marginBottom: '30px' }}>
-                  <AccentHeading level={3} className="cs_sidebar_heading">Need Help?</AccentHeading>
+                  <AccentHeading level={3} className="cs_sidebar_heading">
+                    Need Help?
+                  </AccentHeading>
                   <p>
                     Our fertility specialists are here to help you on your journey to parenthood.
                   </p>
@@ -297,7 +328,7 @@ const BlogDetailPage = async ({ params }) => {
                   </Link>
                 </div>
 
-                {relatedBlogs.length > 0 && (
+                {relatedCosts.length > 0 && (
                   <div
                     style={{
                       backgroundColor: '#fff',
@@ -317,20 +348,20 @@ const BlogDetailPage = async ({ params }) => {
                         borderBottom: '2px solid #df3655',
                       }}
                     >
-                      Related Blogs
+                      Related Cost Guides
                     </AccentHeading>
                     <div className="cs_related_blog_list">
-                      {relatedBlogs.map((relatedBlog) => (
+                      {relatedCosts.map((item) => (
                         <Link
-                          key={relatedBlog.id}
-                          href={`/blog/${relatedBlog.slug}/`}
+                          key={item.id || item.slug}
+                          href={`/cost/${item.slug}/`}
                           className="cs_related_blog_item"
                         >
-                          {relatedBlog.image ? (
+                          {item.image ? (
                             <div className="cs_related_blog_banner">
                               <Image
-                                src={getAssetPath(relatedBlog.image)}
-                                alt={relatedBlog.title}
+                                src={getAssetPath(item.image)}
+                                alt={item.title}
                                 width={640}
                                 height={320}
                                 className="cs_related_blog_banner_el"
@@ -339,8 +370,8 @@ const BlogDetailPage = async ({ params }) => {
                             </div>
                           ) : null}
                           <div className="cs_related_blog_copy">
-                            <h4>{relatedBlog.title}</h4>
-                            <p>{relatedBlog.date}</p>
+                            <h4>{item.title}</h4>
+                            {item.date && <p>{item.date}</p>}
                           </div>
                         </Link>
                       ))}
@@ -356,4 +387,4 @@ const BlogDetailPage = async ({ params }) => {
   );
 };
 
-export default BlogDetailPage;
+export default CostDetailPage;
