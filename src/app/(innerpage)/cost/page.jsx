@@ -5,8 +5,19 @@ import React from 'react';
 import AccentHeading from '@/app/Components/AccentHeading';
 import { getAllIvfCosts } from '@/app/utils/ivfCostData';
 import { getAssetPath } from '@/app/utils/assetPath';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+import SeoRawHead from '@/app/Components/SeoRawHead';
 
 export async function generateMetadata() {
+  const seo = await getSeoMetadata({
+    pageUrl: '/cost',
+    hierarchyCandidates: [['IVF Cost'], []],
+  }).catch(() => null);
+
+  if (seo && (seo.title || seo.description)) {
+    return seo;
+  }
+
   return {
     title: 'IVF Cost Guides | Seeds of Innocens',
     description: 'Explore comprehensive IVF treatment costs, inclusions, and procedures across centres at Seeds of Innocens IVF.',
@@ -18,6 +29,7 @@ const CostIndexPage = () => {
 
   return (
     <div>
+      <SeoRawHead pageUrl="/cost" />
       <Section topSpaceLg="100" topSpaceMd="130" bottomSpaceLg="80">
         <div className="container">
           <div className="text-center mb-5">

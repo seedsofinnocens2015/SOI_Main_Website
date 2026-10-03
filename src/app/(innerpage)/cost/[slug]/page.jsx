@@ -9,6 +9,8 @@ import { accentHeadingsInHtml } from '@/app/utils/accentHeadingsInHtml';
 import doctorsData from '@/app/data/doctors-data.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 import { getAllIvfCosts, getIvfCostBySlug } from '@/app/utils/ivfCostData';
+import { getSeoMetadata } from '@/app/utils/seoMetadata';
+import SeoRawHead from '@/app/Components/SeoRawHead';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.seedsofinnocens.com';
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -33,6 +35,21 @@ export async function generateMetadata({ params }) {
 
   if (!costItem) {
     return { title: 'IVF Cost Page Not Found | Seeds of Innocens' };
+  }
+
+  const pageUrl = `/cost/${costItem.slug}`;
+  const seoMetadata = await getSeoMetadata({
+    pageUrl,
+    pageUrlCandidates: [`/cost/${costItem.slug}/`, `/cost/${slug}`],
+    hierarchyCandidates: [
+      ['IVF Cost', costItem.hometitle || costItem.title],
+      ['IVF Cost'],
+      [],
+    ],
+  }).catch(() => null);
+
+  if (seoMetadata && (seoMetadata.title || seoMetadata.description)) {
+    return seoMetadata;
   }
 
   const title = `${costItem.title} | Seeds of Innocens`;
@@ -116,6 +133,7 @@ const CostDetailPage = async ({ params }) => {
 
   return (
     <div>
+      <SeoRawHead pageUrl={`/cost/${costItem.slug}`} />
       <Section topSpaceLg="100" topSpaceMd="130" bottomSpaceLg="80">
         <div className="container">
           {costItem.image ? (
