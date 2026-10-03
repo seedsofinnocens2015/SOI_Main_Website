@@ -7,7 +7,10 @@ export function cityNameToSlug(cityName) {
 
 /** Resolves India (non-international) centre from URL segment `best-ivf-centre-in-*` */
 export function resolveIndiaCenterFromCenterSlug(cleanSlug, indiaCentresData) {
-  const citySlug = cleanSlug.replace(/^best-ivf-centre-in-/, '');
+  let citySlug = cleanSlug.replace(/^best-ivf-centre-in-/, '');
+  if (citySlug === 'gurgaon') {
+    citySlug = 'gurugram';
+  }
   let center;
   if (
     cleanSlug === 'best-ivf-centre-in-delhi' ||

@@ -33,17 +33,17 @@ import { execSync } from "child_process";
 const NEW_BLOGS = [
   // --- EXAMPLE 1: IVF COST ENTRY (Goes to ivfcost.json) ---
   {
-    id: "ivf-cost-in-bhopal",
-    hometitle: "IVF Cost in Bhopal",           
-    title: "IVF Cost in Bhopal: Treatment, Factors, and What to Expect",
+    id: "ivf-cost-in-guwahati",
+    hometitle: "IVF Cost in Guwahati",           
+    title: "IVF Cost in Guwahati: Complete Guide to IVF Treatment Expenses",
     excerpt: "Comprehensive guide to IVF cost, packages and financing options in Bhopal.",
-    contentFile: "scripts/blog-content/ivf-cost-in-bhopal.html", 
-    image: "/assets/img/Blogs/IVF Cost in Bhopal.png",
-    date: "September 30, 2026",
-    author: "Dr. Gauri Agarwal",
+    contentFile: "scripts/blog-content/dummy-blog.html", 
+    image: "/assets/img/Blogs/IVF Cost in Guwahati.png",
+    date: "October 01, 2026",
+    author: "Dr. Julie Chhawchharia",
     category: "IVF Cost",                      
-    readTime: "10 min read",
-    slug: "ivf-cost-in-bhopal"
+    readTime: "11 min read",
+    slug: "ivf-cost-in-guwahati"
   },
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---

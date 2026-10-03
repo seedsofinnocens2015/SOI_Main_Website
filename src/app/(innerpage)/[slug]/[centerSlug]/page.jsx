@@ -42,6 +42,12 @@ export async function generateStaticParams() {
             })
             .filter((param) => param.slug && param.centerSlug);
 
+        // Include gurgaon alias for gurugram
+        centerParams.push({
+            slug: 'haryana',
+            centerSlug: 'best-ivf-centre-in-gurgaon',
+        });
+
         return centerParams;
     } catch (error) {
         console.error('Error generating static params (city/slug route):', error);

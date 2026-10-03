@@ -18,6 +18,7 @@ const TestimonialSection = dynamic(() => import('../Components/TestimonialSectio
 const ProjectSection = dynamic(() => import('../Components/ProjectSection'));
 const FAQSection = dynamic(() => import('../Components/FAQSection'));
 const IvfCostDropdown = dynamic(() => import('../Components/IvfCostDropdown'));
+const IvfCentresDropdown = dynamic(() => import('../Components/IvfCentresDropdown'));
 
 export const revalidate = 300;
 
@@ -873,6 +874,9 @@ const page = () => {
 
       {/* IVF Cost in Popular Cities Dropdown Section */}
       <IvfCostDropdown />
+
+      {/* IVF Centres in Key Locations Dropdown Section */}
+      <IvfCentresDropdown />
 
       {/* 5.5. Male Infertility & Egg Freezing Section */}
       {/* <Section
