@@ -33,14 +33,13 @@ import { execSync } from "child_process";
 const NEW_BLOGS = [
   // --- EXAMPLE 1: IVF COST ENTRY (Goes to ivfcost.json) ---
   {
-    id: "ivf-cost-in-delhi",
-    hometitle: "IVF Cost in Delhi",           
-    title: "IVF Cost in Delhi: Complete Guide to IVF Treatment Cost, Charges & Factors",
-    excerpt: "Comprehensive guide to IVF cost, packages and financing options in Bhopal.",
+    id: "ivf-cost-in-meerut",
+    hometitle: "IVF Cost in Meerut",           
+    title: "IVF Cost in Meerut: Complete Guide to IVF Treatment Cost, Charges and More",
     contentFile: "scripts/blog-content/dummy-blog.html", 
-    image: "/assets/img/Blogs/IVF Cost in Delhi.png",
+    image: "/assets/img/Blogs/IVF Cost in Meerut.png",
     category: "IVF Cost",                      
-    slug: "ivf-cost-in-delhi",
+    slug: "ivf-cost-in-meerut",
     readTime: "11 min read",
     date: "October 01, 2026",
     author: "Dr. Julie Chhawchharia",
