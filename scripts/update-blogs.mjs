@@ -33,16 +33,16 @@ import { execSync } from "child_process";
 const NEW_BLOGS = [
   // --- EXAMPLE 1: IVF COST ENTRY (Goes to ivfcost.json) ---
   {
-    id: "ivf-cost-in-haldwani",
-    hometitle: "IVF Cost in Haldwani",           
-    title: "IVF Cost in Haldwani: Treatment Price, Charges & Cost Factors",
+    id: "ivf-cost-in-ranchi",
+    hometitle: "IVF Cost in Ranchi",           
+    title: "IVF Cost in Ranchi: Treatment Price, Factors and Process",
     contentFile: "scripts/blog-content/dummy-blog.html", 
-    image: "/assets/img/Blogs/IVF Cost in Haldwani.png",
+    image: "/assets/img/Blogs/IVF Cost in Ranchi.png",
     category: "IVF Cost",                      
-    slug: "ivf-cost-in-haldwani",
+    slug: "ivf-cost-in-ranchi",
     readTime: "11 min read",
     date: "October 01, 2026",
-    author: "Dr. Julie Chhawchharia",
+    author: "admin",
     excerpt: "Learn how lifestyle and diet influence fertility outcomes."
   },
 
