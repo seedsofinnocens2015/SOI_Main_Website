@@ -32,33 +32,33 @@ import { execSync } from "child_process";
 
 const NEW_BLOGS = [
   // --- EXAMPLE 1: IVF COST ENTRY (Goes to ivfcost.json) ---
-  {
-    id: "ivf-cost-in-ranchi",
-    hometitle: "IVF Cost in Ranchi",           
-    title: "IVF Cost in Ranchi: Treatment Price, Factors and Process",
-    contentFile: "scripts/blog-content/dummy-blog.html", 
-    image: "/assets/img/Blogs/IVF Cost in Ranchi.png",
-    category: "IVF Cost",                      
-    slug: "ivf-cost-in-ranchi",
-    readTime: "11 min read",
-    date: "October 01, 2026",
-    author: "admin",
-    excerpt: "Learn how lifestyle and diet influence fertility outcomes."
-  },
+  // {
+  //   id: "ivf-cost-in-ranchi",
+  //   hometitle: "IVF Cost in Ranchi",           
+  //   title: "IVF Cost in Ranchi: Treatment Price, Factors and Process",
+  //   contentFile: "scripts/blog-content/dummy-blog.html", 
+  //   image: "/assets/img/Blogs/IVF Cost in Ranchi.png",
+  //   category: "IVF Cost",                      
+  //   slug: "ivf-cost-in-ranchi",
+  //   readTime: "11 min read",
+  //   date: "October 01, 2026",
+  //   author: "admin",
+  //   excerpt: "Learn how lifestyle and diet influence fertility outcomes."
+  // },
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
-  // {
-  //   id: "my-fertility-guide",
-  //   title: "Complete Guide to Fertility Wellness",
-  //   excerpt: "Learn how lifestyle and diet influence fertility outcomes.",
-  //   contentFile: "scripts/blog-content/my-fertility-guide.html",
-  //   image: "/assets/img/Blogs/fertility-guide.png",
-  //   date: "September 30, 2026",
-  //   author: "Dr. Gauri Agarwal",
-  //   category: "Fertility",                     // Standard blog category
-  //   readTime: "8 min read",
-  //   slug: "my-fertility-guide"
-  // }
+  {
+    id: "iui-cost-in-gurugram",
+    title: "IUI Cost in Gurugram: Treatment Cost, Procedure, and What to Expect",
+    excerpt: "The cost of IUI in Gurugram usually starts from about ₹8,000 to ₹25,000 per cycle and can depend on medications, fertility tests, ultrasound examination, sperm processing, and type of IUI procedure. Different clinics and hospitals can have different prices for the IUI procedure based on what is included in their package.",
+    contentFile: "scripts/blog-content/dummy-blog.html",
+    image: "/assets/img/Blogs/IUI Cost in Gurugram.png",
+    date: "October 10, 2026",
+    author: "Dr. Aditi Bhatnagar",
+    category: "Treatment Guides",            
+    readTime: "8 min read",
+    slug: "iui-cost-in-gurugram"
+  }
 ];
 
 // =======================
