@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-gurugram",
-    title: "IUI Cost in Gurugram: Treatment Cost, Procedure, and What to Expect",
-    excerpt: "The cost of IUI in Gurugram usually starts from about ₹8,000 to ₹25,000 per cycle and can depend on medications, fertility tests, ultrasound examination, sperm processing, and type of IUI procedure. Different clinics and hospitals can have different prices for the IUI procedure based on what is included in their package.",
+    id: "iui-cost-in-agra",
+    title: "IUI Cost in Agra: Complete Guide to Treatment Price, Process & Success",
+    excerpt: "Have you and your partner been unable to conceive despite trying? You are not alone. There are millions of couples in India facing the same problem and finding solution in an easy and cost-effective fertility treatment known as IUI. ",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IUI Cost in Gurugram.png",
-    date: "October 10, 2026",
-    author: "Dr. Aditi Bhatnagar",
+    image: "/assets/img/Blogs/IUI Cost in Agra.png",
+    date: "October 11, 2026",
+    author: "Dr. Aiman Akram",
     category: "Treatment Guides",            
-    readTime: "8 min read",
-    slug: "iui-cost-in-gurugram"
+    readTime: "9 min read",
+    slug: "iui-cost-in-agra"
   }
 ];
 
