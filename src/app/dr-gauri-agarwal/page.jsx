@@ -151,9 +151,9 @@ export default function DrGauriAgarwalPage() {
             together in a carefully controlled lab setting, helping couples and
             individuals take a hopeful step toward parenthood with expert care.
           </p>
-          <a className="ivf-info-button" href="/fertility-treatments/ivf/">
+          <Link className="ivf-info-button" href="/fertility-treatments/ivf/">
             Find Out More
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -187,9 +187,9 @@ export default function DrGauriAgarwalPage() {
             reproductive support, and emotional guidance through every stage of
             the parenthood journey.
           </p>
-          <a className="about-button" href="/ivf-doctor/dr-gauri-agarwal-ivf-specialist/">
+          <Link className="about-button" href="/ivf-doctor/dr-gauri-agarwal-ivf-specialist/">
             More About Me
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -356,12 +356,12 @@ export default function DrGauriAgarwalPage() {
               New episodes share expert guidance for couples planning their next
               step.
             </strong>
-            <a
+            <Link
               className={podcastStyles.podcastButton}
               href="/#fertility-expert-videos"
             >
               Listen to Podcast
-            </a>
+            </Link>
           </div>
 
           <ScrollReveal

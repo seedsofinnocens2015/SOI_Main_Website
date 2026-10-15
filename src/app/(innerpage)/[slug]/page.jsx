@@ -491,9 +491,9 @@ const DynamicPage = async ({ params }) => {
 
                         {/* Call to Action Button */}
                         <div className="cs_best_ivf_cta">
-                            <a href="/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
+                            <Link href="/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
                                 Get Free Consultation
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -767,9 +767,9 @@ const DynamicPage = async ({ params }) => {
                                     </p>
                                 ))}
                                 <div className="cs_best_ivf_cta">
-                                    <a href="/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
+                                    <Link href="/contact/book-appointment" className="cs_btn cs_style_1 cs_color_1">
                                         Get Free Consultation
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
