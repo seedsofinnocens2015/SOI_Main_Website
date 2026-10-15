@@ -1,12 +1,8 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import Header from '../Components/Header/Header';
 import Footer from '../Components/Footer/Footer';
+import GlobalAppointmentPopupLoader from '../Components/GlobalAppointmentPopupLoader';
 
-const GlobalAppointmentPopup = dynamic(
-    () => import('../Components/GlobalAppointmentPopup'),
-    { ssr: false }
-);
 
 const DefalultLayout = ({ children }) => {
     return (
@@ -14,7 +10,7 @@ const DefalultLayout = ({ children }) => {
            <Header></Header>
             {children}
             <Footer></Footer>
-            <GlobalAppointmentPopup />
+            <GlobalAppointmentPopupLoader />
         </div>
     );
 };

@@ -17,7 +17,7 @@
     "bootstrap": "^5.3.3",
     "critters": "^0.0.23",
     "leaflet": "^1.9.4",
-    "next": "14.2.15",
+    "next": "15.5.28",
     "react": "^18",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18",
@@ -25,12 +25,15 @@
     "react-leaflet": "^4.2.1",
     "react-slick": "^0.30.2",
     "sass": "^1.79.5",
-    "sharp": "^0.34.5",
+    "sharp": "0.35.5",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "25.9.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.15"
+    "eslint-config-next": "15.5.28"
+  },
+  "overrides": {
+    "postcss": "8.5.23"
   }
 }
