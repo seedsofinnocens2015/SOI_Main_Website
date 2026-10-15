@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-agra",
-    title: "IUI Cost in Agra: Complete Guide to Treatment Price, Process & Success",
-    excerpt: "Have you and your partner been unable to conceive despite trying? You are not alone. There are millions of couples in India facing the same problem and finding solution in an easy and cost-effective fertility treatment known as IUI. ",
+    id: "iui-cost-in-kanpur",
+    title: "IUI Cost in Kanpur: Complete Guide to Price, Process and Success Rate",
+    excerpt: "Pregnancy and not getting any positive news every month can become very stressful. The first question that comes to the mind of most couples is How much does it cost? If you are looking for IUI cost in Kanpur, then this guide provides you with a straight answer in simple words. Not only this, but you will know what IUI is, when it is required, and its difference from IVF.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IUI Cost in Agra.png",
-    date: "October 11, 2026",
-    author: "Dr. Aiman Akram",
+    image: "/assets/img/Blogs/IUI Cost in Kanpur.png",
+    date: "October 14, 2026",
+    author: "Dr. Ayushi Agarwal",
     category: "Treatment Guides",            
-    readTime: "9 min read",
-    slug: "iui-cost-in-agra"
+    readTime: "8 min read",
+    slug: "iui-cost-in-kanpur"
   }
 ];
 
