@@ -83,11 +83,11 @@ const BestIVFCentre = ({
     const defaultServices = [
         {
             title: "IUI, IVF & ICSI",
-            icon: "/assets/img/icons/IUI, IVF & ICSI.svg"
+            icon: "/assets/img/icons/iui-ivf-icsi.svg"
         },
         {
             title: "Blastocyst Transfer",
-            icon: "/assets/img/icons/Blastocyst Transfer.svg"
+            icon: "/assets/img/icons/blastocyst-transfer.svg"
         },
         {
             title: "Cryopreservation",
@@ -96,16 +96,16 @@ const BestIVFCentre = ({
         },
         {
             title: "PRP & Ovarian Rejuvenation",
-            icon: "/assets/img/icons/PRP & Ovarian Rejuvenation.svg"
+            icon: "/assets/img/icons/prp-ovarian-rejuvenation.svg"
         },
         {
             title: "Genetic Testing",
             subtitle: "(PGT-A & PGT-M)",
-            icon: "/assets/img/icons/Genetic Testing.svg"
+            icon: "/assets/img/icons/genetic-testing.svg"
         },
         {
             title: "Genetic Counseling",
-            icon: "/assets/img/icons/Genetic Counselling.svg"
+            icon: "/assets/img/icons/genetic-counselling.svg"
         },
         {
             title: "TESA/PESA",
@@ -113,7 +113,7 @@ const BestIVFCentre = ({
         },
         {
             title: "Laparoscopy & Hysteroscopy",
-            icon: "/assets/img/icons/Laparoscopy & Hysteroscopy.svg"
+            icon: "/assets/img/icons/laparoscopy-hysteroscopy.svg"
         },
     ];
 

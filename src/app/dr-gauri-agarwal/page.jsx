@@ -207,17 +207,17 @@ export default function DrGauriAgarwalPage() {
         <div className={styles.servicesGrid}>
           {[
             {
-              icon: "/gauri-agarwal/IUI, IVF & ICSI.svg",
+              icon: "/gauri-agarwal/iui-ivf-icsi.svg",
               title: "IUI, IVF & ICSI",
               text: "Personalised fertility treatments designed around your diagnosis, cycle response, and parenthood goals.",
             },
             {
-              icon: "/gauri-agarwal/Genetic%20Testing.svg",
+              icon: "/gauri-agarwal/genetic-testing.svg",
               title: "Genetic Testing",
               text: "PGT-A and PGT-M screening support to help identify healthy embryos before transfer.",
             },
             {
-              icon: "/gauri-agarwal/Blastocyst%20Transfer.svg",
+              icon: "/gauri-agarwal/blastocyst-transfer.svg",
               title: "Blastocyst Transfer",
               text: "Advanced embryo transfer planning at the blastocyst stage for carefully selected IVF cycles.",
             },
@@ -227,7 +227,7 @@ export default function DrGauriAgarwalPage() {
               text: "Egg, sperm, and embryo freezing options for future fertility preservation and treatment flexibility.",
             },
             {
-              icon: "/gauri-agarwal/PRP%20&%20Ovarian%20Rejuvenation.svg",
+              icon: "/gauri-agarwal/prp-ovarian-rejuvenation.svg",
               title: "PRP & Ovarian Rejuvenation",
               text: "Supportive regenerative options for selected patients seeking ovarian function and fertility care.",
             },
@@ -237,7 +237,7 @@ export default function DrGauriAgarwalPage() {
               text: "Surgical sperm retrieval options for male factor infertility and advanced assisted reproduction cycles.",
             },
             {
-              icon: "/gauri-agarwal/Donor%20Program.svg",
+              icon: "/gauri-agarwal/donor-program.svg",
               title: "Donor Program",
               text: "Guidance for donor egg, donor sperm, and donor embryo pathways with ethical counselling support.",
             },
@@ -247,12 +247,12 @@ export default function DrGauriAgarwalPage() {
               text: "Coordinated surrogacy guidance with medical planning, counselling, and treatment cycle support.",
             },
             {
-              icon: "/gauri-agarwal/Genetic%20Counselling.svg",
+              icon: "/gauri-agarwal/genetic-counselling.svg",
               title: "Genetic Counselling",
               text: "Clear counselling for inherited conditions, embryo testing choices, and family planning decisions.",
             },
             {
-              icon: "/gauri-agarwal/Laparoscopy%20&%20Hysteroscopy.svg",
+              icon: "/gauri-agarwal/laparoscopy-hysteroscopy.svg",
               title: "Laparoscopy & Hysteroscopy",
               text: "Minimally invasive procedures to evaluate and treat uterine, tubal, and pelvic fertility concerns.",
             },

@@ -968,7 +968,7 @@ const Header = ({ isTopBar, variant }) => {
                     </Link>
                     <Link href="https://www.linkedin.com/company/seedsofinnocens" target="_blank" rel="noopener noreferrer" className="cs_social_icon">
                       <Image
-                        src={getAssetPathClient('/assets/img/icons/027-linkedin.svg')}
+                        src={getAssetPathClient('/assets/img/icons/linkedin.svg')}
                         alt="LinkedIn"
                         width={20}
                         height={20}

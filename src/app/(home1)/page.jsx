@@ -196,7 +196,7 @@ const heroData = {
     designImage: '/assets/img/leaf.png', // Design image for subtitle box background
     services: [
       {
-        iconUrl: '/assets/img/icons/IUI, IVF & ICSI.svg',
+        iconUrl: '/assets/img/icons/iui-ivf-icsi.svg',
         index: '01',
         title: 'IUI, IVF & ICSI',
         subHeading: 'In-Vitro Fertilization (IVF) Overview',
@@ -205,7 +205,7 @@ const heroData = {
         link: '/fertility-treatments/ivf/',
       },
       {
-        iconUrl: '/assets/img/icons/Genetic Testing.svg',
+        iconUrl: '/assets/img/icons/genetic-testing.svg',
         index: '03',
         title: 'Genetic testing (PGT-A & PGT-M)',
         subHeading: 'Understanding PGT-SR',
@@ -214,7 +214,7 @@ const heroData = {
         link: '/genetic-testing-screening/genetic-testing/',
       },
       {
-        iconUrl: '/assets/img/icons/Blastocyst Transfer.svg',
+        iconUrl: '/assets/img/icons/blastocyst-transfer.svg',
         index: '04',
         title: 'Blastocyst Transfer',
         subHeading: 'Blastocyst Transfer',
@@ -232,7 +232,7 @@ const heroData = {
         link: '/ivf-procedures-preservation/cryopreservation/',
       },
       {
-        iconUrl: '/assets/img/icons/PRP & Ovarian Rejuvenation.svg',
+        iconUrl: '/assets/img/icons/prp-ovarian-rejuvenation.svg',
         index: '08',
         title: 'PRP & Ovarian Rejuvenation',
         subHeading: 'PRP & Ovarian Rejuvenation',
@@ -250,7 +250,7 @@ const heroData = {
         link: '/male-infertility-treatments/tesa-pesa/',
       },
       {
-        iconUrl: '/assets/img/icons/Donor Program.svg',
+        iconUrl: '/assets/img/icons/donor-program.svg',
         index: '05',
         title: 'Donor Program',
         subHeading: 'Donor Program: Third Party Reproduction',
@@ -269,7 +269,7 @@ const heroData = {
       },
       
       {
-        iconUrl: '/assets/img/icons/Genetic Counselling.svg',
+        iconUrl: '/assets/img/icons/genetic-counselling.svg',
         index: '08',
         title: 'Genetic Counselling',
         subHeading: 'Genetic Counselling: Understanding and Managing Genetic Risks in Family Planning',
@@ -278,7 +278,7 @@ const heroData = {
         link: '/genetic-testing-screening/genetic-factors/',
       },
       {
-        iconUrl: '/assets/img/icons/Laparoscopy & Hysteroscopy.svg',
+        iconUrl: '/assets/img/icons/laparoscopy-hysteroscopy.svg',
         index: '07',
         title: 'Laparoscopy & Hysteroscopy',
         subHeading: 'Laparoscopy & Hysteroscopy',

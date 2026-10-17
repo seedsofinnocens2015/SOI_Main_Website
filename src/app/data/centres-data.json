@@ -3528,13 +3528,13 @@
       "servicesWithIcons": [
         {
           "title": "IUI, IVF & ICSI",
-          "icon": "/assets/img/icons/IUI, IVF & ICSI.svg",
+          "icon": "/assets/img/icons/iui-ivf-icsi.svg",
           "link": "/fertility-treatments/ivf",
           "subtitle": "The treatment for each couple is unique in its own way; however, at Seeds of Innocens IVF, we provide our couples with the best fertility treatments such as IUI (Intrauterine Insemination), IVF (In Vitro Fertilization), and ICSI (Intracytoplasmic Sperm Injection)."
         },
         {
           "title": "Blastocyst Transfer",
-          "icon": "/assets/img/icons/Blastocyst Transfer.svg",
+          "icon": "/assets/img/icons/blastocyst-transfer.svg",
           "link": "/fertility-treatments/blastocyst-transfer",
           "subtitle": "The embryos are grown for five days in the lab, and then only healthy embryos are selected for transfer."
         },
@@ -3546,19 +3546,19 @@
         },
         {
           "title": "PRP & Ovarian Rejuvenation",
-          "icon": "/assets/img/icons/PRP & Ovarian Rejuvenation.svg",
+          "icon": "/assets/img/icons/prp-ovarian-rejuvenation.svg",
           "link": "/ivf-procedures-preservation/prp",
           "subtitle": "PRP therapy stands for Platelet-Rich Plasma therapy, and it is a novel method aimed at restoring ovarian functions in women with decreased ovarian reserve."
         },
         {
           "title": "Genetic Testing",
-          "icon": "/assets/img/icons/Genetic Testing.svg",
+          "icon": "/assets/img/icons/genetic-testing.svg",
           "link": "/genetic-testing-screening/pgt-a",
           "subtitle": "Preimplantation Genetic Testing (PGT) allows for detecting chromosome abnormalities in the embryo before its transfer, thus facilitating the embryo selection process."
         },
         {
           "title": "Genetic Counseling",
-          "icon": "/assets/img/icons/Genetic Counselling.svg",
+          "icon": "/assets/img/icons/genetic-counselling.svg",
           "link": "/genetic-testing-screening/genetic-testing",
           "subtitle": "Genetic counseling helps patients learn about genetic issues and disorders and genetic tests which may help determine the possible health problems of their future baby. Our genetic counselors provide professional counseling on genetics and reproductive health."
         },
@@ -3570,7 +3570,7 @@
         },
         {
           "title": "Laparoscopy & Hysteroscopy",
-          "icon": "/assets/img/icons/Laparoscopy & Hysteroscopy.svg",
+          "icon": "/assets/img/icons/laparoscopy-hysteroscopy.svg",
           "link": "/surgeries/hysteroscopy",
           "subtitle": "Minimally invasive procedures are performed for diagnosing and treating some conditions that might influence fertility negatively, such as uterus abnormalities, endometriosis, fibroids, adhesions, and tubal issues."
         }
