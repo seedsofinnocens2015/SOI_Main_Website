@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-kochi",
-    title: "IUI Cost in Kochi: Treatment Price, Process, Benefits and FAQs",
-    excerpt: "Worried about the cost of fertility treatment? Do you plan on beginning your parenthood journey soon and seeking information on IUI cost in Kochi? You are certainly not the only one. There are many couples in search of IUI cost in Kochi who wish to know about the IUI treatment, its benefits, and its cost.",
+    id: "ivf-cost-in-india-complete-guide-to-ivf-cost",
+    title: "IVF Cost in India: Complete Guide to IVF Cost, Injection Prices and Budget Planning",
+    excerpt: "Beginning a family is a big dream, and fertility challenges can make the journey challenging. For most couples, the worry is not only medical but also financial. Questions such as “How much will IVF cost in india”? Why are the injections so expensive? Will there be hidden charges? is very common.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IUI Cost in Kochi.png",
-    date: "October 15, 2026",
-    author: "Dr. Sonia Raju",
-    category: "Treatment Guides",            
-    readTime: "9 min read",
-    slug: "iui-cost-in-kochi"
+    image: "/assets/img/Blogs/IVF Cost in India1.png",
+    date: "October 16, 2026",
+    author: "Dr. Gauri Agarwal",
+    category: "IVF Process",            
+    readTime: "10 min read",
+    slug: "ivf-cost-in-india-complete-guide-to-ivf-cost"
   }
 ];
 
