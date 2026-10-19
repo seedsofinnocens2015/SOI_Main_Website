@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "ivf-cost-in-india-complete-guide-to-ivf-cost",
-    title: "IVF Cost in India: Complete Guide to IVF Cost, Injection Prices and Budget Planning",
-    excerpt: "Beginning a family is a big dream, and fertility challenges can make the journey challenging. For most couples, the worry is not only medical but also financial. Questions such as “How much will IVF cost in india”? Why are the injections so expensive? Will there be hidden charges? is very common.",
+    id: "recurrent-pregnancy-loss",
+    title: "Recurrent Pregnancy Loss: How Genetic Testing Uncovers the Causes of Recurrent Pregnancy Loss",
+    excerpt: "Have you suffered two or more miscarriages and are concerned about your ability to conceive a healthy child? Then you are not alone. Recurrent pregnancy loss (RPL) can be a source of emotional distress and confusion if the cause is unknown to you.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/IVF Cost in India1.png",
-    date: "October 16, 2026",
-    author: "Dr. Gauri Agarwal",
-    category: "IVF Process",            
-    readTime: "10 min read",
-    slug: "ivf-cost-in-india-complete-guide-to-ivf-cost"
+    image: "/assets/img/Blogs/recurrent-pregnancy-loss.png",
+    date: "October 17, 2026",
+    author: "Dr. Debilina Roy",
+    category: "Treatment Guides",            
+    readTime: "11 min read",
+    slug: "recurrent-pregnancy-loss"
   }
 ];
 
