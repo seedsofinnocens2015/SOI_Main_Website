@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "recurrent-pregnancy-loss",
-    title: "Recurrent Pregnancy Loss: How Genetic Testing Uncovers the Causes of Recurrent Pregnancy Loss",
-    excerpt: "Have you suffered two or more miscarriages and are concerned about your ability to conceive a healthy child? Then you are not alone. Recurrent pregnancy loss (RPL) can be a source of emotional distress and confusion if the cause is unknown to you.",
+    id: "iui-cost-in-ghaziabad",
+    title: "IUI Cost in Ghaziabad: Treatment Cost, Procedure and What to Expect",
+    excerpt: "Conceiving may turn out to be an emotionally draining experience for couples when pregnancy fails to occur even after trying. However, not all couples require fertility treatment through IVF. Some couples may be eligible for IUI treatment in Ghaziabad, which is a simpler fertility treatment method. If you are looking for IUI cost in Ghaziabad, knowledge about the treatment, cost, tests involved, and other factors affecting the cost will be helpful.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/recurrent-pregnancy-loss.png",
-    date: "October 17, 2026",
-    author: "Dr. Debilina Roy",
-    category: "Treatment Guides",            
-    readTime: "11 min read",
-    slug: "recurrent-pregnancy-loss"
+    image: "/assets/img/Blogs/iui-cost-in-ghaziabad.png",
+    date: "October 19, 2026",
+    author: "Dr. Gauri Agarwal",
+    category: "Fertility",            
+    readTime: "12 min read",
+    slug: "iui-cost-in-ghaziabad"
   }
 ];
 
