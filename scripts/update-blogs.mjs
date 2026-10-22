@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-ghaziabad",
-    title: "IUI Cost in Ghaziabad: Treatment Cost, Procedure and What to Expect",
-    excerpt: "Conceiving may turn out to be an emotionally draining experience for couples when pregnancy fails to occur even after trying. However, not all couples require fertility treatment through IVF. Some couples may be eligible for IUI treatment in Ghaziabad, which is a simpler fertility treatment method. If you are looking for IUI cost in Ghaziabad, knowledge about the treatment, cost, tests involved, and other factors affecting the cost will be helpful.",
+    id: "iui-cost-in-gorakhpur",
+    title: "IUI Cost in Gorakhpur: Complete Guide to IVF and IUI Treatment Charges",
+    excerpt: "The decision to have a baby is among the most significant decisions that a couple can make in their life. When pregnancy fails to occur as expected, anxiety and confusion sets in. This can be compounded by the lack of direction on where to start and what form of treatment to pursue. The IVF cost in Gorakhpur usually falls between ₹1,00,000 and ₹2,50,000 per cycle.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/iui-cost-in-ghaziabad.png",
-    date: "October 19, 2026",
-    author: "Dr. Gauri Agarwal",
+    image: "/assets/img/Blogs/iui-cost-in-gorakhpur.png",
+    date: "October 21, 2026",
+    author: "Dr. Nivedita Nehal",
     category: "Fertility",            
-    readTime: "12 min read",
-    slug: "iui-cost-in-ghaziabad"
+    readTime: "13 min read",
+    slug: "iui-cost-in-gorakhpur"
   }
 ];
 
