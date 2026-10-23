@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-gorakhpur",
-    title: "IUI Cost in Gorakhpur: Complete Guide to IVF and IUI Treatment Charges",
-    excerpt: "The decision to have a baby is among the most significant decisions that a couple can make in their life. When pregnancy fails to occur as expected, anxiety and confusion sets in. This can be compounded by the lack of direction on where to start and what form of treatment to pursue. The IVF cost in Gorakhpur usually falls between ₹1,00,000 and ₹2,50,000 per cycle.",
+    id: "iui-cost-in-lucknow",
+    title: "IUI Cost in Lucknow: Treatment Price, Process and Factors Affecting Cost",
+    excerpt: "An analysis of the IUI cost in Lucknow is crucial for couples who wish to opt for fertility treatment. Intrauterine insemination is one kind of fertility treatment that might benefit some couples trying to conceive through assisted reproduction methods. In this method, fertilized sperm is introduced directly into the uterus near the time of ovulation.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/iui-cost-in-gorakhpur.png",
-    date: "October 21, 2026",
-    author: "Dr. Nivedita Nehal",
+    image: "/assets/img/Blogs/iui-cost-in-lucknow.png",
+    date: "October 22, 2026",
+    author: "Dr. Disha Datta",
     category: "Fertility",            
-    readTime: "13 min read",
-    slug: "iui-cost-in-gorakhpur"
+    readTime: "12 min read",
+    slug: "iui-cost-in-lucknow"
   }
 ];
 
