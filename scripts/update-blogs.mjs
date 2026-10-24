@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-lucknow",
-    title: "IUI Cost in Lucknow: Treatment Price, Process and Factors Affecting Cost",
-    excerpt: "An analysis of the IUI cost in Lucknow is crucial for couples who wish to opt for fertility treatment. Intrauterine insemination is one kind of fertility treatment that might benefit some couples trying to conceive through assisted reproduction methods. In this method, fertilized sperm is introduced directly into the uterus near the time of ovulation.",
+    id: "iui-cost-in-meerut",
+    title: "IUI Cost in Meerut: Complete Guide to Price, Process and Success Rate",
+    excerpt: "If you and your spouse have been trying to conceive unsuccessfully, your doctor will probably advise you about IUI (Intrauterine Insemination). Now you want to know, How much is IUI in Meerut? ",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/iui-cost-in-lucknow.png",
-    date: "October 22, 2026",
-    author: "Dr. Disha Datta",
+    image: "/assets/img/Blogs/iui-cost-in-meerut.png",
+    date: "October 23, 2026",
+    author: "Dr. Varkha Chandra",
     category: "Fertility",            
-    readTime: "12 min read",
-    slug: "iui-cost-in-lucknow"
+    readTime: "13 min read",
+    slug: "iui-cost-in-meerut"
   }
 ];
 
