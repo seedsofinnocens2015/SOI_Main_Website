@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-meerut",
-    title: "IUI Cost in Meerut: Complete Guide to Price, Process and Success Rate",
-    excerpt: "If you and your spouse have been trying to conceive unsuccessfully, your doctor will probably advise you about IUI (Intrauterine Insemination). Now you want to know, How much is IUI in Meerut? ",
+    id: "iui-cost-in-kolkata",
+    title: "IUI Cost in Kolkata: Treatment Price, Benefits & Process",
+    excerpt: "Are you planning to have a family but worried about the cost of fertility treatment? This is the issue that most couples encounter when researching treatment methods. If you are trying to find out the cost of IUI in Kolkata, knowing the procedure, cost, and benefits will make you understand everything.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/iui-cost-in-meerut.png",
-    date: "October 23, 2026",
-    author: "Dr. Varkha Chandra",
+    image: "/assets/img/Blogs/iui-cost-in-kolkata.png",
+    date: "October 24, 2026",
+    author: "Dr. Adrija Ghosal",
     category: "Fertility",            
-    readTime: "13 min read",
-    slug: "iui-cost-in-meerut"
+    readTime: "11 min read",
+    slug: "iui-cost-in-kolkata"
   }
 ];
 
