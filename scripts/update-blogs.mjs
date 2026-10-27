@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-kolkata",
-    title: "IUI Cost in Kolkata: Treatment Price, Benefits & Process",
-    excerpt: "Are you planning to have a family but worried about the cost of fertility treatment? This is the issue that most couples encounter when researching treatment methods. If you are trying to find out the cost of IUI in Kolkata, knowing the procedure, cost, and benefits will make you understand everything.",
+    id: "iui-cost-in-patna",
+    title: "IUI Cost in Patna: Treatment Price, Benefits, Tests & IVF Charges",
+    excerpt: "Do you have plans to have kids but find it hard to conceive? You are not the only one who finds it hard to conceive, and you might be on the search for solutions. The treatment procedure that your fertility expert could recommend includes Intrauterine Insemination (IUI).",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/iui-cost-in-kolkata.png",
-    date: "October 24, 2026",
-    author: "Dr. Adrija Ghosal",
+    image: "/assets/img/Blogs/iui-cost-in-patna.png",
+    date: "October 26, 2026",
+    author: "Dr. Debilina Roy",
     category: "Fertility",            
-    readTime: "11 min read",
-    slug: "iui-cost-in-kolkata"
+    readTime: "10 min read",
+    slug: "iui-cost-in-patna"
   }
 ];
 

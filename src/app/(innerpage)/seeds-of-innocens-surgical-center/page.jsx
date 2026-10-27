@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaLocationDot, FaSuitcase } from 'react-icons/fa6';
 import AccentHeading from '@/app/Components/AccentHeading';
+import FAQAccordion from '@/app/Components/FAQAccordion';
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import { getAssetPath } from '@/app/utils/assetPath';
@@ -22,7 +23,7 @@ export async function generateMetadata() {
 }
 
 export default function SurgicalCenterPage() {
-  const { hero, patientChoice, introduction, procedures, whyChoose, expertTeam, journey, cta } = surgicalCenterData;
+  const { hero, patientChoice, introduction, additionalContent, procedures, whyChoose, expertTeam, journey, cta, faqs } = surgicalCenterData;
 
   return (
     <main className={styles.page}>
@@ -50,26 +51,39 @@ export default function SurgicalCenterPage() {
 
       <Section topSpaceLg="70" topSpaceMd="90" bottomSpaceLg="70" bottomSpaceMd="90">
         <div className="container">
-          <div className="row align-items-center cs_gap_y_40">
-            <div className="col-lg-6">
-              <div className={styles.introImage}>
-                <Image
-                  src={getAssetPath(introduction.image)}
-                  alt={introduction.imageAlt}
-                  width={760}
-                  height={570}
-                  sizes="(max-width: 991px) 100vw, 50vw"
-                  priority
-                />
-              </div>
+          {additionalContent?.length > 0 && (
+            <div className={styles.introAdditionalContent}>
+              {additionalContent.map((block, idx) => (
+                <div key={idx} className={styles.introContentBlock}>
+                  <AccentHeading
+                    level={block.tag === 'h3' ? 3 : 2}
+                    className={styles.centerHeading}
+                  >
+                    {block.heading}
+                  </AccentHeading>
+                  {block.paragraphs.map((para, pIdx) => (
+                    <p key={pIdx} className={styles.bodyText}>
+                      {para}
+                    </p>
+                  ))}
+
+                  {/* Place the surgical image nicely after the first content block */}
+                  {idx === 0 && introduction?.image && (
+                    <div className={styles.centerContentImage}>
+                      <Image
+                        src={getAssetPath(introduction.image)}
+                        alt={introduction.imageAlt || 'Seeds of Innocence Surgical Centre'}
+                        width={820}
+                        height={460}
+                        sizes="(max-width: 991px) 100vw, 820px"
+                        priority
+                      />
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-            <div className="col-lg-6">
-              <AccentHeading className={styles.sectionHeading}>
-                {introduction.heading}
-              </AccentHeading>
-              <p className={styles.bodyText}>{introduction.paragraph}</p>
-            </div>
-          </div>
+          )}
         </div>
       </Section>
 
@@ -199,7 +213,7 @@ export default function SurgicalCenterPage() {
         </div>
       </Section>
 
-      <Section topSpaceLg="60" topSpaceMd="75" bottomSpaceLg="70" bottomSpaceMd="90">
+      <Section topSpaceLg="60" topSpaceMd="75" bottomSpaceLg="50" bottomSpaceMd="70">
         <div className="container">
           <div className={styles.cta}>
             <div>
@@ -211,6 +225,31 @@ export default function SurgicalCenterPage() {
           </div>
         </div>
       </Section>
+
+      {faqs?.length > 0 && (
+        <Section
+          topSpaceLg="20"
+          topSpaceMd="20"
+          bottomSpaceLg="70"
+          bottomSpaceMd="100"
+        >
+          <div className="container">
+            <div className="cs_service_title_section mb-4">
+              <h3 className="cs_service_main_title text-center">
+                <span className="cs_news_media_main_title" style={{ color: '#df3655' }}>
+                  FREQUENTLY ASKED
+                </span>{' '}
+                <span style={{ color: '#000000' }}>QUESTIONS</span>
+              </h3>
+            </div>
+            <div className="row">
+              <div className="col-12">
+                <FAQAccordion faqs={faqs} />
+              </div>
+            </div>
+          </div>
+        </Section>
+      )}
     </main>
   );
 }

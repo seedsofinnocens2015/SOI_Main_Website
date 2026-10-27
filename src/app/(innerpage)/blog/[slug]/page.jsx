@@ -4,6 +4,8 @@ import Link from 'next/link';
 import React from 'react';
 import { FaCalendarAlt, FaClock, FaUser, FaArrowLeft } from 'react-icons/fa';
 import AccentHeading from '@/app/Components/AccentHeading';
+import BlogFaqAccordion from '@/app/Components/BlogFaqAccordion';
+import { extractFaqsFromBlogHtml } from '@/app/utils/blogFaqParser';
 import blogsData from '@/app/data/blogs.json';
 import { getAssetPath } from '@/app/utils/assetPath';
 import { accentHeadingsInHtml } from '@/app/utils/accentHeadingsInHtml';
@@ -255,18 +257,54 @@ const BlogDetailPage = async ({ params }) => {
 
 
 
-                  <div
-                    className="blog-content cs_blog_body"
-                    style={{
-                      fontSize: '16px',
-                      lineHeight: '1.8',
-                      color: '#333',
-                      marginBottom: '30px',
-                      textAlign: 'left',
-                      maxWidth: '100%',
-                    }}
-                    dangerouslySetInnerHTML={{ __html: accentHeadingsInHtml(blog.content) }}
-                  />
+                  {(() => {
+                    const { beforeHtml, faqs, afterHtml } = extractFaqsFromBlogHtml(blog.content);
+
+                    return (
+                      <>
+                        <div
+                          className="blog-content cs_blog_body"
+                          style={{
+                            fontSize: '16px',
+                            lineHeight: '1.8',
+                            color: '#333',
+                            marginBottom: faqs.length > 0 ? '10px' : '30px',
+                            textAlign: 'left',
+                            maxWidth: '100%',
+                          }}
+                          dangerouslySetInnerHTML={{ __html: accentHeadingsInHtml(beforeHtml) }}
+                        />
+
+                        {faqs.length > 0 && (
+                          <div className="cs_blog_faq_section" style={{ marginTop: '35px', marginBottom: '35px' }}>
+                            <h3
+                              className="cs_ivf_content_heading cs_blog_body_heading"
+                              style={{ textAlign: 'left', marginBottom: '20px' }}
+                            >
+                              <span className="cs_heading_accent_start">Frequently Asked</span>{' '}
+                              <span>Questions</span>
+                            </h3>
+                            <BlogFaqAccordion faqs={faqs} />
+                          </div>
+                        )}
+
+                        {afterHtml && (
+                          <div
+                            className="blog-content cs_blog_body"
+                            style={{
+                              fontSize: '16px',
+                              lineHeight: '1.8',
+                              color: '#333',
+                              marginBottom: '30px',
+                              textAlign: 'left',
+                              maxWidth: '100%',
+                            }}
+                            dangerouslySetInnerHTML={{ __html: accentHeadingsInHtml(afterHtml) }}
+                          />
+                        )}
+                      </>
+                    );
+                  })()}
                   <style>
                     {`
                       

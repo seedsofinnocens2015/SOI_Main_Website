@@ -15,7 +15,7 @@
   background: #fff7f9;
 
   > div > p {
-    max-width: 1040px;
+    max-width: 100%;
     margin: 0 auto 34px;
     color: #4f5967;
     font-size: 17px;
@@ -65,6 +65,56 @@
   font-size: 16px;
   line-height: 1.85;
   margin-bottom: 16px;
+}
+
+.centerContentImage {
+  max-width: 960px;
+  margin: 40px auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(42, 54, 75, 0.13);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+  }
+}
+
+.introAdditionalContent {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.introContentBlock {
+  margin-top: 48px;
+  text-align: center;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .sectionHeading,
+  .centerHeading {
+    margin-bottom: 18px !important;
+    text-align: center !important;
+  }
+
+  .bodyText {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .softSection {

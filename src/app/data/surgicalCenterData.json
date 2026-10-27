@@ -1,13 +1,13 @@
 {
   "seo": {
     "title": "Seeds of Innocence Surgical Centre",
-    "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility."
+    "description": "Looking for a hysteroscopy surgeon with experience in Delhi NCR or an experienced laparoscopy surgeon? Seeds of Innocence (SOI) Surgical Centre offers state-of-the-art laparoscopic and hysteroscopic procedures that are aimed at solving gynecological issues without affecting your ability to conceive."
   },
   "hero": {
     "title": "Seeds of Innocence <span class=\"cs_accent_color\">Surgical Centre</span>",
-    "contentHeading": "Precision & Compassionate Surgical Care for Advanced Gynecology",
+    "contentHeading": "Gynecologist for Hysteroscopy in Delhi NCR | Advanced Technology, Compassionate Care",
     "backgroundImage": "/assets/img/Services/OpenSurgery.webp",
-    "description": "Advanced laparoscopic and hysteroscopy procedures specifically aimed at resolving gynecological problems without hampering fertility. Seeds of Innocence Surgical Centre offers advanced technologies, expert surgeons, and compassionate patient care that ensures quick recovery and improved reproductive wellness."
+    "description": "Looking for a hysteroscopy surgeon with experience in Delhi NCR or an experienced laparoscopy surgeon? Seeds of Innocence (SOI) Surgical Centre offers state-of-the-art laparoscopic and hysteroscopic procedures that are aimed at solving gynecological issues without affecting your ability to conceive. Our surgeons employ cutting-edge technology and minimally invasive methods to solve issues like fibroids, uterine polyps, endometriosis, ovarian cysts, PCOS, and infertility-related issues. Smaller incisions, reduced pain, and faster recovery mean that you can get back to your routine activities sooner than before. At SOI Surgical Centre, each surgery is carried out with precision and patient safety in mind. Unlike conventional open surgery, keyhole surgery requires just tiny cuts, resulting in reduced pain, little scarring, reduced chances of infections, and fewer days in hospital. Patients are able to resume their normal activities much faster. At SOI Surgical Centre, all surgeries are done with utmost precision, safety, and consideration for the patient’s well-being."
   },
   "patientChoice": {
     "heading": "Why Our Women Patients Choose Us",
@@ -25,6 +25,36 @@
     "image": "/assets/img/surgical.png",
     "imageAlt": "Expert surgical procedures for every woman's life stage"
   },
+  "additionalContent": [
+    {
+      "tag": "h2",
+      "heading": "Hysteroscopy for Fibroids, Polyps & Infertility | Specialist in Delhi NCR",
+      "paragraphs": [
+        "Depending on the specific case, hysteroscopy can be helpful to diagnose or treat some diseases such as endometrial polyps, submucous fibroids, uterine adhesions and others. Hysteroscopy can also be conducted during the evaluation of infertility and it needs an internal examination of the uterus.",
+        "In Delhi, the cost of hysteroscopy can differ from one to another according to the kind of hysteroscopy procedure, its diagnostics or operation, investigation, anaesthesia, and others. During the consultation, the staff will explain to you the process of the procedure, your expected recovery, and costs.",
+        "If you are looking for a hysteroscopy doctor in Delhi, or trying to find out about hysteroscopy cost or test cost in Delhi, contact us."
+      ]
+    },
+    {
+      "tag": "h3",
+      "heading": "Laparoscopy for Endometriosis, Fibroids & Ovarian Cysts | Specialist in Delhi NCR",
+      "paragraphs": [
+        "Laparoscopy is a minimally invasive procedure performed by a gynaecologist using a specially designed camera known as a laparoscope which enables diagnosis and treatment of some medical issues via minimal incisions. In Seeds of Innocens Surgical Centre (SOI Surgical Centre), laparoscopy may be indicated in the assessment and treatment of gynaecological conditions affecting your reproductive health, fertility or overall well-being.",
+        "Depending on your condition, laparoscopy may assist in diagnosing or treating problems like endometriosis, ovarian cysts, uterine fibroids, pelvic adhesions or some of the reasons behind infertility. Laparoscopy may also be suggested in cases where there is need for a thorough examination of pelvic organs or if conventional surgery may not be required at all.",
+        "Laparoscopy costs in Delhi NCR depend on the procedure involved, the level of its complexity, investigations performed, anaesthesia, hospital stay and other aspects. The procedure, the recovery process and relevant costs will be discussed with you at the time of consultation.",
+        "If you are looking for a good laparoscopy doctor in Delhi NCR or have some questions about the laparoscopy cost in Delhi NCR, Lucknow, Kolkata please visit us."
+      ]
+    },
+    {
+      "tag": "h3",
+      "heading": "Minimally Invasive Gynecology Surgery in Delhi NCR | Precision Meets Compassion",
+      "paragraphs": [
+        "Seeds of Innocens Surgical Centre (SOI Surgical Centre) offers modern laparoscopic surgery for gynecological ailments in Delhi NCR, using minimally invasive techniques to ensure effective treatment with smaller incisions and less pain. Our expert team of surgeons and laparoscopic gynecologists will conduct a comprehensive examination and suggest the type of surgery to undertake.",
+        "Conditions that may require a laparoscopic procedure include fibroids, endometriosis, ovarian cysts, ectopic pregnancies, pelvic adhesions, and certain uterine conditions. There may be many advantages in minimally invasive laparoscopic surgery when compared to open surgical techniques, such as shorter hospital stays and quicker recovery in some patients.",
+        "At the Seeds of Innocens Surgical Center (SOI Surgical Centre), patients will receive personalized evaluation, surgical planning, and post-surgical care under one roof. Are you searching for a leading laparoscopic surgeon in Delhi NCR?"
+      ]
+    }
+  ],
   "procedures": [
     {
       "title": "POLYP SURGERY",
@@ -125,5 +155,27 @@
     "supportingText": "An experienced surgical team will diagnose, treat, and care for you personally.",
     "buttonText": "Book a Consultation Appointment Now",
     "buttonHref": "/contact/book-appointment/"
-  }
+  },
+  "faqs": [
+    {
+      "question": "1. What kinds of gynaecological disorders and surgeries are offered by Seeds of Innocence Surgical Centre?",
+      "answer": "This centre offers treatment for various problems related to women's health. These include fibroids, ovarian cysts, endometriosis, PCOS, menorrhagia/metrorrhagia, prolapsed uterus, and pelvic pain."
+    },
+    {
+      "question": "2. Why should one prefer Seeds of Innocence Surgical Centre as a best surgical center in Delhi NCR?",
+      "answer": "Our center has expertise of both gynaecologists and surgeons, modern operating theaters, and advanced minimally invasive surgeries which make it a best surgical center in Delhi NCR."
+    },
+    {
+      "question": "3. Is minimally invasive surgery available, and what advantages does it have?",
+      "answer": "Yes, we offer laparoscopic or hysteroscopic surgeries. These methods usually require small incisions compared to open surgery, involve less pain, reduce hospital stay, and faster recovery."
+    },
+    {
+      "question": "4. When do I need to see a gynecologist?",
+      "answer": "It is advisable to see a gynaecologist if one suffers from heavy/irregular/painful periods, pelvic or lower abdominal pain, vaginal discharges or bleeding, painful sexual intercourse, or infertility."
+    },
+    {
+      "question": "5. How long does it take to recover from gynaecology surgery? How can Seeds of Innocens Surgical center help you recover?",
+      "answer": "It will depend on the kind of surgery and your general well-being. For example, for laparoscopic surgery, most people recover within one or two days and resume light duties within a week or two."
+    }
+  ]
 }
