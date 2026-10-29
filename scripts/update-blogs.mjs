@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-patna",
-    title: "IUI Cost in Patna: Treatment Price, Benefits, Tests & IVF Charges",
-    excerpt: "Do you have plans to have kids but find it hard to conceive? You are not the only one who finds it hard to conceive, and you might be on the search for solutions. The treatment procedure that your fertility expert could recommend includes Intrauterine Insemination (IUI).",
+    id: "iui-cost-in-ranchi",
+    title: "IUI Cost in Ranchi: Complete Price Guide for Couples",
+    excerpt: "Dreaming of being pregnant but afraid of its cost? Then you are like thousands of other couples in Jharkhand who wonder how much IUI costs in Ranchi every month. This article will explain all you need to know about the matter in easy language.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/iui-cost-in-patna.png",
-    date: "October 26, 2026",
-    author: "Dr. Debilina Roy",
+    image: "/assets/img/Blogs/iui-cost-in-ranchi.png",
+    date: "October 27, 2026",
+    author: "Dr. Kriti Prasad",
     category: "Fertility",            
-    readTime: "10 min read",
-    slug: "iui-cost-in-patna"
+    readTime: "11 min read",
+    slug: "iui-cost-in-ranchi"
   }
 ];
 
