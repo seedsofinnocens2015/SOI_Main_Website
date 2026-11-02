@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-ranchi",
-    title: "IUI Cost in Ranchi: Complete Price Guide for Couples",
-    excerpt: "Dreaming of being pregnant but afraid of its cost? Then you are like thousands of other couples in Jharkhand who wonder how much IUI costs in Ranchi every month. This article will explain all you need to know about the matter in easy language.",
+    id: "iui-cost-in-haldwani",
+    title: "IUI Cost in Haldwani: Complete Guide to Price, Process and Success Rate",
+    excerpt: "Have you decided to begin your family life but find yourself worrying about the costs of fertility treatment? You are not alone! Many couples living in Haldwani and other parts of Uttarakhand seek reliable fertility treatments within a feasible price range. They often wonder about the procedures involved, costs, and chances of success. The most frequently recommended fertility treatment is IUI (Intrauterine Insemination). It is a relatively simple fertility procedure that might be helpful to couples with particular kinds of infertility. Have you been looking for IUI cost in Haldwani, IUI treatment cost in Haldwani, or the right fertility clinic? This guide has all the necessary information. Let us discuss more about the IUI cost in Haldwani and its procedure.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/iui-cost-in-ranchi.png",
-    date: "October 27, 2026",
-    author: "Dr. Kriti Prasad",
+    image: "/assets/img/Blogs/iui-cost-in-haldwani.png",
+    date: "October 31, 2026",
+    author: "Dr. Pallavi Shrivastava",
     category: "Fertility",            
-    readTime: "11 min read",
-    slug: "iui-cost-in-ranchi"
+    readTime: "12 min read",
+    slug: "iui-cost-in-haldwani"
   }
 ];
 
