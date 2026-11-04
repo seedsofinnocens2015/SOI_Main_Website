@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-haldwani",
-    title: "IUI Cost in Haldwani: Complete Guide to Price, Process and Success Rate",
-    excerpt: "Have you decided to begin your family life but find yourself worrying about the costs of fertility treatment? You are not alone! Many couples living in Haldwani and other parts of Uttarakhand seek reliable fertility treatments within a feasible price range. They often wonder about the procedures involved, costs, and chances of success. The most frequently recommended fertility treatment is IUI (Intrauterine Insemination). It is a relatively simple fertility procedure that might be helpful to couples with particular kinds of infertility. Have you been looking for IUI cost in Haldwani, IUI treatment cost in Haldwani, or the right fertility clinic? This guide has all the necessary information. Let us discuss more about the IUI cost in Haldwani and its procedure.",
+    id: "iui-cost-in-sri-nagar",
+    title: "IUI Cost in Sri Nagar: Complete Guide to Price and Process",
+    excerpt: "Trying for a baby for months or years without succeeding is often stressful. When your doctor recommends IUI treatment, your first question is, How much does IUI cost in Sri Nagar? This blog answers your question in simple language. We have described in detail what IUI is, who needs it, and why it is usually a first treatment option before IVF, including IUI cost in Sri Nagar.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/iui-cost-in-haldwani.png",
-    date: "October 31, 2026",
-    author: "Dr. Pallavi Shrivastava",
+    image: "/assets/img/Blogs/iui-cost-in-sri-nagar.png",
+    date: "November 03, 2026",
+    author: "Dr. Gauri Agarwal",
     category: "Fertility",            
-    readTime: "12 min read",
-    slug: "iui-cost-in-haldwani"
+    readTime: "10 min read",
+    slug: "iui-cost-in-sri-nagar"
   }
 ];
 
