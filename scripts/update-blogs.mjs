@@ -48,16 +48,16 @@ const NEW_BLOGS = [
 
   // --- EXAMPLE 2: STANDARD BLOG ENTRY (Goes to blogs.json) ---
   {
-    id: "iui-cost-in-sri-nagar",
-    title: "IUI Cost in Sri Nagar: Complete Guide to Price and Process",
+    id: "iui-cost-in-guwahati",
+    title: "IUI Cost in Guwahati: Treatment, Procedure, Factors and What to Expect",
     excerpt: "Trying for a baby for months or years without succeeding is often stressful. When your doctor recommends IUI treatment, your first question is, How much does IUI cost in Sri Nagar? This blog answers your question in simple language. We have described in detail what IUI is, who needs it, and why it is usually a first treatment option before IVF, including IUI cost in Sri Nagar.",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/iui-cost-in-sri-nagar.png",
+    image: "/assets/img/Blogs/iui-cost-in-guwahati.png",
     date: "November 03, 2026",
-    author: "Dr. Gauri Agarwal",
+    author: "Dr. Julie Chhawchharia",
     category: "Fertility",            
-    readTime: "10 min read",
-    slug: "iui-cost-in-sri-nagar"
+    readTime: "11 min read",
+    slug: "iui-cost-in-guwahati"
   }
 ];
 
