@@ -14,16 +14,17 @@ import doctorsData from '@/app/data/doctors-data.json';
 import { getDoctorProfilePath } from '@/app/utils/doctorProfilePath';
 import { permanentRedirect } from 'next/navigation';
 import { getIvfCostBySlug } from '@/app/utils/ivfCostData';
+import { getAllCenterBlogs, getCenterBlogBySlug } from '@/app/utils/centerBlogData';
 
 export async function generateStaticParams() {
-  return blogsData.blogs.map((blog) => ({
-    slug: blog.slug,
-  }));
+  const blogParams = blogsData.blogs.map((blog) => ({ slug: blog.slug }));
+  const centerParams = getAllCenterBlogs().map((cb) => ({ slug: cb.slug }));
+  return [...blogParams, ...centerParams];
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const blog = blogsData.blogs.find((item) => item.slug === slug);
+  const blog = blogsData.blogs.find((item) => item.slug === slug) || getCenterBlogBySlug(slug);
   if (!blog) {
     const costItem = getIvfCostBySlug(slug);
     if (costItem) {
@@ -55,7 +56,7 @@ const BlogDetailPage = async ({ params }) => {
   const resolvedParams = await params;
   const slug = resolvedParams?.slug;
 
-  const blog = blogsData.blogs.find((b) => b.slug === slug);
+  const blog = blogsData.blogs.find((b) => b.slug === slug) || getCenterBlogBySlug(slug);
   const doctor = blog && blog.author?.toLowerCase() !== 'admin'
     ? doctorsData.find(d => d.name?.toLowerCase().trim() === blog.author?.toLowerCase().trim())
     : null;
@@ -203,7 +204,8 @@ const BlogDetailPage = async ({ params }) => {
                         {blog.readTime}
                       </span>
                     </div>
-                    <div
+                    {blog.author ? (
+                      <div
                         style={{
                           backgroundColor: '#ffeaf0',
                           borderRadius: '12px',
@@ -253,6 +255,7 @@ const BlogDetailPage = async ({ params }) => {
                           )}
                         </div>
                       </div>
+                    ) : null}
                   </div>
 
 

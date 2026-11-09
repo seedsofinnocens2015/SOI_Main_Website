@@ -13,7 +13,7 @@ export function extractFaqsFromBlogHtml(html) {
   }
 
   // Heading pattern matching "Frequently Asked Questions"
-  const faqHeadingRegex = /(?:<(h[2-4])[^>]*>([\s\S]*?Frequently Asked Questions[\s\S]*?)<\/\1>|<p[^>]*>\s*<strong>\s*Frequently Asked Questions\s*<\/strong>\s*<\/p>)/i;
+  const faqHeadingRegex = /(?:<(h[2-4])[^>]*?>([^<]*?Frequently Asked Questions[^<]*?)<\/\1>|<p[^>]*?>\s*<strong>\s*Frequently Asked Questions\s*<\/strong>\s*<\/p>)/i;
   const match = html.match(faqHeadingRegex);
   if (!match) {
     return { beforeHtml: html, faqs: [], afterHtml: '' };

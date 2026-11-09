@@ -19,6 +19,7 @@ const ProjectSection = dynamic(() => import('../Components/ProjectSection'));
 const FAQSection = dynamic(() => import('../Components/FAQSection'));
 const IvfCostDropdown = dynamic(() => import('../Components/IvfCostDropdown'));
 const IvfCentresDropdown = dynamic(() => import('../Components/IvfCentresDropdown'));
+const IvfDoctorsDropdown = dynamic(() => import('../Components/IvfDoctorsDropdown'));
 
 export const revalidate = 300;
 
@@ -877,6 +878,9 @@ const page = () => {
 
       {/* IVF Centres in Key Locations Dropdown Section */}
       <IvfCentresDropdown />
+
+      {/* IVF Doctors in India Dropdown Section */}
+      <IvfDoctorsDropdown />
 
       {/* 5.5. Male Infertility & Egg Freezing Section */}
       {/* <Section
