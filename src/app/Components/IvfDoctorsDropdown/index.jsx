@@ -83,7 +83,7 @@ const IvfDoctorsDropdown = () => {
             >
               {blogsList.map((item, index) => {
                 const label = item.hometitle || item.title;
-                const linkHref = item.href || `/blog/${item.slug}/`;
+                const linkHref = item.href || `/doctor/${item.slug}/`;
                 const isLast = index === blogsList.length - 1;
 
                 return (

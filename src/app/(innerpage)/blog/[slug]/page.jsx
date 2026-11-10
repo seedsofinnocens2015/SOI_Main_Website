@@ -18,17 +18,20 @@ import { getAllCenterBlogs, getCenterBlogBySlug } from '@/app/utils/centerBlogDa
 
 export async function generateStaticParams() {
   const blogParams = blogsData.blogs.map((blog) => ({ slug: blog.slug }));
-  const centerParams = getAllCenterBlogs().map((cb) => ({ slug: cb.slug }));
-  return [...blogParams, ...centerParams];
+  return blogParams;
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const blog = blogsData.blogs.find((item) => item.slug === slug) || getCenterBlogBySlug(slug);
+  const blog = blogsData.blogs.find((item) => item.slug === slug);
   if (!blog) {
     const costItem = getIvfCostBySlug(slug);
     if (costItem) {
       return { title: `${costItem.title} | Seeds of Innocens` };
+    }
+    const centerBlog = getCenterBlogBySlug(slug);
+    if (centerBlog) {
+      return { title: `${centerBlog.title} | Seeds of Innocens` };
     }
     return { title: 'Blog Not Found | Seeds of Innocence' };
   }
@@ -56,7 +59,7 @@ const BlogDetailPage = async ({ params }) => {
   const resolvedParams = await params;
   const slug = resolvedParams?.slug;
 
-  const blog = blogsData.blogs.find((b) => b.slug === slug) || getCenterBlogBySlug(slug);
+  const blog = blogsData.blogs.find((b) => b.slug === slug);
   const doctor = blog && blog.author?.toLowerCase() !== 'admin'
     ? doctorsData.find(d => d.name?.toLowerCase().trim() === blog.author?.toLowerCase().trim())
     : null;
@@ -65,6 +68,10 @@ const BlogDetailPage = async ({ params }) => {
     const costItem = getIvfCostBySlug(slug);
     if (costItem) {
       permanentRedirect(`/cost/${costItem.slug}/`);
+    }
+    const centerBlog = getCenterBlogBySlug(slug);
+    if (centerBlog) {
+      permanentRedirect(`/doctor/${centerBlog.slug}/`);
     }
 
     return (

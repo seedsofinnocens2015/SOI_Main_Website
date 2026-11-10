@@ -39,9 +39,7 @@ const NEW_BLOGS = [
     // 👇 Put the doctor names here! Their card with photo & profile link will be auto-inserted after 3rd paragraph
     doctors: [
       "Dr. Gauri Agarwal",
-      "Dr. Alpana Razdan",
-      "Dr. Lisha Singh",
-      "Dr. Pratik Kakani"
+      "Dr. Lisha Singh"
     ]
   },
 
