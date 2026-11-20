@@ -112,15 +112,38 @@ function appendUtmParams(payload) {
 }
 
 export async function postWebsiteJson(path, body) {
-  const base = getWebsiteApiBaseUrl();
   const finalBody = appendUtmParams(body);
-  const res = await fetch(`${base}${path}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(finalBody),
-  });
-  const data = await parseJsonResponse(res);
-  return { response: res, data, ok: res.ok && data.ok === true };
+  const base = getWebsiteApiBaseUrl();
+  const isBrowser = typeof window !== 'undefined';
+  const isSubdomainOrLocal = isBrowser && window.location.hostname !== 'www.seedsofinnocens.com';
+  const targetUrl = isSubdomainOrLocal ? path : `${base}${path}`;
+
+  try {
+    const res = await fetch(targetUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(finalBody),
+    });
+    const data = await parseJsonResponse(res);
+    return { response: res, data, ok: res.ok && data.ok === true };
+  } catch (err) {
+    // If direct cross-origin fetch failed (e.g. CORS preflight block), retry via same-origin proxy
+    if (targetUrl.startsWith('http')) {
+      try {
+        const retryRes = await fetch(path, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(finalBody),
+        });
+        const retryData = await parseJsonResponse(retryRes);
+        return { response: retryRes, data: retryData, ok: retryRes.ok && retryData.ok === true };
+      } catch (retryErr) {
+        console.error('API proxy fallback error:', retryErr);
+      }
+    }
+    console.error('postWebsiteJson error:', err);
+    return { response: null, data: { ok: false, error: 'Network error.' }, ok: false };
+  }
 }
 
 export async function submitBookAppointment(payload) {
