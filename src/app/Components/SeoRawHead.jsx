@@ -54,6 +54,9 @@ function buildItemSchema(seo = {}) {
 }
 
 export default async function SeoRawHead({ pageUrl }) {
+  if (!pageUrl || typeof pageUrl !== 'string' || pageUrl.includes('undefined')) {
+    return null;
+  }
   const seo = await fetchResolvedSeo(pageUrl);
   if (!seo) return null;
 

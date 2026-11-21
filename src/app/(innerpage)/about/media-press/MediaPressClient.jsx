@@ -106,6 +106,7 @@ const MediaPressClient = () => {
                     {/* Publisher Logo */}
                     {item.publisherLogo && (
                       <div style={{ position: 'absolute', top: '15px', left: '15px', zIndex: 2, backgroundColor: '#fff', padding: '5px 10px', borderRadius: '4px', maxWidth: '120px' }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={item.publisherLogo} alt="Publisher" style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
                       </div>
                     )}

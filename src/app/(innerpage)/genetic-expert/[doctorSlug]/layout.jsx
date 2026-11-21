@@ -1,9 +1,12 @@
 import SeoRawHead from '@/app/Components/SeoRawHead';
 
-export default function GeneticExpertSeoLayout({ children, params }) {
+export default async function GeneticExpertSeoLayout({ children, params }) {
+  const resolvedParams = await params;
+  const doctorSlug = resolvedParams?.doctorSlug;
+
   return (
     <>
-      <SeoRawHead pageUrl={`/genetic-expert/${params.doctorSlug}`} />
+      {doctorSlug ? <SeoRawHead pageUrl={`/genetic-expert/${doctorSlug}`} /> : null}
       {children}
     </>
   );

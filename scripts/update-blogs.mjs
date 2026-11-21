@@ -28,17 +28,17 @@ const NEW_BLOGS = [
   // --- EXAMPLE 1: IVF DOCTOR IN INDIA BLOG (Goes to centerblogs.json) ---
   {
     category: "Ivf doctor in india",
-    id: "best-ivf-doctor-in-meerut",
-    hometitle: "Best IVF Doctor in Meerut", // Appears in Home Page Dropdown
-    title: "Best IVF Doctor in Meerut: What to Look for in a Trusted IVF Specialist",
-    slug: "best-ivf-doctor-in-meerut",
+    id: "best-ivf-doctor-in-guwahati",
+    hometitle: "Best IVF Doctor in Guwahati", // Appears in Home Page Dropdown
+    title: "Best IVF Doctor in Guwahati: What to Consider Before Choosing an IVF Specialist",
+    slug: "best-ivf-doctor-in-guwahati",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/best-ivf-doctor-in-meerut.png",
-    readTime: "13 min read",
-    date: "November 19, 2026",
+    image: "/assets/img/Blogs/best-ivf-doctor-in-guwahati.png",
+    readTime: "11 min read",
+    date: "November 20, 2026",
     // 👇 Put the doctor names here! Their card with photo & profile link will be auto-inserted after 3rd paragraph
     doctors: [
-      "Dr. Varkha Chandra"
+      "Dr. Julie Chhawchharia"
     ]
   },
 

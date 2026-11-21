@@ -197,6 +197,7 @@ const NewsMediaSection = ({ data, sectionId }) => {
                             >
                               <span className="cs_news_media_facade_thumb">
                                 {thumbSrc ? (
+                                  /* eslint-disable-next-line @next/next/no-img-element */
                                   <img
                                     src={thumbSrc}
                                     alt=""

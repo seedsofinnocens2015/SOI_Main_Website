@@ -7,6 +7,9 @@ const SEO_REVALIDATE_SECONDS = 3600;
 const SEO_FETCH_TIMEOUT_MS = 2500;
 
 function fetchWithTimeout(url, options = {}, timeoutMs = SEO_FETCH_TIMEOUT_MS) {
+  if (typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function') {
+    return fetch(url, { ...options, signal: AbortSignal.timeout(timeoutMs) });
+  }
   if (typeof AbortController === 'undefined') {
     return fetch(url, options);
   }

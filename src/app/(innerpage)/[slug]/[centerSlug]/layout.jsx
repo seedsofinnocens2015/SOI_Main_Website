@@ -1,9 +1,14 @@
 import SeoRawHead from '@/app/Components/SeoRawHead';
 
-export default function SeoLayout({ children, params }) {
+export default async function SeoLayout({ children, params }) {
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug;
+  const centerSlug = resolvedParams?.centerSlug;
+  const pageUrl = slug && centerSlug ? `/${slug}/${centerSlug}` : null;
+
   return (
     <>
-      <SeoRawHead pageUrl={`/${params.slug}/${params.centerSlug}`} />
+      {pageUrl ? <SeoRawHead pageUrl={pageUrl} /> : null}
       {children}
     </>
   );

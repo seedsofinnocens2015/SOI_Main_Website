@@ -1,9 +1,12 @@
 import SeoRawHead from '@/app/Components/SeoRawHead';
 
-export default function BlogSeoLayout({ children, params }) {
+export default async function BlogSeoLayout({ children, params }) {
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug;
+
   return (
     <>
-      <SeoRawHead pageUrl={`/blog/${params.slug}`} />
+      {slug ? <SeoRawHead pageUrl={`/blog/${slug}`} /> : null}
       {children}
     </>
   );
