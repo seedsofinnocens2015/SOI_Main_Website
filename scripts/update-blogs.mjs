@@ -28,17 +28,17 @@ const NEW_BLOGS = [
   // --- EXAMPLE 1: IVF DOCTOR IN INDIA BLOG (Goes to centerblogs.json) ---
   {
     category: "Ivf doctor in india",
-    id: "best-ivf-doctor-in-kasaragod",
-    hometitle: "Best IVF Doctor in Kasaragod", // Appears in Home Page Dropdown
-    title: "Best IVF Doctor in Kasaragod: A Complete Guide to Choosing the Right IVF Specialist",
-    slug: "best-ivf-doctor-in-kasaragod",
+    id: "best-ivf-doctor-in-haldwani",
+    hometitle: "Best IVF Doctor in Haldwani", // Appears in Home Page Dropdown
+    title: "Best IVF Doctor in Haldwani: What to Consider Before Choosing an IVF Specialist",
+    slug: "best-ivf-doctor-in-haldwani",
     contentFile: "scripts/blog-content/dummy-blog.html",
-    image: "/assets/img/Blogs/best-ivf-doctor-in-kasaragod.png",
-    readTime: "11 min read",
-    date: "November 20, 2026",
+    image: "/assets/img/Blogs/best-ivf-doctor-in-haldwani.png",
+    readTime: "10 min read",
+    date: "November 23, 2026",
     // 👇 Put the doctor names here! Their card with photo & profile link will be auto-inserted after 3rd paragraph
     doctors: [
-      "Dr. Vinod Kumar B"
+      "Dr. Pallavi Shrivastava"
     ]
   },
 
